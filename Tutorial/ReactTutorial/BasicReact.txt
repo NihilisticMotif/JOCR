@@ -1,0 +1,34 @@
+Tool
+* React
+
+0. Overview (0:00)
+ * React is fast
+1. React in Practice 01 (13:10)
+ * npx create-react-app myapp
+ * npm start
+ * src folder have my code
+ * App.js export my code
+ * index.html show my code
+2. React in Practice 02 (17:22)
+ * modifying first component
+3. React in Practice 03 (27:00)
+ * props # a type of component input, name="cheche" then props.name = "cheche"
+ * modifying second component and put it in the first component
+4. React in Practice 03 (30:20), React Hook: useState
+ * state #
+ * <button>
+Reference (React JS)
+1. What is NPM?
+* https://careerfoundry.com/en/blog/web-development/what-is-npm/
+2. How To Deploy A React App To Github Pages (Simple)
+* https://youtu.be/Q9n2mLqXFpU?si=NV-SCVjOr8ODntZD
+3. Host React.js App for FREE in 5 mins with GitHub Pages
+* https://youtu.be/2hM5viLMJpA?si=Nc1igg_aPvYkJ7yy
+4. React JS Full Course 2023 | Build an App and Master React in 1 Hour
+* https://youtu.be/b9eMGE7QtTk?si=SPuusclIjCH8GNzV
+5. React Tutorial Website
+* https://react.dev/learn
+
+Other
+1. How to rename folder in React?
+ * https://stackoverflow.com/questions/52091254/how-can-i-change-reactjs-project-folder-name

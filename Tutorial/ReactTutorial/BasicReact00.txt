@@ -1,0 +1,12 @@
+Note (Overview) (0:00)
+1. React update only partial change in web page, instead of entire page, make the React faster than normal Javascript.
+2. Class Component is outdate
+3. Functional Component is mainly used
+| const MyFunc = () => {
+|     return 
+|           <div>
+|           <h1>Welcome to Tally Hall</h1> 
+|           <h2>Composed by 3B1B</h2> 
+|           <!-- JSX -->
+|           </div>
+| }

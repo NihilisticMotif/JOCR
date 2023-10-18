@@ -1,0 +1,5 @@
+Django & React Tutorial #1 
+ * create Django using shell
+ * show 'Hello World' in different path using ['api/urls.py','api/views.py','themindelectric/urls.py']
+ * download app using 'themindelectric/setting.py'
+ * https://youtu.be/JD-age0BPVo?si=Ql0GGkWtL9OSuDEk

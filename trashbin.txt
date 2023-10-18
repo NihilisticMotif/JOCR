@@ -1,0 +1,527 @@
+Day 17
+* Learn how to create hook 
+* Try to avoid creating nested component, but it does not works, even with the help of chat gpt 
+* 
+To Do Now (Read and fix this)
+ * Create custom hook 
+ * avoid nested component
+1. https://blog.webdevsimplified.com/2019-11/how-to-write-custom-hooks/?fbclid=IwAR11CqBKZB1UttksdQe_VEOWClHARAHaRP7LfEHwTC9YwMIz--ha3DvNAXc
+2. https://youtu.be/b0IZo2Aho9Y?si=Fu1eHkhY29AigPgA
+3. https://youtu.be/TNhaISOUy6Q?si=MewpxqgUjrDNFUSX
+4. https://youtu.be/QQYeipc_cik?si=WZspHtbEE5Okbm0f
+ 
+img = sharpen(img)
+ 
+img = erode(img)
+ 
+img = erode(img)
+ 
+k3*24+
+ 
+k3*24+
+ 
+'''
+ 
+eng+
+ 
++tha
+ 
+eng+
+ 
+JoJOCR.
+ 
+    
+    
+ 
+k1=-2
+ 
+k2=-0.1
+ 
+2*
+ 
++2*0.1
+ 
+-0.1,-0.1,-0.1,-0.1
+ 
+'''
+ 
+'''
+ 
+      
+ 
+'''
+ 
+'''
+ 
+import cv2
+from kernel import ShowMustGoOn 
+path='/Users/imac/Desktop/SoloOpenSourceProject/JOCR/TestImage/Expenses_Macro/IMG_7553.jpeg'
+image = cv2.imread(path)
+
+filtered_image = image#cv2.medianBlur(image, 5)
+ShowMustGoOn(filtered_image)
+
+# Bilateral filtering
+filtered_image = cv2.bilateralFilter(image, 9, 75, 75)
+ShowMustGoOn(filtered_image)
+
+# Adaptive threshold method
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+_, adaptive_threshold = cv2.threshold(gray_image, 0, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 25, 10)
+ShowMustGoOn(adaptive_threshold)
+ 
+'image.jpg
+ 
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+ 
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+ 
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+ 
+'median-filtered image', 
+ 
+import cv2
+image = cv2.imread('image.jpg')
+ 
+import cv2
+image = cv2.imread('image.jpg')
+ 
+filtered_image = cv2.medianBlur(image, 5)
+ 
+# Saving Text
+f = open("demo.txt", "a",encoding="utf-8")
+f.write(''.join(txt))
+f.close()
+ 
+from kernel import canny,get_grayscale,sharpen,erode,dilate,opening,ShowMustGoOn 
+from txt import pensil, eraser
+ 
+ile_to_delete
+ 
+
+2ÇØÇ
+ÇØÇiÇØÇsÇØÇ ÇØÇsÇØÇcÇØÇeÇØÇ ÇØÇSÇØÇHÇØÇ ÇØÇwÇØÇaÇØÇeÇØÇeÇØÇnÇØÇtÇØÇ)ÇØÇ ÇØÇoÇØÇnÇØÇeÇØÇ ÇØÇ"ÇØÇ
+ÇØÇvÇØÇiÇØÇnÇØÇ ÇØÇFÇØÇHÇØÇ ÇØÇWÇØÇoÇØÇrÇØÇ ÇØÇ7ÇØÇ7ÇØÇ7ÇØÇ)ÇØÇ ÇØÇGÇØÇiÇØÇnÇØÇaÇØÇ ÇØÇGÇØÇmÇØÇnÇØÇwÇØÇyÇØÇ ÇØÇ:ÇØÇ
+ÇØÇgÇØÇeÇØÇiÇØÇiÇØÇnÇØÇeÇØÇwÇØÇ ÇØÇrÇØÇyÇØÇ ÇØÇPÇØÇhÇØÇ ÇØÇOÇØÇTÇØÇ ÇØÇeÇØÇeÇØÇ ÇØÇDÇØÇeÇØÇnÇØÇeÇØÇ,ÇØÇ ÇØÇmÇØÇeÇØÇnÇØÇeÇØÇ ÇØÇ7ÇØÇ
+ÇØÇ‘ÇØÇ ÇØÇ;ÇØÇ ÇØÇ7ÇØÇ ÇØÇ;ÇØÇ
+ÇØÇcÇØÇuÇØÇlÇØÇtÇØÇiÇØÇeÇØÇsÇØÇ ÇØÇwÇØÇeÇØÇ ÇØÇHÇØÇFÇØÇ ÇØÇeÇØÇrÇØÇiÇØÇnÇØÇ ÇØÇhÇØÇeÇØÇtÇØÇuÇØÇtÇØÇuÇØÇmÇØÇ ÇØÇnÇØÇeÇØÇiÇØÇiÇØÇdÇØÇ ÇØÇ‘ÇØÇ
+ÇØÇoÇØÇrÇØÇpÇØÇ ÇØÇeÇØÇrÇØÇeÇØÇ ÇØÇ-ÇØÇ
+ÇØÇ~ÇØÇ ÇØÇ©ÇØÇ ÇØÇPÇØÇeÇØÇtÇØÇ ÇØÇhÇØÇuÇØÇeÇØÇ ÇØÇnÇØÇaÇØÇnÇØÇ ÇØÇoÇØÇnÇØÇeÇØÇ ÇØÇ—ÇØÇ
+ÇØÇrÇØÇaÇØÇ ÇØÇeÇØÇaÇØÇeÇØÇ ÇØÇ.ÇØÇ
+ÇØÇtÇØÇoÇØÇnÇØÇsÇØÇ ÇØÇaÇØÇTÇØÇ
+ÇØÇ©ÇØÇ ÇØÇ«ÇØÇ ÇØÇwÇØÇrÇØÇ ÇØÇPÇØÇaÇØÇlÇØÇsÇØÇ ÇØÇ©ÇØÇ
+ÇØÇoÇØÇnÇØÇ ÇØÇ:ÇØÇ ÇØÇaÇØÇrÇØÇtÇØÇeÇØÇ ÇØÇaÇØÇeÇØÇfÇØÇuÇØÇiÇØÇeÇØÇ
+ÇØÇfÇØÇrÇØÇsÇØÇvÇØÇeÇØÇuÇØÇsÇØÇ ÇØÇaÇØÇnÇØÇtÇØÇ
+ÇØÇsÇØÇrÇØÇoÇØÇ ÇØÇaÇØÇ*ÇØÇ ÇØÇaÇØÇdÇØÇ ÇØÇoÇØÇ
+ÇØÇEÇØÇEÇØÇ ÇØÇiÇØÇeÇØÇ ÇØÇaÇØÇ
+ÇØÇaÇØÇpÇØÇnÇØÇiÇØÇeÇØÇ ÇØÇ-ÇØÇ ÇØÇSÇØÇAÇØÇGÇØÇAÇØÇSÇØÇ ÇØÇsÇØÇiÇØÇdÇØÇlÇØÇiÇØÇaÇØÇtÇØÇaÇØÇaÇØÇdÇØÇeÇØÇsÇØÇaÇØÇiÇØÇaÇØÇeÇØÇaÇØÇnÇØÇeÇØÇnÇØÇsÇØÇiÇØÇlÇØÇiÇØÇeÇØÇaÇØÇiÇØÇaÇØÇsÇØÇ ÇØÇtÇØÇoÇØÇnÇØÇsÇØÇ ÇØÇeÇØÇtÇØÇ ÇØÇrÇØÇeÇØÇ ÇØÇhÇØÇeÇØÇ ÇØÇaÇØÇgÇØÇaÇØÇtÇØÇeÇØÇ
+ÇØÇ©ÇØÇ ÇØÇ-ÇØÇ ÇØÇ_ÇØÇ ÇØÇeÇØÇ
+ÇØÇsÇØÇuÇØÇaÇØÇ ÇØÇtÇØÇ ÇØÇ-ÇØÇ
+ÇØÇ€ÇØÇ ÇØÇaÇØÇ ÇØÇ¥ÇØÇ ÇØÇaÇØÇ?ÇØÇ ÇØÇ.ÇØÇ ÇØÇ-ÇØÇ ÇØÇwÇØÇaÇØÇ ÇØÇ-ÇØÇ ÇØÇ'ÇØÇ ÇØÇ°ÇØÇ
+ÇØÇ5ÇØÇ.ÇØÇeÇØÇ@ÇØÇ ÇØÇ“ÇØÇAÇØÇsÇØÇ ÇØÇcÇØÇ ÇØÇ.ÇØÇ ÇØÇ‘ÇØÇ?ÇØÇ@ÇØÇ ÇØÇcÇØÇeÇØÇ ÇØÇhÇØÇtÇØÇsÇØÇ
+ÇØÇeÇØÇ ÇØÇ,ÇØÇ ÇØÇmÇØÇaÇØÇoÇØÇ ÇØÇsÇØÇeÇØÇeÇØÇsÇØÇ?ÇØÇ ÇØÇMÇØÇaÇØÇrÇØÇeÇØÇ ÇØÇeÇØÇsÇØÇtÇØÇoÇØÇyÇØÇ ÇØÇ1ÇØÇ.ÇØÇ ÇØÇ;ÇØÇ ÇØÇ3ÇØÇ0ÇØÇ.ÇØÇ ÇØÇaÇØÇoÇØÇ ÇØÇnÇØÇyÇØÇ
+ÇØÇ:ÇØÇ ÇØÇ>ÇØÇ.ÇØÇ«ÇØÇ ÇØÇ?ÇØÇ_ÇØÇ-ÇØÇ
+ÇØÇaÇØÇ ÇØÇbÇØÇeÇØÇ,ÇØÇ ÇØÇSÇØÇOÇØÇ ÇØÇaÇØÇ”ÇØÇ ÇØÇmÇØÇeÇØÇrÇØÇ ÇØÇ'ÇØÇ ÇØÇrÇØÇeÇØÇ ÇØÇ7ÇØÇ?ÇØÇ)ÇØÇ ÇØÇ’ÇØÇ ÇØÇ‘ÇØÇ ÇØÇ'ÇØÇ
+ÇØÇ ÇØÇ)ÇØÇ ÇØÇ.ÇØÇoÇØÇ5ÇØÇ ÇØÇsÇØÇeÇØÇeÇØÇsÇØÇoÇØÇoÇØÇeÇØÇrÇØÇtÇØÇsÇØÇeÇØÇ ÇØÇcÇØÇoÇØÇvÇØÇeÇØÇtÇØÇ ÇØÇmÇØÇnÇØÇ.ÇØÇ ÇØÇAÇØÇTÇØÇWÇØÇ ÇØÇ:ÇØÇ ÇØÇ~ÇØÇ~ÇØÇ ÇØÇ_ÇØÇ ÇØÇiÇØÇ)ÇØÇ
+ÇØÇLÇØÇ2ÇØÇ1ÇØÇ9ÇØÇ ÇØÇ2ÇØÇiÇØÇ4ÇØÇlÇØÇSÇØÇiÇØÇeÇØÇvÇØÇsÇØÇ,ÇØÇ.ÇØÇ ÇØÇ7ÇØÇ6ÇØÇ ÇØÇGÇØÇoÇØÇeÇØÇrÇØÇ ÇØÇeÇØÇTÇØÇ ÇØÇrÇØÇyÇØÇoÇØÇsÇØÇ ÇØÇfÇØÇeÇØÇ ÇØÇAÇØÇTÇØÇwÇØÇ ÇØÇ-ÇØÇ ÇØÇwÇØÇwÇØÇ.ÇØÇ ÇØÇcÇØÇoÇØÇ
+ÇØÇeÇØÇ ÇØÇ2ÇØÇ@ÇØÇeÇØÇ)ÇØÇ ÇØÇ2ÇØÇ1ÇØÇ4ÇØÇ5ÇØÇ7ÇØÇ0ÇØÇ4ÇØÇ ÇØÇSÇØÇOÇØÇPÇØÇ.ÇØÇ ÇØÇ7ÇØÇ ÇØÇWÇØÇeÇØÇ ÇØÇ4ÇØÇmÇØÇ ÇØÇmÇØÇuÇØÇtÇØÇeÇØÇ ÇØÇ1ÇØÇ ÇØÇrÇØÇvÇØÇ ÇØÇ4ÇØÇ.ÇØÇ ÇØÇOÇØÇOÇØÇ ÇØÇ4ÇØÇ ÇØÇeÇØÇ
+ÇØÇ.ÇØÇ-ÇØÇ ÇØÇ=ÇØÇ ÇØÇ«ÇØÇ
+ÇØÇoÇØÇvÇØÇrÇØÇ ÇØÇ4ÇØÇ5ÇØÇ8ÇØÇ ÇØÇOÇØÇOÇØÇRÇØÇsÇØÇ,ÇØÇ ÇØÇMÇØÇIÇØÇUÇØÇRÇØÇAÇØÇ ÇØÇSÇØÇyÇØÇ)ÇØÇ.ÇØÇ ÇØÇmÇØÇeÇØÇ ÇØÇAÇØÇrÇØÇTÇØÇ ÇØÇ1ÇØÇ ÇØÇfÇØÇyÇØÇ ÇØÇ3ÇØÇ.ÇØÇcÇØÇ8ÇØÇ ÇØÇiÇØÇ ÇØÇ4ÇØÇ5ÇØÇ.ÇØÇ2ÇØÇ
+ÇØÇpÇØÇdÇØÇ ÇØÇoÇØÇrÇØÇ ÇØÇ'ÇØÇ ÇØÇ—ÇØÇ
+ÇØÇ°ÇØÇ ÇØÇBÇØÇeÇØÇsÇØÇtÇØÇ ÇØÇ2ÇØÇiÇØÇlÇØÇeÇØÇsÇØÇwÇØÇeÇØÇ7ÇØÇTÇØÇsÇØÇeÇØÇsÇØÇsÇØÇ ÇØÇWÇØÇrÇØÇoÇØÇmÇØÇsÇØÇ ÇØÇ1ÇØÇ ÇØÇ¥ÇØÇ ÇØÇ7ÇØÇ9ÇØÇ.ÇØÇ0ÇØÇ0ÇØÇ9ÇØÇ ÇØÇ1ÇØÇ ÇØÇ7ÇØÇ5ÇØÇ.ÇØÇ2ÇØÇ3ÇØÇ ÇØÇ¢ÇØÇ
+ÇØÇOÇØÇ.ÇØÇ4ÇØÇ%ÇØÇ%ÇØÇ ÇØÇ2ÇØÇ ÇØÇlÇØÇoÇØÇoÇØÇsÇØÇeÇØÇ ÇØÇiÇØÇ ÇØÇ.ÇØÇ ÇØÇ.ÇØÇ ÇØÇ3ÇØÇ7ÇØÇ ÇØÇ.ÇØÇ@ÇØÇ ÇØÇiÇØÇ ÇØÇiÇØÇ8ÇØÇ.ÇØÇ2ÇØÇ3ÇØÇ
+ÇØÇrÇØÇaÇØÇ)ÇØÇ ÇØÇ4ÇØÇ.ÇØÇ3ÇØÇ8ÇØÇ:ÇØÇ ÇØÇ2ÇØÇ1ÇØÇ3ÇØÇ1ÇØÇ3ÇØÇ5ÇØÇ0ÇØÇ1ÇØÇ7ÇØÇ5ÇØÇ2ÇØÇ5ÇØÇ1ÇØÇ ÇØÇsÇØÇhÇØÇeÇØÇeÇØÇtÇØÇ ÇØÇMÇØÇeÇØÇtÇØÇ ÇØÇiÇØÇ)ÇØÇ ÇØÇ7ÇØÇ ÇØÇ4ÇØÇ0ÇØÇ.ÇØÇ0ÇØÇ0ÇØÇ ÇØÇ1ÇØÇ7ÇØÇ4ÇØÇ.ÇØÇ2ÇØÇ5ÇØÇ ÇØÇ¢ÇØÇCÇØÇ
+ÇØÇDÇØÇLÇØÇ ÇØÇ2ÇØÇiÇØÇlÇØÇeÇØÇ7ÇØÇTÇØÇeÇØÇOÇØÇlÇØÇeÇØÇcÇØÇeÇØÇeÇØÇeÇØÇ ÇØÇWÇØÇNÇØÇ ÇØÇ1ÇØÇ ÇØÇ'ÇØÇ ÇØÇ9ÇØÇ.ÇØÇ0ÇØÇ0ÇØÇ ÇØÇ|ÇØÇ ÇØÇ1ÇØÇ8ÇØÇ6ÇØÇ.ÇØÇ0ÇØÇ0ÇØÇ
+ÇØÇ@ÇØÇ ÇØÇ|ÇØÇ ÇØÇtÇØÇeÇØÇ ÇØÇ2ÇØÇ0ÇØÇ7ÇØÇ0ÇØÇ1ÇØÇ1ÇØÇ2ÇØÇ8ÇØÇ2ÇØÇ ÇØÇrÇØÇaÇØÇhÇØÇ ÇØÇnÇØÇmÇØÇ ÇØÇiÇØÇnÇØÇ ÇØÇ2ÇØÇ9ÇØÇ.ÇØÇ0ÇØÇ0ÇØÇ ÇØÇ1ÇØÇ ÇØÇMÇØÇzÇØÇsÇØÇeÇØÇ ÇØÇ8ÇØÇ ÇØÇ¢ÇØÇ
+ÇØÇhÇØÇeÇØÇlÇØÇ
+ÇØÇPÇØÇeÇØÇ ÇØÇLÇØÇlÇØÇ ÇØÇ2ÇØÇLÇØÇIÇØÇ@ÇØÇMÇØÇOÇØÇIÇØÇIÇØÇ ÇØÇWÇØÇaÇØÇrÇØÇiÇØÇ ÇØÇ.ÇØÇ*ÇØÇ ÇØÇtÇØÇnÇØÇ ÇØÇaÇØÇ7ÇØÇ.ÇØÇ ÇØÇ|ÇØÇ ÇØÇ1ÇØÇ2ÇØÇ ÇØÇ.ÇØÇ@ÇØÇoÇØÇ
+ÇØÇiÇØÇ)ÇØÇ ÇØÇsÇØÇ ÇØÇnÇØÇeÇØÇeÇØÇ ÇØÇ4ÇØÇdÇØÇ)ÇØÇ ÇØÇWÇØÇEÇØÇSÇØÇ ÇØÇaÇØÇpÇØÇcÇØÇ)ÇØÇ ÇØÇUÇØÇoÇØÇrÇØÇuÇØÇ ÇØÇaÇØÇrÇØÇnÇØÇ ÇØÇ”ÇØÇ ÇØÇaÇØÇ ÇØÇ2ÇØÇ ÇØÇ1ÇØÇ2ÇØÇ9ÇØÇ.ÇØÇ@ÇØÇ0ÇØÇ ÇØÇ4ÇØÇ
+ÇØÇDÇØÇEÇØÇ,ÇØÇ ÇØÇMÇØÇBÇØÇBÇØÇSÇØÇ ÇØÇTÇØÇIÇØÇOÇØÇOÇØÇIÇØÇSÇØÇEÇØÇ?ÇØÇ ÇØÇAÇØÇCÇØÇFÇØÇEÇØÇ!ÇØÇ ÇØÇOÇØÇrÇØÇ ÇØÇOÇØÇEÇØÇMÇØÇ ÇØÇIÇØÇDÇØÇ ÇØÇoÇØÇeÇØÇsÇØÇ ÇØÇ9ÇØÇ ÇØÇvÇØÇwÇØÇ.ÇØÇ ÇØÇ5ÇØÇ.ÇØÇ0ÇØÇ9ÇØÇ ÇØÇ2ÇØÇ ÇØÇ1ÇØÇ2ÇØÇ.ÇØÇ2ÇØÇ0ÇØÇ ÇØÇSÇØÇ
+ÇØÇ'ÇØÇ ÇØÇPÇØÇoÇØÇ ÇØÇ.ÇØÇ ÇØÇ.ÇØÇ ÇØÇ.ÇØÇ
+ÇØÇ:ÇØÇ ÇØÇ7ÇØÇ1ÇØÇ9ÇØÇ1ÇØÇ1ÇØÇ ÇØÇ7ÇØÇSÇØÇSÇØÇOÇØÇSÇØÇ ÇØÇTÇØÇhÇØÇoÇØÇmÇØÇeÇØÇ.ÇØÇ ÇØÇ1ÇØÇ ÇØÇiÇØÇrÇØÇ ÇØÇ1ÇØÇsÇØÇ ÇØÇoÇØÇoÇØÇ ÇØÇ|ÇØÇ ÇØÇ1ÇØÇ7ÇØÇ5ÇØÇ.ÇØÇ%ÇØÇ
+ÇØÇ¥ÇØÇ ÇØÇ-ÇØÇ ÇØÇ1ÇØÇ9ÇØÇ)ÇØÇ ÇØÇ<ÇØÇ
+ÇØÇGÇØÇOÇØÇ ÇØÇAÇØÇeÇØÇ ÇØÇcÇØÇwÇØÇaÇØÇpÇØÇhÇØÇaÇØÇwÇØÇyÇØÇ:ÇØÇ ÇØÇ1ÇØÇ)ÇØÇ.ÇØÇ ÇØÇvÇØÇeÇØÇ ÇØÇ’ÇØÇ ÇØÇ1ÇØÇ7ÇØÇ2ÇØÇ.ÇØÇ0ÇØÇ0ÇØÇ ÇØÇ|ÇØÇ ÇØÇ1ÇØÇ2ÇØÇ6ÇØÇ.ÇØÇ0ÇØÇ
+ÇØÇ*ÇØÇ ÇØÇoÇØÇ
+ÇØÇMÇØÇeÇØÇeÇØÇeÇØÇ ÇØÇfÇØÇrÇØÇeÇØÇ ÇØÇeÇØÇsÇØÇcÇØÇ ÇØÇoÇØÇnÇØÇ ÇØÇ;ÇØÇ ÇØÇ1ÇØÇ ÇØÇwÇØÇuÇØÇ ÇØÇ9ÇØÇ9ÇØÇ.ÇØÇ@ÇØÇ0ÇØÇ ÇØÇ|ÇØÇ ÇØÇ7ÇØÇ.ÇØÇcÇØÇeÇØÇ ÇØÇ‘ÇØÇ
+ÇØÇ>ÇØÇ
+ÇØÇsÇØÇtÇØÇeÇØÇhÇØÇtÇØÇ ÇØÇPÇØÇeÇØÇrÇØÇnÇØÇtÇØÇ ÇØÇiÇØÇcÇØÇ-ÇØÇ2ÇØÇ5ÇØÇ ÇØÇwÇØÇhÇØÇyÇØÇ.ÇØÇ ÇØÇ(ÇØÇ>ÇØÇ ÇØÇ7ÇØÇ ÇØÇ2ÇØÇ5ÇØÇ.ÇØÇ2ÇØÇ ÇØÇ1ÇØÇ ÇØÇ3ÇØÇ1ÇØÇ7ÇØÇ.ÇØÇ5ÇØÇ0ÇØÇ
+ÇØÇ¢ÇØÇ ÇØÇ7ÇØÇ3ÇØÇ2ÇØÇ ÇØÇoÇØÇwÇØÇnÇØÇ ÇØÇSÇØÇaÇØÇnÇØÇ.ÇØÇ ÇØÇ(ÇØÇeÇØÇeÇØÇ ÇØÇiÇØÇ.ÇØÇ ÇØÇ4ÇØÇ2ÇØÇ.ÇØÇ0ÇØÇ0ÇØÇ ÇØÇ2ÇØÇ ÇØÇeÇØÇaÇØÇ.ÇØÇ ÇØÇ‘ÇØÇ
+ÇØÇ7ÇØÇ ÇØÇ-ÇØÇ ÇØÇ-ÇØÇ
+ÇØÇaÇØÇ ÇØÇeÇØÇaÇØÇeÇØÇ ÇØÇBÇØÇeÇØÇgÇØÇ.ÇØÇ ÇØÇHÇØÇaÇØÇ ÇØÇeÇØÇwÇØÇeÇØÇ ÇØÇvÇØÇeÇØÇrÇØÇeÇØÇ ÇØÇpÇØÇeÇØÇcÇØÇsÇØÇ ÇØÇlÇØÇwÇØÇ ÇØÇ7ÇØÇ5ÇØÇ.ÇØÇ@ÇØÇ ÇØÇ2ÇØÇ ÇØÇmÇØÇoÇØÇsÇØÇ
+ÇØÇtÇØÇeÇØÇ.ÇØÇ ÇØÇ-ÇØÇ ÇØÇ-ÇØÇ ÇØÇ‘ÇØÇ
+ÇØÇ<ÇØÇ1ÇØÇ ÇØÇ=ÇØÇ ÇØÇPÇØÇ
+ÇØÇ.ÇØÇ ÇØÇTÇØÇwÇØÇiÇØÇ ÇØÇaÇØÇ
+ÇØÇeÇØÇeÇØÇrÇØÇ ÇØÇoÇØÇ ÇØÇ:ÇØÇ ÇØÇ‘ÇØÇ
+ÇØÇbÇØÇsÇØÇ
+ÇØÇ:ÇØÇ ÇØÇeÇØÇeÇØÇ
+ÇØÇ.ÇØÇ ÇØÇéÇØÇ ÇØÇaÇØÇeÇØÇ.ÇØÇ ÇØÇaÇØÇiÇØÇ
+
+ 
+2Ç
+ÇiÇsÇ ÇsÇcÇeÇ ÇSÇHÇ ÇwÇaÇeÇeÇnÇtÇ)Ç ÇoÇnÇeÇ Ç"Ç
+ÇvÇiÇnÇ ÇFÇHÇ ÇWÇoÇrÇ Ç7Ç7Ç7Ç)Ç ÇGÇiÇnÇaÇ ÇGÇmÇnÇwÇyÇ Ç:Ç
+ÇgÇeÇiÇiÇnÇeÇwÇ ÇrÇyÇ ÇPÇhÇ ÇOÇTÇ ÇeÇeÇ ÇDÇeÇnÇeÇ,Ç ÇmÇeÇnÇeÇ Ç7Ç
+Ç‘Ç Ç;Ç Ç7Ç Ç;Ç
+ÇcÇuÇlÇtÇiÇeÇsÇ ÇwÇeÇ ÇHÇFÇ ÇeÇrÇiÇnÇ ÇhÇeÇtÇuÇtÇuÇmÇ ÇnÇeÇiÇiÇdÇ Ç‘Ç
+ÇoÇrÇpÇ ÇeÇrÇeÇ Ç-Ç
+Ç~Ç Ç©Ç ÇPÇeÇtÇ ÇhÇuÇeÇ ÇnÇaÇnÇ ÇoÇnÇeÇ Ç—Ç
+ÇrÇaÇ ÇeÇaÇeÇ Ç.Ç
+ÇtÇoÇnÇsÇ ÇaÇTÇ
+Ç©Ç Ç«Ç ÇwÇrÇ ÇPÇaÇlÇsÇ Ç©Ç
+ÇoÇnÇ Ç:Ç ÇaÇrÇtÇeÇ ÇaÇeÇfÇuÇiÇeÇ
+ÇfÇrÇsÇvÇeÇuÇsÇ ÇaÇnÇtÇ
+ÇsÇrÇoÇ ÇaÇ*Ç ÇaÇdÇ ÇoÇ
+ÇEÇEÇ ÇiÇeÇ ÇaÇ
+ÇaÇpÇnÇiÇeÇ Ç-Ç ÇSÇAÇGÇAÇSÇ ÇsÇiÇdÇlÇiÇaÇtÇaÇaÇdÇeÇsÇaÇiÇaÇeÇaÇnÇeÇnÇsÇiÇlÇiÇeÇaÇiÇaÇsÇ ÇtÇoÇnÇsÇ ÇeÇtÇ ÇrÇeÇ ÇhÇeÇ ÇaÇgÇaÇtÇeÇ
+Ç©Ç Ç-Ç Ç_Ç ÇeÇ
+ÇsÇuÇaÇ ÇtÇ Ç-Ç
+Ç€Ç ÇaÇ Ç¥Ç ÇaÇ?Ç Ç.Ç Ç-Ç ÇwÇaÇ Ç-Ç Ç'Ç Ç°Ç
+Ç5Ç.ÇeÇ@Ç Ç“ÇAÇsÇ ÇcÇ Ç.Ç Ç‘Ç?Ç@Ç ÇcÇeÇ ÇhÇtÇsÇ
+ÇeÇ Ç,Ç ÇmÇaÇoÇ ÇsÇeÇeÇsÇ?Ç ÇMÇaÇrÇeÇ ÇeÇsÇtÇoÇyÇ Ç1Ç.Ç Ç;Ç Ç3Ç0Ç.Ç ÇaÇoÇ ÇnÇyÇ
+Ç:Ç Ç>Ç.Ç«Ç Ç?Ç_Ç-Ç
+ÇaÇ ÇbÇeÇ,Ç ÇSÇOÇ ÇaÇ”Ç ÇmÇeÇrÇ Ç'Ç ÇrÇeÇ Ç7Ç?Ç)Ç Ç’Ç Ç‘Ç Ç'Ç
+Ç Ç)Ç Ç.ÇoÇ5Ç ÇsÇeÇeÇsÇoÇoÇeÇrÇtÇsÇeÇ ÇcÇoÇvÇeÇtÇ ÇmÇnÇ.Ç ÇAÇTÇWÇ Ç:Ç Ç~Ç~Ç Ç_Ç ÇiÇ)Ç
+ÇLÇ2Ç1Ç9Ç Ç2ÇiÇ4ÇlÇSÇiÇeÇvÇsÇ,Ç.Ç Ç7Ç6Ç ÇGÇoÇeÇrÇ ÇeÇTÇ ÇrÇyÇoÇsÇ ÇfÇeÇ ÇAÇTÇwÇ Ç-Ç ÇwÇwÇ.Ç ÇcÇoÇ
+ÇeÇ Ç2Ç@ÇeÇ)Ç Ç2Ç1Ç4Ç5Ç7Ç0Ç4Ç ÇSÇOÇPÇ.Ç Ç7Ç ÇWÇeÇ Ç4ÇmÇ ÇmÇuÇtÇeÇ Ç1Ç ÇrÇvÇ Ç4Ç.Ç ÇOÇOÇ Ç4Ç ÇeÇ
+Ç.Ç-Ç Ç=Ç Ç«Ç
+ÇoÇvÇrÇ Ç4Ç5Ç8Ç ÇOÇOÇRÇsÇ,Ç ÇMÇIÇUÇRÇAÇ ÇSÇyÇ)Ç.Ç ÇmÇeÇ ÇAÇrÇTÇ Ç1Ç ÇfÇyÇ Ç3Ç.ÇcÇ8Ç ÇiÇ Ç4Ç5Ç.Ç2Ç
+ÇpÇdÇ ÇoÇrÇ Ç'Ç Ç—Ç
+Ç°Ç ÇBÇeÇsÇtÇ Ç2ÇiÇlÇeÇsÇwÇeÇ7ÇTÇsÇeÇsÇsÇ ÇWÇrÇoÇmÇsÇ Ç1Ç Ç¥Ç Ç7Ç9Ç.Ç0Ç0Ç9Ç Ç1Ç Ç7Ç5Ç.Ç2Ç3Ç Ç¢Ç
+ÇOÇ.Ç4Ç%Ç%Ç Ç2Ç ÇlÇoÇoÇsÇeÇ ÇiÇ Ç.Ç Ç.Ç Ç3Ç7Ç Ç.Ç@Ç ÇiÇ ÇiÇ8Ç.Ç2Ç3Ç
+ÇrÇaÇ)Ç Ç4Ç.Ç3Ç8Ç:Ç Ç2Ç1Ç3Ç1Ç3Ç5Ç0Ç1Ç7Ç5Ç2Ç5Ç1Ç ÇsÇhÇeÇeÇtÇ ÇMÇeÇtÇ ÇiÇ)Ç Ç7Ç Ç4Ç0Ç.Ç0Ç0Ç Ç1Ç7Ç4Ç.Ç2Ç5Ç Ç¢ÇCÇ
+ÇDÇLÇ Ç2ÇiÇlÇeÇ7ÇTÇeÇOÇlÇeÇcÇeÇeÇeÇ ÇWÇNÇ Ç1Ç Ç'Ç Ç9Ç.Ç0Ç0Ç Ç|Ç Ç1Ç8Ç6Ç.Ç0Ç0Ç
+Ç@Ç Ç|Ç ÇtÇeÇ Ç2Ç0Ç7Ç0Ç1Ç1Ç2Ç8Ç2Ç ÇrÇaÇhÇ ÇnÇmÇ ÇiÇnÇ Ç2Ç9Ç.Ç0Ç0Ç Ç1Ç ÇMÇzÇsÇeÇ Ç8Ç Ç¢Ç
+ÇhÇeÇlÇ
+ÇPÇeÇ ÇLÇlÇ Ç2ÇLÇIÇ@ÇMÇOÇIÇIÇ ÇWÇaÇrÇiÇ Ç.Ç*Ç ÇtÇnÇ ÇaÇ7Ç.Ç Ç|Ç Ç1Ç2Ç Ç.Ç@ÇoÇ
+ÇiÇ)Ç ÇsÇ ÇnÇeÇeÇ Ç4ÇdÇ)Ç ÇWÇEÇSÇ ÇaÇpÇcÇ)Ç ÇUÇoÇrÇuÇ ÇaÇrÇnÇ Ç”Ç ÇaÇ Ç2Ç Ç1Ç2Ç9Ç.Ç@Ç0Ç Ç4Ç
+ÇDÇEÇ,Ç ÇMÇBÇBÇSÇ ÇTÇIÇOÇOÇIÇSÇEÇ?Ç ÇAÇCÇFÇEÇ!Ç ÇOÇrÇ ÇOÇEÇMÇ ÇIÇDÇ ÇoÇeÇsÇ Ç9Ç ÇvÇwÇ.Ç Ç5Ç.Ç0Ç9Ç Ç2Ç Ç1Ç2Ç.Ç2Ç0Ç ÇSÇ
+Ç'Ç ÇPÇoÇ Ç.Ç Ç.Ç Ç.Ç
+Ç:Ç Ç7Ç1Ç9Ç1Ç1Ç Ç7ÇSÇSÇOÇSÇ ÇTÇhÇoÇmÇeÇ.Ç Ç1Ç ÇiÇrÇ Ç1ÇsÇ ÇoÇoÇ Ç|Ç Ç1Ç7Ç5Ç.Ç%Ç
+Ç¥Ç Ç-Ç Ç1Ç9Ç)Ç Ç<Ç
+ÇGÇOÇ ÇAÇeÇ ÇcÇwÇaÇpÇhÇaÇwÇyÇ:Ç Ç1Ç)Ç.Ç ÇvÇeÇ Ç’Ç Ç1Ç7Ç2Ç.Ç0Ç0Ç Ç|Ç Ç1Ç2Ç6Ç.Ç0Ç
+Ç*Ç ÇoÇ
+ÇMÇeÇeÇeÇ ÇfÇrÇeÇ ÇeÇsÇcÇ ÇoÇnÇ Ç;Ç Ç1Ç ÇwÇuÇ Ç9Ç9Ç.Ç@Ç0Ç Ç|Ç Ç7Ç.ÇcÇeÇ Ç‘Ç
+Ç>Ç
+ÇsÇtÇeÇhÇtÇ ÇPÇeÇrÇnÇtÇ ÇiÇcÇ-Ç2Ç5Ç ÇwÇhÇyÇ.Ç Ç(Ç>Ç Ç7Ç Ç2Ç5Ç.Ç2Ç Ç1Ç Ç3Ç1Ç7Ç.Ç5Ç0Ç
+Ç¢Ç Ç7Ç3Ç2Ç ÇoÇwÇnÇ ÇSÇaÇnÇ.Ç Ç(ÇeÇeÇ ÇiÇ.Ç Ç4Ç2Ç.Ç0Ç0Ç Ç2Ç ÇeÇaÇ.Ç Ç‘Ç
+Ç7Ç Ç-Ç Ç-Ç
+ÇaÇ ÇeÇaÇeÇ ÇBÇeÇgÇ.Ç ÇHÇaÇ ÇeÇwÇeÇ ÇvÇeÇrÇeÇ ÇpÇeÇcÇsÇ ÇlÇwÇ Ç7Ç5Ç.Ç@Ç Ç2Ç ÇmÇoÇsÇ
+ÇtÇeÇ.Ç Ç-Ç Ç-Ç Ç‘Ç
+Ç<Ç1Ç Ç=Ç ÇPÇ
+Ç.Ç ÇTÇwÇiÇ ÇaÇ
+ÇeÇeÇrÇ ÇoÇ Ç:Ç Ç‘Ç
+ÇbÇsÇ
+Ç:Ç ÇeÇeÇ
+Ç.Ç ÇéÇ ÇaÇeÇ.Ç ÇaÇiÇ
+ 
+10000»*
+od
+¢g =
+ae CAPE ———
+JOJO
+corre
+~ —— e ——
+y rere noe
+e a '
+¥ " .
+tel Y > eee eS
+Long Island Iced Tea 120 Ice Latte 100
+Ginger Ale 120 Ice Americano 100
+ee ——
+Merry Christmas 120 Ice Cappuchino 100
+La Vie En Rose 120 Ice Caramel Macchiato 120
+hn
+Strawberry Margarita 120 Black Orange / Yuzu 120
+LD
+Ry] Hot Coffee with Milk 80
+c d : , - ee
+Espresso 60
+r ——
+4 Coldbrew Thai Specialty 190 ALL KINOS
+Espresso On The Rock 400
+_ _——L_ ————_—_—_—
+ee .
+DESSER — Honey a's
+’ —_—<——— 1.200 —_——————
+‘4 SE _ Aa » a ry 5
+“i _— i ar Dont Wor: Be Coffee 2C ee
+ij u Fone} a a —— ail
+| . ah a % '
+a
+»Ç*Ç
+ÇoÇdÇ
+Ç¢ÇgÇ Ç=Ç
+ÇaÇeÇ ÇCÇAÇPÇEÇ Ç—Ç—Ç—Ç
+ÇJÇOÇJÇOÇ
+ÇcÇoÇrÇrÇeÇ
+Ç~Ç Ç—Ç—Ç ÇeÇ Ç—Ç—Ç
+ÇyÇ ÇrÇeÇrÇeÇ ÇnÇoÇeÇ
+ÇeÇ ÇaÇ Ç'Ç
+Ç¥Ç Ç"Ç Ç.Ç
+ÇtÇeÇlÇ ÇYÇ Ç>Ç ÇeÇeÇeÇ ÇeÇSÇ
+ÇLÇoÇnÇgÇ ÇIÇsÇlÇaÇnÇdÇ ÇIÇcÇeÇdÇ ÇTÇeÇaÇ Ç1Ç2Ç0Ç ÇIÇcÇeÇ ÇLÇaÇtÇtÇeÇ Ç1Ç0Ç0Ç
+ÇGÇiÇnÇgÇeÇrÇ ÇAÇlÇeÇ Ç1Ç2Ç0Ç ÇIÇcÇeÇ ÇAÇmÇeÇrÇiÇcÇaÇnÇoÇ Ç1Ç0Ç0Ç
+ÇeÇeÇ Ç—Ç—Ç
+ÇMÇeÇrÇrÇyÇ ÇCÇhÇrÇiÇsÇtÇmÇaÇsÇ Ç1Ç2Ç0Ç ÇIÇcÇeÇ ÇCÇaÇpÇpÇuÇcÇhÇiÇnÇoÇ Ç1Ç0Ç0Ç
+ÇLÇaÇ ÇVÇiÇeÇ ÇEÇnÇ ÇRÇoÇsÇeÇ Ç1Ç2Ç0Ç ÇIÇcÇeÇ ÇCÇaÇrÇaÇmÇeÇlÇ ÇMÇaÇcÇcÇhÇiÇaÇtÇoÇ Ç1Ç2Ç0Ç
+ÇhÇnÇ
+ÇSÇtÇrÇaÇwÇbÇeÇrÇrÇyÇ ÇMÇaÇrÇgÇaÇrÇiÇtÇaÇ Ç1Ç2Ç0Ç ÇBÇlÇaÇcÇkÇ ÇOÇrÇaÇnÇgÇeÇ Ç/Ç ÇYÇuÇzÇuÇ Ç1Ç2Ç0Ç
+ÇLÇDÇ
+ÇRÇyÇ]Ç ÇHÇoÇtÇ ÇCÇoÇfÇfÇeÇeÇ ÇwÇiÇtÇhÇ ÇMÇiÇlÇkÇ Ç8Ç0Ç
+ÇcÇ ÇdÇ Ç:Ç Ç,Ç Ç-Ç ÇeÇeÇ
+ÇEÇsÇpÇrÇeÇsÇsÇoÇ Ç6Ç0Ç
+ÇrÇ Ç—Ç—Ç
+Ç4Ç ÇCÇoÇlÇdÇbÇrÇeÇwÇ ÇTÇhÇaÇiÇ ÇSÇpÇeÇcÇiÇaÇlÇtÇyÇ Ç1Ç9Ç0Ç ÇAÇLÇLÇ ÇKÇIÇNÇOÇSÇ
+ÇEÇsÇpÇrÇeÇsÇsÇoÇ ÇOÇnÇ ÇTÇhÇeÇ ÇRÇoÇcÇkÇ Ç4Ç0Ç0Ç
+Ç_Ç Ç_Ç—Ç—ÇLÇ_Ç Ç—Ç—Ç—Ç—Ç_Ç—Ç_Ç—Ç_Ç—Ç
+ÇeÇeÇ Ç.Ç
+ÇDÇEÇSÇSÇEÇRÇ Ç—Ç ÇHÇoÇnÇeÇyÇ ÇaÇ'ÇsÇ
+Ç’Ç Ç—Ç_Ç—Ç<Ç—Ç—Ç—Ç Ç1Ç.Ç2Ç0Ç0Ç Ç—Ç_Ç—Ç—Ç—Ç—Ç—Ç—Ç
+Ç‘Ç4Ç ÇSÇEÇ Ç_Ç ÇAÇaÇ Ç»Ç ÇaÇ ÇrÇyÇ Ç5Ç
+Ç“ÇiÇ Ç_Ç—Ç ÇiÇ ÇaÇrÇ ÇDÇoÇnÇtÇ ÇWÇoÇrÇ:Ç ÇBÇeÇ ÇCÇoÇfÇfÇeÇeÇ Ç2ÇCÇ ÇeÇeÇ
+ÇiÇjÇ ÇuÇ ÇFÇoÇnÇeÇ}Ç ÇaÇ ÇaÇ Ç—Ç—Ç ÇaÇiÇlÇ
+Ç|Ç Ç.Ç ÇaÇhÇ ÇaÇ Ç%Ç Ç'Ç
+ÇaÇ
+2Ç
+ÇiÇsÇ ÇsÇcÇeÇ ÇSÇHÇ ÇwÇaÇeÇeÇnÇtÇ)Ç ÇoÇnÇeÇ Ç"Ç
+ÇvÇiÇnÇ ÇFÇHÇ ÇWÇoÇrÇ Ç7Ç7Ç7Ç)Ç ÇGÇiÇnÇaÇ ÇGÇmÇnÇwÇyÇ Ç:Ç
+ÇgÇeÇiÇiÇnÇeÇwÇ ÇrÇyÇ ÇPÇhÇ ÇOÇTÇ ÇeÇeÇ ÇDÇeÇnÇeÇ,Ç ÇmÇeÇnÇeÇ Ç7Ç
+Ç‘Ç Ç;Ç Ç7Ç Ç;Ç
+ÇcÇuÇlÇtÇiÇeÇsÇ ÇwÇeÇ ÇHÇFÇ ÇeÇrÇiÇnÇ ÇhÇeÇtÇuÇtÇuÇmÇ ÇnÇeÇiÇiÇdÇ Ç‘Ç
+ÇoÇrÇpÇ ÇeÇrÇeÇ Ç-Ç
+Ç~Ç Ç©Ç ÇPÇeÇtÇ ÇhÇuÇeÇ ÇnÇaÇnÇ ÇoÇnÇeÇ Ç—Ç
+ÇrÇaÇ ÇeÇaÇeÇ Ç.Ç
+ÇtÇoÇnÇsÇ ÇaÇTÇ
+Ç©Ç Ç«Ç ÇwÇrÇ ÇPÇaÇlÇsÇ Ç©Ç
+ÇoÇnÇ Ç:Ç ÇaÇrÇtÇeÇ ÇaÇeÇfÇuÇiÇeÇ
+ÇfÇrÇsÇvÇeÇuÇsÇ ÇaÇnÇtÇ
+ÇsÇrÇoÇ ÇaÇ*Ç ÇaÇdÇ ÇoÇ
+ÇEÇEÇ ÇiÇeÇ ÇaÇ
+ÇaÇpÇnÇiÇeÇ Ç-Ç ÇSÇAÇGÇAÇSÇ ÇsÇiÇdÇlÇiÇaÇtÇaÇaÇdÇeÇsÇaÇiÇaÇeÇaÇnÇeÇnÇsÇiÇlÇiÇeÇaÇiÇaÇsÇ ÇtÇoÇnÇsÇ ÇeÇtÇ ÇrÇeÇ ÇhÇeÇ ÇaÇgÇaÇtÇeÇ
+Ç©Ç Ç-Ç Ç_Ç ÇeÇ
+ÇsÇuÇaÇ ÇtÇ Ç-Ç
+Ç€Ç ÇaÇ Ç¥Ç ÇaÇ?Ç Ç.Ç Ç-Ç ÇwÇaÇ Ç-Ç Ç'Ç Ç°Ç
+Ç5Ç.ÇeÇ@Ç Ç“ÇAÇsÇ ÇcÇ Ç.Ç Ç‘Ç?Ç@Ç ÇcÇeÇ ÇhÇtÇsÇ
+ÇeÇ Ç,Ç ÇmÇaÇoÇ ÇsÇeÇeÇsÇ?Ç ÇMÇaÇrÇeÇ ÇeÇsÇtÇoÇyÇ Ç1Ç.Ç Ç;Ç Ç3Ç0Ç.Ç ÇaÇoÇ ÇnÇyÇ
+Ç:Ç Ç>Ç.Ç«Ç Ç?Ç_Ç-Ç
+ÇaÇ ÇbÇeÇ,Ç ÇSÇOÇ ÇaÇ”Ç ÇmÇeÇrÇ Ç'Ç ÇrÇeÇ Ç7Ç?Ç)Ç Ç’Ç Ç‘Ç Ç'Ç
+Ç Ç)Ç Ç.ÇoÇ5Ç ÇsÇeÇeÇsÇoÇoÇeÇrÇtÇsÇeÇ ÇcÇoÇvÇeÇtÇ ÇmÇnÇ.Ç ÇAÇTÇWÇ Ç:Ç Ç~Ç~Ç Ç_Ç ÇiÇ)Ç
+ÇLÇ2Ç1Ç9Ç Ç2ÇiÇ4ÇlÇSÇiÇeÇvÇsÇ,Ç.Ç Ç7Ç6Ç ÇGÇoÇeÇrÇ ÇeÇTÇ ÇrÇyÇoÇsÇ ÇfÇeÇ ÇAÇTÇwÇ Ç-Ç ÇwÇwÇ.Ç ÇcÇoÇ
+ÇeÇ Ç2Ç@ÇeÇ)Ç Ç2Ç1Ç4Ç5Ç7Ç0Ç4Ç ÇSÇOÇPÇ.Ç Ç7Ç ÇWÇeÇ Ç4ÇmÇ ÇmÇuÇtÇeÇ Ç1Ç ÇrÇvÇ Ç4Ç.Ç ÇOÇOÇ Ç4Ç ÇeÇ
+Ç.Ç-Ç Ç=Ç Ç«Ç
+ÇoÇvÇrÇ Ç4Ç5Ç8Ç ÇOÇOÇRÇsÇ,Ç ÇMÇIÇUÇRÇAÇ ÇSÇyÇ)Ç.Ç ÇmÇeÇ ÇAÇrÇTÇ Ç1Ç ÇfÇyÇ Ç3Ç.ÇcÇ8Ç ÇiÇ Ç4Ç5Ç.Ç2Ç
+ÇpÇdÇ ÇoÇrÇ Ç'Ç Ç—Ç
+Ç°Ç ÇBÇeÇsÇtÇ Ç2ÇiÇlÇeÇsÇwÇeÇ7ÇTÇsÇeÇsÇsÇ ÇWÇrÇoÇmÇsÇ Ç1Ç Ç¥Ç Ç7Ç9Ç.Ç0Ç0Ç9Ç Ç1Ç Ç7Ç5Ç.Ç2Ç3Ç Ç¢Ç
+ÇOÇ.Ç4Ç%Ç%Ç Ç2Ç ÇlÇoÇoÇsÇeÇ ÇiÇ Ç.Ç Ç.Ç Ç3Ç7Ç Ç.Ç@Ç ÇiÇ ÇiÇ8Ç.Ç2Ç3Ç
+ÇrÇaÇ)Ç Ç4Ç.Ç3Ç8Ç:Ç Ç2Ç1Ç3Ç1Ç3Ç5Ç0Ç1Ç7Ç5Ç2Ç5Ç1Ç ÇsÇhÇeÇeÇtÇ ÇMÇeÇtÇ ÇiÇ)Ç Ç7Ç Ç4Ç0Ç.Ç0Ç0Ç Ç1Ç7Ç4Ç.Ç2Ç5Ç Ç¢ÇCÇ
+ÇDÇLÇ Ç2ÇiÇlÇeÇ7ÇTÇeÇOÇlÇeÇcÇeÇeÇeÇ ÇWÇNÇ Ç1Ç Ç'Ç Ç9Ç.Ç0Ç0Ç Ç|Ç Ç1Ç8Ç6Ç.Ç0Ç0Ç
+Ç@Ç Ç|Ç ÇtÇeÇ Ç2Ç0Ç7Ç0Ç1Ç1Ç2Ç8Ç2Ç ÇrÇaÇhÇ ÇnÇmÇ ÇiÇnÇ Ç2Ç9Ç.Ç0Ç0Ç Ç1Ç ÇMÇzÇsÇeÇ Ç8Ç Ç¢Ç
+ÇhÇeÇlÇ
+ÇPÇeÇ ÇLÇlÇ Ç2ÇLÇIÇ@ÇMÇOÇIÇIÇ ÇWÇaÇrÇiÇ Ç.Ç*Ç ÇtÇnÇ ÇaÇ7Ç.Ç Ç|Ç Ç1Ç2Ç Ç.Ç@ÇoÇ
+ÇiÇ)Ç ÇsÇ ÇnÇeÇeÇ Ç4ÇdÇ)Ç ÇWÇEÇSÇ ÇaÇpÇcÇ)Ç ÇUÇoÇrÇuÇ ÇaÇrÇnÇ Ç”Ç ÇaÇ Ç2Ç Ç1Ç2Ç9Ç.Ç@Ç0Ç Ç4Ç
+ÇDÇEÇ,Ç ÇMÇBÇBÇSÇ ÇTÇIÇOÇOÇIÇSÇEÇ?Ç ÇAÇCÇFÇEÇ!Ç ÇOÇrÇ ÇOÇEÇMÇ ÇIÇDÇ ÇoÇeÇsÇ Ç9Ç ÇvÇwÇ.Ç Ç5Ç.Ç0Ç9Ç Ç2Ç Ç1Ç2Ç.Ç2Ç0Ç ÇSÇ
+Ç'Ç ÇPÇoÇ Ç.Ç Ç.Ç Ç.Ç
+Ç:Ç Ç7Ç1Ç9Ç1Ç1Ç Ç7ÇSÇSÇOÇSÇ ÇTÇhÇoÇmÇeÇ.Ç Ç1Ç ÇiÇrÇ Ç1ÇsÇ ÇoÇoÇ Ç|Ç Ç1Ç7Ç5Ç.Ç%Ç
+Ç¥Ç Ç-Ç Ç1Ç9Ç)Ç Ç<Ç
+ÇGÇOÇ ÇAÇeÇ ÇcÇwÇaÇpÇhÇaÇwÇyÇ:Ç Ç1Ç)Ç.Ç ÇvÇeÇ Ç’Ç Ç1Ç7Ç2Ç.Ç0Ç0Ç Ç|Ç Ç1Ç2Ç6Ç.Ç0Ç
+Ç*Ç ÇoÇ
+ÇMÇeÇeÇeÇ ÇfÇrÇeÇ ÇeÇsÇcÇ ÇoÇnÇ Ç;Ç Ç1Ç ÇwÇuÇ Ç9Ç9Ç.Ç@Ç0Ç Ç|Ç Ç7Ç.ÇcÇeÇ Ç‘Ç
+Ç>Ç
+ÇsÇtÇeÇhÇtÇ ÇPÇeÇrÇnÇtÇ ÇiÇcÇ-Ç2Ç5Ç ÇwÇhÇyÇ.Ç Ç(Ç>Ç Ç7Ç Ç2Ç5Ç.Ç2Ç Ç1Ç Ç3Ç1Ç7Ç.Ç5Ç0Ç
+Ç¢Ç Ç7Ç3Ç2Ç ÇoÇwÇnÇ ÇSÇaÇnÇ.Ç Ç(ÇeÇeÇ ÇiÇ.Ç Ç4Ç2Ç.Ç0Ç0Ç Ç2Ç ÇeÇaÇ.Ç Ç‘Ç
+Ç7Ç Ç-Ç Ç-Ç
+ÇaÇ ÇeÇaÇeÇ ÇBÇeÇgÇ.Ç ÇHÇaÇ ÇeÇwÇeÇ ÇvÇeÇrÇeÇ ÇpÇeÇcÇsÇ ÇlÇwÇ Ç7Ç5Ç.Ç@Ç Ç2Ç ÇmÇoÇsÇ
+ÇtÇeÇ.Ç Ç-Ç Ç-Ç Ç‘Ç
+Ç<Ç1Ç Ç=Ç ÇPÇ
+Ç.Ç ÇTÇwÇiÇ ÇaÇ
+ÇeÇeÇrÇ ÇoÇ Ç:Ç Ç‘Ç
+ÇbÇsÇ
+Ç:Ç ÇeÇeÇ
+Ç.Ç ÇéÇ ÇaÇeÇ.Ç ÇaÇiÇ
+
+ 
+str
+ 
+########################################################################################
+ 
+
+########################################################################################
+ 
+########################################################################################
+ 
+
+########################################################################################
+ 
+########################################################################################
+ 
+#ShowMustGoOn(img) # show the image
+
+########################################################################################
+ 
+########################################################################################
+ 
+########################################################################################
+ 
+Import and 
+ 
+path = [
+    '/Users/imac/Desktop/SoloOpenSourceProject/JOCR/TestImage/Menu/IMG_7571.jpeg']
+ 
+txt = pytesseract.image_to_string(img, lang='eng', config='--psm 6')
+ 
+print(text)
+ 
+# https://stackoverflow.com/questions/64723694/permission-denied-when-reading-a-image-text-in-pytesseract
+ 
+ **
+ 
+img=get_grayscale(img)
+img = Image.fromarray(img)#https://stackoverflow.com/questions/43232813/convert-opencv-image-format-to-pil-image-format
+
+ 
+ShowMustGoOn(img)
+ 
+path = '/Users/imac/Desktop/SoloOpenSourceProject/JOCR/TestImage/Menu/IMG_7571.jpeg'
+img=Image.open(path)
+text=ts.image_to_string(img)
+ShowMustGoOn(img)
+print(text)
+# https://stackoverflow.com/questions/64723694/permission-denied-when-reading-a-image-text-in-pytesseract
+ 
+cv2.imread(
+ 
+import tesseract
+ 
+print(tesseract)
+ 
+.__file__
+ 
+#open and read the file after the appending:
+
+#df.to_csv("test1.csv")
+#print(df.to_string())
+#cv2.imshow("image", img)
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()'''
+ 
+
+from tesserocr import PyTessBaseAPI
+from PIL import Image
+
+with PyTessBaseAPI(lang="tha") as api:
+    #ลบช่องว่างแต่ละตัวอักษร
+    api.SetVariable('preserve_interword_spaces', '1')
+    
+    #Path ของรูปภาพ
+    api.SetImageFile("Image.jpeg")
+    print(api.GetUTF8Text())
+ 
+10000#
+ 
+Image.open(
+ 
+
+#cv2.imshow("test",img)
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()
+ 
+#opening - erosion followed by dilation
+def opening(image):
+    kernel = np.ones((5,5),np.uint8)
+    return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+ 
+img = cv2.imread('/Users/imac/Desktop/SoloOpenSourceProject/JOCR/TestImage/Menu/IMG_7571.jpeg')
+ 
+canny,get_grayscale,sharpen,erode,dilate,opening
+ 
+opening
+ 
+#dilation
+def dilate(image):
+    kernel = np.ones((5,5),np.uint8)
+    return cv2.dilate(image, kernel, iterations = 1)
+    # https://www.geeksforgeeks.org/erosion-dilation-images-using-opencv-python/
+ 
+def get_grayscale(image):
+    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+def sharpen(image):
+    #kernel = np.array([[-1,-1,-1], [-1,10,-1], [-1,-1,-1]])
+    #kernel = np.array([[0.25,0,-0.25], [0.5,0,-0.5], [0.25,0,-0.25]])
+    kernel = (1/(10**2))*np.ones((10,10))
+    # https://youtu.be/KuXjwB4LzSA?si=mt-leKGKjpMnJGfg
+    # https://www.geeksforgeeks.org/python-opencv-filter2d-function/
+    return cv2.filter2D(image, -1, kernel)
+ 
+#dilation
+def dilate(image):
+    kernel = np.ones((5,5),np.uint8)
+    return cv2.dilate(image, kernel, iterations = 1)
+ 
+
+
+def sharpen(image):
+    kernel = np.array([[-1,-1,-1], [-1,10,-1], [-1,-1,-1]])
+    return cv2.filter2D(image, -1, kernel)
+ 
+def get_grayscale(image):
+    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+ 
+def canny(image):
+    return cv2.Canny(image, 100, 200)
+
+#dilation
+def dilate(image):
+    kernel = np.ones((5,5),np.uint8)
+    return cv2.dilate(image, kernel, iterations = 1)
+    
+#erosion
+def erode(image):
+    kernel = np.ones((5,5),np.uint8)
+    return cv2.erode(image, kernel, iterations = 1)
+
+#opening - erosion followed by dilation
+def opening(image):
+    kernel = np.ones((5,5),np.uint8)
+    return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+
+def get_grayscale(image):
+    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+def sharpen(image):
+    kernel = np.array([[-1,-1,-1], [-1,10,-1], [-1,-1,-1]])
+    return cv2.filter2D(image, -1, kernel)
+ 
+#img = get_grayscale(img)
+ 
+
+print(pytesseract.pytesseract.tesseract_cmd)
+print(type(pytesseract.pytesseract.tesseract_cmd))
+ 
+'''
+ 
+'''
+ 
+'''
+ 
+    
+ 
+
+#img = get_grayscale(img)
+for i in [-1,0,1,2]:
+ 
+np.array([[1/9,1/9,1/9], [1/9,1/9,1/9], [1/9,1/9,1/9]])
+ 
+    n=100
+ 
+25
+ 
+print('hello')
+ 
+import argparse
+ 
+from PIL import Image, ImageGrab
+ 

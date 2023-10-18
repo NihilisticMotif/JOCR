@@ -1,0 +1,36 @@
+React in Practice 01 (13:10)
+1. How to create React App?
+# npx create-react-app ./ # the selected directory
+2. package.json
+ * All package is located here.
+3. node_modules
+4. src
+ * Folder that contain my code.
+5. src/index.html
+|<!DOC...
+|<html>
+|    </head>
+|        ...
+|    <head>
+|    <body>
+|        <div id='root'>
+|        <!-- My Front end code is displayed here -->
+|        </div>
+|    </body>
+|</html>
+6. src/index.js
+|import React from 'react';
+|import ReactDOM from 'react-dom/client';
+|import './index.css';
+|import App from './App';
+|import reportWebVitals from './reportWebVitals';
+|
+|const root = ReactDOM.createRoot(document.getElementById('root'));
+|root.render(
+|  <React.StrictMode>
+|    <App />
+|  </React.StrictMode>
+|);
+| /* Display all of the code in index.html div if='root' */
+7. App.js
+| /* App */
