@@ -4,7 +4,7 @@ import cv2
 import pandas as pd
 import numpy as np
 
-from kernel import canny,get_grayscale,sharpen,erode,dilate,opening,ShowMustGoOn 
+from kernel import canny,get_grayscale,sharpen,erode,dilate,opening,ShowMustGoOn,WhiteBackGround
 from txt import pensil, eraser
 
 paths = [
@@ -15,13 +15,15 @@ txts=[]
 for path in paths:
     # Modify image
     img = cv2.imread(path)
+    img = get_grayscale(img)
     img = sharpen(img)
-    #ShowMustGoOn(img)
+    img = WhiteBackGround(img)
+    ShowMustGoOn(img)
     
     # To convert from OpenCV image to PIL image use:
     # https://stackoverflow.com/questions/43232813/convert-opencv-image-format-to-pil-image-format
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    img=Image.fromarray(img)
+    img = Image.fromarray(img)
 
     # Convert Image to text using OCR
     # https://stackoverflow.com/questions/64723694/permission-denied-when-reading-a-image-text-in-pytesseract
@@ -34,7 +36,7 @@ for path in paths:
     txt=''.join(txt)
     txts.append(txt)
 
-eraser('demo.txt')
+#eraser('demo.txt')
 pensil('demo.txt',txt)
 
 '''

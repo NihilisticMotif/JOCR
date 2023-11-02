@@ -1,3 +1,31 @@
+eng+
+ 
+'/Users/imac/Desktop/SoloOpenSourceProject/JOCR/TestImage/Expenses_Macro/IMG_7553.jpeg'
+ 
+img=img[:,200:1000]
+ 
+ShowMustGoOn(img)
+ 
+#img=Image.open(img)
+ 
+txts.append(txt)
+ 
+txts=[]
+ 
+'''
+ 
+    
+ 
+for path in paths:
+    # Modify image
+ 
+print('Hii')
+ 
+img = get_grayscale(img)
+ 
+
+Hellp
+ 
 Day 17
 * Learn how to create hook 
 * Try to avoid creating nested component, but it does not works, even with the help of chat gpt 

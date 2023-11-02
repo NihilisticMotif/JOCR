@@ -63,6 +63,18 @@ def opening(image):
     kernel = np.ones((5,5),np.uint8)
     return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
 
+#White
+def WhiteBackGround(img):
+    RangeMax=100
+    A1=1
+    Step=1
+    Start=0
+    for i in range(RangeMax):
+      mark=np.logical_and(img>Start+(i*Step)/A1,img<Start+((i+1)*Step)/A1)
+      img[mark]=Start+(i*Step)/A1
+    img[img>=Start+((RangeMax)*Step)/A1]=255
+    return img
+
 ########################################################################################
 #   Display the Image
 ########################################################################################
@@ -72,6 +84,7 @@ def ShowMustGoOn(img):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
+'''
 path='/Users/imac/Desktop/SoloOpenSourceProject/JOCR/TestImage/Expenses_Macro/IMG_7553.jpeg'
 img = cv2.imread(path)
 img = get_grayscale(img)
@@ -81,7 +94,7 @@ img = get_grayscale(img)
 img = sharpen(img)
 #img = dilate(img)
 ShowMustGoOn(img)
-
+'''
 
 '''
 python3 kernel.py

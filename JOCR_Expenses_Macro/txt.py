@@ -1,5 +1,5 @@
 def pensil(note,txt):
-    f = open(note, "a",encoding="utf-8")
+    f = open(note, "w",encoding="utf-8")
     f.write(''.join(txt))
     f.close()
 
