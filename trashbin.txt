@@ -1,3 +1,1005 @@
+<td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Ok</button></div></td>
+    <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
+ 
+"3"
+ 
+    <td></td>
+    <td></td>
+    <td>Do you sure you want to delete this row?</td>
+ 
+    <td></td>
+ 
+    <td></td>
+ 
+<h1>
+ 
+<tr className='C01id_HeightLightRow'>
+    <td></td>
+    <td><div className='C01id_EditRowButton'><input></input><button>Ok</button></div></td>
+    <td><div className='C01id_EditRowButton'><input></input><button>Ok</button></div></td>
+    <td><div className='C01id_EditRowButton'><input></input><button>Ok</button></div></td>
+    <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
+</tr>
+ 
+Edited
+ 
+        //setSS_Display(1)
+ 
+        setSS_Display(0)
+ 
+        //alert('Working')
+ 
+            alert(THISROW.Key)
+ 
+,SS_IndexColumns,SS_PrivateReset
+ 
+,SS_IndexColumns,SS_PrivateReset
+ 
+    const [SS_PrivateReset,setSS_PrivateReset]=useState<boolean>(true)
+    // SS_PrivateColumns only updated onces in useEffect.
+    // It determine the order of SS_Row
+ 
+        setSS_Display(1)
+ 
+            break;
+ 
+ table 
+ 
+    border-collapse: collapse;
+ 
+
+.C01id_HeightLightRow tr{
+    display:flex;
+}
+ 
+    background-color: rgb(100, 100, 200);
+ 
+:not(.C01id_HeightLightRow)
+ 
+
+#C01id_Table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+ 
+className='C01id_HeightLightRow'
+ 
+    let let_Display:0|1|2|3=0
+    if(typeof THISROW.Display!==undefined){
+        let_Display!=THISROW.Display
+    }
+ 
+0
+    
+ 
+<div className='C01id_EditRowButton'></div>
+ 
+<button onClick={f_OpenRename}>Edit</button><button onClick={f_OpenDelete}>X</button>
+ 
+: {INDEX}
+ 
+Editor
+ 
+: {INDEX}
+ 
+<button onClick={f_OpenRename}>Ok</button>
+ 
+<button onClick={f_OpenDelete}>Cancel</button>
+ 
+: {INDEX}
+ 
+</>
+ 
+    const C01id_Rename:string='C01id_Rename'+THISROW.Key.toString()
+ 
+//****************************************************************************
+// FUNCTION_00: Change Mode of C_DefineColumn Components for Rename and Delete 
+//****************************************************************************
+
+    function f_Display(D:0|1|2|3){
+        //let ss_Row:TS_Row[]=[...SS_Row]
+        //let let_UpdateColumns:TS_Row[]=U_UpdateDisplay(THISROW,ss_Row,D)
+        //setSS_Row(let_UpdateColumns)   
+    }
+
+    function f_Cancel():void{
+        f_Display(0)
+    }
+
+ 
+/*
+ 
+    let let_DefaultDisplay:0|1|2
+    if(THISROW.Display===undefined || THISROW.Display===3){
+        let_DefaultDisplay=0
+    }else{
+        let_DefaultDisplay=THISROW.Display
+    }
+
+ 
+</>
+ 
+</>
+ 
+    SS_IndexColumns:number[],
+    setSS_IndexColumns:(S:number[])=>void,
+ 
+    // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
+    SS_IndexColumns,    // Only used in f_Delete
+    setSS_IndexColumns,
+ 
+<div 
+    className={'C01id'} 
+    key={THISROW.Key} 
+>
+ 
+</div>
+ 
+import C_DefineColumnButton from './Coms/useless01'
+import C_CreateColumn from './Coms/useless00';
+ 
+    let let_NewKey:number=Math.random()
+    while(ROWS.map(ROW=>ROW.Key).includes(let_NewKey)===true){
+        let_NewKey=Math.random()
+    }
+ 
+:number
+ 
+let let_Amount:number = parseFloat((document.getElementById('C01id_InputAmount') as HTMLInputElement).value);
+ 
+et_Price
+ 
+
+        // Check if the value is a valid number
+ 
+.toString()
+ 
+.toString()
+ 
+alert('Hello The World')
+ 
+        if()
+ 
+)
+ 
+    SS_IndexColumns   :number[],
+    setSS_IndexColumns:(S:number[])=>void,
+ 
+    SS_IndexColumns,    // Update the index of Column inside C01_Table
+    setSS_IndexColumns, // -
+ 
+<div id='C01id_Div1'>
+<table>
+<h1 id='C01id_Div1Header'>Create New Row</h1>
+<hr/>
+<div >
+<tr><td><h1>Name:   </h1><input></input></td></tr>
+<tr><td><h1>Price:  </h1><input></input></td></tr>
+<tr><td><h1>Amount: </h1><input></input></td></tr>
+</div>
+<hr />
+<tr><td>
+<div id='C01id_Div1Button'>
+<button>Ok</button>
+<button>Cancel</button>
+</div>
+</td></tr>
+</table>
+</div>
+ 
+<div className='C01id_SortButton'><button onClick={()=>alert('KK')}>Sort</button></div>
+ 
+//****************************************************************************
+// FUNCTION_01: Sort Index
+//****************************************************************************
+    function f_SortIndex(COLUMN:string):void{
+        // Get the Alphabet Name Order of SS_Row
+        let ss_Row:TS_Row[] = [...SS_Row]
+        ss_Row.sort(f_Sort(COLUMN));
+        if(SS_IsD===true){
+            ss_Row.reverse();
+            setSS_IsD(false)
+        }
+        else{
+            setSS_IsD(true)
+        }
+        // https://www.w3schools.com/jsref/jsref_sort.asp
+        // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
+        
+        // Update SS_IndexColumns
+        setSS_Row(ss_Row)
+    }
+ 
+SS_Column
+ 
+import U_DefineTableHeader from './Coms/U_DefineTableHeader'
+ 
+()=>f_DSort()
+ 
+    Column:string,
+ 
+    Column,
+ 
+Name
+ 
+IsD:boolean
+ 
+    SS_IndexColumns,    // Update the index of Column inside C01_Table
+    setSS_IndexColumns, // -
+ 
+    SS_IndexColumns   :number[],
+    setSS_IndexColumns:(S:number[])=>void,
+ 
+ , useEffect
+ 
+onClick={f_CreateColumn}
+ 
+{/*
+//****************************************************************************
+// Edited Data
+//****************************************************************************
+<tr>
+    <td>Original: 2</td>
+    <td>Coffee</td>
+    <td>100</td>
+    <td>Delicious</td>
+    <td></td>
+</tr>
+<tr>
+    <td>Edited: 2</td>
+    <td>Cake</td>
+    <td>100</td>
+    <td>Delicious</td>
+    <td></td>
+</tr>
+<tr>
+    <td>Editor</td>
+    <td><button>Edit</button><button>Reset</button></td>
+    <td><input></input><button>Ok</button><button>Cancel</button></td>
+    <td><input></input><button>Ok</button><button>Cancel</button></td>
+    <td><button>Ok</button><button>Cancel</button></td>
+</tr>
+*/}
+
+{/*
+//****************************************************************************
+// The Mind Electric
+//****************************************************************************
+<tr>
+    <th>Row Index</th>
+    {JSX_TH_Rows}
+    <th>Create new column as</th>
+</tr>
+<tr>
+    <td></td>
+    {JSX_BUTTON_Rows}
+    <C_CreateColumn
+// When create new columns
+// SS_Column has to be updated
+// and we have to calculate the order of new column.
+        SS_Row={SS_Row}
+        setSS_Row={setSS_Row}
+        SS_IndexColumns={SS_IndexColumns}
+        setSS_IndexColumns={setSS_IndexColumns}
+    />
+</tr>
+    */}
+ 
+
+.C01id_SortButtonLong button{
+    margin-right: 5px;
+    font-size: 16px;
+    width: 100%;
+    height: 30px
+}
+ 
+.C01id_EditRowButton{
+    display:flex;
+}
+ 
+    <td><div className='C01id_SortButton'><button>Sort</button></div></td>
+ 
+ Time, The Liminal Space Editor'},
+ 
+interested in Homo Sapien, The Insect futuristic human, The Caregiver, Everywhere at the end of Space
+ 
+re, The Khama Universal Police, The Better than Man after Man, The Bug who 
+ 
+ God of Sci Fic, The Realistic Frizer, The Owner of Omnitrix, The Devil of the Futu
+ 
+        //{Key: 3, Name: 'Que, The Human Editor, The Last Alien Bender, The
+ 
+    margin-right: 5px;
+ 
+    border: 1px solid rgb(205, 205, 205, 1);
+ 
+    border-left: 5px solid rgb(205, 205, 205, 0);
+    border-right: 5px solid rgb(205, 205, 205, 0);
+ 
+.C01id_DivHeader{
+    display: flex;
+}
+
+.C01id_Header {
+     background-color: rgb(193, 193, 193);
+     font-size: 16px;
+     border: 1px solid rgb(205, 205, 205, 0);
+     border-left: 5px solid rgb(205, 205, 205, 0);
+     border-right: 5px solid rgb(205, 205, 205, 0);
+}
+
+ 
+
+#C01id_Div1Header{
+    margin-left:0px;
+}
+ 
+    margin-top:0px;
+ 
+    display: grid;
+    margin-top:0px;
+ 
+
+.C01id_Delete{
+    font-size: 16px;
+}
+ 
+#C01_Button button {
+    font-size: 17px;
+}
+ 
+    padding-left:5px;
+
+ 
+    text-align: left;
+ 
+    padding-left:20px;
+ 
+margin-left:20px;
+ 
+    overflow: hidden;
+ 
+#C01id_Table th{
+    height: 50px;
+    overflow: hidden;
+}
+ 
+#C01id_Table table {
+    /*
+    https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
+    */
+    border-collapse: collapse;
+    width: 100%;
+    height: 25px;
+    table-layout: fixed;
+    max-height: 20px;
+}
+ 
+#C01id_Div2{
+    width: 500px;
+    height:500px;
+    overflow-y: scroll;
+}
+ 
+
+#C01id_Div2{
+    width: 500px;
+    height:500px;
+    overflow-y: scroll;
+}
+ 
+
+td.C01id{
+    height:0px;
+}
+
+ 
+
+.C01id_Header {
+     background-color: rgb(193, 193, 193);
+     font-size: 16px;
+     border: 1px solid rgb(205, 205, 205, 0);
+     border-left: 5px solid rgb(205, 205, 205, 0);
+     border-right: 5px solid rgb(205, 205, 205, 0);
+ }
+ 
+
+
+.C01id_Header {
+     background-color: rgb(193, 193, 193);
+     font-size: 16px;
+     border: 1px solid rgb(205, 205, 205, 0);
+     border-left: 5px solid rgb(205, 205, 205, 0);
+     border-right: 5px solid rgb(205, 205, 205, 0);
+ }
+ 
+
+
+.C01id_DivHeader{
+    background-color: #023445;
+    position:absolute;
+}
+ 
+.C01id {
+    font-size: 16px;
+    border: 1px solid rgb(205, 205, 205, 0);
+    border-left: 5px solid rgb(205, 205, 205, 0);
+    border-right: 5px solid rgb(205, 205, 205, 0);
+    height: 30px;
+    display: flex
+}
+ 
+#C01id_Div1 hr{
+    color: red;
+    background-color: red;
+    height: 2px;
+    border:none;
+    width:100%;
+}
+
+#C01id_Div1Button{
+    margin-top: 10px;
+    margin-left: 0%;
+    display:flex;
+}
+
+#C01id_Div1 h1{
+    font-size: 18px;
+}
+
+ 
+#C01id_Div1 hr{
+    color: red;
+    background-color: red;
+    height: 2px;
+    border:none;
+    width:100%;
+}
+ 
+#C01id_Div1{
+    background-color: cadetblue;
+    width:200px;
+}
+
+#C01id_Div1 td{
+    display:grid;
+}
+
+#C01id_Div1 table{
+    display:grid;
+}
+
+#C01id_Div1 td{
+    margin-left:10px;
+}
+
+#C01id_Div1 button{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+}
+
+ 
+#C01id_Div1{
+    background-color: cadetblue;
+    width:200px;
+}
+ 
+#C01id_Div{
+    display:flex;
+    background-color: #c794e3;
+}
+ 
+, The Last Alien Bender, The God of Sci Fic, The Realistic Frizer, The Owner of Omnitrix, The Devil of the Future, The Khama Universal Police, The Better than Man after Man, The Bug who interested in Homo Sapien, The Insect futuristic human, The Caregiver, Everywhere at the end of Space Time, The Liminal Space Editor
+ 
+100000001000000010000000
+ 
+000000010000000100000001000000010000000100000001
+ 
+</div>
+ 
+className='C01id_EditRowButton'
+ 
+<h1>ww</h1>
+ 
+className='C01id_EditRowButton'
+ 
+    border: 2px solid rgb(0, 0, 0);
+ 
+    border: 0px rgb(0,0,0,0);
+ 
+    width: 100px;
+    height:40px;
+ 
+td
+ 
+ className='C01id_EditRow'
+ 
+button
+ 
+     border: 2px solid rgb(0, 0, 0);
+     background-color: rgb(255, 255, 255);
+     height: 30px;
+ 
+#C01id_Div1 button,
+ 
+#C01id_Div1 button,
+ 
+{
+    
+}
+
+button.C01id {
+ 
+button.C01id{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+}
+ 
+tr,
+ 
+    margin-left: 10px;
+ 
+    flex:1;
+ 
+className='C01id_hr'
+ 
+id='C01id_Div1'
+ 
+id='C01id_Div1Input'
+ 
+id='C01id_Div1InputHeader'
+ 
+className='C01id_hr'
+ 
+    border: 3px;
+ 
+#C01id_Div1Input{
+    background-color: #c794e3;
+}
+
+#C01id_Div1InputHeader{
+    background-color: aquamarine;
+}
+
+ 
+id='C01id_Div1InputHeader'
+ 
+</div>
+ 
+</div>
+ 
+/*
+ 
+*/
+ 
+</td>
+ 
+<button>Ok</button>
+<button>Cancel</button>
+ 
+<button>Ok</button>
+<button>Cancel</button>
+ 
+    display:flex;
+ 
+<button>Ok</button>
+<button>Cancel</button>
+ 
+<h1>Create New Row</h1>
+ 
+    display: block;
+ 
+    overflow-x: scroll;
+ 
+    overflow-x: scroll;
+ 
+background-color: #023445;
+ 
+    background-color: #023445;
+ 
+</table>
+ 
+</td>
+ 
+</div>
+ 
+Input
+ 
+Input
+ 
+</div>
+ 
+</>
+ 
+<>
+ 
+</>
+ 
+<h1>hh</h1>
+ 
+    function f_Display(
+            D:0|1|2|3,
+            s_Row:TS_Row[],
+            setS_Row:(S:TS_Row[])=>void):void{
+        let let_UpdateColumns:TS_Row[]=U_UpdateDisplay(THISROW,s_Row,D)
+        setS_Row(let_UpdateColumns)    
+    }
+ 
+
+
+ 
+
+        f_Display(D,ss_Row,setSS_Row)
+        
+ 
+,true
+ 
+        IsNewSelect:boolean,
+ 
+ColumnName
+ 
+    setSS_IndexColumns = {setSS_IndexColumns}
+ 
+<td><button className='C01id_Header' onClick={()=>f_DSort(true)}>Descending Sort Columns</button></td>
+<td><button className='C01id_Header' onClick={()=>f_DSort(false)}>Ascending Sort Columns</button></td>
+ 
+    setSS_IndexColumns,   // from ../index.js, Sort Column
+ 
+    setSS_IndexColumns:(S:number[])=>void
+ 
+{
+/*
+ 
+
+*/}
+ 
+SS_IndexColumns:number[],
+setSS_IndexColumns:(S:number[])=>void,
+ 
+SS_IndexColumns,
+setSS_IndexColumns
+ 
+SS_IndexColumns={SS_IndexColumns01}
+setSS_IndexColumns={setSS_IndexColumns01}
+ 
+//****************************************************************************
+ 
+
+    // Index Columns of C01_Table
+    const [SS_IndexColumns01,setSS_IndexColumns01]=useState<number[]>(SS_Columns.map(Column=>Column.Key))
+    // Index Columns of C02_ColumnName
+    const [SS_IndexColumns02,setSS_IndexColumns02]=useState<number[]>(SS_Columns.map(Column=>Column.Key))
+
+//****************************************************************************
+// USEEFFECT_00: Update SS_IndexColumns01 and SS_IndexColumns02
+//****************************************************************************
+    useEffect(() => {
+    // Variable
+    let ss_IndexColumns:number[]=[...SS_Columns].map(Column=>Column.Key)
+//****************************************************************************
+    // Add object key inside SS_IndexColumns01 
+    for(let i:number=0;i<ss_IndexColumns.length;i++){
+        if(SS_IndexColumns01.includes(ss_IndexColumns[i])===false){
+            let ss_IndexColumns01 =[...SS_IndexColumns01] 
+            setSS_IndexColumns01([...ss_IndexColumns01,ss_IndexColumns[i]]);
+        }
+    }
+//****************************************************************************
+    // Add object key inside SS_IndexColumns02
+    for(let i:number=0;i<ss_IndexColumns.length;i++){
+        if(SS_IndexColumns02.includes(ss_IndexColumns[i])===false){
+            let ss_IndexColumns02 =[...SS_IndexColumns02] 
+            setSS_IndexColumns02([ss_IndexColumns[i],...ss_IndexColumns02]);
+        }
+    }
+//****************************************************************************
+    // Delete undefined SS_IndexColumns01 object
+    let let_DeleteTarget01:number[]=[]
+    let IsDelete01:boolean=false
+    for(let i:number=0;i<SS_IndexColumns01.length;i++){
+        const let_Name:TS_Row|undefined=SS_Columns.find(({Key})=>Key === SS_IndexColumns01[i])
+        if(typeof let_Name==='undefined'){
+            // https://www.tutorialspoint.com/typescript/typescript_array_push.htm
+            let_DeleteTarget01.push(SS_IndexColumns01[i])
+            IsDelete01=true
+        }
+    }
+    if(IsDelete01===true){
+        // https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array-in-javascript
+        let ss_IndexColumns01:number[]=[...SS_IndexColumns01]
+        let let_UpdateColumns01:number[]=ss_IndexColumns01.filter(Key=>!let_DeleteTarget01.includes(Key))
+        setSS_IndexColumns01(let_UpdateColumns01)
+        let_DeleteTarget01=[]
+        IsDelete01=false
+    }
+//****************************************************************************
+    // Delete undefined SS_IndexColumns02 object
+    let let_DeleteTarget02:number[]=[]
+    let IsDelete02:boolean=false
+    for(let i:number=0;i<SS_IndexColumns02.length;i++){
+        const let_Name:TS_Row|undefined=SS_Columns.find(({Key})=>Key === SS_IndexColumns02[i])
+        if(typeof let_Name==='undefined'){
+            // https://www.tutorialspoint.com/typescript/typescript_array_push.htm
+            let_DeleteTarget02.push(SS_IndexColumns02[i])
+            IsDelete02=true
+        }
+    }
+    if(IsDelete02===true){
+        // https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array-in-javascript
+        let ss_IndexColumns02:number[]=[...SS_IndexColumns02]
+        let let_UpdateColumns02:number[]=ss_IndexColumns02.filter(Key=>!let_DeleteTarget02.includes(Key))
+        setSS_IndexColumns02(let_UpdateColumns02)
+        let_DeleteTarget02=[]
+        IsDelete02=false
+    }
+//****************************************************************************
+    }, [SS_Columns,SS_IndexColumns01,SS_IndexColumns02]);
+ 
+SS_IndexColumns={SS_IndexColumns01}
+setSS_IndexColumns={setSS_IndexColumns01}
+ 
+import { U_IsSelect } from '../../T02_ColumnName/U_IsSelect';
+ 
+                    IsSelect: ThisColumn.IsSelect,
+                    IsVisible: true
+ 
+                IsSelect:IsNewSelect,
+                IsVisible: true
+ 
+.filter(Column=>
+        Column.IsSelect===true
+        // https://react.dev/learn/rendering-lists
+    ));
+ 
+    const let_Columns:TS_ColumnName[] = ([...SS_PrivateColumns].filter(Column=>
+        Column.IsSelect===true
+        // https://react.dev/learn/rendering-lists
+    ));
+ 
+    // Drag and Drop Columns
+    const Ref_DragColumn = useRef<number>(0)
+    const Ref_DragOverColumn = useRef<number>(0)
+ 
+/*
+ 
+//****************************************************************************
+ 
+//****************************************************************************
+// JSX_01: Testing, Debugging
+//****************************************************************************
+    const JSX_TestColumn:JSX.Element[] = SS_Columns.map((Column)=>
+        <tr>
+        <td>{Column.Name}</td>
+        <td>|{Column.Key}</td>
+        <td>|{Column.IsSelect.toString()}</td>
+        <td>|{Column.IsVisible.toString()}</td>
+        </tr>
+        );
+    function JSXName(ThisKey:number):string{
+        const let_Name=SS_Columns.find(({Key})=>Key === ThisKey)
+        if (let_Name===undefined){
+            return 'undefined'
+        }
+        else{
+            return let_Name.Name
+        }
+    }
+    const JSX_TestColumn01:JSX.Element[] = SS_IndexColumns01.map((Key)=>
+        <div>
+        <td>* {Key}</td>
+        <td>| {JSXName(Key)}</td>
+        </div>
+        );
+    const JSX_TestColumn02:JSX.Element[] = SS_IndexColumns02.map((Key)=>
+        <div>
+        <td>* {Key}</td>
+        <td>| {JSXName(Key)}</td>
+        </div>
+        );
+    
+    const JSX_DivTestColumn:JSX.Element=<
+div id='Body' >
+<hr/>
+    <div>
+    <h1>Testing (Main)</h1>
+    <h2>Length:{SS_Columns.length}</h2>
+    {JSX_TestColumn}
+    </div>
+<hr/>
+    <div>
+    <h1>JSX_TestColumn01</h1>
+    <h2>Length:{SS_IndexColumns01.length}</h2>
+    {JSX_TestColumn01}
+    </div>
+<hr/>
+    <div>
+    <h1>JSX_TestColumn02</h1>
+    <h2>Length:{SS_IndexColumns02.length}</h2>
+    {JSX_TestColumn02}
+    </div>
+<hr/>
+</div>
+ 
+    IsSelect:boolean,   // DEFAULT: false
+                        // Is the Column display in C01_Table
+                        // const [SS_IsSelect,setSS_IsSelect]=useState<boolean>(false)
+
+    IsVisible:boolean,  // DEFAULT: true
+                        // Is the Column display in C02_Column
+                        // If the column satisfy 1 of 3 conditions
+                        // 1. Consist of SS_Filter in their name
+                        // 2. New Column 
+                        // 3. Renamed Column 
+                        // Then it is visible in C02_Column and IsVisible = true
+ 
+// f_DSort is used for sort SS_Column in Alphabet order
+// We want to access SS_Columns.Name,
+// so that we can calculate valid SS_IndexColumns
+    SS_Columns    = {SS_Columns}
+    setSS_IndexColumns = {setSS_IndexColumns}
+
+ 
+<button>Edit</button><button>X</button>
+ 
+<button>Edit</button><button>X</button>
+ 
+: 2
+ 
+<input></input>
+ 
+<button>Sort</button>
+ 
+
+{
+/*
+ 
+{JSX_TH_Columns}
+ 
+</tr>
+ 
+</tr>
+ 
+    <th>Row Index</th>
+ 
+<tr>
+    <th>Row Index</th>
+    {JSX_TH_Columns}
+    <th>Create new column as</th>
+</tr>
+ 
+<button>...</button>
+ 
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Import Data</button></td>
+ 
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Export Filtered Data</button></td>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Rename Table</button></td>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Inspecting Table</button></td>
+ 
+        
+ 
+            draggable
+            onDragStart={()=>{Ref_DragColumn.current=index}}
+            onDragEnter={()=>{Ref_DragOverColumn.current=index}}
+            onDragEnd={()=>f_Drag()}
+            onDragOver={(e)=>e.preventDefault()}
+ 
+
+//****************************************************************************
+// FUNCTION_01: Drag and Drop Column
+//****************************************************************************
+    // https://youtu.be/_nZCvxJOPwU?si=ixJXOlrb40z19L2p
+    function f_Drag():void{
+        let ss_IndexColumns:number[]=SS_IndexColumns
+        const let_DragColumnCurrent:number=ss_IndexColumns[Ref_DragColumn.current]
+        ss_IndexColumns[Ref_DragColumn.current] = ss_IndexColumns[Ref_DragOverColumn.current]
+        ss_IndexColumns[Ref_DragOverColumn.current] = let_DragColumnCurrent
+        setSS_IndexColumns(ss_IndexColumns)
+        setSS_PrivateReset(true)
+    }
+ 
+//****************************************************************************
+// FUNCTION_02: Utility, Will Develop Later
+//****************************************************************************
+    function f_OpenSetting():void{
+        let ss_Columns:TS_ColumnName[] = [...SS_Columns];
+        //alert(JSON.stringify(list))
+        alert(ss_Columns.length)
+        // https://stackoverflow.com/questions/5612787/converting-an-object-to-a-string
+
+        // * [C]: Create Copy Column
+        // * [R]: Filter Data
+        // * [R]: Inspect Column
+        // * [R]: Data Visualization with Filter Condition
+        // * [U]: Transform Column
+        // * [U]: Replace Data
+        // * [U]: Delete Data with Filter Condition
+    }
+
+ 
+<button className={'C01id'} onClick={f_OpenSetting}>...</button>
+ 
+else if (let_DefaultDisplay===3){
+        JSX_Column=
+<>
+<button className={'C01id'} onClick={f_UnSelect}>OK</button>
+<button className={'C01id'} onClick={f_Cancel}>Cancel</button>
+</>
+    }
+ 
+<button className={'C01id'} onClick={f_OpenDelete}>X</button>
+ 
+<button className={'C01id'} onClick={f_OpenUnselect} id={C02id_CheckButton} style={{backgroundColor: "white"}}>X</button>
+ 
+//****************************************************************************
+// FUNCTION_03: Unselect Column
+//****************************************************************************
+    const C02id_CheckButton:string = 'C01id_CheckButton'+ThisColumn.Key.toString()
+    function f_OpenUnselect():void{
+        f_UpdateDisplay(3)
+    }
+
+    function f_UnSelect():void{
+        // https://react.dev/learn/responding-to-events#preventing-default-behavior
+        // https://www.w3schools.com/jsref/met_document_getelementbyid.asp
+        let ss_Columns:TS_ColumnName[]= [...SS_Columns];
+        let let_UpdateColumn:TS_ColumnName[]=U_IsSelect(ss_Columns,false,undefined,ThisColumn)
+        setSS_Columns(let_UpdateColumn);
+        // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
+    }
+ 
+    //      3|  // UnSelect JSX Column| f_OpenUnSelect => let_DefaultDisplay(3) => Open UnSelect JSX Column
+ 
+
+// ColumnName Panel
+<C02_ColumnName 
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_IndexColumns={SS_IndexColumns02}
+setSS_IndexColumns={setSS_IndexColumns02}
+/>
+
+// Table Panel
+ 
+// 
+ 
+//
+ 
+
+// <P00_Header/>
+
+//<div id='Body' >
+
+// ColumnName Panel
+// <C02_ColumnName 
+// SS_Columns={SS_Columns}
+// setSS_Columns={setSS_Columns}
+// SS_IndexColumns={SS_IndexColumns02}
+// setSS_IndexColumns={setSS_IndexColumns02}
+// />
+
+// Table Panel
+// <C01_Table 
+// SS_Columns={SS_Columns}
+// setSS_Columns={setSS_Columns}
+// SS_IndexColumns={SS_IndexColumns01}
+// setSS_IndexColumns={setSS_IndexColumns01}
+// />
+
+// </div>
+//****************************************************************************
+
+// <>
+// <P00_Header/>
+// <P01_Panel/>
+// </>
+ 
+import TS_ColumnName from "./T02_ColumnName/An_Index";
+ 
+import C02_ColumnName from "./C02_ColumnName";
+import P00_Header from './P00_Header'
+import P01_Panel from './P01_Panel_H/index'
+ 
 eng+
  
 '/Users/imac/Desktop/SoloOpenSourceProject/JOCR/TestImage/Expenses_Macro/IMG_7553.jpeg'

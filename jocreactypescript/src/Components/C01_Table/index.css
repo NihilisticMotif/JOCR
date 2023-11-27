@@ -1,0 +1,168 @@
+/************************************************************************************************
+// C01id_Div
+************************************************************************************************/
+#C01id_Div {
+    display: flex;
+    background-color: #c794e3;
+}
+
+/************************************************************************************************
+// C01id_Div1
+************************************************************************************************/
+#C01id_Div1 {
+    background-color: cadetblue;
+    width: 220px;
+}
+
+#C01id_Div1 td {
+    display: grid;
+}
+
+#C01id_Div1 table {
+    display: grid;
+}
+
+#C01id_Div1 td {
+    margin-left: 10px;
+}
+
+#C01id_Div1 button {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    font-size: 16px;
+    margin-right:3px;
+}
+
+#C01id_Div1 hr {
+    color: red;
+    background-color: red;
+    height: 2px;
+    border: none;
+    width: 100%;
+}
+
+#C01id_Div1 input{
+    font-size: 18px;
+}
+
+#C01id_Div1Button {
+    margin-top: 10px;
+    margin-left: 0%;
+    display: flex;
+}
+
+#C01id_Div1 h1 {
+    font-size: 18px;
+}
+
+/************************************************************************************************
+// C01id_Div2
+************************************************************************************************/
+#C01id_Div2 {
+    width: 1000px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.C01id_EditRowButton{
+    display:flex;
+}
+
+.C01id_EditRowButton button{
+    margin-right: 1px;
+    margin-left : 1px;
+    width:100%;
+    height:30px;
+    font-size: 16px;
+}
+
+#C01id_DivTable{
+    margin-top: 0px;
+}
+
+.C01id_P {
+/*
+* https://www.w3schools.com/cssref/pr_text_white-space.php
+* https://stackoverflow.com/questions/2787310/how-to-reduce-the-space-between-p-tags
+*/
+    white-space: nowrap;
+    margin: 0;
+}
+
+.C01id_SortButton{
+    margin:0px;
+    padding:0px;
+    display: flex;
+}
+
+.C01id_SortButton button{
+    margin-right: 2px;
+    margin-left:  2px;
+    font-size: 16px;
+    width: 100%;
+    height:30px
+}
+
+#C01id_Table{
+    /*
+    https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
+    */
+    border-collapse: collapse;
+    width: 100%;
+    height: 25px;
+    table-layout: fixed;
+    max-height: 20px;
+}
+
+#C01id_Table th{
+    height: 30px;
+}
+
+#C01id_Table td{
+    height: 0px;
+}
+
+#C01id_Table td,
+#C01id_Table th
+{
+    border: 1px solid #000000;
+    padding: 3px;
+}
+
+#C01id_Table tr:nth-child(even):not(.C01id_HeightLightRow) {
+    background-color: #f2f2f2;
+}
+
+#C01id_Table tr:hover {
+    background-color: rgb(120, 159, 85);
+}
+
+#C01id_Table th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #0481aa;
+    color: rgb(255, 255, 255);
+}
+
+.C01id_HeightLightRow{
+    background-color: rgb(100,100,200);
+}
+
+.C01id_HeightLightRow input{
+    font-size: 18px;
+    width: 140px;
+}
+/************************************************************************************************
+// C01id_Div2 Table Header
+************************************************************************************************/
+
+.C01id_DivHeader {
+    display: flex;
+}
+
+.C01id_Header {
+    background-color: rgb(255,255,255);
+    font-size: 16px;
+    margin-left: 5px;
+}
