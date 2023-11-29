@@ -1,3 +1,454 @@
+<tr></tr>
+<tr></tr>
+ 
+    display: inline-block;
+ 
+    float: left;
+ 
+New 
+ 
+    white-space: nowrap;
+ 
+#C01id_Table th:last-child,
+ 
+#C01id_Table td:last-child,
+#C01id_Table th:last-child
+ 
+    overflow-y: auto;
+ 
+width: 100%;
+ 
+</div>
+ 
+    background-color: bisque;
+ 
+    float: left;
+ 
+    overflow-y: auto;
+ 
+inline-
+ 
+    position: absolute;
+ 
+    display:block
+ 
+position: absolute;
+ 
+inline-
+ 
+    display: block;
+ 
+    display: grid;
+ 
+display: block;
+ 
+display: block;
+ 
+    display: block;
+ 
+    margin-right:12px
+ 
+#C01id_Table table {
+    overflow-x: scroll;
+    width: 500px;
+}
+ 
+#C01id_Table table{
+    overflow-x: scroll;
+    width:500px;
+}
+ 
+#C01id_Div1 table{
+    overflow-x: scroll;
+    width:100px;
+}
+
+ 
+overflow-x:auto;
+ 
+    width: 1200px;
+ 
+overflow-x:auto;
+ 
+    width: 1200px;
+ 
+width:100%;
+ 
+    width: 140px;
+ 
+    width: 140px;
+ 
+    width:220px;
+ 
+    width:220px;
+ 
+    width: 100%;
+ 
+    width: 100%;
+ 
+    width: 100%;
+ 
+    width:100%;
+ 
+    width: 1200px;
+ 
+    width:90%;
+ 
+    width: 400px;
+ 
+    width: 100%;
+ 
+    display: grid;
+ 
+    width: 1000px;
+ 
+    width: 100px;
+ 
+        width: 1000px;
+ 
+    width: 1000px;
+ 
+    height: 500px;
+    overflow-y: auto;
+ 
+    width: 1000px;
+ 
+    width: 1000px;
+ 
+overflow-x: auto;
+ 
+#C01id_Table td:first-child {
+    width: 50px;
+}
+ 
+    width:100%;
+ 
+    /* Just for the demo          */
+ 
+    /* Trigger vertical scroll    */
+ 
+    /* Hide the horizontal scroll */
+ 
+vh
+ 
+    overflow-x: scroll;
+ 
+<thead>
+ 
+</thead>
+ 
+</tbody>
+ 
+overflow-y: scroll;
+ 
+let_NEWCOLUMN
+ 
+Column
+ 
+.Name
+ 
+.Name
+ 
+                Key: let_NewKey,    
+ 
+[]
+ 
+    */
+ 
+    // Generate New Key
+    let let_NewKey:number = Math.random()
+    while(ROWS.map(ROW=>ROW.Key).includes(let_NewKey)===true){
+        let_NewKey = Math.random()
+    }
+    // Add New Column in List of All Columns
+    // https://stackoverflow.com/questions/31048953/what-are-these-three-dots-in-react-doing
+    const let_NewROW:TS_Row={
+        Key: let_NewKey,    
+        Array: NEWROW,
+        }
+    return [let_NewROW,...ROWS]
+    // We might check the length of the element inside array later.
+
+    /*
+ 
+
+export default {}
+ 
+
+        let let_Name:string
+ 
+ onClick={f_ResetInput}
+ 
+ button
+ 
+    /* Aligns items with maximum space between them */
+    align-items: center;
+ 
+    justify-content: space-between;
+ 
+<hr />
+ 
+<div>
+<input></input>
+<button>Add New Column</button>
+</div>
+ 
+<hr />
+ 
+<hr />
+
+<div>
+<input></input>
+<button>Add New Column</button>
+</div>
+ 
+<div>
+<input></input>
+<button>Add New Column</button>
+</div>
+ 
+
+#C01id_Table table{
+    overflow-y: scroll;
+}
+
+ 
+overflow-y: scroll;
+ 
+overflow-y: scroll;
+ 
+overflow-y: scroll;
+ 
+</table>
+ 
+<table>
+ 
+</table>
+ 
+    overflow-y: scroll;
+ 
+overflow-y: scroll;
+ 
+overflow-y: scroll;
+ 
+    scroll-
+ 
+:string[]
+ 
+,'Price','Amount'
+ 
+string
+ 
+    margin-top: 10px;
+ 
+</div>
+ 
+<input></input>
+ 
+background-color: #000000;
+ 
+    float: right;
+    justify-content: flex-end;
+ 
+float:right;
+    justify-content: flex-end;
+ 
+    justify-content: flex-start;
+ 
+    margin-left: 10px;
+ 
+</div>
+ 
+<h1>{Column}:   </h1>
+ 
+<h1>{Column}:   </h1>
+ 
+    margin-left:10px;
+    padding: 0px;
+ 
+<input id={'C01id_Input'+Column}></input>
+ 
+</div>
+ 
+        */
+ 
+        alert('Hello')
+        /*
+ 
+        // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
+ 
+
+//****************************************************************************
+// FUNCTION_01: Sort SS_Row
+//****************************************************************************
+    function f_DSort(COLUMN:string):void{
+        // Get the Alphabet Name Order of SS_Row
+        let ss_Row:TS_Row[] = [...SS_Row]
+        ss_Row.sort(f_Sort(COLUMN));
+        if(SS_IsD===true){
+            ss_Row.reverse();
+            setSS_IsD(false)
+        }
+        else{
+            setSS_IsD(true)
+        }
+        
+        
+        
+        // Update SS_IndexColumns
+        setSS_Row(ss_Row)
+    }
+ 
+/*
+*/
+ 
+/*
+ 
+
+    /*
+        // Check duplicate Column Name
+        if(ROWS.map(Column=>Column.Name).includes(NEWNAME)===false){
+            // Replace the previous name (the name with selected key) with new name
+            for(let i:number=0;i<ROWS.length;i++){
+                if(ROWS[i].Key===THISROW.Key){
+                    ROWS.splice(i, 1,{
+                    Key: THISROW.Key,
+                    Name: NEWNAME, 
+                });
+                }
+            }
+            return ROWS
+        }
+    return ROWS
+    */
+ 
+/*
+ 
+/*
+ 
+.Array
+ 
+    let 
+ 
+/*
+ 
+//****************************************************************************
+// JSX_00: JSX_SubRow
+//****************************************************************************
+ 
+    const ss_Row=[...SS_Row]
+    const JSX_Row_TD=ss_Row.map((Row)=>{
+        let JSX_R=[]
+        return (
+            <td>{Row.}</td>
+        )
+    }
+    )
+ 
+        for(let i=0;i<Row.Array.length;i++){
+            JSX_R.apprnd()
+        }
+ 
+        Row.Array.map()
+ 
+return (
+            <td>{Row.}</td>
+        )
+ 
+index
+ 
+<td><div className='C01id_SortButton'><button onClick={()=>f_DSort('Name')}>Sort</button><button>Rename</button><button>Type</button><button>X</button></div></td>
+ 
+et
+ 
+        let_Amount = isNaN(let_Amount) ? 0 : let_Amount;
+ 
+        let let_Amount:number = parseFloat((document.getElementById('C01id_InputAmount') as HTMLInputElement).value);
+ 
+    <td><div className='C01id_SortButton'><button onClick={()=>f_DSort('Price')}>Sort</button><button>Rename</button><button>Type</button><button>X</button></div></td>
+    <td><div className='C01id_SortButton'><button onClick={()=>f_DSort('Amount')}>Sort</button><button>Rename</button><button>Type</button><button>X</button></div></td>
+ 
+    <th>Price </th>
+    <th>Amount</th>
+ 
+                    Price: THISROW.Price,
+                    Amount: THISROW.Amount
+ 
+                Price: NEWROW.Price,
+                Amount:NEWROW.Amount
+ 
+    <td>{THISROW.Price}</td>
+    <td>{THISROW.Amount}</td>
+ 
+    <td>{THISROW.Price}</td>
+    <td>{THISROW.Amount}</td>
+ 
+    <td>{THISROW.Price}</td>
+    <td>{THISROW.Amount}</td>
+ 
+    <td>{THISROW.Price}</td>
+    <td>{THISROW.Amount}</td>
+ 
+            Price :let_Price ,
+            Amount:let_Amount,
+ 
+        // DEFAULT: have no default
+                        // Unique Column Name 
+                        // (Less than 50 letters)
+    Price :number,
+    Amount:number,
+ 
+        // DEFAULT: have no default
+                        // Unique Column Name 
+                        // (Less than 50 letters)
+    Price :number,
+    Amount:number,
+ 
+const [SS_Row,setSS_Row]=useState<TS_Row[]>([
+        {Key: 0, Name: 'Xedni Wor'            ,Price:1.7,Amount:11.7},
+        {Key: 1, Name: 'Weezer'               ,Price:2.0,Amount:12.0},
+        {Key: 2, Name: 'Tally Hall'           ,Price:3.2,Amount:33.2},
+        {Key: 3, Name: 'Que, The Human Editor',Price:5.1,Amount:15.1},
+        {Key: 4, Name: 'Human Centipede'      ,Price:4.5,Amount:34.5},
+        ]);
+ 
+Name
+ 
+Column
+ 
+<input></input>
+ 
+Create 
+ 
+Create 
+ 
+    <th>Create New Column</th>
+ 
+    <td><div className='C01id_SortButton'><button onClick={()=>f_DSort('Amount')}>Create New Column</button></div></td>
+ 
+<button>
+ 
+    width:200px;
+ 
+Change 
+ 
+Change 
+ 
+Change 
+ 
+    
+
+    // Copy SS_Column usinf useState, because I want to rememder the index of each object inside SS_Row of C01_Table.
+    const [SS_UpdateRow,setSS_UpdateRow]=useState<TS_Row[]>(SS_Row)
+    
+    useEffect(()=>{
+        //alert(JSON.stringify(SS_Row))
+        // https://stackoverflow.com/questions/53332321/react-hook-warnings-for-async-function-in-useeffect-useeffect-function-must-ret
+        setSS_UpdateRow(SS_Row)
+    },[SS_Row])
+ 
+Update
+ 
 <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Ok</button></div></td>
     <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
  

@@ -1,15 +1,18 @@
+
 import TS_Row from "./An_Index"
 
 export function D_DeleteColumnName(
     // Renamed Column
-    ThisColumn:TS_Row,
-    // All Columns
-    Columns:TS_Row[]):TS_Row[]{
+    ThisRow:TS_Row,
+    // All Rows
+    Rows:TS_Row[]):TS_Row[]{
     // Delete the column with selected key
-    for(let i:number=0;i<Columns.length;i++){
-        if(Columns[i].Key===ThisColumn.Key){
-            Columns.splice(i, 1);
+    for(let i:number=0;i<Rows.length;i++){
+        if(Rows[i].Key===ThisRow.Key){
+            Rows.splice(i, 1);
         }
     }
-    return Columns
+    return Rows
 }
+
+export default {}

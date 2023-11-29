@@ -1,10 +1,10 @@
 // Type Script Column
-type TS_Row={
+type TS_Column={
 // Properties of Each Column
-    Key:number,         // DEFAULT: Math.random()
+    //Key:number,         // DEFAULT: Math.random()
                         // Unique Key
-    Array:string[],
+    Name:string,
     Display?:0|1|2|3,     // Display State
 }
 
-export default TS_Row
+export default TS_Column

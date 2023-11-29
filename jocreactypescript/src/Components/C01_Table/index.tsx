@@ -7,7 +7,7 @@ import C_CreateRow from './Coms/C_CreateRow';
 import C_DefineRow from './Coms/C_DefineRow'
 // Type
 import TS_Row from '../T01_Row/An_Index';
-
+import TS_Column from '../T02_Column/An_Index';
 // CSS
 import './index.css';
 
@@ -21,33 +21,28 @@ const C01_Table = (
 // HOOK
 SS_Row,
 setSS_Row,
+SS_Columns,
+setSS_Columns
+//setSS_Columns
+
 }:{
 // TYPE
 // PERPERTY
 // HOOK
 SS_Row:TS_Row[],
 setSS_Row:(S:TS_Row[])=>void,
+SS_Columns:TS_Column[],
+setSS_Columns:(S:TS_Column[])=>void,
 }
 ) => {
 //****************************************************************************
 // HOOK
 //****************************************************************************
-    
-
-    // Copy SS_Column usinf useState, because I want to rememder the index of each object inside SS_Row of C01_Table.
-    const [SS_UpdateRow,setSS_UpdateRow]=useState<TS_Row[]>(SS_Row)
-    
-    useEffect(()=>{
-        //alert(JSON.stringify(SS_Row))
-        // https://stackoverflow.com/questions/53332321/react-hook-warnings-for-async-function-in-useeffect-useeffect-function-must-ret
-        setSS_UpdateRow(SS_Row)
-    },[SS_Row])
         
-
 //****************************************************************************
 // JSX_00: Filter SS_Column.Name by IsVisible=true
 //****************************************************************************
-    const let_Rows:TS_Row[] = [...SS_UpdateRow]
+    const let_Rows:TS_Row[] = [...SS_Row]
     const JSX_TH_Rows:JSX.Element[] = let_Rows.map((Row,index) => {
         return (
             <>
@@ -59,6 +54,13 @@ setSS_Row:(S:TS_Row[])=>void,
             />
             </>)
     })
+    const ss_Columns=[...SS_Columns]
+    const JSX_ColumnsName=ss_Columns.map((Column)=>{
+        return (
+            <th>{Column.Name}</th>
+        )
+    })
+    
     /*
     const JSX_TH_Rows:JSX.Element[] = let_Rows.map((Column,index) => 
         {
@@ -108,33 +110,44 @@ setSS_Row:(S:TS_Row[])=>void,
 <C_CreateRow
 SS_Row={SS_Row}
 setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
 />
 
 <div id='C01id_Div2'>
 <h3>C01_Table</h3>
 <hr />
+
 <U_DefineTableHeader
 // Export Data
 // Rename Table
     SS_Row    = {SS_Row}
 />
 <hr />
+
 <div id='C01id_DivTable'>
+<div id='C01id_InnerTable'>
 <table id='C01id_Table'>
+<thead>
 <tr>
     <th>Index </th>
-    <th>Name  </th>
-    <th>Price </th>
-    <th>Amount</th>
+    {JSX_ColumnsName}
     <th>Edit  </th>
 </tr>
 <R_SortRows
 SS_Row={SS_Row}
 setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
 />
+</thead>
+<tbody>
+<tr><td></td><td>i</td></tr>
+<tr><td></td><td>i</td></tr>
 {JSX_TH_Rows}
-
+</tbody>
 </table>
+</div>
+
 </div>
 
 </div>

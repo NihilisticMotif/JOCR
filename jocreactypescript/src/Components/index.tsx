@@ -6,7 +6,7 @@ import C01_Table from "./C01_Table";
 
 // Type
 import TS_Row from '././T01_Row/An_Index';
-
+import TS_Column from '././T02_Column/An_Index'
 // CSS
 import './index.css';
 
@@ -16,14 +16,40 @@ const Components=()=>{
     // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
     // const [SS_Reset,setSS_Reset]=useState<number>(0)
     
+    const [SS_Columns, setSS_Columns]=useState<TS_Column[]>([
+        {Name:'Name'},
+        {Name:'Price'},
+        {Name:'Amount'},
+        ])
+    
     const [SS_Row,setSS_Row]=useState<TS_Row[]>([
-        {Key: 0, Name: 'Xedni Wor'            ,Price:1.7,Amount:11.7},
-        {Key: 1, Name: 'Weezer'               ,Price:2.0,Amount:12.0},
-        {Key: 2, Name: 'Tally Hall'           ,Price:3.2,Amount:33.2},
-        {Key: 3, Name: 'Que, The Human Editor',Price:5.1,Amount:15.1},
-        {Key: 4, Name: 'Human Centipede'      ,Price:4.5,Amount:34.5},
+        {Key:10, Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:11, Array:['Weezer'               ,'Bbb','001']},
+        {Key:12, Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:13, Array:['Que, The Human Editor','Ddd','010']},
+        {Key:14, Array:['Human Centipede'      ,'Eee','011']},
+        {Key:20, Array:['Aaa','Xedni Wor'            ,'000']},
+        {Key:21, Array:['Bbb','Weezer'               ,'001']},
+        {Key:22, Array:['Ccc','Tally Hall'           ,'002']},
+        {Key:23, Array:['Ddd','Que, The Human Editor','010']},
+        {Key:24, Array:['Eee','Human Centipede'      ,'011']},
+        {Key:30, Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:31, Array:['Weezer'               ,'Bbb','001']},
+        {Key:32, Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:33, Array:['Que, The Human Editor','Ddd','010']},
+        {Key:34, Array:['Human Centipede'      ,'Eee','011']},
+        {Key:40, Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:41, Array:['Weezer'               ,'Bbb','001']},
+        {Key:42, Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:43, Array:['Que, The Human Editor','Ddd','010']},
+        {Key:44, Array:['Human Centipede'      ,'Eee','011']},
+        {Key:50, Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:51, Array:['Weezer'               ,'Bbb','001']},
+        {Key:52, Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:53, Array:['Que, The Human Editor','Ddd','010']},
+        {Key:54, Array:['Human Centipede'      ,'Eee','011']},
         ]);
-
+    
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
@@ -33,6 +59,8 @@ const Components=()=>{
 <C01_Table 
 SS_Row={SS_Row}
 setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
 />
 </div>
     )

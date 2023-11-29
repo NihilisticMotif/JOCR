@@ -47,6 +47,8 @@ const C_DefineRow = (
     //      1|  // Rename JSX Column  | f_OpenRename   => let_DefaultDisplay(1) => Open Rename JSX Column 
     //      2|  // Delete JSX Column  | f_OpenDelete   => let_DefaultDisplay(2) => Open Delete JSX Column 
 
+    //const [SS_UpdatedData,setSS_UpdateData]=useState<string[]>(['','',''])
+
 //****************************************************************************
 // FUNCTION_01: Back
 //****************************************************************************
@@ -104,62 +106,68 @@ const C_DefineRow = (
         setSS_IndexColumns(ss_IndexColumns);
     }
 */
+
 //****************************************************************************
-// JSX_00: JSX_Column (Button)
+// JSX_00: JSX_Row_td
+//****************************************************************************
+    let let_ThisRow=[...THISROW.Array]
+    const JSX_Row_TD=let_ThisRow.map((Row)=>{
+        return(
+            <td>{Row}</td>
+        )
+    })
+
+    const JSX_EditRowInput=let_ThisRow.map((Row)=>{
+        return(
+            <td><div className='C01id_EditRowButton'><input id={'C01id_Edit'+Row}></input><button>Ok</button></div></td>
+        )
+    })
+//****************************************************************************
+// JSX_01: JSX_Row
 //****************************************************************************
     // JSX = representing in JSX
     // Default Column JSX
-    let JSX_Column:JSX.Element=<h1></h1>
+    let JSX_Row:JSX.Element=<h1></h1>
     // Default Column JSX
     if (THISROW.Display===0 || typeof THISROW.Display==='undefined'){
-    JSX_Column=
+    JSX_Row=
 <tr>
     <td>{INDEX}</td>
-    <td>{THISROW.Name}</td>
-    <td>{THISROW.Price}</td>
-    <td>{THISROW.Amount}</td>
+    {JSX_Row_TD}
     <td><div className='C01id_EditRowButton'><button onClick={f_OpenRename}>Edit</button><button onClick={f_OpenDelete}>X</button></div></td>
 </tr>
     }else if (THISROW.Display===1){
-        JSX_Column=
+        JSX_Row=
 <>
 <tr className='C01id_HeightLightRow'>
     <td>Original</td>
-    <td>{THISROW.Name}</td>
-    <td>{THISROW.Price}</td>
-    <td>{THISROW.Amount}</td>
+    {JSX_Row_TD}
     <td></td>
 </tr>
 <tr className='C01id_HeightLightRow'>
     <td>Edited</td>
-    <td>{THISROW.Name}</td>
-    <td>{THISROW.Price}</td>
-    <td>{THISROW.Amount}</td>
+    {JSX_Row_TD}
     <td><div className='C01id_EditRowButton'><button onClick={f_OpenRename}>Ok</button></div></td>
 </tr>
 <tr className='C01id_HeightLightRow'>
     <td></td>
-    <td><div className='C01id_EditRowButton'><input id='C01id_EditName'></input><button>Ok</button></div></td>
-    <td><div className='C01id_EditRowButton'><input id='C01id_EditPrice'></input><button>Ok</button></div></td>
-    <td><div className='C01id_EditRowButton'><input id='C01id_Edit'></input><button>Ok</button></div></td>
+    {JSX_EditRowInput}
     <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
 </tr>
 </>
     // Delete Column JSX
     }else if (THISROW.Display===2){
-        JSX_Column=
+        JSX_Row=
 <>
 <tr className='C01id_HeightLightRow'>
     <td>{INDEX}</td>
-    <td>{THISROW.Name}</td>
-    <td>{THISROW.Price}</td>
-    <td>{THISROW.Amount}</td>
+    {JSX_Row_TD}
     <td></td>
 </tr>
 <tr className='C01id_HeightLightRow'>
     {// https://stackoverflow.com/questions/38302507/react-colspan-not-working
     }
-    <td colSpan={3}>Do you sure you want to delete this row?</td>
+    <td colSpan={THISROW.Array.length}>Do you sure you want to delete this row?</td>
     <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Ok</button></div></td>
     <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
 </tr>
@@ -172,7 +180,7 @@ const C_DefineRow = (
 //****************************************************************************
 return (
 <>
-{JSX_Column}
+{JSX_Row}
 </>
 )
 }
