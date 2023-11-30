@@ -9,7 +9,7 @@ import TS_Row from '../../T01_Row/An_Index';
 
 // CSS
 
-const U_DefineTableHeader = (
+const C_TopButton = (
 //****************************************************************************
 // INPUT
 //****************************************************************************
@@ -60,4 +60,4 @@ return(
     )
 }
 
-export default U_DefineTableHeader
+export default C_TopButton

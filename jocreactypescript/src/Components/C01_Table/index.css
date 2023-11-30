@@ -4,6 +4,7 @@
 #C01id_Div {
     display: flex;
     background-color: #c794e3;
+    height:500px;
 }
 
 /************************************************************************************************
@@ -16,6 +17,10 @@
 
 #C01id_Div1 td {
     display: grid;
+}
+
+#C01id_RenameColumn {
+    background-color: #c794e3;
 }
 
 #C01id_Div1 table {
@@ -99,10 +104,13 @@
 #C01id_Div2 {
     background-color: aquamarine;
     height: 500px;
+    width: 100%;
 }
+
 
 .C01id_EditRowButton{
     display:flex;
+    width:200px;
 }
 
 .C01id_EditRowButton button{
@@ -110,10 +118,16 @@
     margin-left : 1px;
     height:30px;
     font-size: 16px;
+    width:100vh;
+}
+
+.C01id_EditRowButton input{
+    width:100vh;
 }
 
 #C01id_DivTable{
     margin-top: 0px;
+    width: 100%;
 }
 
 .C01id_P {
@@ -123,20 +137,6 @@
 */
     white-space: nowrap;
     margin: 0;
-}
-
-.C01id_SortButton{
-    margin:0px;
-    padding:0px;
-    display: flex;
-    white-space: nowrap;
-}
-
-.C01id_SortButton button{
-    margin-right: 2px;
-    margin-left:  2px;
-    font-size: 16px;
-    height:30px
 }
 
 #C01id_Table{
@@ -162,7 +162,7 @@
 #C01id_Table th
 {
     border: 1px solid #000000;
-    padding: 3px;
+    padding: 1px;
 }
 
 #C01id_Table tr:nth-child(even):not(.C01id_HeightLightRow) {
@@ -173,14 +173,73 @@
     background-color: rgb(120, 159, 85);
 }
 
+.C01id_SortRight{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+}
 
-#C01id_Table th:not(#C01id_Table th:first-child,#C01id_Table th:last-child){
-    padding-top: 5px;
-    padding-bottom: 5px;
+.C01id_SortButton {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 300px;
+}
+
+.C01id_SortButton button,
+.C01id_SortButton button {
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 16px;
+    width:100%;
+    height: 100%;
+}
+
+.C01id_RightEmpty{
+    width: 200px;
+}
+.C01id_Right button{
+    font-size: 16px;
+    height: 100%;
+    background-color: #0481aa;
+}
+.C01id_Left{
+    width:100px;
+}
+#C01id_Table th{
     background-color: #0481aa;
     color: rgb(255, 255, 255);
-    width:300px;
 }
+
+
+
+#C01id_Table th:not(#C01id_Table th:first-child,#C01id_Table th:last-child) 
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width:300px;
+    height:40px;
+    white-space: nowrap;
+    justify-content: space-around;
+}
+
+#C01id_Table td:not(#C01id_Table td:first-child, #C01id_Table td:last-child){
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+    white-space: nowrap;
+    justify-content: space-around;
+}
+/*
 #C01id_Table td:first-child,
 #C01id_Table th:first-child{
     width:60px;
@@ -189,12 +248,8 @@
 #C01id_Table th:last-child{
     width:120px
 }
+*/
 
-#C01id_Table td:not(#C01id_Table td:first-child,#C01id_Table td:last-child){
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width:300px;
-}
 .C01id_HeightLightRow{
     background-color: rgb(100,100,200);
 }
@@ -210,18 +265,17 @@ https: //stackoverflow.com/questions/11759934/aligning-divs-beside-each-other-an
 
 thead,
 tbody {
-
+    display:block;
 }
 
 #C01id_InnerTable{
-    width: 1000px;
+    width: 100%;
     overflow-x: scroll;
     background-color: antiquewhite;
 }
 
 thead{
     margin-right: 15px;
-    position:absolute
 }
 
 tbody {

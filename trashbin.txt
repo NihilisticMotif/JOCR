@@ -1,3 +1,598 @@
+        f_Open(THISCOLUMN,0)
+ 
+        D02_Delete
+ 
+1id_RenameColumn'+THISCOLUMN.Name)  as HTMLInputElement).value.toString();
+ 
+        let let_Input:string=(document.getElementById('C0
+ 
+    function f_Rename(N:string):void{
+        alert(N)
+    }
+ 
+,INDEX:number
+ 
+Row
+ 
+else 
+ 
+if (Column.Display===undefined || Column.Display===0)
+        {return(
+            <tr><td>
+
+            <div className='C01id_CreateRowDiv'>
+                <h1>{Column.Name}:   </h1>
+                <div className='C01id_CreateRowButton'>
+                <button onClick={()=>f_Open(Column,2)}>X</button>
+                <button onClick={()=>f_Open(Column,1)}>...</button>
+                </div>
+            </div>
+
+            <input id={'C01id_Input'+Column.Name}></input>
+
+            </td></tr>
+        )}
+ 
+else{
+        return (
+            <td>
+                <div className='C01id_SortButton'>
+                    <div style={{whiteSpace: 'normal'}}>
+                        Do you want to delete this column?
+                    </div>
+                    <button style={{width:'90px'}}>Ok</button>
+                    <button style={{width:'90px'}} onClick={()=>f_Open(Column,0)}>Cancel</button>
+                </div>
+            </td>
+        )}
+ 
+else if(Column.Display===1){
+        return (
+            <td>
+                <div className='C01id_SortButton'>
+                    <input></input>
+                    <button>Ok</button>
+                    <button onClick={()=>f_Open(Column,0)}>Cancel</button>
+                </div>
+            </td>
+        )}
+ 
+<button onClick={()=>f_Sort(index)}>Sort</button>
+ 
+<button onClick={()=>f_Open(Column,1)}>X</button>
+ 
+,width:'300px'
+ 
+</div>D
+ 
+style={{whiteSpace: 'normal'}}
+ 
+ column
+ 
+ if(Column.Display===1)
+ 
+ style={{width:'100px;',marginLeft:'-50px;'}}
+ 
+ className='C01id_CreateRowButton'
+ 
+className='C01id_CreateRowButton'
+ 
+ style={{width:'100px;',marginLeft:'-50px;'}}
+ 
+want 
+ 
+            <tr className='C01id_HeightLightRow'><td>
+            <div className='C01id_CreateRowDiv'>
+                <h1>{Column.Name}?</h1>
+            </div>
+            </td></tr>
+            
+ 
+you want to delete {Column.Name}?
+ 
+                <div className='C01id_CreateRowButton'>
+                <button onClick={()=>f_Open(Column,2)}>Ok</button>
+                <button onClick={()=>f_Open(Column,0)} style={{width:'75px;',marginLeft:'5px;'}}>Cancel</button>
+                </div>
+ 
+            <button onClick={()=>f_Open(Column,2)}>Ok</button>
+            <button onClick={()=>f_Open(Column,0)} style={{width:'75px;',marginLeft:'5px;'}}>Cancel</button>
+                
+ 
+<button onClick={()=>f_Open(Column,2)}>Ok</button>
+                <button onClick={()=>f_Open(Column,0)} style={{width:'75px;',marginLeft:'5px;'}}>Cancel</button>
+                
+ 
+            <input id={'C01id_Input'+Column.Name}></input>
+ 
+margin-left:'5px'
+ 
+                <input></input>
+ 
+</div>
+ 
+C01id_RenameColumn
+ 
+#C01id_RenameColumn{
+    
+}
+ 
+            <input id={'C01id_Input'+Column.Name}></input>
+ 
+
+            <input id={'C01id_Input'+Column.Name}></input>
+ 
+Rename
+ 
+Rename
+ 
+{}
+ 
+Column
+ 
+Column
+ 
+export default {}
+ 
+</>
+ 
+setSS_Display(1)
+ 
+    const [SS_Display,setSS_Display]=useState<0|1|2>(0)
+ 
+    if(SS_Display===1){
+        JSX_Input=ss_Columns.map((Column)=>{
+        return(
+            <h1>Hello {Column.Name}</h1>
+        )
+    })
+    }
+ 
+()=>
+ 
+('C01id_Input'+Column.Name)
+ 
+Column
+ 
+<tr>
+<td></td>
+<td></td>
+
+</tr>
+ 
+{
+// Row Input tab
+JSX_Input}
+ 
+<tr>
+    <th className='C01id_Left'>Index </th>
+    {JSX_ColumnsName}
+    <th className='C01id_Right'>Edit  </th>
+</tr>
+ 
+</div>
+ 
+<div className='C01id_EditRowButton'><input></input><button>Add Column</button>
+ 
+*/}
+ 
+/*
+#C01id_Table td:first-child,
+#C01id_Table th:first-child{
+    width:60px;
+}
+#C01id_Table td:last-child,
+#C01id_Table th:last-child{
+    width:120px
+}
+*/
+ 
+</div>
+ 
+
+{
+// Table tab
+}
+ 
+    /*
+    const JSX_TH_Rows:JSX.Element[] = let_Rows.map((Column,index) => 
+        {
+        // https://stackoverflow.com/questions/44969877/if-condition-inside-of-map-react
+        // Default Mode
+        if (Column.Display===undefined || Column.Display===0)
+        {return <th>{Column.Name}</th>}
+        // Rename
+        else if (Column.Display===1){
+            return <th><input type='text' className='C01id' id={'C01id_Rename'+Column.Key.toString()}></input></th>
+        }
+        // Delete Warning
+        else if (Column.Display===2){
+            return  <th >
+                    <p className='C01id_P'>Do you want to delete</p> 
+                    <p className='C01id_P'>{Column.Name}</p> 
+                    </th>
+        }
+        // Unselect Warning
+        else{
+            return  <th >
+                    <p className='C01id_P'>Do you want to unselect</p> 
+                    <p className='C01id_P'>{Column.Name}</p> 
+                    </th>
+        }
+        }
+        );
+    
+    const JSX_BUTTON_Rows:JSX.Element[] = let_Rows.map((Column)=>
+        <td>
+        <C_DefineColumnButton
+            THISROW={Column}
+            SS_IndexColumns={SS_IndexColumns}
+            setSS_IndexColumns={setSS_IndexColumns}
+            SS_Row={SS_Row}
+            setSS_Row={setSS_Row}
+        />
+        </td>
+        );
+    */
+ 
+<div id='MC_Empty'></div>
+ 
+Button
+ 
+C01id_SortButton 
+ 
+ C01id_Right
+ 
+</tr>
+ 
+<hr />
+ 
+<hr/>
+ 
+.Array
+ 
+Small 
+ 
+//****************************************************************************
+// FUNCTION_04: Update
+//****************************************************************************
+
+ 
+
+.C01id_TableCell{
+
+}
+ 
+width: 100vh;
+ 
+NAME:string,
+ 
+            //alert(let_UpdateRow)
+            alert(ss_UpdateRow)
+ 
+let let_UpdateRow=
+ 
+            //alert(let_UpdateRow)
+            alert(ss_UpdateRow)
+ 
+.splice(INDEX, 1)
+ 
+ss_UpdateRow.splice(INDEX, 1,NAME)
+ 
+    const [SS_Reset,setSS_Reset]=useState<number>(0)
+ 
+
+    useEffect(()=>{
+        setSS_Reset(Math.random())
+    },[SS_UpdateRow])
+ 
+ key={SS_Reset}
+ 
+div 
+ 
+    const [SS_Reset,setSS_Reset]=useState<number>(0)
+ 
+ className={SS_Reset.toString()}
+ 
+            setSS_Reset(Math.random()
+ 
+    //const [SS_UpdatedData,setSS_UpdateData]=useState<string[]>(['','',''])
+    useEffect(()=>{
+        setSS_UpdateRow(SS_UpdateRow)
+    },
+    [SS_UpdateRow])
+ 
+        alert(NAME)
+ 
+        alert(let_Input)
+ 
+setSS_UpdateRow(ss_UpdateRow)
+ 
+            let let_OldName:string=ss_UpdateRow[INDEX]
+ 
+ss_UpdateRow[INDEX]
+ 
+SS_UpdateRow
+ 
+        // alert(JSON.stringify(ss_Columns))
+        // alert(JSON.stringify(let_UpdateColumns))
+        // alert(let_NewColumn.length)
+        // alert((ss_Columns!==let_UpdateColumns).toString())
+ 
+        /*
+        // https://stackoverflow.com/questions/12989741/the-property-value-does-not-exist-on-value-of-type-htmlelement
+        let let_Name:string=(document.getElementById('C01id_InputName')  as HTMLInputElement).value.toString();
+        // By ChatGPT
+        //let let_Price : number = parseFloat((document.getElementById('C01id_InputPrice') as HTMLInputElement).value);
+        //let_Price = isNaN(let_Price) ? 0 : let_Price;
+        
+        let ss_Row:TS_Row[]=[... SS_Row]
+        let let_NewRow:TS_Row={
+            Key:0,
+            Name:let_Name,
+        }
+        let let_UpdateRows:TS_Row[]=C_Create(ss_Row,let_NewRow)
+        setSS_Row(let_UpdateRows)
+        /*
+        // Calculate the new SS_Column
+        let let_NewName:string=(document.getElementById('C01id_CreateNewColumn') as HTMLInputElement).value.toString();
+        let ss_Row:TS_Row[]=[... SS_Row]
+        let let_UpdateColumns:TS_Row[]=C_Create(SS_Row,let_NewName)
+        
+        // Calculate the order of SS_Column inside of C01_Table
+        let ss_IndexColumns:number[]=[...SS_IndexColumns]
+        let let_UpdateIndexColumns:number[]=[...ss_IndexColumns,let_UpdateColumns[0].Key]
+        
+        // Update both the SS_IndexColumns and SS_Row
+        setSS_IndexColumns(let_UpdateIndexColumns)
+        setSS_Row(let_UpdateColumns)
+        */
+ 
+JSON.stringify
+ 
+'C01id_Input'+Column
+ 
+/*
+ 
+            let let_Input:string=;
+ 
+(document.getElementById('C01id_Input'+ss_Columns[i])  as HTMLInputElement).value.toString()
+ 
+            let let_Input=document.getElementById('C01id_Input'+ss_Columns[i])
+ 
+        {Key:20, Array:['Aaa','Xedni Wor'            ,'000']},
+        {Key:21, Array:['Bbb','Weezer'               ,'001']},
+        {Key:22, Array:['Ccc','Tally Hall'           ,'002']},
+        {Key:23, Array:['Ddd','Que, The Human Editor','010']},
+        {Key:24, Array:['Eee','Human Centipede'      ,'011']},
+        {Key:30, Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:31, Array:['Weezer'               ,'Bbb','001']},
+        {Key:32, Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:33, Array:['Que, The Human Editor','Ddd','010']},
+        {Key:34, Array:['Human Centipede'      ,'Eee','011']},
+        {Key:40, Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:41, Array:['Weezer'               ,'Bbb','001']},
+        {Key:42, Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:43, Array:['Que, The Human Editor','Ddd','010']},
+        {Key:44, Array:['Human Centipede'      ,'Eee','011']},
+        {Key:50, Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:51, Array:['Weezer'               ,'Bbb','001']},
+        {Key:52, Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:53, Array:['Que, The Human Editor','Ddd','010']},
+        {Key:54, Array:['Human Centipede'      ,'Eee','011']},
+ 
+ColumnName
+ 
+export default {}
+ 
+ColumnName
+ 
+.C01id_Right button{
+    width:200px;
+    color: rgb(255, 255, 255);
+}
+ 
+.C01id_Right button{
+    width:200px;
+    color: rgb(255, 255, 255);
+}
+
+ 
+,
+#C01id_Table th:last-child 
+ 
+color: rgb(255, 255, 255);
+ 
+first-child,
+#C01id_Table th:last-child
+ 
+    background-color: #0481aa;
+    color: rgb(255, 255, 255);
+ 
+:last-child
+ 
+background-color: #0481aa;
+ 
+    background-color: #0481aa;
+ 
+    font-size: 16px;
+ 
+    width: 100%;
+ 
+C01id_RightEmpty
+ 
+<button>Add Column</button>
+ 
+style={{color: "red"}} 
+ 
+style={{display:'none'}}
+ 
+Add Column
+ 
+<button>Add Column</button>
+ 
+className='C01id_UpdateOKButton'
+ 
+
+.C01id_UpdateOKButton{
+    width:100%
+}
+ 
+    width:100vh;
+ 
+.C01id_EditRowButton input
+ 
+.C01id_EditRowButton
+ 
+    padding-left:2px;
+    padding-right: 2px;
+ 
+    */
+ 
+    /*
+ 
+setSS_Columns(let_UpdateColumns)
+ 
+    /*
+ 
+    white-space: nowrap;
+    justify-content: space-around;
+ 
+    grid-template: repeat(5, 300px);
+ 
+let_NEWCOLUMN
+ 
+    white-space: nowrap;
+    justify-content: space-around;
+ 
+    white-space: nowrap;
+    justify-content: space-around;
+ 
+
+    justify-content: space-around;
+ 
+
+    justify-content: space-around;
+ 
+    white-space: nowrap;
+ 
+    white-space: nowrap;
+ 
+    justify-content: space-around;
+ 
+    justify-content: space-around;
+ 
+    width:100%
+ 
+.C01id_RightRow{
+    
+}
+ 
+SortButton
+ 
+SortButton
+ 
+SortButton
+ 
+ button 
+ 
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 16px;
+    height: 30px;
+ 
+*/
+#C01id_Table th
+ 
+/*
+ 
+*/
+#C01id_Table td
+ 
+ th:not(#C01id_Table th:first-child, #C01id_Table th:last-child)
+ 
+.C01id_SortButton{
+    margin:0px;
+    padding:0px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width:500px;
+}
+
+.C01id_SortButton button{
+    margin-right: 2px;
+    margin-left:  2px;
+    font-size: 16px;
+    height:30px;
+}
+
+ 
+#C01id_Table th
+/* 
+ 
+/* 
+ 
+    width:10px
+ 
+    width: 100%;
+ 
+    width:100%;
+    height:100%
+ 
+</div>
+ 
+</div>
+ 
+    width: 100%;
+        height: 100%;
+ 
+-columns
+ 
+    grid-template-rows: 300px repeat(8, 80px) 300px;
+ 
+:not(#C01id_Table td:first-child, #C01id_Table td:last-child)
+{
+ 
+:not(#C01id_Table th:first-child, #C01id_Table th:last-child) 
+ 
+#C01id_Table td:not(#C01id_Table td:first-child,#C01id_Table td:last-child){
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width:300px;
+}
+ 
+#C01id_Table th,
+#C01id_Table td {
+    display:grid;
+    text-align: left;
+    padding: 8px;
+}
+ 
+    border: 1px solid #dddddd;
+ 
+    display: block
+ 
+    display:block
+ 
+    display: flex;
+    flex-direction: column;
+ 
+    display: block
+ 
+    display:block
+ 
+block
+ 
+    display:block
+ 
+<tr><td></td><td>i</td></tr>
+<tr><td></td><td>i</td></tr>
+ 
+    position:absolute
+ 
 <tr></tr>
 <tr></tr>
  

@@ -1,7 +1,7 @@
 
 import TS_Row from "./An_Index"
 
-export function U_UpdateDisplay(
+export function U01_UpdateDisplay(
         THISROW:TS_Row,
         ROWS:TS_Row[],
         STATE:0|1|2|3,
@@ -16,5 +16,3 @@ export function U_UpdateDisplay(
     }
     return ROWS
 }
-
-export default {}

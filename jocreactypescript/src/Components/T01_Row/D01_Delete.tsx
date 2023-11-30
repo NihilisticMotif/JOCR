@@ -1,7 +1,7 @@
 
 import TS_Row from "./An_Index"
 
-export function D_DeleteColumnName(
+export function D01_Delete(
     // Renamed Column
     ThisRow:TS_Row,
     // All Rows
@@ -14,5 +14,3 @@ export function D_DeleteColumnName(
     }
     return Rows
 }
-
-export default {}

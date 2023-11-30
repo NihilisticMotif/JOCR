@@ -1,7 +1,7 @@
 
 import TS_Row from "./An_Index"
 
-export function U_RenameColumnName(        
+export function U01_EditRow(        
         // Renamed Column
         THISROW:TS_Row,
         // All Columns
@@ -16,6 +16,7 @@ export function U_RenameColumnName(
                 Array: NEWARRAY, 
                 Display:0
             });
+            break
             }
         }
     return ROWS

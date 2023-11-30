@@ -1,19 +1,19 @@
 // React
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 // Components
 
 // Type
 import TS_Row from '../../T01_Row/An_Index';
-import {U_RenameColumnName} from '../../T01_Row/U_EditRow'
-import {D_DeleteColumnName} from '../../T01_Row/D_Delete'
-import {U_UpdateDisplay} from '../../T01_Row/U_UpdateDisplay'
+import {U01_EditRow} from '../../T01_Row/U01_EditRow'
+import {D01_Delete} from '../../T01_Row/D01_Delete'
+import {U01_UpdateDisplay} from '../../T01_Row/U01_UpdateDisplay'
 
 // CSS
 
 //****************************************************************************
 
 // Define what is Column
-const C_DefineRow = (
+const C_Row = (
 //****************************************************************************
 // INPUT
 //****************************************************************************
@@ -41,20 +41,19 @@ const C_DefineRow = (
 // HOOK
 //****************************************************************************
 
+    const [SS_UpdateRow,setSS_UpdateRow]=useState<string[]>(THISROW.Array)
     //const [SS_Display,setSS_Display]=useState<0|1|2|3>((typeof THISROW.Display ==='undefined') ? 0 : THISROW.Display)
     // Set Mode of this component for Rename and/or Delete itself
     //      0|  // Default JSX Column | f_Cancel       => let_DefaultDisplay(0) => Open Default JSX Column
     //      1|  // Rename JSX Column  | f_OpenRename   => let_DefaultDisplay(1) => Open Rename JSX Column 
     //      2|  // Delete JSX Column  | f_OpenDelete   => let_DefaultDisplay(2) => Open Delete JSX Column 
-
-    //const [SS_UpdatedData,setSS_UpdateData]=useState<string[]>(['','',''])
-
+    useEffect(()=>{setSS_UpdateRow(THISROW.Array)},[SS_Row])
 //****************************************************************************
 // FUNCTION_01: Back
 //****************************************************************************
     function f_Cancel():void{
         let ss_Row=[...SS_Row]
-        let let_UpdateRows=U_UpdateDisplay(THISROW,ss_Row,0)
+        let let_UpdateRows=U01_UpdateDisplay(THISROW,ss_Row,0)
         setSS_Row(let_UpdateRows)
     }
 //****************************************************************************
@@ -63,7 +62,7 @@ const C_DefineRow = (
 
     function f_OpenRename():void{
         let ss_Row=[...SS_Row]
-        let let_UpdateRows=U_UpdateDisplay(THISROW,ss_Row,1)
+        let let_UpdateRows=U01_UpdateDisplay(THISROW,ss_Row,1)
         setSS_Row(let_UpdateRows)
     }
 
@@ -73,14 +72,20 @@ const C_DefineRow = (
 
     function f_OpenDelete():void{
         let ss_Row=[...SS_Row]
-        let let_UpdateRows=U_UpdateDisplay(THISROW,ss_Row,2)
+        let let_UpdateRows=U01_UpdateDisplay(THISROW,ss_Row,2)
+        setSS_Row(let_UpdateRows)
+    }
+
+    function f_Delete():void{
+        let ss_Row=[...SS_Row]
+        let let_UpdateRows=D01_Delete(THISROW,ss_Row)
         setSS_Row(let_UpdateRows)
     }
     /*
     function f_Rename():void{
         let let_NewName:string= (document.getElementById(C01id_Rename)as HTMLInputElement).value 
         let ss_Row:TS_Row[]=[...SS_Row]
-        let let_UpdateColumns:TS_Row[]=U_RenameColumnName(THISROW,ss_Row,let_NewName)
+        let let_UpdateColumns:TS_Row[]=U01_EditRow(THISROW,ss_Row,let_NewName)
         setSS_Row(let_UpdateColumns);
         // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
     }
@@ -101,12 +106,39 @@ const C_DefineRow = (
         }
 
         let ss_Row:TS_Row[] = [...SS_Row];
-        let let_UpdateColumns:TS_Row[]=D_DeleteColumnName(THISROW,ss_Row)
+        let let_UpdateColumns:TS_Row[]=D01_DeleteColumnName(THISROW,ss_Row)
         setSS_Row(let_UpdateColumns);
         setSS_IndexColumns(ss_IndexColumns);
     }
 */
 
+//****************************************************************************
+// FUNCTION_03: Update
+//****************************************************************************
+    // Help user to compare user's edited and the original data
+    function f_SmallUpdate(NAME:string,INDEX:number):void{
+        let ss_UpdateRow=[...SS_UpdateRow]
+        let let_Input:string=(document.getElementById('C01id_Edit'+NAME) as HTMLInputElement).value.toString();
+        if(let_Input.length<30){
+            ss_UpdateRow.splice(INDEX, 1,let_Input)
+            setSS_UpdateRow(ss_UpdateRow)
+        }
+    }
+    // Turn back the original data
+    function f_ResetUpdate(INDEX:number):void{
+        let ss_UpdateRow=[...SS_UpdateRow]
+        let ss_Row=[...THISROW.Array]
+        ss_UpdateRow.splice(INDEX, 1,ss_Row[INDEX])
+        setSS_UpdateRow(ss_UpdateRow)
+    }
+    // Actually Update Data
+    function f_Update():void{
+        let ss_UpdateRow=[...SS_UpdateRow]
+        let ss_Rows=[...SS_Row]
+        let let_UpdateRow = U01_EditRow(THISROW,ss_Rows,ss_UpdateRow)
+        //alert(JSON.stringify(let_UpdateRow))
+        setSS_Row(let_UpdateRow)
+    }
 //****************************************************************************
 // JSX_00: JSX_Row_td
 //****************************************************************************
@@ -116,10 +148,16 @@ const C_DefineRow = (
             <td>{Row}</td>
         )
     })
-
-    const JSX_EditRowInput=let_ThisRow.map((Row)=>{
+    let ss_UpdateRow=[...SS_UpdateRow]
+    const JSX_EditRow=ss_UpdateRow.map((Row)=>{
         return(
-            <td><div className='C01id_EditRowButton'><input id={'C01id_Edit'+Row}></input><button>Ok</button></div></td>
+            <td>{Row}</td>
+        )
+    })
+
+    const JSX_EditRowInput=let_ThisRow.map((Row,index)=>{
+        return(
+            <td><div className='C01id_EditRowButton'><input id={'C01id_Edit'+Row}></input><button onClick={()=>f_SmallUpdate(Row,index)}>Ok</button><button onClick={()=>f_ResetUpdate(index)} >Reset</button></div></td>
         )
     })
 //****************************************************************************
@@ -132,24 +170,24 @@ const C_DefineRow = (
     if (THISROW.Display===0 || typeof THISROW.Display==='undefined'){
     JSX_Row=
 <tr>
-    <td>{INDEX}</td>
+    <td className='C01id_Left'>{INDEX}</td>
     {JSX_Row_TD}
-    <td><div className='C01id_EditRowButton'><button onClick={f_OpenRename}>Edit</button><button onClick={f_OpenDelete}>X</button></div></td>
+    <td className='C01id_RightRow'><div className='C01id_EditRowButton'><button onClick={f_OpenRename}>Edit</button><button onClick={f_OpenDelete}>X</button></div></td>
 </tr>
     }else if (THISROW.Display===1){
         JSX_Row=
 <>
-<tr className='C01id_HeightLightRow'>
+<tr className='C01id_HeightLightRow C01id_Left'>
     <td>Original</td>
     {JSX_Row_TD}
     <td></td>
 </tr>
-<tr className='C01id_HeightLightRow'>
+<tr className='C01id_HeightLightRow C01id_Left'>
     <td>Edited</td>
-    {JSX_Row_TD}
-    <td><div className='C01id_EditRowButton'><button onClick={f_OpenRename}>Ok</button></div></td>
+    {JSX_EditRow}
+    <td><div className='C01id_EditRowButton'><button onClick={f_Update}>Ok</button></div></td>
 </tr>
-<tr className='C01id_HeightLightRow'>
+<tr className='C01id_HeightLightRow C01id_Left'>
     <td></td>
     {JSX_EditRowInput}
     <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
@@ -159,16 +197,16 @@ const C_DefineRow = (
     }else if (THISROW.Display===2){
         JSX_Row=
 <>
-<tr className='C01id_HeightLightRow'>
+<tr className='C01id_HeightLightRow C01id_Left'>
     <td>{INDEX}</td>
     {JSX_Row_TD}
-    <td></td>
+    <td className='C01id_Right'></td>
 </tr>
-<tr className='C01id_HeightLightRow'>
+<tr className='C01id_HeightLightRow C01id_Left'>
     {// https://stackoverflow.com/questions/38302507/react-colspan-not-working
     }
     <td colSpan={THISROW.Array.length}>Do you sure you want to delete this row?</td>
-    <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Ok</button></div></td>
+    <td><div className='C01id_EditRowButton'><button onClick={f_Delete}>Ok</button></div></td>
     <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
 </tr>
 </>
@@ -185,4 +223,4 @@ return (
 )
 }
 //****************************************************************************
-export default C_DefineRow
+export default C_Row
