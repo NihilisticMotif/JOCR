@@ -1,0 +1,37 @@
+How to create Virtual Environment in Window?
+* # https://stackoverflow.com/questions/8921188/issue-with-virtualenv-cannot-activate
+* $ pip3 install -U pip virtualenv
+* $ virtualenv --system-site-packages -p python ./venv
+
+How to Activate Virtual Environment?
+* # https://sparkbyexamples.com/python/python-activate-virtual-environment-venv/
+* # https://stackoverflow.com/questions/18713086/virtualenv-wont-activate-on-windows
+* $ Set-ExecutionPolicy Unrestricted -Scope Process
+* $ cd # in the directory of the venv
+* $ .\venv\Scripts\activate
+
+How to deactivate Python Virtual Environment?
+* # https://stackoverflow.com/questions/990754/how-to-leave-exit-deactivate-a-python-virtualenv
+* $ deactivate
+
+How to install Python libeary in venv?
+* $ pip install matplotlib
+
+How to uninstall Python libeary in venv?
+* $ pip uninstall matplotlib
+
+How to recreate venv?
+* # By Chat GPT
+* $ python -m venv venv
+
+How to deploy Virtual Environment?
+* # By Chat GPT
+* # https://youtu.be/BXPzbH0LYz4?si=5MTmO3WHrpEqfXFj
+* # Create venv 
+* # install all important package 
+* pip freeze > requirements.txt
+
+How to set up Python project and download important Python Package from another Git Repository?
+* # https://youtu.be/BXPzbH0LYz4?si=5MTmO3WHrpEqfXFj
+* hello
+dgdgdgggd
