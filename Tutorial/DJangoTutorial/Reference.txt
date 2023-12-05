@@ -1,7 +1,0 @@
-
-1. [Traversy Media]: Python Django 7 Hour Course
- * https://youtu.be/PtQiiknWUcI?si=QbVbqnsRoRDj-UAe
-2. [Pyplane]: How to connect Django with React 🔥 Django + React js integration tutorial (easy to follow)
- * https://youtu.be/eXrwF4LXF5c?si=9B3TgMvJEZsaJz5k
-3. [Tech With Tim]: Django & React Tutorial #1 - Full Stack Web App With Python & JavaScript
- * https://youtu.be/JD-age0BPVo?si=9LpzI3PYnQ1K0frV

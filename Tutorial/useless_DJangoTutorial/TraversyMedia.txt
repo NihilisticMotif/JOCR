@@ -1,0 +1,36 @@
+
+Installation & Setup
+ * pip3 install virtualenv
+ * virtualenv kishiberohan # name env
+ * source kishiberohan/bin/activate # or deactivate
+ * pip3 install django # install other librarys
+ * django-admin # avaible django commands
+ * django-admin startproject themindelectric # name the project, (4:00): https://youtu.be/QKHmVYuVn-k?si=_8LDqThgliQ9aL0q
+ * python3 manage.py runserver
+ ** # If there is an error:
+ *** python3 manage.py migrate
+ *** python manage.py runserver 8080 # https://stackoverflow.com/questions/46025002/django-says-port-is-already-in-use
+ * control z # kills command
+ * django-admin startapp theheartacoustic
+ * # Go in themindelectric/setting.py and add theheartacoustic in INSTALLED_APPS
+
+Views & URL's
+1. theheartacoustic/urls.py
+2. theheartacoustic/views.py
+3. themindelectric/urls.py
+
+
+
+How to Create and Activate Python Virtual Environment on Mac?
+1. pip3 install virtualenv # install virtual environment
+2. virtualenv env # name env
+3. source env/bin/activate # activate the env
+4. deactivate # deactivate the env
+* https://youtu.be/Y9jiGNFOhOs?si=YV1REPlaoIk1F7zo
+
+Reference:
+1. Python Django 7 Hour Course
+* https://youtu.be/PtQiiknWUcI?si=OhiolxftwAZojR7h
+2. Python Django Course | Creating a new Django project
+* https://youtu.be/QKHmVYuVn-k?si=_8LDqThgliQ9aL0q
+
