@@ -1,0 +1,55 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+// Specific
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+#C02id_Div {
+    width: 450px;
+}
+
+#C02id_Div input {
+    font-size: 18px;
+}
+
+#C02id_Div button {
+    font-size: 16px;
+    height: 30px;
+}
+
+.C02id_CreateRowButton button {
+    width: 40px;
+    height: 20px;
+}
+
+#C02id_Div h1 {
+    font-size: 18px;
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+Not interesting
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+#C02id_Div td {
+    margin-left: 10px;
+}
+
+#C02id_DivButton {
+    margin-top: 10px;
+}
+
+.C02id_CreateColumnDiv input {
+    margin-left: 10px;
+}
+
+.C02id_CreateRowButton h1 {
+    margin-top: 5px;
+}
+
+#C02id_Div table tr {
+    width: 400px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

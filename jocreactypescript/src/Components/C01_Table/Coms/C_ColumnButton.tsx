@@ -1,5 +1,5 @@
 // React
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Components
 //import R_FilterColumn from './Coms/R_FilterColumn';
@@ -7,10 +7,15 @@ import { useState } from 'react';
 // Type
 import TS_Row from '../../T01_Row/An_Index';
 import TS_Column from '../../T02_Column/An_Index'
-import {C01_Create} from '../../T01_Row/C01_Create';
 import {U02_UpdateDisplay} from '../../T02_Column/U02_UpdateDisplay'
-import {U01_Edit} from '../../T02_Column/U02_Edit'
+import {U02_Edit} from '../../T02_Column/U02_Edit'
 import {D02_Delete} from '../../T02_Column/D02_Delete'
+import {R02_ReturnIndex} from '../../T02_Column/R02_ReturnIndex'
+import {U01_DeleteColumn} from '../../T01_Row/U01_DeleteColumn'
+
+// CSS
+import './C_ColumnButton.css'
+
 const C_ColumnButton = (
 //****************************************************************************
 // INPUT
@@ -41,7 +46,7 @@ const C_ColumnButton = (
     const [SS_IsD,setSS_IsD] = useState<boolean>(true)
 
 //****************************************************************************
-// FUNCTION_00: Sort
+// FUNCTION_00: Sort Row
 //****************************************************************************
     function f_Sort(index:number):any{
         // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
@@ -71,22 +76,25 @@ const C_ColumnButton = (
     }
 
 //****************************************************************************
-// FUNCTION_03: Rename
+// FUNCTION_03: Rename Column
 //****************************************************************************
     function f_Rename(THISCOLUMN:TS_Column):void{
-        let let_Input:string=(document.getElementById('C01id_RenameColumn'+THISCOLUMN.Name)  as HTMLInputElement).value.toString();
+        let let_Input:string=(document.getElementById('C01id_RenameColumn'+THISCOLUMN.Key)  as HTMLInputElement).value.toString();
         let ss_Columns=[...SS_Columns]
-        let let_UpdateColumn=U01_Edit(THISCOLUMN,ss_Columns,let_Input)
+        let let_UpdateColumn=U02_Edit(THISCOLUMN,ss_Columns,let_Input)
         setSS_Columns(let_UpdateColumn)
-        f_Open(THISCOLUMN,0)
     }
+
 //****************************************************************************
-// FUNCTION_04: Delete
+// FUNCTION_04: Delete Column
 //****************************************************************************
     function f_Delete(THISCOLUMN:TS_Column):void{
         let ss_Columns=[...SS_Columns]
         let let_UpdateColumn=D02_Delete(THISCOLUMN,ss_Columns)
         setSS_Columns(let_UpdateColumn)
+        let ss_Rows=[...SS_Row]
+        let let_UpdateRow=U01_DeleteColumn(ss_Rows,R02_ReturnIndex(THISCOLUMN,ss_Columns))
+        setSS_Row(let_UpdateRow)
     }
 
 //****************************************************************************
@@ -98,7 +106,7 @@ const C_ColumnButton = (
         return (
             <td>
                 <div className='C01id_SortButton'>
-                    <input id={'C01id_RenameColumn'+Column.Name}></input>
+                    <input id={'C01id_RenameColumn'+Column.Key}></input>
                     <button onClick={()=>f_Rename(Column)}>Ok</button>
                     <button onClick={()=>f_Open(Column,0)}>Cancel</button>
                 </div>

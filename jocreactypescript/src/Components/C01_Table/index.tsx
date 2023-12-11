@@ -3,13 +3,17 @@ import { useState , useEffect, useRef } from 'react';
 // Components
 import C_TopButton from './Coms/C_TopButton'
 import C_ColumnButton from './Coms/C_ColumnButton';
-import C_Input from './Coms/C_Input';
 import C_Row from './Coms/C_Row'
 // Type
 import TS_Row from '../T01_Row/An_Index';
 import TS_Column from '../T02_Column/An_Index';
-// CSS
-import './index.css';
+
+//-------------------------+--------------+----------+
+// CSS                     | File Name    | General  |
+//-------------------------+--------------+----------+
+import './index00.css'; // | index.jsx    | General  |
+import './index01.css'; // | index.jsx    | Specific |
+//-------------------------+--------------+----------+
 
 const C01_Table = (
 //****************************************************************************
@@ -22,9 +26,11 @@ const C01_Table = (
 SS_Row,
 setSS_Row,
 SS_Columns,
-setSS_Columns
-//setSS_Columns
-
+setSS_Columns,
+SS_EditColumn,
+setSS_EditColumn,
+SS_C02,
+setSS_C02
 }:{
 // TYPE
 // PERPERTY
@@ -33,12 +39,16 @@ SS_Row:TS_Row[],
 setSS_Row:(S:TS_Row[])=>void,
 SS_Columns:TS_Column[],
 setSS_Columns:(S:TS_Column[])=>void,
+SS_EditColumn:0|1,
+setSS_EditColumn:(S:0|1)=>void,
+SS_C02:boolean,
+setSS_C02:(S:boolean)=>void
 }
 ) => {
-//****************************************************************************
-// HOOK
-//****************************************************************************
-        const [SS_EditColumn,setSS_EditColumn]=useState<0|1>(0)
+    useEffect(() => {
+        
+    }, []);
+
 //****************************************************************************
 // JSX_00: Filter SS_Column.Name by IsVisible=true
 //****************************************************************************
@@ -69,27 +79,16 @@ setSS_Columns:(S:TS_Column[])=>void,
 // OUTPUT
 //****************************************************************************
     return (
-<div id='C01id_Div'>
-{
-// Input tab
-}
-<C_Input
-SS_Row={SS_Row}
-setSS_Row={setSS_Row}
-SS_Columns={SS_Columns}
-setSS_Columns={setSS_Columns}
-SS_EditColumn={SS_EditColumn}
-setSS_EditColumn={setSS_EditColumn}
-/>
 
-<div id='C01id_Div2'>
-<h3>C01_Table</h3>
+<div id='C01id_H'>
 <hr />
 
 <C_TopButton
 // Export Data
 // Rename Table
     SS_Row    = {SS_Row}
+    SS_C02    = {SS_C02}
+    setSS_C02 = {setSS_C02}
 />
 <hr />
 
@@ -118,8 +117,7 @@ SS_EditColumn={SS_EditColumn}
 setSS_EditColumn={setSS_EditColumn}
 />
 </thead>
-<tbody>
-
+<tbody id='C02id_Height' style={{}}>
 {
 // Data
 JSX_TH_Rows}
@@ -129,7 +127,6 @@ JSX_TH_Rows}
 
 </div>
 
-</div>
 </div>
     )
 }

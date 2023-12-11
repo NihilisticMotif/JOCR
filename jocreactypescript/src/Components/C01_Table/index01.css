@@ -1,0 +1,135 @@
+/************************************************************************************************
+// Specific for C01id_Div, Right Table
+************************************************************************************************/
+#root{
+    --let_Font01:16px;
+    --let_Font02:18px;
+    --let_RowWidth:300px;
+    --let_RowHeight:40px;
+    --let_RightRowW:200px;
+    --let_LefttRowW: 100px;
+    --let_DivWidth:500px;
+}
+
+/************************************************************************************************
+// index.tsx
+************************************************************************************************/
+thead {
+    margin-right: 15px;
+}
+
+#C01id_Div {
+    background-color: aquamarine;
+    height: 500px;
+}
+
+#C01id_Table {
+    /*
+    https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
+    */
+    height: 25px;
+    max-height: 20px;
+}
+
+#C01id_Table th {
+    height: 30px;
+}
+
+#C01id_Table td {
+    height: 0px;
+}
+
+#C01id_Table td,
+#C01id_Table th {
+    border: 1px solid #000000;
+    padding: 1px;
+}
+
+#C01id_Table tr:nth-child(even):not(.C01id_HeightLightRow) {
+    background-color: #f2f2f2;
+}
+
+#C01id_Table tr:hover {
+    background-color: rgb(120, 159, 85);
+}
+
+#C01id_Table th {
+    background-color: #0481aa;
+    color: rgb(255, 255, 255);
+}
+
+#C01id_Table th:not(#C01id_Table th:first-child, #C01id_Table th:last-child) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: var(--let_RowWidth);
+    height: 40px;
+}
+
+#C01id_Table td:not(#C01id_Table td:first-child, #C01id_Table td:last-child) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: var(--let_RowWidth);
+}
+
+.C01id_RightEmpty {
+    width: var(--let_RightRowW);
+}
+
+.C01id_EditRowButton {
+    width: var(--let_RightRowW);
+}
+
+.C01id_Right button {
+    font-size: var(--let_Font01);
+    background-color: #0481aa;
+}
+
+.C01id_Left {
+    width: 100px;
+}
+
+/************************************************************************************************
+// C_ColumnButton.tsx
+************************************************************************************************/
+.C01id_SortButton {
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+    width: var(--let_RowWidth);
+}
+
+.C01id_SortButton button,
+.C01id_SortButton button {
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: var(--let_Font01);
+}
+
+/************************************************************************************************
+// C_Row.tsx
+************************************************************************************************/
+.C01id_HeightLightRow {
+    background-color: rgb(100, 100, 200);
+}
+
+.C01id_HeightLightRow input {
+    font-size: var(--let_Font02);
+}
+
+#C01id_Div {
+    display: flex;
+    background-color: #c794e3;
+    height: 500px;
+}
+
+#C01id_H {
+    background-color: #555555;
+}
+
+.C01id_EditRowButton button {
+    height: 30px;
+    width: 100vh;
+    font-size: 16px;
+    margin-right: 1px;
+    margin-left: 1px;
+}

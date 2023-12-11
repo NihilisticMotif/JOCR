@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 from kernel import canny,get_grayscale,sharpen,erode,dilate,opening,ShowMustGoOn,WhiteBackGround
-from txt import pensil, eraser
+#from txt import pensil, eraser
 
 path = [
     '/Users/imac/Desktop/SoloOpenSourceProject/JOCR/TestImage/Expenses_Macro/IMG_7553.jpeg',
@@ -38,7 +38,7 @@ txt=ts.image_to_string(img, lang='tha',
 txt=''.join(str(txt).split(' '))
 
 #eraser('demo.txt')
-pensil('demo02.txt',txt)
+#pensil('demo02.txt',txt)
 
 '''
 python3 write.py

@@ -9,6 +9,7 @@ import {D01_Delete} from '../../T01_Row/D01_Delete'
 import {U01_UpdateDisplay} from '../../T01_Row/U01_UpdateDisplay'
 
 // CSS
+//import './C_Row.css'
 
 //****************************************************************************
 
@@ -81,36 +82,6 @@ const C_Row = (
         let let_UpdateRows=D01_Delete(THISROW,ss_Row)
         setSS_Row(let_UpdateRows)
     }
-    /*
-    function f_Rename():void{
-        let let_NewName:string= (document.getElementById(C01id_Rename)as HTMLInputElement).value 
-        let ss_Row:TS_Row[]=[...SS_Row]
-        let let_UpdateColumns:TS_Row[]=U01_EditRow(THISROW,ss_Row,let_NewName)
-        setSS_Row(let_UpdateColumns);
-        // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
-    }
-
-//****************************************************************************
-// FUNCTION_02: Delete Column
-//****************************************************************************
-    function f_OpenDelete():void{
-        f_Display(2)
-    }
-    function f_Delete():void{
-        // https://youtu.be/XtS14dXwvwE?si=rYQOe_tJbxmSnDWE
-        let ss_IndexColumns:number[] = SS_IndexColumns
-        for(let i:number=0;i<ss_IndexColumns.length;i++){
-            if(ss_IndexColumns[i]===THISROW.Key){
-                ss_IndexColumns.splice(i, 1);
-            }
-        }
-
-        let ss_Row:TS_Row[] = [...SS_Row];
-        let let_UpdateColumns:TS_Row[]=D01_DeleteColumnName(THISROW,ss_Row)
-        setSS_Row(let_UpdateColumns);
-        setSS_IndexColumns(ss_IndexColumns);
-    }
-*/
 
 //****************************************************************************
 // FUNCTION_03: Update
@@ -157,7 +128,11 @@ const C_Row = (
 
     const JSX_EditRowInput=let_ThisRow.map((Row,index)=>{
         return(
-            <td><div className='C01id_EditRowButton'><input id={'C01id_Edit'+Row}></input><button onClick={()=>f_SmallUpdate(Row,index)}>Ok</button><button onClick={()=>f_ResetUpdate(index)} >Reset</button></div></td>
+            <td><div className='C01id_EditRowButton'>
+                <input id={'C01id_Edit'+Row}></input>
+                <button onClick={()=>f_SmallUpdate(Row,index)}>Ok</button>
+                <button onClick={()=>f_ResetUpdate(index)} >Reset</button>
+            </div></td>
         )
     })
 //****************************************************************************

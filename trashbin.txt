@@ -1,3 +1,1374 @@
+    height:70vh;
+ 
+    height:70vh;
+ 
+    position:absolute;
+    margin-top:30px;
+ 
+    position:absolute;
+    margin-top:30px;
+ 
+    position:absolute;
+ 
+height:let_tBodyHeight.toString()+'px'
+ 
+    let let_tBodyHeight:number=0
+ 
+        const tbody = document.getElementById('C02id_Height')
+        const windowHeight = window.innerHeight;
+        const divTableHeight = (document.querySelector('#C01id_Div')as HTMLInputElement)?.offsetHeight;
+        const tbodyHeight = windowHeight - divTableHeight;
+
+        if (tbody) {
+            alert(divTableHeight)
+            tbody.setAttribute("height", tbodyHeight.toString()+'px;');
+            //tbody.style.height = tbodyHeight.toString()+'px;'
+        }
+ 
+ tbody
+ 
+        let_tBodyHeight=(document.getElementById('C01id_Table')as HTMLInputElement).offsetHeight;
+        alert(let_tBodyHeight)
+        /*
+ 
+100px
+ 
+    height:100px;
+ 
+    height:100px;
+ 
+    height:100vh;
+ 
+    height:70vh;
+ 
+flex: 1;
+ 
+    flex:1;
+ 
+    height:760px;
+ 
+#C01id_Table 
+ 
+</div>
+ 
+<div style={{overflowY:'auto'}}>
+ 
+</div>
+ 
+{
+// Data
+JSX_TH_Rows}
+ 
+style={{overflowY:'auto'}}
+ 
+overflow-y: auto;
+ 
+    max-height:100vh;
+    overflow-y: auto;
+ 
+calc(50% - 450px);
+ 
+    let let_Width:string='50%'
+ 
+ style={{width:let_Width}}
+ 
+        let_Width='50%'
+ 
+        let_Width='calc(50% - 450px);'
+ 
+    max-width: 50%;
+ 
+calc(50% - 450px);
+ 
+:string
+ 
+width:
+ 
+width:calc(50% - 450px);
+ 
+    max-width: 50%;
+ 
+    box-sizing: border-box;
+ 
+        /* Limit the width to 50% of the window */
+ 
+ style={{width:'450px'}}
+ 
+    display: flex;
+ 
+    border-color: red;
+ 
+</div>
+ 
+/*
+ 
+*/
+ 
+0
+ 
+#C02id_Div {
+    width: 450px;
+}
+ 
+<C02_Input
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+/>
+ 
+{JSX_Button}
+ 
+/*onClick={()=>f_DSort(true)}*/
+ 
+/*
+ 
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Close Input Tab</button></td>
+ 
+    /*
+    function f_Rename():void{
+        let let_NewName:string= (document.getElementById(C01id_Rename)as HTMLInputElement).value 
+        let ss_Row:TS_Row[]=[...SS_Row]
+        let let_UpdateColumns:TS_Row[]=U01_EditRow(THISROW,ss_Row,let_NewName)
+        setSS_Row(let_UpdateColumns);
+        // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
+    }
+
+//****************************************************************************
+// FUNCTION_02: Delete Column
+//****************************************************************************
+    function f_OpenDelete():void{
+        f_Display(2)
+    }
+    function f_Delete():void{
+        // https://youtu.be/XtS14dXwvwE?si=rYQOe_tJbxmSnDWE
+        let ss_IndexColumns:number[] = SS_IndexColumns
+        for(let i:number=0;i<ss_IndexColumns.length;i++){
+            if(ss_IndexColumns[i]===THISROW.Key){
+                ss_IndexColumns.splice(i, 1);
+            }
+        }
+
+        let ss_Row:TS_Row[] = [...SS_Row];
+        let let_UpdateColumns:TS_Row[]=D01_DeleteColumnName(THISROW,ss_Row)
+        setSS_Row(let_UpdateColumns);
+        setSS_IndexColumns(ss_IndexColumns);
+    }
+*/
+ 
+:bool
+ 
+const [SS_C02,setSS_C02]=useState<boolean>(false)
+ 
+<C02_Input
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+/>
+ 
+    margin-left: auto;
+ 
+, useEffect
+ 
+//
+ 
+    function f_Sort(property:any):any{
+        // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
+        let let_SortOrder:number = 1;
+        if(property[0] === "-") {
+            let_SortOrder = -1;
+            property = property.substr(1);
+        }
+        return function(a:any,b:any){
+            let let_Result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+            return let_Result * let_SortOrder;
+        }
+    }
+    /*
+    function f_DSort(IsD:boolean):void{
+        // Get the Alphabet Name Order of SS_Row
+        let ss_Row:TS_Row[] = [...SS_Row]
+        SS_Row.sort(f_Sort("Name"));
+        if(IsD===true){SS_Row.reverse();}
+        // https://www.w3schools.com/jsref/jsref_sort.asp
+        // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
+        
+        // Update SS_IndexColumns
+        setSS_IndexColumns(SS_Row.map((Column)=>Column.Key))
+    }
+    */
+ 
+    margin-left: auto;
+ 
+<C02_Input
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+/>
+ 
+    float: right;
+    position: relative;
+ 
+float:right;
+ 
+#C01id_DivTable{
+}
+ 
+    overflow: auto;
+ 
+    height: 300px;
+ 
+#C02id_Div1 table {
+    height: 300px;
+}
+ 
+    height:100vh
+ 
+    height: 100vh;
+ 
+    position:absolute
+ 
+.C01id_EditRowButton button {
+    height: 30px;
+    width: 100vh;
+    font-size: 16px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+ 
+.C01id_EditRowButton button {
+    height: 30px;
+    width: 100vh;
+    font-size: 16px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+ 
+.C01id_SortButton input {
+    height: 30px;
+    font-size: 16px;
+}
+ 
+
+/************************************************************************************************
+// C_ColumnButton.tsx
+************************************************************************************************/
+.C01id_SortButton {
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.C01id_SortButton button,
+.C01id_SortButton button {
+    width: 100%;
+    height: 100%;
+}
+
+.C01id_SortButton input {
+    height: 30px;
+    font-size: 16px;
+}
+ 
+.C01id_SortButton input{
+    height:30px;
+    font-size:16px;
+}
+ 
+}
+
+tbody {
+ 
+    --let_DivHeight: 500px;
+ 
+tbody {
+    height: var(--let_DivHeight);
+}
+ 
+
+#C01id_Table table{
+    height:100vh
+}
+ 
+#C01id_Table table
+ 
+import './index02.css'; // | index.jsx    | 0 |
+ 
+#C01id_Div {
+    display: flex;
+    background-color: #c794e3;
+    height:500px;
+}
+
+#C01id_H{
+background-color:#555555;
+}
+ 
+-----------------------------+--------------+
+ 
+
+</div>
+ 
+<div id='C01id_Div'>
+{/*
+// Input tab
+<C_Input
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+/>
+*/}
+ 
+//import './C_Row.css'
+ 
+import './index03.css'; // | C_input.jsx  | 1 | Row input                   | C01ids  
+ 
+import C_Input from './Coms/C_Input';
+ 
+{
+// Image
+}
+<div
+style={{
+    width:'600px',
+    height:'100vh',
+    backgroundColor:'blue',
+}}
+>cec</div>
+ 
+<C02_Input
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+/>
+ 
+={setSS_EditColumn}
+
+ 
+={SS_EditColumn}
+ 
+ [SS_Reset,setSS_Reset]=useState<number>(0)
+ 
+    // Reset Column List after Update Column List (Create, Rename, Delete, Filter and Sort)
+    // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
+    // const
+ 
+//****************************************************************************
+// HOOK
+//****************************************************************************
+    const [SS_EditColumn,setSS_EditColumn]=useState<0|1>(0)
+ 
+}
+ 
+    display:'grid'
+ 
+<div
+style={{
+    width:'600px',
+    height:'100vh',
+    backgroundColor:'blue',
+    display:'grid'
+}}
+>cec</div>
+ 
+<div
+style={{
+    width:'600px',
+    height:'100vh',
+    backgroundColor:'blue',
+    display:'grid'
+}}
+>cec</div>
+ 
+{
+// Input tab
+}
+<C_Input
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+/>
+ 
+        // Iterate through each input element and set its value to ''
+ 
+        // Get all input elements in the DOM
+ 
+            
+ 
+        f_ResetInput()
+ 
+        f_ResetInput()
+
+ 
+        f_ResetInput()
+ 
+        f_ResetInput()
+ 
+        f_ResetInput()
+ 
+        f_ResetInput()
+ 
+        f_Open(THISCOLUMN,0)
+ 
+        alert(JSON.stringify(SS_Columns))
+        f_Open(THISCOLUMN,0)
+ 
+        alert(JSON.stringify(SS_Columns))
+        f_Open(THISCOLUMN,0)
+ 
+        alert(JSON.stringify(let_UpdateColumn))
+        alert(JSON.stringify(SS_Columns))
+ 
+    useEffect(() => {
+  // Code to run after SS_Columns state is updated
+}, [SS_Columns]); 
+ 
+        alert(JSON.stringify(let_UpdateColumn))
+        alert(JSON.stringify(SS_Columns))
+ 
+        alert(let_Input)
+ 
+.C01id_SortButton input
+ 
+:root{
+    --let_Width:500px;
+}
+ 
+width:ver(--let_Width)
+ 
+style={{paddingTop:'5px',paddingBottom:'5px'}}
+ 
+style={{paddingTop:'5px',paddingBottom:'5px'}}
+ 
+paddingBottom:'5px',
+ 
+paddingTop:'5px',
+ 
+,float:'left'
+ 
+style={{float:'left'}}
+ 
+display:'flex;',
+ 
+ style={{width:'75px;',marginLeft:'5px;'}}
+ 
+style={{margin:5}}
+ 
+<div style={{display:'flex;',float:'right'}}>
+                <button onClick={()=>f_Rename(Column)}>Ok</button>
+                <button onClick={()=>f_Open(Column,0)} style={{width:'75px;',marginLeft:'5px;'}}>Cancel</button>
+                </div>
+ 
+Change 
+ 
+lineHeight:css_LineHeight
+ 
+ paddingTop: '0px', paddingBottom: '0px', marginTop: '0px' ,
+ 
+div
+ 
+div
+ 
+
+/************************************************************************************************
+// C_Row.tsx
+************************************************************************************************/
+
+ 
+.C01id_HeightLightRow {
+    background-color: rgb(100, 100, 200);
+}
+
+.C01id_HeightLightRow input {
+    font-size: var(--let_Font02);
+}
+ 
+#C01id_RenameColumn {
+    background-color: #c794e3;
+}
+ 
+    display: flex;
+    align-items: center;
+ 
+    margin-top: 5px;
+ 
+-buttom
+ 
+            <div className='C01id_CreateRowDiv'>
+                <h1>{Column.Name}:   </h1>
+            </div>
+ 
+<div className='C01id_CreateRowButton'>
+                <button onClick={()=>f_Open(Column,2)}>X</button>
+                <button onClick={()=>f_Open(Column,1)}>...</button>
+                </div>
+ 
+<button onClick={()=>f_Open(Column,2)}>X</button>
+                <button onClick={()=>f_Open(Column,1)}>...</button>
+ 
+    float: left;
+ 
+<button onClick={()=>f_Open(Column,2)}>X</button>
+                <button onClick={()=>f_Open(Column,1)}>...</button>
+ 
+    white-space: nowrap;
+ 
+    white-space: nowrap;
+    justify-content: space-between;
+ 
+    white-space: nowrap;
+    justify-content: space-between;
+ 
+    white-space: nowrap;
+    justify-content: space-between;
+ 
+    white-space: nowrap;
+    justify-content: space-between;
+ 
+    /* Aligns items with maximum space between them */
+ 
+    /* Aligns items with maximum space between them */
+ 
+import {C01_Create} from '../../T01_Row/C01_Create';
+ 
+import {U01_CreateColumn} from '../../T01_Row/U01_CreateColumn'
+ 
+        let let_ColumnIndex:number=
+ 
+R02_ReturnIndex(THISCOLUMN,ss_Columns)
+ 
+        for(let i=0;i<ss_Rows.length;i++){
+            ss_Rows[i].Array.push('-')
+        }
+ 
+import {U01_CreateColumn} from '../../T01_Row/U01_CreateColumn'
+ 
+    
+ 
+for(let j=0;j<ss_Rows[i].Array.length;j++){
+                
+            }
+ 
+        alert()
+ 
+        alert('HelloWorld')
+ 
+.C01id_SortButton {
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.C01id_SortButton button,
+.C01id_SortButton button {
+    width: 100%;
+    height: 100%;
+}
+ 
+thead {
+    margin-right: 15px;
+}
+
+tbody {
+    height: var(--let_DivHeight);
+}
+ 
+#C01id_Table th {
+    background-color: #0481aa;
+    color: rgb(255, 255, 255);
+}
+
+#C01id_Table th:not(#C01id_Table th:first-child, #C01id_Table th:last-child) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: var(--let_RowWidth);
+    height: 40px;
+}
+
+#C01id_Table td:not(#C01id_Table td:first-child, #C01id_Table td:last-child) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: var(--let_RowWidth);
+}
+ 
+, index.tsx
+ 
+, Right Table
+ 
+Specific for C01id_Div2, 
+ 
+    display: flex;
+ 
+    width: 200px;
+ 
+.C01id_EditRowButton {
+    width: 200px;
+    display: flex;
+}
+ 
+.C01id_EditRowButton {
+    width: 200px;
+    display: flex;
+}
+ 
+    background-color: aquamarine;
+    height: 500px;
+ 
+    width: 100%;
+ 
+ | 1 | Row input                   |              |
+ 
+| index.jsx    | 1 | Right Main Table            | 
+ 
+| index.jsx    | 
+ 
+ | All                         | C01id_Div    |
+ 
+
+/************************************************************************************************
+// C01id_Div2 Table Header
+************************************************************************************************/
+
+.C01id_DivHeader {
+    display: flex;
+}
+
+.C01id_Header {
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin-left: 5px;
+}
+ 
+    overflow-y: auto;
+ 
+
+thead {
+    margin-right: 15px;
+}
+
+ 
+    height: 500px;
+ 
+/*
+https: //stackoverflow.com/questions/17067294/html-table-with-100-width-with-vertical-scroll-inside-tbody
+https: //stackoverflow.com/questions/11759934/aligning-divs-beside-each-other-and-adding-an-horizontal-scrollbar-in-html
+*/
+ 
+.C01id_HeightLightRow {
+    background-color: rgb(100, 100, 200);
+}
+
+.C01id_HeightLightRow input {
+    font-size: 18px;
+}
+
+ 
+    white-space: nowrap;
+    justify-content: space-around;
+ 
+    white-space: nowrap;
+    justify-content: space-around;
+ 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+ 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+    height: 40px;
+ 
+/*
+#C01id_Table td:first-child,
+#C01id_Table th:first-child{
+    width:60px;
+}
+#C01id_Table td:last-child,
+#C01id_Table th:last-child{
+    width:120px
+}
+*/
+ 
+#C01id_Table th {
+    background-color: #0481aa;
+    color: rgb(255, 255, 255);
+}
+ 
+    margin: 0px;
+    padding: 0px;
+ 
+    height: 40px;
+    width: 300px;
+ 
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 16px;
+ 
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+ 
+.C01id_Left {
+    width: 100px;
+}
+ 
+    height: 100%;
+ 
+    font-size: 16px;
+ 
+    background-color: #0481aa;
+ 
+.C01id_RightEmpty {
+    width: 200px;
+}
+ 
+
+.C01id_SortRight {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+}
+ 
+
+.C01id_SortRight {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+}
+ 
+#C01id_Table td,
+#C01id_Table th {
+    border: 1px solid #000000;
+    padding: 1px;
+}
+
+#C01id_Table tr:nth-child(even):not(.C01id_HeightLightRow) {
+    background-color: #f2f2f2;
+}
+
+#C01id_Table tr:hover {
+    background-color: rgb(120, 159, 85);
+}
+
+ 
+#C01id_Table th {
+    height: 30px;
+}
+
+#C01id_Table td {
+    height: 0px;
+}
+ 
+    overflow-x: auto;
+ 
+    table-layout: fixed;
+ 
+    border-collapse: collapse;
+ 
+    height: 25px;
+ 
+    max-height: 20px;
+ 
+#C01id_Table {
+    /*
+    https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
+    */
+    border-collapse: collapse;
+    height: 25px;
+    table-layout: fixed;
+    max-height: 20px;
+    overflow-x: auto;
+}
+ 
+.C01id_P {
+/*
+* https://www.w3schools.com/cssref/pr_text_white-space.php
+* https://stackoverflow.com/questions/2787310/how-to-reduce-the-space-between-p-tags
+*/
+    white-space: nowrap;
+    margin: 0;
+    background-color: 'red';
+}
+ 
+.C01id_P {
+/*
+* https://www.w3schools.com/cssref/pr_text_white-space.php
+* https://stackoverflow.com/questions/2787310/how-to-reduce-the-space-between-p-tags
+*/
+    white-space: nowrap;
+    margin: 0;
+}
+ 
+#C01id_DivTable {
+    margin-top: 0px;
+    width: 100%;
+}
+ 
+#C01id_DivTable {
+    margin-top: 0px;
+    width: 100%;
+}
+ 
+display: flex;
+ 
+font-size: 16px;
+ 
+margin-right: 1px;
+    margin-left: 1px;
+ 
+font-size: 16px;
+ 
+height: 30px;
+    font-size: 16px;
+ 
+.C01id_EditRowButton {
+    display: flex;
+    width: 200px;
+}
+
+.C01id_EditRowButton button {
+    margin-right: 1px;
+    margin-left: 1px;
+    height: 30px;
+    font-size: 16px;
+    width: 100vh;
+}
+
+ 
+.C01id_EditRowButton {
+    display: flex;
+    width: 200px;
+}
+
+.C01id_EditRowButton button {
+    margin-right: 1px;
+    margin-left: 1px;
+    height: 30px;
+    font-size: 16px;
+    width: 100vh;
+}
+
+ 
+.C01id_EditRowButton button {
+    margin-right: 1px;
+    margin-left: 1px;
+    height: 30px;
+    font-size: 16px;
+    width: 100vh;
+}
+ 
+.C01id_EditRowButton button {
+    margin-right: 1px;
+    margin-left: 1px;
+    height: 30px;
+    font-size: 16px;
+    width: 100vh;
+}
+ 
+.C01id_EditRowButton button {
+    margin-right: 1px;
+    margin-left: 1px;
+    height: 30px;
+    font-size: 16px;
+    width: 100vh;
+}
+ 
+This file contains only constant value
+// Specific C_Input.jsx
+ 
+This file contains only constant value
+// Specific C_Input.jsx
+ 
+This file contains only constant value
+// Specific C_Input.jsx
+ 
+This file contains only constant value
+// Specific C_Input.jsx
+ 
+.C01id_EditRowButton{
+    width:200px;
+}
+ 
+    width:200px;
+ 
+    width: 200px;
+ 
+// Specific index.jsx part 0
+ 
+General 
+ 
+Specific 
+ 
+  
+ 
+eneral
+ 
+  IsGeneral
+ 
+General 
+ 
+//
+ 
+#C01id_Table {
+    /*
+    https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
+    */
+    border-collapse: collapse;
+    height: 25px;
+    table-layout: fixed;
+    max-height: 20px;
+    overflow-x: auto;
+}
+
+#C01id_Table th {
+    height: 30px;
+}
+
+#C01id_Table td {
+    height: 0px;
+}
+
+#C01id_Table td,
+#C01id_Table th {
+    border: 1px solid #000000;
+    padding: 1px;
+}
+
+#C01id_Table tr:nth-child(even):not(.C01id_HeightLightRow) {
+    background-color: #f2f2f2;
+}
+
+#C01id_Table tr:hover {
+    background-color: rgb(120, 159, 85);
+}
+ 
+
+.C01id_EditRowButton {
+    display: flex;
+    width: 200px;
+}
+
+.C01id_EditRowButton button {
+    margin-right: 1px;
+    margin-left: 1px;
+    height: 30px;
+    font-size: 16px;
+    width: 100vh;
+}
+
+.C01id_EditRowButton input {
+    width: 100vh;
+}
+ 
+.C01id_EditRowButton {
+    display: flex;
+    width: 200px;
+}
+
+.C01id_EditRowButton button {
+    margin-right: 1px;
+    margin-left: 1px;
+    height: 30px;
+    font-size: 16px;
+    width: 100vh;
+}
+
+.C01id_EditRowButton input {
+    width: 100vh;
+}
+ 
+import './css00_index.css';
+import './css01_C_Input.css';
+ 
+import './css02_index.css';
+ 
+#C01id_Div2 {
+    background-color: aquamarine;
+    height: 500px;
+    width: 100%;
+}
+ 
+// C01id_Div2
+ 
+// C01id_Div
+ 
+// C01id_Div1
+ 
+import './css_index.css';
+ 
+ style={{height:css_HeightDiv}}
+ 
+    const css_HeightDiv:number=300
+ 
+    const css_WidthDiv:number=400
+ 
+style={{width:css_WidthDiv}}
+ 
+    margin-left: 10px;
+ 
+    margin-top: 10px;
+ 
+#C01id_Div1 td {
+    margin-left: 10px;
+}
+ 
+01_
+ 
+    height: 30px;
+ 
+#C01id_Div1 h1 {
+    font-size: 18px;
+}
+ 
+#C01id_Div1 h1 {
+    font-size: 18px;
+}
+ 
+.C01id_CreateRowButton button {
+    width: 40px;
+    height: 20px;
+}
+ 
+/************************************************************************************************
+// C01id_Div2
+************************************************************************************************/
+#C01id_Div2 {
+    background-color: aquamarine;
+    height: 500px;
+    width: 100%;
+}
+
+
+.C01id_EditRowButton{
+    display:flex;
+    width:200px;
+}
+
+.C01id_EditRowButton button{
+    margin-right: 1px;
+    margin-left : 1px;
+    height:30px;
+    font-size: 16px;
+    width:100vh;
+}
+
+.C01id_EditRowButton input{
+    width:100vh;
+}
+
+#C01id_DivTable{
+    margin-top: 0px;
+    width: 100%;
+}
+
+.C01id_P {
+/*
+* https://www.w3schools.com/cssref/pr_text_white-space.php
+* https://stackoverflow.com/questions/2787310/how-to-reduce-the-space-between-p-tags
+*/
+    white-space: nowrap;
+    margin: 0;
+}
+
+#C01id_Table{
+    /*
+    https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
+    */
+    border-collapse: collapse;
+    height: 25px;
+    table-layout: fixed;
+    max-height: 20px;
+    overflow-x: auto;
+}
+
+#C01id_Table th{
+    height: 30px;
+}
+
+#C01id_Table td{
+    height: 0px;
+}
+
+#C01id_Table td,
+#C01id_Table th
+{
+    border: 1px solid #000000;
+    padding: 1px;
+}
+
+#C01id_Table tr:nth-child(even):not(.C01id_HeightLightRow) {
+    background-color: #f2f2f2;
+}
+
+#C01id_Table tr:hover {
+    background-color: rgb(120, 159, 85);
+}
+
+.C01id_SortRight{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+}
+
+.C01id_SortButton {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 300px;
+}
+
+.C01id_SortButton button,
+.C01id_SortButton button {
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 16px;
+    width:100%;
+    height: 100%;
+}
+
+.C01id_RightEmpty{
+    width: 200px;
+}
+.C01id_Right button{
+    font-size: 16px;
+    height: 100%;
+    background-color: #0481aa;
+}
+.C01id_Left{
+    width:100px;
+}
+#C01id_Table th{
+    background-color: #0481aa;
+    color: rgb(255, 255, 255);
+}
+
+
+
+#C01id_Table th:not(#C01id_Table th:first-child,#C01id_Table th:last-child) 
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width:300px;
+    height:40px;
+    white-space: nowrap;
+    justify-content: space-around;
+}
+
+#C01id_Table td:not(#C01id_Table td:first-child, #C01id_Table td:last-child){
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+    white-space: nowrap;
+    justify-content: space-around;
+}
+/*
+#C01id_Table td:first-child,
+#C01id_Table th:first-child{
+    width:60px;
+}
+#C01id_Table td:last-child,
+#C01id_Table th:last-child{
+    width:120px
+}
+*/
+
+.C01id_HeightLightRow{
+    background-color: rgb(100,100,200);
+}
+
+.C01id_HeightLightRow input{
+    font-size: 18px;
+}
+
+/*
+https: //stackoverflow.com/questions/17067294/html-table-with-100-width-with-vertical-scroll-inside-tbody
+https: //stackoverflow.com/questions/11759934/aligning-divs-beside-each-other-and-adding-an-horizontal-scrollbar-in-html
+*/
+
+thead,
+tbody {
+    display:block;
+}
+
+#C01id_InnerTable{
+    width: 100%;
+    overflow-x: scroll;
+    background-color: antiquewhite;
+}
+
+thead{
+    margin-right: 15px;
+}
+
+tbody {
+    height: 500px;
+    overflow-y: auto;
+}
+
+/************************************************************************************************
+// C01id_Div2 Table Header
+************************************************************************************************/
+
+.C01id_DivHeader {
+    display: flex;
+}
+
+.C01id_Header {
+    background-color: rgb(255,255,255);
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+ 
+/************************************************************************************************
+// C01id_Div1
+************************************************************************************************/
+#C01id_Div1 {
+    background-color: cadetblue;
+}
+
+#C01id_Div1 td {
+    display: grid;
+}
+
+#C01id_RenameColumn {
+    background-color: #c794e3;
+}
+
+#C01id_Div1 table {
+    display: grid;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+#C01id_Div1 table td{
+    width:90%;
+}
+#C01id_Div1 td {
+    margin-left: 10px;
+}
+
+#C01id_Div1 button {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    margin-right:3px;
+}
+
+#C01id_Div1 hr {
+    color: red;
+    background-color: red;
+    height: 2px;
+    border: none;
+    width: 100%;
+}
+
+#C01id_Div1Button {
+    margin-top: 10px;
+    margin-left: 0%;
+    display: flex;
+}
+
+#C01id_Div1 h1 {
+    font-size: 18px;
+}
+
+.C01id_CreateRowDiv {
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+    /* Aligns items with maximum space between them */
+    align-items: center;
+}
+
+.C01id_CreateColumnDiv{
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+    /* Aligns items with maximum space between them */
+    align-items: center;
+}
+
+.C01id_CreateColumnDiv input{
+    margin-left:10px;
+    width:58%;
+}
+
+.C01id_CreateRowButton{
+    display: flex;
+    white-space: nowrap;
+    float: right;
+}
+
+.C01id_CreateRowButton button{
+    width: 40px;
+    height: 20px;
+}
+ 
+    const css_FontSize01:number=18
+    const css_FontSize02:number=16
+ 
+#C01id_Div1 input{
+    font-size: 18px;
+}
+ 
+style={{fontSize:css_FontSize02}}
+ 
+style={{fontSize:css_FontSize01}}
+ 
+    font-size: 18px;
+ 
+    font-size: 16px;
+ 
+height:300px;
+ 
+_C01idDiv1
+ 
+_
+ 
+    width: 448px;
+ 
+<h3>C01_Table</h3>
+ 
         f_Open(THISCOLUMN,0)
  
         D02_Delete

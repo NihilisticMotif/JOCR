@@ -1,0 +1,24 @@
+
+.C01id_P {
+    /*
+* https://www.w3schools.com/cssref/pr_text_white-space.php
+* https://stackoverflow.com/questions/2787310/how-to-reduce-the-space-between-p-tags
+*/
+    white-space: nowrap;
+    margin: 0;
+    background-color: 'red';
+}
+
+.C01id_CreateRowDiv {
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.C01id_CreateColumnDiv {
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}

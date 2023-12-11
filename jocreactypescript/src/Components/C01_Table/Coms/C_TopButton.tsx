@@ -1,5 +1,5 @@
 // React
-//import { useState , useEffect} from 'react';
+import { useState } from 'react';
 
 // Components
 //import R_FilterColumn from './Coms/R_FilterColumn';
@@ -8,6 +8,7 @@
 import TS_Row from '../../T01_Row/An_Index';
 
 // CSS
+import './C_TopButton.css'
 
 const C_TopButton = (
 //****************************************************************************
@@ -17,45 +18,44 @@ const C_TopButton = (
     // PARAMETER
     // HOOK: setState()
     SS_Row,
+    SS_C02,
+    setSS_C02
 }:{
     // TYPE
     // HOOK: setState() 
     SS_Row:TS_Row[],
+    SS_C02:boolean,
+    setSS_C02:(S:boolean)=>void
 }
 ) => {
 //****************************************************************************
-// FUNCTION_00: Sort SS_Column
+// FUNCTION_00: Open / Close C02_Input
 //****************************************************************************
-    function f_Sort(property:any):any{
-        // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
-        let let_SortOrder:number = 1;
-        if(property[0] === "-") {
-            let_SortOrder = -1;
-            property = property.substr(1);
-        }
-        return function(a:any,b:any){
-            let let_Result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
-            return let_Result * let_SortOrder;
-        }
+    
+    function f_Open(){
+        setSS_C02(true)
     }
-    /*
-    function f_DSort(IsD:boolean):void{
-        // Get the Alphabet Name Order of SS_Row
-        let ss_Row:TS_Row[] = [...SS_Row]
-        SS_Row.sort(f_Sort("Name"));
-        if(IsD===true){SS_Row.reverse();}
-        // https://www.w3schools.com/jsref/jsref_sort.asp
-        // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
-        
-        // Update SS_IndexColumns
-        setSS_IndexColumns(SS_Row.map((Column)=>Column.Key))
+    function f_Close(){
+        setSS_C02(false)
     }
-    */
 
+//****************************************************************************
+// JSX
+//****************************************************************************
+    let JSX_Button=<></>
+    if(SS_C02===false){
+        JSX_Button=<td><button className='C01id_Header' onClick={f_Open}>Open Input Tab</button></td>
+    }
+    else{
+        JSX_Button=<td><button className='C01id_Header' onClick={f_Close}>Close Input Tab</button></td>
+    }
+//****************************************************************************
+// OUTPUT
+//****************************************************************************
 return(
 <div className='C01id_DivHeader'>
-<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Export Data</button></td>
-<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Rename Table</button></td>
+{JSX_Button}
+<td><button className='C01id_Header'>Export Data</button></td>
 </div>
     )
 }
