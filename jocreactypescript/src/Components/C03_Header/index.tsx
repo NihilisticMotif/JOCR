@@ -5,25 +5,24 @@ import { useState } from 'react';
 //import R_FilterColumn from './Coms/R_FilterColumn';
 
 // Type
-import TS_Row from '../../T01_Row/An_Index';
+import TS_Row from '../T01_Row/An_Index';
 
 // CSS
-import './C_TopButton.css'
+import './index00.css'
+import './index01.css'
 
-const C_TopButton = (
+const C03_Header = (
 //****************************************************************************
 // INPUT
 //****************************************************************************
 {
     // PARAMETER
     // HOOK: setState()
-    SS_Row,
     SS_C02,
     setSS_C02
 }:{
     // TYPE
     // HOOK: setState() 
-    SS_Row:TS_Row[],
     SS_C02:boolean,
     setSS_C02:(S:boolean)=>void
 }
@@ -44,20 +43,20 @@ const C_TopButton = (
 //****************************************************************************
     let JSX_Button=<></>
     if(SS_C02===false){
-        JSX_Button=<td><button className='C01id_Header' onClick={f_Open}>Open Input Tab</button></td>
+        JSX_Button=<td><button className='C03id_Header' onClick={f_Open}>Open Input Tab</button></td>
     }
     else{
-        JSX_Button=<td><button className='C01id_Header' onClick={f_Close}>Close Input Tab</button></td>
+        JSX_Button=<td><button className='C03id_Header' onClick={f_Close}>Close Input Tab</button></td>
     }
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
 return(
-<div className='C01id_DivHeader'>
+<div className='C03id_DivHeader'>
 {JSX_Button}
-<td><button className='C01id_Header'>Export Data</button></td>
+<td><button className='C03id_Header'>Export Data</button></td>
 </div>
     )
 }
 
-export default C_TopButton
+export default C03_Header

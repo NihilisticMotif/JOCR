@@ -2,13 +2,14 @@
 // Specific for C01id_Div, Right Table
 ************************************************************************************************/
 #root{
-    --let_Font01:16px;
-    --let_Font02:18px;
-    --let_RowWidth:300px;
+    --let_Font01:14px;
+    --let_Font02:14px;
+    --let_RowWidth:240px;
     --let_RowHeight:40px;
     --let_RightRowW:200px;
     --let_LefttRowW: 100px;
     --let_DivWidth:500px;
+    --let_C01HeaderHeight:100px;
 }
 
 /************************************************************************************************
@@ -132,4 +133,8 @@ thead {
     font-size: 16px;
     margin-right: 1px;
     margin-left: 1px;
+}
+
+#thead{
+    height:var(--let_C01HeaderHeight);
 }

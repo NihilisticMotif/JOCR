@@ -1,0 +1,12 @@
+#C02id_Header {
+    border-top: 1px solid #000000;
+    border-bottom: 2px solid chocolate;
+    height: var(--let_HeaderHeight);
+    background-color: chocolate;
+    display: grid;
+}
+
+.C02id_CreateColumnDiv input {
+    vertical-align: middle;
+    margin-bottom: 5px;
+}

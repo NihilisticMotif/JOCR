@@ -128,9 +128,10 @@ const C_ColumnButton = (
         return (
             <td><div className='C01id_SortButton'>
                 <button onClick={()=>f_Open(Column,1)}>Rename</button>
-                <button onClick={()=>f_Open(Column,2)}>X</button>
                 <button onClick={()=>f_Sort(index)}>Sort</button>
-                <button>Type</button>
+                <button onClick={()=>f_Open(Column,2)}>X</button>
+                {//<button>Type</button>
+                }
             </div></td>
         )}
     })
@@ -139,7 +140,7 @@ const C_ColumnButton = (
 // FUNCTION_01: Sort SS_Row
 //****************************************************************************
 return(
-<tr>
+<tr className='C01id_TR'>
     <td><div className='C01id_Left'></div></td>
     {JSX_ColumnsButton}
     {//<td><div className='C01id_SortRight'><div className='C01id_EditRowButton'><input></input><button>Add Column</button></div></div></td>

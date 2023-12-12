@@ -129,9 +129,9 @@ const C_Row = (
     const JSX_EditRowInput=let_ThisRow.map((Row,index)=>{
         return(
             <td><div className='C01id_EditRowButton'>
-                <input id={'C01id_Edit'+Row}></input>
-                <button onClick={()=>f_SmallUpdate(Row,index)}>Ok</button>
-                <button onClick={()=>f_ResetUpdate(index)} >Reset</button>
+                <input id={'C01id_Edit'+Row} style={{width:'140px'}}></input>
+                <button onClick={()=>f_SmallUpdate(Row,index)} style={{width:'40px'}}>Ok</button>
+                <button onClick={()=>f_ResetUpdate(index)} style={{width:'55px'}}>Reset</button>
             </div></td>
         )
     })

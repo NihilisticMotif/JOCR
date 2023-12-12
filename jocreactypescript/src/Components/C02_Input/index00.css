@@ -2,30 +2,16 @@
 // General for C02id_Div, C_input.jsx, Row input taps
 ************************************************************************************************/
 #C02id_Div {
-    background-color: cadetblue;
-}
-
-#C02id_Div {
-    height: 100vh;
-    position: relative;
-}
-
-#C02id_Div table {
-    height: 100%;
-    width: 100%;
-    /* Optional: Ensure the table takes the full width */
+    height: calc(100vh - 40px);
 }
 
 #C02id_Div td {
     display: grid;
 }
 
-#C02id_RenameColumn {
-    background-color: #c794e3;
-}
-
 #C02id_Div table {
-    display: grid;
+    height: 100%;
+    display: block;
     width: 100%;
     overflow-y: scroll;
 }
@@ -34,23 +20,8 @@
     width: 90%;
 }
 
-#C02id_Div button {
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    margin-right: 3px;
-}
-
-#C02id_Div hr {
-    color: red;
-    background-color: red;
-    height: 2px;
-    border: none;
-    width: 100%;
-}
-
-#C02id_DivButton {
-    margin-left: 0%;
-    display: flex;
+#C02id_Div table tr{
+    padding-bottom: 1em;
 }
 
 .C02id_CreateRowDiv {
@@ -82,4 +53,8 @@
 .C02id_CreateRowButton h1 {
     display: flex;
     align-items: center;
+}
+
+#C02id_Header{
+    display:inline-block;
 }

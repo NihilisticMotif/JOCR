@@ -1,3 +1,986 @@
+,marginRight:'auto'
+ 
+marginRight:'auto'
+ 
+
+#C02id_Div h1 {
+}
+ 
+    margin-left: 5px;
+ 
+marginBottom:'-10px'
+ 
+style={{marginBottom:'-10px'}}
+ 
+,marginBottom:'10px'
+ 
+marginLeft:'auto'
+ 
+style={{marginLeft:'auto'}}
+ 
+.C02id_DeleteColumn{
+    margi
+}
+ 
+    table-layout: fixed;
+ 
+
+#C02id_RenameColumn {
+    background-color: #c794e3;
+}
+
+ 
+.C02id_DeleteColumn {
+    display: 'grid';
+}
+
+ 
+C02id_DeleteColumn
+ 
+    float: 'left';
+ 
+className='C02id_DeleteColumn'
+ 
+</h1>
+                <h1>
+ 
+
+.C02id_DeleteColumn button{
+    margin-left:auto
+}
+ 
+    margin-left: 0;
+ 
+.C02id_DeleteColumn0{
+    line-height:2px;
+}
+.C02id_DeleteColumn1 {
+    line-height: 2px;
+    margin-top:-20px;
+}
+.C02id_DeleteColumn2 {
+    line-height: 2px;
+}
+ 
+{Column.Name}?
+ 
+            <>
+ 
+
+            </>
+ 
+
+            <tr className='C02id_HeightLightRow C02id_DeleteColumn1'>
+                
+            </tr>
+ 
+<div className='C02id_0443'>
+                <button onClick={()=>f_Delete(Column)}>Ok</button>
+                <button onClick={()=>f_Open(Column,0)}>Cancel</button>
+                </div>
+ 
+
+            <tr className='C02id_HeightLightRow C02id_DeleteColumn1' ><td>
+            <div className='C02id_CreateRowDiv'>
+                <h1>to delete {Column.Name}?</h1>
+            </div>
+            </td></tr>
+ 
+#C02id_Div table tr.C02id_HeightLightRow {
+    background-color: rgb(100, 100, 200);
+}
+ 
+#C02id_Div table tr.C02id_HeightLightRow{
+    background-color: rgb(100, 100, 200);
+}
+ 
+#C02id_Div table tr:.C02id_HeightLightRow{}
+ 
+
+
+#C02id_Div table tr:.C02id_HeightLightRow{
+    
+}
+ 
+#C02id_Table tr:nth-child(even):not(.C02id_HeightLightRow) {
+    background-color: #f2f2f2;
+}
+ 
+
+#C02id_Table tr:nth-child(even):not(.C02id_HeightLightRow) {
+    background-color: #f2f2f2;
+}
+ 
+#C02id_Div table tr ,
+#C02id_Div table td{
+    width: 100%;
+}
+
+#C02id_Div table{
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: rgb(0, 0, 0);
+}
+ 
+    padding: 0px;
+ 
+#C02id_Div table tr:nth-child(even){
+    background-color: rgb(95, 160, 120);
+}
+
+#C02id_Div table tr:nth-child(odd) {
+    background-color: rgb(125, 213, 18);
+}
+ 
+.C02id_CreateColumnDiv input {
+    vertical-align: middle;
+    margin-bottom:5px;
+}
+ 
+
+.C02id_CreateColumnDiv button{
+}
+
+ 
+#C02id_Header{
+    border-top:1px solid #000000;
+    border-bottom: 2px solid chocolate;
+    height:var(--let_HeaderHeight);
+    background-color: chocolate;
+    display:grid;
+}
+
+ 
+/*
+//////////////////////////////////////////////////////////////////////////////////
+*/
+ 
+.C02id_0443 {
+    display: 'flex;';
+    float: 'left';
+    margin-left: 10px;
+}
+
+.C02id_3342 {
+    margin-left: 5px
+}
+
+#C02id_B2133 {
+    margin-left: 5px
+}
+
+.C02id_6677{
+    display: 'flex';
+    margin-right: 'auto';
+    margin-top:5px
+}
+ 
+</div>
+ 
+</table>
+ 
+<div >
+ 
+    margin-left: 3px;
+ 
+    margin-bottom: 5px;
+ 
+    border: 1px solid #ffffff;
+ 
+.C02id_DeleteColumn1 {
+    line-height: 2px;
+    margin-top:-20px;
+}
+ 
+
+#C02id_Div input{
+    margin-top:-10px;
+    margin-bottom:10px;
+}
+ 
+
+#C02id_Header input{
+    margin-top:50px;
+}
+ 
+    margin-left: 3px;
+ 
+    margin-left: 10px;
+ 
+    padding-top: 5px;
+    padding-bottom: 5px;
+ 
+#C02id_Div table tr{
+border: 1px solid #000000;
+padding: 1px;
+}
+ 
+</div>
+ 
+
+#C02id_Header input,
+#C02id_Header button{
+    display:inline-flex;
+}
+ 
+.C02id_CreateColumnDiv button{
+    margin-left: 3px;
+}
+ 
+    margin-left: 10px;
+    margin-top: -1px
+ 
+#C02id_DivHeader
+ 
+#C02id_DivHeader{
+    
+}
+ 
+className='C02is_Table'
+ 
+
+.C02is_Table input{
+    margin-top:-22px;
+}
+ 
+    margin-top:10px;
+ 
+.C01id_TR td{
+    height:0px;
+}
+ 
+ tr
+ 
+.C01id_SortButton tr{
+    height:80px;
+}
+ 
+    padding:-10px;
+ 
+<button onClick={()=>f_Open(Column,2)}>X</button>
+ 
+
+.C02id_Header{
+    height: 100px
+}
+ 
+.C02id_Header{
+    height: 00px
+}
+ 
+.C02id_Header{
+    height: 500px
+}
+ 
+width:300px;
+ 
+
+
+#C02id_Table {
+    margin-bottom: 10px;
+}
+ 
+#C02id_Div tbody{
+    width:300px;
+}
+ 
+#C02id_Table tr {
+    width:100%;
+    height: 60px;
+    background-color: #c794e3;
+}
+ 
+{JSX_C02}
+ 
+</tbody>
+ 
+<tbody>
+ 
+inline-
+ 
+    display: inline-block;
+ 
+        width: 100%;
+ 
+    width:100%;
+    height: 60px;
+ 
+#C02id_Div td{
+    width:100%
+}
+ 
+:not(:last-child)
+ 
+id='C02id_Table'
+ 
+    width:100%
+ 
+#C02id_Div tbody{
+    width:300px;
+}
+ 
+
+#C02id_Div hr {
+    color: red;
+    background-color: red;
+    height: 2px;
+    border: none;
+    width: 100%;
+}
+ 
+
+#C02id_Div tbody,
+#C02id_Table tr{
+    width:100%
+}
+ 
+#C02id_Div tbody,
+#C02id_Table tr 
+ 
+    overflow-x: scroll;
+ 
+#C02id_Table tr{
+    height: 60px;
+    background-color: #c794e3;
+}
+
+#C02id_Div button {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    margin-right: 3px;
+}
+ 
+
+#C02id_Table tr:first-child{
+    height:60px;
+    background-color: #c794e3;
+}
+ 
+
+#tbody{
+    width: 300px;
+    display:block
+}
+ 
+    
+ 
+    margin-bottom:auto;
+ 
+</tbody>
+ 
+
+#C02id_Table {
+}
+ 
+    margin-bottom: auto;
+ 
+:first-child 
+ 
+    border-spacing: 0;
+    border-collapse: collapse;
+ 
+    /* Removes the cell spacing via CSS */
+ 
+    cellSpacing="0"
+ 
+    margin-bottom:auto;
+ 
+    vertical-align: text-top;
+ 
+    position:relative;
+ 
+    display:inline-block;
+ 
+    margin:0px;
+    border:0px;
+    padding:0px;
+ 
+#C02id_DivButton {
+}
+ 
+height:'300px'
+ 
+auto
+ 
+#C02id_Div table {
+    height: 100%;
+    width: 100%;
+    /* Optional: Ensure the table takes the full width */
+}
+
+ 
+style={{maxHeight:'calc(100vh - 240px)'}}
+ 
+style={{display:'flex;',marginRight: 'auto',marginTop:'5px'}}
+ 
+    style= {
+                {
+                
+ 
+            }
+        }
+ 
+style={{marginTop:'15px'}}
+ 
+    position:absolute;
+    display:inline-block;
+ 
+    overflow-y: auto;
+ 
+scrol
+ 
+    position: relative;
+ 
+    display: grid;
+ 
+    position: fixed;
+ 
+position:fixed;
+ 
+    margin-bottom: 10px;
+ 
+    scroll-snap-type: none;
+ 
+,scroll
+ 
+style={{maxHeight:'calc(100vh - 240px)'}}
+ 
+    overflow-y: scroll;
+ 
+overflow-y: scroll;
+ 
+#C02id_Table{
+    margin-bottom:10px;
+}
+ 
+    position:fixed;
+ 
+    position:absolute;
+ 
+style={{maxHeight:'calc(100vh - 240px)'}}
+ 
+<div id='C02id_Table'>
+ 
+    margin-top:10px;
+    display: block;
+ 
+    margin-left: 0%;
+ 
+#C02id_B2133{
+    margin-left: 5px
+}
+ 
+.C02id_0443{
+    display: 'flex;';
+    float:'left';
+    margin-left:'10px';
+}
+.C02id_3342{
+    margin-left: '5px'
+}
+
+ 
+
+#C02id_DivButton {
+}
+ 
+    margin-top: 15px;
+ 
+#C02id_DivButton button{
+}
+
+ 
+ id='C02id_ColumnTable'
+ 
+    margin-top:5px;
+ 
+style={{lineHeight: css_LineHeight, marginTop: '-20px' 
+ 
+style={{lineHeight: css_LineHeight, marginTop: '-20px' }}
+ 
+style={{ lineHeight: css_LineHeight, marginTop: '-20px' }}
+ 
+style={{lineHeight: css_LineHeight}}
+ 
+ style={{display:'flex;',float:'left',marginLeft:'10px'}}
+ 
+ style={{
+    marginLeft:'3px'
+    }}
+ 
+style={{
+    marginTop:'-1px'
+    }}
+ 
+style={{marginLeft:'5px'}}
+ 
+ivButton
+ 
+
+#C02id_DivButton{
+    margin-top:15px;
+}
+ 
+    overflow-x: auto;
+ 
+
+#C02id_DivHeader td:last-child{
+    background-color: #000000;
+}
+ 
+        {Key:0,Name:'Name'},
+        {Key:1,Name:'Price'},
+        {Key:2,Name:'Amount'},
+        {Key:0,Name:'Name'},
+        {Key:1,Name:'Price'},
+        {Key:2,Name:'Amount'},
+        {Key:0,Name:'Name'},
+        {Key:1,Name:'Price'},
+        {Key:2,Name:'Amount'},
+        {Key:0,Name:'Name'},
+        {Key:1,Name:'Price'},
+        {Key:2,Name:'Amount'},
+        {Key:0,Name:'Name'},
+        {Key:1,Name:'Price'},
+        {Key:2,Name:'Amount'},
+        {Key:0,Name:'Name'},
+        {Key:1,Name:'Price'},
+        {Key:2,Name:'Amount'},
+        {Key:0,Name:'Name'},
+        {Key:1,Name:'Price'},
+        {Key:2,Name:'Amount'},
+        {Key:0,Name:'Name'},
+        {Key:1,Name:'Price'},
+        {Key:2,Name:'Amount'},
+ 
+    background-color: burlywood;
+ 
+    height:'20px'
+ 
+    height:'20px'
+ 
+</h1>
+ 
+border-bottom: 2px solid chocolate;
+ 
+-top
+ 
+    border-top: 1px solid #000000;
+ 
+<hr />
+ 
+    margin-top:0px;
+ 
+
+<hr/>
+ 
+<hr/>
+ 
+
+</div>
+ 
+<div >
+ 
+</div>
+ 
+style={}
+ 
+height:100px
+ 
+<hr />
+ 
+<hr/>
+ 
+<hr/>
+ 
+<hr />
+ 
+<hr/>
+ 
+<hr/>
+ 
+    //height:'70vh'
+ 
+Insertion
+ 
+let_C01_BodyHeight.style.height="calc(100vh - 50px -"+let_C01idTH.toString()+"px)"
+ 
+let let_C01idTH=(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
+            let let_C01_BodyHeight=(document.getElementById('C02id_Height') as HTMLElement)!
+ 
+            alert(let_C01idTH.toString())
+ 
+    let let_C01idTH:number=0
+ 
+        const let_CurrentTH = Ref_C01idTH.current;
+ 
+(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
+ 
+            //alert(let_C01Height)
+            //alert(window.innerHeight)
+ 
+            //if(let_C01Height>window.innerHeight){
+            //    alert(let_C01Height)
+            //}
+ 
+let_C01idTH=(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
+ 
+        alert(let_C01idTH)
+ 
+{
+            let_C01idTH = (document.getElementById('C01id_TH') as HTMLElement)!.offsetHeight;
+            let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
+            if(let_C01Width<175){
+                setSS_C02(false)
+            }
+        }
+ 
+        const updateSizes = () => {
+            let_C01idTH = (document.getElementById('C01id_TH') as HTMLElement)!.offsetHeight;
+            let let_C01Width = (document.getElementById('C01id_H') as HTMLElement)!.offsetWidth;
+
+            if (let_C01Width < 175) {
+                setSS_C02(false);
+            }
+        };
+ 
+            //alert(let_C01Height)
+            //alert(window.innerHeight)
+ 
+            //if(let_C01Height>window.innerHeight){
+            //    alert(let_C01Height)
+            //}
+ 
++
+ 
+Resize
+ 
+,toString
+ 
++'
+ 
+        {Key:20, Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:21, Array:['Weezer'               ,'Bbb','001']},
+        {Key:22, Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:23, Array:['Que, The Human Editor','Ddd','010']},
+        {Key:24, Array:['Human Centipede'      ,'Eee','011']},
+ 
+56
+    7
+ 
+    height:'70vh'
+ 
+<div id='BodyLeft' style={{width:let_Width}}>
+{JSX_C02}
+<C01_Table 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+</div>
+ 
+#C02id_Div {
+    background-color: cadetblue;
+}
+
+ 
+height: calc(100vh - 40px);
+ 
+    //height:'calc(100vh-52px-'+{let_C01idTH}+'px)'
+    height:'70vh'
+ 
+    
+ 
+=(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
+ 
+.toString()
+ 
+    height:80vh;
+ 
+let let_C01idTH=(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
+ 
+        alert(window.innerHeight)
+ 
+alert(let_CurrentC01)
+ 
+alert(let_CurrentC01)
+ 
+    display:flex;
+ 
+    display: flex;
+ 
+    display: inline-flex;
+ 
+    display:grid;
+ 
+    width:  50%;
+ 
+    display: flex;
+ 
+    width: 50%;
+ 
+<div id='BodyLeft' style={{width:let_Width}}>
+{JSX_C02}
+<C01_Table 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+</div>
+ 
+    display:flex;
+ 
+
+<C04_Header
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+ 
+<div id='HeaderRight'>
+ 
+</div>
+ 
+<div id='HeaderRight'>
+<C04_Header
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+</div>
+ 
+<C04_Header
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+ 
+    display: flex;
+ 
+    width: 50%;
+ 
+    margin-right:auto;
+ 
+<div id='BodyLeft' style={{width:let_Width}}>
+{JSX_C02}
+<C01_Table 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+</div>
+ 
+<div id='BodyLeft' style={{width:let_Width}}>
+{JSX_C02}
+<C01_Table 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+</div>
+ 
+    height: 100vh;
+ 
+    height:100%
+ 
+    margin-left: 5px;
+    margin-top:     5px;
+    margin-bottom:  5px;
+ 
+height:100%;
+ 
+    margin-top:     5px;
+    margin-bottom:  5px;
+ 
+    height: 30px;
+ 
+.C03id_Header button{
+
+}
+ 
+    height:25px;
+ 
+    margin
+ 
+    margin-top:10px;
+
+ 
+    margin-bottom: 10px;
+ 
+.C03id_Header {
+    font-size: 16px;
+    margin-left: 5px;
+    height:40px;
+}
+ 
+
+{
+// Body Right = Image Processing and Tesseract Setting
+}
+ 
+{
+// Header = Import/Export Files
+}
+ 
+</div>
+ 
+    background-color: rgb(130, 45, 45);
+ 
+SS_Row={SS_Row}
+ 
+    SS_Row,
+ 
+    SS_Row:TS_Row[],
+ 
+    SS_Row,
+    SS_C02,
+ 
+    SS_Row:TS_Row[],
+    SS_C02:boolean,
+ 
+#Header{
+    
+}
+ 
+import C_TopButton from './Coms/C_TopButton'
+ 
+<hr />
+
+<C_TopButton
+// Export Data
+// Rename Table
+    SS_Row    = {SS_Row}
+    SS_C02    = {SS_C02}
+    setSS_C02 = {setSS_C02}
+/>
+<hr />
+ 
+../
+ 
+{
+// Body Left = CSV Table
+}
+ 
+</>
+ 
+    box-sizing: border-box;
+ 
+{JSX_C02}
+<C01_Table 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+ 
+
+//****************************************************************************
+// JSX: C01_Table
+//****************************************************************************
+    let JSX_C01=<></>
+ 
+    const Ref_Div = useRef<HTMLDivElement | null>(null);
+ 
+let let_C01=(document.getElementById('C01id_H')as HTMLAreaElement)!
+        if(let_C01.offsetWidth<175){
+            setSS_C02(false)
+        }
+ 
+        else{
+            setSS_C02
+        }
+ 
+        // function f_Resize() {
+        //     setSS_Width(let_C01.offsetWidth)}
+        // let_C01.addEventListener("resize", f_Resize);
+        // f_Resize();
+        // return () => let_C01.removeEventListener("resize", f_Resize);
+ 
+    // https://stackoverflow.com/questions/71457792/resize-event-in-react
+    const [SS_Width, setSS_Width] = useState(0);
+ 
+            //let_C01.style.display='none'
+ 
+            //let_C01.style.display='block'
+ 
+ onResize={f_Resize}
+ 
+ // Empty array ensures that effect is only run on mount
+ 
+        // Remove event listener on cleanup
+ 
+        // Call handler right away so state gets updated with initial window size
+ 
+        // Add event listener
+ 
+        // Handler to call on window resize
+ 
+            // Set window width/height to state
+ 
+        
+ 
+{
+            width: 
+ 
+,
+          }
+ 
+            height: window.innerHeight,
+ 
+    return windowSize;}
+ 
+        
+ 
+    useEffect(() => {
+        let let_C01H = (document.getElementById('C01id_H') as HTMLInputElement);
+        let let_WidthC01=let_C01H!.clientWidth
+        if(let_WidthC01<175){
+            let_C01H.style.display = 'none';
+        }
+        else{
+            let_C01H.style.display = 'block';
+        }
+    }, []);
+ 
+(document.getElementById('C01id_H') as HTMLInputElement)!.clientWidth
+ 
+alert(
+ 
+    if()
+ 
+    const JSX_Input=ss_Columns.map((Column)=>{
+        return (
+            <td>{Column.Name}</td>
+        )
+    })
+ 
+    height:74vh;
+ 
+    position:absolute;
+ 
+8px
+ 
     height:70vh;
  
     height:70vh;

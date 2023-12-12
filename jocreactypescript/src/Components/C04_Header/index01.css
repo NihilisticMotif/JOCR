@@ -1,0 +1,11 @@
+:root{
+    --let_MarginTop:5px;
+}
+
+.C04id_Header {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-top:     var(--let_MarginTop);
+    margin-bottom:  var(--let_MarginTop);
+    height: 30px;
+}

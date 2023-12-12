@@ -1,8 +1,21 @@
 #Body{
     display:flex;
-    height:100vh
+    height:100%
 }
+
 #BodyLeft{
     display: flex;
-    box-sizing: border-box;
+    background-color: blueviolet;
+}
+
+#Header{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    height:40px;
+    background-color: black;
+    width:100%;
+}
+
+#Ego{
+    display:block;
 }

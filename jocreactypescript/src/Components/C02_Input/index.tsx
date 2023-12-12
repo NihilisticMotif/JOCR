@@ -19,6 +19,10 @@ import {U01_DeleteColumn} from  '../T01_Row/U01_DeleteColumn'
 // CSS
 import './index00.css'  // General
 import './index01.css'  // Specific
+import './index02_Header.css'
+import './index03_Table.css'
+import './index04_Minor.css'
+import './index05_Hightlight.css'
 
 const C02_Input = (
 //****************************************************************************
@@ -44,7 +48,7 @@ const C02_Input = (
     setSS_EditColumn:(S:0|1)=>void
 }
 ) => {
-    const css_LineHeight=2
+    const C02_MarginLeft='10px'
 
     // useEffect(()=>{
     //     
@@ -74,7 +78,7 @@ const C02_Input = (
 // FUNCTION_01: Create Column
 //****************************************************************************
     function f_CreateColumn():void{
-        let let_NewColumn:string=(document.getElementById('C02id_CreateColumn')  as HTMLInputElement).value.toString();
+        let let_NewColumn:string=(document.getElementById('C02id_CreateColumnInput')  as HTMLInputElement).value.toString();
         let ss_Columns=[...SS_Columns]
         let let_UpdateColumns=C02_Create(ss_Columns,let_NewColumn)
         if(ss_Columns!==let_UpdateColumns){
@@ -137,11 +141,11 @@ const C02_Input = (
         if(Column.Display===1 && SS_EditColumn===1){
             return(
             <tr className='C02id_HeightLightRow'><td>
-            <div className='C02id_CreateRowDiv'>
+            <div className='C02id_CreateRowDiv' style={{marginLeft:C02_MarginLeft}}>
                 <h1>{Column.Name} to</h1>
             </div>
-            <input id={'C02id_RenameColumn'+Column.Key}  ></input>
-            <div style={{display:'flex;',marginRight: 'auto',marginTop:'5px'}}>
+            <input id={'C02id_RenameColumn'+Column.Key} className='C02id_RowInput' style={{marginLeft:C02_MarginLeft}} ></input>
+            <div className='C02id_DeleteColumn' style={{marginLeft:C02_MarginLeft,marginRight:'auto',marginBottom:'10px'}}>
                 <button onClick={()=>f_Rename(Column)}>Ok</button>
                 <button onClick={()=>f_Open(Column,0)}>Cancel</button>
             </div>
@@ -151,27 +155,17 @@ const C02_Input = (
         // Delete Column
         else if(Column.Display===2 && SS_EditColumn===1){
             return(
-            <>
-            <tr className='C02id_HeightLightRow' style={{lineHeight: css_LineHeight}}><td>
+            <tr className='C02id_HeightLightRow' ><td>
 
-            <div className='C02id_CreateRowDiv'>
-                <h1>Do you sure you want</h1>
+            <div className='C02id_CreateRowDiv' style={{marginLeft:C02_MarginLeft,marginBottom:'-10px'}}>
+                <h1>Do you sure you want to delete {Column.Name}?</h1>
             </div>
-            </td></tr>
-
-            <tr className='C02id_HeightLightRow' style={{ lineHeight: css_LineHeight, marginTop: '-20px' }}><td>
-            <div className='C02id_CreateRowDiv'>
-                <h1>to delete {Column.Name}?</h1>
-            </div>
-            </td></tr>
-
-            <tr className='C02id_HeightLightRow' style={{lineHeight: css_LineHeight, marginTop: '-20px' }}>
-                <div style={{display:'flex;',float:'left',marginLeft:'10px'}}>
-                <button onClick={()=>f_Delete(Column)}>Ok</button>
+            <div className='C02id_DeleteColumn' style={{marginLeft:C02_MarginLeft,marginRight:'auto',marginBottom:'10px'}}>
+                <button onClick={()=>f_Delete(Column)} >Ok</button>
                 <button onClick={()=>f_Open(Column,0)}>Cancel</button>
                 </div>
-            </tr>
-            </>
+            </td></tr>
+
             )
         }
         // Default State
@@ -179,42 +173,45 @@ const C02_Input = (
         {return(
             <tr><td>
             <div className='C02id_CreateRowButton'>
-                <button onClick={()=>f_Open(Column,2)}>X</button>
-                <button onClick={()=>f_Open(Column,1)}>...</button>
+                <button className='C02id_DeleteColumn' onClick={()=>f_Open(Column,2)}>X</button>
+                <button onClick={()=>f_Open(Column,1)} className='C02id_3342'>...</button>
                 <h1>{Column.Name}</h1>
             </div>
-            <input id={'C02id_Input'+Column.Name}  ></input>
+            <input id={'C02id_Input'+Column.Name} className='C02id_RowInput' ></input>
 
             </td></tr>
         )}
     })
+
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
 return(
 <div id='C02id_Div'>
-<hr/>
+<div id='C02id_Header'>
 <h1 id='C02id_DivHeader'>Create New Column</h1>
 <div className='C02id_CreateColumnDiv'>
-<input id='C02id_CreateColumn'></input>
-<button onClick={f_CreateColumn}>Add New Column</button>
+<div style={{display:'inline-flex'}}>
+<input id='C02id_CreateColumnInput' style={{height:'20px',marginLeft:'15px'}}>
+</input>
+<button onClick={f_CreateColumn} style={{marginTop:'-10px',marginLeft:'5px'}}>
+Add New Column</button>
+</div>
 </div>
 
-<hr/>
-<div >
+</div>
 <h1 id='C02id_DivHeader' >Create New Row</h1>
-<table>
+<table style={{height:'calc(100vh - 255px)'}}>
 {JSX_Input}
 </table>
 
-</div>
 <tr><td>
 <div id='C02id_DivButton'>
 <button onClick={f_CreateRow}>Ok</button>
-<button onClick={f_ResetInput}>Reset Input</button>
+<button onClick={f_ResetInput}id='C02id_B2133' >Reset Input</button>
 </div>
 </td></tr>
-<hr />
+
 </div>
     )
 }

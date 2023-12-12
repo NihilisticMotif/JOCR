@@ -1,7 +1,6 @@
 // React
-import { useState , useEffect, useRef } from 'react';
+import { useState , useEffect, useRef, useInsertionEffect } from 'react';
 // Components
-import C_TopButton from './Coms/C_TopButton'
 import C_ColumnButton from './Coms/C_ColumnButton';
 import C_Row from './Coms/C_Row'
 // Type
@@ -45,9 +44,39 @@ SS_C02:boolean,
 setSS_C02:(S:boolean)=>void
 }
 ) => {
+//****************************************************************************
+// Function 00: Automately close C02 when the width is too narrow.
+//****************************************************************************
+    // By ChatGPT
+    const Ref_C01 = useRef<HTMLDivElement | null>(null);
+    const Ref_C01idTH = useRef<HTMLDivElement | null>(null);
+    //(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
     useEffect(() => {
-        
-    }, []);
+        const let_CurrentC01 = Ref_C01.current;
+        if (let_CurrentC01) {
+        const let_ResizeObs = new ResizeObserver(() => {
+            let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
+            if(let_C01Width<175){
+                //setSS_C02(false)
+            }
+        });
+        let_ResizeObs.observe(let_CurrentC01);
+        return () => {
+            let_ResizeObs.disconnect();
+        };
+    }
+
+    }, []); // The empty dependency array ensures that the effect runs only once, similar to componentDidMount
+    /*
+    useEffect(()=>{
+        const let_CurrentC01 = Ref_C01.current;
+        if (let_CurrentC01) {
+            let let_C01_TH=(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
+            let let_C01_BodyHeight=(document.getElementById('C02id_Height') as HTMLElement)!
+            let_C01_BodyHeight.style.height="calc(100vh - 50px -"+let_C01_TH.toString()+"px)"
+        }
+    },[]);
+    */
 
 //****************************************************************************
 // JSX_00: Filter SS_Column.Name by IsVisible=true
@@ -70,32 +99,16 @@ setSS_C02:(S:boolean)=>void
             <th>{Column.Name}</th>
         )
     })
-    const JSX_Input=ss_Columns.map((Column)=>{
-        return (
-            <td>{Column.Name}</td>
-        )
-    })
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
     return (
 
-<div id='C01id_H'>
-<hr />
-
-<C_TopButton
-// Export Data
-// Rename Table
-    SS_Row    = {SS_Row}
-    SS_C02    = {SS_C02}
-    setSS_C02 = {setSS_C02}
-/>
-<hr />
-
+<div id='C01id_H' ref={Ref_C01}>
 <div id='C01id_DivTable'>
 <div id='C01id_InnerTable'>
 <table id='C01id_Table'>
-<thead>
+<thead id='C01id_TH'>
 <tr>
     <th className='C01id_Left'>Index </th>
     {JSX_ColumnsName}
@@ -117,7 +130,9 @@ SS_EditColumn={SS_EditColumn}
 setSS_EditColumn={setSS_EditColumn}
 />
 </thead>
-<tbody id='C02id_Height' style={{}}>
+<tbody id='C02id_Height' style={{
+    height:`calc(100vh - ${55}px - ${105}px)`
+    }}>
 {
 // Data
 JSX_TH_Rows}
