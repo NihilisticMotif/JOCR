@@ -10,6 +10,9 @@ export function U01_UpdateDisplay(
         if(ROWS[i].Key===THISROW.Key){
             THISROW.Display=STATE
         }
+        else if(ROWS[i].Display==4){
+            continue
+        }
         else{
             ROWS[i].Display=0
         }

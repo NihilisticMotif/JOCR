@@ -24,20 +24,8 @@ thead {
     height: 500px;
 }
 
-#C01id_Table {
-    /*
-    https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
-    */
-    height: 25px;
-    max-height: 20px;
-}
-
 #C01id_Table th {
     height: 30px;
-}
-
-#C01id_Table td {
-    height: 0px;
 }
 
 #C01id_Table td,
@@ -92,6 +80,7 @@ thead {
 /************************************************************************************************
 // C_ColumnButton.tsx
 ************************************************************************************************/
+
 .C01id_SortButton {
     margin: 0px;
     padding: 0px;

@@ -1,3 +1,396 @@
+ style={{whiteSpace: 'nowrap'}}
+ 
+ style={{whiteSpace: 'nowrap'}}
+ 
+ overflow: 'hidden', 
+ 
+ overflow: 'hidden', 
+ 
+, width: '100px' 
+ 
+width: '100px' 
+ 
+    height: 40px;
+ 
+    height: 30px;
+ 
+
+#C01id_Table {
+    /*
+    https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
+    */
+
+}
+ 
+    height: 25px;
+    max-height: 20px;
+ 
+
+#C01id_Table td {
+}
+
+ 
+    height: 0px;
+ 
+
+#C01id_Table th:not(#C01id_Table th:first-child, #C01id_Table th:last-child) {
+    white-space: normal;
+    justify-content: flex-start;
+}
+
+#C01id_Table td:not(#C01id_Table td:first-child, #C01id_Table td:last-child) {
+    white-space: normal;
+    justify-content: flex-start;
+}
+ 
+pace-around
+ 
+#C01id_Table th:not(#C01id_Table th:first-child, #C01id_Table th:last-child) {
+    white-space: nowrap;
+    justify-content: space-around;
+}
+
+#C01id_Table td:not(#C01id_Table td:first-child, #C01id_Table td:last-child) {
+    white-space: nowrap;
+    justify-content: space-around;
+}
+ 
+    white-space: nowrap;
+    justify-content: space-around;
+ 
+    white-space: nowrap;
+    justify-content: space-around;
+ 
+import TS_Column from '../T02_Column/An_Index';
+ 
+            <button className='C03id_Header' onClick={()=>setSS_Open(false)}>X</button>
+ 
+ File Name
+ 
+//****************************************************************************
+// JSX_00: Open C02
+//****************************************************************************
+    let JSX_Button=<></>
+    if(SS_C02===false){
+        JSX_Button=<td><button className='C03id_Header' onClick={f_Open}>Open Input Tab</button></td>
+    }
+    else{
+        JSX_Button=<td><button className='C03id_Header' onClick={f_Close}>Close Input Tab</button></td>
+    }
+ 
+    function f_FileName(){
+        let let_Word=(document.getElementById('C03id_FileName') as HTMLInputElement).value.toString()
+        setSS_FileName(let_Word)
+    }
+ 
+    function f_Click(){
+        
+    }
+
+ 
+onChange={f_FileName}
+ 
+        alert('Change')
+ 
+            */
+            }
+ 
+{
+            /*
+ 
+{(document.getElementById('C03id_FileName')as HTMLInputElement).value.toString()}
+ 
+            {/*
+ 
+*/
+            }
+ 
+ , CSVDownload
+ 
+<CSVLink data={SS_Row} filename={"my-data.csv"}>
+        Download CSV
+</CSVLink>
+ 
+{/*
+    <CSVLink data={SS_Row} filename={"my-data.csv"}>
+        Download CSV
+</CSVLink>
+*/}
+ 
+,marginTop:'-10px'
+ 
+<td><button className='C03id_Header'>Export Data</button></td>
+ 
+onClick={f_Open}
+ 
+SS_Row={SS_Row}
+ 
+<CSVLink data={SS_Row} filename={"my-data.csv"}>
+        Download CSV
+      </CSVLink>
+ 
+import { CSVLink } from "react-csv";
+ 
+import { CSVLink } from "react-csv";
+ 
+<CSVLink data={SS_Row} filename={"my-data.csv"}>
+        Download CSV
+      </CSVLink>
+ 
+={SS_Row}
+ 
+SS_C02,
+setSS_C02
+ 
+        {Key:6 ,Next:7  , Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:7 ,Next:8  , Array:['Weezer'               ,'Bbb','001']},
+        {Key:8 ,Next:9  , Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:9 ,Next:10 , Array:['Que, The Human Editor','Ddd','010']},
+        {Key:10,Next:11 , Array:['Human Centipede'      ,'Eee','011']},
+        {Key:11,Next:12 , Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:12,Next:13 , Array:['Weezer'               ,'Bbb','001']},
+        {Key:13,Next:14 , Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:14,Next:15 , Array:['Que, The Human Editor','Ddd','010']},
+        {Key:15,Next:16 , Array:['Human Centipede'      ,'Eee','011']},
+        {Key:16,Next:17 , Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:17,Next:18 , Array:['Weezer'               ,'Bbb','001']},
+        {Key:18,Next:19 , Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:19,Next:20 , Array:['Que, The Human Editor','Ddd','010']},
+        {Key:20,Next:21 , Array:['Human Centipede'      ,'Eee','011']},
+        {Key:21,Next:22 , Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:22,Next:23 , Array:['Weezer'               ,'Bbb','001']},
+        {Key:23,Next:24 , Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:24,Next:25 , Array:['Que, The Human Editor','Ddd','010']},
+        {Key:25,Next:26 , Array:['Human Centipede'      ,'Eee','011']},
+        {Key:26,Next:27 , Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:27,Next:28 , Array:['Weezer'               ,'Bbb','001']},
+        {Key:28,Next:29 , Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:29,Next:30 , Array:['Que, The Human Editor','Ddd','010']},
+        {Key:30,Next:30 , Array:['Human Centipede'      ,'Eee','011']},
+ 
+    const [SS_Num,setSS_Num]=useState<number>(SS_Row.length)
+ 
+            SS_Num={SS_Num}
+            setSS_Num={setSS_Num}
+ 
+SS_Num={SS_Num}
+setSS_Num={setSS_Num}
+ 
+const [SS_Num,setSS_Num]=useState<number>()
+ 
+    // Generate New Key
+    let let_NewKey:number = Math.random()
+    while(ROWS.map(ROW=>ROW.Key).includes(let_NewKey)===true){
+        let_NewKey = Math.random()
+    }
+ 
+let_NewROW
+ 
+let_NewROW
+ 
+        // for(let i=0;i<ss_Rows.length;i++){
+        //     if(i<ss_Rows.length-1 && i>0){
+        //     for(let j=0;j<ss_Rows.length-1;j++){
+        //         if(ss_Rows[i].Next==ss_Rows[j+1].Key && j<ss_Rows.length-1){
+        //             let_UpdateRows.push(ss_Rows[j+1])
+        //             break
+        //         }
+        //     }}
+        // }
+ 
+        alert(JSON.stringify(let_UpdateRows[0]))
+ 
+[-1].Next
+ 
+                //if(let_UpdateRows[-1].Next==let_Push[i].Key){
+                //    alert(JSON.stringify(let_UpdateRows[-1]))
+                //    alert(JSON.stringify(let_Push[i]))
+                //    //let_UpdateRows.push(let_Push[i])
+                //    //let_Push.splice(i,1)
+                //    //break
+                //}
+ 
+                //if(let_UpdateRows[-1].Next==let_Push[i].Key){
+                //    alert(JSON.stringify(let_UpdateRows[-1]))
+                //    alert(JSON.stringify(let_Push[i]))
+                //    //let_UpdateRows.push(let_Push[i])
+                //    //let_Push.splice(i,1)
+                //    //break
+                //}
+ 
+            alert(JSON.stringify(let_UpdateRows[-1]))
+ 
+{
+                    
+                }
+ 
+            if(ss_Rows.length==1){
+                let_UpdateRows.push(ss_Rows[0])
+                break
+            }
+ 
+            if(j==ss_Rows.length-1){
+            }
+            }
+ 
+                for(let i=0;i<let_Push.length;i++){
+                if(let_UpdateRows[-1].Next==let_Push[i].Key){
+                    let_UpdateRows.push(let_Push[i])
+                    //let_Push.splice(i,1)
+                    //break
+                }
+ 
+                for(let i=0;i<let_Push.length;i++){
+ 
+            }
+ 
+                if(let_UpdateRows[-1].Next==let_Push[i].Key){
+ 
+                    //let_Push.splice(i,1)
+                    //break
+                }
+                break
+ 
+            if(j==)
+ 
+'Xedni Wor'            ,'Aaa','000'
+ 
+.splice(0,1)
+ 
+        //alert(JSON.stringify(let_UpdateRows))
+ 
+        let iii=0
+ 
+                    ss_Rows.splice(j+1,1)
+ 
+                    //let_UpdateRows.push(ss_Rows[j+1])
+ 
+                    //let_UpdateRows.push(ss_Rows[j+1])
+                    //ss_Rows.splice(j+1,1)
+ 
+.Next
+ 
+                    //ss_Rows.splice(j,1)
+                    //break
+ 
+                    //ss_Rows.splice(j,1)
+                    //break
+ 
+            let ii=i+1
+ 
+ss_Rows[i].Next
+ 
+9
+ 
+        Ls=Memory(Ls)
+ 
+Ls=Memory(Ls)
+ 
+    
+
+    def Memory(ls):
+        if(len(ls)<2):
+            return [ls[0],[]]
+        Lss=ls[:-1]
+        Mid=ls[-1]
+        Less=[]
+        More=[]
+        for i in Lss:
+            if(i<Mid):
+                Less.append(i)
+            elif(i>Mid):
+                More.append(i)
+        return [Less,More,Mid]
+    
+ 
+,Ls[0]
+ 
+,Ls[0]
+ 
+,[]
+ 
+,[]
+ 
+[0]
+ 
+Less=Memory(Ls)
+        More=Memory(Ls)
+ 
+'''
+ 
+'''
+ 
+    def Sort(ls):
+ 
+    Loop=True
+
+ 
+        // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
+        // https://www.w3schools.com/jsref/jsref_sort.asp
+        // https://stackoverflow.com/questions/39583327/javascript-sort-array-of-arrays-by-second-element-in-each-inner-array
+ 
+            setSS_Row(ss_Rows.reverse())
+ 
+            setSS_Row(ss_Rows)
+ 
+ss_Rows.sort((a,b) => a.Array[index].toUpperCase().localeCompare(b.Array[index].toUpperCase()));
+ 
+[1,2],[2,3],XXXXX
+ 
+            else if(i===ROWS.length-1){
+// [0,1],[1,2],[2,3],[3,3]
+// [0,1],XXXXX,[2,3],[3,3]
+// [0,2],XXXXX,[2,3],[3,3]
+
+// [0,1],[1,2],[2,3],[3,3]
+// XXXXX,[1,2],[2,3],[3,3]
+
+// [0,1],[1,2],[2,3],[3,3]
+// [0,1],
+ 
+i>0 && 
+ 
+        RowIndex: ROWS.length,
+ 
+    
+    const [SS_LastRow,setLastRow]
+ 
+    // We might check the length of the element inside array later.
+
+    /*
+    // Check duplicate Column Name
+    if(NEWROW.toString().length>0 
+            && NEWROW.toString().length<30 
+            && ROWS.map(ROW=>ROW.Name).includes(NEWROW.Name)===false){
+            // https://stackoverflow.com/questions/43846531/check-if-dictionary-object-in-array-contains-certain-value-in-javascript
+
+            // Generate New Key
+            let let_NewKey:number = Math.random()
+            while(ROWS.map(ROW=>ROW.Key).includes(let_NewKey)===true){
+                let_NewKey = Math.random()
+            }
+            
+            // Add New Column in List of All Columns
+            // https://stackoverflow.com/questions/31048953/what-are-these-three-dots-in-react-doing
+            const let_NewROW:TS_Row={
+                Key: let_NewKey,    
+                Name: NEWROW.Name,
+                }
+            return [let_NewROW,...ROWS]
+        }
+        return ROWS
+    */
+ 
+ by index
+ 
+ C01id_SortButton
+ 
+onClick={()=>f_Open(Column,1)}
+ 
+ontSize
+ 
+style={{whiteSpace: 'normal'}}
+ 
 ,marginRight:'auto'
  
 marginRight:'auto'

@@ -119,6 +119,7 @@ const C_Row = (
             <td>{Row}</td>
         )
     })
+
     let ss_UpdateRow=[...SS_UpdateRow]
     const JSX_EditRow=ss_UpdateRow.map((Row)=>{
         return(
@@ -129,7 +130,7 @@ const C_Row = (
     const JSX_EditRowInput=let_ThisRow.map((Row,index)=>{
         return(
             <td><div className='C01id_EditRowButton'>
-                <input id={'C01id_Edit'+Row} style={{width:'140px'}}></input>
+                <input id={'C01id_Edit'+Row} style={{width:'137px'}}></input>
                 <button onClick={()=>f_SmallUpdate(Row,index)} style={{width:'40px'}}>Ok</button>
                 <button onClick={()=>f_ResetUpdate(index)} style={{width:'55px'}}>Reset</button>
             </div></td>
@@ -142,7 +143,7 @@ const C_Row = (
     // Default Column JSX
     let JSX_Row:JSX.Element=<h1></h1>
     // Default Column JSX
-    if (THISROW.Display===0 || typeof THISROW.Display==='undefined'){
+    if (THISROW.Display===0||typeof THISROW.Display==='undefined'){
     JSX_Row=
 <tr>
     <td className='C01id_Left'>{INDEX}</td>
@@ -185,8 +186,11 @@ const C_Row = (
     <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
 </tr>
 </>
-    // Unselect Column JSX
+    // Starting Linked List
+    }else if (THISROW.Display===4){
+        JSX_Row=<></>
     }
+
 
 //****************************************************************************
 // OUTPUT

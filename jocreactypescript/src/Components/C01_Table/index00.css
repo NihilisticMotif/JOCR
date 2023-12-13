@@ -31,16 +31,6 @@
     height: 100%;
 }
 
-#C01id_Table th:not(#C01id_Table th:first-child, #C01id_Table th:last-child) {
-    white-space: nowrap;
-    justify-content: space-around;
-}
-
-#C01id_Table td:not(#C01id_Table td:first-child, #C01id_Table td:last-child) {
-    white-space: nowrap;
-    justify-content: space-around;
-}
-
 thead,
 tbody {
     display: block;

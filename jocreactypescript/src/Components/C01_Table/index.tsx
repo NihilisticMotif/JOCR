@@ -28,8 +28,6 @@ SS_Columns,
 setSS_Columns,
 SS_EditColumn,
 setSS_EditColumn,
-SS_C02,
-setSS_C02
 }:{
 // TYPE
 // PERPERTY

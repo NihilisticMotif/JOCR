@@ -13,6 +13,7 @@ export function U01_EditRow(
             if(ROWS[i].Key===THISROW.Key){
                 ROWS.splice(i, 1,{
                 Key: THISROW.Key,
+                Next: THISROW.Next,
                 Array: NEWARRAY, 
                 Display:0
             });

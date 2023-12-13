@@ -98,6 +98,37 @@ const C_ColumnButton = (
     }
 
 //****************************************************************************
+// FUNCTION_05: Sort By Index
+//****************************************************************************
+    function f_IndexSort(){
+        let ss_Rows=[...SS_Row]
+        let let_Push=[...SS_Row]
+        let let_UpdateRows:TS_Row[]=[{Key:0,Next:1,Array:['HelloWorld'],Display:4}]
+        let let_i=0
+        for(let j=0;j<ss_Rows.length;j++){
+            for(let i=0;i<let_Push.length;i++){
+                if(let_Push[i].Display==4){
+                    continue
+                }
+                if(let_Push[i].Key==let_UpdateRows[let_i].Next){
+                    let_UpdateRows.push(let_Push[i])
+                    let_i+=1
+                    let_Push.splice(i,1)
+                    break
+                }
+            }
+        }
+        if(SS_IsD){
+            setSS_IsD(false)
+            setSS_Row(let_UpdateRows)
+        }
+        else{
+            // reverse
+            setSS_IsD(true)
+            setSS_Row(let_UpdateRows.reverse())
+        }
+    }
+//****************************************************************************
 // JSX_00: Column Button
 //****************************************************************************
     const ss_Columns=[...SS_Columns]
@@ -106,9 +137,9 @@ const C_ColumnButton = (
         return (
             <td>
                 <div className='C01id_SortButton'>
-                    <input id={'C01id_RenameColumn'+Column.Key}></input>
-                    <button onClick={()=>f_Rename(Column)}>Ok</button>
-                    <button onClick={()=>f_Open(Column,0)}>Cancel</button>
+                    <input style={{width:'100%'}} id={'C01id_RenameColumn'+Column.Key}></input>
+                    <button style={{width:'45px'}} onClick={()=>f_Rename(Column)}>Ok</button>
+                    <button style={{width:'90px'}} onClick={()=>f_Open(Column,0)}>Cancel</button>
                 </div>
             </td>
         )}
@@ -116,10 +147,10 @@ const C_ColumnButton = (
         return (
             <td>
                 <div className='C01id_SortButton'>
-                    <div style={{whiteSpace: 'normal'}}>
+                    <div style={{whiteSpace: 'normal',fontSize:'14px'}}>
                         Do you want to delete this column?
                     </div>
-                    <button style={{width:'90px'}} onClick={()=>f_Delete(Column)}>Ok</button>
+                    <button style={{width:'45px'}} onClick={()=>f_Delete(Column)}>Ok</button>
                     <button style={{width:'90px'}} onClick={()=>f_Open(Column,0)}>Cancel</button>
                 </div>
             </td>
@@ -141,7 +172,7 @@ const C_ColumnButton = (
 //****************************************************************************
 return(
 <tr className='C01id_TR'>
-    <td><div className='C01id_Left'></div></td>
+    <td><div className='C01id_Left'><button onClick={f_IndexSort}>Sort</button></div></td>
     {JSX_ColumnsButton}
     {//<td><div className='C01id_SortRight'><div className='C01id_EditRowButton'><input></input><button>Add Column</button></div></div></td>
     }

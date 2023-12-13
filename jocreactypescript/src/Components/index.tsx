@@ -19,7 +19,6 @@ const Components=()=>{
 //****************************************************************************
     const [SS_EditColumn,setSS_EditColumn]=useState<0|1>(0)
     const [SS_C02,setSS_C02]=useState<boolean>(true)
-
 //****************************************************************************
 // DEFAULT INPUT
 //****************************************************************************
@@ -31,36 +30,12 @@ const Components=()=>{
         ])
     
     const [SS_Row,setSS_Row]=useState<TS_Row[]>([
-        {Key:0, Array:['Xedni Wor'            ,'Aaa','000']},
-        {Key:1, Array:['Weezer'               ,'Bbb','001']},
-        {Key:2, Array:['Tally Hall'           ,'Ccc','002']},
-        {Key:3, Array:['Que, The Human Editor','Ddd','010']},
-        {Key:4, Array:['Human Centipede'      ,'Eee','011']},
-        {Key:5, Array:['Xedni Wor'            ,'Aaa','000']},
-        {Key:6, Array:['Weezer'               ,'Bbb','001']},
-        {Key:7, Array:['Tally Hall'           ,'Ccc','002']},
-        {Key:8, Array:['Que, The Human Editor','Ddd','010']},
-        {Key:9, Array:['Human Centipede'      ,'Eee','011']},
-        {Key:10, Array:['Xedni Wor'            ,'Aaa','000']},
-        {Key:11, Array:['Weezer'               ,'Bbb','001']},
-        {Key:12, Array:['Tally Hall'           ,'Ccc','002']},
-        {Key:13, Array:['Que, The Human Editor','Ddd','010']},
-        {Key:14, Array:['Human Centipede'      ,'Eee','011']},
-        {Key:15, Array:['Xedni Wor'            ,'Aaa','000']},
-        {Key:16, Array:['Weezer'               ,'Bbb','001']},
-        {Key:17, Array:['Tally Hall'           ,'Ccc','002']},
-        {Key:18, Array:['Que, The Human Editor','Ddd','010']},
-        {Key:19, Array:['Human Centipede'      ,'Eee','011']},
-        {Key:20, Array:['Xedni Wor'            ,'Aaa','000']},
-        {Key:21, Array:['Weezer'               ,'Bbb','001']},
-        {Key:22, Array:['Tally Hall'           ,'Ccc','002']},
-        {Key:23, Array:['Que, The Human Editor','Ddd','010']},
-        {Key:24, Array:['Human Centipede'      ,'Eee','011']},
-        {Key:25, Array:['Xedni Wor'            ,'Aaa','000']},
-        {Key:26, Array:['Weezer'               ,'Bbb','001']},
-        {Key:27, Array:['Tally Hall'           ,'Ccc','002']},
-        {Key:28, Array:['Que, The Human Editor','Ddd','010']},
-        {Key:29, Array:['Human Centipede'      ,'Eee','011']},
+        {Key:0 ,Next:1  , Array:['Xedni Wor'            ,'Aaa','000'],Display:4},
+        {Key:1 ,Next:2  , Array:['Xedni Wor'            ,'Aaa','000']},
+        {Key:2 ,Next:3  , Array:['Weezer'               ,'Bbb','001']},
+        {Key:3 ,Next:4  , Array:['Tally Hall'           ,'Ccc','002']},
+        {Key:4 ,Next:5  , Array:['Que, The Human Editor','Ddd','010']},
+        {Key:5 ,Next:6  , Array:['Human Centipede'      ,'Eee','011']},
         ])
 //****************************************************************************
 // JSX: C02_Iput
@@ -101,6 +76,8 @@ const Components=()=>{
 }
 <div id='HeaderLeft'>
 <C03_Header
+SS_Row={SS_Row}
+SS_Columns={SS_Columns}
 SS_C02={SS_C02}
 setSS_C02={setSS_C02}
 />
