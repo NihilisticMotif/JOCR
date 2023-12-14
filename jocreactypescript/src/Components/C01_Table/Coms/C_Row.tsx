@@ -49,6 +49,7 @@ const C_Row = (
     //      1|  // Rename JSX Column  | f_OpenRename   => let_DefaultDisplay(1) => Open Rename JSX Column 
     //      2|  // Delete JSX Column  | f_OpenDelete   => let_DefaultDisplay(2) => Open Delete JSX Column 
     useEffect(()=>{setSS_UpdateRow(THISROW.Array)},[SS_Row])
+
 //****************************************************************************
 // FUNCTION_01: Back
 //****************************************************************************
@@ -116,14 +117,14 @@ const C_Row = (
     let let_ThisRow=[...THISROW.Array]
     const JSX_Row_TD=let_ThisRow.map((Row)=>{
         return(
-            <td>{Row}</td>
+            <td><div style={{wordWrap: 'break-word',width:'240px'}}>{Row}</div></td>
         )
     })
 
     let ss_UpdateRow=[...SS_UpdateRow]
     const JSX_EditRow=ss_UpdateRow.map((Row)=>{
         return(
-            <td>{Row}</td>
+            <td><div style={{wordWrap: 'break-word',width:'240px'}}>{Row}</div></td>
         )
     })
 
@@ -147,9 +148,16 @@ const C_Row = (
     JSX_Row=
 <tr>
     <td className='C01id_Left'>{INDEX}</td>
-    {JSX_Row_TD}
+    {
+    JSX_Row_TD
+    // <td>{Row[0]}</td>
+    // <td>{Row[1]}</td>
+    // ...
+    // <td>{Row[n]}</td>
+    }
     <td className='C01id_RightRow'><div className='C01id_EditRowButton'><button onClick={f_OpenRename}>Edit</button><button onClick={f_OpenDelete}>X</button></div></td>
 </tr>
+    // Rename Row JSX
     }else if (THISROW.Display===1){
         JSX_Row=
 <>
@@ -182,7 +190,7 @@ const C_Row = (
     {// https://stackoverflow.com/questions/38302507/react-colspan-not-working
     }
     <td colSpan={THISROW.Array.length}>Do you sure you want to delete this row?</td>
-    <td><div className='C01id_EditRowButton'><button onClick={f_Delete}>Ok</button></div></td>
+    <td><div className='C01id_EditRowButton' style={{marginLeft:'auto'}}><button onClick={f_Delete}>Ok</button></div></td>
     <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
 </tr>
 </>

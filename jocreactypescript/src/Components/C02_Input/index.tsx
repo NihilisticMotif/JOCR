@@ -113,12 +113,18 @@ const C02_Input = (
 // FUNCTION_04: Delete Column
 //****************************************************************************
     function f_Delete(THISCOLUMN:TS_Column):void{
-        let ss_Columns=[...SS_Columns]
-        let let_UpdateColumn=D02_Delete(THISCOLUMN,ss_Columns)
-        setSS_Columns(let_UpdateColumn)
         let ss_Rows=[...SS_Row]
+        let ss_Columns=[...SS_Columns]
+        
         let let_UpdateRow=U01_DeleteColumn(ss_Rows,R02_ReturnIndex(THISCOLUMN,ss_Columns))
+        let let_UpdateColumn=D02_Delete(THISCOLUMN,ss_Columns)
+
         setSS_Row(let_UpdateRow)
+        setSS_Columns(let_UpdateColumn)
+
+        if(SS_Columns.length==1){
+            setSS_Row([{Key:0 ,Next:1  , Array:['Xedni Wor'],Display:4}])
+        }
     }
 
 //****************************************************************************
@@ -126,8 +132,8 @@ const C02_Input = (
 //****************************************************************************
     function f_ResetInput() {
         // By ChatGPT
-        const inputElements = document.querySelectorAll('input');
-        inputElements.forEach((input) => {
+        const let_inputElements = document.querySelectorAll('input');
+        let_inputElements.forEach((input) => {
           input.value = '';
         });
     }
@@ -157,7 +163,7 @@ const C02_Input = (
             return(
             <tr className='C02id_HeightLightRow' ><td>
 
-            <div className='C02id_CreateRowDiv' style={{marginLeft:C02_MarginLeft,marginBottom:'-10px'}}>
+            <div className='C02id_CreateRowDiv C02id_RowInput' style={{marginLeft:C02_MarginLeft,marginBottom:'-10px'}}>
                 <h1>Do you sure you want to delete {Column.Name}?</h1>
             </div>
             <div className='C02id_DeleteColumn' style={{marginLeft:C02_MarginLeft,marginRight:'auto',marginBottom:'10px'}}>

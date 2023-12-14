@@ -1,0 +1,35 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+// Both for C04id_DivHeader, C_TopButton.tsx, header button
+////////////////////////////////////////////////////////////////////////////////
+*/
+:root{
+    --C04_RightToolW:100px;
+}
+
+.C04id_Body{
+    margin-top:142px;
+    display:flex;
+    /*
+    width:50%;
+    */
+    margin-left:auto;
+    position: fixed;
+}
+
+.C04id_DivHeader {
+    background-color: rgb(43, 226, 202);
+    width: 100%;
+}
+
+.C04id_Editor{
+    display: 'flex';
+}
+
+.C04id_Image {
+    width: calc(100% - var(--C04_RightToolW));
+    overflow: 'auto';
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+

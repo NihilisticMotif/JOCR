@@ -1,3 +1,406 @@
+ +10px
+ 
+.C04id_RightToolbar{
+    margin-left:auto;
+    position:
+}
+ 
+bsolute
+ 
+set
+ 
+set
+ 
+              setSS_C02(false)
+ 
+,SS_OpenPanel
+ 
+ && SS_OpenPanel===2
+ 
+const [SS_IsNarrow,setSS_IsNarrow]=useState<boolean>(false)
+ 
+style={{
+    width:let_Width
+    //width:'500px'
+    }}
+ 
+//
+ 
+<div>
+
+</div>
+ 
+{JSX_C02}
+ 
+50%
+ 
+{
+/*
+ 
+{
+/*
+ 
+*/}
+ 
+style={{backgroundColor:'greenyellow'}}
+ 
+width:'500px',height:'500px',
+ 
+id='HeaderRight'
+ 
+    let let_WidthPanel
+
+    if(SS_OpenPanel===2){
+        let_WidthPanel={gridTemplateColumns: 'repeat(2, 1fr)'}
+    }
+    else{
+        let_WidthPanel={}
+    }
+ 
+    grid-template-columns: repeat(2, 1fr);
+ 
+
+interface IN_C04 {
+  SS_OpenPanel:0|1|2,
+  setSS_OpenPanel:(S:0|1|2)=>void
+}
+
+ 
+  additionalStyles?: React.CSSProperties;
+ 
+            
+ 
+            SS_OpenPanel={SS_OpenPanel}
+            setSS_OpenPanel={setSS_OpenPanel}
+ 
+{
+    // PARAMETER
+    // HOOK: setState()
+    SS_OpenPanel,
+    setSS_OpenPanel
+}:{
+    // TYPE
+    // HOOK: setState() 
+    SS_OpenPanel:1|2,
+    setSS_OpenPanel:(S:0|1|2)=>void
+}
+
+ 
+    // PARAMETER
+    // HOOK: setState()
+    SS_OpenPanel,
+    setSS_OpenPanel
+}:{
+    // TYPE
+    // HOOK: setState() 
+ 
+    // PARAMETER
+    // HOOK: setState()
+    SS_OpenPanel,
+    setSS_OpenPanel
+}:{
+ 
+    SS_Row,
+    SS_Columns,
+    SS_C02,
+    setSS_C02,
+ 
+    SS_Row:TS_Row[],
+    SS_Columns:TS_Column[],
+    SS_C02:boolean,
+    setSS_C02:(S:boolean)=>void,
+ 
+SS_OpenPanel = 
+ 
+SS_OpenPanel===0
+ 
+<td><button className='C03id_Header'>X</button></td>
+ 
+<C04_Canvas
+/>
+ 
+        JSX_C03=<></>
+ 
+    let JSX_C03=<></>
+ 
+<C01_Table 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+ 
+<td><button className='C03id_Header'>+</button></td>
+ 
+<td><button className='C03id_Header'>+</button></td>
+ 
+<td><button className='C03id_Header'>+</button></td>
+ 
+ onClick={()=>setSS_Open(true)}
+ 
+    margin-bottom:auto;
+ 
+calc(
+ 
+ - var(--C04_RightToolW)
+ 
+width:100%;
+ 
+ className='Index_Canvas'
+ 
+ style={{marginLeft:'auto'}}
+ 
+,width:'70px'
+ 
+ style={{width:'500px'}}
+ 
+{JSX_C02}
+<div id='BodyLeft' style={{width:let_Width}}>
+<C01_Table 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+/>
+</div>
+ 
+</div>
+ 
+<div>
+ 
+    border: 1px solid #000000;
+ 
+    max-width: calc(100% - var(--C04_RightToolW));
+ 
+</div>
+ 
+    <button>Hello</button>
+      <h1>Hello There</h1>
+ 
+    position: relative;
+    margin-left:auto;
+ 
+.C04id_Image{
+    width:90%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+ 
+marginRight:'auto'
+ 
+style={{marginRight:'auto'}}
+ 
+style={{marginRight:'auto'}}
+ 
+  const Ref_C0 = useRef<HTMLDivElement | null>(null);
+ 
+    height:100%;
+ 
+        margin-top: var(--let_MarginTop);
+        margin-bottom: var(--let_MarginTop);
+ 
+inline-
+ 
+className='C04id_Image'
+ 
+</div>
+ 
+onClick={()=>setSS_Open(true)}
+ 
+</>
+ 
+{
+      SS_Image && <img src={SS_Image} alt="Uploaded" className='C04id_Image'/>
+      }
+ 
+ id='HeaderRight'
+ 
+{
+      SS_Image && <img src={SS_Image} alt="Uploaded" className='C04id_Image'/>
+      }
+ 
+.C03id_Header {
+ 
+      */}
+ 
+    margin-top:     var(--let_MarginTop);
+    margin-bottom:  var(--let_MarginTop);
+ 
+
+.C04id_DivHeader input {
+    font-size: 16px;
+    height: 40px;
+}
+ 
+.C04id_DivHeader input{
+    height:40px;
+}
+ 
+<td>
+ 
+</td>
+ 
+{SS_Image && <img src={SS_Image} alt="Uploaded" />}
+ 
+/*
+ 
+*/
+ 
+// React
+import React, { ChangeEvent, useState } from 'react';
+
+// Components
+//import R_FilterColumn from './Coms/R_FilterColumn';
+
+// Type
+import TS_Row from '../T01_Row/An_Index';
+
+// CSS
+import './index00.css'
+import './index01.css'
+
+const ImageUpload: React.FC = () => {
+  const [SS_Image, setSS_Image] = useState<string | null>(null);
+
+  const f_ImageChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+
+    if (file) {
+      const let_ImageURL = URL.createObjectURL(file);
+      setSS_Image(let_ImageURL);
+    }
+  };
+
+  return (
+    <div>
+      <input type="file" accept="image/*" onChange={f_ImageChange} />
+      {SS_Image && <img src={SS_Image} alt="Uploaded" />}
+    </div>
+  );
+};
+
+export default ImageUpload;
+ 
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+ 
+    const [SS_100Width,setSS_100Width]=useState<boolean>(false)
+ 
+    if(SS_Columns.length<2){
+        setSS_100Width(true)
+    }
+ 
+.C01id_BreakWord{
+    word-wrap: 'break-word';
+    width:'240px';
+}
+ 
+    const [SS_100Width,setSS_100Width]=useState<boolean>(false)
+ 
+    if(SS_Columns.length<2){
+        setSS_100Width(true)
+    }
+ 
+SS_Columns
+ 
+    let let_100Width='100%'
+    if(SS_100Width){
+        let_100Width='100%'
+    }
+    else{
+        
+    }
+ 
+
+    //(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
+ 
+ // The empty dependency array ensures that the effect runs only once, similar to componentDidMount
+    /*
+    useEffect(()=>{
+        const let_CurrentC01 = Ref_C01.current;
+        if (let_CurrentC01) {
+            let let_C01_TH=(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
+            let let_C01_BodyHeight=(document.getElementById('C02id_Height') as HTMLElement)!
+            let_C01_BodyHeight.style.height="calc(100vh - 50px -"+let_C01_TH.toString()+"px)"
+        }
+    },[]);
+    */
+
+ 
+let ss_Columns=[...SS_Columns]
+ 
+let ss_Rows=[...SS_Row]
+        let let_UpdateRow=U01_DeleteColumn(ss_Rows,R02_ReturnIndex(THISCOLUMN,ss_Columns))
+ 
+JSON.stringify(
+ 
+ROWS[i].Array.splice(COLUMNINDEX,1)
+ 
+        }
+ 
+        if(ROWS[i].Display!==4){
+ 
+        }
+ 
+        if(ROWS[i].Display!==4){
+ 
+'Tally Hall',"Marvin's Marvelous Mechanical Museum",'The Ruler of Everything','Indie Rock'
+ 
+        {Key:4 ,Next:5  , Array:['Que, The Human Editor','Ddd','010']},
+        {Key:5 ,Next:6  , Array:['Human Centipede'      ,'Eee','011']},
+ 
+'Tally Hall'           ,'Ccc','002'
+ 
+               ,'Bbb','001'
+ 
+เพลงโดย เรดิโอเฮด
+
+ 
+'Xedni Wor'            ,'Aaa','000'
+ 
+           
+ 
+        {Key:6 ,Next:7  , Array:["Chonny's Charming Chaos Compendium",'Chonny','012']},
+        {Key:7 ,Next:8  , Array:["Chonny'sCharmingChaosCompendium",'Chonny','020']}
+ 
+style={{marginLeft:C02_MarginLeft,marginBottom:'-10px'}}
+ 
+            continue
+        }
+        else{
+ 
+setSS_Columns(let_UpdateColumn)
+ 
+        //alert(JSON.stringify(SS_Columns))
+ 
+            alert('Hii')
+ 
+            ,'Aaa','000'
+ 
+.C01id_BreakWord{
+    word-wrap: 'break-word';
+    width:'240px';
+}
+ 
+</div>
+ 
+style={{wordWrap: 'break-word'}}
+ 
+style={{wordWrap: 'break-word'}}
+ 
+style={{wordWrap: 'break-word'}}
+ 
+ 
+ 
  style={{whiteSpace: 'nowrap'}}
  
  style={{whiteSpace: 'nowrap'}}

@@ -6,8 +6,8 @@
     --let_Font02:14px;
     --let_RowWidth:240px;
     --let_RowHeight:40px;
-    --let_RightRowW:200px;
-    --let_LefttRowW: 100px;
+    --let_RightRowW:100px;
+    --let_LefttRowW:100px;
     --let_DivWidth:500px;
     --let_C01HeaderHeight:100px;
 }
@@ -76,7 +76,6 @@ thead {
 .C01id_Left {
     width: 100px;
 }
-
 /************************************************************************************************
 // C_ColumnButton.tsx
 ************************************************************************************************/

@@ -89,12 +89,18 @@ const C_ColumnButton = (
 // FUNCTION_04: Delete Column
 //****************************************************************************
     function f_Delete(THISCOLUMN:TS_Column):void{
-        let ss_Columns=[...SS_Columns]
-        let let_UpdateColumn=D02_Delete(THISCOLUMN,ss_Columns)
-        setSS_Columns(let_UpdateColumn)
         let ss_Rows=[...SS_Row]
+        let ss_Columns=[...SS_Columns]
+        
         let let_UpdateRow=U01_DeleteColumn(ss_Rows,R02_ReturnIndex(THISCOLUMN,ss_Columns))
+        let let_UpdateColumn=D02_Delete(THISCOLUMN,ss_Columns)
+
         setSS_Row(let_UpdateRow)
+        setSS_Columns(let_UpdateColumn)
+
+        if(SS_Columns.length==1){
+            setSS_Row([{Key:0 ,Next:1  , Array:['Xedni Wor'],Display:4}])
+        }
     }
 
 //****************************************************************************

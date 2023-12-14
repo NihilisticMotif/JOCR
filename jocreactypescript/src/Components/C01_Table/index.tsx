@@ -28,6 +28,8 @@ SS_Columns,
 setSS_Columns,
 SS_EditColumn,
 setSS_EditColumn,
+setSS_IsNarrow,
+setSS_C02
 }:{
 // TYPE
 // PERPERTY
@@ -39,6 +41,7 @@ setSS_Columns:(S:TS_Column[])=>void,
 SS_EditColumn:0|1,
 setSS_EditColumn:(S:0|1)=>void,
 SS_C02:boolean,
+setSS_IsNarrow:(S:boolean)=>void;
 setSS_C02:(S:boolean)=>void
 }
 ) => {
@@ -47,15 +50,14 @@ setSS_C02:(S:boolean)=>void
 //****************************************************************************
     // By ChatGPT
     const Ref_C01 = useRef<HTMLDivElement | null>(null);
-    const Ref_C01idTH = useRef<HTMLDivElement | null>(null);
-    //(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
+
     useEffect(() => {
         const let_CurrentC01 = Ref_C01.current;
         if (let_CurrentC01) {
         const let_ResizeObs = new ResizeObserver(() => {
             let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
             if(let_C01Width<175){
-                //setSS_C02(false)
+                setSS_C02(false)
             }
         });
         let_ResizeObs.observe(let_CurrentC01);
@@ -64,17 +66,7 @@ setSS_C02:(S:boolean)=>void
         };
     }
 
-    }, []); // The empty dependency array ensures that the effect runs only once, similar to componentDidMount
-    /*
-    useEffect(()=>{
-        const let_CurrentC01 = Ref_C01.current;
-        if (let_CurrentC01) {
-            let let_C01_TH=(document.getElementById('C01id_TH')as HTMLElement)!.offsetHeight
-            let let_C01_BodyHeight=(document.getElementById('C02id_Height') as HTMLElement)!
-            let_C01_BodyHeight.style.height="calc(100vh - 50px -"+let_C01_TH.toString()+"px)"
-        }
-    },[]);
-    */
+    }, []);
 
 //****************************************************************************
 // JSX_00: Filter SS_Column.Name by IsVisible=true
@@ -129,7 +121,7 @@ setSS_EditColumn={setSS_EditColumn}
 />
 </thead>
 <tbody id='C02id_Height' style={{
-    height:`calc(100vh - ${55}px - ${105}px)`
+    height:`calc(100vh - ${55}px - ${105+20}px)`
     }}>
 {
 // Data

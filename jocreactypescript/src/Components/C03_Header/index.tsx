@@ -24,14 +24,20 @@ const C03_Header = (
     SS_Row,
     SS_Columns,
     SS_C02,
-    setSS_C02
+    setSS_C02,
+    SS_OpenPanel,
+    setSS_OpenPanel,
+    SS_IsNarrow
 }:{
     // TYPE
     // HOOK: setState() 
     SS_Row:TS_Row[],
     SS_Columns:TS_Column[],
     SS_C02:boolean,
-    setSS_C02:(S:boolean)=>void
+    setSS_C02:(S:boolean)=>void,
+    SS_OpenPanel:0|1|2,
+    setSS_OpenPanel:(S:0|1|2)=>void,
+    SS_IsNarrow:boolean
 }
 ) => {
 //****************************************************************************
@@ -57,7 +63,9 @@ const C03_Header = (
 // FUNCTION_00: Open / Close C02_Input
 //****************************************************************************
     function f_Open(){
-        setSS_C02(true)
+        if(SS_IsNarrow===false){
+            setSS_C02(true)
+        }
     }
     function f_Close(){
         setSS_C02(false)
@@ -69,6 +77,21 @@ const C03_Header = (
     function f_FileName(){
         let let_Word=(document.getElementById('C03id_FileName') as HTMLInputElement).value.toString()
         setSS_FileName(let_Word)
+    }
+
+//****************************************************************************
+// FUNCTION_02: Open C04_Canvas
+//****************************************************************************
+    function f_OpenC04(){
+        setSS_OpenPanel(2)
+    }
+
+//****************************************************************************
+// FUNCTION_03: Close C01_Table
+//****************************************************************************
+    function f_CloseC01(){
+        // 1 = have only C04
+        setSS_OpenPanel(1)
     }
 
 //****************************************************************************
@@ -102,10 +125,22 @@ const C03_Header = (
     }
 
 //****************************************************************************
+// JSX_02: Open C04_Canvas or Close C01_Table
+//****************************************************************************
+    let JSX_OpenC04=<td><button className='C03id_Header' onClick={f_OpenC04}>+</button></td>
+    if(SS_OpenPanel===2){
+        JSX_OpenC04=<td><button className='C03id_Header' onClick={f_CloseC01}>X</button></td>
+    }
+    else if(SS_OpenPanel===0){
+        JSX_OpenC04=<td><button className='C03id_Header' onClick={f_OpenC04}>+</button></td>
+    }
+
+//****************************************************************************
 // OUTPUT
 //****************************************************************************
 return(
 <div className='C03id_DivHeader'>
+{JSX_OpenC04}
 {JSX_Button}
 {JSX_Export}
 </div>

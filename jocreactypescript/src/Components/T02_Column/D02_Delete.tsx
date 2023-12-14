@@ -10,6 +10,7 @@ export function D02_Delete(
     for(let i:number=0;i<COLUMNS.length;i++){
         if(COLUMNS[i].Key===THISCOLUMN.Key){
             COLUMNS.splice(i, 1);
+            //alert(COLUMNS[i].Name)
             break
         }
     }

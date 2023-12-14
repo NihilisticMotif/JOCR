@@ -6,7 +6,7 @@
 :root{
     --let_FontSize00:14px;
     --let_FontSize01:14px;
-    --let_HeaderHeight:100px;
+    --C02_HeaderHeight:100px;
     --C02_MarginLeft:10px;
 }
 
@@ -72,7 +72,7 @@ Not interesting
 }
 
 .C02id_RowInput{
-    width: 300px;
+    width: 250px;
 }
 
 #C02id_DivButton{
