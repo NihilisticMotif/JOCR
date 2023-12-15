@@ -28,8 +28,9 @@ SS_Columns,
 setSS_Columns,
 SS_EditColumn,
 setSS_EditColumn,
-setSS_IsNarrow,
-setSS_C02
+SS_C02,
+setSS_C02,
+setSS_OpenPanel,
 }:{
 // TYPE
 // PERPERTY
@@ -41,8 +42,8 @@ setSS_Columns:(S:TS_Column[])=>void,
 SS_EditColumn:0|1,
 setSS_EditColumn:(S:0|1)=>void,
 SS_C02:boolean,
-setSS_IsNarrow:(S:boolean)=>void;
-setSS_C02:(S:boolean)=>void
+setSS_C02:(S:boolean)=>void,
+setSS_OpenPanel:(S:0|1|2)=>void
 }
 ) => {
 //****************************************************************************
@@ -54,18 +55,18 @@ setSS_C02:(S:boolean)=>void
     useEffect(() => {
         const let_CurrentC01 = Ref_C01.current;
         if (let_CurrentC01) {
-        const let_ResizeObs = new ResizeObserver(() => {
+        // Close C02_Input when the width of C01_Table is less than 175
+        const let_ObsResize = new ResizeObserver(() => {
             let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
             if(let_C01Width<175){
                 setSS_C02(false)
             }
         });
-        let_ResizeObs.observe(let_CurrentC01);
+        let_ObsResize.observe(let_CurrentC01);
         return () => {
-            let_ResizeObs.disconnect();
+            let_ObsResize.disconnect();
         };
     }
-
     }, []);
 
 //****************************************************************************

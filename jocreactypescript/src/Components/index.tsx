@@ -1,5 +1,5 @@
 // React
-import { useState , useEffect} from 'react';
+import { useState , useEffect , useRef} from 'react';
 
 // Components
 import C01_Table from "./C01_Table";
@@ -15,23 +15,20 @@ import './index.css';
 // https://stackoverflow.com/questions/6229197/how-to-know-if-two-arrays-have-the-same-values
 const Components=()=>{
 //****************************************************************************
-// HOOK
+// USESTATE HOOK
 //****************************************************************************
     const [SS_EditColumn,setSS_EditColumn]=useState<0|1>(0)
     const [SS_C02,setSS_C02]=useState<boolean>(true)
     const [SS_OpenPanel,setSS_OpenPanel]=useState<0|1|2>(2)
+    const [SS_IsNarrow,setSS_IsNarrow]=useState<boolean>(false)
     // 0 = Open only C01_Table
     // 1 = Open only C04_Canvas
     // 2 = Open C01_Table and C04_Canvas
 
-    const [SS_IsNarrow,setSS_IsNarrow]=useState<boolean>(false)
-
     //useEffect(() => {
-    //    if(SS_IsNarrow){
-    //        setSS_C02(false)
-    //    }
+    //    alert(SS_IsNarrow)
     //},[SS_IsNarrow])
-
+    let let_C02Width=275
 //****************************************************************************
 // DEFAULT INPUT
 //****************************************************************************
@@ -52,17 +49,15 @@ const Components=()=>{
         {Key:4 ,Next:5  , Array:['Gorillaz','Demon Days',"Feel Good Inc.",'Hip Hop','04']},
         {Key:5 ,Next:6  , Array:['Mother Mother','O My Heart',"Hayloft",'Indie Rock','05']},
         ])
-//****************************************************************************
-// VARIABLE
-//****************************************************************************
 
+    
 //****************************************************************************
 // JSX: C02_Iput
 //****************************************************************************
     let JSX_C02=<></>
     let let_Width:string='50%'
     let let_C01Width:string='100%'
-    let let_C01MinWidth='480px'
+    let let_C01MinWidth='300px'
     if(SS_OpenPanel===0){
         let_C01Width='100%'
     }
@@ -78,7 +73,7 @@ const Components=()=>{
             SS_EditColumn={SS_EditColumn}
             setSS_EditColumn={setSS_EditColumn}
             />
-        let_Width='calc('+let_C01Width+' - 300px)'
+        let_Width='calc('+let_C01Width+' - '+let_C02Width.toString()+'px)'
     }
     else{
         JSX_C02=<></>
@@ -99,7 +94,7 @@ const Components=()=>{
         SS_EditColumn={SS_EditColumn}
         setSS_EditColumn={setSS_EditColumn}
         SS_C02={SS_C02}
-        setSS_IsNarrow={setSS_IsNarrow}
+        setSS_OpenPanel={setSS_OpenPanel}
         setSS_C02={setSS_C02}
         />
         JSX_C03=<C03_Header
@@ -107,7 +102,6 @@ const Components=()=>{
         SS_Columns={SS_Columns}
         SS_C02={SS_C02}
         setSS_C02={setSS_C02}
-        SS_IsNarrow={SS_IsNarrow}
         SS_OpenPanel={SS_OpenPanel}
         setSS_OpenPanel={setSS_OpenPanel}
         />
@@ -125,8 +119,6 @@ const Components=()=>{
         JSX_C04=<C04_Canvas
         SS_OpenPanel={SS_OpenPanel}
         setSS_OpenPanel={setSS_OpenPanel}
-        SS_IsNarrow={SS_IsNarrow}
-        setSS_IsNarrow={setSS_IsNarrow}
         setSS_C02={setSS_C02}
         />
     }
@@ -155,7 +147,7 @@ style={SS_OpenPanel === 2 ? { gridTemplateColumns: 'repeat(2, 1fr)' } : {}
 //****************************************************************************
 }
 <div id='HeaderLeft' 
-style={SS_IsNarrow===true ? {width:let_C01MinWidth} : {}}
+//style={SS_IsNarrow===true ? {width:let_C01MinWidth} : {}}
 >
 {JSX_C03}
 </div>
@@ -184,6 +176,7 @@ style={SS_IsNarrow===true ? {width:let_C01MinWidth} : {}}
 
 <div id='BodyLeft' 
 style={SS_IsNarrow===true ? {width:let_C01MinWidth} : {width:let_Width}}
+//style={{width:let_Width}}
 >
 {JSX_C02}
 {JSX_C01}

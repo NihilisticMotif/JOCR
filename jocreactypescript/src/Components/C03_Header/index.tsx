@@ -27,7 +27,6 @@ const C03_Header = (
     setSS_C02,
     SS_OpenPanel,
     setSS_OpenPanel,
-    SS_IsNarrow
 }:{
     // TYPE
     // HOOK: setState() 
@@ -37,7 +36,6 @@ const C03_Header = (
     setSS_C02:(S:boolean)=>void,
     SS_OpenPanel:0|1|2,
     setSS_OpenPanel:(S:0|1|2)=>void,
-    SS_IsNarrow:boolean
 }
 ) => {
 //****************************************************************************
@@ -63,9 +61,10 @@ const C03_Header = (
 // FUNCTION_00: Open / Close C02_Input
 //****************************************************************************
     function f_Open(){
-        if(SS_IsNarrow===false){
-            setSS_C02(true)
-        }
+        setSS_C02(true)
+        //if(SS_IsNarrow===false){
+        //    setSS_C02(true)
+        //}
     }
     function f_Close(){
         setSS_C02(false)
@@ -139,7 +138,7 @@ const C03_Header = (
 // OUTPUT
 //****************************************************************************
 return(
-<div className='C03id_DivHeader'>
+<div id='C03id_DivHeader'>
 {JSX_OpenC04}
 {JSX_Button}
 {JSX_Export}

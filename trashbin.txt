@@ -1,3 +1,704 @@
+        if(SS_Zoom>0){
+ 
+        // I donot want this 0.7000000000000001 in JSX object
+        // I want this 0.7 in JSX object
+        // How can I do that
+ 
+        if(SS_Zoom>0){
+        let ss_Zoom=SS_Zoom
+ 
+    
+ 
+2*
+ 
+  const
+ 
+'C04id_Image'
+ 
+Ref_Image
+ 
+      const let_ObsImageHeight = new ResizeObserver(() => { 
+        setSS_WidthImage(let_C04!.offsetWidth-1)
+      })
+
+ 
+//****************************************************************************
+// FUNCTION_03: Resize
+//****************************************************************************
+
+ 
+    function f_Resize(){
+      let let_C04=(document.getElementById('C04id_Canvas')as HTMLElement)
+      let let_C04Width=let_C04!.offsetWidth
+      setSS_WidthImage(let_C04Width)
+    }
+ 
+ onResize={f_Resize}
+ 
+'C04id_Image'
+ 
+    display: inline-block;
+ 
+Right
+ 
+Right
+ 
+.C04id_RightToolbar{
+    width:var(--C04_RightToolW);
+    background-color: blueviolet;
+}
+ 
+    <h1>Hello There</h1>
+ 
+1000
+ 
+        setSS_OuterWidth(window.outerWidth-1)
+        setSS_InnerWidth(window.innerWidth-1)
+ 
+<U_Toolbar/>
+ 
+<div className='C04id_Editor'>
+      <h1>SS_OuterWidth:{SS_OuterWidth}</h1>
+      <h1>SS_InnerWidth:{SS_InnerWidth}</h1>
+      <h1>Marker</h1>
+      <h1>Convolution</h1>
+    </div>
+ 
+ => {
+ 
+: React.FC<IN_C04>
+ 
+SS_OpenPanel,
+setSS_OpenPanel,
+ 
+SS_OpenPanel:0|1|2,
+setSS_OpenPanel:(S:0|1|2)=>void
+ 
+  <div className='C04id_RightToolbar'
+    style={{height:`calc(100vh - ${143+20}px)`}}>
+    <button>Hello</button>
+    <h1>Hello There</h1>
+  </div>
+ 
+      let let_C01MinWidth=300//-100
+ 
+          //let_setNarrow.disconnect();
+ 
+      //let_setNarrow.observe(let_CurrentC04);
+ 
+
+      //const let_setNarrow = new ResizeObserver(() => {
+      //      if(let_C04!.offsetWidth>let_C01MinWidth){
+      //          setSS_IsNarrow(false)
+      //      }
+      //});
+ 
+
+    const Ref_C01 = useRef<HTMLDivElement | null>(null);
+
+
+ 
+',gridTemplateColumns: 'repeat(2, 1fr)' } : {}
+ 
+style={SS_OpenPanel === 2 ? { display:'grid
+ 
+//style={{width:let_Width}}
+ 
+SS_IsNarrow===true ? {width:let_C01MinWidth} : 
+ 
+SS_IsNarrow===true ? {width:let_C01MinWidth} : 
+ 
+ : {}
+ 
+SS_IsNarrow===true ? 
+ 
+ref={Ref_C01}
+ 
+    const Ref_C01 = useRef<HTMLDivElement | null>(null);
+ 
+    useEffect(() => {
+        const let_CurrentC01 = Ref_C01.current;
+        if (let_CurrentC01) {
+        // Close C02_Input when the width of C01_Table is less than 175
+        const let_ObsResize = new ResizeObserver(() => {
+            let let_C01Width=(document.getElementById('HeaderLeft')as HTMLElement)!.offsetWidth
+            let let_C04Width=(document.getElementById('HeaderRight')as HTMLElement)!.offsetWidth
+            //if(let_C01Width!==let_C04Width){
+            //    setSS_IsNarrow(true)
+            //}
+            //else if(let_C04Width>480){
+            //    setSS_IsNarrow(false)
+            //}
+        });
+        let_ObsResize.observe(let_CurrentC01);
+        return () => {
+            let_ObsResize.disconnect();
+        };
+    }
+    }, []);
+ 
+display:grid;
+ 
+ref={Ref_C01}
+ 
+            //let_setNarrow.disconnect();
+ 
+        //let_setNarrow.observe(let_CurrentC01);
+ 
+
+
+        //const let_setNarrow = new ResizeObserver(() => {
+        //    let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
+        //    if(SS_C02===true && let_C02Width+let_C01Width<let_C01MinWidth){
+        //        setSS_OpenPanel(1)
+        //    }
+        //    else if(SS_C02===false && let_C01Width<let_C01MinWidth){
+        //        setSS_OpenPanel(1)
+        //    }
+        //});
+ 
+        let let_C02Width=275
+        let let_C01MinWidth=300//-100
+ 
+SS_IsNarrow===true ? {width:let_C01MinWidth} : 
+ 
+    let SS_IsNarrow=false
+ 
+setSS_C02:(S:boolean)=>void;
+ 
+setSS_C02
+ 
+SS_IsNarrow:boolean;
+setSS_IsNarrow:(S:boolean)=>void;
+ 
+          //let_setNarrow.disconnect();
+ 
+      let let_C01MinWidth=300//-100
+ 
+    SS_IsNarrow:boolean
+ 
+    SS_IsNarrow
+ 
+SS_IsNarrow:boolean;
+setSS_IsNarrow:(S:boolean)=>void;
+ 
+      <h1>SS_IsNarrow: {SS_IsNarrow.toString()}</h1>
+ 
+SS_IsNarrow,
+setSS_IsNarrow,
+ 
+SS_IsNarrow:boolean;
+setSS_IsNarrow:(S:boolean)=>void;
+ 
+    let SS_IsNarrow=false
+ 
+        SS_IsNarrow={SS_IsNarrow}
+        setSS_IsNarrow={setSS_IsNarrow}
+ 
+        SS_IsNarrow={SS_IsNarrow}
+ 
+
+    const [SS_IsNarrow,setSS_IsNarrow]=useState<boolean>(false)
+ 
+SS_OpenPanel:0|1|2,
+ 
+SS_OpenPanel,
+ 
+        //else{
+        //  setSS_OpenPanel(0)
+        //}
+ 
+           // else{
+           //     setSS_IsNarrow(false)
+           //     //alert(let_C01Width)
+           // }
+ 
+  //width:'100%'
+ 
+  //width:'100%
+ 
++100
+ 
++100
+ 
+-100
+ 
+//  940/2
+ 
+        }
+ 
+        if(SS_IsNarrow===false){
+ 
+let let_C01MinWidth=480
+ 
+  let let_C04MinWidth=900
+ 
+            else if(let_C01MaxWidth){
+
+            }
+ 
+        let let_C01MaxWidth=490
+ 
+        let let_C01MinW=480
+ 
+let_C02Width+
+ 
+MLElement)!.offsetWidth
+ 
+            let let_C01Width=(document.getElementById('C01id_H')as HT
+ 
+            else if(SS_C02===false && let_C01Width<let_C01MinWidth){
+                setSS_IsNarrow(true)
+            }
+ 
+setSS_IsNarrow,
+SS_IsNarrow,
+ 
+setSS_IsNarrow:(S:boolean)=>void;
+SS_IsNarrow:boolean;
+ 
+            //else if(SS_C02===true && let_C02Width+let_C01Width+1>let_C01MinWidth){
+            //    setSS_IsNarrow(false)
+            //}
+            //else if(SS_C02===false && let_C01Width+1>let_C01MinWidth){
+            //    setSS_IsNarrow(false)
+            //}
+ 
+        /*
+ 
+let_C02Width+
+ 
+let_C02Width+
+ 
+ru
+ 
+275
+ 
+// Close C02_Input when the width of C01_Table is less than 175
+ 
+                //setSS_IsNarrow(true)
+ 
+// Close C02_Input when the width of C01_Table is less than 175
+ 
+
+            else{
+                alert('Turing Machine')
+                //setSS_IsNarrow(false)
+            }
+ 
+        
+ 
+alert('Machine Learning')
+ 
+
+//****************************************************************************
+// USEEFFECT HOOK
+//****************************************************************************
+    const Ref_Index = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const let_Current = Ref_Index.current;
+        if (let_Current) {
+        const let_ResizeObs = new ResizeObserver(() => {
+            let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
+            if(let_C01Width<175){
+                setSS_C02(false)
+            }
+        });
+        let_ResizeObs.observe(let_Current);
+        return () => {
+            let_ResizeObs.disconnect();
+        };
+    }
+
+    }, []);
+ 
+ARIABLE
+ 
+//****************************************************************************
+// VARIABLE
+//****************************************************************************
+    const Ref_C01 = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const let_CurrentC01 = Ref_C01.current;
+        if (let_CurrentC01) {
+        const let_ResizeObs = new ResizeObserver(() => {
+            let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
+            if(let_C01Width<175){
+                setSS_C02(false)
+            }
+        });
+        let_ResizeObs.observe(let_CurrentC01);
+        return () => {
+            let_ResizeObs.disconnect();
+        };
+    }
+
+    }, []);
+ 
+        SS_IsNarrow={SS_IsNarrow}
+ 
+            else{
+            }
+ 
+                setSS_IsNarrow(false)
+ 
+                setSS_IsNarrow(true)
+ 
+            else{
+                setSS_IsNarrow(false)
+            }
+ 
+                setSS_IsNarrow(true)
+                //alert(SS_IsNarrow.toString())
+ 
+                setSS_C02(false)
+ 
+                //alert(SS_IsNarrow.toString())
+ 
+set
+ 
+                setSS_IsNarrow(true)
+ 
+                setSS_IsNarrow(true)
+ 
+          alert('Alone')
+ 
+        alert(SS_IsNarrow)
+ 
+ style={SS_IsNarrow?{}:{}}
+ 
+px'
+
+ 
+width:'200px'
+ 
+width:'100px'
+ 
+style={{display: 'grid'}} 
+ 
+  //width:'calc('+(SS_WidthImage).toString()+' - 100px)'
+ 
+  //width:'400px'
+  //width:'100vh'
+ 
+-100
+ 
+Oute
+ 
+alert(window.outerWidth)
+ 
+        //alert(let_C04Width)
+
+        //if(SS_WidthImage>=let_C04Width){
+        //  //
+        //}
+        //else{
+        //  setSS_WidthImage(let_C04Width)
+        //}
+ 
+        //alert(SS_WidthImage)
+ 
+      let let_C04Width=let_C04!.offsetWidth
+ 
+          let_ObsResize.disconnect();
+ 
+      
+      let_ObsResize.observe(let_CurrentC04);
+ 
+      const let_ObsResize = new ResizeObserver(() => {
+          if(let_C04Width<500){
+              setSS_IsNarrow(true)
+              setSS_C02(false)
+          }
+          else{
+              setSS_IsNarrow(false)
+          }
+      });
+ 
+          let_ObsResize.disconnect();
+ 
+      
+      let_ObsResize.observe(let_CurrentC04);
+ 
+      const let_ObsResize = new ResizeObserver(() => {
+          if(let_C04Width<500){
+              setSS_IsNarrow(true)
+              setSS_C02(false)
+          }
+          else{
+              setSS_IsNarrow(false)
+          }
+      });
+ 
+            alert(let_C04Width)
+ 
+  */
+ 
+  /*
+ 
+        
+ 
+Obs
+ 
+        let let_C04=(document.getElementById('C04id_Canvas')as HTMLElement)
+        let let_C04Width=let_C04!.offsetWidth
+ 
+let let_C04=(document.getElementById('C04id_Canvas')as HTMLElement)
+      let let_C04Width=let_C04!.offsetWidth
+ 
+        alert('hii') 
+ 
+        if(let_C04Width<500){
+ 
+        }
+        else{
+          setSS_WidthImage(300)
+        }
+ 
+setSS_WidthImage(let_C04Width)
+ 
+setSS_WidthImage(let_C04Width)
+ 
+ new =
+ 
+      setSS_WidthImage(let_C04Width)
+ 
+          let_ResizeObs.disconnect();
+ 
+  onClick={f_Resize}
+ 
+onClick={f_Resize}
+ 
+      if (let_CurrentC04) {
+ 
+
+      //
+ 
+              //if(let_C04Width<350){
+              //setSS_OpenPanel(1)
+              //}
+ 
+
+  useLayoutEffect(() => {
+    const let_CurrentC04 = Ref_C04.current;
+    let let_C04=(document.getElementById('C04id_Canvas')as HTMLElement)
+    let let_C04Width=let_C04!.offsetWidth
+    //if (let_CurrentC04) {
+    //    setSS_WidthImage(let_C04Width)
+    //}
+    if (let_CurrentC04) {
+    //alert(let_CurrentC04.getBoundingClientRect())
+    setSS_WidthImage(let_C04Width)
+    }
+  }
+  ,[])
+ 
+.current
+ 
+        setSS_WidthImage(let_C04Width)
+ 
+      //
+      function f_Resize(){
+        alert('Resizing')
+      }
+      //
+      let_C04.addEventListener("resize", f_Resize);
+ 
+SS_Image
+ 
+      // https://stackoverflow.com/questions/71457792/resize-event-in-react
+      //function f_Resize() {
+      //    setSS_WidthImage(let_C04Width);
+      //}
+      //window.addEventListener("resize", f_Resize);
+      //f_Resize()
+      //return () => window.removeEventListener("resize", f_Resize);
+
+ 
+      f_Resize()
+      return () => let_C04.removeEventListener("resize", f_Resize);
+ 
+function f_Resize(){
+        alert('Resizing')
+      }
+      //
+      let_C04.addEventListener("resize", f_Resize);
+      f_Resize()
+      return () => let_C04.removeEventListener("resize", f_Resize);
+ 
+      let let
+ 
+(document.getElementById('C04id_Canvas')as HTMLElement)
+ 
+setSS_WidthImage(let_C04Width)
+ 
+SS_WidthImage
+ 
+  //width:'400px'
+  //width:'100vh'
+  //width:'100%'
+ 
+''+
+ 
+calc(
+ 
+ - 100
+ 
+position:'fixed',
+marginTop:'143px',
+ 
+paddingRight:'100px'
+ 
+*/
+ 
+/*
+ 
+      width:'calc('+SS_WidthImage.toString()+' - 100px)'
+ 
+      width:'calc('+SS_WidthImage.toString()+' - 100px)'
+ 
+  </div>
+ 
+  <div className='C04id_Image' 
+    style={{
+      height:`calc(100vh - ${143+20}px)`,
+      width:'calc('+SS_WidthImage.toString()+' - 100px)'
+    }}
+  >
+ 
+50vh
+ 
+(SS_WidthImage).toString()+'px'
+ 
+    handleResize();
+    // Remove event listener on cleanup
+ 
+    // Call handler right away so state gets updated with initial window size
+ 
+    // Add event listener
+ 
+      // Set window width/height to state
+ 
+let let_C04Width=(document.getElementById('C04id_Canvas')as HTMLElement)!.offsetWidth
+ 
+    width:100%
+ 
+              setSS_OpenPanel(1)
+ 
+      <h1>RGB2Black&White</h1>
+      <h1>Crop</h1>
+      <h1>Gray2Black</h1>
+      <h1>Marker</h1>
+      <h1>Convolution</h1>
+ 
+display: 'grid';
+ 
+ style={{display: 'grid'}}
+ 
+    overflow: 'auto';
+ 
+//style={{width:SS_WidthImage.toString()+'px'}}
+ 
+width:'100%'
+ 
+(document.getElementById('C04id_Body')as HTMLElement)!.style.width=let_C04Width.toString()+'px;'
+ 
+(document.getElementById('C04id_Body')as HTMLElement)!.style.width=let_C04Width.toString()+'px;'
+ 
+:number
+ 
+    width:500px;
+ 
+style={{width:'500px'}}
+ 
+let_ImageWidth.toString()+'px'
+ 
+          let_ImageWidth=let_C04Width
+ 
+          alert(let_ImageWidth)
+ 
+      overflowX: 'scroll',
+      overflowY: 'scroll',
+ 
+    overflow: auto;
+ 
+    overflow: auto;
+ 
+    */
+ 
+    /*
+ 
+      overflow: 'auto',
+ 
+,width:'100px'
+ 
+    margin-left:auto
+ 
+let_ImageWidth.toString()+'px'
+ 
+let_ImageWidth.toString()+'
+ 
+let_ImageWidth.toString()+'
+ 
+l
+ 
+:string=''
+ 
+<div className='C04id_RightToolbar'
+    style={{height:`calc(100vh - ${143+20}px)`}}>
+    <button>Hello</button>
+    <h1>Hello There</h1>
+  </div>
+ 
+{/*
+ 
+  {
+    SS_Image && 
+ 
+  }
+ 
+    margin-left:auto;
+ 
+              if(let_C04Width<300){
+                alert('Narrow')
+              }
+ 
+  const [SS_IsRightTool,setSS_IsRightTool]=useState<boolean>(true)
+ 
+    margin-top:142px;
+ 
+display:flex;
+ 
+*/
+ 
+
+.C04id_Canvas {
+    background-color: black
+}
+ 
+.C04id_Canvas{
+    background-color: black
+}
+ 
+
+.C04id_Body{
+    background-color:black
+}
+
+ 
+style={SS_OpenPanel === 2
+      ? { width: '50%' }
+      : { width: '100%' },
+    backgroundColor: 'black'}
+ 
+,backgroundColor:'black'
+ 
+style={{
+ 
+style={{backgroundColor:'black'}}
+ 
  +10px
  
 .C04id_RightToolbar{

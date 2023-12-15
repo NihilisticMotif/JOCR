@@ -7,17 +7,22 @@
     --C04_RightToolW:100px;
 }
 
-.C04id_Body{
-    margin-top:142px;
-    display:flex;
+#C04id_Canvas{
+    display: grid;
+}
+#C04id_Body{
+    background-color: black;
+    display: flex;
     /*
+    display: flex;
     width:50%;
-    */
+    
     margin-left:auto;
     position: fixed;
+    */
 }
 
-.C04id_DivHeader {
+#C04id_DivHeader {
     background-color: rgb(43, 226, 202);
     width: 100%;
 }
@@ -28,8 +33,10 @@
 
 .C04id_Image {
     width: calc(100% - var(--C04_RightToolW));
-    overflow: 'auto';
     overflow-y: scroll;
-    overflow-x: auto;
+    overflow-x: scroll;
 }
 
+.C04id_RightToolbar{
+    margin-left:auto
+}

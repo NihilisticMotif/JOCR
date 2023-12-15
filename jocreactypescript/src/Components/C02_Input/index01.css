@@ -8,6 +8,7 @@
     --let_FontSize01:14px;
     --C02_HeaderHeight:100px;
     --C02_MarginLeft:10px;
+    --C02_Width:275px;
 }
 
 #C02id_Div {
@@ -15,7 +16,7 @@
 }
 
 #C02id_Div{
-    width: 300px;
+    width: var(--C02_Width);
 }
 
 #C02id_Div button {
@@ -72,7 +73,7 @@ Not interesting
 }
 
 .C02id_RowInput{
-    width: 250px;
+    width: var(--C02_Width);
 }
 
 #C02id_DivButton{

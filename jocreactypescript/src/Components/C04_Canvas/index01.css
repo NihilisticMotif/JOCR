@@ -1,5 +1,5 @@
 :root{
-    --C04_MarginTop:5px;
+    --C04_MarginTop:0px;
     --C04_HeaderHeight: 100px;
     --C04_RightToolW: 100px;
 }
@@ -16,13 +16,9 @@
     background-color: burlywood;
     height:var(--C04_HeaderHeight);
     margin-top:0px;
-    margin-bottom: 0px;
+    padding-bottom: 1px;
 }
 .C04id_Editor h1{
     font-size:14px;
 }
 
-.C04id_RightToolbar{
-    width:var(--C04_RightToolW);
-    background-color: blueviolet;
-}

@@ -1,11 +1,13 @@
 // React
-import React, { ChangeEvent, useState , useEffect, useRef } from 'react';
+import React, { ChangeEvent, useState , useEffect, useRef , useLayoutEffect} from 'react';
 
 // Components
 //import R_FilterColumn from './Coms/R_FilterColumn';
 
 // Type
 import TS_Row from '../T01_Row/An_Index';
+import U_Editor from './Coms/U_Editor';
+import U_Toolbar from './Coms/U_Toolbar';
 
 // CSS
 import './index00.css'
@@ -14,8 +16,6 @@ import './index01.css'
 interface IN_C04{
 SS_OpenPanel:0|1|2;
 setSS_OpenPanel:(S:0|1|2)=>void;
-SS_IsNarrow:boolean;
-setSS_IsNarrow:(S:boolean)=>void;
 setSS_C02:(S:boolean)=>void
 }
 
@@ -26,44 +26,37 @@ const C04_Canvas: React.FC<IN_C04> = (
 {
 SS_OpenPanel,
 setSS_OpenPanel,
-SS_IsNarrow,
-setSS_IsNarrow,
-setSS_C02
 }
 :{
 SS_OpenPanel:0|1|2,
 setSS_OpenPanel:(S:0|1|2)=>void
-SS_IsNarrow:boolean;
-setSS_IsNarrow:(S:boolean)=>void;
-setSS_C02:(S:boolean)=>void
 }) => {
 
 //****************************************************************************
 // HOOK
 //****************************************************************************
   const [SS_Image, setSS_Image] = useState<string | null>(null);
-    
+  const [SS_Zoom,setSS_Zoom] = useState<number>(1)
+  const [SS_WidthImage, setSS_WidthImage] = useState<number>(0);
   const Ref_C04 = useRef<HTMLDivElement | null>(null);
-  
+
+  // Dynamic CSS Setting for Image Width
   useEffect(() => {
-      const let_CurrentC04 = Ref_C04.current;
-      if (let_CurrentC04) {
-      const let_ResizeObs = new ResizeObserver(() => {
-          let let_C04Width=(document.getElementById('C04id_Canvas')as HTMLElement)!.offsetWidth
-          if(let_C04Width<500){
-              setSS_IsNarrow(true)
-              setSS_C02(false)
-          }
-          else{
-              setSS_IsNarrow(false)
-          }
-      });
-      let_ResizeObs.observe(let_CurrentC04);
+      const let_CurrentWidthC04 = Ref_C04.current;
+      let let_WidthC04=(document.getElementById('C04id_Canvas')as HTMLElement)
+      //'C04id_Image'
+      if (let_CurrentWidthC04) {
+      const let_ObsImageWidth = new ResizeObserver(() => { 
+        setSS_WidthImage(let_WidthC04!.offsetWidth-1)
+      })
+
+      let_ObsImageWidth.observe(let_CurrentWidthC04);
       return () => {
-          let_ResizeObs.disconnect();
+          let_ObsImageWidth.disconnect();
       };
-  }
+      }
   }, []);
+
 
 //****************************************************************************
 // Function 00: Import Image
@@ -105,42 +98,46 @@ setSS_C02:(S:boolean)=>void
 // OUTPUT
 //****************************************************************************
   return (
-    <div id='C04id_Canvas' style={{display: 'grid'}} ref={Ref_C04}>
-    <div className='C04id_DivHeader'>
+    <div id='C04id_Canvas' ref={Ref_C04}>
+    <div id='C04id_DivHeader' style={{paddingTop:'3px',paddingBottom:'3px'}}>
         {JSX_OpenC01}
-        <td><button className='C04id_Header'>Export Image</button></td>
+        <td><button className='C04id_Header' style={{whiteSpace:'nowrap'}}>Export Image</button></td>
         <td>
         <input type="file" accept="image/*" className='C04id_Header' onChange={f_ImageChange} />
         </td>
         {//<td><button className='C04id_Header' >Export Image</button></td>
         }
     </div>
-    <div className='C04id_Editor'>
-      <h1>RGB2Black&White</h1>
-      <h1>Crop</h1>
-      <h1>Gray2Black</h1>
-      <h1>Marker</h1>
-      <h1>Convolution</h1>
-    </div>
+<U_Editor/>
+    
 
-<div className='C04id_Body' 
-style={SS_OpenPanel === 2 ? { width:'50%' } : {width:'100%'}}>
+<div id='C04id_Body' 
+style={{width:(SS_WidthImage).toString()+'px'}}
+//style={SS_WidthImage>0 ? {width:SS_WidthImage.toString()+'px'} : {width:'100%'}}
+>
 
   <div className='C04id_Image' 
-    style={{height:`calc(100vh - ${143+20}px)`}}
+    style={{
+      height:`calc(100vh - ${143+20}px)`,
+    }}
   >
   {
-    SS_Image && <img src={SS_Image} alt="Uploaded" />
+    SS_Image && <img 
+    src={SS_Image} 
+    alt="Uploaded" 
+    style={{
+      //width:SS_Zoom.toString()+'px',
+      height:`calc(${SS_Zoom} * 100vh - ${SS_Zoom*(143+40)}px)`,
+    }}/>
   }
   </div>
 
-  <div className='C04id_RightToolbar'
-    style={{height:`calc(100vh - ${143+20}px)`}}>
-    <button>Hello</button>
-    <h1>Hello There</h1>
-  </div>
-  </div>
 
+<U_Toolbar
+SS_Zoom={SS_Zoom}
+setSS_Zoom={setSS_Zoom}
+/>
+  </div>
     
     </div>
   );

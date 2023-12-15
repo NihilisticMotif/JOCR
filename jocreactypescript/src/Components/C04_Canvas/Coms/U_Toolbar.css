@@ -1,0 +1,19 @@
+:root{
+    --C04_ZoomButton:30px;
+    --C04_FintSize:20px;
+}
+
+.C04id_Toolbar {
+    width: var(--C04_RightToolW);
+    background-color: blueviolet;
+    display:inline-block;
+}
+
+.C04id_Toolbar button{
+    display: grid;
+    /*
+    width:  var(--C04_ZoomButton);
+    height: var(--C04_ZoomButton);
+    */
+    font-size: var(--C04_FintSize);
+}
