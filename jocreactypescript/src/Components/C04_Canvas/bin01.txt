@@ -1,0 +1,29 @@
+<div className='C04id_Image' 
+    style={{
+      width:`calc(100% - ${let_RightToolW}px)`,
+      height:`calc(100vh - ${143+20}px)`,
+    }}
+  >
+    <div style={{
+      backgroundColor:'greenyellow',
+      marginTop:`calc( ${0.5}*100vh - ${0.5*(143+20)}px - ${0.5*SS_Zoom} * 100vh + ${SS_Zoom*0.5*(143+40)}px )`,
+      height:`calc(${SS_Zoom} * 100vh - ${SS_Zoom*(143+40)}px)`,
+      }}>
+  {
+    SS_Image && <img 
+    src={SS_Image} 
+    alt="Uploaded" 
+    style={{
+      //height:'100%',
+      //width:`calc( ${SS_Zoom} * 500px)`,
+
+      height:`calc( ${SS_Zoom} * 200px)`,
+      marginTop:`calc( ${SS_Zoom*0.5} * 100% - ${SS_Zoom*0.5} * 200px)`,
+      width:`calc( ${SS_Zoom} * 100%)`,
+
+      objectFit: 'cover',
+      objectPosition:'0% 100%'
+    }}/>
+  }
+  </div>
+  </div>

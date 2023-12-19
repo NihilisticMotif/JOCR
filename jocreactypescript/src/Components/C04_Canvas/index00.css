@@ -2,11 +2,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Both for C04id_DivHeader, C_TopButton.tsx, header button
 ////////////////////////////////////////////////////////////////////////////////
-*/
+
 :root{
     --C04_RightToolW:100px;
 }
-
+*/
 #C04id_Canvas{
     display: grid;
 }
@@ -27,12 +27,8 @@
     width: 100%;
 }
 
-.C04id_Editor{
-    display: 'flex';
-}
-
 .C04id_Image {
-    width: calc(100% - var(--C04_RightToolW));
+    /*width: calc(100% - var(--C04_RightToolW));*/
     overflow-y: scroll;
     overflow-x: scroll;
 }

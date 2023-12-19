@@ -17,3 +17,16 @@
     */
     font-size: var(--C04_FintSize);
 }
+
+#C04id_Convolution{
+    background-color: aliceblue;
+    height: 100%;
+}
+
+.C04id_Zoom{
+    width:33px; 
+    height:30px;
+    font-size:20px;
+    margin:auto;
+    padding:auto;
+}
