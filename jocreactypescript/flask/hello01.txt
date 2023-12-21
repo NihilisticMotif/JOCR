@@ -1,0 +1,45 @@
+from flask import Flask, redirect, url_for, render_template
+# https://youtu.be/mqhxxeeTbu0?si=CCQejS_yN7ry8WG2
+
+'''
+# render_template
+# * It allow you to render html file in flask.
+
+def home():
+    return render_template(index.html)
+    # return render_template(index.html, name='CheChe')
+ 
+'''
+'''
+app = Flask(__name__)
+
+@app.route("/") # https:/.../ # any path
+# @app.route("/home") # https:/.../home
+def Hello():
+    return "<h1>Hello the World<h1>"
+
+@app.route("/<x>/") # https:/.../ # any path
+# @app.route("/home") # https:/.../home
+def Name(x):
+    return "<h1>"+x+"<h1>"
+    #try:
+    #    z=float(x)*w+b
+    #    if(z>0):
+    #        return z
+    #    else:
+    #        return 0
+    #except:
+    #    return "<h1>This is not language model.<h1>"
+
+@app.route('/admin')
+def admin():
+    return redirect(url_for("Name",x='Twitter'))
+
+if __name__ == "__main__":
+    app.run()
+    # Other options
+    # * debug=True
+'''
+'''
+python3 hello01.py
+'''

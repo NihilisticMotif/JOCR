@@ -38,12 +38,13 @@ setSS_OpenPanel:(S:0|1|2)=>void
   const [SS_Image, setSS_Image] = useState<string | null>(null);
   const [SS_Zoom,setSS_Zoom] = useState<number>(1)
   const [SS_WidthImage, setSS_WidthImage] = useState<number>(0);
-  const [SS_CropImage,setSS_CropImage]=useState<number[]>([
-    100,  // W
-    150,  // H
-    100,  // X
-    150,  // Y
-  ])
+  const [SS_HelloPy,setSS_HelloPy]=useState<string>('')
+  //const [SS_CropImage,setSS_CropImage]=useState<number[]>([
+  //  100,  // W
+  //  150,  // H
+  //  100,  // X
+  //  150,  // Y
+  //])
 
   const Ref_C04 = useRef<HTMLDivElement | null>(null);
   let let_RightToolW=100
@@ -51,7 +52,24 @@ setSS_OpenPanel:(S:0|1|2)=>void
   useEffect(() => {
       const let_CurrentWidthC04 = Ref_C04.current;
       let let_WidthC04=(document.getElementById('C04id_Canvas')as HTMLElement)
-      //'C04id_Image'
+      
+      //fetch("/cnn").then((res) =>
+      //      res.json().then((data) => {
+      //          setSS_HelloPy(data);
+      //      })
+      //  )
+        
+    try {
+    fetch("/cnn")
+        .then((res) => res.json())
+        .then((data) => {
+            //alert(JSON.stringify(data));
+            setSS_HelloPy(data.py);
+        });
+} catch (error) {
+    console.error("Error fetching data:", error);
+}
+    
       if (let_CurrentWidthC04) {
       const let_ObsImageWidth = new ResizeObserver(() => { 
         setSS_WidthImage(let_WidthC04!.offsetWidth-1)
@@ -62,7 +80,12 @@ setSS_OpenPanel:(S:0|1|2)=>void
           let_ObsImageWidth.disconnect();
       };
       }
+
+      
   }, []);
+
+  //let JSX_HelloPy=SS_HelloPy!.map(name=><h1>{name}</h1>)
+
   if(SS_OpenPanel==1){
   let_RightToolW=400
 }
@@ -130,8 +153,10 @@ else{
 //****************************************************************************
   return (
     <div id='C04id_Canvas' ref={Ref_C04}>
+      
     <div id='C04id_DivHeader' style={{paddingTop:'3px',paddingBottom:'3px'}}>
         {JSX_OpenC01}
+        
         <td><button className='C04id_Header'>{let_undo}</button></td>
         <td><button className='C04id_Header'>{let_cando}</button></td>
         <td><button className='C04id_Header' style={{whiteSpace:'nowrap'}}>Export Image</button></td>
@@ -163,27 +188,28 @@ style={{width:(SS_WidthImage).toString()+'px'}}
       overflowY:'hidden',
       overflowX:'scroll'
     }}>
-  {
+      
+  {/*
     SS_Image && <img 
     src={SS_Image} 
     alt="Uploaded" 
     style={{height:'100%'}
-    /*
-    {
-      // W
-      width: `calc( ${SS_Zoom} * ${SS_CropImage[0]}%)`,
-      // H
-      height:`${SS_CropImage[1]}%`,
-      // X
-      objectPosition:`${SS_CropImage[2]}% 0%`,
-      // Y
-      marginTop:`calc( ${SS_Zoom} * 100 - ${SS_Zoom} * ${SS_CropImage[3]}% )`,
-      // Utility
-      objectFit: 'cover',
-    }
-    */
+    
+    //{
+    //  // W
+    //  width: `calc( ${SS_Zoom} * ${SS_CropImage[0]}%)`,
+    //  // H
+    //  height:`${SS_CropImage[1]}%`,
+    //  // X
+    //  objectPosition:`${SS_CropImage[2]}% 0%`,
+    //  // Y
+    //  marginTop:`calc( ${SS_Zoom} * 100 - ${SS_Zoom} * ${SS_CropImage[3]}% )`,
+    //  // Utility
+    //  objectFit: 'cover',
+    //}
+    
   }/>
-  }
+  */}
   </div>
   </div>
 

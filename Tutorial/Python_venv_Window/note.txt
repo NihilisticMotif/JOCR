@@ -1,7 +1,7 @@
 How to create Virtual Environment in Window?
 * # https://stackoverflow.com/questions/8921188/issue-with-virtualenv-cannot-activate
 * $ pip3 install -U pip virtualenv
-* $ virtualenv --system-site-packages -p python ./venv
+* $ virtualenv --system-site-packages -p python3 ./venv
 
 How to Activate Virtual Environment?
 * # https://sparkbyexamples.com/python/python-activate-virtual-environment-venv/
@@ -34,4 +34,11 @@ How to deploy Virtual Environment?
 How to set up Python project and download important Python Package from another Git Repository?
 * # https://youtu.be/BXPzbH0LYz4?si=5MTmO3WHrpEqfXFj
 * hello
-dgdgdgggd
+
+How to create evnv?
+
+How to activate Python Virtual environment?
+* source venv/bin/activate
+
+How to install all requirements package?
+* pip install -r requirements.txt

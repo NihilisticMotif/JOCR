@@ -1,8 +1,8 @@
 
 Installation & Setup
  * pip3 install virtualenv
- * virtualenv kishiberohan # name env
- * source kishiberohan/bin/activate # or deactivate
+ * virtualenv venv # name env
+ * source venv/bin/activate # or deactivate
  * pip3 install django # install other librarys
  * django-admin # avaible django commands
  * django-admin startproject themindelectric # name the project, (4:00): https://youtu.be/QKHmVYuVn-k?si=_8LDqThgliQ9aL0q

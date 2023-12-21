@@ -1,8 +1,7 @@
 import ReactCrop, { Crop } from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './U_Editor.css'
-
 
 const U_Editor = (
 //****************************************************************************
@@ -19,6 +18,20 @@ const U_Editor = (
 // HOOK
 //****************************************************************************
   const [SS_IsCrop,setSS_IsCrop]=useState<boolean>(false)
+  const [SS_HelloPy,setSS_HelloPy]=useState<number>(55)
+
+useEffect(() => {        
+    try {
+    fetch("/"+SS_HelloPy.toString())
+        .then((res) => res.json())
+        .then((data) => {
+            //alert(JSON.stringify(data));
+            setSS_HelloPy(data.py);
+        });
+    } catch (error) {
+    console.error("Error fetching data:", error);
+    }
+  },[])
 
 //****************************************************************************
 // JSX 00
@@ -48,36 +61,52 @@ const U_Editor = (
   function f_CloseCrop(){
     setSS_IsCrop(false)
   }
+
+//****************************************************************************
+// FUNCTION 01: Compute
+//****************************************************************************
+  function f_ComputeSquare(){
+    let let_input = (document.getElementById('C04id_CropImageX1') as HTMLInputElement).value.toString();
+    //alert(let_input)
+    if(isNaN(parseFloat(let_input))){
+      alert('This is not a number!')
+    }
+    else{
+      // https://rapidapi.com/guides/fetch-api-react
+      fetch("/def_Ysquare/"+let_input.toString())
+        .then((res) => res.json())
+        .then((data) => {
+            //alert(JSON.stringify(data));
+            setSS_HelloPy(data.py);
+        });
+    }
+    }
+
+  function f_ComputeCube(){
+    let let_input = (document.getElementById('C04id_CropImageX1') as HTMLInputElement).value.toString();
+    //alert(let_input)
+    if(isNaN(parseFloat(let_input))){
+      alert('This is not a number!')
+    }
+    else{
+      // https://rapidapi.com/guides/fetch-api-react
+      fetch("/def_Ycube/"+let_input.toString())
+        .then((res) => res.json())
+        .then((data) => {
+            //alert(JSON.stringify(data));
+            setSS_HelloPy(data.py);
+        });
+    }
+    }
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
 return(
   <div className='C04id_Editor'>
-      <div className='C04id_EditCrop'>
-      <h1>Left X</h1>
-      <input id='C04id_CropImageX1'></input>
-      <h1>Right X</h1>
-      <input id='C04id_CropImageX2'></input>
-      </div>
-      <div className='C04id_EditCrop'>
-      <h1>Up Y</h1>
-      <input id='C04id_CropImageY1'></input>
-      <h1>Down Y</h1>
-      <input id='C04id_CropImageY2'></input>
-      </div>
-      <div className='C04id_EditCrop'>
-      {JSX_Crop}
-      </div>
-      
-      {/*<button>Word</button>
-      <button>Marker</button>
-      <button>Line-Width</button>
-      <button>Line-Color</button>
-      <button>Rectangle</button>
-      <button>Circle</button>
-      <button>Elaser</button>
-      <button>Reset</button>
-*/}
+    <input id='C04id_CropImageX1'></input>
+    <button onClick={f_ComputeSquare} style={{marginLeft:'2px'}}>Compute</button>
+    <button onClick={f_ComputeCube} style={{marginLeft:'2px'}}>Compute3</button>
+    <h1>{SS_HelloPy}</h1>
     </div>)
 }
 

@@ -1,3 +1,383 @@
+'''
+@app.route("/def_YSquare", method=["GET","POST"])#, strict_slashes=False)
+def def_YSquare():
+   if request.method == 'POST':
+        input = request.form['input']
+        return redirect(url_for('/'+str(int(input)**2)))
+   else:
+        return redirect(url_for('/0'))
+'''
+ 
+        headers: {'Content-Type': 'application/json'},
+ 
+JSON.stringify(
+ 
+'success',name = user
+ 
+'success',name = user
+ 
+        user = request.args.get('nm')
+ 
+,strict_slashes=False)#
+ 
+'input'
+ 
+input:
+ 
+        }
+ 
+          
+ 
+          'Accept': 'application/json',
+ 
+            //alert(JSON.stringify(data));
+ 
+      
+ 
+def_Update
+ 
+      }
+ 
+      catch (error) {
+      alert(error);
+      }
+ 
+      try{
+ 
+let let_Response = 
+ 
+.toString()
+ 
+'Error:', 
+ 
++SS_HelloPy.toString()
+ 
+ catch (error) {
+    console.error("Error fetching data:", error);
+    }
+ 
+    var=Input
+ 
+Input
+ 
+    if request.method == 'POST':
+ 
+    else:
+ 
+      //setSS_HelloPy(SS_HelloPy)
+ 
+            //alert(JSON.stringify(data));
+ 
+    }
+ 
+ catch (error) {
+    console.error("Error fetching data:", error);
+    }
+ 
+SS_HelloPy
+ 
+        return "<h1>Write Input<h1>"
+ 
+        print(Input)
+ 
+ // body data type must match "Content-Type" header
+ 
+Output**2
+ 
+{'py':
+ 
+
+@app.route('/api')
+def api():
+    response = {'message': 'Hello, World!'}
+    return jsonify(response)
+
+ 
+def_OutPut
+ 
+|string
+ 
+name='C04id_CropImageX1'
+ 
+parseFloat(
+ 
+parseFloat(
+ 
+    catch{
+      alert('This is not a number!')
+    }
+ 
+import APIService from '../Components/APIService'
+ 
+{/*<div className='C04id_EditCrop'>
+      <h1>Left X</h1>
+      <input id='C04id_CropImageX1'></input>
+      <h1>Right X</h1>
+      <input id='C04id_CropImageX2'></input>
+      </div>
+      <div className='C04id_EditCrop'>
+      <h1>Up Y</h1>
+      <input id='C04id_CropImageY1'></input>
+      <h1>Down Y</h1>
+      <input id='C04id_CropImageY2'></input>
+      </div>
+      <div className='C04id_EditCrop'>
+      {JSX_Crop}
+      </div>*/}
+      
+      {/*<button>Word</button>
+      <button>Marker</button>
+      <button>Line-Width</button>
+      <button>Line-Color</button>
+      <button>Rectangle</button>
+      <button>Circle</button>
+      <button>Elaser</button>
+      <button>Reset</button>
+*/}
+ 
+
+    article = Articles(
+        title=title,
+        body=body
+        )
+
+    db.session.add(article)
+    db.session.commit()
+ 
+    body = request.json['body']
+ 
+ww
+ 
+      const let_CurrentWidthC04 = Ref_C04.current;
+      let let_WidthC04=(document.getElementById('C04id_Canvas')as HTMLElement)
+      
+      //fetch("/cnn").then((res) =>
+      //      res.json().then((data) => {
+      //          setSS_HelloPy(data);
+      //      })
+      //  )
+ 
+*/}
+ 
+import cv2
+ 
+path[0]
+ 
+sage
+ 
+                alert(data)
+ 
+{SS_HelloPy}
+ 
+<p>{SS_HelloPy}</p>
+ 
+<p>{SS_HelloPy}</p>
+ 
+['']
+ 
+[]
+ 
+                alert(data)
+ 
+                // Setting a data from api
+ 
+'Heeh'#
+ 
+.name
+ 
+      <p>{SS_HelloPy.age}</p>
+      <p>{SS_HelloPy.programming}</p>
+ 
+{
+        name: "Errror",
+        age: "Errror",
+        programming: "Errror",
+    }
+ 
+'''
+ 
+http:/localhost:5000
+ 
+            
+ 
+.message
+ 
+.then((res) =>
+            res.json()
+ 
+'''
+ 
+'''
+ 
+CORS(app)
+ 
+from flask_cors import CORS
+ 
+"justdoit":"cd flask && venv/bin/flask run && cd .. && react-scripts start",
+ 
+react-scripts start
+ 
+                {/* Calling a data from setdata for showing */}
+ 
+                <p>{data.age}</p>
+                <p>{data.programming}</p>
+ 
+                
+ 
+// Setting a data from api
+                setdata({
+                    name: data.Name,
+                    age: data.Age,
+                    programming: data.programming,
+                });
+ 
+pythonscript
+ 
+  "comment":[
+    "'start': 'react-scripts start'"
+  ]
+ 
+'/api',method=['Get'])
+ 
+"proxy": "http://localhost:5001",
+ 
+    "server": "python3 hello00.py"
+ 
+"start": "react-scripts start"
+ 
+*
+ 
+"server": "python3 hello00.py"
+ 
+,port=5001
+ 
+/
+ 
+import "./Example01.css";
+ 
+                <p>{data.date}</p>
+ 
+                    date: data.Date,
+ 
+        date: "",
+ 
+        "Date":x, 
+ 
+import datetime
+ 
+x = datetime.datetime.now()
+ 
+ 
+{
+  "/auth/google": {
+    "target": 
+ 
+  }
+}
+ 
+http://127.0.0.1:5000
+ 
+  /*
+  "proxy":"http://127.0.0.1:5000",
+  */
+ 
+http://127.0.0.1:5000
+ 
+console.erro
+ 
+:{
+    "target"
+ 
+    "secure": false},
+ 
+.programming
+ 
+    }, []);
+ 
+                    date: data.Date,
+ 
+        "Date":x, 
+ 
+import datetime
+ 
+x = datetime.datetime.now()
+ 
+    }
+
+ 
+                    age: data.Age,
+ 
+      <p>{SS_HelloPy.age}</p>
+ 
+                    age: data.Age,
+ 
+        age: 0,
+ 
+        "Date":x, 
+ 
+import datetime
+ 
+x = datetime.datetime.now()
+ 
+.name
+ 
+alert(JSON.stringify(res))
+ 
+{}
+ 
+.name
+ 
+.name
+ 
+<string[]>
+ 
+['Filip']
+ 
+JSX_HelloPy
+ 
+API00
+ 
+API00/
+ 
+fetch('/API00').then(
+        res=>res.json()
+      ).then(
+        data => {
+          setSS_HelloPy(data)
+          //alert(JSON.stringify(data))
+        }
+      )
+ 
+fetch('/API00').then(
+        res=>res.json()
+      ).then(
+        data => {
+          setSS_HelloPy(data)
+          //alert(JSON.stringify(data))
+        }
+ 
+'Jojo'
+ 
+1,2,3,'infty'
+ 
+('CheChe')
+ 
+,w=1,b=0
+ 
+    s=str(type(x))
+ 
+def ReLU(x,w=1,b=0):
+    z=x*w+b
+    if(z>0):
+        return z
+    else:
+        return 0
+
+ 
+mem
+ 
+/*
+ 
 ,marginRight:'2px'
  
 style={{marginRight:'2px'}}
