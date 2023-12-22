@@ -1,3 +1,472 @@
+{JSX_Setting}
+ 
+Type
+ 
+</td>
+ 
+  // SS_EditSetting = Edit Image Setting
+
+ 
+    
+ 
+    
+ 
+  <button className='C04id_Button' style={{marginLeft:'10px'}}>Shape</button>
+ 
+    */}
+ 
+    {/*
+ 
+/I/None
+ 
+ style={nbStyle.logo} 
+ 
+    <button onClick={f_Gray} className='C04id_Button'>Font</button>
+ 
+    <button onClick={f_Gray} className='C04id_Button'>Rectangle</button>
+    <button onClick={f_Gray} className='C04id_Button'>Upside</button>
+ 
+    <input></input>
+ 
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000"></input>
+ 
+<button onClick={f_Gray} className='C04id_Button'>Upside</button>
+ 
+<button onClick={f_Gray} className='C04id_Button'>Crop</button>
+ 
+<button onClick={f_Gray} className='C04id_Button'>Color</button>
+ 
+<button onClick={f_Gray} className='C04id_Button'>Upside</button>
+ 
+<h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Edit Image</h1>
+ 
+ style={{display:'inline-block', backgroundColor:'#33AAAA',marginLeft:'10px',margin:'auto'}}
+ 
+    <button onClick={f_RGB}  className='C04id_Button'>RGB</button>
+ 
+?IsRGB=
+ 
+IsRGB=
+ 
+.file['file']#
+ 
+          //formData.append('IsRGB', SS_IsRGB ? 'true' : 'false');
+          alert(JSON.stringify(formData))
+          alert(SS_IsRGB.toString())
+ 
+setSS_IsRGB(false)
+ 
+,port=5001)
+ 
+          formData.append('IsRGB', SS_IsRGB);
+ 
+    //const res = await fetch('/def_TheGreatestShowMustGoOn');
+    //const imageBlob = await res.blob();
+    //const imageObjectURL = URL.createObjectURL(imageBlob);
+    //setSS_Image(imageObjectURL);
+ 
+SS_Image,SS_ImageFile,SS_IsRGB
+ 
+      if(SS_ImageFile!==null){
+
+      }
+ 
+        setSS_ImageFile(file)
+        /*
+ 
+    const formData = new FormData();
+        formData.append('file', SS_ImageFile);
+
+        fetch('/def_OpenCV', {
+            method: 'POST',
+            body: formData,
+        })
+        .then((response) => {
+            return response.blob();
+        })
+        .then((data) => {
+            const imageURL = URL.createObjectURL(data);
+            setSS_Image(imageURL);
+        })
+        .catch((error) => {
+            console.error('Error uploading file:', error);
+        });
+ 
+Image
+ 
+Image
+ 
+  const Ref_C04 = useRef<HTMLDivElement | null>(null);
+  let let_RightToolW=100
+ 
+  //let JSX_HelloPy=SS_HelloPy!.map(name=><h1>{name}</h1>)
+ 
+    //alert(JSON.stringify(event.target.files))
+ 
+            // Assuming the response is an image
+ 
+            // Create a Data URL from the blob and set it as the source for an image element
+ 
+    /*
+    if (file) {
+      const let_ImageURL = URL.createObjectURL(file);
+      let let_path = file.name || "Path information not available";
+      alert(let_path)
+      setSS_Image(let_ImageURL);
+    }
+    */
+  
+    /*
+    fetch('/def_TheGreatestShowMustGoOn')
+        .then((res) => res.json())
+        .then((data) => {
+            //alert(JSON.stringify(data));
+            const base64 = btoa(new Uint8Array(data).reduce((data, byte) => data + String.fromCharCode(byte), ''));
+            const let_ImageURL = `data:image/png;base64,${base64}`;
+            setSS_Image(let_ImageURL);
+            //setSS_Image(data);
+        })
+        .catch((error) => {
+            console.error('Error fetching image:', error);
+            // Handle the error appropriately
+        })
+  */
+    // by ChatGPT
+    /*
+    const file = event.target.files?.[0];
+    alert(JSON.stringify(event.target.files))
+    if (file) {
+      const let_ImageURL = URL.createObjectURL(file);
+      //setSS_Image(let_ImageURL);
+      try {
+        //alert('Bam')
+        fetch("/Image/"+let_ImageURL.toString())
+            .then((res) => res.json())
+            .then((data) => {
+                setSS_Image(data.py);
+            });
+        } catch (error) {
+        console.error("Error fetching data:", error);
+        }
+    }
+  */
+ 
+//style={SS_WidthImage>0 ? {width:SS_WidthImage.toString()+'px'} : {width:'100%'}}
+ 
+      //marginTop:`calc(100vh - ${(143+20)}px - 100vh + ${(143+40)}px )`,
+      //height:`calc(${SS_Zoom} * 100vh - ${SS_Zoom*(143+40)}px)`,
+ 
+    
+    //{
+    //  // W
+    //  width: `calc( ${SS_Zoom} * ${SS_CropImage[0]}%)`,
+    //  // H
+    //  height:`${SS_CropImage[1]}%`,
+    //  // X
+    //  objectPosition:`${SS_CropImage[2]}% 0%`,
+    //  // Y
+    //  marginTop:`calc( ${SS_Zoom} * 100 - ${SS_Zoom} * ${SS_CropImage[3]}% )`,
+    //  // Utility
+    //  objectFit: 'cover',
+    //}
+    
+ 
+  const Ref_C04 = useRef<HTMLDivElement | null>(null);
+  let let_RightToolW=100
+ 
++100
+ 
+    <div style={{display:'inline-block', backgroundColor:'#33AAAA'}}>
+ 
+    </div>
+ 
+    <hr/>
+ 
+    function f_Relu(x:number):number{
+      if(x>1){
+        return x
+      }
+      else{
+        return 1
+      }
+    }
+ 
+,margin:'auto'
+ 
+style={{marginTop:'10px'}}
+ 
+      some other content
+ 
+e
+ 
+,marginRight:'10px'
+ 
+,marginRight:'2px'
+ 
+,marginLeft:'2px'
+ 
+    <div style={{display:'flex',backgroundColor:'black',borderLeft:'6px solid green'}}></div>
+
+ 
+<div style={{display:'inline-block', backgroundColor:'#33AAAA',marginLeft:'10px'}}>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Color</h1>
+    <button onClick={f_ResetZoom} className='C04id_Button'>Gray</button>
+    <button onClick={f_ResetZoom} className='C04id_Button'>RGB</button>
+    </div>
+ 
+<h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Zoom: {SS_Zoom}</h1>
+ 
+    <div style={{display:'flex',borderLeft: '6px solid green'}}></div>
+ 
+  
+ 
+  height: 500px;
+ 
+    <hr/>
+ 
+</div>
+ 
+display:'inline-block',
+ 
+<h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Gray Threshold</h1>
+    <h1 className='C04id_Button'>0-100</h1>
+    <h1>100</h1>
+ 
+ = 100<
+ 
+<div style={{backgroundColor:'red'}}></div>
+ 
+ Setting
+ 
+    margin: auto;
+    padding: auto;
+ 
+    padding: auto;
+ 
+</div>
+ 
+style={{width:'60px',marginTop:'5px',fontSize:'15px'}}
+ 
+
+    margin:auto;
+    padding:auto;
+ 
+    width:22px; 
+    height:20px;
+ 
+    /*
+    width:  var(--C04_ZoomButton);
+    height: var(--C04_ZoomButton);
+    */
+    
+ 
+font-size: var(--C04_FintSize);
+ 
+marginTop:'10px'
+ 
+    font-size:20px;
+ 
+      backgroundColor:'greenyellow'
+ 
+backgroundColor:'greenyellow'}
+ 
+style={{width:'70px',marginTop:'5px'}}
+ 
+    font-size:20px;
+ 
+*0.5
+ 
+0.5*
+ 
+*f_Relu(SS_Zoom)
+ 
+*0.5
+ 
+0.5*
+ 
+0.5*
+ 
+0.5*
+ 
+      height:`100%`,
+      width:`100%`,
+ 
+      overflowX:'scroll'
+ 
+            // Handle the error appropriately
+ 
+        .then((response) => response.json())
+        .then((data) => {
+            // Process the response data as needed
+            setSS_Image(data.py);
+        })
+        .catch((error) => {
+            alert('Error uploading file:'+JSON.stringify(error));
+            // Handle the error appropriately
+        });
+ 
+  }
+ 
+      
+    /*
+    
+ 
+const file = event.target.files?.[0];
+    //alert(JSON.stringify(event.target.files))
+    if (file) {
+      const let_ImageURL = URL.createObjectURL(file);
+      //setSS_Image(let_ImageURL);
+    }
+ 
+
+.C04id_Image {
+    /*width: calc(100% - var(--C04_RightToolW));*/
+
+}
+
+ 
+Reverse
+ 
+Reverse
+ 
+    /*
+    const file = event.target.files?.[0];
+    //alert(JSON.stringify(event.target.files))
+    if (file) {
+      const let_ImageURL = URL.createObjectURL(file);
+      //setSS_Image(let_ImageURL);
+    }
+  */
+ 
+    overflow-y: scroll;
+    overflow-x: scroll;
+ 
+    function f_ReverseRelu(x:number):number{
+      if(x>1){
+        return x
+      }
+      else{
+        return 1
+      }
+    }
+ 
+0.5*
+ 
+${0.5} *
+ 
+ ${0.5}*
+ 
+SS_Zoom*
+ 
+*SS_Zoom
+ 
+*f_ReverseRelu(SS_Zoom)
+ 
+*f_ReverseRelu(SS_Zoom)
+ 
+${SS_Zoom} * 
+ 
+overflow-x: scroll;
+ 
+overflow-x: scroll;
+ 
+  // Dynamic CSS Setting for Image Width
+ 
+const imageUrl = "https://i.imgur.com/fHyEMsl.jpg";
+ 
+const imageUrl = "https://i.imgur.com/fHyEMsl.jpg";
+ 
+fetch('/def_TheGreatestShowMustGoOn')
+        .then((res) => res.json())
+        .then((data) => {
+            //alert(JSON.stringify(data));
+            setSS_Image(data);
+        });
+ 
+/*
+ 
+  };
+ 
+      //try {
+      //  //alert('Bam')
+      //  fetch("/Image/"+let_ImageURL.toString())
+      //      .then((res) => res.json())
+      //      .then((data) => {
+      //          setSS_Image(data.py);
+      //      });
+      //  } catch (error) {
+      //  console.error("Error fetching data:", error);
+      //  }
+ 
+    
+    # Set appropriate content type in response headers
+ 
+    
+    # Convert the processed image to bytes
+ 
+    
+    # Apply grayscale conversion
+ 
+    
+    # Read the original image
+ 
+
+    #response = Response(img)# content_type='image/png')
+
+ 
+
+    return jsonify({'py':img})
+
+ 
+  useEffect(() => { 
+    
+  },[SS_Image])
+ 
+ment.getElementById('C04id_Canvas')as HTMLElement)
+ 
+      const let_CurrentWidthC04 = Ref_C04.current;
+      let let_WidthC04=(docu
+ 
+if(typeof SS_Image === 'string')       
+    {try {
+    fetch("/Image/"+SS_Image.toString())
+        .then((res) => res.json())
+        .then((data) => {
+            setSS_Image(data.py);
+        });
+    } catch (error) {
+    console.error("Error fetching data:", error);
+    }}
+ 
+      
+      //fetch("/cnn").then((res) =>
+      //      res.json().then((data) => {
+      //          setSS_HelloPy(data);
+      //      })
+      //  )
+        
+    try {
+    fetch("/cnn")
+        .then((res) => res.json())
+        .then((data) => {
+            //alert(JSON.stringify(data));
+            setSS_HelloPy(data.py);
+        });
+} catch (error) {
+    console.error("Error fetching data:", error);
+}
+ 
+from PIL import Image
+import cv2
+from kernel import canny,get_grayscale,sharpen,erode,dilate,opening,ShowMustGoOn,WhiteBackGround
+
+ 
+            //alert(JSON.stringify(data));
+ 
+if(typeof SS_Image !== 'null')
+ 
+  const [SS_HelloPy,setSS_HelloPy]=useState<string>('')
+ 
 '''
 @app.route("/def_YSquare", method=["GET","POST"])#, strict_slashes=False)
 def def_YSquare():

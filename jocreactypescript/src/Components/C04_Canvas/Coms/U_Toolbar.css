@@ -1,6 +1,7 @@
 :root{
     --C04_ZoomButton:30px;
-    --C04_FintSize:20px;
+    --C04_FontSize:20px;
+    --C04_FontSize01: 17px;
 }
 
 .C04id_Toolbar {
@@ -11,11 +12,6 @@
 
 .C04id_Toolbar button{
     display: grid;
-    /*
-    width:  var(--C04_ZoomButton);
-    height: var(--C04_ZoomButton);
-    */
-    font-size: var(--C04_FintSize);
 }
 
 #C04id_Convolution{
@@ -24,9 +20,36 @@
 }
 
 .C04id_Zoom{
-    width:33px; 
-    height:30px;
-    font-size:20px;
     margin:auto;
     padding:auto;
+    font-size: var(--C04_FontSize01);
+}
+
+.C04id_Div{
+    display: 'inline-block';
+    background-color: aquamarine;
+}
+
+.C04id_Button{
+    width:60px;
+    margin-top:5px;
+    font-size: var(--C04_FontSize01);
+}
+
+.C04id_VrticalLine{
+    border-left: thick solid #ff0000;
+}
+
+.C04id_EditImage{
+    display:grid;
+    grid-template-columns: repeat(3, 50px);
+}
+.C04id_EditImage button{
+    margin-left:10px;
+    width:50px
+}
+
+.C04id_EditSetting {
+    display: grid;
+    grid-template-columns: repeat(2, 70px);
 }

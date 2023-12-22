@@ -38,38 +38,41 @@ setSS_OpenPanel:(S:0|1|2)=>void
   const [SS_Image, setSS_Image] = useState<string | null>(null);
   const [SS_Zoom,setSS_Zoom] = useState<number>(1)
   const [SS_WidthImage, setSS_WidthImage] = useState<number>(0);
-  const [SS_HelloPy,setSS_HelloPy]=useState<string>('')
-  //const [SS_CropImage,setSS_CropImage]=useState<number[]>([
-  //  100,  // W
-  //  150,  // H
-  //  100,  // X
-  //  150,  // Y
-  //])
+  const [SS_IsRGB,setSS_IsRGB]=useState<boolean>(true)
+  const [SS_ImageFile,setSS_ImageFile]=useState<null|File>(null)
+  const [SS_UseEffect,setSS_UseEffect]=useState<boolean>(true)
+  const let_fetchImage = async () => {
+    // https://stackoverflow.com/questions/73678855/fetch-and-display-image-from-api-react
+        if (SS_ImageFile && SS_UseEffect===true) {
+          const formData = new FormData();
+          formData.append('file', SS_ImageFile);
+          fetch('/def_OpenCV&'+SS_IsRGB.toString(), {
+              method: 'POST',
+              body: formData,
+          })
+          .then((response) => {
+              return response.blob();
+          })
+          .then((data) => {
+              const imageURL = URL.createObjectURL(data);
+              setSS_Image(imageURL);
+          })
+          .catch((error) => {
+              console.error('Error uploading file:', error);
+          });
+          setSS_UseEffect(false)
+          }
+  };
 
   const Ref_C04 = useRef<HTMLDivElement | null>(null);
   let let_RightToolW=100
-  // Dynamic CSS Setting for Image Width
   useEffect(() => {
+//****************************************************************************
+      let_fetchImage()
+//****************************************************************************
       const let_CurrentWidthC04 = Ref_C04.current;
       let let_WidthC04=(document.getElementById('C04id_Canvas')as HTMLElement)
-      
-      //fetch("/cnn").then((res) =>
-      //      res.json().then((data) => {
-      //          setSS_HelloPy(data);
-      //      })
-      //  )
-        
-    try {
-    fetch("/cnn")
-        .then((res) => res.json())
-        .then((data) => {
-            //alert(JSON.stringify(data));
-            setSS_HelloPy(data.py);
-        });
-} catch (error) {
-    console.error("Error fetching data:", error);
-}
-    
+
       if (let_CurrentWidthC04) {
       const let_ObsImageWidth = new ResizeObserver(() => { 
         setSS_WidthImage(let_WidthC04!.offsetWidth-1)
@@ -82,9 +85,8 @@ setSS_OpenPanel:(S:0|1|2)=>void
       }
 
       
-  }, []);
+  }, [SS_Image,SS_ImageFile,SS_IsRGB]);
 
-  //let JSX_HelloPy=SS_HelloPy!.map(name=><h1>{name}</h1>)
 
   if(SS_OpenPanel==1){
   let_RightToolW=400
@@ -107,14 +109,32 @@ else{
 // Function 00: Import Image
 //****************************************************************************
   const f_ImageChange = (event: ChangeEvent<HTMLInputElement>) => {
-    // by ChatGPT
+    // By ChatGPT
+    setSS_UseEffect(true)
     const file = event.target.files?.[0];
+        if (file) {
+        setSS_ImageFile(file)
+        /*
+        const formData = new FormData();
+        formData.append('file', file);
 
-    if (file) {
-      const let_ImageURL = URL.createObjectURL(file);
-      setSS_Image(let_ImageURL);
-    }
-  };
+        fetch('/def_OpenCV', {
+            method: 'POST',
+            body: formData,
+        })
+        .then((response) => {
+            return response.blob();
+        })
+        .then((data) => {
+            const imageURL = URL.createObjectURL(data);
+            setSS_Image(imageURL);
+        })
+        .catch((error) => {
+            console.error('Error uploading file:', error);
+        });*/
+        }
+  }
+
 //****************************************************************************
 // FUNCTION_01: Open C01_Table
 //****************************************************************************
@@ -127,15 +147,6 @@ else{
     function f_CloseC04(){
         // 0 = have only C01
         setSS_OpenPanel(0)
-    }
-
-    function f_ReverseRelu(x:number):number{
-      if(x>1){
-        return x
-      }
-      else{
-        return 1
-      }
     }
   
 //****************************************************************************
@@ -171,45 +182,33 @@ else{
 
 <div id='C04id_Body' 
 style={{width:(SS_WidthImage).toString()+'px'}}
-//style={SS_WidthImage>0 ? {width:SS_WidthImage.toString()+'px'} : {width:'100%'}}
 >
 
   <div className='C04id_Image' 
     style={{
       width:`calc(100% - ${let_RightToolW}px)`,
       height:`calc(100vh - ${143+20}px)`,
-      overflowX:'hidden'
+      overflowX:'hidden',
+      overflowY:'hidden',
     }}
   >
   <div style={{
-      marginTop:`calc( ${0.5*f_ReverseRelu(SS_Zoom)}*100vh - ${0.5*(143+20)*f_ReverseRelu(SS_Zoom)}px - ${0.5*SS_Zoom} * 100vh + ${SS_Zoom*0.5*(143+40)}px )`,
-      height:`calc(${SS_Zoom} * 100vh - ${SS_Zoom*(143+40)}px)`,
+      marginTop:`calc( ${(1/SS_Zoom)}*100vh - ${(1/SS_Zoom)*(143+20)}px - ${(1/SS_Zoom)} * 100vh + ${(1/SS_Zoom)*(143+40)}px -10 )`,
+      height:`calc(100vh - ${143+20}px)`,
       backgroundColor:'greenyellow',
-      overflowY:'hidden',
+      overflowY:'scroll',
       overflowX:'scroll'
     }}>
       
-  {/*
+  {
     SS_Image && <img 
     src={SS_Image} 
     alt="Uploaded" 
-    style={{height:'100%'}
-    
-    //{
-    //  // W
-    //  width: `calc( ${SS_Zoom} * ${SS_CropImage[0]}%)`,
-    //  // H
-    //  height:`${SS_CropImage[1]}%`,
-    //  // X
-    //  objectPosition:`${SS_CropImage[2]}% 0%`,
-    //  // Y
-    //  marginTop:`calc( ${SS_Zoom} * 100 - ${SS_Zoom} * ${SS_CropImage[3]}% )`,
-    //  // Utility
-    //  objectFit: 'cover',
-    //}
-    
-  }/>
-  */}
+    style={{
+      height:`calc( ${SS_Zoom} * 100%)`
+  }}
+  />
+  }
   </div>
   </div>
 
@@ -217,7 +216,9 @@ style={{width:(SS_WidthImage).toString()+'px'}}
 <U_Toolbar
 SS_Zoom={SS_Zoom}
 setSS_Zoom={setSS_Zoom}
+setSS_IsRGB={setSS_IsRGB}
 TotalWidth={let_RightToolW}
+setSS_UseEffect={setSS_UseEffect}
 />
   </div>
     
