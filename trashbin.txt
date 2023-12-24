@@ -1,3 +1,2040 @@
+              //alert(ss_2DTable[i])
+ 
+parseFloat(
+ 
+===false
+ 
+          //alert(SS_2DMatrix)
+ 
+          //alert(SS_2DMatrix)
+ 
+              
+              let ss_2DMatrix=[...SS_2DMatrix];
+              ss_2DMatrix[i]=parseFloat(let_input);
+              setSS_2DMatrix(ss_2DMatrix);
+              (document.getElementById('C04id_2DMatrix'+i.toString()) as HTMLInputElement).value = let_input;
+ 
+ss_2DMatrix[i]=parseFloat(ss_2DTable[i])
+ 
+ing()) as HTMLInputElement).value.toString();
+ 
+            let let_input=(document.getElementById('C04id_2DMatrix'+i.toStr
+ 
+        /*
+        if(isNaN(parseFloat(let_input))===false){
+          let ss_2DMatrix=[...SS_2DMatrix];
+          ss_2DMatrix[id]=parseFloat(let_input);
+          setSS_2DMatrix(ss_2DMatrix);
+          (document.getElementById('C04id_2DMatrix'+id.toString()) as HTMLInputElement).value = let_input;
+        }*/
+ 
+        //alert(let_input);
+        //(document.getElementById('C04id_2DMatrix'+id.toString()) as HTMLInputElement).value = let_input;
+ 
+DMatrix
+ 
+1,0,0,1
+ 
+(document.getElementById('C04id_2DMatrix'+id.toString()) as HTMLInputElement).value = let_input;
+ 
+parseFloat(
+ 
+                  // Convert the matched group to a number and return it
+ 
+
+              // Check if there is a match
+ 
+          // Use the exec method to extract the matched groups
+ 
+        else if(isNaN(parseFloat(let_input.split('.')[0]))===false && isNaN(parseFloat(let_input.split('.')[])))
+ 
+{
+          alert('This is not a number!')
+        }
+        else{
+ 
+let ss_2DMatrix=[...SS_2DMatrix];
+ 
+        ss_2DMatrix[id]=let_input;
+ 
+let ss_2DMatrix=[...SS_2DMatrix]
+ 
+let ss_2DMatrix=[...SS_2DMatrix]
+ 
+        alert(let_input)
+ 
+                    
+ 
+React, 
+ 
+ , useEffect, useRef , useLayoutEffect
+ 
+ChangeEvent, 
+ 
+, backgroundColor:'#33AAAA'
+ 
+style={{width:let_Width}}
+ 
+.C04id_Convolution div{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+ 
+    width:100%;
+ 
+</div>
+ 
+className='C04id_Convolution'
+ 
+,marginTop:'0px'
+ 
+    JSX_Kernals.map(jj=>{return (jj)}
+ 
+    JSX_Kernals=[]
+ 
+    JSX_Con.push(JSX_Kernals)
+ 
+    JSX_Con.push(';')
+ 
+JSX_Kernals.map((jj)=>{return (<tr>{jj}</tr>)})
+ 
+JSX_Kernals
+ 
+{JSX_Kernals}
+ 
+ee
+ 
+{ee}
+ 
+let JSX_Convolution=[]
+ 
+volution
+ 
+volution
+ 
+{JSX_Kernal('112')}
+ 
+s:string
+ 
+let let_i=0
+ 
+,
+ 
+.C04id_Zoom{
+    margin:auto;
+    padding:auto;
+    font-size: var(--C04_FontSize01);
+}
+ 
+
+#C04id_Convolution{
+    background-color: rgb(145, 18, 136);
+    height: 100%;
+}
+ 
+    function f_Gray(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(false)
+    }
+
+    function f_RGB(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(true)
+    }
+ 
+setSS_UseEffect,
+setSS_IsRGB
+ 
+setSS_UseEffect:(S:boolean)=>void
+setSS_IsRGB:(S:boolean)=>void
+ 
+<div>
+  <table>
+    <tr>
+      <td><input></input></td>
+      <td><input></input></td>
+    </tr>
+    <tr>
+      <td><input></input></td>
+      <td><input></input></td>
+    </tr>
+  </table>
+  </div>
+  <div style={{display:'flex'}}>
+    <button>Ok</button>
+    <button>Reset</button>
+  </div>
+ 
+</div>
+ 
+</div>
+ 
+
+etting,setSS_EditSetting]=useState<0|1>(0)
+ 
+
+  //const [SS_IsShapeS
+ 
+/*
+Note
+* SS_IsShapeSetting = Edit Image Setting
+Shape
+* Attribute
+* 1. Type 
+* 2. Line Color
+* 3. Line Width
+* 4. Shape Color
+* Type
+* 1. Rectangle
+* 2. Circle
+* 3. Line
+* 4. X Line
+* 5. Y Line
+
+Text
+* Attribute
+* 1. Font Name
+* 2. Font Size
+* 3. Color
+* 4. Utility
+*/
+ 
+<div style={{display:'inline-block', backgroundColor:'#33AAAA',marginLeft:'10px',margin:'auto'}}>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Color</h1>
+    <button onClick={f_Gray} className='C04id_Button'>Gray</button>
+    <button onClick={f_RGB}  className='C04id_Button'>RGB</button>
+    </div>
+ 
+<div style={{display:'inline-block', backgroundColor:'#33AAAA',marginLeft:'10px',margin:'auto'}}>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Color</h1>
+    <button onClick={f_Gray} className='C04id_Button'>Gray</button>
+    <button onClick={f_RGB}  className='C04id_Button'>RGB</button>
+    </div>
+ 
+  
+  useEffect(()=>{
+  },[])
+ 
+  
+    function f_Gray(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(false)
+    }
+
+    function f_RGB(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(true)
+    }
+ 
+(fal
+ 
+    <hr/>
+ 
+<hr/>
+ 
+import U2_Threshold from './Coms/U2_Threshold';
+import U2_Convolution from './Coms/U2_Convolution';
+ 
+Toolbar
+ 
+    {//****************************************************************************
+    // Zoom Image
+    //****************************************************************************
+    }
+    <div style={{display:'inline-block',margin:'auto'}}>
+      <h1 className='C04id_Zoom' style={{marginTop:'0px'}}>Zoom: {SS_Zoom}</h1>
+      <div style={{display:'flex',marginTop:'0px'}}>
+    <button onClick={f_PosZoom} className='C04id_Zoom' style={{width:'28px'}}>+</button>
+    <button onClick={f_NegZoom} className='C04id_Zoom' style={{width:'28px'}}>-</button>
+      </div>
+    <button onClick={f_ResetZoom} className='C04id_Button' >Reset</button>
+    </div>
+
+    <div style={{borderLeft:'3px solid #ffffff',height:'110px'}}>
+    </div>
+
+ 
+    {//****************************************************************************
+    // Zoom Image
+    //****************************************************************************
+    }
+    
+ 
+<div style={{display:'inline-block',margin:'auto'}}>
+      <h1 className='C04id_Zoom' style={{marginTop:'0px'}}>Zoom: {SS_Zoom}</h1>
+      <div style={{display:'flex',marginTop:'0px'}}>
+    <button onClick={f_PosZoom} className='C04id_Zoom' style={{width:'28px'}}>+</button>
+    <button onClick={f_NegZoom} className='C04id_Zoom' style={{width:'28px'}}>-</button>
+      </div>
+    <button onClick={f_ResetZoom} className='C04id_Button' >Reset</button>
+    </div>
+
+    <div style={{borderLeft:'3px solid #ffffff',height:'110px'}}>
+    </div>
+ 
+//****************************************************************************
+// FUNCTION_00: Zoom setting
+//****************************************************************************
+    function f_PosZoom(){
+      if(SS_Zoom<10){
+        let ss_Zoom=SS_Zoom 
+        let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+        setSS_Zoom(let_Zoom)
+      }
+    }
+    function f_NegZoom(){
+        if(SS_Zoom>0.1){
+        let ss_Zoom=SS_Zoom 
+        let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+        setSS_Zoom(let_Zoom)
+    }}
+    function f_ResetZoom(){
+        setSS_Zoom(1)
+    }
+ 
+setSS_IsRGB:(S:boolean)=>void
+setSS_UseEffect:(S:boolean)=>void
+SS_OpenPanel:0|1|2
+TotalWidth:number
+ 
+setSS_IsRGB,
+setSS_UseEffect,
+SS_OpenPanel,
+TotalWidth,
+ 
+SS_Zoom:number,
+setSS_Zoom:(S:number)=>void
+setSS_IsRGB:(S:boolean)=>void
+setSS_UseEffect:(S:boolean)=>void
+SS_OpenPanel:0|1|2
+TotalWidth:number
+ 
+SS_Zoom,
+setSS_Zoom,
+setSS_IsRGB,
+setSS_UseEffect,
+SS_OpenPanel,
+TotalWidth,
+ 
+    function f_PosZoom(){
+      if(SS_Zoom<10){
+        let ss_Zoom=SS_Zoom 
+        let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+        setSS_Zoom(let_Zoom)
+      }
+    }
+    function f_NegZoom(){
+        if(SS_Zoom>0.1){
+        let ss_Zoom=SS_Zoom 
+        let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+        setSS_Zoom(let_Zoom)
+    }}
+    function f_ResetZoom(){
+        setSS_Zoom(1)
+    }
+
+ 
+<hr/>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Edit Image</h1>
+    <div className='C04id_EditImage'>
+    <button onClick={f_Gray} className='C04id_Button'><img  src={logo_Crop} style={{width:'100%',height:'100%'}} alt="fireSpot"/></button>
+    <button onClick={f_Gray} className='C04id_Button'><img  src={logo_Shape} style={{width:'100%',height:'100%'}} alt="fireSpot"/></button>
+    <button onClick={f_Gray} className='C04id_Button'><img  src={logo_UpsideDown} style={{width:'100%',height:'100%'}} alt="fireSpot"/></button>
+    <button onClick={f_Gray} className='C04id_Button'>Text</button>
+    <button className='C04id_Button'>Ok</button>
+    <button className='C04id_Button' style={{fontSize:'16px',paddingLeft:'0px'}}>Reset</button>
+    </div>
+ 
+import logo_Crop from './logo_Crop.png'
+// https://stackoverflow.com/questions/43823289/how-to-import-image-svg-png-in-a-react-component
+// https://www.flaticon.com/free-icon/crop_4818201?term=crop&page=1&position=4&origin=tag&related_id=4818201
+import logo_Shape from './logo_Shape.png'
+import logo_UpsideDown from './logo_UpsideDown.png'
+ 
+      {JSX_Ok}
+ 
+      {JSX_Ok}
+ 
+      {JSX_Ok}
+ 
+      {JSX_Ok}
+ 
+      {JSX_Ok}
+ 
+      {JSX_Ok}
+ 
+      {JSX_Ok}
+ 
+      {JSX_Ok}
+ 
+
+  let JSX_Ok=<div className='C04id_EditOk'> <button style={{marginLeft:'10px'}}>Ok</button> <button>Reset</button> </div>
+
+ 
+        <h1>112</h1>
+ 
+<h1>{s}</h1>
+ 
+<table>
+<tr>
+  <td>3</td>
+  <td>3</td>
+</tr>
+</table>
+ 
+  <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{display:'flex',marginLeft:'20px',marginTop:'10px'}}>255</h1>
+    <button style={{marginTop:'0px',marginRight:'15px'}}>Add Threshold</button>
+  </div>
+ 
+
+  let JSX_Threshold=<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'200px',width:'190px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+      <button style={{width:'25px',height:'25px',marginLeft:'115px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000"></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+ 
+  
+
+  <h1 className='C04id_Zoom' style={{marginTop:'10px',display:'flex',marginLeft:'40px'}}>0</h1>
+ 
+{// Original Gray Scale Indicator  
+}
+    <div 
+    style={{
+    backgroundImage: 'linear-gradient(white, black)',
+    marginTop:'10px',
+    marginLeft:'40px',
+    width:'40px',
+    height:`calc(100vh - ${ (143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+    backgroundColor:'green',
+    marginTop:'10px',
+    width:'3px',
+    height:`calc(100vh - ${ (143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+    backgroundImage: 'linear-gradient(white, black)',
+    marginTop:'10px',
+    marginLeft:'0px',
+    width:'50px',
+    height:`calc(100vh - ${ (143+20+200)}px )`
+    }}>
+    </div>
+{// Gray Scale Setting
+}
+    {JSX_Threshold}    
+  </div>  
+ 
+<div
+  style={{
+  display:'flex'
+  }}
+  >
+ 
+,paddingLeft:'0px'
+ 
+export default U_Threshold
+ 
+const U_Threshold = (
+ 
+ - 40px
+ 
+ - 40px
+ 
+ - 40px
+ 
+,marginTop:'10px'
+ 
+ className='C04id_EditOkSet'
+ 
+React, 
+ 
+, useRef 
+ 
+React, 
+ 
+
+import 'react-image-crop/dist/ReactCrop.css';
+ 
+import ReactCrop, { Crop } from 'react-image-crop';
+ 
+import React, { useState , useEffect} from 'react';
+ 
+import React, { useState , useEffect} from 'react';
+ 
+import React, { useState , useEffect} from 'react';
+
+import logo_Crop from './logo_Crop.png'
+// https://stackoverflow.com/questions/43823289/how-to-import-image-svg-png-in-a-react-component
+// https://www.flaticon.com/free-icon/crop_4818201?term=crop&page=1&position=4&origin=tag&related_id=4818201
+import logo_Shape from './logo_Shape.png'
+import logo_UpsideDown from './logo_UpsideDown.png'
+ 
+ TotalWidth={TotalWidth}
+ 
+ TotalWidth={TotalWidth}
+ 
+TotalWidth,
+ 
+TotalWidth:number
+ 
+  let let_Width01=100
+  let let_Width02=TotalWidth-let_Width01
+ 
+TotalWidth,
+ 
+TotalWidth:number
+ 
+  let let_Width01=500
+  let let_Width02=TotalWidth-let_Width01
+ 
+ 
+ 
+ || SS_OpenPanel===2
+ 
+    JSX_Threshold=<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'200px',width:'230px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+
+      <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+ 
+<div style={{display:'grid'}}>
+    <div style={{display:'flex',height:'40px'}}>
+      <button>Threshold</button>
+      <button>Convolution</button>
+    </div>
+  {JSX_ImageProcessing}
+  </div>
+ 
+  let let_Width01=100
+  let let_Width02=TotalWidth-let_Width01
+ 
+<div style={{display:'grid'}}>
+    <div style={{display:'flex',height:'40px'}}>
+      <button>Threshold</button>
+      <button>Convolution</button>
+    </div>
+  {JSX_ImageProcessing}
+  </div>
+ 
+</div>
+ 
+</div>
+ 
+  </div>
+ 
+  <div style={{display:'inline-block'}}>
+  <div style={{height:'40px',backgroundColor:'red',marginTop:'0px',borderBottom:'0px'}}><h1>H3ll0</h1></div>
+ 
+  </div>
+ 
+  <div style={{display:'inline-block'}}>
+ 
+,marginTop:'auto'
+ 
+</div>
+ 
+<div id='C04id_Convolution' style={{width:`${let_Width02}px`}}>
+{//****************************************************************************
+// Gray Threshold
+//****************************************************************************
+}
+ 
+  
+ 
+
+
+    
+ 
+  
+ 
+    
+ 
+</div>
+ 
+    </div>
+ 
+  <div id='C04id_Convolution' style={{width:`${let_Width02}px`}}>
+ 
+id='C04id_Convolution'
+ 
+    </div>
+ 
+  <div id='C04id_Convolution' style={{width:`${let_Width02}px`}}>
+ 
+  </div>
+ 
+  <div style={{display:'inline-block'}}>
+  <div style={{height:'0px'}}><h1>H3ll0</h1></div>
+ 
+  <div style={{height:'0px'}}><h1>H3ll0</h1></div>
+ 
+</div>
+ 
+
+    {//****************************************************************************
+    // Convolution
+    //****************************************************************************
+    }
+ 
+    <div style={{height:`calc(50vh - ${ (143+20)}px )`,backgroundColor:'greenyellow'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Convolution</h1>
+    </div>
+ 
+0.5*
+ 
+    <div style={{height:`calc(100vh - ${ (143+20)}px )`,backgroundColor:'greenyellow'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Convolution</h1>
+    </div>
+ 
+//****************************************************************************
+// FUNCTION_00: Zoom setting
+//****************************************************************************
+
+ 
+tru
+ 
+  { }
+ 
+let_Width01,
+ 
+  let_Width01:number
+ 
+  let  =<></>
+  if(let_Width02==0){
+     =<></>
+  }
+  else{
+     =<div id='C04id_Convolution' style={{width:`${let_Width02}px`}}>
+    {//****************************************************************************
+    // Gray Threshold
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'lightblue'}}>
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Gray Threshold</h1>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Save</button>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Reset</button>
+    </div>
+
+    <hr/>
+    
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{display:'flex',marginLeft:'20px',marginTop:'3px'}}>255</h1>
+    <button style={{marginTop:'0px',marginRight:'15px'}}>Add Threshold</button>
+    </div>
+    <div
+    style={{
+      display:'flex'
+    }}
+    >
+    {// Original Gray Scale Indicator  
+    }
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'40px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundColor:'green',
+      marginTop:'3px',
+      width:'3px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'0px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+
+    {/* Transformed Gray Scale Indicator  
+    }
+    <div style={{display:'inline-block'}}>
+    <div 
+    style={{
+      backgroundColor:'white',
+      marginTop:'3px',
+      marginLeft:'-50px',
+      width:'50px',
+      position:'relative',
+      height:`${100}px`,
+    }}>
+    </div>
+  </div>*/}
+
+  {// Gray Scale Setting
+    }
+    {JSX_Threshold}
+    
+  </div>
+  
+  <h1 className='C04id_Zoom' style={{marginTop:'3px',display:'flex',marginLeft:'40px'}}>0</h1>
+  </div>
+
+    {//****************************************************************************
+    // Convolution
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'greenyellow'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Convolution</h1>
+    </div>
+
+    </div>
+  }
+ 
+
+  {// Gray Scale Setting
+    }
+ 
+
+    {/* Transformed Gray Scale Indicator  
+    }
+    <div style={{display:'inline-block'}}>
+    <div 
+    style={{
+      backgroundColor:'white',
+      marginTop:'3px',
+      marginLeft:'-50px',
+      width:'50px',
+      position:'relative',
+      height:`${100}px`,
+    }}>
+    </div>
+  </div>*/}
+ 
+  let let_Width01=100
+ 
+  
+  //useEffect(()=>{
+  //},[])
+
+ 
+  //  JSX_Threshold=<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'200px',width:'230px',height:'3px'}}>
+  //    <div style={{display:'flex'}}>
+  //      <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+//
+  //    <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+  //    <button style={{width:'25px',height:'25px'}} >/</button>
+  //    <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+  //    <button style={{width:'25px',height:'25px'}}>X</button>
+  //    </div>
+  //  </div>
+ 
+    {
+    /*<input type="color" id="favcolor" name="favcolor" value="#ff0000"></input>
+    <input></input>*/
+    }
+ 
+    {/*
+    Attribute
+    1. Font Name
+    2. Font Size
+    3. Color
+    4. Utility
+    */}
+ 
+    {/*
+    Attribute
+    1. Type 
+    2. Line Color
+    3. Line Width
+    4. Shape Color
+    Type
+    1. Rectangle
+    2. Circle
+    3. Line
+    4. X Line
+    5. Y Line
+    */}
+ 
+  // 0 = Shape
+  // 1 = Text
+  
+ 
+
+  const [SS_EditSetting,setSS_EditSetting]=useState<0|1>(0)
+ 
+<0|1>
+ 
+  TotalWidth={TotalWidth}
+ 
+TotalWidth,
+ 
+TotalWidth:number,
+ 
+  //let JSX_Setting=<div className='C04id_EditBody'>{JSX_SubSetting}</div>
+  
+
+  let let_Width01=100
+  let let_Width02=TotalWidth-let_Width01
+ 
+
+  }
+ 
+  {JSX_Convolution}
+ 
+ if(let_Width02==0){
+    JSX_Convolution=<></>
+  }
+  else{
+    JSX_Convolution=<div id='C04id_Convolution' style={{width:`${let_Width02}px`}}>
+    {//****************************************************************************
+    // Gray Threshold
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'lightblue'}}>
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Gray Threshold</h1>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Save</button>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Reset</button>
+    </div>
+
+    <hr/>
+    
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{display:'flex',marginLeft:'20px',marginTop:'3px'}}>255</h1>
+    <button style={{marginTop:'0px',marginRight:'15px'}}>Add Threshold</button>
+    </div>
+    <div
+    style={{
+      display:'flex'
+    }}
+    >
+    {// Original Gray Scale Indicator  
+    }
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'40px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundColor:'green',
+      marginTop:'3px',
+      width:'3px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'0px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+
+    {/* Transformed Gray Scale Indicator  
+    }
+    <div style={{display:'inline-block'}}>
+    <div 
+    style={{
+      backgroundColor:'white',
+      marginTop:'3px',
+      marginLeft:'-50px',
+      width:'50px',
+      position:'relative',
+      height:`${100}px`,
+    }}>
+    </div>
+  </div>*/}
+
+  {// Gray Scale Setting
+    }
+    
+  </div>
+  
+  <h1 className='C04id_Zoom' style={{marginTop:'3px',display:'flex',marginLeft:'40px'}}>0</h1>
+  </div>
+
+    {//****************************************************************************
+    // Convolution
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'greenyellow'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Convolution</h1>
+    </div>
+
+    </div>
+ 
+  let JSX_Convolution=<></>
+ 
+//import './U_Toolbar.css'
+ 
+  {JSX_Convolution}
+ 
+
+
+  {// Gray Scale Setting
+    }
+    
+  </div>
+  
+  <h1 className='C04id_Zoom' style={{marginTop:'3px',display:'flex',marginLeft:'40px'}}>0</h1>
+  </div>
+
+    {//****************************************************************************
+    // Convolution
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'greenyellow'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Convolution</h1>
+    </div>
+
+    </div>
+  }
+ 
+  let JSX_Convolution=<></>
+  if(let_Width02==0){
+    JSX_Convolution=<></>
+  }
+  else{
+    JSX_Convolution=<div id='C04id_Convolution' style={{width:`${let_Width02}px`}}>
+    {//****************************************************************************
+    // Gray Threshold
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'lightblue'}}>
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Gray Threshold</h1>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Save</button>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Reset</button>
+    </div>
+
+    <hr/>
+    
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{display:'flex',marginLeft:'20px',marginTop:'3px'}}>255</h1>
+    <button style={{marginTop:'0px',marginRight:'15px'}}>Add Threshold</button>
+    </div>
+    <div
+    style={{
+      display:'flex'
+    }}
+    >
+    {// Original Gray Scale Indicator  
+    }
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'40px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundColor:'green',
+      marginTop:'3px',
+      width:'3px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'0px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+
+    {/* Transformed Gray Scale Indicator  
+    }
+    <div style={{display:'inline-block'}}>
+    <div 
+    style={{
+      backgroundColor:'white',
+      marginTop:'3px',
+      marginLeft:'-50px',
+      width:'50px',
+      position:'relative',
+      height:`${100}px`,
+    }}>
+    </div>
+  </div>*/}
+ 
+  let JSX_Ok=<div className='C04id_EditOk'> <button style={{marginLeft:'10px'}}>Ok</button> <button>Reset</button> </div>
+
+ 
+
+  //let JSX_Setting=<div className='C04id_EditBody'>{JSX_SubSetting}</div>
+  
+
+ 
+
+  let JSX_Setting=<></>
+  // 0 = Shape
+  // 1 = Text
+  
+  if(SS_EditSetting===0){
+    JSX_Setting=<div className='C04id_EditBody'>
+      <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Type        </h1>
+      <select id="cars" name="cars" className='C04id_EditOkSet'>
+        <option value="volvo">Rectangle</option>
+        <option value="volvo">Rectangle frame</option>
+        <option value="saab">Circle</option>
+        <option value="volvo">Circle frame</option>
+        <option value="mercedes">Arrow</option>
+        <option value="mercedes">2 Ways Arrow</option>
+        <option value="audi">Line</option>
+        <option value="audi">LineX</option>
+        <option value="audi">LineY</option>
+      </select>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Line Color  </h1>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Line Width  </h1>
+      <input className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Shape Color </h1>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    </div>
+  }
+  else{
+    JSX_Setting=<div className='C04id_EditBody'>
+      <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'> 
+      <h1>Font Name</h1>
+      <select id="cars" name="cars" className='C04id_EditOkSet'>
+        <option value="volvo">Arial</option>
+      </select>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Font Size</h1>
+      <input className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'> 
+      <h1>Color</h1>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Utility</h1>
+      <select id="cars" name="cars" className='C04id_EditOkSet'>
+        <option value="volvo">B</option>
+        <option value="saab">I</option>
+        <option value="mercedes">None</option>
+        <option value="mercedes">Line</option>
+      </select>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    </div>
+  }
+ 
+  {/****************************************************************************
+    }
+    <hr/>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Edit Image Setting</h1>
+    <div className='C04id_EditSetting'>
+    <button className='C04id_Button' style={{marginLeft:'15px'}} onClick={()=>{setSS_EditSetting(0)}}>Shape</button>
+    <button className='C04id_Button' style={{marginLeft:'20px'}} onClick={()=>{setSS_EditSetting(1)}}>Text</button>
+    </div>
+  {JSX_Setting*/}
+ 
+//import './U_Toolbar.css'
+ 
+//****************************************************************************
+// FUNCTION_00: Zoom setting
+//****************************************************************************
+    function f_PosZoom(){
+      if(SS_Zoom<10){
+        let ss_Zoom=SS_Zoom 
+        let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+        setSS_Zoom(let_Zoom)
+      }
+    }
+    function f_NegZoom(){
+        if(SS_Zoom>0.1){
+        let ss_Zoom=SS_Zoom 
+        let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+        setSS_Zoom(let_Zoom)
+    }}
+    function f_ResetZoom(){
+        setSS_Zoom(1)
+    }
+
+    function f_Gray(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(false)
+    }
+
+    function f_RGB(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(true)
+    }
+ 
+TotalWidth
+ 
+
+  const [SS_EditSetting,setSS_EditSetting]=useState<0|1>(0)
+ 
+    {
+    /*<input type="color" id="favcolor" name="favcolor" value="#ff0000"></input>
+    <input></input>*/
+    }
+ 
+    {/*
+    Attribute
+    1. Type 
+    2. Line Color
+    3. Line Width
+    4. Shape Color
+    Type
+    1. Rectangle
+    2. Circle
+    3. Line
+    4. X Line
+    5. Y Line
+    */}
+ 
+    {/*
+    Attribute
+    1. Font Name
+    2. Font Size
+    3. Color
+    4. Utility
+    */}
+ 
+    <div style={{display:'flex',height:'100px'}}>
+ 
+    {//****************************************************************************
+    // Zoom Image
+    //****************************************************************************
+    }
+    <div style={{display:'inline-block',margin:'auto'}}>
+      <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Zoom: {SS_Zoom}</h1>
+      <div style={{display:'flex',marginTop:'10px'}}>
+    <button onClick={f_PosZoom} className='C04id_Zoom' style={{width:'28px'}}>+</button>
+    <button onClick={f_NegZoom} className='C04id_Zoom' style={{width:'28px'}}>-</button>
+      </div>
+    <button onClick={f_ResetZoom} className='C04id_Button' >Reset</button>
+    </div>
+
+    <div style={{borderLeft:'3px solid #ffffff',height:'110px'}}>
+    </div>
+
+    {//****************************************************************************
+    // RGB or Gray
+    //****************************************************************************
+    }
+    <div style={{display:'inline-block', backgroundColor:'#33AAAA',marginLeft:'10px',margin:'auto'}}>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Color</h1>
+    <button onClick={f_Gray} className='C04id_Button'>Gray</button>
+    <button onClick={f_RGB}  className='C04id_Button'>RGB</button>
+    </div>
+    </div>
+
+    {//****************************************************************************
+    // Edit Image
+    //****************************************************************************
+    }
+    <hr/>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Edit Image</h1>
+    <div className='C04id_EditImage'>
+    <button onClick={f_Gray} className='C04id_Button'><img  src={logo_Crop} style={{width:'100%',height:'100%'}} alt="fireSpot"/></button>
+    <button onClick={f_Gray} className='C04id_Button'><img  src={logo_Shape} style={{width:'100%',height:'100%'}} alt="fireSpot"/></button>
+    <button onClick={f_Gray} className='C04id_Button'><img  src={logo_UpsideDown} style={{width:'100%',height:'100%'}} alt="fireSpot"/></button>
+    <button onClick={f_Gray} className='C04id_Button'>Text</button>
+    <button className='C04id_Button'>Ok</button>
+    <button className='C04id_Button' style={{fontSize:'16px',paddingLeft:'0px'}}>Reset</button>
+    </div>
+ 
+    {JSX_Threshold}
+ 
+
+  const [SS_EditSetting,setSS_EditSetting]=useState<0|1>(0)
+ 
+
+  
+  useEffect(()=>{
+    JSX_Threshold=<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'200px',width:'230px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+
+      <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+  },[])
+ 
+  let JSX_Threshold=<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'200px',width:'230px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+
+      <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+ 
+
+import './U_Toolbar.css'
+import logo_Crop from './logo_Crop.png'
+// https://stackoverflow.com/questions/43823289/how-to-import-image-svg-png-in-a-react-component
+// https://www.flaticon.com/free-icon/crop_4818201?term=crop&page=1&position=4&origin=tag&related_id=4818201
+import logo_Shape from './logo_Shape.png'
+import logo_UpsideDown from './logo_UpsideDown.png'
+ 
+SS_Zoom:number,
+setSS_Zoom:(S:number)=>void
+setSS_IsRGB:(S:boolean)=>void
+setSS_UseEffect:(S:boolean)=>void
+ 
+SS_Zoom,
+setSS_Zoom,
+setSS_IsRGB,
+setSS_UseEffect,
+ 
+
+/*
+Note
+* SS_EditSetting = Edit Image Setting
+Shape
+* Attribute
+* 1. Type 
+* 2. Line Color
+* 3. Line Width
+* 4. Shape Color
+* Type
+* 1. Rectangle
+* 2. Circle
+* 3. Line
+* 4. X Line
+* 5. Y Line
+
+Text
+* Attribute
+* 1. Font Name
+* 2. Font Size
+* 3. Color
+* 4. Utility
+*/
+ 
+  let JSX_Ok=<div className='C04id_EditOk'> <button style={{marginLeft:'10px'}}>Ok</button> <button>Reset</button> </div>
+
+  let JSX_Setting=<></>
+  // 0 = Shape
+  // 1 = Text
+  
+
+ 
+if(SS_EditSetting===0){
+    JSX_Setting=<div className='C04id_EditBody'>
+      <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Type        </h1>
+      <select id="cars" name="cars" className='C04id_EditOkSet'>
+        <option value="volvo">Rectangle</option>
+        <option value="volvo">Rectangle frame</option>
+        <option value="saab">Circle</option>
+        <option value="volvo">Circle frame</option>
+        <option value="mercedes">Arrow</option>
+        <option value="mercedes">2 Ways Arrow</option>
+        <option value="audi">Line</option>
+        <option value="audi">LineX</option>
+        <option value="audi">LineY</option>
+      </select>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Line Color  </h1>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Line Width  </h1>
+      <input className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Shape Color </h1>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    </div>
+  }
+  else{
+    JSX_Setting=<div className='C04id_EditBody'>
+      <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'> 
+      <h1>Font Name</h1>
+      <select id="cars" name="cars" className='C04id_EditOkSet'>
+        <option value="volvo">Arial</option>
+      </select>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Font Size</h1>
+      <input className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'> 
+      <h1>Color</h1>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Utility</h1>
+      <select id="cars" name="cars" className='C04id_EditOkSet'>
+        <option value="volvo">B</option>
+        <option value="saab">I</option>
+        <option value="mercedes">None</option>
+        <option value="mercedes">Line</option>
+      </select>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    </div>
+  }
+ 
+  const [SS_EditSetting,setSS_EditSetting]=useState<0|1>(0)
+ 
+  //let JSX_Setting=<div className='C04id_EditBody'>{JSX_SubSetting}</div>
+ 
+  let JSX_Convolution=<></>
+  if(let_Width02==0){
+    JSX_Convolution=<></>
+  }
+  else{
+    JSX_Convolution=<></>
+  }
+ 
+    function f_PosZoom(){
+      if(SS_Zoom<10){
+        let ss_Zoom=SS_Zoom 
+        let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+        setSS_Zoom(let_Zoom)
+      }
+    }
+    function f_NegZoom(){
+        if(SS_Zoom>0.1){
+        let ss_Zoom=SS_Zoom 
+        let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+        setSS_Zoom(let_Zoom)
+    }}
+    function f_ResetZoom(){
+        setSS_Zoom(1)
+    }
+
+    function f_Gray(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(false)
+    }
+
+    function f_RGB(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(true)
+    }
+ 
+<div id='C04id_Convolution' style={{width:`${let_Width02}px`}}>
+    {//****************************************************************************
+    // Gray Threshold
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'lightblue'}}>
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Gray Threshold</h1>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Save</button>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Reset</button>
+    </div>
+
+    <hr/>
+    
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{display:'flex',marginLeft:'20px',marginTop:'3px'}}>255</h1>
+    <button style={{marginTop:'0px',marginRight:'15px'}}>Add Threshold</button>
+    </div>
+    <div
+    style={{
+      display:'flex'
+    }}
+    >
+    {// Original Gray Scale Indicator  
+    }
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'40px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundColor:'green',
+      marginTop:'3px',
+      width:'3px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'0px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+
+    {/* Transformed Gray Scale Indicator  
+    }
+    <div style={{display:'inline-block'}}>
+    <div 
+    style={{
+      backgroundColor:'white',
+      marginTop:'3px',
+      marginLeft:'-50px',
+      width:'50px',
+      position:'relative',
+      height:`${100}px`,
+    }}>
+    </div>
+  </div>*/}
+
+  {// Gray Scale Setting
+    }
+    {JSX_Threshold}
+    
+  </div>
+  
+  <h1 className='C04id_Zoom' style={{marginTop:'3px',display:'flex',marginLeft:'40px'}}>0</h1>
+  </div>
+
+    {//****************************************************************************
+    // Convolution
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'greenyellow'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Convolution</h1>
+    </div>
+
+    </div>
+ 
+
+  let JSX_Setting=<></>
+  // 0 = Shape
+  // 1 = Text
+ 
+  
+  if(SS_EditSetting===0){
+    JSX_Setting=
+  }
+ 
+<div className='C04id_EditBody'>
+      <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Type        </h1>
+      <select id="cars" name="cars" className='C04id_EditOkSet'>
+        <option value="volvo">Rectangle</option>
+        <option value="volvo">Rectangle frame</option>
+        <option value="saab">Circle</option>
+        <option value="volvo">Circle frame</option>
+        <option value="mercedes">Arrow</option>
+        <option value="mercedes">2 Ways Arrow</option>
+        <option value="audi">Line</option>
+        <option value="audi">LineX</option>
+        <option value="audi">LineY</option>
+      </select>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Line Color  </h1>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Line Width  </h1>
+      <input className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Shape Color </h1>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    </div>
+  }
+  else{
+    JSX_Setting=<div className='C04id_EditBody'>
+      <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'> 
+      <h1>Font Name</h1>
+      <select id="cars" name="cars" className='C04id_EditOkSet'>
+        <option value="volvo">Arial</option>
+      </select>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Font Size</h1>
+      <input className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'> 
+      <h1>Color</h1>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    <div className='C04id_EditSettingRow'>
+      <h1>Utility</h1>
+      <select id="cars" name="cars" className='C04id_EditOkSet'>
+        <option value="volvo">B</option>
+        <option value="saab">I</option>
+        <option value="mercedes">None</option>
+        <option value="mercedes">Line</option>
+      </select>
+      {JSX_Ok}
+    </div>
+    <hr className='C04id_EditSetting'/>
+    </div>
+  }
+  //let JSX_Setting=<div className='C04id_EditBody'>{JSX_SubSetting}</div>
+  
+
+  let let_Width01=100
+  let let_Width02=TotalWidth-let_Width01
+  let JSX_Convolution=<></>
+  if(let_Width02==0){
+    JSX_Convolution=<></>
+  }
+  else{
+    JSX_Convolution=<div id='C04id_Convolution' style={{width:`${let_Width02}px`}}>
+    {//****************************************************************************
+    // Gray Threshold
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'lightblue'}}>
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Gray Threshold</h1>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Save</button>
+    <button style={{marginTop:'10px',marginRight:'15px'}}>Reset</button>
+    </div>
+
+    <hr/>
+    
+    <div style={{display:'flex'}}>
+    <h1 className='C04id_Zoom' style={{display:'flex',marginLeft:'20px',marginTop:'3px'}}>255</h1>
+    <button style={{marginTop:'0px',marginRight:'15px'}}>Add Threshold</button>
+    </div>
+    <div
+    style={{
+      display:'flex'
+    }}
+    >
+    {// Original Gray Scale Indicator  
+    }
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'40px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundColor:'green',
+      marginTop:'3px',
+      width:'3px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+    <div 
+    style={{
+      backgroundImage: 'linear-gradient(white, black)',
+      marginTop:'3px',
+      marginLeft:'0px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`
+    }}>
+    </div>
+
+    {/* Transformed Gray Scale Indicator  
+    }
+    <div style={{display:'inline-block'}}>
+    <div 
+    style={{
+      backgroundColor:'white',
+      marginTop:'3px',
+      marginLeft:'-50px',
+      width:'50px',
+      position:'relative',
+      height:`${100}px`,
+    }}>
+    </div>
+  </div>*/}
+
+  {// Gray Scale Setting
+    }
+    {JSX_Threshold}
+    
+  </div>
+  
+  <h1 className='C04id_Zoom' style={{marginTop:'3px',display:'flex',marginLeft:'40px'}}>0</h1>
+  </div>
+
+    {//****************************************************************************
+    // Convolution
+    //****************************************************************************
+    }
+    <div style={{height:`calc(50vh - ${0.5*(143+20)}px )`,backgroundColor:'greenyellow'}}>
+    <h1 className='C04id_Zoom' style={{paddingTop:'10px'}}>Convolution</h1>
+    </div>
+
+    </div>
+ 
+  </>
+ 
+  <>
+ 
+  
+    {JSX_Setting}
+  </div>
+ 
+<div className='C04id_Toolbar'
+    style={{
+      width:`${200}px`,
+      height:`calc(100vh - ${143+20}px)`,
+      }}>
+    
+    <div style={{display:'flex',height:'100px'}}>
+    {//****************************************************************************
+    // Zoom Image
+    //****************************************************************************
+    }
+    <div style={{display:'inline-block',margin:'auto'}}>
+      <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Zoom: {SS_Zoom}</h1>
+      <div style={{display:'flex',marginTop:'10px'}}>
+    <button onClick={f_PosZoom} className='C04id_Zoom' style={{width:'28px'}}>+</button>
+    <button onClick={f_NegZoom} className='C04id_Zoom' style={{width:'28px'}}>-</button>
+      </div>
+    <button onClick={f_ResetZoom} className='C04id_Button' >Reset</button>
+    </div>
+
+    <div style={{borderLeft:'3px solid #ffffff',height:'110px'}}>
+    </div>
+
+    {//****************************************************************************
+    // RGB or Gray
+    //****************************************************************************
+    }
+    <div style={{display:'inline-block', backgroundColor:'#33AAAA',marginLeft:'10px',margin:'auto'}}>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Color</h1>
+    <button onClick={f_Gray} className='C04id_Button'>Gray</button>
+    <button onClick={f_RGB}  className='C04id_Button'>RGB</button>
+    </div>
+    </div>
+
+    {//****************************************************************************
+    // Edit Image
+    //****************************************************************************
+    }
+    <hr/>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Edit Image</h1>
+    <div className='C04id_EditImage'>
+    <button onClick={f_Gray} className='C04id_Button'><img  src={logo_Crop} style={{width:'100%',height:'100%'}} alt="fireSpot"/></button>
+    <button onClick={f_Gray} className='C04id_Button'><img  src={logo_Shape} style={{width:'100%',height:'100%'}} alt="fireSpot"/></button>
+    <button onClick={f_Gray} className='C04id_Button'><img  src={logo_UpsideDown} style={{width:'100%',height:'100%'}} alt="fireSpot"/></button>
+    <button onClick={f_Gray} className='C04id_Button'>Text</button>
+    <button className='C04id_Button'>Ok</button>
+    <button className='C04id_Button' style={{fontSize:'16px',paddingLeft:'0px'}}>Reset</button>
+    </div>
+
+    {//****************************************************************************
+    // Edit Image Setting
+    //****************************************************************************
+    }
+    <hr/>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Edit Image Setting</h1>
+    <div className='C04id_EditSetting'>
+    {
+    /*<input type="color" id="favcolor" name="favcolor" value="#ff0000"></input>
+    <input></input>*/
+    }
+    <button className='C04id_Button' style={{marginLeft:'15px'}} onClick={()=>{setSS_EditSetting(0)}}>Shape</button>
+    {/*
+    Attribute
+    1. Type 
+    2. Line Color
+    3. Line Width
+    4. Shape Color
+    Type
+    1. Rectangle
+    2. Circle
+    3. Line
+    4. X Line
+    5. Y Line
+    */}
+    <button className='C04id_Button' style={{marginLeft:'20px'}} onClick={()=>{setSS_EditSetting(1)}}>Text</button>
+    {/*
+    Attribute
+    1. Font Name
+    2. Font Size
+    3. Color
+    4. Utility
+    */}
+    </div>
+ 
+<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'200px',width:'230px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+
+      <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+ 
+<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'200px',width:'230px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+
+      <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+ 
+<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'200px',width:'230px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+
+      <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+  </div>
+ 
+<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'100px',width:'230px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+      <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+ 
+let JSX_Threshold=<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'100px',width:'230px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+      <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+ 
+<div style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:'100px',width:'230px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+      <button style={{width:'25px',height:'25px',marginLeft:'155px'}} >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+ 
+      //height:`calc( 50vh - ${0.5*(143+20+200)}px - ${100}px )`,
+ 
+    {/*<div 
+    style={{
+      backgroundColor:'gray',
+      marginTop:`calc( 3px + ${(100)}px)`,
+      marginLeft:'0px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`,
+    }}>
+  </div>*/}
+ 
+<h1 style={{fontSize:'13px'}}>112</h1>
+ 
+<h1 style={{fontSize:'13px'}}>112</h1>
+ 
+</div>
+ 
+<button style={{marginTop:'10px',marginRight:'15px'}}>Add Threshold</button>
+ 
+white, 
+ 
+,marginLeft:'175px'
+ 
+,marginLeft:'175px'
+ 
+calc( 50vh - ${0.5*(143+20+200)}px - 
+ 
+50vh - ${0.5*(143+20+200)}px - () 50vh - ${0.5*(143+20+200)}px - 
+ 
+0.5*
+ 
+(50vh + 
+ 
++(103)
+ 
+*/}
+ 
+</div>
+ 
+{// Gray Scale Setting
+    }
+ 
+    {/*
+
+    <div 
+    style={{
+      backgroundColor:'white',
+      marginTop:'3px',
+      marginLeft:'70px',
+      width:'50px',
+      height:`calc(50vh - ${0.5*(143+20+200)}px )`,
+    }}>
+  </div>*/}
+ 
+<div style={{marginLeft:'20px',backgroundColor:'black',marginTop:'100px',width:'250px',height:'5px'}}>
+      <div style={{display:'flex'}}>
+      <button style={{width:'30px',height:'30px',marginLeft:'160px'}} >.</button>
+      <input style={{width:'30px' ,height:'30px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'30px',height:'30px'}}>X</button>
+      </div>
+    </div>
+ 
+    <div style={{marginLeft:'20px',backgroundColor:'black',marginTop:'100px',width:'250px',height:'5px'}}>
+      <div style={{display:'flex'}}>
+      <button style={{width:'30px',height:'30px',marginLeft:'160px'}} >.</button>
+      <input style={{width:'30px' ,height:'30px'}} type="color" id="favcolor" name="favcolor" value="#ff0000" className='C04id_EditOkSet'></input>
+      <button style={{width:'30px',height:'30px'}}>X</button>
+      </div>
+      </div>
+ 
+      // position:'absolute',
+ 
+      // position:'absolute'
+ 
+ style={{marginLeft:'10px'}}
+ 
+marginLeft:'10px'
+ 
+    <div></div>
+ 
+className='C04id_EditOkSet' 
+ 
+style={{marginLeft:'100px'}}
+ 
+</div>
+ 
+,display:'grid'
+ 
+Lef
+ 
+</div>
+ 
+<h1>hii</h1>
+ 
+</div>
+ 
+    <button>add</button>
+ 
+  style={{marginTop:'10px'}}
+ 
+    style={{marginTop:'10px'}}
+ 
+paddingTop:'20px'
+ 
+paddingTop:'20px'
+ 
+    <button>add</button>
+    <h1 className='C04id_Zoom'  style={{marginTop:'10px'}}>255</h1>
+    <div style={{marginLeft:'20px',backgroundColor:'#33FFFF',width:'5px',height:`calc(50vh - ${0.5*(143+20+200)}px )`}}></div>
+    <h1 className='C04id_Zoom'    style={{marginTop:'10px'}}>0</h1>
+ 
+    <hr/>
+ 
+</div>
+ 
++150+100
+ 
++100+150+100
+ 
+    <hr/>
+ 
+{/****************************************************************************
+    // Gray Threshold
+    //****************************************************************************
+    }
+    <hr/>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Gray Threshold</h1>
+    <button>add</button>
+    <h1 className='C04id_Zoom'  style={{marginTop:'10px'}}>255</h1>
+    <div style={{marginLeft:'20px',backgroundColor:'#33FFFF',width:'5px',height:`calc(100vh - ${143+20+100+150+100}px)`}}></div>
+    <h1 className='C04id_Zoom'    style={{marginTop:'10px'}}>0</h1>
+ 
+        <option value="saab">Saab 95</option>
+        <option value="mercedes">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+ 
+        <option value="audi">Audi TT</option>
+ 
+style={{marginLeft:'10px'}}
+ 
+    margin-left: auto;
+ 
+    margin-left: calc(auto + 5px)
+ 
+tr style={{marginTop:'-10px'}}
+ 
+tr style={{marginTop:'-10px'}}
+ 
+style={{marginTop:'-50px'}}
+ 
+  const JSX_InputNumber=(Id:string)=>{return(<input className='C04id_EditOk' id={'C04id_'+Id}></input>)}
+  const JSX_InputColor=(Id:string)=>{return(<input className='C04id_EditOk' id={'C04id_'+Id}></input>)}
+  const JSX_InputOption=(Id:string)=>{return(<input className='C04id_EditOk' id={'C04id_'+Id}></input>)}
+ 
+
+  let let_SettingShape=[
+    {title:'Type'       ,input:JSX_InputNumber('44'),},
+    {title:'Line Color' ,input:JSX_InputNumber('44'),},
+    {title:'Shape Color',input:JSX_InputNumber('44'),},
+    {title:'Line Width' ,input:JSX_InputNumber('44'),},
+  ]
+  let let_SettingText=[
+    {title:'Font Name'},
+    {title:'Font Size'},
+    {title:'Color'    },
+    {title:'Font Mode'},
+  ]
+ 
+    /*
+    JSX_SubSetting=let_SettingShape.map((setting)=>{
+      return(
+      <tr> 
+        <td> 
+          <h1>{setting.title}</h1> 
+          <input className='C04id_EditOk'></input> 
+          <div className='C04id_EditOk' style={{marginTop:'5px'}}> <button>Ok</button> <button style={{marginLeft:'10px'}}>Reset</button> </div>
+        </td>
+      </tr>
+      )})
+      */
+ 
+    /*
+    JSX_SubSetting=let_SettingText.map((setting)=>{
+      return(
+        
+      <tr> 
+        <td> 
+          <h1>{setting.title}</h1> 
+          <input className='C04id_EditOk'></input> 
+          <div className='C04id_EditOk' style={{marginTop:'5px'}}> <button>Ok</button> <button style={{marginLeft:'10px'}}>Reset</button> </div>
+        </td>
+      </tr>
+      )})
+    */
+ 
+    /*
+    JSX_Setting=<div className='C04id_EditBody'>
+    <tr> <td> <h1>Type        </h1> <input></input> {JSX_Ok}</td></tr>
+    <tr> <td> <h1>Line Color  </h1> <input></input> {JSX_Ok}</td></tr>
+    <tr> <td> <h1>Line Width  </h1> <input></input> {JSX_Ok}</td></tr>
+    <tr> <td> <h1>Shape Color </h1> <input></input> {JSX_Ok}</td></tr>
+    </div>*/
+ 
+    /*
+    JSX_Setting=<div className='C04id_EditBody'>
+    <tr> <td><h1>Font Name</h1><input></input>{JSX_Ok}</td></tr>
+    <tr> <td><h1>Font Size</h1><input></input>{JSX_Ok}</td></tr>
+    <tr> <td><h1>Color</h1><input></input>    {JSX_Ok}</td></tr>
+    <tr> <td><h1>Utility</h1><input></input>  {JSX_Ok}</td></tr>
+    </div>*/
+ 
+       
+ 
+{title:'Shape Color'}
+ 
+    width:35px
+ 
+let JSX_Setting=
+ 
+Type        
+ 
 {JSX_Setting}
  
 Type

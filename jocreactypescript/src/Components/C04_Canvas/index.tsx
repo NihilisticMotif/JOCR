@@ -6,7 +6,7 @@ import React, { ChangeEvent, useState , useEffect, useRef , useLayoutEffect} fro
 
 // Type
 import TS_Row from '../T01_Row/An_Index';
-import U_Editor from './Coms/U_Editor';
+import U_CommandLine from './Coms/U_CommandLine';
 import U_Toolbar from './Coms/U_Toolbar';
 
 // CSS
@@ -177,7 +177,7 @@ else{
         {//<td><button className='C04id_Header' >Export Image</button></td>
         }
     </div>
-<U_Editor/>
+<U_CommandLine/>
     
 
 <div id='C04id_Body' 
@@ -219,6 +219,7 @@ setSS_Zoom={setSS_Zoom}
 setSS_IsRGB={setSS_IsRGB}
 TotalWidth={let_RightToolW}
 setSS_UseEffect={setSS_UseEffect}
+SS_OpenPanel={SS_OpenPanel}
 />
   </div>
     

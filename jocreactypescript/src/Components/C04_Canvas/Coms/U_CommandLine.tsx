@@ -1,9 +1,8 @@
-import ReactCrop, { Crop } from 'react-image-crop';
-import 'react-image-crop/dist/ReactCrop.css';
-import React, { useState, useEffect, useRef } from 'react';
-import './U_Editor.css'
 
-const U_Editor = (
+import { useState, useEffect } from 'react';
+import './U_CommandLine.css'
+
+const U_CommandLine = (
 //****************************************************************************
 // INPUT
 //****************************************************************************
@@ -110,4 +109,4 @@ return(
     </div>)
 }
 
-export default U_Editor
+export default U_CommandLine
