@@ -1,0 +1,16 @@
+import TS_Threshold from "./An_Index"
+
+export function U03_Click(
+        THISTHRESHOLD:TS_Threshold,
+        THRESHOLDS:TS_Threshold[],
+    ):TS_Threshold[]{
+    for(let i:number=0;i<THRESHOLDS.length;i++){
+        if(THRESHOLDS[i].Key===THISTHRESHOLD.Key){
+            THISTHRESHOLD.IsClick=true
+        }
+        else{
+            THRESHOLDS[i].IsClick=false
+        }
+    }
+    return THRESHOLDS
+}

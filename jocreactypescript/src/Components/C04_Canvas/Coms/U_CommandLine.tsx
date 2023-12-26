@@ -103,9 +103,10 @@ useEffect(() => {
 return(
   <div className='C04id_Editor'>
     <input id='C04id_CropImageX1'></input>
-    <button onClick={f_ComputeSquare} style={{marginLeft:'2px'}}>Compute</button>
+    {
+      /*<button onClick={f_ComputeSquare} style={{marginLeft:'2px'}}>Compute</button>
     <button onClick={f_ComputeCube} style={{marginLeft:'2px'}}>Compute3</button>
-    <h1>{SS_HelloPy}</h1>
+    <h1>{SS_HelloPy}</h1>*/}
     </div>)
 }
 

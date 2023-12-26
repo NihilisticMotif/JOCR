@@ -1,3 +1,367 @@
+'darkred'
+ 
+dark
+ 
+
+  //const [SS_GetId,setSS_GetId]=useState<number|null>()
+ 
+        
+ 
+// By ChatGPT
+      document.onmousedown = (event) => {
+      let let_Y=event.clientY
+      if(SS_DeltaMemory===false){
+        setSS_Delta(let_Y-ThisThreshold.PositionY)
+        setSS_DeltaMemory(true)
+      }
+      setSS_Position(let_Y-SS_Delta)
+      };
+ 
+      alert(ThisThreshold.Key)
+ 
+alert(SS_ThisThreshold.Key)
+ 
+      alert(SS_ThisThreshold.Key)
+ 
+IsClick
+ 
+                IsClick:false
+ 
+    IsClick:boolean
+ 
+old,ss_Thresholds)
+ 
+      let let_UpdateThresholds = U03_Click(ThisThresh
+ 
+      setSS_ThisThreshold(U03_ThisThreshold(SS_Thresholds))
+ 
+, useRef
+ 
+        THISTHRESHOLD:TS_Threshold,
+ 
+let let_EmptyYhreshold:TS_Threshold={Key:0,PositionY:0,IsDefault:false,Gray:0,IsClick:false}
+ 
+{Key:0,PositionY:0,IsDefault:false,Gray:0,IsClick:false}
+ 
+    return THRESHOLDS
+ 
+let let_ThisThreshold=document.getElementById('C04id_Threshold'+SS_ThisThreshold.Key.toString())
+ 
+  const [SS_ThisThreshold,setSS_ThisThreshold]=useState<TS_Threshold>({Key:0,PositionY:0,IsDefault:false,Gray:0,IsClick:false})
+
+ 
+  const [SS_ThisThreshold,setSS_ThisThreshold]=useState<TS_Threshold>({Key:0,PositionY:0,IsDefault:false,Gray:0,IsClick:false})
+
+ 
+        STATE:0|1|2|3,
+ 
+              
+ 
+      let let_Y=event.clientY
+ 
+    
+ 
+      //setSS_ThisThreshold(ThisThreshold)
+      //alert(ThisThreshold.Key)
+      //alert(SS_ThisThreshold.Key)
+ 
+      setSS_ThisThreshold(ThisThreshold)
+      alert(ThisThreshold.Key)
+      alert(SS_ThisThreshold.Key)
+ 
+alert(ThisThreshold.Key)
+ 
+setSS_ThisThreshold(ThisThreshold)
+ 
+      let let_ThisThreshold=document.getElementById('C04id_Threshold'+ThisThreshold.Key.toString())
+      //alert(let_ThisThreshold!.getAttribute('marginTop'))
+      // ThisThreshold.PositionY = marginTop:Threshold.PositionY.toString()+'px'
+      
+      //let let_Y:number = e.clientY;
+      //alert(let_Y)
+
+ 
+      // Update the mouse position
+      //let_MousePosition = { x: event.clientX, y: event.clientY };
+      //alert(let_MousePosition.y)
+
+ 
+      //let let_MousePosition: { x: number; y: number } = { x: 0, y: 0 };
+ 
+      let_MousePosition=event.clientY
+ 
+      let let_MousePosition:number=0;
+      //alert(event.clientY)
+ 
+let let_MousePosition:number=0;
+ 
+};
+ 
+      alert(let_MousePosition)
+ 
+          
+ 
+      
+ 
+          //e: React.MouseEvent<HTMLDivElement>
+ 
+        onMouseMove={f_MouseMove}
+ 
+      alert(SS_Position)
+ 
+
+<div style={{marginTop:'40px'}}></div>
+ 
+
+<div>
+<li>Key: { }</li>
+<li>Position:</li>
+</div>
+ 
+
+  let  :string='Mouse Up'
+  if(SS_InnerMemory){
+    if(SS_InnerDown){
+       ='Click '+SS_ThisThreshold.Key.toString()
+    }
+  }
+ 
+
+      //alert(ThisThreshold.Key)
+ 
+U02_UpdateDisplay
+ 
+ {U03_Position} from '../../../T03_Threshold/U03_Position'
+ 
+        STATE:0|1|2|3,
+ 
+        else{
+            continue
+        }
+ 
+      }
+ 
+      if(SS_ThisThreshold){
+ 
+|null
+ 
+if(SS_InnerMemory){
+ 
+        
+        
+ 
+         // DEFAULT: Math.random()
+                    // Unique Key
+ 
+Key:let_NewKey,
+ 
+        // New Column Name
+        NEWTHRESHOLD:number
+ 
+        }
+        return THRESHOLDS
+ 
+    // Check duplicate Column Name
+    if(NEWTHRESHOLD.toString().length>0 
+            && NEWTHRESHOLD.toString().length<30
+            && THRESHOLDS.map(ROW=>ROW.Name).includes(NEWTHRESHOLD)===false)
+ 
+
+  const [SS_TestGetId,setSS_TestGetId]=useState<number>
+ 
+      setSS_TestGetId(ThisThreshold)
+ 
+        setSS_InnerMemory(false)
+ 
+        }
+ 
+        if(SS_InnerMemory===false){
+ 
+        SS_InnerMemory
+ 
+      }
+ 
+      if(SS_InnerMemory===true){
+ 
+  }
+ 
+  if(SS_InnerMemory){
+ 
+    }
+ 
+  if(SS_InnerMemory){
+ 
+//****************************************************************************
+// FUNCTION_04: Get Id
+//****************************************************************************
+    function f_GetId(ThisThreshold:TS_Threshold){
+      setSS_ThisThreshold(ThisThreshold)
+    }
+ 
+  let let_GetPosition:number|null=null
+ 
+.Key
+ 
+//
+ 
+{JSX_Thresholds}
+ 
+    
+ 
+
+//****************************************************************************
+  let JSX_Y02=150
+  let JSX_Threshold02=<div 
+  id='C04id_'
+      style={{position:'absolute',marginLeft:'40px',backgroundColor:'darkred',marginTop:JSX_Y02.toString()+'px',width:'190px',height:'3px'}}>
+      <div style={{display:'flex'}}>
+        <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px'}}>112</h1>
+      <button style={{width:'25px',height:'25px',marginLeft:'115px'}} 
+      id='C04id_B27182818284'
+        onMouseDown ={f_InnerDown}
+        onMouseUp   ={f_InnerUp}
+        onMouseLeave={f_InnerLeave}
+    >.</button>
+      <button style={{width:'25px',height:'25px'}} >/</button>
+      <input  style={{width:'25px',height:'25px'}} type="color" id="favcolor" name="favcolor" value="#ff0000"></input>
+      <button style={{width:'25px',height:'25px'}}>X</button>
+      </div>
+    </div>
+ 
+  
+  let JSX_Y01=200
+  let JSX_Key01=1100401071674
+  
+ 
+112
+ 
+JSX_Y0
+ 
+    {
+ 
+  }  
+ 
+.toString()
+ 
+// Type Script Column
+ 
+27182818284
+ 
+JSX_Key01
+ 
+1100401071674
+ 
+let JSX_Y02=150
+ 
+200
+ 
+Threshold
+ 
+ 59045 23536
+ 
+        if(SS_InnerDown===false){
+        //alert('MouseUp')
+        }
+ 
+    else if(SS_InnerDown===false){
+      let_AddThreshold='Mouse Up'
+    }
+ 
+      alert('MouseUp')
+ 
+    useEffect(()=>{
+ 
+        // let_Resize is in between Left and Right Panels.
+        let let_Resize=document.getElementById('P01id_Resize')
+        
+        // Left Panel
+        let let_Left=document.getElementById('P01id_Left')
+        // Right Panel
+        let let_Right=document.getElementById('P01id_Right')  
+
+        // Minimum Width of Both Panels
+        let let_MinimumWidth=100
+
+//****************************************************************************
+        // Setting Minimum Width of P01id_Left and P01id_Right
+        if(let_Left!.offsetWidth<let_MinimumWidth || let_Right!.offsetWidth<let_MinimumWidth){
+            let let_LW:number
+            let let_RW:number
+            if(let_Left!.offsetWidth<let_Right!.offsetWidth){
+                let_LW=let_MinimumWidth
+                let_RW=let_Right!.offsetWidth
+            }
+            else {
+                let_LW=let_Left!.offsetWidth
+                let_RW=let_MinimumWidth
+            }
+            let_Left!.setAttribute("style" ,"width:"+let_LW.toString()+'px');
+            let_Right!.setAttribute("style","width:"+let_RW.toString()+'px');
+            setSS_DeltaMemory(false)
+            setSS_InnerDown(false)
+            setSS_OuterDown(false)
+        }
+
+//****************************************************************************
+        // Update Width of Left Panel
+        if(SS_InnerMemory){
+            if(SS_Width<let_MinimumWidth){
+                let_Left!.setAttribute("style","width:"+let_MinimumWidth.toString()+"px");
+            }
+            else{
+                let_Left!.setAttribute("style","width:"+SS_Width.toString()+"px");
+            }
+        }
+        else{
+            setSS_DeltaMemory(false)
+        }
+        }
+//****************************************************************************
+    },[SS_Width,SS_InnerDown,SS_OuterDown]
+    )
+//****************************************************************************
+*/
+ 
+//****************************************************************************
+        // Initialize width of Both Panels
+        if(SS_IsFirst===true){
+            let_Left!.setAttribute("style","width:400px");
+            let_Right!.setAttribute("style", "flex: 1");
+            setSS_IsFirst(false)
+        }
+        // Update width of Right Panel By ChatGPT
+        else{
+            let_Right!.setAttribute("style", "flex: 1");
+        }
+ 
+        if(SS_Is2Panels===true){
+ 
+useEffect(()=>{
+ 
+  const Ref_DragThreshold=useRef<number>(0)
+ 
+Over
+ 
+Name
+ 
+className={class}
+ 
+{class:string}
+ 
+string
+ 
+:string
+ 
+,marginBottom:'30px'
+ 
+<hr style={{marginTop:'27px',width:'90%'}}/>
+ 
+    <button style={{marginTop:'10px',marginRight:'10px',marginLeft:'10px'}}>Save</button>
+    <button style={{marginTop:'10px',marginRight:'5px'}}>Reset</button>
+ 
+    <button style={{marginTop:'10px',marginRight:'10px',marginLeft:'10px'}}>Save</button>
+    <button style={{marginTop:'10px',marginRight:'5px'}}>Reset</button>
+ 
               //alert(ss_2DTable[i])
  
 parseFloat(

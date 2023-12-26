@@ -1,0 +1,1 @@
+  const [SS_ThisThreshold,setSS_ThisThreshold]=useState<TS_Threshold>({Key:0,PositionY:0,IsDefault:false,Gray:0,IsClick:false})

@@ -39,13 +39,15 @@ return(
 <div style={{height:`calc(100vh - 40px - ${(143+20)}px )`,width:let_Width,backgroundColor:'lightblue'}}>
   <div style={{display:'flex',marginTop:'10px'}}>
     <h1 className='C04id_Zoom' style={{marginTop:'10px',marginLeft:'10px'}}>Convolution</h1>
-    <button style={{marginTop:'10px',marginRight:'10px',marginLeft:'10px'}}>Save</button>
-    <button style={{marginTop:'10px',marginRight:'5px'}}>Reset</button>
   </div>
-  <hr style={{marginTop:'27px'}}/>
+  
 <div className='C04id_Convolution' style={{marginLeft:'10px'}}>
+<div style={{marginTop:'20px'}}></div>
 {JSX_Convolution}
+    <button style={{marginTop:'10px',marginRight:'10px',marginLeft:'-140px'}}>Ok</button>
+    <button style={{marginTop:'10px',marginRight:'5px'}}>Reset</button>
 </div>
+<hr/>
 </div>
   )
 }
