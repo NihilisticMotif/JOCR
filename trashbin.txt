@@ -1,3 +1,438 @@
+      setSS_Mouse(null)
+ 
+      setSS_Mouse(null)
+ 
+      setSS_MouseMove(null)
+      setSS_Derivative(null)
+ 
+      setSS_Derivative(let_MousePosition-let_Mouse)
+ 
+      let_MousePosition = event.clientY;
+      setSS_Derivative(let_MousePosition-let_Mouse)
+ 
+      setSS_Delta(SS_ThisThreshold.PositionY-let_Mouse)
+ 
+  const [SS_Delta,setSS_Delta]=useState<number|null>()
+ 
+  const [SS_Derivative,setSS_Derivative]=useState<number|null>()
+ 
+      setSS_MouseMove(let_MousePosition);
+ 
+          setSS_Mouse(let_MousePosition)
+ 
+  const [SS_Mouse,setSS_Mouse]=useState<number|null>()
+  const [SS_MouseMove,setSS_MouseMove]=useState<number|null>()
+ 
+  let JSX_Mouse=<h5>SS_Mouse: {SS_Mouse ? SS_Mouse.toString() : ''}</h5>
+  let JSX_MouseMove=<h5>SS_MouseMove: {SS_MouseMove ? SS_MouseMove.toString() : ''}</h5>
+  let JSX_MarginTop=<h5>SS_MarginTop: {SS_ThisThreshold.PositionY}</h5>
+  //let JSX_Delta=<h5>Delta: {SS_MarginTop && SS_Mouse ? SS_Mouse - SS_MarginTop : 0}</h5>
+  let JSX_MouseActivate=<h5>SS_MouseActivate: {SS_MouseActivate.toString()}</h5>
+  let JSX_ThisThreshold=<h5>SS_ThisThreshold: {SS_ThisThreshold.Key}</h5>
+  let JSX_Derivative=<h5>SS_Derivative: {SS_Derivative}</h5>
+ 
+
+{JSX_Mouse}
+{JSX_MarginTop}
+<h5>Delta: {SS_Mouse ? SS_ThisThreshold.PositionY-SS_Mouse : 0}</h5>
+<h5>SS_Delta: {SS_Delta}</h5>
+{JSX_MouseMove}
+{JSX_Derivative}
+{JSX_MouseActivate}
+{JSX_ThisThreshold}
+ 
+      
+ 
+onClick={()}
+ 
+//
+ 
+    // <h5>Delta: {SS_Mouse ? SS_ThisThreshold.PositionY-SS_Mouse : 0}</h5>
+    // 
+ 
+let let_MousePosition = 0
+ 
+let let_MousePosition = 0
+ 
+      setSS_DeltaMemory(true)
+ 
+-let_Mouse
+ 
+      let let_MousePosition = 0
+      let_MousePosition = event.clientY;
+ 
+if(SS_DeltaMemory===false){
+ 
+if(SS_DeltaMemory===false){
+      setSS_DeltaMemory(true)
+      let let_MousePosition = 0
+      let_MousePosition = event.clientY;
+      // <h5>Delta: {SS_Mouse ? SS_ThisThreshold.PositionY-SS_Mouse : 0}</h5>
+      setSS_Delta(SS_ThisThreshold.PositionY-let_Mouse)
+      }
+ 
+
+      }
+ 
+setSS_DeltaMemory(true)
+ 
+//
+ 
+-let_Mouse
+ 
+  let prevSS_Mouse=0
+ 
+      //let let_Target=document.getElementById('C04id_B'+SS_ThisThreshold.Key.toString())?.offsetTop
+      // get position y of document.getElementById('C04id_B'+SS_ThisThreshold.Key.toString())
+      //alert(let_Target)
+      //let let_UpdateThresholds = U03_Position(
+      //  ss_ThisThreshold, 
+      //  ss_Thresholds, 
+      //  let_MousePosition-190);
+      //  let_Target? let_MousePosition-let_Target+200:0);
+      
+ 
+let_Target? 
+ 
+let_Target? 
+ 
+.style
+ 
+position.y
+ 
+marginTop
+ 
+-document.getElementById('C04id_B'+SS_ThisThreshold.Key.toString())?.getAttribute('marginTop')?.replace('px','').
+ 
+arseFloat
+ 
+let ss_ThisThreshold=SS_ThisThreshold
+      let ss_Thresholds=[...SS_Thresholds]
+      let let_UpdateThresholds = U03_Position(ss_ThisThreshold, ss_Thresholds, SS_MouseMove - let_Mouse);
+      setSS_Thresholds(let_UpdateThresholds)
+ 
+      // Get the 
+ 
+|null
+ 
+|null
+ 
+|null
+ 
+        }
+ 
+        if(SS_ThisThreshold.Key!==0){
+ 
+      //let ss_ThisThreshold=SS_ThisThreshold
+      //let ss_Thresholds=[...SS_Thresholds]
+      //let let_UpdateThresholds = U03_Position(ss_ThisThreshold, ss_Thresholds, let_MouseMove - let_Mouse);
+      //setSS_Thresholds(let_UpdateThresholds)
+ 
+t become null before setSS_MouseMove and setSS_Derivative are a
+ 
+I expect that SS_Mouse is always updated and no
+ 
+      //if(SS_Mouse){
+      //  setSS_Derivative(let_MousePosition-SS_Mouse)
+      //}
+      //else{
+      //  setSS_Derivative(let_MousePosition)
+      //}
+      
+      //alert('Too bad, it does not working at all!')
+ 
+
+      //alert(SS_Mouse)
+ 
+      let let_Mouse=0
+      if(SS_Mouse){
+        let_Mouse=SS_Mouse
+      }
+ 
+    /*if(SS_MouseActivate===true && SS_Mouse!==null && SS_MouseMove!==null && SS_ThisThreshold.Key!==0){
+      let ss_ThisThreshold=SS_ThisThreshold
+      let ss_Thresholds=[...SS_Thresholds]
+      let let_UpdateThresholds: TS_Threshold[];
+      if (SS_MouseMove !== undefined && SS_Mouse !== undefined) {
+        let_UpdateThresholds = U03_Position(ss_ThisThreshold, ss_Thresholds, SS_MouseMove - SS_Mouse);
+      } else {
+        let_UpdateThresholds = ss_Thresholds
+      }
+      setSS_Thresholds(let_UpdateThresholds)
+    }*/
+    let let_Mouse=0
+    if(SS_Mouse && SS_Mouse!==undefined && SS_Mouse!==null){
+      let_Mouse=SS_Mouse
+    }
+    let let_MouseMove=0
+    if(SS_MouseMove&& SS_MouseMove!==undefined && SS_MouseMove !==null){
+      let_MouseMove=SS_MouseMove
+    }
+ 
+      let let_Mouse=0
+      if(SS_Mouse){
+        let_Mouse=SS_Mouse
+      }
+ 
+|null
+ 
+ the mouse is moving and SS_MouseActivate===true
+ 
+          // Update SS_Mouse everytime when
+ 
+      setSS_MouseActivate(false)
+ 
+      alert(SS_Mouse)
+ 
+      let let_Mouse=0
+ 
+setSS_Derivative(let_MousePosition-SS_Mouse)
+ 
+  const [SS_Del]
+ 
+else{
+      let_Mouse=0
+    }
+ 
+      let let_Mouse=SS_Mouse
+ 
+SS_Mouse!==null && 
+ 
+: TS_Threshold[];
+      if (SS_MouseMove !== null && SS_Mouse !== null) {
+        let_UpdateThresholds
+ 
+      } else {
+        let_UpdateThresholds = ss_Thresholds
+      }
+ 
+        // Handle the case when either SS_MouseMove or SS_Mouse is undefined
+        // You might want to set a default value or handle it based on your application logic.
+ 
+setSS_MouseMove(null)
+ 
+      // Update SS_Mouse when the mouse is moving and SS_MouseActivate is true
+
+ 
+      }
+ 
+      if (SS_ThisThreshold.Key !== 0) {
+ 
+if(SS_MouseActivate===true){
+ 
+let let_MousePosition = 0
+ 
+      onMouseMove={()=>f_OnMouseMove()}
+ 
+    function f_OnMouseMove(){
+      let let_MousePosition = 0
+      document.onmousedown = (event) => {
+        let_MousePosition = event.clientY;
+        if(SS_ThisThreshold.Key!==0){
+          setSS_MouseMove(let_MousePosition)
+        // Update SS_Mouse everytime when the mouse is moving and SS_MouseActivate===true
+        }
+      }
+    }
+ 
+*/
+    const handleMouseDown = (event: MouseEvent) => {
+      let_MousePosition = event.clientY;
+      if (SS_ThisThreshold.Key !== 0) {
+        setSS_Mouse(let_MousePosition);
+        // Update SS_Mouse when the mouse is moving and SS_MouseActivate is true
+      }
+    };
+
+    if (SS_MouseActivate) {
+      document.addEventListener('mousedown', handleMouseDown);
+    }
+
+    // Cleanup function
+    return () => {
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+ 
+  let เราชาวไทย = 'สยาม'
+  function เวรกรรม(){
+    alert('Karma Police')
+  }
+ 
+let let_MousePosition = 0
+ 
+{JSX_Delta}
+ 
+  const [SS_MarginTop,setSS_MarginTop]=useState<number|null>()
+ 
+      
+ 
+    else{
+  setSS_Mouse(null)
+}
+ 
+  const [SS_Mouse,setSS_Mouse]=useState<number>(0)
+ 
+else{
+ 
+[SS_InnerMemory,setSS_InnerMemory] = useState<boolean>(false);
+ 
+      //setSS_Position(0)
+      //setSS_MarginTop(null)
+ 
+      
+      //let ss_Thresholds = [...SS_Thresholds]
+      //let let_UpdateThresholds = U03_Position(ThisThreshold,ss_Thresholds,10)
+      //setSS_Thresholds(let_UpdateThresholds)
+      //
+ 
+      /*
+      let let_MousePosition = 0
+      document.onmousedown = (event) => {
+      let_MousePosition = event.clientY;
+      if(SS_ThisThreshold.Key!==0){
+        setSS_Position(let_MousePosition)
+      }else{
+        setSS_Position(0)
+      }
+      };
+      let ss_Thresholds= [...SS_Thresholds]
+      let ss_ThisThreshold=SS_ThisThreshold
+      setSS_MarginTop(SS_ThisThreshold.PositionY)
+      //let let_UpdatePosition=0
+      //if(SS_MarginTop===null){
+      //  let_UpdatePosition=SS_Position
+      //}
+      //else{
+      //  let_UpdatePosition=SS_Position-(SS_MarginTop ?? 0)
+      //}
+      let let_UpdateThresholds=U03_Position(ss_ThisThreshold,ss_Thresholds,SS_Position)
+      setSS_Thresholds(let_UpdateThresholds)*/
+
+      //let ss_Thresholds = [...SS_Thresholds]
+      //let let_UpdateThresholds = U03_Position(SS_ThisThreshold,ss_Thresholds,10)
+      //setSS_Thresholds(let_UpdateThresholds)
+
+      //alert(SS_ThisThreshold.Key)
+      
+      // By ChatGPT
+      //if(SS_InnerMemory){
+      //  document.onmousedown = (event) => {
+      //  let let_Y=event.clientY
+      //  if(SS_DeltaMemory===false){
+      //    setSS_Delta(let_Y-SS_ThisThreshold.PositionY)
+      //    setSS_DeltaMemory(true)
+      //  }
+      //  setSS_Position(let_Y-SS_Delta)
+      //  };
+      //}
+      //let ss_Thresholds=[...SS_Thresholds]
+      //let ss_ThisThreshold=SS_ThisThreshold
+      //let let_UpdateThresholds=U03_Position(ss_ThisThreshold,ss_Thresholds,SS_Position)
+      //setSS_Thresholds(let_UpdateThresholds)
+
+      /* Update Width of Left Panel
+        if(SS_InnerMemory){
+            if(SS_Position<10){
+              //let_Left!.setAttribute("style","width:"+let_MinimumWidth.toString()+"px");
+            }
+            else{
+              //alert(SS_Position)
+              //let_ThisThreshold!.setAttribute("style","margin-top:"+SS_Position.toString()+"px");
+            }
+        }
+        else{
+            setSS_DeltaMemory(false)
+        }*/
+ 
+        //onMouseDown ={()=>{f_InnerDown ()}}
+        //onClick={()=>{f_ClickThreshold(Threshold)}}
+ 
+SS_Position)//-
+ 
+SS_Position
+ 
+      //alert(`Mouse Position: ${let_MousePosition}`);
+ 
+      // Update the mouse position
+ 
+      //f_CreateThreshold()
+ 
+.x}, ${let_MousePosition.y
+ 
+{ x: event.clientX, y: 
+ 
+
+      /* Update Width of Left Panel
+        if(SS_InnerMemory){
+            if(SS_Position<10){
+              //let_Left!.setAttribute("style","width:"+let_MinimumWidth.toString()+"px");
+            }
+            else{
+              //alert(SS_Position)
+              //let_ThisThreshold!.setAttribute("style","margin-top:"+SS_Position.toString()+"px");
+            }
+        }
+        else{
+            setSS_DeltaMemory(false)
+        }*/
+ 
+This
+ 
+onMouseUp={()=>{f_OnMouseUp()}} 
+ 
+/****************************************************************************
+// FUNCTION_00: Detect Mouse Click in P01id_Resize
+//****************************************************************************
+    function f_InnerDown():void{
+        setSS_InnerDown(true);
+        setSS_InnerMemory(true)
+    };
+
+    function f_InnerUp():void{
+        setSS_InnerDown(false);
+        setSS_InnerMemory(false)
+        setSS_DeltaMemory(false)
+    };
+
+//****************************************************************************
+// FUNCTION_01: Detect Mouse Click outside P01id_Resize
+//****************************************************************************
+    function f_OuterDown():void{
+        setSS_OuterDown(true);
+    };
+
+    function f_OuterUp():void{
+        setSS_OuterDown(false);
+        setSS_InnerMemory(false)
+        setSS_DeltaMemory(false)
+    };
+
+//****************************************************************************
+// FUNCTION_02: Detect Mouse Move
+//****************************************************************************
+    function f_MouseMove(e: React.MouseEvent<HTMLDivElement>):void{
+        let let_X:number = e.clientX;
+        if(SS_DeltaMemory===false){
+            let let_LeftWidth:number=document.getElementById('P01id_Left')!.offsetWidth
+            setSS_Delta(let_X-let_LeftWidth)
+            setSS_DeltaMemory(true)
+        }
+        //setSS_Position(let_X-SS_Delta)
+    };
+
+//****************************************************************************
+// FUNCTION_03: Detect Mouse Move outside of P01id_Resize
+//****************************************************************************
+    function f_InnerLeave():void{
+        if(SS_InnerMemory===false){
+            setSS_InnerDown(false)
+        }
+    }*/
+ 
+//
+ 
+//
+ 
 'darkred'
  
 dark

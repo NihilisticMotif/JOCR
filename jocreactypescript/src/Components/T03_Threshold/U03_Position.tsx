@@ -7,7 +7,7 @@ export function U03_Position(
     ):TS_Threshold[]{
     for(let i:number=0;i<THRESHOLDS.length;i++){
         if(THRESHOLDS[i].Key===THISTHRESHOLD.Key){
-            THISTHRESHOLD.PositionY+=POSITION
+            THISTHRESHOLD.PositionY=POSITION
             break
         }
     }
