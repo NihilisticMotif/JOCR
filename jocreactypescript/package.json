@@ -11,6 +11,8 @@
     "@types/react": "^18.2.38",
     "@types/react-csv": "^1.1.10",
     "@types/react-dom": "^18.2.17",
+    "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
     "react-csv": "^2.2.2",
     "react-dom": "^18.2.0",
@@ -21,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-flask-api":"cd flask && venv/bin/flask run",
+    "start-flask-api": "cd flask && venv/bin/flask run",
     "server": "python3 app.py",
     "build": "react-scripts build",
     "test": "react-scripts test",

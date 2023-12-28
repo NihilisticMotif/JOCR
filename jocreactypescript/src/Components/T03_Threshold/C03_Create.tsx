@@ -21,7 +21,7 @@ export function C03_Create(
                 Key:let_NewKey,
                 PositionY:10+5,
                 IsDefault:false,
-                Gray:100
+                Gray:'#000000'
                 }
             return [...THRESHOLDS,let_NEWCOLUMN]
 }

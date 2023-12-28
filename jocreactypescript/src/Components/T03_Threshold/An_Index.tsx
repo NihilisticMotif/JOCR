@@ -4,7 +4,7 @@ type TS_Threshold={
                         // Unique Key
     PositionY:number,
     IsDefault:boolean,
-    Gray:number
+    Gray:string
 }
 
 export default TS_Threshold

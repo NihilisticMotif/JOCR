@@ -1,0 +1,51 @@
+import debounce from 'lodash/debounce';
+
+// ...
+
+useEffect(() => {
+  let let_Mouse = 0;
+  let let_Delta = 0;
+  let let_MaxY = document.getElementById('C04id_Gradient')?.offsetHeight;
+
+  const f_MouseMove = debounce((event: MouseEvent) => {
+    let let_MousePosition = event.clientY;
+    let ss_ThisThreshold = SS_ThisThreshold;
+    let ss_Thresholds = [...SS_Thresholds];
+    let let_UpdateThresholds = ss_Thresholds;
+
+    if (let_MaxY && let_Delta + let_MousePosition - let_Mouse > 10 && let_Delta + let_MousePosition - let_Mouse < let_MaxY) {
+      let_UpdateThresholds = U03_Position(ss_ThisThreshold, ss_Thresholds, let_Delta + let_MousePosition - let_Mouse);
+    }
+
+    setSS_Thresholds(let_UpdateThresholds);
+  }, 100); // Adjust the debounce delay as needed
+
+  if (SS_SuperActivate === false) {
+    setSS_MouseActivate(false);
+  }
+
+  if (SS_MouseActivate === true) {
+    document.onmousedown = (event) => {
+      let let_MousePosition = 0;
+      let_MousePosition = event.clientY;
+      if (SS_ThisThreshold.Key !== 0) {
+        let_Mouse = let_MousePosition;
+      }
+    };
+
+    if (SS_DeltaMemory === false) {
+      setSS_DeltaMemory(true);
+      let_Delta = SS_ThisThreshold.PositionY - let_Mouse;
+    }
+
+    let let_Target = document.getElementById('C04id_B' + SS_ThisThreshold.Key.toString());
+    if (SS_MouseActivate === true) {
+      let_Target?.addEventListener('mousemove', f_MouseMove);
+    }
+
+    return () => {
+      setSS_DeltaMemory(false);
+      let_Target?.removeEventListener('mousemove', f_MouseMove);
+    };
+  }
+}, [SS_ThisThreshold, SS_MouseActivate]);
