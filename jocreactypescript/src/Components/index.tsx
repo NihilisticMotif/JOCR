@@ -9,6 +9,7 @@ import C04_Canvas from './C04_Canvas';
 // Type
 import TS_Row from '././T01_Row/An_Index';
 import TS_Column from '././T02_Column/An_Index'
+import TS_Threshold from './T03_Threshold/An_Index';
 // CSS
 import './index.css';
 
@@ -33,6 +34,7 @@ const Components=()=>{
 // DEFAULT INPUT
 //****************************************************************************
     
+    // C01, C02 and C03
     const [SS_Columns, setSS_Columns]=useState<TS_Column[]>([
         {Key:0,Name:'Artist'},
         {Key:1,Name:'Album'},
@@ -49,8 +51,39 @@ const Components=()=>{
         {Key:4 ,Next:5  , Array:['Gorillaz','Demon Days',"Feel Good Inc.",'Hip Hop','04']},
         {Key:5 ,Next:6  , Array:['Mother Mother','O My Heart',"Hayloft",'Indie Rock','05']},
         ])
-
     
+    // C04
+    const [SS_Image     , setSS_Image] = useState<string | null>(null);  
+
+    const [SS_Thresholds,setSS_Thresholds]=useState<TS_Threshold[]>([
+        {Key:112,PositionY:10 ,IsDefault:false,Gray:'#000000'},
+        {Key:121,PositionY:121,IsDefault:false,Gray:'#000000'},
+        {Key:211,PositionY:211,IsDefault:false,Gray:'#000000'},
+    ])
+    const [SS_Zoom      ,setSS_Zoom] = useState<number>(1)
+    const [SS_WidthImage, setSS_WidthImage] = useState<number>(0);
+    const [SS_IsRGB     ,setSS_IsRGB]=useState<boolean>(true)
+    const [SS_ImageFile,setSS_ImageFile]=useState<null|File>(null)
+    const [SS_UseEffect,setSS_UseEffect]=useState<boolean>(true)
+
+    const [SS_2DMatrix,setSS_2DMatrix]=useState<number[]>([1,0,0,1])
+    const [SS_2DTable,setSS_2DTable]=useState<string[]>(['1','0','0','1'])
+
+    const [SS_nDMatrix,setSS_nDMatrix]=useState<number[][]>(
+       [[0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,1,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0]]
+    )
+    const [SS_nDTable,setSS_nDTable]=useState<string[][]>(
+       [['0','0','0','0','0'],
+        ['0','0','0','0','0'],
+        ['0','0','1','0','0'],
+        ['0','0','0','0','0'],
+        ['0','0','0','0','0']]
+    )
+  
 //****************************************************************************
 // JSX: C02_Iput
 //****************************************************************************
@@ -117,9 +150,31 @@ const Components=()=>{
     let JSX_C04=<></>
     if(SS_OpenPanel===1 || SS_OpenPanel===2){
         JSX_C04=<C04_Canvas
+        SS_2DMatrix   ={SS_2DMatrix   }
+        setSS_2DMatrix={setSS_2DMatrix}
+        SS_2DTable    ={SS_2DTable    }
+        setSS_2DTable ={setSS_2DTable }
+        SS_nDMatrix   ={SS_nDMatrix   }
+        setSS_nDMatrix={setSS_nDMatrix}
+        SS_nDTable    ={SS_nDTable    }
+        setSS_nDTable ={setSS_nDTable }
+        SS_Image={SS_Image}
+        setSS_Image={setSS_Image}
+        SS_Zoom      ={SS_Zoom      }
+        SS_WidthImage={SS_WidthImage}
+        SS_IsRGB     ={SS_IsRGB     }
+        SS_ImageFile ={SS_ImageFile }
+        SS_UseEffect ={SS_UseEffect }
+        setSS_Zoom      ={setSS_Zoom      }
+        setSS_WidthImage={setSS_WidthImage}
+        setSS_IsRGB     ={setSS_IsRGB     }
+        setSS_ImageFile ={setSS_ImageFile }
+        setSS_UseEffect ={setSS_UseEffect }
         SS_OpenPanel={SS_OpenPanel}
         setSS_OpenPanel={setSS_OpenPanel}
         setSS_C02={setSS_C02}
+        SS_Thresholds={SS_Thresholds}
+        setSS_Thresholds={setSS_Thresholds}
         />
     }
     else{

@@ -6,13 +6,17 @@ const U1_2DMatrix = (
 // INPUT
 //****************************************************************************
 {
-
+SS_2DMatrix   ,
+setSS_2DMatrix,
+SS_2DTable    ,
+setSS_2DTable ,
 }
 :{
-
+SS_2DMatrix:number[]
+setSS_2DMatrix:(S:number[])=>void
+SS_2DTable:string[]
+setSS_2DTable:(S:string[])=>void
 })=>{
-    const [SS_2DMatrix,setSS_2DMatrix]=useState<number[]>([1,0,0,1])
-    const [SS_2DTable,setSS_2DTable]=useState<string[]>(['1','0','0','1'])
 
     useEffect(()=>{
       //alert(SS_2DMatrix)
@@ -53,7 +57,6 @@ const U1_2DMatrix = (
           }
           setSS_2DMatrix(ss_2DMatrix)
 
-          let let_2DMatrix=[...SS_2DMatrix]
           for(let i=0;i<4;i++){
             if(isNaN(parseFloat(ss_2DTable[i]))){
               ss_2DTable[i]='1'//let_2DMatrix[i].toString()

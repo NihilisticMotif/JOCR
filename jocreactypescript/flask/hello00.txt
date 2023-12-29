@@ -1,28 +1,21 @@
-# Filename - server.py
- 
-# Import flask and datetime module for showing date and time
-from flask import Flask
-from flask_cors import CORS
+#****************************************************************************
+# Print
+#****************************************************************************
+@app.route('/printt<x>')
+def printt(x):
+    return "<h1>"+x+"<h1>"
 
-# Initializing flask app
-app = Flask(__name__)
-CORS(app)
+@app.route('/HelloWorld')#,methods = ['POST', 'GET'])
+def HelloWorld():
+    # https://www.geeksforgeeks.org/how-to-connect-reactjs-with-flask-api/
+    return {'messenger':33}
 
-@app.route('/')
-def h():
-    return "<h1>Hello<h1>"
-
-# Route for seeing a data
-@app.route('/data')
-def get_time():
-    # Returning an api for showing in  reactjs
-    return {
-        'Name':"Correct", 
-        "Age":"Correct",
-        "programming":"Correct"
-        }
- 
-     
-# Running app
-if __name__ == '__main__':
-    app.run(debug=True,port=5001)
+@app.route('/Square',methods = ['POST', 'GET'])
+def HelloSomeone():
+    if request.method == 'POST':
+        Let_JSON  = request.get_json()
+        let_IsRGB = Let_JSON.get('IsRGB')
+        if let_IsRGB=='false':
+            return {'messenger':'Bordom'}
+        else:
+            return {'messenger':'Addiction'}

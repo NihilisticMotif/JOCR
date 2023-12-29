@@ -1,3 +1,352 @@
+          let let_Obs:any = {};
+          formData.forEach((value, key) => let_Obs[key] = value);
+ 
+          /*
+ 
+alert(JSON.stringify(response))  
+ 
+{'message':
+ 
+file:SS_ImageFile,
+ 
+file:SS_ImageFile,
+ 
+{'Say':
+ 
+    with open(path_to_file, 'rb') as my_file:
+        files = {'file': my_file}
+        payload = {'data1': 'foo', 'data2': 'bar'}
+        r = requests.post(data=payload, files=files)
+ 
+            # Not Working
+ 
+        #Let_JSON  = request.get_json()
+        #let_File = Let_JSON.get('file')
+ 
+            #let_Load = json.loads(Let_JSON)
+            #imdata = base64.b64decode(let_Load['image'])
+            #im = pickle.loads(imdata)
+            #return im
+            #pass
+ 
+            with open(Let_JSON)
+ 
+            print('Emma')
+ 
+,"r"
+ 
+['file']
+ 
+setSS_UseEffect(false)
+ 
+const formData = new FormData();
+          formData.append('file', SS_ImageFile);
+ 
+              //body:JSON.stringify({file:formData}),
+ 
+ file:
+ 
+JSON.stringify({
+                
+ 
+                //IsRGB:SS_IsRGB
+              })
+ 
+        #let_JSON=request.json['IsRGB']
+        #IsRGB=request.files['IsRGB']
+ 
+        #print(request.files)
+ 
+CR/jocreactypescript/flask/TheNowNow.png'
+ 
+    #path = '/Users/imac/Desktop/SoloOpenSourceProject/JO
+ 
+    
+ 
+            #if IsRGB=='false':
+            #    let_Img = get_grayscale(let_Img)
+ 
+        
+ 
+    #let_File  = Let_JSON.get('num')
+    #let_IsRGB = Let_JSON.get('IsRGB')
+    #if let_IsRGB=='false':
+    #    return {'messenger':int(let_File)**3}
+    #else:
+    #    return {'messenger':int(let_File)**2}
+ 
+int(let_File)**2
+ 
+        let_File  = Let_JSON.get('num')
+ 
+num:'33',
+ 
+Ge
+ 
+ourceProject/JOCR/jocreactypescript/flask/TheNowNow.png'
+ 
+    #path = '/Users/imac/Desktop/SoloOpenS
+ 
+#let_IsRGB = Let_JSON.get('IsRGB')
+        return {'messenger':33}
+    
+        '''
+ 
+#path = '/Users/imac/Desktop/SoloOpenSourceProject/JOCR/jocreactypescript/flask/TheNowNow.png'
+    #if request.method == 'POST':
+        # https://stackoverflow.com/questions/43218413/get-data-json-in-flask
+        #Let_JSON  = request.get_json()
+        #let_IsRGB = Let_JSON.get('IsRGB')
+        return {'messenger':33}
+    
+        '''
+ 
+    # By ChatGPT
+    #path = '/Users/imac/Desktop/SoloOpenSourceProject/JOCR/jocreactypescript/flask/TheNowNow.png'
+    #if request.method == 'POST':
+        # https://stackoverflow.com/questions/43218413/get-data-json-in-flask
+        #Let_JSON  = request.get_json()
+        #let_IsRGB = Let_JSON.get('IsRGB')
+ 
+.messenger
+ 
+)
+          
+ 
+jsonify(
+ 
+Hello
+ 
+        let_File=request.files['file']
+        IsRGB = request.files['IsRGB']
+ 
+          formData.append('IsRGB', SS_IsRGB.toString());
+ 
+    todo_data = request.get_json()
+ 
+json.load(
+ 
+json.load(
+ 
+    alert(SS_IsRGB)
+ 
+'data', 
+ 
+SS_ImageFile
+ 
+IsRGB
+ 
+&<IsRGB>
+ 
+&'+SS_IsRGB.toString()
+ 
+@app.route('/<Input>')#,methods=['Get'])
+def def_OutPut(Input):
+    var=Input
+    return jsonify({'py':var})
+
+@app.route('/def_Update')#,methods=['Get'])
+def def_Update():
+    return jsonify({'py':100})
+
+# y = x^2
+# https://www.geeksforgeeks.org/flask-app-routing/
+@app.route('/def_Ysquare/<Input>')#,methods=['Get'])
+def def_Ysquare(Input):
+    var=float(Input)**2
+    return jsonify({'py':var})
+
+@app.route('/def_Ycube/<Input>')#,methods=['Get'])
+def def_Ycube(Input):
+    var=float(Input)**3
+    return jsonify({'py':var})
+
+@app.route('/def_TheGreatestShowMustGoOn')#,methods=['Get'])
+def def_TheGreatestShowMustGoOn():
+    # By ChatGPT
+    path = '/Users/imac/Desktop/SoloOpenSourceProject/JOCR/jocreactypescript/flask/TheNowNow.png'
+    original_img = cv2.imread(path)
+    grayscale_img = get_grayscale(original_img)
+    img_bytes = cv2.imencode('.png', grayscale_img)[1].tobytes()
+    response = Response(img_bytes, content_type='image/png')
+    return response
+
+'''
+def def_TheGreatestShowMustGoOn():
+    path='/Users/imac/Desktop/SoloOpenSourceProject/JOCR/jocreactypescript/flask/TheNowNow.png'
+    img = cv2.imread(path)
+    with open(path, 'rb') as file:
+        img = get_grayscale(file)
+        img_bytes = img.read()
+    #img = get_grayscale(img)
+    #img = sharpen(img)
+    #img = WhiteBackGround(img)
+    ##img=img[1100:,:]#600:2000]   
+    ## To convert from OpenCV image to PIL image use:
+    ## https://stackoverflow.com/questions/43232813/convert-opencv-image-format-to-pil-image-format
+    #img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    #img = Image.fromarray(img)
+    # Convert the PIL image to bytes
+    #img_bytes = img.tobytes()
+#
+    ## Set appropriate content type in response headers
+    response = Response(img_bytes, content_type='image/png')
+    return response'''
+#****************************************************************************
+ 
+const [SS_Image     , setSS_Image] = useState<string | null>(null);  
+ 
+SS_Image:string | null
+ 
+  /*
+  useEffect(()=>{
+    let let_Rows =[]
+    let let_Texts=[]
+    if(SS_nDMatrix.length===1){
+      for(let i=0;i<let_TotalSize;i++){
+        let let_Row=[]
+        let let_Text=[]
+      for(let j=0;j<let_TotalSize;j++){
+        if(i===2 && j===2){
+          let_Row.push(1)
+        let_Text.push('1')
+        }
+        else{
+        let_Row.push(0)
+        let_Text.push('0')
+        }
+      }
+      let_Rows.push(let_Row)
+      let_Texts.push(let_Text)
+      }
+      setSS_nDMatrix(let_Rows )
+      setSS_nDTable(let_Texts)
+    }
+  },[])*/
+ 
+
+          let let_nDMatrix=[...SS_nDMatrix]
+ 
+
+          let let_2DMatrix=[...SS_2DMatrix]
+ 
+//****************************************************************************
+// OUTPUT
+//****************************************************************************
+    
+ 
+[[1]]
+ 
+  },[])
+ 
+  useEffect(()=>{
+ 
+*10+
+ 
+Kerna
+ 
+]
+ 
+let let_TotalSize=5
+ 
+  let JSX_Kernals=[]
+ 
+  let JSX_Kernal=(Id:number)=>{
+    return (
+      <td>
+        <h1>sss</h1>
+        <input id={'C04id_Kernal'+Id.toString()}></input>
+      </td>
+    )
+  }
+ 
+      let let_pair=[]
+ 
+JSX_Kernal(i*10+j)
+ 
+Id:number
+ 
+ key={SS_Reset}
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+setSS_Reset
+ 
+    setSS_Reset:(S:number)=>void
+ 
+        setSS_Reset={setSS_Reset}
+ 
+    const [SS_Reset,setSS_Reset]=useState<number>(0)
+ 
+setSS_Reset
+ 
+setSS_Reset:(S:number)=>void
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset={setSS_Reset}
+ 
+setSS_Reset:(S:number)=>void
+ 
+setSS_Reset
+ 
+setSS_Reset:S
+ 
+
+    useEffect(()=>{setSS_Reset(Math.random)},[SS_OpenPanel])
+ 
+        {
+ 
+    const [SS_2DMatrix,setSS_2DMatrix]=useState<number[]>([1,0,0,1])
+    const [SS_2DTable,setSS_2DTable]=useState<string[]>(['1','0','0','1'])
+
+ 
+        setSS_Image     ={setSS_Image     }
+ 
+const [SS_Image     , setSS_Image] = useState<string | null>(null);
+ 
+SS_Image     ,
+ 
+setSS_Image     ,
+ 
+SS_Image     :string|null
+ 
+setSS_Image     :(S:string|null)=>void
+ 
+        SS_Image     ={SS_Image     }
+ 
+     //f_UpdateThresholds()
+ 
+     //alert(JSON.stringify(let_UpdateThresholds))
+ 
+     //alert(JSON.stringify(SS_Thresholds))
+
+     //alert(SS_Thresholds.length)
+ 
+    alert('Add')
+ 
+.pearseInt()
+ 
+let_Height=let_MaxY
+ 
+let_Height=let_MaxY
+ 
+let_Height
+ 
+          
+ 
+    let let_IsShow='visible'
+ 
+let_input
+ 
+,whiteSpace:'break-spaces'
+ 
+      if(let_input[0]===let_input[2]&& let_input[2]==let_input[])
+ 
 //import {U03_SetIsDefault} from '../../../T03_Threshold/U03_SetIsDefault'
  
        //let ss_Thresholds=[...SS_Thresholds]

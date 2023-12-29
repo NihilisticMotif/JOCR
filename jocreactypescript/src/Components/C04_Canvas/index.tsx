@@ -8,15 +8,37 @@ import React, { ChangeEvent, useState , useEffect, useRef , useLayoutEffect} fro
 import TS_Row from '../T01_Row/An_Index';
 import U_CommandLine from './Coms/U_CommandLine';
 import U_Toolbar from './Coms/U_Toolbar';
-
+import TS_Threshold from '../T03_Threshold/An_Index';
 // CSS
 import './index00.css'
 import './index01.css'
 
 interface IN_C04{
+SS_nDMatrix   :number[][]
+setSS_nDMatrix:(S:number[][])=>void
+SS_nDTable    :string[][]
+setSS_nDTable :(S:string[][])=>void
+SS_2DMatrix:number[]
+setSS_2DMatrix:(S:number[])=>void
+SS_2DTable:string[]
+setSS_2DTable:(S:string[])=>void
+SS_Image:string | null
+setSS_Image:(S:string | null)=>void
+SS_Zoom      :number
+SS_WidthImage:number
+SS_IsRGB     :boolean
+SS_ImageFile :File|null
+SS_UseEffect :boolean
+setSS_Zoom      :(S:number)=>void
+setSS_WidthImage:(S:number)=>void
+setSS_IsRGB     :(S:boolean)=>void
+setSS_ImageFile :(S:File|null)=>void
+setSS_UseEffect :(S:boolean)=>void
 SS_OpenPanel:0|1|2;
 setSS_OpenPanel:(S:0|1|2)=>void;
 setSS_C02:(S:boolean)=>void
+SS_Thresholds:TS_Threshold[];
+setSS_Thresholds:(S:TS_Threshold[])=>void
 }
 
 const C04_Canvas: React.FC<IN_C04> = (
@@ -24,44 +46,146 @@ const C04_Canvas: React.FC<IN_C04> = (
 // INPUT
 //****************************************************************************
 {
+  SS_nDMatrix ,  
+setSS_nDMatrix,
+SS_nDTable    ,
+setSS_nDTable ,
+SS_2DMatrix   ,
+setSS_2DMatrix,
+SS_2DTable    ,
+setSS_2DTable ,
+  //
+SS_Image,
+setSS_Image,
+SS_Zoom      ,
+SS_WidthImage,
+SS_IsRGB     ,
+SS_ImageFile,
+SS_UseEffect,
+setSS_Zoom      ,
+setSS_WidthImage,
+setSS_IsRGB     ,
+setSS_ImageFile ,
+setSS_UseEffect ,
 SS_OpenPanel,
 setSS_OpenPanel,
+SS_Thresholds,
+setSS_Thresholds,
 }
 :{
+SS_nDMatrix   :number[][]
+setSS_nDMatrix:(S:number[][])=>void
+SS_nDTable    :string[][]
+setSS_nDTable :(S:string[][])=>void
+SS_2DMatrix:number[]
+setSS_2DMatrix:(S:number[])=>void
+SS_2DTable:string[]
+setSS_2DTable:(S:string[])=>void
+  //
+SS_Image:string | null
+setSS_Image:(S:string | null)=>void
+SS_Zoom      :number
+SS_WidthImage:number
+SS_IsRGB     :boolean
+SS_ImageFile :File|null
+SS_UseEffect :boolean
+setSS_Zoom      :(S:number)=>void
+setSS_WidthImage:(S:number)=>void
+setSS_IsRGB     :(S:boolean)=>void
+setSS_ImageFile :(S:File|null)=>void
+setSS_UseEffect :(S:boolean)=>void
 SS_OpenPanel:0|1|2,
 setSS_OpenPanel:(S:0|1|2)=>void
+SS_Thresholds:TS_Threshold[];
+setSS_Thresholds:(S:TS_Threshold[])=>void
 }) => {
   
 //****************************************************************************
 // HOOK
 //****************************************************************************
-  const [SS_Image, setSS_Image] = useState<string | null>(null);
-  const [SS_Zoom,setSS_Zoom] = useState<number>(1)
-  const [SS_WidthImage, setSS_WidthImage] = useState<number>(0);
-  const [SS_IsRGB,setSS_IsRGB]=useState<boolean>(true)
-  const [SS_ImageFile,setSS_ImageFile]=useState<null|File>(null)
-  const [SS_UseEffect,setSS_UseEffect]=useState<boolean>(true)
   const let_fetchImage = async () => {
     // https://stackoverflow.com/questions/73678855/fetch-and-display-image-from-api-react
         if (SS_ImageFile && SS_UseEffect===true) {
+          
+          //formData.append('IsRGB', SS_IsRGB);
+
+          //fetch('/def_OpenCV')
+          //.then(())
+
+          /*
+          // Print Hello World
+          // https://www.geeksforgeeks.org/how-to-connect-reactjs-with-flask-api/
+          fetch('/def_OpenCV')
+          .then((res)=>
+          res.json().then((data)=>alert(JSON.stringify(data)))
+          )
+          */
+
+          /* Basic Post Request
+          // https://stackoverflow.com/questions/72023176/how-to-send-post-request-from-react-to-flask-without-submit-button
+          fetch("/Square", {
+            method: "POST",
+            body: JSON.stringify({IsRGB:SS_IsRGB.toString()}),
+            headers: { "content-type": "application/json" },
+          })
+            .then((res) => {
+              if (!res.ok) return Promise.reject(res);
+              return res.json();
+            })
+            .then((data) => {
+              alert(JSON.stringify(data))
+              // do something with data ¯\_(ツ)_/¯
+            })
+            .catch(console.error);*/
+          
           const formData = new FormData();
           formData.append('file', SS_ImageFile);
-          fetch('/def_OpenCV&'+SS_IsRGB.toString(), {
+          // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
+          let let_ImageJson = JSON.stringify(Object.fromEntries(formData));
+          fetch('/def_OpenCV', {
               method: 'POST',
-              body: formData,
+              //body:formData,
+              body: JSON.stringify({IsRGB:SS_IsRGB.toString(),file:let_ImageJson}),
+              headers: { "content-type": "application/json" }
           })
           .then((response) => {
-              return response.blob();
+            return response.json();
+            //return response.blob();
+            //alert(JSON.stringify(response))
           })
           .then((data) => {
-              const imageURL = URL.createObjectURL(data);
-              setSS_Image(imageURL);
-          })
+            alert(JSON.stringify(data));
+              //const imageURL = URL.createObjectURL(data);
+              //setSS_Image(imageURL);
+          })/*
           .catch((error) => {
               console.error('Error uploading file:', error);
-          });
-          setSS_UseEffect(false)
+          });*/
+          
+         /*
+          let canvas = document.getElementById("C04id_Midjourney");
+          let image_file = canvas.toDataURL()
+          let body = {
+            "content": image_file,
           }
+
+          fetch('/def_OpenCV', {
+            body: JSON.stringify(body),
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            }
+          }).then(response => {
+            console.log(response);
+          }).catch(exception => {
+            // fetch API problem: in case of CORS the server must send header "Access-Control-Allow-Origin":"*"
+            console.log(exception);
+          });*/
+
+          setSS_UseEffect(false)
+
+       }
   };
 
   const Ref_C04 = useRef<HTMLDivElement | null>(null);
@@ -203,6 +327,7 @@ style={{width:(SS_WidthImage).toString()+'px'}}
   {
     SS_Image && <img 
     src={SS_Image} 
+    id="C04id_Midjourney"
     alt="Uploaded" 
     style={{
       height:`calc( ${SS_Zoom} * 100%)`
@@ -214,12 +339,22 @@ style={{width:(SS_WidthImage).toString()+'px'}}
 
 
 <U_Toolbar
+SS_nDMatrix   ={SS_nDMatrix   }
+setSS_nDMatrix={setSS_nDMatrix}
+SS_nDTable    ={SS_nDTable    }
+setSS_nDTable ={setSS_nDTable }
+SS_2DMatrix   ={SS_2DMatrix   }
+setSS_2DMatrix={setSS_2DMatrix}
+SS_2DTable    ={SS_2DTable    }
+setSS_2DTable ={setSS_2DTable }
 SS_Zoom={SS_Zoom}
 setSS_Zoom={setSS_Zoom}
 setSS_IsRGB={setSS_IsRGB}
 TotalWidth={let_RightToolW}
 setSS_UseEffect={setSS_UseEffect}
 SS_OpenPanel={SS_OpenPanel}
+SS_Thresholds={SS_Thresholds}
+setSS_Thresholds={setSS_Thresholds}
 />
   </div>
     

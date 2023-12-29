@@ -24,21 +24,16 @@ const U2_Threshold = (
 // INPUT
 //****************************************************************************
 {
-
-
+SS_Thresholds,
+setSS_Thresholds
 }
 :{
-
-
+SS_Thresholds:TS_Threshold[]
+setSS_Thresholds:(S:TS_Threshold[])=>void
 })=>{
 //****************************************************************************
 // HOOK
 //****************************************************************************
- const [SS_Thresholds,setSS_Thresholds]=useState<TS_Threshold[]>([
-   {Key:112,PositionY:10 ,IsDefault:false,Gray:'#000000'},
-   {Key:121,PositionY:121,IsDefault:false,Gray:'#000000'},
-   {Key:211,PositionY:211,IsDefault:false,Gray:'#000000'},
- ])
  const [SS_ThisThreshold,setSS_ThisThreshold]=useState<TS_Threshold>({Key:0,PositionY:0,IsDefault:false,Gray:'#000000'})
 
 
@@ -54,6 +49,8 @@ const U2_Threshold = (
  //const [SS_OuterDown,   setSS_OuterDown] = useState<boolean>(false);
  const [SS_MouseActivate,setSS_MouseActivate]=useState<boolean>(false)
  const [SS_SuperActivate,setSS_SuperActivate]=useState<boolean>(false)
+
+ const [SS_MaxHeight,setSS_MaxHeight]=useState<number>(0)
 //****************************************************************************
 // USEEFFECT
 //****************************************************************************
@@ -63,10 +60,12 @@ const U2_Threshold = (
 //****************************************************************************
 
 
+
    let let_Mouse=0
    let let_Delta=0
    let let_MaxY=document.getElementById('C04id_Gradient')?.offsetHeight
-
+   setSS_MaxHeight(let_MaxY?let_MaxY:0)
+   
    const f_MouseMove = (event: MouseEvent) => {
     let let_MousePosition = 0
     let_MousePosition = event.clientY;
@@ -160,7 +159,6 @@ const U2_Threshold = (
      let ss_Thresholds = [...SS_Thresholds]
      let let_UpdateThresholds = C03_Create(ss_Thresholds)
      setSS_Thresholds(let_UpdateThresholds)
-     f_UpdateThresholds()
    }
 
 
@@ -200,6 +198,10 @@ const U2_Threshold = (
     function f_setColor(){
       let let_target=(document.getElementById('C04id_Color'+Threshold.Key.toString())as HTMLInputElement)
       let let_input=let_target?.value
+      let_input=let_input[0]+let_input[1]+let_input[2]+let_input[1]+let_input[2]+let_input[1]+let_input[2]
+
+      //alert(let_input[0])
+      
       //let_target!.value=let_input
 
       let let_Show=(document.getElementById('C04id_Show'+Threshold.Key.toString())as HTMLInputElement)
@@ -229,10 +231,9 @@ const U2_Threshold = (
       <div style={{display:'flex'}}>
         <h1 style={{fontSize:'13px',marginRight:'-20px',marginTop:'-10px',marginLeft:'-25px',width:'20px'}}>
           {
-          Threshold.Key
+          //Threshold.Key
           }
-          {
-          //Threshold.PositionY
+          {Math.round(255*(255*((SS_MaxHeight) - Threshold.PositionY)/(SS_MaxHeight))/250)
           }
         </h1>
       <button style={{width:'25px',height:'25px',marginLeft:'115px',backgroundColor:'white'}}
@@ -249,6 +250,7 @@ const U2_Threshold = (
           style={{width:'25px',height:'25px'}} 
           onChange={f_setColor} 
           type="color" 
+          // only accept white, gray and black as the input
           value={Threshold.Gray}
           id={'C04id_Color'+Threshold.Key.toString()} 
           ></input>
