@@ -104,6 +104,7 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
 // HOOK
 //****************************************************************************
   const let_fetchImage = async () => {
+    // https://stackoverflow.com/questions/72023176/how-to-send-post-request-from-react-to-flask-without-submit-button
     // https://stackoverflow.com/questions/73678855/fetch-and-display-image-from-api-react
         if (SS_ImageFile && SS_UseEffect===true) {
           
