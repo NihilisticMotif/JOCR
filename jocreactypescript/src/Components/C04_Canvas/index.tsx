@@ -9,6 +9,7 @@ import TS_Row from '../T01_Row/An_Index';
 import U_CommandLine from './Coms/U_CommandLine';
 import U_Toolbar from './Coms/U_Toolbar';
 import TS_Threshold from '../T03_Threshold/An_Index';
+import { U03_Sort } from '../T03_Threshold/U03_Sort';
 // CSS
 import './index00.css'
 import './index01.css'
@@ -18,10 +19,10 @@ SS_nDMatrix   :number[][]
 setSS_nDMatrix:(S:number[][])=>void
 SS_nDTable    :string[][]
 setSS_nDTable :(S:string[][])=>void
-SS_2DMatrix:number[]
-setSS_2DMatrix:(S:number[])=>void
-SS_2DTable:string[]
-setSS_2DTable:(S:string[])=>void
+SS_3DMatrix:number[][]
+setSS_3DMatrix:(S:number[][])=>void
+SS_3DTable:string[][]
+setSS_3DTable:(S:string[][])=>void
 SS_Image:string | null
 setSS_Image:(S:string | null)=>void
 SS_Zoom      :number
@@ -50,10 +51,10 @@ const C04_Canvas: React.FC<IN_C04> = (
 setSS_nDMatrix,
 SS_nDTable    ,
 setSS_nDTable ,
-SS_2DMatrix   ,
-setSS_2DMatrix,
-SS_2DTable    ,
-setSS_2DTable ,
+SS_3DMatrix   ,
+setSS_3DMatrix,
+SS_3DTable    ,
+setSS_3DTable ,
   //
 SS_Image,
 setSS_Image,
@@ -77,10 +78,10 @@ SS_nDMatrix   :number[][]
 setSS_nDMatrix:(S:number[][])=>void
 SS_nDTable    :string[][]
 setSS_nDTable :(S:string[][])=>void
-SS_2DMatrix:number[]
-setSS_2DMatrix:(S:number[])=>void
-SS_2DTable:string[]
-setSS_2DTable:(S:string[])=>void
+SS_3DMatrix:number[][]
+setSS_3DMatrix:(S:number[][])=>void
+SS_3DTable:string[][]
+setSS_3DTable:(S:string[][])=>void
   //
 SS_Image:string | null
 setSS_Image:(S:string | null)=>void
@@ -138,27 +139,35 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
               // do something with data ¯\_(ツ)_/¯
             })
             .catch(console.error);*/
-          
+          let ss_Thresholds=[...SS_Thresholds]
+          let let_UpdateThresholds=U03_Sort(ss_Thresholds)
+          setSS_Thresholds(let_UpdateThresholds)
           const formData = new FormData();
           formData.append('file', SS_ImageFile);
+          formData.append('IsRGB', SS_IsRGB.toString())
+          formData.append('LinearMap',SS_3DMatrix.toString())
+          formData.append('Convolution',SS_nDMatrix.toString())
+          formData.append('Thresholds',JSON.stringify(SS_Thresholds).toString())
           // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
           let let_ImageJson = JSON.stringify(Object.fromEntries(formData));
           fetch('/def_OpenCV', {
               method: 'POST',
               //body:formData,
-              body: JSON.stringify({IsRGB:SS_IsRGB.toString(),file:let_ImageJson}),
-              headers: { "content-type": "application/json" }
+              body: formData// JSON.stringify({IsRGB:SS_IsRGB.toString(),file:let_ImageJson}),
+              //headers: { "content-type": "application/json" }
           })
           .then((response) => {
-            return response.json();
-            //return response.blob();
+            //return response.json();
+            return response.blob();
             //alert(JSON.stringify(response))
           })
           .then((data) => {
-            alert(JSON.stringify(data));
-              //const imageURL = URL.createObjectURL(data);
-              //setSS_Image(imageURL);
-          })/*
+              //alert(JSON.stringify(data));
+              // Change Image
+              const imageURL = URL.createObjectURL(data);
+              setSS_Image(imageURL);
+          })
+          /*
           .catch((error) => {
               console.error('Error uploading file:', error);
           });*/
@@ -344,10 +353,10 @@ SS_nDMatrix   ={SS_nDMatrix   }
 setSS_nDMatrix={setSS_nDMatrix}
 SS_nDTable    ={SS_nDTable    }
 setSS_nDTable ={setSS_nDTable }
-SS_2DMatrix   ={SS_2DMatrix   }
-setSS_2DMatrix={setSS_2DMatrix}
-SS_2DTable    ={SS_2DTable    }
-setSS_2DTable ={setSS_2DTable }
+SS_3DMatrix   ={SS_3DMatrix   }
+setSS_3DMatrix={setSS_3DMatrix}
+SS_3DTable    ={SS_3DTable    }
+setSS_3DTable ={setSS_3DTable }
 SS_Zoom={SS_Zoom}
 setSS_Zoom={setSS_Zoom}
 setSS_IsRGB={setSS_IsRGB}

@@ -13,8 +13,6 @@ def get_grayscale(image):
     return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 def sharpen(image):
-    #kernel = np.array([[-0.1,-0.1,-0.1], [-0.1,1.8,-0.1], [-0.1,-0.1,-0.1]])
-    #k3=0    # 24
     k2=-0.1
     k1=-5
     k0=-(k2*16+k1*8)+1
@@ -25,24 +23,6 @@ def sharpen(image):
         [k2,k1,k1,k1,k2,], 
         [k2,k2,k2,k2,k2,]
         ])
-    
-    '''
-    k0=-0.02    # 19
-    k1=-0.05    # 13
-    k2=-2     # 8
-    k3=18        # 1
-    
-    kernel = np.array([
-        [k0,k0,k0,k0,k0,k0,k0], 
-        [k0,k1,k1,k1,k1,k1,k0], 
-        [k0,k1,k2,k2,k2,k1,k0], 
-        [k0,k1,k2,k3,k2,k1,k0], 
-        [k0,k1,k2,k2,k2,k1,k0], 
-        [k0,k1,k1,k1,k1,k1,k0],
-        [k0,k0,k0,k0,k0,k0,k0]
-        ])'''
-    #kernel = np.array([[0.5,0,-0.5], [0.5,0,-0.5], [0.5,0,-0.5]])
-    #kernel = (1/(10**2))*np.ones((10,10))
     # https://youtu.be/KuXjwB4LzSA?si=mt-leKGKjpMnJGfg
     # https://www.geeksforgeeks.org/python-opencv-filter2d-function/
     return cv2.filter2D(image, -1, kernel)
@@ -64,16 +44,15 @@ def opening(image):
     return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
 
 #White
-def WhiteBackGround(img):
-    RangeMax=100
-    A1=1
-    Step=1
-    Start=0
-    for i in range(RangeMax):
-      mark=np.logical_and(img>Start+(i*Step)/A1,img<Start+((i+1)*Step)/A1)
-      img[mark]=Start+(i*Step)/A1
-    img[img>=Start+((RangeMax)*Step)/A1]=255
-    return img
+def WhiteBackGround(img,Minn,Maxx,Gray):
+    for minn,maxx,gray in zip(Minn,Maxx,Gray):
+      mark=np.logical_and(img>minn,img<maxx)
+      img[mark]=gray
+    try:
+        img[img>=Maxx[-1]]=255
+        return img
+    except:
+        return img
 
 ########################################################################################
 #   Display the Image
