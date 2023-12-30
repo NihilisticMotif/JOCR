@@ -1,3 +1,353 @@
+// shape = (2,3,2)
+ 
+<div style={{display:'inline-grid'}}>
+ 
+</div>
+ 
+</div>
+ 
+  //
+ 
+    BOOL:
+ 
+</div>
+ 
+style={{marginTop:'-10px'}}
+ 
+marginRight:'100px'
+ 
+style={{backgroundColor:'#33AAFF'}}
+ 
+,borderTop:'0px'
+ 
+-5
+ 
+height:`175px`,
+ 
+<hr/>
+ 
+<hr style={{width:'90%'}} />
+ 
+<hr style={{width:'90%'}} />
+ 
+marginTop:'-10px'
+ 
+<h1>s</h1>
+ 
+</div>
+ 
+<select id="cars" name="cars" className='C04id_Convolution'>
+  <option value="volvo">Scale</option>
+  <option value="volvo">Scale X</option>
+  <option value="saab">Scale Y</option>
+</select>
+<input></input>
+<button style={{marginTop:'10px'}}>Set</button>
+ 
+  <option value="volvo">Circle frame</option>
+  <option value="mercedes">Arrow</option>
+  <option value="mercedes">2 Ways Arrow</option>
+  <option value="audi">Line</option>
+  <option value="audi">LineX</option>
+  <option value="audi">LineY</option>
+ 
+,marginRight:'5px'
+ 
+,marginRight:'10px',marginLeft:'-140px'
+ 
+,marginRight:'10px',marginLeft:'-140px'
+ 
+<input type='color' value={point.RGB}></input>
+ 
+<tr>
+<th><h1>Point</h1></th>
+<th><h1>X</h1></th>
+<th><h1>Y</h1></th>
+<th><h1>RGB</h1></th>
+</tr>
+ 
+
+<h1 style={{fontSize:'16px'}}>Selected Point</h1>
+<tr>
+<th><h1>Point</h1></th>
+<th><h1>X</h1></th>
+<th><h1>Y</h1></th>
+<th><h1>RGB</h1></th>
+</tr>
+ 
+<tr>
+<th><h1>Point</h1></th>
+<th><h1>X</h1></th>
+<th><h1>Y</h1></th>
+<th><h1>RGB</h1></th>
+</tr>
+ 
+<tr>
+<h1 style={{marginRight:'10px'}}>Point 1</h1>
+<td><input></input></td>
+<td><input></input></td>
+<td><input type='color'></input></td>
+</tr>
+
+<tr>
+<h1 style={{marginRight:'10px'}}>Point 2</h1>
+<td><input></input></td>
+<td><input></input></td>
+<td><input type='color'></input></td>
+</tr>
+
+<tr>
+<h1 style={{marginRight:'10px'}}>Point 3</h1>
+<td><input></input></td>
+<td><input></input></td>
+<td><input type='color'></input></td>
+</tr>
+ 
+<tr>
+<h1 style={{marginRight:'10px'}}>Point 1</h1>
+<td><input></input></td>
+<td><input></input></td>
+<td><input type='color'></input></td>
+</tr>
+
+<tr>
+<h1 style={{marginRight:'10px'}}>Point 2</h1>
+<td><input></input></td>
+<td><input></input></td>
+<td><input type='color'></input></td>
+</tr>
+
+<tr>
+<h1 style={{marginRight:'10px'}}>Point 3</h1>
+<td><input></input></td>
+<td><input></input></td>
+<td><input type='color'></input></td>
+</tr>
+ 
+ /*
+  let let_TotalSize=3
+  let let_TotalSize2=2
+
+  let JSX_Con=[]
+  const let_Width='250px'
+  for(let i=0;i<let_TotalSize2;i++){
+    let JSX_Kernals=[]
+    for(let j=0;j<let_TotalSize;j++){
+      JSX_Kernals.push([i,j])
+    }
+    JSX_Con.push(JSX_Kernals)
+  }
+  let JSX_Convolution=JSX_Con.map((i)=>(<tr>{i.map((j)=>(<td><input 
+    onChange={()=>f_OnChange(j[0],j[1])}
+    value={(SS_nDTable[j[0]][j[1]]).toString()} 
+    id={'C04id_warpAffine'+(j[0]*10+j[1]).toString()}></input></td>))}</tr>))
+
+//****************************************************************************
+// FUNCTION_00: On Change
+//****************************************************************************
+    function f_OnChange(id0:number,id1:number){
+        let let_input=(document.getElementById('C04id_warpAffine'+(id0*10+id1).toString()) as HTMLInputElement).value.toString();
+        let ss_nDTable=[...SS_nDTable]
+        ss_nDTable[id0][id1]=let_input
+        setSS_nDTable(ss_nDTable);
+        (document.getElementById('C04id_warpAffine'+(id0*10+id1).toString()) as HTMLInputElement).value = let_input;
+      }
+
+//****************************************************************************
+// FUNCTION_01: Reset
+//****************************************************************************
+      function f_Reset(){
+        setSS_nDMatrix([[1,0,0],[0,1,0]])
+        setSS_nDTable([['1','0','0'],['0','1','0']])
+      }
+
+//****************************************************************************
+// FUNCTION_01: Update Matrix
+//****************************************************************************
+        function f_Update(){
+          let ss_nDMatrix=[...SS_nDMatrix]
+          let ss_nDTable=[... SS_nDTable]
+          for(let i=0;i<let_TotalSize2;i++){
+          for(let j=0;j<let_TotalSize;j++){
+            if(isNaN(parseFloat(SS_nDTable[i][j]))===false){
+              //alert(SS_nDTable[i])
+              ss_nDMatrix[i][j]=parseFloat(ss_nDTable[i][j])
+            }
+            else{
+              ss_nDMatrix[i][j]=0
+            }}
+          }
+          setSS_nDMatrix(ss_nDMatrix)
+
+          for(let i=0;i<let_TotalSize2;i++){
+          for(let j=0;j<let_TotalSize;j++){
+            if(isNaN(parseFloat(SS_nDTable[i][j]))){
+              SS_nDTable[i][j]='1'//let_2DMatrix[i].toString()
+            }
+          }
+          setSS_nDTable(SS_nDTable)
+        }
+        }*/
+ 
+/*
+  for(let k=0;k<ss_Affine.length;k++){
+    for(let i=0;i<ss_Affine[0].length;i++){
+    let_Vector=[]
+    for(let j=0;j<ss_Affine[0][0].length;j++){
+      let_Vector.push(let_SelectedPoint[i][j])
+    }
+
+    if(k===0){
+      let_SelectedPoint.push(
+        {
+          Vector:let_Vector,
+          RGB:SS_AffineRGB[i]
+        }
+      )
+    }}
+    else{
+      let_TransformedPoint.push(
+        {
+          Vector:let_Vector,
+          RGB:SS_AffineRGB
+        }
+      )
+    }
+  }*/
+ 
+  let let_SelectedP=[]
+  let let_Vector=[]
+ 
+  let
+ 
+    
+ 
+let let_Vector=[]
+ 
+[0]
+ 
+SS_Affine[1]
+ 
+SS_Affine[0]
+ 
+let JSX_SelectedPoint=let_SelectedPoint.map()
+ 
+onClick={f_Update}
+ 
+ onClick={alert}
+ 
+          formData.append('LinearMap',SS_3DMatrix.toString())
+ 
+,
+ 
+SS_3DMatrix:number[][]
+setSS_3DMatrix:(S:number[][])=>void
+SS_3DTable:string[][]
+setSS_3DTable:(S:string[][])=>void
+ 
+SS_3DMatrix   ,
+setSS_3DMatrix,
+SS_3DTable    ,
+setSS_3DTable ,
+ 
+_SS
+ 
+_SS
+ 
+_SS
+ 
+<hr style={{width:'90%'}}/>
+ 
+X
+ 
+RGB
+ 
+Point
+ 
+<h1>Y:</h1>
+ 
+<h1>X:</h1>
+ 
+<div style={{width:'10px'}}></div>
+ 
+    // https://medium.com/@conghung43/image-projective-transformation-with-opencv-python-f0028aaf2b6d
+    // https://docs.opencv.org/4.x/d4/d61/tutorial_warp_affine.html ?
+ 
+</tr>
+ 
+let_Img = AffineTransformations(let_Img)
+ 
+let_Img = AffineTransformations(let_Img)
+ 
+    img_src_coordinate = np.array([[0,0],[0,h],[w,0],[w,h]])
+
+    pass
+ 
+rows, cols, ch = let_Img.shape
+ 
+,['0','0','1']
+ 
+,[0,0,1]
+ 
+,['0','0','1']
+ 
+,[0,0,1]
+ 
+         ['0','0','0','0','0']
+ 
+,0,0
+ 
+         [0,0,1,0,0],
+         [0,0,0,0,0],
+         [0,0,0,0,0]
+ 
+    # Get source image parameter: 
+    #[[left,top], [left,bottom], [right, top], [right, bottom]]
+ 
+ transformation
+ 
+import U1_2DMatrix from './U2_2DMatrix'
+ 
+calc(100vh - 40px - ${(143+20)}px 
+ 
+<hr/>
+  <U1_2DMatrix
+SS_nDMatrix ={SS_3DMatrix   }  
+setSS_nDMatrix={setSS_3DMatrix}
+SS_nDTable    ={SS_3DTable    }
+setSS_nDTable ={setSS_3DTable }/>
+ 
+  <U1_2DMatrix
+SS_nDMatrix ={SS_3DMatrix   }  
+setSS_nDMatrix={setSS_3DMatrix}
+SS_nDTable    ={SS_3DTable    }
+setSS_nDTable ={setSS_3DTable }/>
+</div>
+ 
+SS_3DMatrix:number[][]
+setSS_3DMatrix:(S:number[][])=>void
+SS_3DTable:string[][]
+setSS_3DTable:(S:string[][])=>void
+ 
+SS_3DMatrix   ,
+setSS_3DMatrix,
+SS_3DTable    ,
+setSS_3DTable ,
+ 
+import { useState, useEffect } from 'react'
+ 
+SS_nDMatrix   :number[][]
+setSS_nDMatrix:(S:number[][])=>void
+SS_nDTable    :string[][]
+setSS_nDTable :(S:string[][])=>void
+ 
+SS_nDMatrix   ,
+setSS_nDMatrix,
+SS_nDTable    ,
+setSS_nDTable 
+ 
+import { useState, useEffect } from 'react'
+ 
 alert(JSON.stringify(SS_Thresholds))
  
 Threshold

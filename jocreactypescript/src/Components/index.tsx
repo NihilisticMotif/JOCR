@@ -66,9 +66,51 @@ const Components=()=>{
     const [SS_ImageFile,setSS_ImageFile]=useState<null|File>(null)
     const [SS_UseEffect,setSS_UseEffect]=useState<boolean>(true)
 
-    const [SS_3DMatrix,setSS_3DMatrix]=useState<number[][]>([[1,0,0],[0,1,0],[0,0,1]])
-    const [SS_3DTable,setSS_3DTable]=useState<string[][]>([['1','0','0'],['0','1','0'],['0','0','1']])
+    // shape = (2,3,2)
+    const [SS_Affine,setSS_Affine]=useState<number[][][]>([
+        // Selected Point
+        [
+            [0,0],
+            [0,0],
+            [0,0],
+        ],
+        // Transformed Point
+        [
+            [0,0],
+            [0,0],
+            [0,0],
+        ]
+    ])
+    
+    const [SS_AffineSTR,setSS_AffineSTR]=useState<string[][][]>([
+        // Selected Point
+        [
+            ['0','0'],
+            ['0','0'],
+            ['0','0'],
+        ],
+        // Transformed Point
+        [
+            ['0','0'],
+            ['0','0'],
+            ['0','0'],
+        ]
+    ])
+    const [SS_AffineRGB,setSS_AffineRGB]=useState<string[][]>([
+        ['#000000',
+        '#000000',
+        '#000000',],
+        ['#000000',
+        '#000000',
+        '#000000',]
+    ])
 
+    const [SS_AffineBOOL,setSS_AffineBOOL]=useState<boolean[][]>(
+        [
+            [false,false,false],
+            [false,false,false]
+        ]
+    )
     const [SS_nDMatrix,setSS_nDMatrix]=useState<number[][]>(
        [[0,0,0,0,0],
         [0,0,0,0,0],
@@ -150,10 +192,14 @@ const Components=()=>{
     let JSX_C04=<></>
     if(SS_OpenPanel===1 || SS_OpenPanel===2){
         JSX_C04=<C04_Canvas
-        SS_3DMatrix   ={SS_3DMatrix   }
-        setSS_3DMatrix={setSS_3DMatrix}
-        SS_3DTable    ={SS_3DTable    }
-        setSS_3DTable ={setSS_3DTable }
+        SS_Affine   ={SS_Affine   }
+        setSS_Affine={setSS_Affine}
+        SS_AffineSTR    ={SS_AffineSTR    }
+        setSS_AffineSTR ={setSS_AffineSTR }
+        SS_AffineRGB={SS_AffineRGB}
+        setSS_AffineRGB={setSS_AffineRGB}
+        SS_AffineBOOL={SS_AffineBOOL}
+        setSS_AffineBOOL={setSS_AffineBOOL}
         SS_nDMatrix   ={SS_nDMatrix   }
         setSS_nDMatrix={setSS_nDMatrix}
         SS_nDTable    ={SS_nDTable    }

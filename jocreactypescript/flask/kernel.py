@@ -7,6 +7,7 @@ import numpy as np
 ########################################################################################
 
 def canny(image):
+    # X
     return cv2.Canny(image, 100, 200)
 
 def get_grayscale(image):
@@ -29,17 +30,20 @@ def sharpen(image):
 
 #erosion
 def erode(image):
+    # X
     kernel = np.ones((5,5),np.uint8)
     return cv2.erode(image, kernel, iterations = 1)
 
 #dilation
 def dilate(image):
+    # X
     kernel = np.ones((5,5),np.uint8)
     return cv2.dilate(image, kernel, iterations = 1)
     # https://www.geeksforgeeks.org/erosion-dilation-images-using-opencv-python/
 
 #opening - erosion followed by dilation
 def opening(image):
+    # X
     kernel = np.ones((5,5),np.uint8)
     return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
 
@@ -57,6 +61,23 @@ def WhiteBackGround(img,Minn,Maxx,Gray,Bool):
             return img
     else:
         return img
+
+def AffineTransformations(img):
+    # https://youtu.be/Ad9e5eoHm9U?si=RQMj8ASrsi1-Xov-
+    # https://www.geeksforgeeks.org/python-opencv-affine-transformation/
+    rows, cols, ch = img.shape
+    pts1 = np.float32([[50, 50],
+                   [200, 50], 
+                   [50, 200]])
+ 
+    pts2 = np.float32([[10, 100],
+                       [200, 50], 
+                       [100, 250]])
+    
+    M = cv2.getAffineTransform(pts1, pts2)
+    dst = cv2.warpAffine(img, M, (cols, rows))
+    return dst
+
 ########################################################################################
 #   Display the Image
 ########################################################################################

@@ -5,7 +5,7 @@ import U1_ShapeTextSetting from './Coms_Toolbar/U1_ShapeTextSetting'
 import U1_EditImage from './Coms_Toolbar/U1_EditImage'
 import U1_Zoom from './Coms_Toolbar/U1_Zoom';
 import U1_IsRGB from './Coms_Toolbar/U1_IsRGB';
-import U1_2DMatrix from './Coms_Toolbar/U2_2DMatrix'
+import U1_2DMatrix from './Coms_Toolbar/U2_Affine'
 import U2_Threshold from './Coms_Toolbar/U2_Threshold';
 import U2_Convolution from './Coms_Toolbar/U2_Convolution';
 import TS_Threshold from '../../T03_Threshold/An_Index';
@@ -18,10 +18,14 @@ SS_nDMatrix   ,
 setSS_nDMatrix,
 SS_nDTable    ,
 setSS_nDTable ,
-SS_3DMatrix   ,
-setSS_3DMatrix,
-SS_3DTable    ,
-setSS_3DTable ,
+SS_Affine,
+setSS_Affine,
+SS_AffineSTR,
+setSS_AffineSTR,
+SS_AffineRGB,
+setSS_AffineRGB,
+SS_AffineBOOL,
+setSS_AffineBOOL,
 SS_Zoom,
 setSS_Zoom,
 setSS_IsRGB,
@@ -36,10 +40,14 @@ SS_nDMatrix   :number[][]
 setSS_nDMatrix:(S:number[][])=>void
 SS_nDTable    :string[][]
 setSS_nDTable :(S:string[][])=>void
-SS_3DMatrix:number[][]
-setSS_3DMatrix:(S:number[][])=>void
-SS_3DTable:string[][]
-setSS_3DTable:(S:string[][])=>void
+SS_Affine       :number[][][]
+setSS_Affine    :(S:number[][][])=>void
+SS_AffineSTR    :string[][][]
+setSS_AffineSTR :(S:string[][][])=>void
+SS_AffineRGB    :string[][]
+setSS_AffineRGB :(S:string[][])=>void
+SS_AffineBOOL:boolean[][]
+setSS_AffineBOOL:(S:boolean[][])=>void
 SS_Zoom:number,
 setSS_Zoom:(S:number)=>void
 setSS_IsRGB:(S:boolean)=>void
@@ -66,10 +74,14 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
   }
   else{
     JSX_ImageProcessing=<U2_Convolution
-SS_3DMatrix   ={SS_3DMatrix   }
-setSS_3DMatrix={setSS_3DMatrix}
-SS_3DTable    ={SS_3DTable    }
-setSS_3DTable ={setSS_3DTable }
+SS_Affine={SS_Affine}
+setSS_Affine={setSS_Affine}
+SS_AffineSTR={SS_AffineSTR}
+setSS_AffineSTR={setSS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
+setSS_AffineRGB={setSS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
+setSS_AffineBOOL={setSS_AffineBOOL}
 SS_nDMatrix   ={SS_nDMatrix   }
 setSS_nDMatrix={setSS_nDMatrix}
 SS_nDTable    ={SS_nDTable    }

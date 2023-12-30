@@ -1,25 +1,33 @@
 import './U2_Convolution.css'
 import { useState, useEffect } from 'react'
-import U1_2DMatrix from './U2_2DMatrix'
+import U2_Affine from './U2_Affine'
 const U2_Convolution = (
 //****************************************************************************
 // INPUT
 //****************************************************************************
 {
-SS_3DMatrix   ,
-setSS_3DMatrix,
-SS_3DTable    ,
-setSS_3DTable ,
+SS_Affine ,  
+setSS_Affine,
+SS_AffineSTR    ,
+setSS_AffineSTR ,
+SS_AffineRGB,
+setSS_AffineRGB,
+SS_AffineBOOL,
+setSS_AffineBOOL,
 SS_nDMatrix   ,
 setSS_nDMatrix,
 SS_nDTable    ,
 setSS_nDTable 
 }
 :{
-SS_3DMatrix:number[][]
-setSS_3DMatrix:(S:number[][])=>void
-SS_3DTable:string[][]
-setSS_3DTable:(S:string[][])=>void
+SS_Affine       :number[][][]
+setSS_Affine    :(S:number[][][])=>void
+SS_AffineSTR    :string[][][]
+setSS_AffineSTR :(S:string[][][])=>void
+SS_AffineRGB    :string[][]
+setSS_AffineRGB :(S:string[][])=>void
+SS_AffineBOOL:boolean[][]
+setSS_AffineBOOL:(S:boolean[][])=>void
 SS_nDMatrix   :number[][]
 setSS_nDMatrix:(S:number[][])=>void
 SS_nDTable    :string[][]
@@ -114,11 +122,17 @@ return(
     <button style={{marginTop:'10px',marginRight:'5px'}} onClick={f_Reset}>Reset</button>
 </div>
 <hr/>
-  <U1_2DMatrix
-SS_3DMatrix ={SS_3DMatrix   }  
-setSS_3DMatrix={setSS_3DMatrix}
-SS_3DTable    ={SS_3DTable    }
-setSS_3DTable ={setSS_3DTable }/>
+<div style={{backgroundColor:'#33AAFF',height:'10px',marginTop:'-5px',width:'100%'}}></div>
+<U2_Affine
+SS_Affine={SS_Affine}
+SS_AffineSTR={SS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
+setSS_Affine={setSS_Affine}
+setSS_AffineSTR={setSS_AffineSTR}
+setSS_AffineRGB={setSS_AffineRGB}
+setSS_AffineBOOL={setSS_AffineBOOL}
+/>
 </div>
   )
 }

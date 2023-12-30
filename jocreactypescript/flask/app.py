@@ -3,7 +3,7 @@ from flask import Flask, jsonify, Response, request, redirect, url_for, json
 import numpy as np
 from PIL import Image
 import cv2
-from kernel import canny,get_grayscale,sharpen,erode,dilate,opening,ShowMustGoOn,WhiteBackGround
+from kernel import AffineTransformations, canny,get_grayscale,sharpen,erode,dilate,opening,ShowMustGoOn,WhiteBackGround
 import base64
 import pickle
 import matplotlib.colors as mcolors
@@ -105,6 +105,7 @@ def def_OpenCV():
         if let_File!=None:
             # convert let_File to Black and White Image if let_IsRGB === 'false'
             let_Img = cv2.imdecode(np.frombuffer(let_File.read(), np.uint8), cv2.IMREAD_COLOR)
+            #let_Img = AffineTransformations(let_Img)
             if not let_IsRGB:
                 let_Img = cv2.cvtColor(let_Img, cv2.COLOR_BGR2GRAY)
                 let_Img = cv2.filter2D(let_Img, -1, let_Convolution)
