@@ -1,3 +1,50 @@
+alert(JSON.stringify(SS_Thresholds))
+ 
+Threshold
+ 
+
+      //alert(let_input[0])
+      
+      //let_target!.value=let_input
+ 
+      //alert(let_InputGrayHex)
+ 
+      // let_X=Math.round(255*(255*((SS_MaxHeight) - Threshold.PositionY)/(SS_MaxHeight))/250)
+      // set 'linear-gradient(let_X, black)'
+      //backgroundImage: Threshold.IsDefault?'':`linear-gradient(${let_InputGrayHex}, #000000)`,
+      //backgroundImage:`linear-gradient(to bottom,${let_InputGrayHex} 100%, #000000 100%)`,
+ 
++let_InputGrayHex+let_InputGrayHex
+ 
+100
+ 
+#ffffff
+ 
+ Threshold.IsDefault?'':
+ 
+let let_InputGrayScale=Math.round(255*(255*((SS_MaxHeight) - Threshold.PositionY)/(SS_MaxHeight))/250)
+ 
+Math.round(255*(255*((SS_MaxHeight) - Threshold.PositionY)/(SS_MaxHeight))/250)
+          }
+ 
+white
+ 
+#aaaaaa
+ 
+'linear-gradient(white, black)'
+ 
+      color: 'transparent',
+ 
+        for i in range(len(let_Thresholds)):
+            list_Bool.append(i[1])
+ 
+                if len(list_Minn)>=1:
+ 
+            
+ 
+if let_Thresholds[i][1]==True:
+                let_Threshold.append(let_Thresholds)
+ 
          ['0','0','0'],
          ['0','0','0']
  

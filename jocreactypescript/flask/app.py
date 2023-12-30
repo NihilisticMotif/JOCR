@@ -81,20 +81,17 @@ def def_OpenCV():
         list_Minn=[0]
         list_Maxx=[]
         list_Gray=[]
-        let_Threshold=[]
+        list_Bool=[]
 
         for i in range(len(let_Thresholds)):
-            if let_Thresholds[i][1]==True:
-                let_Threshold.append(let_Thresholds)
-
-        for i in range(len(let_Threshold)):
+            list_Bool.append(let_Thresholds[i][1])
             if i==0:
                 list_Maxx.append(let_Thresholds[i][0])
             if  i!=0:
                 list_Maxx.append(let_Thresholds[i][0])
                 list_Minn.append(let_Thresholds[i-1][0])
         
-        for i in range(len(let_Threshold)):
+        for i in range(len(let_Thresholds)):
             let_Gray=hex_to_rgb_vector(let_Thresholds[i][2])
             if let_Gray>=255:
                 list_Gray.append(255)
@@ -111,8 +108,7 @@ def def_OpenCV():
             if not let_IsRGB:
                 let_Img = cv2.cvtColor(let_Img, cv2.COLOR_BGR2GRAY)
                 let_Img = cv2.filter2D(let_Img, -1, let_Convolution)
-                if len(list_Minn)>=1:
-                    let_Img = WhiteBackGround(let_Img,list_Minn,list_Maxx,list_Gray)
+                let_Img = WhiteBackGround(let_Img,list_Minn,list_Maxx,list_Gray,list_Bool)
             let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
             response = Response(let_Bytes, content_type='image/png')
             return response #jsonify({'py':response})

@@ -182,7 +182,14 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
 //****************************************************************************
  const let_Width='250px'
  function JSX_Threshold(Threshold:TS_Threshold){
+  
     //let let_DefaultColor='#000000'
+    let let_InputGrayScale=Math.round(255*(255*((SS_MaxHeight) - Threshold.PositionY)/(SS_MaxHeight))/250)
+    if(let_InputGrayScale>255){
+      let_InputGrayScale=255
+    }
+    let let_InputGrayHex=let_InputGrayScale.toString(16)
+    let_InputGrayHex=let_InputGrayHex+let_InputGrayHex+let_InputGrayHex
     function f_DeleteThreshold(ThisThreshold:TS_Threshold){
       let ss_Thresholds = [...SS_Thresholds]
       let let_UpdateThresholds = D03_Delete(ThisThreshold,ss_Thresholds)
@@ -196,13 +203,10 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
     }
 
     function f_setColor(){
+      //alert(JSON.stringify(SS_Thresholds))
       let let_target=(document.getElementById('C04id_Color'+Threshold.Key.toString())as HTMLInputElement)
       let let_input=let_target?.value
       let_input=let_input[0]+let_input[1]+let_input[2]+let_input[1]+let_input[2]+let_input[1]+let_input[2]
-
-      //alert(let_input[0])
-      
-      //let_target!.value=let_input
 
       let let_Show=(document.getElementById('C04id_Show'+Threshold.Key.toString())as HTMLInputElement)
       let_Show!.style.backgroundColor=let_input
@@ -233,8 +237,7 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
           {
           //Threshold.Key
           }
-          {Math.round(255*(255*((SS_MaxHeight) - Threshold.PositionY)/(SS_MaxHeight))/250)
-          }
+          {let_InputGrayScale}
         </h1>
       <button style={{width:'25px',height:'25px',marginLeft:'115px',backgroundColor:'white'}}
       id={'C04id_B'+Threshold.Key.toString()}
@@ -261,13 +264,16 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
     <div 
     id={'C04id_Show'+Threshold.Key.toString()}
     style={{
-      visibility: Threshold.IsDefault?'visible':'hidden',
-      backgroundColor:Threshold.Gray,
+      //visibility: Threshold.IsDefault?'visible':'hidden',
+      backgroundColor:Threshold.IsDefault?Threshold.Gray:'',
+      backgroundImage:Threshold.IsDefault?'':`linear-gradient(to bottom, #${let_InputGrayHex} 0%, #000000 100%)`,
       //height:`calc(100vh - ${143+20+40}px)`,
+      //opacity: "0.1",
       height:`calc(100vh - ${ (143+20-5+200+Threshold.PositionY)}px )`,
       width:'50px',
       position:'absolute',
       marginLeft:'83px',
+      //mixBlendMode: Threshold.IsDefault?'normal':'overlay',
       marginTop:(Threshold.PositionY+3).toString()+'px'
       }}>
 
@@ -326,6 +332,7 @@ id='C04id_ThresholdBody'
    <div
    style={{
    backgroundImage: 'linear-gradient(white, black)',
+   //visibility:'hidden',
    marginTop:'10px',
    marginLeft:'0px',
    width:'50px',

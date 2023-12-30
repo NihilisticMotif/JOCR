@@ -44,16 +44,19 @@ def opening(image):
     return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
 
 #White
-def WhiteBackGround(img,Minn,Maxx,Gray):
-    for minn,maxx,gray in zip(Minn,Maxx,Gray):
-      mark=np.logical_and(img>minn,img<maxx)
-      img[mark]=gray
-    try:
-        img[img>=Maxx[-1]]=255
+def WhiteBackGround(img,Minn,Maxx,Gray,Bool):
+    if len(Minn)>=1:
+        for minn,maxx,gray,bool in zip(Minn,Maxx,Gray,Bool):
+            mark=np.logical_and(img>minn,img<maxx)
+            if bool:
+                img[mark]=gray
+        try:
+            img[img>=Maxx[-1]]=255
+            return img
+        except:
+            return img
+    else:
         return img
-    except:
-        return img
-
 ########################################################################################
 #   Display the Image
 ########################################################################################
