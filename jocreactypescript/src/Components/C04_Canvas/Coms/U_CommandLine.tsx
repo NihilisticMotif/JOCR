@@ -119,13 +119,13 @@ return(
 <div style={{marginTop:'-100px'}} >
 <h1>Operate Tesseract</h1>
 <button>Ok</button>
-</div>*/}
+</div>
 
 
 <div>
 <button>Help</button>
 <button>About us</button>
-</div>
+</div>*/}
     </div>)
 }
 
