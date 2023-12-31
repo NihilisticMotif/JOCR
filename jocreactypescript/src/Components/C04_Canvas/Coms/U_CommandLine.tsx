@@ -115,11 +115,11 @@ return(
 </select>
 <button>X</button>
 </div>
-
+{/*
 <div style={{marginTop:'-100px'}} >
 <h1>Operate Tesseract</h1>
 <button>Ok</button>
-</div>
+</div>*/}
 
 
 <div>
