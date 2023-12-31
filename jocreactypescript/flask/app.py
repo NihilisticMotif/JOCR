@@ -52,10 +52,10 @@ def def_OpenCV():
         let_IsRGB = let_IsRGB_str.lower() == 'true'
 
         # SS_2DMatrix
-        let_LinearMap_str = request.form.get('LinearMap')
-        let_LinearMap_list = let_LinearMap_str.split(',')
-        let_LinearMap_list = [float(item) for item in let_LinearMap_list]  # Example: convert to float
-        let_LinearMap=np.array(let_LinearMap_list).reshape(-1,3)
+        #let_LinearMap_str = request.form.get('LinearMap')
+        #let_LinearMap_list = let_LinearMap_str.split(',')
+        #let_LinearMap_list = [float(item) for item in let_LinearMap_list]  # Example: convert to float
+        #let_LinearMap=np.array(let_LinearMap_list).reshape(-1,3)
 
         # SS_nDMatrix
         let_Convolution_str = request.form.get('Convolution')
