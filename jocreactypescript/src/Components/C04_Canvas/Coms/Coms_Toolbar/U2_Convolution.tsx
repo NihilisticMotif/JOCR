@@ -6,6 +6,8 @@ const U2_Convolution = (
 // INPUT
 //****************************************************************************
 {
+SS_IsActivate,
+setSS_IsActivate,
 SS_Affine ,  
 setSS_Affine,
 SS_AffineSTR    ,
@@ -20,6 +22,8 @@ SS_nDTable    ,
 setSS_nDTable 
 }
 :{
+  SS_IsActivate:boolean[];
+  setSS_IsActivate:(S:boolean[])=>void
 SS_Affine       :number[][][]
 setSS_Affine    :(S:number[][][])=>void
 SS_AffineSTR    :string[][][]
@@ -76,6 +80,9 @@ setSS_nDTable :(S:string[][])=>void
          ['0','0','1','0','0'],
          ['0','0','0','0','0'],
          ['0','0','0','0','0']])
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=true
+        setSS_IsActivate(ss_IsActivate)
       }
 
 //****************************************************************************
@@ -96,15 +103,31 @@ setSS_nDTable :(S:string[][])=>void
           }
           setSS_nDMatrix(ss_nDMatrix)
 
-          for(let i=0;i<let_TotalSize;i++){
+        for(let i=0;i<let_TotalSize;i++){
           for(let j=0;j<let_TotalSize;j++){
-            if(isNaN(parseFloat(SS_nDTable[i][j]))){
-              SS_nDTable[i][j]='1'//let_2DMatrix[i].toString()
+            //if(isNaN(parseFloat(ss_nDTable[i][j]))){
+            //  ss_nDTable[i][j]='1'//let_2DMatrix[i].toString()
+            //}
+            if(ss_nDTable[i][j]!==ss_nDMatrix[i][j].toString()){
+              ss_nDTable[i][j]=ss_nDMatrix[i][j].toString()
             }
           }
-          setSS_nDTable(SS_nDTable)
         }
+        setSS_nDTable(ss_nDTable)
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=true
+        setSS_IsActivate(ss_IsActivate)
         }
+
+//****************************************************************************
+// FUNCTION_02: Activate or Deactivate SS_nDMatrix
+//****************************************************************************
+
+      function f_SetDeActivate(){
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=false
+        setSS_IsActivate(ss_IsActivate)
+      }
 
 //****************************************************************************
 // OUTPUT
@@ -118,19 +141,22 @@ return(
 <div className='C04id_Convolution' style={{marginLeft:'10px'}}>
 <div style={{marginTop:'20px'}}></div>
 {JSX_Convolution}
-    <button style={{marginTop:'10px',marginRight:'10px',marginLeft:'-140px'}} onClick={f_Update}>Ok</button>
-    <button style={{marginTop:'10px',marginRight:'5px'}} onClick={f_Reset}>Reset</button>
+    <button onClick={f_Update}>Activate</button>
+    <button onClick={f_SetDeActivate}>Deactivate</button>
+    <button onClick={f_Reset}>Reset</button>
 </div>
 <hr/>
 <div style={{backgroundColor:'#33AAFF',height:'10px',marginTop:'-5px',width:'100%'}}></div>
 <U2_Affine
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
 SS_Affine={SS_Affine}
-SS_AffineSTR={SS_AffineSTR}
-SS_AffineRGB={SS_AffineRGB}
-SS_AffineBOOL={SS_AffineBOOL}
 setSS_Affine={setSS_Affine}
+SS_AffineSTR={SS_AffineSTR}
 setSS_AffineSTR={setSS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
 setSS_AffineRGB={setSS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
 setSS_AffineBOOL={setSS_AffineBOOL}
 />
 </div>

@@ -24,10 +24,14 @@ const U2_Threshold = (
 // INPUT
 //****************************************************************************
 {
+SS_IsActivate,
+setSS_IsActivate,
 SS_Thresholds,
 setSS_Thresholds
 }
 :{
+SS_IsActivate:boolean[]
+setSS_IsActivate:(S:boolean[])=>void
 SS_Thresholds:TS_Threshold[]
 setSS_Thresholds:(S:TS_Threshold[])=>void
 })=>{
@@ -285,6 +289,22 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
   const JSX_Thresholds=ss_Thresholds.map(Thresholds=>JSX_Threshold(Thresholds))
   
 //****************************************************************************
+// FUNCTION: Activate or Deactivate SS_Thresholds
+//****************************************************************************
+      function f_SetActivate(){
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[1]=true
+        setSS_IsActivate(ss_IsActivate)
+      }
+
+      function f_SetDeActivate(){
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[1]=false
+        setSS_IsActivate(ss_IsActivate)
+      }
+
+
+//****************************************************************************
 // OUTPUT
 //****************************************************************************
 return(
@@ -293,10 +313,10 @@ onMouseUp={()=>{f_Deactivate()}}
 onMouseLeave={()=>{f_Deactivate()}}
 id='C04id_ThresholdBody'
  style={{height:`calc(100vh - 40px - ${(143+20)}px )`,width:let_Width,backgroundColor:'lightblue',marginTop:'0px'}}>
+  <h1 className='C04id_Zoom' style={{marginTop:'10px',fontSize:'14px'}}>Gray Threshold</h1>
   <div style={{display:'flex',marginTop:'10px'}}>
-   <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Gray Threshold</h1>
-   <button style={{marginTop:'10px',marginRight:'15px'}}>Ok</button>
-   <button style={{marginTop:'10px',marginRight:'15px'}}>Reset</button>
+   <button style={{marginTop:'10px',marginLeft:'10px'}} onClick={f_SetActivate}>Activate</button>
+   <button style={{marginTop:'10px',marginLeft:'10px'}} onClick={f_SetDeActivate}>Deactivate</button>
  </div>
  <hr/>
  <div style={{display:'flex'}}>

@@ -1,3 +1,270 @@
+_str
+ 
+_str
+ 
+_str
+ 
+_str
+ 
+_str
+ 
+_str
+ 
+</div>
+ 
+</div>
+ 
+<select id="cars" name="cars" className='C04id_EditOkSet'>
+  <option value="volvo">Thai</option>
+  <option value="volvo">English</option>
+</select>
+ 
+  <option value="volvo">Rectangle frame</option>
+  <option value="saab">Circle</option>
+  <option value="volvo">Circle frame</option>
+  <option value="mercedes">Arrow</option>
+  <option value="mercedes">2 Ways Arrow</option>
+  <option value="audi">Line</option>
+  <option value="audi">LineX</option>
+  <option value="audi">LineY</option>
+ 
+<input id='C04id_CropImageX1'></input>
+    {
+      /*<button onClick={f_ComputeSquare} style={{marginLeft:'2px'}}>Compute</button>
+    <button onClick={f_ComputeCube} style={{marginLeft:'2px'}}>Compute3</button>
+    <h1>{SS_HelloPy}</h1>*/}
+ 
+.C04id_Scalar h1{
+    font-size: 12px;
+}
+ 
+    alert(SS_AffineBOOL)
+ 
+    alert('Updated')
+ 
+1, pts2
+ 
+1,pts2
+ 
+[0],SS_Affine[1]
+ 
+print('Title: SS_Affine_str\n'+SS_Affine_str+'\n')
+ 
+
+<hr style={{visibility:'hidden'}}/>
+ 
+<tr>
+    <th style={{width:'100px'}}                  >Type</th>
+    <th style={{width:'100px',marginLeft:'10px'}}>Input</th>
+    <th>Update</th>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ 
+<hr style={{visibility:'hidden'}} />
+ 
+<hr style={{visibility:'hidden'}} />
+ 
+</table>
+ 
+    <th>Ok</th>
+ 
+    <td><button>Reset</button></td>
+ 
+    <td><button>Reset</button></td>
+ 
+<tr>
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+</tr>
+ 
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+ 
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+ 
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+ 
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+ 
+    <th>Ok</th>
+    <th>Reset</th>
+ 
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>Happy New Year</h1>
+    <button onClick={f_Gray} className='C04id_Button'>Gray</button>
+    <button onClick={f_RGB}  className='C04id_Button'>RGB</button>
+ 
+    let let_State='Color'
+    if(SS_IsRGB===true){let_State='Color'}
+    else{let_State='Gray'}
+ 
+      setSS_IsRGB(true)
+ 
+      setSS_IsRGB(false)
+ 
+setSS_IsRGB:(S:boolean)=>void
+ 
+SS_IsRGB:boolean
+ 
+SS_IsRGB,
+ 
+setSS_IsRGB
+ 
+[0]
+ 
+tuple
+ 
+        
+ 
+        // Transformed Point
+        
+ 
+        
+ 
+*10+id2
+ 
+    alert(ss_AffineSTR[id0][id1][id2])
+ 
+    alert(ss_AffineSTR)
+ 
+    //alert(let_input)
+ 
+    pts1 = np.float32([[50, 50],
+                   [200, 50], 
+                   [50, 200]])
+ 
+    pts2 = np.float32([[10, 100],
+                       [200, 50], 
+                       [100, 250]])
+ 
+            
+            #if not Is_...
+            #let_Img = AffineTransformations(let_Img)
+ 
+if Is_Affine==True:
+ 
+        def hex_to_rgb_vector(hex_color):
+            rgba = mcolors.to_rgba(hex_color)
+            rgb = rgba[:3]
+            return rgb[0]
+ 
+        '''
+        # "[['Mu','Che','Ta'],['Umumy','Ehchos','Attat']]" => [['Mu','Che','Ta'],['Umumy','Ehchos','Attat']]
+        # Do this in Python
+        '''
+ 
+        # ['[a','b','c]'] => ['a','b,'c']
+ 
+item[1:-1] if item.startswith('[') and item.endswith(']') else item for item in SS_AffineRGB_list]
+ 
+        SS_AffineRGB_list=SS_AffineRGB_str.split(',')
+ 
+true
+ 
+        '''
+        # "[[false,false,false],[true,false,true]]" => [[False,False,False],[True,False,True]]
+        # Do this in Python
+        '''
+ 
+Show
+ 
+    let ss_AffineBOOL=[...SS_AffineBOOL]
+ 
+    
+ 
+      
+ 
+    
+ 
+      
+ 
+Show
+ 
+      //let let_UpdateThresholds=U03_SetColor(Threshold,ss_Thresholds,let_input)
+ 
+//[0]+let_input[1]+let_input[2]+let_input[1]+let_input[2]+let_input[1]+let_input[2]
+
+      //let let_Show=(document.getElementById('C04id_AffineShow'+Threshold.Key.toString())as HTMLInputElement)
+      //let_Show!.style.backgroundColor=let_input
+ 
+       
+ 
+*10+id2
+ 
+,id2:number
+ 
+Threshold.Key
+ 
+setSS_nDTable(ss_nDTable)
+ 
+setSS_nDTable(SS_nDTable)
+ 
+      function f_SetActivate(){
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=true
+        setSS_IsActivate(ss_IsActivate)
+      }
+ 
+   <button style={{marginTop:'10px',marginLeft:'10px'}} onClick={f_DeleteAll}>Reset</button>
+ 
+      function f_DeleteAll(){
+        setSS_ThisThreshold({Key:0,PositionY:0,IsDefault:false,Gray:'#000000'})
+        setSS_Thresholds([{Key:0,PositionY:0,IsDefault:false,Gray:'#000000'}])
+      }
+ 
+,marginLeft:'auto'
+ 
+<h1 className='C04id_Zoom' style={{marginTop:'10px',fontSize:'14px'}}>Gray Threshold</h1>
+ 
+        alert('eeee')
+ 
+not 
+ 
+not 
+ 
+            else:
+                SS_IsActicate.append(False)
+ 
+if 'true' in i:
+                
+ 
+)
+ 
+SS_IsActivate:boolean[]
+setSS_IsActivate:(S:boolean)=>void
+ 
+            # convert let_File to Black and White Image if let_IsRGB === 'false'
+ 
+ style={{marginTop:'10px',marginRight:'5px'}}
+ 
+,marginRight:'10px',marginLeft:'-140px'
+ 
+,
+ 
+*100
+ 
+    //setSS_AffineSTR([
+    //  [
+    //    ['1','2']
+    //  ],
+    //  [['1']],
+    //  [['1']]])
+ 
+setSS_AffineRGB={setSS_AffineRGB}
+ 
+setSS_Affine={setSS_Affine}
+ 
+setSS_AffineSTR={setSS_AffineSTR}
+ 
+
+
+ 
 // shape = (2,3,2)
  
 <div style={{display:'inline-grid'}}>

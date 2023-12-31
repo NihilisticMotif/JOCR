@@ -18,7 +18,7 @@ const U_CommandLine = (
 //****************************************************************************
   const [SS_IsCrop,setSS_IsCrop]=useState<boolean>(false)
   const [SS_HelloPy,setSS_HelloPy]=useState<number>(55)
-
+/*
 useEffect(() => {        
     try {
     fetch("/"+SS_HelloPy.toString())
@@ -30,7 +30,7 @@ useEffect(() => {
     } catch (error) {
     console.error("Error fetching data:", error);
     }
-  },[])
+  },[])*/
 
 //****************************************************************************
 // JSX 00
@@ -102,11 +102,30 @@ useEffect(() => {
 //****************************************************************************
 return(
   <div className='C04id_Editor'>
-    <input id='C04id_CropImageX1'></input>
-    {
-      /*<button onClick={f_ComputeSquare} style={{marginLeft:'2px'}}>Compute</button>
-    <button onClick={f_ComputeCube} style={{marginLeft:'2px'}}>Compute3</button>
-    <h1>{SS_HelloPy}</h1>*/}
+<div style={{width:'300px'}} >
+<button>Add Language</button>
+<select id="cars" name="cars" className='C04id_EditOkSet'>
+  <option value="volvo">Thai</option>
+  <option value="volvo">English</option>
+</select>
+<button>X</button>
+<select id="cars" name="cars" className='C04id_EditOkSet'>
+  <option value="volvo">Thai</option>
+  <option value="volvo">English</option>
+</select>
+<button>X</button>
+</div>
+
+<div style={{marginTop:'-100px'}} >
+<h1>Operate Tesseract</h1>
+<button>Ok</button>
+</div>
+
+
+<div>
+<button>Help</button>
+<button>About us</button>
+</div>
     </div>)
 }
 

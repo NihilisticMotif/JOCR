@@ -15,6 +15,8 @@ import './index00.css'
 import './index01.css'
 
 interface IN_C04{
+SS_IsActivate:boolean[]
+setSS_IsActivate:(S:boolean[])=>void
 SS_nDMatrix   :number[][]
 setSS_nDMatrix:(S:number[][])=>void
 SS_nDTable    :string[][]
@@ -51,6 +53,8 @@ const C04_Canvas: React.FC<IN_C04> = (
 // INPUT
 //****************************************************************************
 {
+SS_IsActivate,
+setSS_IsActivate,
   SS_nDMatrix ,  
 setSS_nDMatrix,
 SS_nDTable    ,
@@ -81,6 +85,8 @@ SS_Thresholds,
 setSS_Thresholds,
 }
 :{
+SS_IsActivate:boolean[]
+setSS_IsActivate:(S:boolean[])=>void
 SS_nDMatrix   :number[][]
 setSS_nDMatrix:(S:number[][])=>void
 SS_nDTable    :string[][]
@@ -152,14 +158,17 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
           let ss_Thresholds=[...SS_Thresholds]
           let let_UpdateThresholds=U03_Sort(ss_Thresholds)
           setSS_Thresholds(let_UpdateThresholds)
+          //alert(SS_AffineRGB)
+          //alert(SS_Affine)
           const formData = new FormData();
           formData.append('file', SS_ImageFile);
-          formData.append('IsRGB', SS_IsRGB.toString())
+          formData.append('SS_IsActivate',SS_IsActivate.toString())
+          formData.append('SS_IsRGB', SS_IsRGB.toString())
           formData.append('SS_Affine',SS_Affine.toString())
           formData.append('SS_AffineRGB',SS_AffineRGB.toString())
           formData.append('SS_AffineBOOL',SS_AffineBOOL.toString())
-          formData.append('Convolution',SS_nDMatrix.toString())
-          formData.append('Thresholds',JSON.stringify(SS_Thresholds).toString())
+          formData.append('SS_nDMatrix',SS_nDMatrix.toString())
+          formData.append('SS_Thresholds',JSON.stringify(SS_Thresholds).toString())
           // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
           let let_ImageJson = JSON.stringify(Object.fromEntries(formData));
           fetch('/def_OpenCV', {
@@ -361,6 +370,8 @@ style={{width:(SS_WidthImage).toString()+'px'}}
 
 
 <U_Toolbar
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
 SS_nDMatrix   ={SS_nDMatrix   }
 setSS_nDMatrix={setSS_nDMatrix}
 SS_nDTable    ={SS_nDTable    }
@@ -375,6 +386,7 @@ SS_AffineBOOL={SS_AffineBOOL}
 setSS_AffineBOOL={setSS_AffineBOOL}
 SS_Zoom={SS_Zoom}
 setSS_Zoom={setSS_Zoom}
+SS_IsRGB={SS_IsRGB}
 setSS_IsRGB={setSS_IsRGB}
 TotalWidth={let_RightToolW}
 setSS_UseEffect={setSS_UseEffect}

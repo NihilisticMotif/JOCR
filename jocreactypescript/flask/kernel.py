@@ -62,22 +62,21 @@ def WhiteBackGround(img,Minn,Maxx,Gray,Bool):
     else:
         return img
 
-def AffineTransformations(img):
+def AffineTransformations(img,pts):
     # https://youtu.be/Ad9e5eoHm9U?si=RQMj8ASrsi1-Xov-
     # https://www.geeksforgeeks.org/python-opencv-affine-transformation/
     rows, cols, ch = img.shape
-    pts1 = np.float32([[50, 50],
-                   [200, 50], 
-                   [50, 200]])
- 
-    pts2 = np.float32([[10, 100],
-                       [200, 50], 
-                       [100, 250]])
-    
-    M = cv2.getAffineTransform(pts1, pts2)
+    print('Hii')
+    print(pts[0])
+    M = cv2.getAffineTransform(pts[0],pts[1])
     dst = cv2.warpAffine(img, M, (cols, rows))
     return dst
 
+def DrawPoints(Img,Vector,Color,Bool):
+    for v,c,b in zip(Vector,Color,Bool):
+        if b==True:
+            cv2.circle(Img,tuple(v),5,c,-1)
+    return Img
 ########################################################################################
 #   Display the Image
 ########################################################################################

@@ -9,11 +9,15 @@ import U1_2DMatrix from './Coms_Toolbar/U2_Affine'
 import U2_Threshold from './Coms_Toolbar/U2_Threshold';
 import U2_Convolution from './Coms_Toolbar/U2_Convolution';
 import TS_Threshold from '../../T03_Threshold/An_Index';
+import U1_UpdateImage from './Coms_Toolbar/U1_UpdateImage';
+import U1_Affine from './Coms_Toolbar/U1_Affine';
 const U_Toolbar = (
 //****************************************************************************
 // INPUT
 //****************************************************************************
 {
+  SS_IsActivate,
+  setSS_IsActivate,
 SS_nDMatrix   ,
 setSS_nDMatrix,
 SS_nDTable    ,
@@ -28,6 +32,7 @@ SS_AffineBOOL,
 setSS_AffineBOOL,
 SS_Zoom,
 setSS_Zoom,
+SS_IsRGB,
 setSS_IsRGB,
 setSS_UseEffect,
 SS_OpenPanel,
@@ -36,6 +41,8 @@ SS_Thresholds,
 setSS_Thresholds,
 }
 :{
+  SS_IsActivate:boolean[]
+  setSS_IsActivate:(S:boolean[])=>void
 SS_nDMatrix   :number[][]
 setSS_nDMatrix:(S:number[][])=>void
 SS_nDTable    :string[][]
@@ -50,6 +57,7 @@ SS_AffineBOOL:boolean[][]
 setSS_AffineBOOL:(S:boolean[][])=>void
 SS_Zoom:number,
 setSS_Zoom:(S:number)=>void
+SS_IsRGB:boolean
 setSS_IsRGB:(S:boolean)=>void
 setSS_UseEffect:(S:boolean)=>void
 SS_OpenPanel:0|1|2
@@ -69,11 +77,15 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
   let JSX_ImageProcessing=<></>
   if(SS_ImageProcessing===0){
     JSX_ImageProcessing=<U2_Threshold
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
         SS_Thresholds={SS_Thresholds}
         setSS_Thresholds={setSS_Thresholds}/>
   }
   else{
     JSX_ImageProcessing=<U2_Convolution
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
 SS_Affine={SS_Affine}
 setSS_Affine={setSS_Affine}
 SS_AffineSTR={SS_AffineSTR}
@@ -122,6 +134,7 @@ return(
     //****************************************************************************
     }
     <U1_IsRGB
+    SS_IsRGB={SS_IsRGB}
     setSS_UseEffect={setSS_UseEffect}
     setSS_IsRGB={setSS_IsRGB}/>
 
@@ -132,16 +145,27 @@ return(
     //****************************************************************************
     }
     <hr/>
-    <U1_EditImage/>
+    <U1_UpdateImage
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+    setSS_UseEffect={setSS_UseEffect}
+    />
+    <hr/>
+    <U1_Affine
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+    setSS_UseEffect={setSS_UseEffect}
+    />
+{/*    <U1_EditImage/>
 
-    {//****************************************************************************
+    //****************************************************************************
     // Edit Image Setting
     //****************************************************************************
   }
   <U1_ShapeTextSetting
   SS_IsShapeSetting={SS_IsShapeSetting}
   setSS_IsShapeSetting={setSS_IsShapeSetting}
-  />
+/>*/}
   
   {/*
   <hr style={{marginTop:'20px'}}/>

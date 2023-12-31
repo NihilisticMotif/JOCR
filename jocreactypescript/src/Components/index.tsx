@@ -71,14 +71,14 @@ const Components=()=>{
         // Selected Point
         [
             [0,0],
-            [0,0],
-            [0,0],
+            [0,1],
+            [1,0],
         ],
         // Transformed Point
         [
             [0,0],
-            [0,0],
-            [0,0],
+            [0,1],
+            [1,0],
         ]
     ])
     
@@ -86,14 +86,14 @@ const Components=()=>{
         // Selected Point
         [
             ['0','0'],
-            ['0','0'],
-            ['0','0'],
+            ['0','1'],
+            ['1','0'],
         ],
         // Transformed Point
         [
             ['0','0'],
-            ['0','0'],
-            ['0','0'],
+            ['0','1'],
+            ['1','0'],
         ]
     ])
     const [SS_AffineRGB,setSS_AffineRGB]=useState<string[][]>([
@@ -125,6 +125,12 @@ const Components=()=>{
         ['0','0','0','0','0'],
         ['0','0','0','0','0']]
     )
+
+    const [SS_IsActivate,setSS_IsActivate]=useState<boolean[]>([
+        false,  // SS_nDMatrix
+        false,  // SS_Thresholds
+        false,  // SS_Affine
+    ])
   
 //****************************************************************************
 // JSX: C02_Iput
@@ -192,6 +198,8 @@ const Components=()=>{
     let JSX_C04=<></>
     if(SS_OpenPanel===1 || SS_OpenPanel===2){
         JSX_C04=<C04_Canvas
+        SS_IsActivate={SS_IsActivate}
+        setSS_IsActivate={setSS_IsActivate}
         SS_Affine   ={SS_Affine   }
         setSS_Affine={setSS_Affine}
         SS_AffineSTR    ={SS_AffineSTR    }
