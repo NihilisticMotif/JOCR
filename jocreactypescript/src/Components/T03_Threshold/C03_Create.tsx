@@ -20,6 +20,7 @@ export function C03_Create(
             const let_NEWCOLUMN:TS_Threshold={
                 Key:let_NewKey,
                 PositionY:10+5,
+                ScalePosition:255,
                 IsDefault:false,
                 Gray:'#000000'
                 }

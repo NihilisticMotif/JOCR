@@ -1,6 +1,5 @@
-import Components from './Components';
-import Example01 from './Components/index01';
-import Example02 from './Components/index02'
+import Components from './Components/index01_Table';
+
 import './App.css';
 
 

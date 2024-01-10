@@ -1,0 +1,22 @@
+'''SS_Affine_list = SS_Affine_str.split(',')
+        SS_Affine_list = [float(item) for item in SS_Affine_list]  # Example: convert to float
+        SS_Affine=np.array(SS_Affine_list).reshape(2,3,2)
+        SS_AffineRGB_str=request.form.get('SS_AffineRGB')
+        SS_AffineRGB_hex=[str(item) for item in SS_AffineRGB_str]
+        #print(SS_AffineRGB_hex)
+        SS_AffineRGB=[]
+        for i in SS_AffineRGB_hex:
+            ii = i.strip().replace('#', '')
+            ii = ii.replace(',', '')
+            if ii:
+                SS_AffineRGB.append(hex_to_rgb_3Dvector(ii))
+        SS_AffineBOOL_str=request.form.get('SS_AffineBOOL')
+        SS_AffineBOOL=[bool(item) for item in SS_AffineBOOL_str]
+        #SS_AffineBOOL=np.array(SS_AffineBOOL).reshape(2,-1)
+        Is_Affine=SS_IsActicate
+        print('Title: SS_Affine_str\n'+SS_Affine_str+'\n')
+        print('Title: SS_Affine\n'+SS_Affine+'\n')
+        print('Title: SS_AffineRGB_str\n'+SS_AffineRGB_str+'\n')
+        print('Title: SS_AffineRGB\n'+SS_AffineRGB+'\n')
+        print('Title: SS_Affine_str\n'+SS_AffineBOOL_str+'\n')
+        print('Title: SS_Affine\n'+SS_AffineBOOL+'\n')'''

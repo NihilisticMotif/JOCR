@@ -1,0 +1,20 @@
+.C06id_EditCrop {
+    margin-bottom: 2px;
+    display: flex;
+    height: 30px;
+}
+
+.C06id_EditCrop h1 {
+    width: 100px;
+}
+
+.C06id_Editor {
+    background-color: burlywood;
+    height: var(--index02_HeaderHeight);
+    margin-top: 0px;
+    padding-bottom: 1px;
+}
+
+.C06id_Editor h1 {
+    font-size: 14px;
+}

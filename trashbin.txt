@@ -1,3 +1,1050 @@
+className='C04id_ShortInput'
+ 
+<tr>
+    <td style={{width:let_WidthTr}} >Rotate</td>
+    <td><input></input></td>
+    <td><button className='C04id_ShortOk'>Ok</button></td>
+    <td><button className='C04id_ShortReset'>Reset</button></td>
+</tr>
+ 
+            print('My Country have!')
+            print(SS_Affine.shape)
+            print(SS_AffineRGB.shape)
+            print(SS_AffineBOOL.shape)
+ 
+ 
+    pts2 = np.float32()
+ 
+[[10, 100],
+                   [200, 50], 
+                   [100, 250]]
+ 
+    print('ประเทศมึงมี')
+ 
+
+            # >  - Can't parse 'center'. Expected sequence length 2, got 3
+ 
+            '''
+cv2.error: OpenCV(4.8.1) :-1: error: (-5:Bad argument) in function 'circle'
+> Overload resolution failed:
+>  - circle() missing required argument 'img' (pos 1)
+>  - circle() missing required argument 'img' (pos 1)
+            '''
+ 
+    print("Vector shape:", Vector.shape)    # (6,2)
+    print("Color shape:", Color.shape)  # (6,3)
+    print("Bool shape:", Bool.shape)    # (6,)
+ 
+        print(b)
+ 
+            print(str((int(c[0]),int(c[1]),int(c[2]))))
+ 
+        # How can I draw colorful point and make the image become black and white?
+        #...
+ 
+#jsonify({'py':response})
+ 
+                if Is_Affine==True:
+                    let_Img=AffineTransformations(let_Img,SS_Affine)
+ 
+let_Img = DrawPoints(let_Img,SS_Affine,SS_AffineRGB,SS_AffineBOOL)
+ 
+                # color=(245, 0, 0)
+ 
+            
+ 
+2]))))
+ 
+            print(str((int(c[0]),int(c[1]),int(c[
+ 
+0
+ 
+tuple(c)
+ 
+tuple(list(v))
+ 
+,inplace=True
+ 
+Color.shape[0],
+ 
+            print(v)
+ 
+_coordinates
+ 
+            print("merry go 'round: ᴀ ᴊᴀᴘᴀɴᴇꜱᴇ ᴄɪᴛʏ ᴘᴏᴘ ᴘʟᴀʏʟɪꜱᴛ ꜰᴏʀ ᴀ ᴡᴀʟᴋ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴɪɢʜᴛ")
+            print('c',c)
+ 
+        
+        '''
+        def DrawPoints(Img,Vector,Color,Bool):
+            for v,c,b in zip(Vector,Color,Bool):
+            if b==True:
+                cv2.circle(Img,tuple(v),10,c,-1)
+            return Img
+        '''
+ 
+let_Img = DrawPoints(let_Img,SS_Affine,SS_AffineRGB,SS_AffineBOOL)
+ 
+
+                
+ 
+                
+ 
+Drawing
+ 
+        Is_AffineTransform=SS_IsActicate[-1]
+ 
+        print(SS_Affine)
+        print(SS_AffineBOOL)
+        print(SS_AffineRGB)
+        
+
+ 
+SS_AffineRGB_str=request.form.get('SS_AffineRGB')
+ 
+_str
+ 
+_str
+ 
+'''SS_Affine_list = SS_Affine_str.split(',')
+        SS_Affine_list = [float(item) for item in SS_Affine_list]  # Example: convert to float
+        SS_Affine=np.array(SS_Affine_list).reshape(2,3,2)
+        SS_AffineRGB_str=request.form.get('SS_AffineRGB')
+        SS_AffineRGB_hex=[str(item) for item in SS_AffineRGB_str]
+        #print(SS_AffineRGB_hex)
+        SS_AffineRGB=[]
+        for i in SS_AffineRGB_hex:
+            ii = i.strip().replace('#', '')
+            ii = ii.replace(',', '')
+            if ii:
+                SS_AffineRGB.append(hex_to_rgb_3Dvector(ii))
+        SS_AffineBOOL_str=request.form.get('SS_AffineBOOL')
+        SS_AffineBOOL=[bool(item) for item in SS_AffineBOOL_str]
+        #SS_AffineBOOL=np.array(SS_AffineBOOL).reshape(2,-1)
+        Is_Affine=SS_IsActicate
+        print('Title: SS_Affine_str\n'+SS_Affine_str+'\n')
+        print('Title: SS_Affine\n'+SS_Affine+'\n')
+        print('Title: SS_AffineRGB_str\n'+SS_AffineRGB_str+'\n')
+        print('Title: SS_AffineRGB\n'+SS_AffineRGB+'\n')
+        print('Title: SS_Affine_str\n'+SS_AffineBOOL_str+'\n')
+        print('Title: SS_Affine\n'+SS_AffineBOOL+'\n')'''
+ 
+SS_AffineBOOL_str=request.form.get('SS_AffineBOOL')
+ 
+        print(SS_IsActicate)
+ 
+      setSS_IsRGB(false)
+ 
+    <button onClick={f_Edit}  className='C04id_Button'>Edited BW Image</button>
+ 
+15
+ 
+set           */}>Reset</button>
+ 
+<button style={{marginTop:'15px',marginBottom:'0px',marginRight:'0px'}}  onClick= {()=>alert('Rain')/*f_Re
+ 
+<div style={{display:'flex'}}>
+<button style={{marginTop:'15px',marginBottom:'0px',marginRight:'10px'}} onClick= {()=>alert('Rain')/*f_Update          */}>Activate</button>
+<button style={{marginTop:'15px',marginBottom:'0px',marginRight:'10px'}} onClick= {()=>alert('Rain')/*f_SetDeActivate   */}>Deactivate</button>
+<button style={{marginTop:'15px',marginBottom:'0px',marginRight:'0px'}}  onClick= {()=>alert('Rain')/*f_Reset           */}>Reset</button>
+</div>
+ 
+</div>
+ 
+    function f_Gray(){
+      setSS_UseEffect(true)
+    }
+
+    function f_RGB(){
+      setSS_UseEffect(true)
+    }
+ 
+
+      
+ 
+//****************************************************************************
+ 
+//****************************************************************************
+ 
+          /*
+          .catch((error) => {
+              console.error('Error uploading file:', error);
+          });*/
+          
+         /*
+          let canvas = document.getElementById("C04id_Midjourney");
+          let image_file = canvas.toDataURL()
+          let body = {
+            "content": image_file,
+          }
+
+          fetch('/def_OpenCV', {
+            body: JSON.stringify(body),
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            }
+          }).then(response => {
+            console.log(response);
+          }).catch(exception => {
+            // fetch API problem: in case of CORS the server must send header "Access-Control-Allow-Origin":"*"
+            console.log(exception);
+          });*/
+ 
+setSS_UseEffect(true)
+ 
+setSS_UseEffect(true)
+ 
+setSS_UseEffect(true)
+ 
+,port=5001
+ 
+SS_IsActivate:boolean[]
+setSS_IsActivate:(S:boolean[])=>void,
+ 
+SS_IsActivate,
+setSS_IsActivate,
+ 
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+ 
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+ 
+SS_IsActivate:boolean[]
+setSS_IsActivate:(S:boolean[])=>void,
+ 
+setSS_UseEffect,
+SS_IsActivate,
+setSS_IsActivate,
+ 
+        /*
+        const formData = new FormData();
+        formData.append('file', file);
+
+        fetch('/def_OpenCV', {
+            method: 'POST',
+            body: formData,
+        })
+        .then((response) => {
+            return response.blob();
+        })
+        .then((data) => {
+            const imageURL = URL.createObjectURL(data);
+            setSS_Image(imageURL);
+        })
+        .catch((error) => {
+            console.error('Error uploading file:', error);
+        });*/
+ 
+      setSS_UseEffect(true)
+ 
+setSS_UseEffect(true)
+ 
+setSS_UseEffect(true)
+ 
+SS_IsShow={SS_IsShow}
+ 
+ ={ }
+ 
+   ,
+ 
+   :boolean
+ 
+     ={ }
+ 
+   ,
+ 
+   :boolean
+ 
+f_Reset()
+ 
+f_Reset()
+ 
+    function f_Reset(){
+
+    }
+ 
+      //alert(SS_IsShow.toString())
+ 
+      //alert(SS_IsShow.toString())
+ 
+      //alert(SS_IsShow.toString())
+ 
+      let ss_IsShow=[...SS_IsShow]
+      setSS_IsActivate(ss_IsShow)
+ 
+      setSS_IsShowEffect(true)
+ 
+      if(SS_IsShowEffect===true){
+        let ss_IsActivate=[...SS_IsActivate]
+        setSS_IsShow(ss_IsActivate)
+        setSS_IsShowEffect(false)
+      }
+      let ss_IsActivate=[]
+      for(let i=0;i<SS_IsActivate.length;i++){
+        ss_IsActivate.push(false)
+      }
+      setSS_IsActivate(ss_IsActivate)
+ 
+SS_IsShowEffect:boolean
+setSS_IsShowEffect:(S:boolean)=>void
+ 
+SS_IsShowEffect,
+setSS_IsShowEffect
+ 
+setSS_IsShowEffect,
+ 
+setSS_IsShowEffect:(S:boolean)=>void
+ 
+SS_IsShowEffect:boolean
+ 
+setSS_IsShowEffect:(S:boolean)=>void
+ 
+SS_IsShowEffect:boolean
+ 
+SS_IsShowEffect   ,
+ 
+setSS_IsShowEffect={setSS_IsShowEffect}
+ 
+SS_IsShowEffect  ={SS_IsShowEffect  }
+ 
+    const [SS_IsShowEffect,setSS_IsShowEffect]=useState<boolean>(true)
+ 
+setSS_UseEffect(true)
+ 
+setSS_UseEffect(true)
+ 
+setSS_UseEffect(true)
+ 
+      alert(SS_IsShowEffect.toString())
+ 
+      alert(SS_IsShowEffect.toString())
+ 
+      alert(SS_IsShowEffect.toString())
+ 
+      alert(SS_IsShowEffect.toString())
+ 
+    const [SS_UseEffect2,setSS_UseEffect2]=useState<boolean>(true)
+ 
+SS_IsShowEffect
+ 
+setSS_IsShowEffect={SS_IsShowEffect }
+ 
+      setSS_IsShow(ss_IsActivate)
+ 
+    const [SS_IsAct,set_IsAct]=useState<boolean[]>(SS_IsActivate)
+ 
+    const [SS_IsAct,set_IsAct]=useState<boolean[]>(SS_IsActivate)
+ 
+setSS_IsShow:(S:boolean[])=>void
+ 
+setSS_IsShow     ={setSS_IsShow     }
+ 
+{/*
+<tr>
+    <td>Scale X</td>
+    <td><input></input></td>
+</tr>
+<tr>
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+</tr>
+<tr>
+    <td>Scale Y</td>
+    <td><input></input></td>
+</tr>
+<tr>
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+</tr>
+<tr>
+    <td>Rotate</td>
+    <td><input></input></td>
+</tr>
+<tr>
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+</tr>
+<tr>
+    <td>Crop X 1</td>
+    <td><input></input></td>
+</tr>
+<tr>
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+</tr>
+<tr>
+    <td>Crop X 2</td>
+    <td><input></input></td>
+</tr>
+<tr>
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+</tr>
+<tr>
+    <td>Crop Y 1</td>
+    <td><input></input></td>
+</tr>
+<tr>
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+</tr>
+<tr>
+    <td>Crop Y 2</td>
+    <td><input></input></td>
+</tr>
+<tr>
+    <td><button>Ok</button></td>
+    <td><button>Reset</button></td>
+    </tr>*/}
+ 
+ style={{marginTop:'-3px',marginLeft:'10px'}}
+ 
+,marginLeft:'10px'
+ 
+<h1 className='C05id_Zoom' style={{fontSize:'14px'}}>{let_Status}</h1>
+ 
+let let_Status='Error'
+  if(SS_IsActivate[0]===true){
+    let_Status='(Active)'
+  }
+  else{
+    let_Status='(Inactive)'
+  }
+ 
+          
+          //formData.append('IsRGB', SS_IsRGB);
+
+          //fetch('/def_OpenCV')
+          //.then(())
+
+          /*
+          // Print Hello World
+          // https://www.geeksforgeeks.org/how-to-connect-reactjs-with-flask-api/
+          fetch('/def_OpenCV')
+          .then((res)=>
+          res.json().then((data)=>alert(JSON.stringify(data)))
+          )
+          */
+
+          /* Basic Post Request
+          // https://stackoverflow.com/questions/72023176/how-to-send-post-request-from-react-to-flask-without-submit-button
+          fetch("/Square", {
+            method: "POST",
+            body: JSON.stringify({IsRGB:SS_IsRGB.toString()}),
+            headers: { "content-type": "application/json" },
+          })
+            .then((res) => {
+              if (!res.ok) return Promise.reject(res);
+              return res.json();
+            })
+            .then((data) => {
+              alert(JSON.stringify(data))
+              // do something with data ¯\_(ツ)_/¯
+            })
+            .catch(console.error);*/
+ 
+set_IsAct(SS_IsActivate)
+ 
+...SS_IsActivate
+ 
+<button onClick={f_RGB}  className='C04id_Button'>Original BW Image</button>
+ 
+ivate
+ 
+, useEffect
+ 
+            print('minn',minn)
+            print('maxx',maxx)
+            print('gray',gray)
+            #print('If'+str(bool)+'==True:')
+            #print('Then: mark=np.logical_and('+str(img)+'>'+str(minn)+','+str(img)+'<'+str(maxx))
+ 
+        print('WhiteBackGround')
+ 
+            print()
+            print('minn',str(minn))
+            print('maxx',str(maxx))
+            print('gray',str(gray))
+            print('bool',str(bool))
+ 
+                print('Is_Thresholds',str(Is_Thresholds))
+ 
+                    print(str(list_Minn))
+                    print(str(list_Maxx))
+                    print(str(list_Gray))
+                    print(str(list_Bool))
+ 
+        print('SS_Thresholds=SS_ScaleThresholds')
+        for i in SS_Thresholds:
+            print(i)
+ 
+            print(i)
+ 
+                    for min,max,gray,bool in zip(list_Minn,list_Maxx,list_Gray,list_Bool):
+                        print()
+                        print('min',min)
+                        print('max',max)
+                        print('gray',gray)
+                        print('bool',bool)
+ 
+,Threshold:TS_Threshold
+ 
+let let_InputGrayScale=Math.round(255*(255*((SS_MaxHeight) - Threshold.PositionY)/(SS_MaxHeight))/250)
+ 
+{Key:0,PositionY:0,IsDefault:false,Gray:'#000000'}
+ 
+{Key:0,PositionY:0,IsDefault:false,Gray:'#000000'}
+ 
+
+//****************************************************************************
+// FUNCTION 01: Compute
+//****************************************************************************
+  function f_ComputeSquare(){
+    let let_input = (document.getElementById('C04id_CropImageX1') as HTMLInputElement).value.toString();
+    //alert(let_input)
+    if(isNaN(parseFloat(let_input))){
+      alert('This is not a number!')
+    }
+    else{
+      // https://rapidapi.com/guides/fetch-api-react
+      fetch("/def_Ysquare/"+let_input.toString())
+        .then((res) => res.json())
+        .then((data) => {
+            //alert(JSON.stringify(data));
+            setSS_HelloPy(data.py);
+        });
+    }
+    }
+
+  function f_ComputeCube(){
+    let let_input = (document.getElementById('C04id_CropImageX1') as HTMLInputElement).value.toString();
+    //alert(let_input)
+    if(isNaN(parseFloat(let_input))){
+      alert('This is not a number!')
+    }
+    else{
+      // https://rapidapi.com/guides/fetch-api-react
+      fetch("/def_Ycube/"+let_input.toString())
+        .then((res) => res.json())
+        .then((data) => {
+            //alert(JSON.stringify(data));
+            setSS_HelloPy(data.py);
+        });
+    }
+    }
+ 
+,ShowMustGoOn
+ 
+def ShowMustGoOn(img):
+    cv2.imshow("image", img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+ 
+
+'''
+
+'''
+ 
+def sharpen(image):
+    k2=-0.1
+    k1=-5
+    k0=-(k2*16+k1*8)+1
+    kernel = np.array([
+        [k2,k2,k2,k2,k2,], 
+        [k2,k1,k1,k1,k2,], 
+        [k2,k1,k0,k1,k2,], 
+        [k2,k1,k1,k1,k2,], 
+        [k2,k2,k2,k2,k2,]
+        ])
+    # https://youtu.be/KuXjwB4LzSA?si=mt-leKGKjpMnJGfg
+    # https://www.geeksforgeeks.org/python-opencv-filter2d-function/
+    return cv2.filter2D(image, -1, kernel)
+ 
+,sharpen
+ 
+
+/*
+/////////////////////////////////////////////////////////////////////////////////
+*/
+ 
+    position:relative;
+ 
+{JSX_C03}
+ 
+.I02id_Editor {
+    background-color: burlywood;
+    height: var(--index02_HeaderHeight);
+    margin-top: 0px;
+    padding-bottom: 1px;
+}
+
+.I02id_Editor h1 {
+    font-size: 14px;
+}
+ 
+setSS_C02:(S:boolean)=>void
+ 
+setSS_IsActivate ={setSS_IsActivate }
+ 
+setSS_nDMatrix   ={setSS_nDMatrix   }
+ 
+setSS_nDTable    ={setSS_nDTable    }
+ 
+setSS_Affine     ={setSS_Affine     }
+ 
+setSS_AffineSTR  ={setSS_AffineSTR  }
+ 
+setSS_AffineRGB  ={setSS_AffineRGB  }
+ 
+setSS_AffineBOOL ={setSS_AffineBOOL }
+ 
+setSS_Image      ={setSS_Image      }
+ 
+SS_Thresholds    ={SS_Thresholds    }
+ 
+SS_Thresholds    ={SS_Thresholds    }
+ 
+SS_OpenPanel     ={SS_OpenPanel     }
+ 
+setSS_Zoom       ={setSS_Zoom       }
+setSS_WidthImage ={setSS_WidthImage }
+setSS_IsRGB      ={setSS_IsRGB      }
+setSS_ImageFile  ={setSS_ImageFile  }
+setSS_UseEffect  ={setSS_UseEffect  }
+ 
+SS_IsActivate    ={SS_IsActivate    }
+setSS_IsActivate ={setSS_IsActivate }
+SS_nDMatrix      ={  SS_nDMatrix    }
+setSS_nDMatrix   ={setSS_nDMatrix   }
+SS_nDTable       ={SS_nDTable       }
+setSS_nDTable    ={setSS_nDTable    }
+SS_Affine        ={SS_Affine        }
+setSS_Affine     ={setSS_Affine     }
+SS_AffineSTR     ={SS_AffineSTR     }
+setSS_AffineSTR  ={setSS_AffineSTR  }
+SS_AffineRGB     ={SS_AffineRGB     }
+setSS_AffineRGB  ={setSS_AffineRGB  }
+SS_AffineBOOL    ={SS_AffineBOOL    }
+setSS_AffineBOOL ={setSS_AffineBOOL }
+SS_Image         ={SS_Image         }
+setSS_Image      ={setSS_Image      }
+SS_Zoom          ={SS_Zoom          }
+SS_WidthImage    ={SS_WidthImage    }
+SS_IsRGB         ={SS_IsRGB         }
+SS_ImageFile     ={SS_ImageFile     }
+SS_UseEffect     ={SS_UseEffect     }
+setSS_Zoom       ={setSS_Zoom       }
+setSS_WidthImage ={setSS_WidthImage }
+setSS_IsRGB      ={setSS_IsRGB      }
+setSS_ImageFile  ={setSS_ImageFile  }
+setSS_UseEffect  ={setSS_UseEffect  }
+SS_OpenPanel     ={SS_OpenPanel     }
+setSS_OpenPanel  ={setSS_OpenPanel  }
+SS_Thresholds    ={SS_Thresholds    }
+setSS_Thresholds ={setSS_Thresholds }
+ 
+, useLayoutEffect
+ 
+ useState ,
+ 
+const Ref_C04 = useRef<HTMLDivElement | null>(null);
+ 
+  useEffect(() => {
+//****************************************************************************
+      let_fetchImage()
+//****************************************************************************
+      const let_CurrentWidthC04 = Ref_C04.current;
+      let let_WidthC04=(document.getElementById('C04id_Canvas')as HTMLElement)
+
+      if (let_CurrentWidthC04) {
+      const let_ObsImageWidth = new ResizeObserver(() => { 
+        setSS_WidthImage(let_WidthC04!.offsetWidth-1)
+      })
+
+      let_ObsImageWidth.observe(let_CurrentWidthC04);
+      return () => {
+          let_ObsImageWidth.disconnect();
+      };
+      }
+
+      
+  }, [SS_Image,SS_ImageFile,SS_IsRGB]);
+ 
+  const Ref_C04 = useRef<HTMLDivElement | null>(null);
+  let let_RightToolW=100
+  useEffect(() => {
+//****************************************************************************
+      let_fetchImage()
+//****************************************************************************
+      const let_CurrentWidthC04 = Ref_C04.current;
+      let let_WidthC04=(document.getElementById('C04id_Canvas')as HTMLElement)
+
+      if (let_CurrentWidthC04) {
+      const let_ObsImageWidth = new ResizeObserver(() => { 
+        setSS_WidthImage(let_WidthC04!.offsetWidth-1)
+      })
+
+      let_ObsImageWidth.observe(let_CurrentWidthC04);
+      return () => {
+          let_ObsImageWidth.disconnect();
+      };
+      }
+
+      
+  }, [SS_Image,SS_ImageFile,SS_IsRGB]);
+ 
+
+export default index02_Canvas;
+ 
+
+export default index02_Canvas;
+ 
+    /* 1 */    SS_IsActivate={SS_IsActivate}
+    /* 2 */    setSS_IsActivate={setSS_IsActivate}
+    /* 3 */    SS_Affine   ={SS_Affine   }
+    /* 4 */    setSS_Affine={setSS_Affine}
+    /* 5 */    SS_AffineSTR    ={SS_AffineSTR    }
+    /* 6 */    setSS_AffineSTR ={setSS_AffineSTR }
+    /* 7 */    SS_AffineRGB={SS_AffineRGB}
+    /* 8 */    setSS_AffineRGB={setSS_AffineRGB}
+    /* 9 */    SS_AffineBOOL={SS_AffineBOOL}
+    /* 10*/    setSS_AffineBOOL={setSS_AffineBOOL}
+    /* 11*/    SS_nDMatrix   ={SS_nDMatrix   }
+    /* 12*/    setSS_nDMatrix={setSS_nDMatrix}
+    /* 13*/    SS_nDTable    ={SS_nDTable    }
+    /* 14*/    setSS_nDTable ={setSS_nDTable }
+    /* 15*/    SS_Image={SS_Image}
+    /* 16*/    setSS_Image={setSS_Image}
+    /* 17*/    SS_Zoom      ={SS_Zoom      }
+    /* 18*/    SS_WidthImage={SS_WidthImage}
+    /* 19*/    SS_IsRGB     ={SS_IsRGB     }
+    /* 20*/    SS_ImageFile ={SS_ImageFile }
+    /* 21*/    SS_UseEffect ={SS_UseEffect }
+    /* 22*/    setSS_Zoom      ={setSS_Zoom      }
+    /* 23*/    setSS_WidthImage={setSS_WidthImage}
+    /* 24*/    setSS_IsRGB     ={setSS_IsRGB     }
+    /* 25*/    setSS_ImageFile ={setSS_ImageFile }
+    /* 26*/    setSS_UseEffect ={setSS_UseEffect }
+    /* 27*/    SS_OpenPanel={SS_OpenPanel}
+    /* 28*/    setSS_OpenPanel={setSS_OpenPanel}
+    /* 29*/    setSS_C02={setSS_C02}
+    /* 30*/    SS_Thresholds={SS_Thresholds}
+    /* 31*/    setSS_Thresholds={setSS_Thresholds}
+ 
+SS_Thresholds:TS_Threshold[];
+ 
+SS_OpenPanel:0|1|2;
+ 
+setSS_Image:(S:string | null)=>void
+ 
+setSS_AffineBOOL:(S:boolean[][])=>void
+ 
+setSS_AffineRGB :(S:string[][])=>void
+ 
+setSS_AffineSTR :(S:string[][][])=>void
+ 
+setSS_Affine    :(S:number[][][])=>void
+ 
+setSS_nDTable :(S:string[][])=>void
+ 
+setSS_nDMatrix:(S:number[][])=>void
+ 
+setSS_IsActivate:(S:boolean[])=>void
+ 
+_Toolbar
+ 
+import './U1_Affine.css'
+ 
+TotalWidth,
+ 
+
+#C04id_Canvas{
+    display: grid;
+}
+#C04id_Body{
+    background-color: black;
+    display: flex;
+}
+
+#C04id_DivHeader {
+    background-color: rgb(43, 226, 202);
+    width: 100%;
+}
+
+.C04id_RightToolbar{
+    margin-left:auto
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+:root {
+    --C04_MarginTop: 0px;
+    --C04_HeaderHeight: 100px;
+}
+
+.C04id_Header {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-top: var(--C04_MarginTop);
+    margin-bottom: var(--C04_MarginTop);
+    height: 30px;
+}
+
+.C04id_Editor {
+    background-color: burlywood;
+    height: var(--C04_HeaderHeight);
+    margin-top: 0px;
+    padding-bottom: 1px;
+}
+
+.C04id_Editor h1 {
+    font-size: 14px;
+}
+ 
+/*
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+*/
+ 
+    /*
+    display: flex;
+    width:50%;
+    
+    margin-left:auto;
+    position: fixed;
+    */
+ 
+// Both for C04id_DivHeader, C_TopButton.tsx, header button
+ 
+
+:root{
+    --C04_RightToolW:100px;
+}
+ 
+_Toolbar
+ 
+_Toolbar
+ 
+_Toolbar
+ 
+import TS_Threshold from '../T03_Threshold/An_Index';
+ 
+import C05_Convolution from '../C05_Convolution/index';
+ 
+import U_Zoom from './Coms_Toolbar/U1_Zoom';
+import U_IsRGB from './Coms_Toolbar/U1_IsRGB';
+import U_UpdateImage from './Coms_Toolbar/U_UpdateImage';
+ 
+import U_UpdateImage from './Coms_Toolbar/U_UpdateImage';
+ 
+import U1_ShapeTextSetting from './Coms_Toolbar/U1_ShapeTextSetting'
+ 
+import U1_2DMatrix from './Coms_Toolbar/U2_Affine'
+ 
+import U2_Convolution from './Coms_Toolbar/U2_Convolution';
+ 
+import U1_Affine from './Coms_Toolbar/U1_Affine';
+ 
+
+  let JSX_ImageProcessing=
+ 
+<C05_Convolution
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+    SS_ImageProcessing={SS_ImageProcessing}
+    SS_Thresholds={SS_Thresholds}
+    setSS_Thresholds={setSS_Thresholds}
+    SS_Affine={SS_Affine}
+    setSS_Affine={setSS_Affine}
+    SS_AffineSTR={SS_AffineSTR}
+    setSS_AffineSTR={setSS_AffineSTR}
+    SS_AffineRGB={SS_AffineRGB}
+    setSS_AffineRGB={setSS_AffineRGB}
+    SS_AffineBOOL={SS_AffineBOOL}
+    setSS_AffineBOOL={setSS_AffineBOOL}
+    SS_nDMatrix   ={SS_nDMatrix   }
+    setSS_nDMatrix={setSS_nDMatrix}
+    SS_nDTable    ={SS_nDTable    }
+    setSS_nDTable ={setSS_nDTable }
+    />
+ 
+
+  let JSX_ImageProcessing=<C05_Convolution
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+    SS_ImageProcessing={SS_ImageProcessing}
+    SS_Thresholds={SS_Thresholds}
+    setSS_Thresholds={setSS_Thresholds}
+    SS_Affine={SS_Affine}
+    setSS_Affine={setSS_Affine}
+    SS_AffineSTR={SS_AffineSTR}
+    setSS_AffineSTR={setSS_AffineSTR}
+    SS_AffineRGB={SS_AffineRGB}
+    setSS_AffineRGB={setSS_AffineRGB}
+    SS_AffineBOOL={SS_AffineBOOL}
+    setSS_AffineBOOL={setSS_AffineBOOL}
+    SS_nDMatrix   ={SS_nDMatrix   }
+    setSS_nDMatrix={setSS_nDMatrix}
+    SS_nDTable    ={SS_nDTable    }
+    setSS_nDTable ={setSS_nDTable }
+    />
+ 
+/Coms_Toolbar
+ 
+<div className='C04id_Toolbar'
+    style={{
+      width:`${200}px`,
+      height:`calc(100vh - ${143+20}px)`,
+      }}>
+    
+    <div style={{display:'flex',height:'100px'}}>
+      
+      <U1_Zoom
+      SS_Zoom={SS_Zoom}
+      setSS_Zoom={setSS_Zoom}/>
+    {//****************************************************************************
+    // RGB or Gray
+    //****************************************************************************
+    }
+    <U1_IsRGB
+    SS_IsRGB={SS_IsRGB}
+    setSS_UseEffect={setSS_UseEffect}
+    setSS_IsRGB={setSS_IsRGB}/>
+
+    </div>
+
+    {//****************************************************************************
+    // Edit Image
+    //****************************************************************************
+    }
+    <hr/>
+    <U1_UpdateImage
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+    setSS_UseEffect={setSS_UseEffect}
+    />
+    <hr/>
+    <U1_Affine
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+    setSS_UseEffect={setSS_UseEffect}
+    />
+{/*    <U1_EditImage/>
+
+    //****************************************************************************
+    // Edit Image Setting
+    //****************************************************************************
+  }
+  <U1_ShapeTextSetting
+  SS_IsShapeSetting={SS_IsShapeSetting}
+  setSS_IsShapeSetting={setSS_IsShapeSetting}
+/>*/}
+  
+  {/*
+  <hr style={{marginTop:'20px'}}/>
+  <U1_2DMatrix
+  SS_3DMatrix ={SS_3DMatrix   }  
+setSS_3DMatrix={setSS_3DMatrix}
+SS_3DTable    ={SS_3DTable    }
+setSS_3DTable ={setSS_3DTable }/>*/}
+  </div>
+  {//****************************************************************************
+    // Convolution or Threshold
+    //****************************************************************************
+  }
+  {JSX_ImageProcessingDIV}
+ 
+  const [SS_IsShapeSetting,setSS_IsShapeSetting]=useState<boolean>(true)
+  const [SS_ImageProcessing,setSS_ImageProcessing]=useState<0|1>(0)
+  // 0 Threshold
+  // 1 Convolution
+  // 2 FFT
+  // 3 2D Linear Transformation
+  // 4 ...
+
+  let JSX_ImageProcessing=<C05_Convolution
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+    SS_ImageProcessing={SS_ImageProcessing}
+    SS_Thresholds={SS_Thresholds}
+    setSS_Thresholds={setSS_Thresholds}
+    SS_Affine={SS_Affine}
+    setSS_Affine={setSS_Affine}
+    SS_AffineSTR={SS_AffineSTR}
+    setSS_AffineSTR={setSS_AffineSTR}
+    SS_AffineRGB={SS_AffineRGB}
+    setSS_AffineRGB={setSS_AffineRGB}
+    SS_AffineBOOL={SS_AffineBOOL}
+    setSS_AffineBOOL={setSS_AffineBOOL}
+    SS_nDMatrix   ={SS_nDMatrix   }
+    setSS_nDMatrix={setSS_nDMatrix}
+    SS_nDTable    ={SS_nDTable    }
+    setSS_nDTable ={setSS_nDTable }
+    />
+
+  let JSX_ImageProcessingDIV=<></>
+  if(SS_OpenPanel===1){
+    JSX_ImageProcessingDIV=<div style={{display:'grid'}}>
+      <div style={{display:'flex',height:'40px'}}>
+        <button onClick={()=>{setSS_ImageProcessing(0)}}>Threshold</button>
+        <button onClick={()=>{setSS_ImageProcessing(1)}}>Convolution</button>
+      </div>
+      {JSX_ImageProcessing}
+  </div>
+  }else{
+    JSX_ImageProcessingDIV=<></>
+  }
+
+ 
+
+  if(SS_ImageProcessing===0){
+    JSX_ImageProcessing=<C05_Convolution
+    SS_IsActivate={SS_IsActivate}
+    setSS_IsActivate={setSS_IsActivate}
+        SS_Thresholds={SS_Thresholds}
+        setSS_Thresholds={setSS_Thresholds}/>
+  }
+  else{
+    JSX_ImageProcessing=<U2_Convolution
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
+SS_Affine={SS_Affine}
+setSS_Affine={setSS_Affine}
+SS_AffineSTR={SS_AffineSTR}
+setSS_AffineSTR={setSS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
+setSS_AffineRGB={setSS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
+setSS_AffineBOOL={setSS_AffineBOOL}
+SS_nDMatrix   ={SS_nDMatrix   }
+setSS_nDMatrix={setSS_nDMatrix}
+SS_nDTable    ={SS_nDTable    }
+setSS_nDTable ={setSS_nDTable }
+/>
+  }
+ 
+import './index02_Canvas_1.css'
+ 
+// Both for C04id_DivHeader, C_TopButton.tsx, header button
+ 
+
+:root{
+    --C04_RightToolW:100px;
+}
+ 
+import TS_Row from './T01_Row/An_Index';
+ 
+import Example01 from './Components/index01';
+import Example02 from './Components/index02'
+ 
+/Users/imac/Desktop/SoloOpenSourceProject/JOCR
+ 
 */}
  
 _str

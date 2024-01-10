@@ -3,7 +3,7 @@ from flask import Flask, jsonify, Response, request, redirect, url_for, json
 import numpy as np
 from PIL import Image
 import cv2
-from kernel import DrawPoints,AffineTransformations, canny,get_grayscale,sharpen,erode,dilate,opening,ShowMustGoOn,WhiteBackGround
+from kernel import DrawPoints,AffineTransformations, canny,get_grayscale,erode,dilate,opening,WhiteBackGround
 import base64
 import pickle
 import matplotlib.colors as mcolors
@@ -50,13 +50,16 @@ def def_OpenCV():
         def hex_to_rgb_vector(hex_color):
             rgba = mcolors.to_rgba(hex_color)
             rgb = rgba[:3]
-            return rgb[0]
+            return rgb[0]*255
         
         def hex_to_rgb_3Dvector(hex_color):
             rgba = mcolors.to_rgba(hex_color)
             rgb = rgba[:3]
             return rgb
         # SS_IsRGB
+        SS_IsShow_str=request.form.get('SS_IsShow')
+        SS_IsShow = SS_IsShow_str.lower() == 'true'
+
         SS_IsRGB_str = request.form.get('SS_IsRGB')  # Get the 'IsRGB' parameter as a string
         SS_IsRGB = SS_IsRGB_str.lower() == 'true'
 
@@ -64,39 +67,41 @@ def def_OpenCV():
         SS_IsActicate_list = SS_IsActicate_str.split(',')
         #SS_IsActicate_list = [bool(item) for item in SS_IsActicate_list]
         SS_IsActicate=[]
+        SS_False=[]
         for i in SS_IsActicate_list:
+            SS_False.append(False)
             if 'rue' in i:
                 SS_IsActicate.append(True) 
             else:
                 SS_IsActicate.append(False) 
+        if SS_IsShow==False:
+            SS_IsActicate=SS_False
 
-        '''
+        
         # SS_Affine
         # https://youtu.be/Ad9e5eoHm9U?si=rlnmPMVsNRuB5QPt
         SS_Affine_str=request.form.get('SS_Affine')
-        
-        SS_Affine_list = SS_Affine_str.split(',')
-        SS_Affine_list = [float(item) for item in SS_Affine_list]  # Example: convert to float
-        SS_Affine=np.array(SS_Affine_list).reshape(2,3,2)
-        SS_AffineRGB_str=request.form.get('SS_AffineRGB')
-        SS_AffineRGB_hex=[str(item) for item in SS_AffineRGB_str]
-        #print(SS_AffineRGB_hex)
-        SS_AffineRGB=[]
-        for i in SS_AffineRGB_hex:
-            ii = i.strip().replace('#', '')
-            ii = ii.replace(',', '')
-            if ii:
-                SS_AffineRGB.append(hex_to_rgb_3Dvector(ii))
+        SS_Affine_list=SS_Affine_str.split(',')
+        SS_Affine=np.array(SS_Affine_list).astype(float)
+        SS_Affine=SS_Affine.reshape((2,3,2))
+
         SS_AffineBOOL_str=request.form.get('SS_AffineBOOL')
-        SS_AffineBOOL=[bool(item) for item in SS_AffineBOOL_str]
-        #SS_AffineBOOL=np.array(SS_AffineBOOL).reshape(2,-1)
-        Is_Affine=SS_IsActicate
-        print('Title: SS_Affine_str\n'+SS_Affine_str+'\n')
-        print('Title: SS_Affine\n'+SS_Affine+'\n')
-        print('Title: SS_AffineRGB_str\n'+SS_AffineRGB_str+'\n')
-        print('Title: SS_AffineRGB\n'+SS_AffineRGB+'\n')
-        print('Title: SS_Affine_str\n'+SS_AffineBOOL_str+'\n')
-        print('Title: SS_Affine\n'+SS_AffineBOOL+'\n')'''
+        SS_AffineBOOL_list=SS_AffineBOOL_str.split(',')
+        SS_AffineBOOL=[]
+        for i in SS_AffineBOOL_list:
+            if 'rue' in i:
+                SS_AffineBOOL.append(True)
+            else:
+                SS_AffineBOOL.append(False)
+        SS_AffineBOOL=np.array(SS_AffineBOOL).reshape((2,-1))
+
+        SS_AffineRGB_str=request.form.get('SS_AffineRGB')
+        SS_AffineRGB_list=SS_AffineRGB_str.split(',')
+        SS_AffineRGB=[]
+        for i in SS_AffineRGB_list:
+            SS_AffineRGB.append(hex_to_rgb_3Dvector(i))
+        SS_AffineRGB=np.array(SS_AffineRGB).reshape((2,-1))
+        Is_Affine=SS_IsActicate[2]
 
         # SS_nDMatrix
         SS_nDMatrix_str = request.form.get('SS_nDMatrix')
@@ -108,8 +113,13 @@ def def_OpenCV():
 
         # SS_Thresholds
         SS_Thresholds_str=request.form.get('SS_Thresholds')
+
         SS_Thresholds_data = json.loads(SS_Thresholds_str)
-        SS_Thresholds = [[item['PositionY'], item['IsDefault'], item['Gray']] for item in SS_Thresholds_data]
+        SS_Thresholds = [[item['PositionY'],item['ScalePosition'], item['IsDefault'], item['Gray']] for item in SS_Thresholds_data]
+        SS_ScaleThresholds=[]
+        for i in SS_Thresholds:
+            SS_ScaleThresholds.append([i[1],i[2],i[3]])
+        SS_Thresholds=SS_ScaleThresholds
         Is_Thresholds=SS_IsActicate[1]
         '''
         [
@@ -144,7 +154,12 @@ def def_OpenCV():
         let_File=request.files['file']
         if let_File!=None:
             let_Img = cv2.imdecode(np.frombuffer(let_File.read(), np.uint8), cv2.IMREAD_COLOR)
-            #if Is_Affine==True:
+            let_Img = DrawPoints(let_Img,SS_Affine[0],SS_AffineRGB[0],SS_AffineBOOL[0])
+            if Is_Affine==True:
+                #print(SS_Affine.shape)
+                let_Img=AffineTransformations(let_Img,SS_Affine)
+            let_Img = DrawPoints(let_Img,SS_Affine[1],SS_AffineRGB[1],SS_AffineBOOL[1])
+            
             #    let_Img=DrawPoints(let_Img,SS_Affine,SS_AffineRGB,SS_AffineBOOL)
             if not SS_IsRGB:
                 let_Img = cv2.cvtColor(let_Img, cv2.COLOR_BGR2GRAY)
@@ -152,11 +167,10 @@ def def_OpenCV():
                     let_Img = cv2.filter2D(let_Img, -1, SS_nDMatrix)
                 if Is_Thresholds==True:
                     let_Img = WhiteBackGround(let_Img,list_Minn,list_Maxx,list_Gray,list_Bool)
-                #if Is_Affine==True:
-                #    let_Img=AffineTransformations(let_Img,SS_Affine)
             let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
             response = Response(let_Bytes, content_type='image/png')
-            return response #jsonify({'py':response})
+            return response 
+        # ...
         else:
             return jsonify({'error': 'No file uploaded'})
 
@@ -217,5 +231,5 @@ if __name__ == '__main__':
 
 
 '''
-python3 hello02.py
+python3 app.py
 '''
