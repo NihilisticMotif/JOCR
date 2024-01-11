@@ -1,0 +1,7 @@
+<select onChange={()=>f_UpdateType(box.Key)}
+style={{fontSize:'15px',height:'25px'}} 
+value={box.Type[0]} id={'C05id_AddBoxType'+box.Key.toString()}>
+  <option value="Rectangle">Rectangle</option>
+  <option value="Frame">Frame</option>
+  <option value="Line">Line</option>
+</select>

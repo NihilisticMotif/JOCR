@@ -13,7 +13,6 @@ def canny(image):
 def get_grayscale(image):
     return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-
 #erosion
 def erode(image):
     # X
@@ -53,13 +52,37 @@ def AffineTransformations(img,pts):
     # https://youtu.be/Ad9e5eoHm9U?si=RQMj8ASrsi1-Xov-
     # https://www.geeksforgeeks.org/python-opencv-affine-transformation/
     rows, cols, ch = img.shape
-    #print('Hii')
-    #print(pts[0].shape)
     pts0 = np.float32(list(pts[0].reshape(-1))).reshape(3,2)
     pts1 = np.float32(list(pts[1].reshape(-1))).reshape(3,2)
     M = cv2.getAffineTransform(pts0,pts1)
     img = cv2.warpAffine(img, M, (cols, rows))
     return img
+
+def AffineScale(Img,ScaleX,ScaleY):
+    rows, cols, ch = Img.shape
+    M=np.array([[ScaleX,0,0],
+                [0,ScaleY,0]])
+    Img=cv2.warpAffine(Img,M,(cols,rows))
+    return Img
+
+def AffineRotation(Img,Rotation):
+    # https://articulatedrobotics.xyz/5-transformation_matrices/
+    # https://www.geeksforgeeks.org/python-opencv-getrotationmatrix2d-function/
+    height, width = Img.shape[:2] 
+    M = cv2.getRotationMatrix2D(
+        center=(width/2, height/2), 
+        angle=Rotation, 
+        scale=1
+        )
+    Img=cv2.warpAffine(src=Img, M=M, dsize=(width, height))
+    return Img
+
+def AffineMoveOrigin(Img,PositionX,PositionY):
+    rows, cols, ch = Img.shape
+    M=np.array([[1,0,PositionX],
+                [0,1,PositionY]])
+    Img=cv2.warpAffine(Img,M,(cols,rows))
+    return Img
 
 def DrawPoints(Img,Vector,Color,Bool):
     Color=255*Color.reshape((-1,3))
@@ -67,10 +90,6 @@ def DrawPoints(Img,Vector,Color,Bool):
     Bool=Bool.reshape((-1))
     for v,c,b in zip(Vector,Color,Bool):
         if b==True:
-            #print("merry go 'round: ᴀ ᴊᴀᴘᴀɴᴇꜱᴇ ᴄɪᴛʏ ᴘᴏᴘ ᴘʟᴀʏʟɪꜱᴛ ꜰᴏʀ ᴀ ᴡᴀʟᴋ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴɪɢʜᴛ")
-            #print(str((float(v[0]),float(v[1]))))
-            #print('v',tuple(list(v)))
-            #print(type(tuple(list(v))[0]))
             Img=cv2.circle(
                 img=Img,
                 center=(int(v[0]),int(v[1])),
@@ -86,6 +105,40 @@ def DrawPoints(Img,Vector,Color,Bool):
                 thickness=3)
     return Img
 
+def DrawPointOrigin(Img,Mode,RGB,PositionX,PositionY):
+    RGB=(int(255*RGB[2]),int(255*RGB[1]),int(255*RGB[0]))
+    if Mode=='NoOrigin':
+        return Img
+    if Mode=='CenterOrigin':
+        height, width, _ = Img.shape
+        CenterOrigin=(int(width/2)+int(PositionX),int(height/2)+int(PositionY))
+        Img=cv2.circle(
+            img=Img,
+            center=CenterOrigin,
+            radius=22,
+            color=RGB,
+            thickness=-1)
+        Img=cv2.circle(
+            img=Img,
+            center=CenterOrigin,
+            radius=22,
+            color=(255,255,255),
+            thickness=3)
+        return Img
+    if Mode=='TopLeftOrigin':
+        Img=cv2.circle(
+            img=Img,
+            center=(0,0),
+            radius=22,
+            color=RGB,
+            thickness=-1)
+        Img=cv2.circle(
+            img=Img,
+            center=(0,0),
+            radius=22,
+            color=(255,255,255),
+            thickness=3)
+        return Img
 ########################################################################################
 #   Display the Image
 ########################################################################################

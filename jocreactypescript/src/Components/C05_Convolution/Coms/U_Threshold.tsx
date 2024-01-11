@@ -194,7 +194,7 @@ let let_Status='Error'
 //****************************************************************************
 // JSX_00: Threshold
 //****************************************************************************
- const let_Width='250px'
+ const let_Width='100%'
  function JSX_Threshold(Threshold:TS_Threshold){
   
     //let let_DefaultColor='#000000'
@@ -324,8 +324,8 @@ id='C05id_ThresholdBody'
  style={{height:`calc(100vh - 40px - ${(143+20)}px )`,width:let_Width,backgroundColor:'lightblue',marginTop:'0px'}}>
   <h1 className='C05id_Zoom' style={{marginTop:'10px',fontSize:'14px'}}>Gray Threshold {let_Status}</h1>
   <div style={{display:'flex',marginTop:'10px'}}>
-   <button style={{marginTop:'10px',marginLeft:'10px'}} onClick={f_SetActivate}>Activate</button>
-   <button style={{marginTop:'10px',marginLeft:'10px'}} onClick={f_SetDeActivate}>Deactivate</button>
+   <button style={{marginTop:'10px',marginLeft:'10px',backgroundColor:SS_IsActivate[1]? 'lightgreen':'white'}} onClick={f_SetActivate}>Activate</button>
+   <button style={{marginTop:'10px',marginLeft:'10px',backgroundColor:SS_IsActivate[1]? 'white':'lightgreen'}} onClick={f_SetDeActivate}>Deactivate</button>
  </div>
  <hr/>
  <div style={{display:'flex'}}>

@@ -48,7 +48,7 @@ setSS_nDTable :(S:string[][])=>void
     let_Status='(Inactive)'
   }
   let JSX_Con=[]
-  const let_Width='250px'
+  const let_Width='100%'
   for(let i=0;i<let_TotalSize;i++){
     let JSX_Kernals=[]
     for(let j=0;j<let_TotalSize;j++){
@@ -149,8 +149,8 @@ return(
 <div className='C05id_Convolution' style={{marginLeft:'10px'}}>
 <div style={{marginTop:'20px'}}></div>
 {JSX_Convolution}
-    <button onClick={f_Update}>Activate</button>
-    <button onClick={f_SetDeActivate}>Deactivate</button>
+    <button style={{backgroundColor:SS_IsActivate[0]? 'lightgreen':'white'}} onClick={f_Update}>Activate</button>
+    <button style={{backgroundColor:SS_IsActivate[0]? 'white':'lightgreen'}} onClick={f_SetDeActivate}>Deactivate</button>
     <button onClick={f_Reset}>Reset</button>
 </div>
 <hr/>

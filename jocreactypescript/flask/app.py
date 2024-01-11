@@ -3,7 +3,7 @@ from flask import Flask, jsonify, Response, request, redirect, url_for, json
 import numpy as np
 from PIL import Image
 import cv2
-from kernel import DrawPoints,AffineTransformations, canny,get_grayscale,erode,dilate,opening,WhiteBackGround
+from kernel import AffineMoveOrigin,AffineRotation,AffineScale,DrawPointOrigin,DrawPoints,AffineTransformations, canny,get_grayscale,erode,dilate,opening,WhiteBackGround
 import base64
 import pickle
 import matplotlib.colors as mcolors
@@ -113,7 +113,6 @@ def def_OpenCV():
 
         # SS_Thresholds
         SS_Thresholds_str=request.form.get('SS_Thresholds')
-
         SS_Thresholds_data = json.loads(SS_Thresholds_str)
         SS_Thresholds = [[item['PositionY'],item['ScalePosition'], item['IsDefault'], item['Gray']] for item in SS_Thresholds_data]
         SS_ScaleThresholds=[]
@@ -149,18 +148,71 @@ def def_OpenCV():
                 list_Gray.append(0)
             if let_Gray>0 and let_Gray<255:
                 list_Gray.append(let_Gray)
+        
+        # SS_AffOrigin
+        SS_AffOrigin_str = request.form.get('SS_AffOrigin')
+        SS_AffOrigin_Mode=SS_AffOrigin_str.split(',')[0]
+        SS_AffOrigin_Color=SS_AffOrigin_str.split(',')[1]
+
+        # SS_Aff
+        SS_Aff_str=request.form.get('SS_Aff')
+        SS_Aff_list=SS_Aff_str.split(',')
+        SS_Aff = [float(item) for item in SS_Aff_list]
+        SS_Aff_ScaleX=SS_Aff[0]
+        SS_Aff_ScaleY=SS_Aff[1]
+        SS_Aff_PositionX=SS_Aff[2]
+        SS_Aff_PositionY=SS_Aff[3]
+        SS_Aff_Rotation=SS_Aff[4]
+
+        # SS_Boxes
+        SS_Boxes_str = request.form.get('SS_Boxes')
+        #print(SS_Boxes_str)
+
+        #SS_Boxes_list=SS_Boxes_str.split(',')
+        #print(SS_Boxes_list)
+        
+        #for i in SS_Boxes_list:
+        #    print(json.loads(i))
+        #SS_Boxes_DictList=[]
+        #for i in SS_Boxes_list:
+        #    SS_Boxes_DictList.append(json.loads(i))
+        #for i in SS_Boxes_DictList:
+        #    print(i)
+
+        #for i in SS_Boxes_data:
+        #    print(i)
+        #SS_Boxes = [[item['Key'],item['XYWH'], item['Type'], item['IsShow']] for item in SS_Boxes_data]
+        '''
+        [
+            [86, True, '#000000'],
+            [148, True, '#e1e1e1'],
+            [284, True, '#5b5b5b']
+        ]
+        '''
+        SS_Boxes_Number=[]
+        SS_Boxes_IsShow=[]
+        SS_Boxes_Type=[]
+
+        #for i in SS_Boxes:
+        #    SS_Boxes_Number.append(i[1])
+        #    SS_Boxes_Type.append(i[2])
+        #    SS_Boxes_IsShow.append(i[3])
+        #for i in SS_Boxes_Number:
+        #    print(i)
 
         # SS_ImageFile
         let_File=request.files['file']
         if let_File!=None:
             let_Img = cv2.imdecode(np.frombuffer(let_File.read(), np.uint8), cv2.IMREAD_COLOR)
+            if SS_IsShow==True:
+                let_Img=AffineScale(let_Img,SS_Aff_ScaleX,SS_Aff_ScaleY)
+                let_Img=AffineMoveOrigin(let_Img,SS_Aff_PositionX,SS_Aff_PositionY)
+                let_Img=AffineRotation(let_Img,SS_Aff_Rotation)
+            let_Img=DrawPointOrigin(let_Img,SS_AffOrigin_Mode,hex_to_rgb_3Dvector(SS_AffOrigin_Color),SS_Aff_PositionX,SS_Aff_PositionY)
             let_Img = DrawPoints(let_Img,SS_Affine[0],SS_AffineRGB[0],SS_AffineBOOL[0])
             if Is_Affine==True:
-                #print(SS_Affine.shape)
                 let_Img=AffineTransformations(let_Img,SS_Affine)
             let_Img = DrawPoints(let_Img,SS_Affine[1],SS_AffineRGB[1],SS_AffineBOOL[1])
-            
-            #    let_Img=DrawPoints(let_Img,SS_Affine,SS_AffineRGB,SS_AffineBOOL)
             if not SS_IsRGB:
                 let_Img = cv2.cvtColor(let_Img, cv2.COLOR_BGR2GRAY)
                 if Is_nDMatrix==True:
@@ -170,57 +222,9 @@ def def_OpenCV():
             let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
             response = Response(let_Bytes, content_type='image/png')
             return response 
-        # ...
+
         else:
             return jsonify({'error': 'No file uploaded'})
-
-        #let_JSON  = request.get_json()
-        #let_IsRGB = let_JSON.get('IsRGB')
-        #let_Image = let_JSON.get('file')
-        #if let_Image!=None:
-        #    let_Img = cv2.imdecode(np.frombuffer(let_Image, np.uint8), cv2.IMREAD_COLOR)
-        #    let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
-        #    response = Response(let_Bytes, content_type='image/png')
-        #    return response
-    
-        # Decode base64 encoded image
-        #encoded_image = let_Image#.get('file')
-        #decoded_image = base64.b64decode(encoded_image)
-        #nparr = np.frombuffer(decoded_image, np.uint8)
-        #image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-        #_, buffer = cv2.imencode('.png', image)
-        #processed_image_base64 = base64.b64encode(buffer).decode('utf-8')
-#
-        #return buffer#{'IsRGB':let_IsRGB,'file':let_Image}
-    
-
-        # This is the posted data.
-        # convert "file" to image and return image
-        # If "IsRGB"=="false" then return black and white image
-        # {"IsRGB":"true","file":"{\"file\":{}}"}
-        #return {'IsRGB':let_IsRGB,'file':let_File}
-        #if let_File!=None:
-        #    let_Img = cv2.imdecode(np.frombuffer(Let_JSON.get('file').read(), np.uint8), cv2.IMREAD_COLOR)
-        #    let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
-        #    response = Response(let_Bytes, content_type='image/png')
-        #    return Let_JSON #jsonify({'py':response})
-            #if let_IsRGB=='false':
-            #    return {'messenger':'Bordom'}
-            #else:
-            #    return {'messenger':'Addiction'}
-    #pass
-    '''
-    # By ChatGPT
-    if request.method == 'POST':
-        let_File=request.files['file']
-        if let_File!=None:
-            let_Img = cv2.imdecode(np.frombuffer(let_File.read(), np.uint8), cv2.IMREAD_COLOR)
-            let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
-            response = Response(let_Bytes, content_type='image/png')
-            return response #jsonify({'py':response})
-        else:
-            return jsonify({'error': 'No file uploaded'})'''
-
 
 #****************************************************************************
 # Running app
@@ -228,7 +232,13 @@ def def_OpenCV():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
+'''
+# https://stackoverflow.com/questions/73309491/port-xxxx-is-in-use-by-another-program-either-identify-and-stop-that-program-o
+# Type command in terminal
+lsof -i :5000 
+# Use the below command to kill PID(s)
+kill -9 PID
+'''
 
 '''
 python3 app.py

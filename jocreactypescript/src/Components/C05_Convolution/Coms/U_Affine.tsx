@@ -155,8 +155,7 @@ setSS_AffineBOOL:(S:boolean[][])=>void;
 // JSX 00: Input DOM Element
 //****************************************************************************
 
-  const let_Width='250px'
-  let ss_Affine=[...SS_Affine]
+  const let_Width='100%'
   let ss_AffineSTR=[...SS_AffineSTR]
   let ss_AffineRGB=[...SS_AffineRGB]
   let ss_AffineBOOL=[...SS_AffineBOOL]
@@ -242,22 +241,10 @@ return(
 <h1 style={{fontSize:'16px',marginTop:'0px'}}>Transformed Point</h1>
 {JSX_Header}
 {JSX_TransformedPoint}
-
-{/*<button style={{marginTop:'10px',marginRight:'10px',marginLeft:'-140px'}}>Ok</button>
-<button style={{marginTop:'10px',marginRight:'5px'}}>Reset</button>*/}
-{/*<hr style={{width:'95%'}}/>
-<select id="cars" name="cars" className='C05id_Convolution' style={{marginRight:'5px'}} >
-  <option value="volvo">Scale</option>
-  <option value="volvo">Scale X</option>
-  <option value="saab">Scale Y</option>
-</select>
-<input style={{marginRight:'5px'}} ></input>
-<button style={{marginTop:'0px',marginRight:'5px'}}>Set</button>
-<button style={{marginTop:'0px',marginRight:'5px'}}>Set 1</button>*/}
 <hr style={{width:'95%'}}/>
 <div style={{marginTop:'0px'}}>
-<button style={{marginTop:'15px',marginBottom:'0px',marginRight:'10px'}} onClick={f_Update}>Activate</button>
-<button style={{marginTop:'15px',marginBottom:'0px',marginRight:'10px'}} onClick={f_SetDeActivate}>Deactivate</button>
+<button style={{marginTop:'15px',marginBottom:'0px',marginRight:'10px',backgroundColor:SS_IsActivate[2]? 'lightgreen':'white'}} onClick={f_Update}>Activate</button>
+<button style={{marginTop:'15px',marginBottom:'0px',marginRight:'10px',backgroundColor:SS_IsActivate[2]? 'white':'lightgreen'}} onClick={f_SetDeActivate}>Deactivate</button>
 <button style={{marginTop:'15px',marginBottom:'0px',marginRight:'0px'}} onClick={f_Reset}>Reset</button>
 </div>
 

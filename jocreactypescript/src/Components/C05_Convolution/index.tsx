@@ -1,7 +1,8 @@
 import U_Threshold from "./Coms/U_Threshold";
 import U_Convolution from "./Coms/U_Convolution";
+import U_AddBox from "./Coms/U_AddBox";
 import TS_Threshold from '../T03_Threshold/An_Index'
-
+import TS_Box from "../T04_Box/An_Index";
 const C05_Convolution = (
 //****************************************************************************
 // INPUT
@@ -9,6 +10,8 @@ const C05_Convolution = (
 {
 SS_ImageProcessing,
 SS_IsActivate,
+SS_Boxes,
+setSS_Boxes,
 setSS_IsActivate,
 SS_Thresholds,
 setSS_Thresholds,
@@ -29,6 +32,8 @@ setSS_nDTable ,
 SS_ImageProcessing:number;
   SS_IsActivate:boolean[];
   setSS_IsActivate:(S:boolean[])=>void
+  SS_Boxes:TS_Box[]
+  setSS_Boxes:(S:TS_Box[])=>void
 SS_Thresholds:TS_Threshold[]
 setSS_Thresholds:(S:TS_Threshold[])=>void
 SS_Affine       :number[][][]
@@ -52,7 +57,7 @@ setSS_nDTable :(S:string[][])=>void
         SS_Thresholds={SS_Thresholds}
         setSS_Thresholds={setSS_Thresholds}/>
   }
-  else{
+  else if(SS_ImageProcessing===1){
     JSX_ImageProcessing=<U_Convolution
 SS_IsActivate={SS_IsActivate}
 setSS_IsActivate={setSS_IsActivate}
@@ -68,6 +73,12 @@ SS_nDMatrix   ={SS_nDMatrix   }
 setSS_nDMatrix={setSS_nDMatrix}
 SS_nDTable    ={SS_nDTable    }
 setSS_nDTable ={setSS_nDTable }/>
+  }
+  else{
+    JSX_ImageProcessing=<U_AddBox
+    SS_Boxes={SS_Boxes}
+    setSS_Boxes={setSS_Boxes}
+    />
   }
 
 //****************************************************************************

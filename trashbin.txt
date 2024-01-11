@@ -1,3 +1,1334 @@
+        # NameError: name 'SS_B' is not defined
+        # I never write variable name 'SS_B'
+ 
+[1]
+ 
+        #print(SS_Boxes_str)
+        SS_Boxes_data = json.loads(SS_Boxes_str)
+        print(SS_Boxes_data)
+ 
+        This is error. Then shut the fuck up!
+ 
+        for i in SS_Boxes:
+            print(i)
+ 
+            pass
+ 
+    //SS_UseEffect
+ 
+import { U04_Update } from '../../T04_Box/U04_Update';
+ 
+        COLOR:string,
+        POSITIONX:number,
+        POSITIONY:number,
+        WIDTH:number,
+        HEIGHT:number,
+        LINEWIDTH:number,
+ 
+COLOR
+ 
+'C05id_CreatingNewBox'
+ 
+            //alert(JSON.stringify(SS_Thresholds))
+ 
+            //let let_UpdateBoxes=U04_UpdateColor(SS_ThisBox,ss_Boxes,let_input)
+            //setSS_Boxes(let_UpdateBoxes)
+            //alert(JSON.stringify(SS_Boxes))
+ 
+alert('f_Delete( )'
+ 
+
+
+
+{/*
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'0px'}}>Position X: {box.XYWH[0]}</h5>
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'-20px'}}>Position Y: {box.XYWH[1]}</h5>
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'-20px'}}>Width: {box.XYWH[2]}</h5>
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'-20px',marginBottom:'-20px'}}>Height: {box.XYWH[3]}</h5>
+        */}
+ 
+()=>
+ 
+(box.Key)
+ 
+    function f_IsShow(key:number){
+        let ss_Boxes=[...SS_Boxes]
+        setSS_ThisBox(R04_SelectBox(key,ss_Boxes))
+    }
+ 
+        setSS_ThisBoxIsShow(true)
+ 
+    const [SS_ThisBoxIsShow,setSS_ThisBoxIsShow]=useState<boolean>(false)
+ 
+    if(SS_ThisBoxIsShow===true){
+        if(SS_ThisBox.IsShow===true){
+            let ss_ThisBox=SS_ThisBox
+            ss_ThisBox.IsShow=false
+        }
+        else{
+            let ss_ThisBox=SS_ThisBox
+            ss_ThisBox.IsShow=true
+        }
+        setSS_Boxes(ss_Boxes)
+        setSS_ThisBoxIsShow(false)
+    }
+ 
+    let let_UpdateBoxes=U04_UpdateType(SS_ThisBox,ss_Boxes,SS_ThisBoxType)
+    let_UpdateBoxes=U04_UpdateColor(SS_ThisBox,ss_Boxes,SS_ThisBoxColor)
+ 
+    const [SS_ThisBoxIsShow,setSS_ThisBoxIsShow]=useState<boolean>(true)
+ 
+<string>('')
+ 
+    //alert(SS_ThisBoxColor)
+ 
+    alert(JSON.stringify(SS_Boxes))
+ 
+let 
+ 
+Threshold
+ 
+            setSS_ThisBoxColor(let_input)
+ 
+let 
+ 
+            let let_UpdateThresholds=U03_SetColor(Threshold,ss_Boxes,let_input)
+            setSS_Thresholds(let_UpdateThresholds)
+ 
+            let ss_Boxes=[...SS_Boxes]
+ 
+
+            let let_Show=(document.getElementById('C05id_Show'+Threshold.Key.toString())as HTMLInputElement)
+            let_Show!.style.backgroundColor=let_input
+
+ 
+            //let let_input=let_target?.value
+            //let_input=let_input[0]+let_input[1]+let_input[2]+let_input[1]+let_input[2]+let_input[1]+let_input[2]
+
+ 
+setSS_Boxes(SS_Boxes)
+ 
+        //let let_UpdateBoxes=U04_UpdateType(SS_ThisBox,ss_Boxes,let_Input)
+        //setSS_Boxes(let_UpdateBoxes)
+        //alert(JSON.stringify(SS_ThisBox))
+
+ 
+    //...
+    <select onChange={()=>f_UpdateType(box.Key)}
+style={{fontSize:'15px',height:'25px'}} 
+value={box.Type[0]} id={'C05id_AddBoxType'+box.Key.toString()}>
+  <option value="Rectangle">Rectangle</option>
+  <option value="Frame">Frame</option>
+  <option value="Line">Line</option>
+</select>
+//...
+// Why f_UpdateType does not update the select dom element as except
+ 
+ onChange={()=>f_UpdateType(box.Key)}
+ 
+value={box.Type[0]} id={'C05id_AddBoxType'+box.Key.toString()}
+ 
+,height:'20px'
+ 
+<input id={'C05id_AddBoxNumber'+box.Key.toString()+'_'+index.toString()} style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+ 
+{name}: {box.XYWH[index]}
+ 
+<select onChange={()=>f_UpdateType(box.Key)}
+style={{fontSize:'15px',height:'25px'}} 
+value={box.Type[0]} id={'C05id_AddBoxType'+box.Key.toString()}>
+  <option value="Rectangle">Rectangle</option>
+  <option value="Frame">Frame</option>
+  <option value="Line">Line</option>
+</select>
+ 
+ss_Boxes=[...SS_Boxes]
+ 
+let ss_Boxes=[...SS_Boxes]
+    let JSX_Input=ss_Boxes.map((box)=>{
+        let let_IsShow='Show'
+        if(box.IsShow){
+            let_IsShow='Show'
+        }else{let_IsShow='Hide'}
+        let let_InputName:string[]=[
+            'Position X',
+            'Position Y',
+            'Width',
+            'Height',
+            'Line Width',
+        ]
+        if(box.Type[0]==='Line'){
+            let_InputName=[
+                'Point X1',
+                'Point Y1',
+                'Point X2',
+                'Point Y2',
+                'Line Width',
+            ]
+        }
+        let JSX_NextedInput=let_InputName.map((name,index)=>
+        {
+        return (<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px',marginBottom:'-20px'}}>
+<h1>{name}: {box.XYWH[index]}</h1>
+<input id={'C05id_AddBoxNumber'+box.Key.toString()+'_'+index.toString()} style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<button style={{height:'25px'}} onClick={()=>f_UpdateNumber(box.Key,index)}>Ok</button>
+</div>)}
+)
+        // Rename  
+        if(box.Key!==0){
+        if(box===SS_ThisBox && SS_ThisBoxMode===1){
+            return(
+            <tr className='C02id_HeightLightRow' ><td>
+
+            <div style={{marginLeft:C02_MarginLeft,marginBottom:'-10px'}}>
+                <h1 style={{marginTop:'5px'}}>Do you sure you want to</h1>
+                <h1 style={{marginTop:'-20px'}}>delete this {box.Type[0]}?</h1>
+            </div>
+            <div className='C02id_DeleteColumn' style={{marginTop:'-10px',marginLeft:C02_MarginLeft,marginRight:'auto',marginBottom:'10px'}}>
+                <button onClick={()=>alert('f_Delete( )')}>Ok</button>
+                <button onClick={()=>f_OpenDefaultBox()}>Cancel</button>
+            </div>
+            </td></tr>
+
+            )
+        }
+        // Default State
+        else
+        {return(
+            <tr><td>
+<div className='C02id_CreateRowButton' style={{width:'275px'}}>
+<button className='C02id_DeleteColumn' style={{height:'25px'}} onClick={()=>f_OpenDeleteBox(box.Key)}>X</button>
+<input type='color' style={{height:'25px',marginTop:'0px',marginLeft:'5px',marginRight:'10px'}}></input>
+             
+<select onChange={()=>f_UpdateType(box.Key)}
+style={{fontSize:'15px',height:'25px'}} 
+value={box.Type[0]} id={'C05id_AddBoxType'+box.Key.toString()}>
+  <option value="Rectangle">Rectangle</option>
+  <option value="Frame">Frame</option>
+  <option value="Line">Line</option>
+</select>
+<button style={{height:'25px',width:'50px',marginLeft:'10px'}}>{let_IsShow}</button>
+</div>
+{JSX_NextedInput}
+
+
+
+{/*
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'0px'}}>Position X: {box.XYWH[0]}</h5>
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'-20px'}}>Position Y: {box.XYWH[1]}</h5>
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'-20px'}}>Width: {box.XYWH[2]}</h5>
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'-20px',marginBottom:'-20px'}}>Height: {box.XYWH[3]}</h5>
+        */}
+            </td>
+            </tr>
+        )}}
+        else{return <></>}
+    })
+ 
+    let JSX_Input=ss_Boxes.map((box)=>{
+        let let_IsShow='Show'
+        if(box.IsShow){
+            let_IsShow='Show'
+        }else{let_IsShow='Hide'}
+        let let_InputName:string[]=[
+            'Position X',
+            'Position Y',
+            'Width',
+            'Height',
+            'Line Width',
+        ]
+        if(box.Type[0]==='Line'){
+            let_InputName=[
+                'Point X1',
+                'Point Y1',
+                'Point X2',
+                'Point Y2',
+                'Line Width',
+            ]
+        }
+        let JSX_NextedInput=let_InputName.map((name,index)=>
+        {
+        return (<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px',marginBottom:'-20px'}}>
+<h1>{name}: {box.XYWH[index]}</h1>
+<input id={'C05id_AddBoxNumber'+box.Key.toString()+'_'+index.toString()} style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<button style={{height:'25px'}} onClick={()=>f_UpdateNumber(box.Key,index)}>Ok</button>
+</div>)}
+)
+        // Rename  
+        if(box.Key!==0){
+        if(box===SS_ThisBox && SS_ThisBoxMode===1){
+            return(
+            <tr className='C02id_HeightLightRow' ><td>
+
+            <div style={{marginLeft:C02_MarginLeft,marginBottom:'-10px'}}>
+                <h1 style={{marginTop:'5px'}}>Do you sure you want to</h1>
+                <h1 style={{marginTop:'-20px'}}>delete this {box.Type[0]}?</h1>
+            </div>
+            <div className='C02id_DeleteColumn' style={{marginTop:'-10px',marginLeft:C02_MarginLeft,marginRight:'auto',marginBottom:'10px'}}>
+                <button onClick={()=>alert('f_Delete( )')}>Ok</button>
+                <button onClick={()=>f_OpenDefaultBox()}>Cancel</button>
+            </div>
+            </td></tr>
+
+            )
+        }
+        // Default State
+        else
+        {return(
+            <tr><td>
+<div className='C02id_CreateRowButton' style={{width:'275px'}}>
+<button className='C02id_DeleteColumn' style={{height:'25px'}} onClick={()=>f_OpenDeleteBox(box.Key)}>X</button>
+<input type='color' style={{height:'25px',marginTop:'0px',marginLeft:'5px',marginRight:'10px'}}></input>
+             
+<select onChange={()=>f_UpdateType(box.Key)}
+style={{fontSize:'15px',height:'25px'}} 
+value={box.Type[0]} id={'C05id_AddBoxType'+box.Key.toString()}>
+  <option value="Rectangle">Rectangle</option>
+  <option value="Frame">Frame</option>
+  <option value="Line">Line</option>
+</select>
+<button style={{height:'25px',width:'50px',marginLeft:'10px'}}>{let_IsShow}</button>
+</div>
+{JSX_NextedInput}
+
+
+
+{/*
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'0px'}}>Position X: {box.XYWH[0]}</h5>
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'-20px'}}>Position Y: {box.XYWH[1]}</h5>
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'-20px'}}>Width: {box.XYWH[2]}</h5>
+            <h5 className='C02id_RowInput' style={{width:'275px',marginRight:'auto',marginTop:'-20px',marginBottom:'-20px'}}>Height: {box.XYWH[3]}</h5>
+        */}
+            </td>
+            </tr>
+        )}}
+        else{return <></>}
+    })
+ 
+,index:number
+ 
++'_'+index.toString()
+ 
+let let_UpdateBoxes=ss_Boxes
+ 
+        if(isNaN(parseInt(let_Input))===false){
+            let_UpdateBoxes=U04_UpdateNumber(SS_ThisBox,ss_Boxes,parseInt(let_Input),index)
+        }else{
+            let_UpdateBoxes=let_UpdateBoxes
+        }
+ 
+        alert('Update!!!')
+ 
+parseInt(let_Input)
+ 
+        let ss_ThisBox=SS_ThisBox
+ 
+    TYPE:string,
+    COLOR:string,
+    POSITIONX:number,
+    POSITIONY:number,
+    WIDTH:number,
+    HEIGHT:number,
+    LINEWIDTH:number,
+ 
+            THISBOX.XYWH=[
+                POSITIONX,
+                POSITIONY,
+                WIDTH,
+                HEIGHT,
+                LINEWIDTH
+            ]
+            THISBOX.Type=[
+                TYPE,
+                COLOR
+            ]
+ 
+    COLOR:string,
+    POSITIONX:number,
+    POSITIONY:number,
+    WIDTH:number,
+    HEIGHT:number,
+    LINEWIDTH:number,
+    ISSHOW:boolean
+ 
+            THISBOX.IsShow=ISSHOW
+ 
+=[
+                TYPE,
+                COLOR
+            ]
+ 
+            THISBOX.XYWH=[
+                POSITIONX,
+                POSITIONY,
+                WIDTH,
+                HEIGHT,
+                LINEWIDTH
+            ]
+ 
+=[
+                POSITIONX,
+                POSITIONY,
+                WIDTH,
+                HEIGHT,
+                LINEWIDTH
+            ]
+            THISBOX.Type=[
+                TYPE,
+                COLOR
+            ]
+            THISBOX.IsShow=ISSHOW
+ 
+,marginBottom:'-10px'
+ 
+{
+//****************************************************************************
+}
+<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px'}}>
+<h1>Position X: {box.XYWH[0]}</h1>
+<input style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<button style={{height:'25px'}}>Ok</button>
+</div>
+{
+//****************************************************************************
+}
+<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px'}}>
+<h1>Position Y: {box.XYWH[1]}</h1>
+<input style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<button style={{height:'25px'}}>Ok</button>
+</div>
+{
+//****************************************************************************
+}
+<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px'}}>
+<h1>Position X: {box.XYWH[2]}</h1>
+<input style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<button style={{height:'25px'}}>Ok</button>
+</div>
+{
+//****************************************************************************
+}
+<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px'}}>
+<h1>Position X: {box.XYWH[3]}</h1>
+<input style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<button style={{height:'25px'}}>Ok</button>
+</div>
+{
+//****************************************************************************
+}
+<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px'}}>
+<h1>Position X: {box.XYWH[4]}</h1>
+<input style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<button style={{height:'25px'}}>Ok</button>
+</div>
+ 
+Position X
+ 
+  <option value="LineX">Line X</option>
+  <option value="LineY">Line Y</option>
+ 
+  <option value="LineX">Line X</option>
+  <option value="LineY">Line Y</option>
+ 
+{/*
+ 
+eight:'10px'h
+ 
+<tr>
+    <td >Pos Y</td>
+    <td>SS_AffSTR[3]</td>
+</tr>
+<tr>
+    <td><input  style={{marginTop:'3px'}}></input></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(3,0)')}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(3,0) ')}>Reset</button></td>
+</tr>
+ 
+ id='C04id_Aff3'
+ 
+style={{width:let_WidthTr}} 
+ 
+<h1>{box.XYWH}</h1>
+ 
+<h1>{box.XYWH}</h1>
+ 
+<button>{let_IsShow}</button>
+ 
+{box.IsShow?'Show':'Hide'}
+ 
+    function f_OpenDefaultBox(){
+        setSS_ThisBoxMode(0)
+        setSS_ThisBox(let_DefaultBox)
+    }
+ 
+    function f_OpenEditBox(key:number){
+        setSS_ThisBoxMode(1)
+        let ss_Boxes=[...SS_Boxes]
+        setSS_ThisBox(R04_SelectBox(key,ss_Boxes))
+    }
+ 
+if(box===SS_ThisBox && SS_ThisBoxMode===1){
+            return(
+            <tr className='C02id_HeightLightRow'><td>
+            <div className='C02id_CreateRowDiv' style={{marginLeft:C02_MarginLeft}}>
+                <h1>{box.Type[0]}</h1>
+            </div>
+            <input id={'C02id_RenameColumn'+ box.Key} className='C02id_RowInput' style={{marginLeft:C02_MarginLeft}} ></input>
+            <div className='C02id_DeleteColumn' style={{marginLeft:C02_MarginLeft,marginRight:'auto',marginBottom:'10px'}}>
+                <button onClick={()=>alert('f_Rename( )')}>Ok</button>
+                <button onClick={()=>f_OpenDefaultBox()}>Cancel</button>
+            </div>
+            </td></tr>
+            )
+        }
+        // Delete  
+        else 
+ 
+{//<button onClick={()=>f_OpenEditBox(box.Key)} className='C02id_3342'>...</button>
+                }
+ 
+                {box.}
+ 
+,marginLeft:'10px',marginTop:'-20px',marginBottom:'20px'
+ 
+    <td>
+    <div style={{display:'flex',width:'260px'}}>
+    <input  style={{marginTop:'3px',width:'70%'}} ></input>
+    <button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(3,0)')}>Ok</button>
+    <button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(3,0) ')}>Reset</button>
+    </div>
+    </td>
+    <td>
+    <div style={{display:'flex',width:'260px'}}>
+    <input  style={{marginTop:'3px',width:'70%'}} ></input>
+    <button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(3,0)')}>Ok</button>
+    <button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(3,0) ')}>Reset</button>
+    </div>
+    </td>
+ 
+    <h1>PositionX:</h1>
+ 
+ {box.XYWH[0]}
+ 
+id='C04id_Aff3'
+ 
+<tr>
+ 
+</tr>
+ 
+{/*
+ 
+ className='C02id_CreateRowDiv C02id_RowInput'
+ 
+delete this {box.Type[0]}?
+ 
+</div><
+ 
+</div>
+ 
+<div style={{display:'flex'}}>
+ 
+</div>
+ 
+            */}
+ 
+            <input className='C02id_RowInput'></input>
+            {/*
+ 
+            <table></table>
+ 
+            </table>
+ 
+            <table>
+ 
+</tr>
+ 
+</table>
+ 
+            </tr>
+ 
+            <tr style={{width:'100%'}}>
+ 
+</tr>
+ 
+<input id={'C02id_Input'+ box.Key} className='C02id_RowInput' ></input>
+ 
+    //function f_OpenEditBox(id:number){
+    //    setSS_ThisBoxMode(1)
+    //    setSS_ThisBox(SS_Boxes[id])
+    //}
+
+ 
+THISBOX.
+ 
+id:number
+ 
+Edi
+ 
+,marginTop:'0px'
+ 
+ style={{marginBottom:'-10px'}}
+ 
+style={{marginTop:'-20px'}}
+ 
+marginBottom:'20px'
+ 
+marginTop:'0px
+ 
+marginTop:'-10px'
+ 
+  let ss_Affine=[...SS_Affine]
+ 
+{/*<button style={{marginTop:'10px',marginRight:'10px',marginLeft:'-140px'}}>Ok</button>
+<button style={{marginTop:'10px',marginRight:'5px'}}>Reset</button>*/}
+{/*<hr style={{width:'95%'}}/>
+<select id="cars" name="cars" className='C05id_Convolution' style={{marginRight:'5px'}} >
+  <option value="volvo">Scale</option>
+  <option value="volvo">Scale X</option>
+  <option value="saab">Scale Y</option>
+</select>
+<input style={{marginRight:'5px'}} ></input>
+<button style={{marginTop:'0px',marginRight:'5px'}}>Set</button>
+<button style={{marginTop:'0px',marginRight:'5px'}}>Set 1</button>*/}
+ 
+//
+ 
+,height:'calc()'
+ 
+        <button onClick={()=>{setSS_ImageProcessing(2)}}>Utility</button>
+ 
+object
+ 
+                THISBOX.IdXYWH[0],
+ 
+let_NewKey
+ 
+    // 0 = Key
+ 
+{ .Name} to
+ 
+    // useEffect(()=>{
+    //     
+    // },[])
+
+//****************************************************************************
+// FUNCTION_00: Create New Column
+//****************************************************************************
+    function f_CreateRow():void{
+        let let_NewArray:string[]=[]
+        let ss_Columns=[...SS_Columns]
+        for(let i=0;i<ss_Columns.length;i++){
+            //alert('C02id_Input'+ss_Columns[i].Name)
+            let let_Input:string=(
+                document.getElementById(
+                    'C02id_Input'+ss_Columns[i].Name) as HTMLInputElement
+                    ).value.toString();
+
+            let_NewArray.push(let_Input)
+        }
+        let ss_Rows=SS_Row
+        let let_UpdateRows=C01_Create(ss_Rows,let_NewArray)
+        setSS_Row(let_UpdateRows)
+    }
+
+//****************************************************************************
+// FUNCTION_01: Create Column
+//****************************************************************************
+    function f_CreateColumn():void{
+        let let_NewColumn:string=(document.getElementById('C02id_CreateColumnInput')  as HTMLInputElement).value.toString();
+        let ss_Columns=[...SS_Columns]
+        let let_UpdateColumns=C02_Create(ss_Columns,let_NewColumn)
+        if(ss_Columns!==let_UpdateColumns){
+        let ss_Rows=[...SS_Row]
+        let let_UpdateRow=U01_CreateColumn(ss_Rows)
+        setSS_Columns(let_UpdateColumns)
+        setSS_Row(let_UpdateRow)
+    }
+    }
+
+//****************************************************************************
+// FUNCTION_02: Open
+//****************************************************************************
+    function f_Open(THISCOLUMN:TS_Column,MODE:0|1|2):void{
+        setSS_EditColumn(1)
+        let ss_Columns=[...SS_Columns]
+        let let_UpdateColumns=U02_UpdateDisplay(THISCOLUMN,ss_Columns,MODE)
+        setSS_Columns(let_UpdateColumns)
+    }
+
+//****************************************************************************
+// FUNCTION_03: Rename Column
+//****************************************************************************
+    function f_Rename(THISCOLUMN:TS_Column):void{
+        let let_Input:string=(document.getElementById('C02id_RenameColumn'+THISCOLUMN.Key)  as HTMLInputElement).value.toString();
+        let ss_Columns=[...SS_Columns]
+        let let_UpdateColumn=U02_Edit(THISCOLUMN,ss_Columns,let_Input)
+        setSS_Columns(let_UpdateColumn)
+    }
+
+//****************************************************************************
+// FUNCTION_04: Delete Column
+//****************************************************************************
+    function f_Delete(THISCOLUMN:TS_Column):void{
+        let ss_Rows=[...SS_Row]
+        let ss_Columns=[...SS_Columns]
+        
+        let let_UpdateRow=U01_DeleteColumn(ss_Rows,R02_ReturnIndex(THISCOLUMN,ss_Columns))
+        let let_UpdateColumn=D02_Delete(THISCOLUMN,ss_Columns)
+
+        setSS_Row(let_UpdateRow)
+        setSS_Columns(let_UpdateColumn)
+
+        if(SS_Columns.length==1){
+            setSS_Row([{Key:0 ,Next:1  , Array:['Xedni Wor'],Display:4}])
+        }
+    }
+
+//****************************************************************************
+// FUNCTION_05: Reset input
+//****************************************************************************
+    function f_ResetInput() {
+        // By ChatGPT
+        const let_inputElements = document.querySelectorAll('input');
+        let_inputElements.forEach((input) => {
+          input.value = '';
+        });
+    }
+    
+ 
+// 1 = LineWidth
+ 
+import './index01.css'  // Specific
+import './index02_Header.css'
+import './index03_Table.css'
+import './index04_Minor.css'
+import './index05_Hightlight.css'
+ 
+            // Add New Column in List of All BOXES
+ 
+Key:let_NewKey,
+                PositionY:10+5,
+                ScalePosition:255,
+                IsDefault:false,
+                Gray:'#000000'
+ 
+import {U02_UpdateDisplay} from  '../T02_Column/U02_UpdateDisplay'
+ 
+.
+ 
+            
+ 
+            []
+ 
+
+function
+1. f_Create
+2. f_Delete
+3. f_Update
+ 
+
+function
+1. f_Create
+2. f_Delete
+3. f_Update
+ 
+// Type Script Column
+ 
+// Properties of Each Column
+ 
+    Key:number,         // DEFAULT: Math.random()
+                        // Unique Key
+    Next:number,        // Key's of the next TS_Row
+                        // If not exist, then Next = this Key
+    Array:string[],     // Contains data.
+    Display?:0|1|2|3|4, // Display State
+        // 0 = Default State
+        // 1 = Rename
+        // 2 = Delete
+        // 3 = ?
+        // 4 = Start of Linked List
+ 
+LineWidth
+ 
+Color
+ 
+ 
+ 
+
+Attribute 
+1. Id 
+2. Type 
+3. Color 
+4. 
+ 
+// React
+import { useState , useEffect} from 'react';
+
+// Components
+//import R_FilterColumn from './Coms/R_FilterColumn';
+
+// Type
+import TS_Row from  '../T01_Row/An_Index';
+import TS_Column from  '../T02_Column/An_Index';
+import {C01_Create} from  '../T01_Row/C01_Create';
+import {C02_Create} from  '../T02_Column/C02_Create'
+import {U02_UpdateDisplay} from  '../T02_Column/U02_UpdateDisplay'
+import {U02_Edit} from  '../T02_Column/U02_Edit'
+import {D02_Delete} from  '../T02_Column/D02_Delete'
+import {R02_ReturnIndex} from  '../T02_Column/R02_ReturnIndex'
+import {U01_CreateColumn} from  '../T01_Row/U01_CreateColumn'
+import {U01_DeleteColumn} from  '../T01_Row/U01_DeleteColumn'
+
+// CSS
+import './index00.css'  // General
+import './index01.css'  // Specific
+import './index02_Header.css'
+import './index03_Table.css'
+import './index04_Minor.css'
+import './index05_Hightlight.css'
+
+const U_AddBox = (
+//****************************************************************************
+// INPUT
+//****************************************************************************
+{   // PARAMETER
+    // HOOK: setState()
+    SS_Row,         // Update Columns
+    setSS_Row,      // -
+    SS_Columns,
+    setSS_Columns,
+    SS_EditColumn,
+    setSS_EditColumn
+}:
+{   // TYPE
+    // HOOK: setState()
+    SS_Row        :TS_Row[],
+    setSS_Row     :(S:TS_Row[])=>void,
+    // https://stackoverflow.com/questions/60130319/react-typescript-how-to-setstate
+    SS_Columns:TS_Column[],
+    setSS_Columns:(S:TS_Column[])=>void,
+    SS_EditColumn:0|1,
+    setSS_EditColumn:(S:0|1)=>void
+}
+) => {
+    const C02_MarginLeft='10px'
+
+    // useEffect(()=>{
+    //     
+    // },[])
+
+//****************************************************************************
+// FUNCTION_00: Create New Column
+//****************************************************************************
+    function f_CreateRow():void{
+        let let_NewArray:string[]=[]
+        let ss_Columns=[...SS_Columns]
+        for(let i=0;i<ss_Columns.length;i++){
+            //alert('C02id_Input'+ss_Columns[i].Name)
+            let let_Input:string=(
+                document.getElementById(
+                    'C02id_Input'+ss_Columns[i].Name) as HTMLInputElement
+                    ).value.toString();
+
+            let_NewArray.push(let_Input)
+        }
+        let ss_Rows=SS_Row
+        let let_UpdateRows=C01_Create(ss_Rows,let_NewArray)
+        setSS_Row(let_UpdateRows)
+    }
+
+//****************************************************************************
+// FUNCTION_01: Create Column
+//****************************************************************************
+    function f_CreateColumn():void{
+        let let_NewColumn:string=(document.getElementById('C02id_CreateColumnInput')  as HTMLInputElement).value.toString();
+        let ss_Columns=[...SS_Columns]
+        let let_UpdateColumns=C02_Create(ss_Columns,let_NewColumn)
+        if(ss_Columns!==let_UpdateColumns){
+        let ss_Rows=[...SS_Row]
+        let let_UpdateRow=U01_CreateColumn(ss_Rows)
+        setSS_Columns(let_UpdateColumns)
+        setSS_Row(let_UpdateRow)
+    }
+    }
+
+//****************************************************************************
+// FUNCTION_02: Open
+//****************************************************************************
+    function f_Open(THISCOLUMN:TS_Column,MODE:0|1|2):void{
+        setSS_EditColumn(1)
+        let ss_Columns=[...SS_Columns]
+        let let_UpdateColumns=U02_UpdateDisplay(THISCOLUMN,ss_Columns,MODE)
+        setSS_Columns(let_UpdateColumns)
+    }
+
+//****************************************************************************
+// FUNCTION_03: Rename Column
+//****************************************************************************
+    function f_Rename(THISCOLUMN:TS_Column):void{
+        let let_Input:string=(document.getElementById('C02id_RenameColumn'+THISCOLUMN.Key)  as HTMLInputElement).value.toString();
+        let ss_Columns=[...SS_Columns]
+        let let_UpdateColumn=U02_Edit(THISCOLUMN,ss_Columns,let_Input)
+        setSS_Columns(let_UpdateColumn)
+    }
+
+//****************************************************************************
+// FUNCTION_04: Delete Column
+//****************************************************************************
+    function f_Delete(THISCOLUMN:TS_Column):void{
+        let ss_Rows=[...SS_Row]
+        let ss_Columns=[...SS_Columns]
+        
+        let let_UpdateRow=U01_DeleteColumn(ss_Rows,R02_ReturnIndex(THISCOLUMN,ss_Columns))
+        let let_UpdateColumn=D02_Delete(THISCOLUMN,ss_Columns)
+
+        setSS_Row(let_UpdateRow)
+        setSS_Columns(let_UpdateColumn)
+
+        if(SS_Columns.length==1){
+            setSS_Row([{Key:0 ,Next:1  , Array:['Xedni Wor'],Display:4}])
+        }
+    }
+
+//****************************************************************************
+// FUNCTION_05: Reset input
+//****************************************************************************
+    function f_ResetInput() {
+        // By ChatGPT
+        const let_inputElements = document.querySelectorAll('input');
+        let_inputElements.forEach((input) => {
+          input.value = '';
+        });
+    }
+    
+//****************************************************************************
+// JSX_00: Input
+//****************************************************************************
+    let ss_Columns=[...SS_Columns]
+    let JSX_Input=ss_Columns.map((Column)=>{
+        // Rename Column
+        if(Column.Display===1 && SS_EditColumn===1){
+            return(
+            <tr className='C02id_HeightLightRow'><td>
+            <div className='C02id_CreateRowDiv' style={{marginLeft:C02_MarginLeft}}>
+                <h1>{Column.Name} to</h1>
+            </div>
+            <input id={'C02id_RenameColumn'+Column.Key} className='C02id_RowInput' style={{marginLeft:C02_MarginLeft}} ></input>
+            <div className='C02id_DeleteColumn' style={{marginLeft:C02_MarginLeft,marginRight:'auto',marginBottom:'10px'}}>
+                <button onClick={()=>f_Rename(Column)}>Ok</button>
+                <button onClick={()=>f_Open(Column,0)}>Cancel</button>
+            </div>
+            </td></tr>
+            )
+        }
+        // Delete Column
+        else if(Column.Display===2 && SS_EditColumn===1){
+            return(
+            <tr className='C02id_HeightLightRow' ><td>
+
+            <div className='C02id_CreateRowDiv C02id_RowInput' style={{marginLeft:C02_MarginLeft,marginBottom:'-10px'}}>
+                <h1>Do you sure you want to delete {Column.Name}?</h1>
+            </div>
+            <div className='C02id_DeleteColumn' style={{marginLeft:C02_MarginLeft,marginRight:'auto',marginBottom:'10px'}}>
+                <button onClick={()=>f_Delete(Column)} >Ok</button>
+                <button onClick={()=>f_Open(Column,0)}>Cancel</button>
+                </div>
+            </td></tr>
+
+            )
+        }
+        // Default State
+        else
+        {return(
+            <tr><td>
+            <div className='C02id_CreateRowButton'>
+                <button className='C02id_DeleteColumn' onClick={()=>f_Open(Column,2)}>X</button>
+                <button onClick={()=>f_Open(Column,1)} className='C02id_3342'>...</button>
+                <h1>{Column.Name}</h1>
+            </div>
+            <input id={'C02id_Input'+Column.Name} className='C02id_RowInput' ></input>
+
+            </td></tr>
+        )}
+    })
+
+//****************************************************************************
+// OUTPUT
+//****************************************************************************
+return(
+<div id='C02id_Div'>
+<div id='C02id_Header'>
+<h1 id='C02id_DivHeader'>Create New Column</h1>
+<div className='C02id_CreateColumnDiv'>
+<div style={{display:'inline-flex'}}>
+<input id='C02id_CreateColumnInput' style={{height:'20px',marginLeft:'15px'}}>
+</input>
+<button onClick={f_CreateColumn} style={{marginTop:'-10px',marginLeft:'5px'}}>
+Add New Column</button>
+</div>
+</div>
+
+</div>
+<h1 id='C02id_DivHeader' >Create New Row</h1>
+<table style={{height:'calc(100vh - 255px)'}}>
+{JSX_Input}
+</table>
+
+<tr><td>
+<div id='C02id_DivButton'>
+<button onClick={f_CreateRow}>Ok</button>
+<button onClick={f_ResetInput}id='C02id_B2133' >Reset Input</button>
+</div>
+</td></tr>
+
+</div>
+    )
+}
+
+export default U_AddBox
+ 
+        false,  // C04_ImageEditor/SS_Aff
+ 
+ine
+ 
+    center = (width/2, height/2) 
+ 
+    #width, height, ch = Img.shape
+ 
+  
+# get the center coordinates of the  
+# image to create the 2D rotation matrix 
+ 
+    print('Kiss the Rainbow')
+    print(M)
+ 
+    #print('Hii')
+    #print(pts[0].shape)
+ 
+    width, height, ch = Img.shape
+ 
+    #print('Hii')
+    #print(pts[0].shape)
+ 
+https://math.stackexchange.com/questions/2093314/rotation-matrix-of-rotation-around-a-point-other-than-the-origin
+ 
+    M=np.array([[np.cos(Radian),-np.sin(Radian),0],
+                [np.sin(Radian), np.cos(Radian),0]])
+ 
+    Radian=(Rotation/180)*np.pi
+ 
+    center=(int(width/2),int(height/2))
+ 
++int(PositionY)
+ 
++int(PositionX)
+ 
++int(PositionY)
+ 
++int(PositionX)
+ 
+caleX
+ 
+        alert(let_Input.toString())
+ 
+    function f_Null(S:string|null|undefined){
+        if(S===null){
+            return 'S'
+        }
+        else if(S===undefined){
+            return 'S'
+        }
+        else{
+            return S
+        }
+    }
+ 
+            #print("merry go 'round: ᴀ ᴊᴀᴘᴀɴᴇꜱᴇ ᴄɪᴛʏ ᴘᴏᴘ ᴘʟᴀʏʟɪꜱᴛ ꜰᴏʀ ᴀ ᴡᴀʟᴋ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴɪɢʜᴛ")
+            #print(str((float(v[0]),float(v[1]))))
+            #print('v',tuple(list(v)))
+            #print(type(tuple(list(v))[0]))
+ 
+let_Img=DrawPointOrigin(let_Img,SS_AffOrigin_Mode,hex_to_rgb_3Dvector(SS_AffOrigin_Color))
+ 
+_ScaleX,SS_Aff_ScaleY
+ 
+Scale
+ 
+        alert(let_Input)
+ 
+        /*
+        Cannot read properties of null (reading 'value')
+TypeError: Cannot read properties of null (reading 'value')
+        */
+ 
+        alert(let_Input)
+        /*
+ 
+f_Null(
+ 
+f_Null(
+ 
+f_Null(
+ 
+'white':
+ 
+  let let_Select='lightgreen'
+ 
+     setSS_Color(2)
+ 
+      setSS_Color(0)
+ 
+      setSS_Color(1)
+ 
+    print(RGB)
+ 
+ RGB
+ 
+    RGB=255*RGB#.reshape((3))
+ 
+print(
+ 
+eigh
+ 
+alert('let_Input = '+let_Input)
+        alert('let_InputColor = '+let_InputColor)
+ 
+          formData.append('SS_Aff',SS_Aff.toString())
+
+ 
+formData.append('SS_Aff',SS_Aff.toString())
+ 
+                #print(SS_Affine.shape)
+ 
+            
+            #    let_Img=DrawPoints(let_Img,SS_Affine,SS_AffineRGB,SS_AffineBOOL)
+ 
+        # ...
+ 
+        #let_JSON  = request.get_json()
+        #let_IsRGB = let_JSON.get('IsRGB')
+        #let_Image = let_JSON.get('file')
+        #if let_Image!=None:
+        #    let_Img = cv2.imdecode(np.frombuffer(let_Image, np.uint8), cv2.IMREAD_COLOR)
+        #    let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
+        #    response = Response(let_Bytes, content_type='image/png')
+        #    return response
+    
+        # Decode base64 encoded image
+        #encoded_image = let_Image#.get('file')
+        #decoded_image = base64.b64decode(encoded_image)
+        #nparr = np.frombuffer(decoded_image, np.uint8)
+        #image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        #_, buffer = cv2.imencode('.png', image)
+        #processed_image_base64 = base64.b64encode(buffer).decode('utf-8')
+#
+        #return buffer#{'IsRGB':let_IsRGB,'file':let_Image}
+    
+
+        # This is the posted data.
+        # convert "file" to image and return image
+        # If "IsRGB"=="false" then return black and white image
+        # {"IsRGB":"true","file":"{\"file\":{}}"}
+        #return {'IsRGB':let_IsRGB,'file':let_File}
+        #if let_File!=None:
+        #    let_Img = cv2.imdecode(np.frombuffer(Let_JSON.get('file').read(), np.uint8), cv2.IMREAD_COLOR)
+        #    let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
+        #    response = Response(let_Bytes, content_type='image/png')
+        #    return Let_JSON #jsonify({'py':response})
+            #if let_IsRGB=='false':
+            #    return {'messenger':'Bordom'}
+            #else:
+            #    return {'messenger':'Addiction'}
+    #pass
+    '''
+    # By ChatGPT
+    if request.method == 'POST':
+        let_File=request.files['file']
+        if let_File!=None:
+            let_Img = cv2.imdecode(np.frombuffer(let_File.read(), np.uint8), cv2.IMREAD_COLOR)
+            let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
+            response = Response(let_Bytes, content_type='image/png')
+            return response #jsonify({'py':response})
+        else:
+            return jsonify({'error': 'No file uploaded'})'''
+ 
+defaultt.toString()
+ 
++id.toString()
+ 
+    <td>3</td>
+ 
+    <td>2</td>
+ 
+    <td>0</td>
+ 
+    <td>1</td>
+ 
+    <td>4</td>
+ 
+ onClick={()=>f_UpdateAff()}
+ 
++NAME
+ 
+function f_ResetAff(id:number){}
+ 
+    <td><button style={{marginTop:'3px'}} >Reset</button></td>
+ 
+how Origin
+ 
+{
+//****************************************************************************
+// Show Origin
+//****************************************************************************
+}
+ 
+  let let_Status='Error'
+  if(SS_IsActivate[2]===true){
+    let_Status='(Active)'
+  }
+  else{
+    let_Status='(Inactive)'
+  }
+ 
+    <td>00</td>
+ 
+    <td><input type='color'></input></td>
+ 
+<tr>
+    <td style={{width:let_WidthTr}} >Show Center</td>
+</tr>
+<tr>
+    <select id="cars">
+  <option value="NoCenter">No Center</option>
+  <option value="Center">Center</option>
+  <option value="TopLeftCenter">Top Left Center</option>
+</select>
+<td><button style={{marginTop:'3px'}}>Ok</button></td>
+</tr>
+ 
+<tr>
+    <td style={{width:let_WidthTr}} >Rotation</td>
+    <td>11674</td>
+</tr>
+<tr>
+    <td><input  style={{marginTop:'3px'}}></input></td>
+    <td><button style={{marginTop:'3px'}}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}}>Reset</button></td>
+</tr>
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+ 
+<tr>
+    <td style={{width:let_WidthTr}} >Pos X</td>
+    <td>8</td>
+</tr>
+<tr>
+    <td><input  style={{marginTop:'3px'}}></input></td>
+    <td><button style={{marginTop:'3px'}}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}}>Reset</button></td>
+</tr>
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+<tr>
+    <td style={{width:let_WidthTr}} >Pos Y</td>
+    <td>8</td>
+</tr>
+<tr>
+    <td><input  style={{marginTop:'3px'}}></input></td>
+    <td><button style={{marginTop:'3px'}}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}}>Reset</button></td>
+</tr>
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+ 
+    <td style={{width:let_WidthTr}} >Show Center</td>
+ 
+Volvo
+ 
+<tr>
+    <td><button style={{marginTop:'3px'}}>No C</button></td>
+    <td><button style={{marginTop:'3px'}}>Left C</button></td>
+    <td><button style={{marginTop:'3px'}}>Center C</button></td>
+</tr>
+ 
+rigin
+ 
+Diable 
+ 
+    <td><input  style={{marginTop:'3px'}}></input></td>
+ 
+ style={{}}
+ 
+ition
+ 
+ition
+ 
+<hr/>
+ 
+<hr/>
+ 
+<hr/>
+ 
+<h1 style={{fontSize:'14px',marginTop:'-10px'}}>{let_Status}</h1>
+<div style={{display:'flex'}}>
+<button style={{marginTop:'0px',marginBottom:'6px',marginRight:'3px'}} onClick= {()=>alert('Rain')/*f_Update          */}>Activate</button>
+<button style={{marginTop:'0px',marginBottom:'6px',marginRight:'0px'}} onClick= {()=>alert('Rain')/*f_SetDeActivate   */}>Deactivate</button>
+
+</div>
+ 
+ className='C04id_ShortReset'
+ 
+style={{marginTop:'3px'}}
+ 
+ style={{visibility:'visible',height:'2px',marginBottom:'-2px'}}
+ 
+ style={{visibility:'visible',height:'1px',marginBottom:'0px'}}
+ 
+<td><input></input></td>
+ 
+    <td><button>Ok</button></td>
+    <td><button className='C04id_ShortReset'>Reset</button></td>
+ 
+<tr>
+    <td style={{width:let_WidthTr}} >Scale X</td>
+    <td><input></input></td>
+    <td><button>Ok</button></td>
+    <td><button className='C04id_ShortReset'>Reset</button></td>
+</tr>
+<hr style={{visibility:'hidden',height:'2px',marginBottom:'-2px'}}/>
+<tr>
+    <td style={{width:let_WidthTr}} >Scale Y</td>
+    <td><input ></input></td>
+    <td><button className='C04id_ShortOk'>Ok</button></td>
+    <td><button className='C04id_ShortReset'>Reset</button></td>
+</tr>
+<hr style={{visibility:'hidden',height:'2px',marginBottom:'-2px'}}/>
+
+<hr style={{visibility:'hidden',height:'2px',marginBottom:'-2px'}}/>
+
+
+ 
+{/*<tr>
+    <td style={{width:let_WidthTr}} >Crop XL</td>
+    <td><input></input></td>
+    <td><button>Ok</button></td>
+</tr>
+<hr style={{visibility:'hidden',height:'2px',marginBottom:'-2px'}}/>
+<tr>
+    <td style={{width:let_WidthTr}} >Crop XR</td>
+    <td><input></input></td>
+    <td><button>Ok</button></td>
+</tr>
+<hr style={{visibility:'hidden',height:'2px',marginBottom:'-2px'}}/>
+<tr>
+    <td style={{width:let_WidthTr}} >Crop YU</td>
+    <td><input></input></td>
+    <td><button>Ok</button></td>
+</tr>
+<hr style={{visibility:'hidden',height:'2px',marginBottom:'-2px'}}/>
+<tr>
+    <td style={{width:let_WidthTr}} >Crop YD</td>
+    <td><input></input></td>
+    <td><button>Ok</button></td>
+    </tr>*/}
+ 
 className='C04id_ShortInput'
  
 <tr>

@@ -12,8 +12,12 @@ import TS_Threshold from './T03_Threshold/An_Index';
 import { U03_Sort } from './T03_Threshold/U03_Sort';
 // CSS
 import './index02_Canvas.css'
+import TS_Box from './T04_Box/An_Index';
 
 interface IN_02_Canvas{
+  SS_Aff:number[]
+  SS_Boxes:TS_Box[]
+  SS_AffOrigin:string[]
 SS_IsActivate:boolean[]
 SS_IsShow:boolean
 SS_nDMatrix   :number[][]
@@ -30,6 +34,9 @@ SS_ImageFile :File|null
 SS_UseEffect :boolean
 SS_OpenPanel:0|1|2;
 SS_Thresholds:TS_Threshold[];
+setSS_Aff:(S:number[])=>void
+setSS_Boxes:(S:TS_Box[])=>void
+setSS_AffOrigin:(S:string[])=>void
 setSS_Image:(S:string | null)=>void
 setSS_IsShow:(S:boolean)=>void
 setSS_AffineBOOL:(S:boolean[][])=>void
@@ -53,6 +60,12 @@ export const Index02_Canvas: React.FC<IN_02_Canvas> = (
 // INPUT
 //****************************************************************************
 {
+  SS_Aff          ,
+  setSS_Aff       ,
+  SS_Boxes,
+  setSS_Boxes,
+  SS_AffOrigin,
+  setSS_AffOrigin,
 SS_IsActivate     ,
 SS_IsShow         ,
 setSS_IsShow      ,
@@ -87,6 +100,9 @@ SS_Thresholds     ,
 setSS_Thresholds  ,
 }
 :{
+  SS_Aff:number[]
+  SS_Boxes:TS_Box[]
+  SS_AffOrigin:string[]
 SS_IsActivate:boolean[]
 SS_IsShow:boolean
 SS_nDMatrix   :number[][]
@@ -103,6 +119,9 @@ SS_ImageFile :File|null
 SS_UseEffect :boolean
 SS_OpenPanel:0|1|2;
 SS_Thresholds:TS_Threshold[];
+setSS_Aff:(S:number[])=>void
+setSS_Boxes:(S:TS_Box[])=>void
+setSS_AffOrigin:(S:string[])=>void
 setSS_Image:(S:string | null)=>void
 setSS_IsShow:(S:boolean)=>void
 setSS_AffineBOOL:(S:boolean[][])=>void
@@ -135,6 +154,8 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
           //alert(SS_Affine)
           const formData = new FormData();
           formData.append('file', SS_ImageFile);
+          formData.append('SS_Aff',SS_Aff.toString())
+          formData.append('SS_AffOrigin',SS_AffOrigin.toString())
           formData.append('SS_IsActivate',SS_IsActivate.toString())
           formData.append('SS_IsRGB', SS_IsRGB.toString())
           formData.append('SS_Affine',SS_Affine.toString())
@@ -143,6 +164,8 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
           formData.append('SS_nDMatrix',SS_nDMatrix.toString())
           formData.append('SS_Thresholds',JSON.stringify(SS_Thresholds).toString())
           formData.append('SS_IsShow',SS_IsShow.toString())
+          formData.append('SS_Boxes',SS_Boxes.toString())
+          alert(JSON.stringify(SS_Boxes))
           // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
           //let let_ImageJson = JSON.stringify(Object.fromEntries(formData));
           fetch('/def_OpenCV', {
@@ -185,7 +208,19 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
       };
       }
 
-  }, [SS_Image,SS_ImageFile,SS_IsRGB,SS_IsShow,SS_IsActivate,SS_AffineBOOL]);
+  }, [
+    SS_Image,
+    SS_ImageFile,
+    SS_IsRGB,
+    SS_IsShow,
+    SS_IsActivate,
+    SS_AffineBOOL,
+    SS_AffOrigin,
+    SS_nDMatrix,
+    SS_Affine,
+    SS_Aff,
+    SS_Boxes
+  ]);
 
 
   if(SS_OpenPanel==1){
@@ -296,6 +331,13 @@ style={{width:(SS_WidthImage).toString()+'px'}}
 
 
 <C04_ImageEditor
+SS_Boxes={SS_Boxes}
+setSS_Boxes={setSS_Boxes}
+SS_IsShow={SS_IsShow}
+SS_Aff={SS_Aff}
+setSS_Aff={setSS_Aff}
+SS_AffOrigin={SS_AffOrigin}
+setSS_AffOrigin={setSS_AffOrigin}
 setSS_IsShow={setSS_IsShow}
 SS_IsActivate={SS_IsActivate}
 setSS_IsActivate={setSS_IsActivate}

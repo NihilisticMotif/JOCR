@@ -10,6 +10,7 @@ import {Index02_Canvas} from './index02_Canvas';
 import TS_Row from './T01_Row/An_Index';
 import TS_Column from './T02_Column/An_Index'
 import TS_Threshold from './T03_Threshold/An_Index';
+import TS_Box from './T04_Box/An_Index';
 // CSS
 import './index01_Table.css';
 
@@ -111,6 +112,22 @@ const Components=()=>{
             [false,false,false]
         ]
     )
+
+    // C04_ImageEditor/U_Aff.tsx
+    // Aff = Simple Affine
+    const [SS_Aff,setSS_Aff]=useState<number[]>([
+        1,  // Scale X
+        1,  // Scale Y
+        0,  // Pos X
+        0,  // Pos Y
+        0   // Rotation
+    ])
+    const [SS_AffOrigin,setSS_AffOrigin]=useState<string[]>([
+        'NoOrigin',
+        '#000000'
+    ])
+
+    // C05_Convolution/U_Convolution.tsx
     const [SS_nDMatrix,setSS_nDMatrix]=useState<number[][]>(
        [[0,0,0,0,0],
         [0,0,0,0,0],
@@ -132,7 +149,26 @@ const Components=()=>{
         false,  // C05_Convolution/SS_Affine
     ])
     const [SS_IsShow,setSS_IsShow]=useState<boolean>(false)
-  
+
+/*
+
++--------------+--------+-----------+--------+--------+--------+--------+--------+
+| type (string)| id     | LineWidth | Color  | X      | Y      | W      | H      |
++--------------+--------+-----------+--------+--------+--------+--------+--------+
+| Rectangle    | number | number    | string | number | number | number | number |
+| Frame        | number | number    | string | number | number | number | number |
+| Line         | number | number    | string | number | number | number | number |
+| XLine        | number | number    | string | number | 0      | number | 0      |
+| YLine        | number | number    | string | 0      | number | 0      | number |
++--------------+--------+-----------+--------+--------+--------+--------+--------+
+*/
+    const [SS_Boxes,setSS_Boxes]=useState<TS_Box[]>([
+            {Key:0,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:false},
+            {Key:1,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:true},
+            {Key:2,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:true},
+            {Key:3,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:true},
+            {Key:4,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:true},
+        ])
 //****************************************************************************
 // JSX: C02_Iput
 //****************************************************************************
@@ -199,6 +235,9 @@ const Components=()=>{
     let JSX_C04=<></>
     if(SS_OpenPanel===1 || SS_OpenPanel===2){
         JSX_C04=<Index02_Canvas
+SS_Aff           ={SS_Aff           }
+SS_Boxes         ={SS_Boxes         }
+SS_AffOrigin     ={SS_AffOrigin     }
 SS_IsActivate    ={SS_IsActivate    }
 SS_IsShow        ={SS_IsShow        }
 SS_nDMatrix      ={SS_nDMatrix      }
@@ -215,6 +254,9 @@ SS_ImageFile     ={SS_ImageFile     }
 SS_UseEffect     ={SS_UseEffect     }
 SS_OpenPanel     ={SS_OpenPanel     }
 SS_Thresholds    ={SS_Thresholds    }
+setSS_Aff        ={setSS_Aff        }
+setSS_Boxes      ={setSS_Boxes      }
+setSS_AffOrigin  ={setSS_AffOrigin  }
 setSS_IsActivate ={setSS_IsActivate }
 setSS_IsShow     ={setSS_IsShow     }
 setSS_nDMatrix   ={setSS_nDMatrix   }
