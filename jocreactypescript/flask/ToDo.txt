@@ -1,0 +1,9 @@
+Image Processing
+1. Utility
+2. Crop
+3. Export Image 
+4. useState JSON import/export 
+
+Tesseract
+1. Connect to Tesseract 
+2. https://github.com/copninich/TH-National-Document-OCR

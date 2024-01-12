@@ -6,30 +6,28 @@ import numpy as np
 #   Image Processing Function
 ########################################################################################
 
+def get_grayscale(image):
+    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
 def canny(image):
     # X
     return cv2.Canny(image, 100, 200)
 
-def get_grayscale(image):
-    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
 #erosion
-def erode(image):
-    # X
-    kernel = np.ones((5,5),np.uint8)
-    return cv2.erode(image, kernel, iterations = 1)
+def erode(image,kernel,iterations):
+    #kernel = np.ones((5,5),np.uint8)
+    # iterations = 1
+    return cv2.erode(image, kernel,iterations=iterations)
 
 #dilation
-def dilate(image):
+def dilate(image,kernel,iterations):
     # X
-    kernel = np.ones((5,5),np.uint8)
-    return cv2.dilate(image, kernel, iterations = 1)
+    #kernel = np.ones((5,5),np.uint8)
+    return cv2.dilate(image, kernel, iterations = iterations)
     # https://www.geeksforgeeks.org/erosion-dilation-images-using-opencv-python/
 
 #opening - erosion followed by dilation
-def opening(image):
-    # X
-    kernel = np.ones((5,5),np.uint8)
+def opening(image,kernel):
     return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
 
 #White
@@ -139,6 +137,87 @@ def DrawPointOrigin(Img,Mode,RGB,PositionX,PositionY):
             color=(255,255,255),
             thickness=3)
         return Img
+
+def DrawingBoxes(Img,XYWH,Type,Color,IsShow):
+    height, width, _ = Img.shape
+    # https://www.geeksforgeeks.org/python-opencv-cv2-rectangle-method/
+    for xy,t,c,i in zip(XYWH,Type,Color,IsShow):
+        B=int(255*c[2])
+        G=int(255*c[1])
+        R=int(255*c[0])
+        RGB=(B,G,R)
+        lineWidth=1
+        if i==True:
+            if t=='Rectangle':
+                if int(xy[4])>0:
+                    lineWidth=int(xy[4])
+                Img = cv2.rectangle(
+                    Img, 
+                    (int(xy[0]),int(xy[1])), 
+                    (int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])), 
+                    RGB, 
+                    -1
+                    ) 
+                Img = cv2.rectangle(
+                    Img, 
+                    (int(xy[0]),int(xy[1])), 
+                    (int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])), 
+                    (255,255,255), 
+                    lineWidth
+                    ) 
+            if t=='Frame':
+                if int(xy[4])>0:
+                    lineWidth=int(xy[4])
+                Img = cv2.rectangle(
+                    Img, 
+                    (int(xy[0]),int(xy[1])), 
+                    (int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])), 
+                    RGB, 
+                    lineWidth
+                    ) 
+            if t=='Line':
+                if int(xy[4])>0:
+                    lineWidth=int(xy[4])
+                Img = cv2.line(
+                    Img, 
+                    (int(xy[0]),int(xy[1])), 
+                    (int(xy[2]),int(xy[3])), 
+                    RGB, 
+                    lineWidth
+                    ) 
+            if t=='LineX':
+                if int(xy[1])>0:
+                    lineWidth=int(xy[1])
+                Img = cv2.line(
+                    Img, 
+                    (0,int(xy[0])), 
+                    (width,int(xy[0])), 
+                    RGB, 
+                    lineWidth
+                    ) 
+            if t=='LineY':
+                if int(xy[1])>0:
+                    lineWidth=int(xy[1])
+                Img = cv2.line(
+                    Img, 
+                    (int(xy[0]),0), 
+                    (int(xy[0]),height), 
+                    RGB, 
+                    lineWidth
+                    ) 
+            if t=='Crop':
+                Img=Img[
+                    int(xy[1]):int(xy[1])+int(xy[3]),
+                    int(xy[0]):int(xy[0])+int(xy[2])
+                    ]
+    return Img
+'''
+value="Rectangle">
+value="Frame">Fram
+value="Line">Line<
+value="LineX">Hori
+value="LineY">Vert
+'''    
 ########################################################################################
 #   Display the Image
 ########################################################################################

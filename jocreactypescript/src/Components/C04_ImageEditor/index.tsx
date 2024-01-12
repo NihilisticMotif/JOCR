@@ -10,6 +10,7 @@ import U_Aff from './Coms/U_Aff'
 
 import TS_Threshold from '../T03_Threshold/An_Index';
 import TS_Box from '../T04_Box/An_Index';
+import TS_Kernal from '../T05_Kernal/An_Index';
 //import U1_EditImage from './Coms_Toolbar/U1_EditImage'
 //import U1_2DMatrix from './Coms_Toolbar/U2_Affine'
 
@@ -21,6 +22,8 @@ const C04_ImageEditor = (
 // INPUT
 //****************************************************************************
 {
+  SS_ImageDimensions,
+  SS_Image,
   SS_Aff,
   setSS_Aff,
   SS_Boxes,
@@ -30,10 +33,8 @@ const C04_ImageEditor = (
   SS_IsActivate,
   setSS_IsActivate,
   setSS_IsShow,
-SS_nDMatrix   ,
-setSS_nDMatrix,
-SS_nDTable    ,
-setSS_nDTable ,
+SS_Kernals,
+setSS_Kernals,
 SS_Affine,
 setSS_Affine,
 SS_AffineSTR,
@@ -53,6 +54,8 @@ setSS_Thresholds,
 SS_IsShow
 }
 :{
+  SS_ImageDimensions:number[]|null
+  SS_Image:string|null
   SS_IsShow:boolean
   SS_Aff:number[]
   setSS_Aff:(S:number[])=>void
@@ -63,10 +66,8 @@ SS_IsShow
   SS_IsActivate:boolean[]
   setSS_IsActivate:(S:boolean[])=>void
   setSS_IsShow:(S:boolean)=>void
-SS_nDMatrix   :number[][]
-setSS_nDMatrix:(S:number[][])=>void
-SS_nDTable    :string[][]
-setSS_nDTable :(S:string[][])=>void
+SS_Kernals:TS_Kernal[]
+setSS_Kernals:(S:TS_Kernal[])=>void
 SS_Affine       :number[][][]
 setSS_Affine    :(S:number[][][])=>void
 SS_AffineSTR    :string[][][]
@@ -87,7 +88,7 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
 })=>{
 
   const [SS_IsShapeSetting,setSS_IsShapeSetting]=useState<boolean>(true)
-  const [SS_ImageProcessing,setSS_ImageProcessing]=useState<0|1|2>(0)
+  const [SS_ImageProcessing,setSS_ImageProcessing]=useState<0|1|2|3>(0)
   // 0 Threshold
   // 1 Convolution
   // 2 FFT
@@ -101,12 +102,14 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
         <button onClick={()=>{setSS_ImageProcessing(0)}}>Threshold</button>
         <button onClick={()=>{setSS_ImageProcessing(1)}}>Convolution</button>
         <button onClick={()=>{setSS_ImageProcessing(2)}}>Create Box</button>
-        <button onClick={()=>{setSS_ImageProcessing(2)}}>Utility</button>
+        <button onClick={()=>{setSS_ImageProcessing(3)}}>Affine</button>
       </div>
       {
         // Scroll horizontal line
       }
       <C05_Convolution
+      SS_ImageDimensions={SS_ImageDimensions}
+      SS_Image={SS_Image}
       SS_Boxes={SS_Boxes}
       setSS_Boxes={setSS_Boxes}
     SS_IsActivate={SS_IsActivate}
@@ -122,10 +125,8 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
     setSS_AffineRGB={setSS_AffineRGB}
     SS_AffineBOOL={SS_AffineBOOL}
     setSS_AffineBOOL={setSS_AffineBOOL}
-    SS_nDMatrix   ={SS_nDMatrix   }
-    setSS_nDMatrix={setSS_nDMatrix}
-    SS_nDTable    ={SS_nDTable    }
-    setSS_nDTable ={setSS_nDTable }
+SS_Kernals={SS_Kernals}
+setSS_Kernals={setSS_Kernals}
     />
   </div>
   }else{

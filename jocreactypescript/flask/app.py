@@ -3,7 +3,7 @@ from flask import Flask, jsonify, Response, request, redirect, url_for, json
 import numpy as np
 from PIL import Image
 import cv2
-from kernel import AffineMoveOrigin,AffineRotation,AffineScale,DrawPointOrigin,DrawPoints,AffineTransformations, canny,get_grayscale,erode,dilate,opening,WhiteBackGround
+from kernel import DrawingBoxes,AffineMoveOrigin,AffineRotation,AffineScale,DrawPointOrigin,DrawPoints,AffineTransformations, canny,get_grayscale,erode,dilate,opening,WhiteBackGround
 import base64
 import pickle
 import matplotlib.colors as mcolors
@@ -103,13 +103,19 @@ def def_OpenCV():
         SS_AffineRGB=np.array(SS_AffineRGB).reshape((2,-1))
         Is_Affine=SS_IsActicate[2]
 
-        # SS_nDMatrix
-        SS_nDMatrix_str = request.form.get('SS_nDMatrix')
-        SS_nDMatrix_list = SS_nDMatrix_str.split(',')
-        SS_nDMatrix_list = [float(item) for item in SS_nDMatrix_list]  # Example: convert to float
-        SS_nDMatrix=np.array(SS_nDMatrix_list)#.reshape(-1,5)
-        Is_nDMatrix=SS_IsActicate[0]
-        #Is_...
+        # SS_Kernals
+        # 5
+        SS_Kernals_str = request.form.get('SS_Kernals')
+        SS_Kernals_data = json.loads(SS_Kernals_str)
+        SS_Kernals = [[item['Key'],item['Name'], item['Kernal'], item['Kernal_str'],item['Iterations'],item['IsActivate']] for item in SS_Kernals_data]
+        SS_Kernals_Matrix=[]
+        SS_Kernals_IsActive=[]
+        SS_Kernals_Iterations=[]
+        for i in SS_Kernals:
+            SS_Kernals_Matrix.append(np.array(i[2]).reshape((-1,5)))
+            SS_Kernals_IsActive.append(i[-1])
+            SS_Kernals_Iterations.append(i[4])
+            print(type(i[-1]))
 
         # SS_Thresholds
         SS_Thresholds_str=request.form.get('SS_Thresholds')
@@ -166,39 +172,17 @@ def def_OpenCV():
 
         # SS_Boxes
         SS_Boxes_str = request.form.get('SS_Boxes')
-        #print(SS_Boxes_str)
-
-        #SS_Boxes_list=SS_Boxes_str.split(',')
-        #print(SS_Boxes_list)
-        
-        #for i in SS_Boxes_list:
-        #    print(json.loads(i))
-        #SS_Boxes_DictList=[]
-        #for i in SS_Boxes_list:
-        #    SS_Boxes_DictList.append(json.loads(i))
-        #for i in SS_Boxes_DictList:
-        #    print(i)
-
-        #for i in SS_Boxes_data:
-        #    print(i)
-        #SS_Boxes = [[item['Key'],item['XYWH'], item['Type'], item['IsShow']] for item in SS_Boxes_data]
-        '''
-        [
-            [86, True, '#000000'],
-            [148, True, '#e1e1e1'],
-            [284, True, '#5b5b5b']
-        ]
-        '''
-        SS_Boxes_Number=[]
+        SS_Boxes_data = json.loads(SS_Boxes_str)
+        SS_Boxes = [[item['Key'],item['XYWH'], item['Type'], item['IsShow']] for item in SS_Boxes_data]
+        SS_Boxes_XYWH=[]
         SS_Boxes_IsShow=[]
         SS_Boxes_Type=[]
-
-        #for i in SS_Boxes:
-        #    SS_Boxes_Number.append(i[1])
-        #    SS_Boxes_Type.append(i[2])
-        #    SS_Boxes_IsShow.append(i[3])
-        #for i in SS_Boxes_Number:
-        #    print(i)
+        SS_Boxes_Color=[]
+        for i in SS_Boxes:
+            SS_Boxes_XYWH.append(i[1])
+            SS_Boxes_Type.append(i[2][0])
+            SS_Boxes_Color.append(hex_to_rgb_3Dvector(i[2][1]))
+            SS_Boxes_IsShow.append(i[3])
 
         # SS_ImageFile
         let_File=request.files['file']
@@ -208,15 +192,30 @@ def def_OpenCV():
                 let_Img=AffineScale(let_Img,SS_Aff_ScaleX,SS_Aff_ScaleY)
                 let_Img=AffineMoveOrigin(let_Img,SS_Aff_PositionX,SS_Aff_PositionY)
                 let_Img=AffineRotation(let_Img,SS_Aff_Rotation)
-            let_Img=DrawPointOrigin(let_Img,SS_AffOrigin_Mode,hex_to_rgb_3Dvector(SS_AffOrigin_Color),SS_Aff_PositionX,SS_Aff_PositionY)
+                let_Img=DrawingBoxes(let_Img,SS_Boxes_XYWH,SS_Boxes_Type,SS_Boxes_Color,SS_Boxes_IsShow)
+            let_Img=DrawPointOrigin(
+                let_Img,
+                SS_AffOrigin_Mode,
+                hex_to_rgb_3Dvector(SS_AffOrigin_Color),
+                SS_Aff_PositionX,
+                SS_Aff_PositionY
+                )
             let_Img = DrawPoints(let_Img,SS_Affine[0],SS_AffineRGB[0],SS_AffineBOOL[0])
             if Is_Affine==True:
                 let_Img=AffineTransformations(let_Img,SS_Affine)
             let_Img = DrawPoints(let_Img,SS_Affine[1],SS_AffineRGB[1],SS_AffineBOOL[1])
             if not SS_IsRGB:
                 let_Img = cv2.cvtColor(let_Img, cv2.COLOR_BGR2GRAY)
-                if Is_nDMatrix==True:
-                    let_Img = cv2.filter2D(let_Img, -1, SS_nDMatrix)
+                if SS_Kernals_IsActive[0]==True:
+                    let_Img=cv2.filter2D(let_Img,-1,SS_Kernals_Matrix[0])
+                if SS_Kernals_IsActive[1]==True:
+                    let_Img=cv2.erode(let_Img,SS_Kernals_Matrix[1],SS_Kernals_Iterations[1])
+                if SS_Kernals_IsActive[2]==True:
+                    let_Img=cv2.dilate(let_Img,SS_Kernals_Matrix[1],SS_Kernals_Iterations[1])
+                if SS_Kernals_IsActive[3]==True:
+                    let_Img=cv2.filter2D(let_Img,-1,SS_Kernals_Matrix[3])
+                if SS_Kernals_IsActive[4]==True:
+                    let_Img=cv2.morphologyEx(let_Img, cv2.MORPH_OPEN, SS_Kernals_Matrix[4])
                 if Is_Thresholds==True:
                     let_Img = WhiteBackGround(let_Img,list_Minn,list_Maxx,list_Gray,list_Bool)
             let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()

@@ -20,11 +20,11 @@ export function C04_Create(
             const let_NEWBOXES:TS_Box={
                 Key:let_NewKey,
                 XYWH:[
-                    1,
-                    1,
-                    1,
-                    1,
-                    1
+                    0,
+                    0,
+                    500,
+                    500,
+                    4
                 ],
                 Type:[
                     TYPE,

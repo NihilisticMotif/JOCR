@@ -1,3 +1,1309 @@
+          //alert(SS_AffineRGB)
+          //alert(SS_Affine)
+ 
+,marginTop:'-300px'
+ 
+,marginTop:'-100px'
+ 
+                    try:
+ 
+                    except:
+                        let_Img=let_Img
+ 
+-1,
+ 
+let_Img = cv2.cvtColor(let_Img, cv2.COLOR_BGR2GRAY)
+ 
+let_Img = cv2.cvtColor(let_Img, cv2.COLOR_BGR2GRAY)
+ 
+                #if Is_nDMatrix==True:
+                #    let_Img = cv2.filter2D(let_Img, -1, SS_nDMatrix)
+ 
+        SS_Kernals_Name=[]
+ 
+        {Key:0,Name:'Convolution',
+        Kernal:[
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,1,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+        ],
+        Kernal_str:[
+            ['0','0','0','0','0'],
+            ['0','0','0','0','0'],
+            ['0','0','1','0','0'],
+            ['0','0','0','0','0'],
+            ['0','0','0','0','0'],
+        ],
+        Iterations:1,
+        IsActivate:false},
+ 
+
+
+
+
+        '''
+        SS_nDMatrix_str = request.form.get('SS_nDMatrix')
+        SS_nDMatrix_list = SS_nDMatrix_str.split(',')
+        SS_nDMatrix_list = [float(item) for item in SS_nDMatrix_list]  # Example: convert to float
+        SS_nDMatrix=np.array(SS_nDMatrix_list)#.reshape(-1,5)
+        Is_nDMatrix=SS_IsActicate[0]
+        '''
+        #Is_...
+ 
+        #for i in SS_Kernals_list:
+        #    SS_Kernals_ls.append(i)
+        #    print(i)
+        #SS_Kernals_data = json.loads(SS_Kernals_str)
+        #print(SS_Kernals_str)
+        '''SS_Kernals = [[item['Key'],item['Name'], item['Kernal'], item['Iterations'],item['IsActivate']] for item in SS_Kernals_data]
+        SS_Kernals_Name=[]
+        SS_Kernals_Matrix=[]
+        SS_Kernals_Iterations=[]
+        SS_Kernals_IsShow=[]
+        for i in SS_Kernals:
+            SS_Kernals_Name.append(i[1])
+            SS_Kernals_Matrix.append(i[2])
+            SS_Kernals_Iterations.append(i[3])
+            SS_Kernals_IsShow.append(i[4])
+            print(i[1])
+            print(i[2])
+            print(i[3])
+            print(i[4])'''
+        
+        #SS_Kernals_Matrix2=[]
+        #for i in SS_Kernals_Matrix:
+        #    for j in i:
+        #        pass
+ 
+            print(i[2])
+ 
+            print(type(i[2][0][0]))
+ 
+            
+            pass
+ 
+()=>
+ 
+setSS_Iterations(let_input)
+ 
+'C04id_Kernal'+ss_ThisKernal.Key+'_'+(id0*10+id1).toString()
+ 
+let let_UpdateKernals=U05_UpdateIndex
+ 
+style={{height:'30px'}}
+ 
+<div style={{display:'flex',marginTop:'5px'}}>
+<input style={{width:'100px',marginLeft:'10px'}}></input>
+<button>Ok</button>
+</div>
+ 
+ style={{display:'flex'}}
+ 
+,gridTemplateColumns: 'repeat(2, 25px 1fr) 50px;'
+ 
+</div>
+ 
+style={{height:'25px'}}
+ 
+ style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}
+ 
+className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px',marginBottom:'-20px'}}
+ 
+onClick={()=>f_Update('XYWH',index)}
+ 
+id={'C05id_AddBox'+'XYWH'+box.Key.toString()+'_'+index.toString()} 
+ 
+<h1>{name}: {box.XYWH[index]}</h1>
+ 
+<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px',marginBottom:'-20px'}}>
+<h1>{name}: {box.XYWH[index]}</h1>
+<input id={'C05id_AddBox'+'XYWH'+box.Key.toString()+'_'+index.toString()} style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<button style={{height:'25px'}} onClick={()=>f_Update('XYWH',index)}>Ok</button>
+</div>
+ 
+<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px',marginBottom:'-20px'}}>
+<input  style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<button style={{height:'25px'}} onClick={()=>alert("f_Update('XYWH',index)")}>Ok</button>
+</div>
+</div>
+ 
+id={'C05id_AddBox'+'XYWH'+box.Key.toString()+'_'+index.toString()}
+ 
+<h1>{name}: {box.XYWH[index]}</h1>
+ 
+SS_Kernals_list=SS_Kernals_str.split(',')
+        SS_Kernals_ls=[]
+ 
+        print(SS_Boxes_str)
+ 
+</div>
+<div style={{display:'flex'}}>
+ 
+,marginTop:'10px'}
+ 
+</div>
+ 
+</div>
+ 
+SS_ThiKernals
+ 
+    const [SS_UseEffect,setSS_UseEffect]=useState<false>
+ 
+setSS_UseEffect(true)
+ 
+    let ss_nDMatrix=[...SS_nDMatrix]
+    // SS_nDTable does not update when SS_nDMatrix is updated.
+ 
+Layout
+ 
+        function f_Down(){
+            if(let_Index<SS_Kernals.length){
+                let ss_Kernals=[...SS_Kernals]
+                let let_UpdateKernals=U05_UpdateIndex(ss_Kernals,let_Index,let_Index+1)
+                setSS_Kernals(let_UpdateKernals)
+            }
+        }
+        function  (){
+            if(let_Index>0){
+                let ss_Kernals=[...SS_Kernals]
+                let let_UpdateKernals=U05_UpdateIndex(ss_Kernals,let_Index,let_Index-1)
+                setSS_Kernals(let_UpdateKernals)
+            }
+        }
+ 
+<button onClick={f_Down}>Down</button>
+ 
+<button onClick={ }>Up</button>
+ 
+        //alert(JSON.stringify(SS_UpdateKernals))
+        //setSS_nDTable(SS_ThisKernal.Kernal.map(row => row.map(cell => cell.toString())))
+        //setSS_nDMatrix(SS_ThisKernal.Kernal.map(row => row.map(cell => cell)))
+ 
+.map(row => row.map(cell => cell))
+ 
+  useEffect(()=>{},[SS_Kernals])
+ 
+let JSX_Kernals=
+ 
+  let JSX_Kernals=
+ 
+SS_Kernals.map((kernal,index)=>{
+        return(<>
+        <U_Kernal
+        SS_Kernals={SS_Kernals}
+        setSS_Kernals={setSS_Kernals}
+        SS_ThisKernal={kernal}
+        Index={index}
+        />
+        </>
+        )})
+ 
+  let JSX_Kernals=SS_Kernals.map((kernal,index)=>{
+        return(<>
+        <U_Kernal
+        SS_Kernals={SS_Kernals}
+        setSS_Kernals={setSS_Kernals}
+        SS_ThisKernal={kernal}
+        Index={index}
+        />
+        </>
+        )})
+ 
+.toString()
+ 
+let_Img=DrawingBoxes(let_Img,SS_Boxes_XYWH,SS_Boxes_Type,SS_Boxes_Color,SS_Boxes_IsShow)
+ 
+let_Img=DrawingBoxes(let_Img,SS_Boxes_XYWH,SS_Boxes_Type,SS_Boxes_Color,SS_Boxes_IsShow)
+ 
+            //if(Mode==='Delete') {setSS_ThisBox(let_DefaultBox)}
+            //if(Mode==='Create') {setSS_ThisBox(let_DefaultBox)}
+            if(Mode==='None'){}
+ 
+        SS_AddBoxColor,
+ 
+        SS_AddBoxColor,
+        SS_AddBoxType,
+ 
+{//
+ 
+,SS_ThisBox
+ 
+        alert(SS_AddBoxXYWHindex)
+        alert(SS_AddBoxXYWHvalue)
+ 
+|null
+ 
+|null
+ 
+ && SS_AddBoxColor 
+ 
+ && SS_AddBoxType )
+ 
+ && SS_AddBoxXYWHindex && SS_AddBoxXYWHvalue 
+ 
+                //alert(SS_AddBoxXYWHvalue)
+                // null
+                //alert(SS_AddBoxXYWHindex)
+                // null
+ 
+                alert('HelloWorld')
+ 
+alert(index)
+ 
+setSS_AddBoxXYWHindex(index)
+ 
+        alert(SS_UpdateMode)
+ 
+Mode
+ 
+            alert(SS_AddBoxXYWHvalue
+            alert(SS_AddBoxXYWHindex
+ 
+                alert(index)
+ 
+alert(isNaN(parseInt(let_input)).toString())
+ 
+                    alert(let_input)
+ 
+alert(index)
+ 
+                alert(let_input)
+ 
+                setSS_AddBoxXYWHvalue
+ 
+                setSS_AddBoxXYWH(ss_AddBoxXYWH)
+ 
+[1,1,1,1,1]
+ 
+
+
+//****************************************************************************
+// FUNCTION 02: EDIT BOX TYPE
+//****************************************************************************
+
+//****************************************************************************
+// FUNCTION 02: DELETE BOX
+//****************************************************************************
+ 
+//****************************************************************************
+// FUNCTION 00: CREATE NEWBOX
+//****************************************************************************
+
+//****************************************************************************
+// FUNCTION 01: EDIT BOX NUMBER
+//****************************************************************************
+    function f_UpdateNumber(key:number,index:number){
+        let ss_Boxes=[...SS_Boxes]
+        setSS_ThisBox(R04_SelectBox(key,ss_Boxes))
+        let let_UpdateBoxes=ss_Boxes
+        let let_Input:string=(document.getElementById('C05id_AddBoxNumber'+key.toString()+'_'+index.toString()) as HTMLInputElement).value.toString();
+        if(isNaN(parseInt(let_Input))===false
+        ){
+            let_UpdateBoxes=U04_UpdateNumber(SS_ThisBox,ss_Boxes,parseInt(let_Input),index)
+        }else{
+            let_UpdateBoxes=let_UpdateBoxes
+        }
+        setSS_Boxes(let_UpdateBoxes)
+    }
+ 
+    //useEffect(()=>{
+    //let let_UpdateBoxes=U04_UpdateType(SS_ThisBox,ss_Boxes,SS_ThisBoxType)
+    //let_UpdateBoxes=U04_UpdateColor(SS_ThisBox,ss_Boxes,SS_ThisBoxColor)
+    //setSS_Boxes(let_UpdateBoxes)
+    //},[SS_ThisBox,SS_ThisBoxType])
+ 
+        //let let_Input:string=(document.getElementById('C05id_CreatingNewBox') as HTMLInputElement).value.toString();
+        //let ss_Boxes=[...SS_Boxes]
+        //let let_UpdateBoxes=C04_Create(ss_Boxes,let_Input)
+        //setSS_Boxes(let_UpdateBoxes)
+ 
+f_UpdateNumber(box.Key,index)
+ 
+Number(
+ 
+f_UpdateType
+ 
+f_setColor
+ 
+|nul
+ 
+f_Delete
+ 
+                
+ 
+ss_AddBoxXYWH[index]=let_input
+ 
+        if(SS_UpdateMode==='IsShow'){}
+ 
+    const [SS_AddBoxIsShow,setSS_AddBoxIsShow]=useState<boolean>(false)
+ 
+            if(Mode==='IsShow') {
+                let let_input=(document.getElementById('C05id_AddBox'+Mode+box.Key.toString())as HTMLInputElement).value.toString()
+                setSS_AddBoxIsShow(let_input)
+            }
+ 
+''
+ 
++'_'+index.toString()
+ 
++'_'+index.toString()
+ 
++'_'+index.toString()
+ 
+Type
+ 
+Color
+ 
+
+        // Update
+        function f_Delete(){
+        let ss_Boxes=[...SS_Boxes]
+        let let_UpdateBoxes=D04_Delete(R04_SelectBox(box.Key,ss_Boxes),ss_Boxes)
+        setSS_ThisBox(let_DefaultBox)
+        setSS_Boxes(let_UpdateBoxes)
+        }
+ 
+        // Update
+        function f_UpdateType(){
+        let ss_Boxes=[...SS_Boxes]
+        let let_Input:string=(document.getElementById('C05id_AddBox'+box.Key.toString()) as HTMLInputElement).value.toString()
+        let let_UpdateBoxes=U04_UpdateType(R04_SelectBox(box.Key,ss_Boxes),ss_Boxes,let_Input)
+        setSS_Boxes(let_UpdateBoxes)
+    }
+
+        // Update
+        function f_setColor(){
+            let let_Input=(document.getElementById('C05id_AddBoxColor'+box.Key.toString())as HTMLInputElement).value.toString()
+            let ss_Boxes=[...SS_Boxes]
+            let let_UpdateBoxes=U04_UpdateColor(R04_SelectBox(box.Key,ss_Boxes),ss_Boxes,let_Input)
+            setSS_Boxes(let_UpdateBoxes)
+        }
+
+ 
+        // Update
+        function f_UpdateType(){
+        let ss_Boxes=[...SS_Boxes]
+        let let_Input:string=(document.getElementById('C05id_AddBox'+box.Key.toString()) as HTMLInputElement).value.toString()
+        let let_UpdateBoxes=U04_UpdateType(R04_SelectBox(box.Key,ss_Boxes),ss_Boxes,let_Input)
+        setSS_Boxes(let_UpdateBoxes)
+    }
+
+        // Update
+        function f_setColor(){
+            let let_Input=(document.getElementById('C05id_AddBoxColor'+box.Key.toString())as HTMLInputElement).value.toString()
+            let ss_Boxes=[...SS_Boxes]
+            let let_UpdateBoxes=U04_UpdateColor(R04_SelectBox(box.Key,ss_Boxes),ss_Boxes,let_Input)
+            setSS_Boxes(let_UpdateBoxes)
+        }
+
+ 
+            if(Mode===)
+ 
+Type
+ 
+        let ss:TS_Box=SS_ThisBox
+ 
+    const [SS_ThisBoxType,setSS_ThisBoxType]=useState<string>('Rectangle')
+    const [SS_ThisBoxColor,setSS_ThisBoxColor]=useState<string>('#000000')
+ 
+            <h1>{'C05id_AddBoxType'+box.Key.toString()}</h1>
+ 
+
+
+
+        '''
+        SS_nDMatrix_str = request.form.get('SS_nDMatrix')
+        SS_nDMatrix_list = SS_nDMatrix_str.split(',')
+        SS_nDMatrix_list = [float(item) for item in SS_nDMatrix_list]  # Example: convert to float
+        SS_nDMatrix=np.array(SS_nDMatrix_list)#.reshape(-1,5)
+        Is_nDMatrix=SS_IsActicate[0]
+        '''
+ 
+            pass
+ 
+SS_nDMatrix
+ 
+    # X
+    kernel = np.ones((5,5),np.uint8)
+ 
+          formData.append('SS_Boxes',JSON.stringify(SS_Kernals).toString())
+ 
+  useEffect(()=>{
+    JSX_Kernals=SS_Kernals.map((kernal,index)=>{
+        return(<>
+        <U_Kernal
+        SS_Kernals={SS_Kernals}
+        setSS_Kernals={setSS_Kernals}
+        SS_ThisKernal={kernal}
+        Index={index}
+        />
+        </>
+        )})
+  },[SS_Kernals,])
+ 
+            let ss_Index=SS_Index
+ 
+let ss_Index=SS_Index
+ 
+                setSS_Index(ss_Index+1)
+ 
+                setSS_Index(ss_Index-1)
+ 
+    const [SS_PrevIndex,setSS_PrevIndex]=useState<number>(Index)
+ 
+        if(SS_Index!==SS_PrevIndex){
+            //alert('Hello')
+            let ss_Index=SS_Index
+            let ss_PrevIndex=SS_PrevIndex
+            let ss_Kernals=[...SS_Kernals]
+            let let_UpdateKernals=U05_UpdateIndex(ss_Kernals,0,ss_Index)
+            setSS_Kernals(let_UpdateKernals)
+            setSS_PrevIndex(ss_Index)
+        }
+ 
+    alert('FFTSOSS')
+ 
+  let 
+ 
+JSX_Kernals=SS_Kernals.map((kernal,index)=>{
+  return(<>
+  <U_Kernal
+  SS_Kernals={SS_Kernals}
+  setSS_Kernals={setSS_Kernals}
+  SS_ThisKernal={kernal}
+  Index={index}
+  />
+  </>
+  )}
+ 
+U05_UpdateIndex()
+ 
+        if(SS_Index<SS_PrevIndex){}
+ 
+                let 
+ 
+dateIndex
+ 
+
+    function f_UpdateIndex(){
+        let let_Input:string=(document.getElementById('C05id_UpdateIndexKernal'+SS_Index) as HTMLInputElement).value.toString()
+        setSS_Index(let_Input)
+    }
+ 
+<select onChange={f_UpdateIndex}
+style={{fontSize:'15px',height:'25px'}} 
+value={SS_Index} id={'C05id_UpdateIndexKernal'+SS_Index}>
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+ 
+<select onChange={f_UpdateIndex}
+style={{fontSize:'15px',height:'25px'}} 
+value={SS_Index} id={'C05id_UpdateIndexKernal'+SS_Index}>
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+</div>
+ 
+C05id_AddBoxType
+ 
+
+    function f_UpdateIndex(){}
+ 
+<h1>{SS_ThisKernal.Key.toString()}</h1>
+ 
+  <option value="LineY">Vertical Line</option>
+  <option value="Crop" style={{display:'none'}}>Crop</option>
+ 
+.toString()
+ 
+<U_Kernal
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
+SS_Affine={SS_Affine}
+setSS_Affine={setSS_Affine}
+SS_AffineSTR={SS_AffineSTR}
+setSS_AffineSTR={setSS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
+setSS_AffineRGB={setSS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
+setSS_AffineBOOL={setSS_AffineBOOL}
+SS_nDMatrix   ={SS_nDMatrix   }
+setSS_nDMatrix={setSS_nDMatrix}
+SS_nDTable    ={SS_nDTable    }
+setSS_nDTable ={setSS_nDTable }/>
+<U_Kernal
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
+SS_Affine={SS_Affine}
+setSS_Affine={setSS_Affine}
+SS_AffineSTR={SS_AffineSTR}
+setSS_AffineSTR={setSS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
+setSS_AffineRGB={setSS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
+setSS_AffineBOOL={setSS_AffineBOOL}
+SS_nDMatrix   ={SS_nDMatrix   }
+setSS_nDMatrix={setSS_nDMatrix}
+SS_nDTable    ={SS_nDTable    }
+setSS_nDTable ={setSS_nDTable }/>
+<U_Kernal
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
+SS_Affine={SS_Affine}
+setSS_Affine={setSS_Affine}
+SS_AffineSTR={SS_AffineSTR}
+setSS_AffineSTR={setSS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
+setSS_AffineRGB={setSS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
+setSS_AffineBOOL={setSS_AffineBOOL}
+SS_nDMatrix   ={SS_nDMatrix   }
+setSS_nDMatrix={setSS_nDMatrix}
+SS_nDTable    ={SS_nDTable    }
+setSS_nDTable ={setSS_nDTable }/>
+ 
+    KERNAL.Kernal_str=[
+        ['0','0','0','0','0'],
+        ['0','0','0','0','0'],
+        ['0','0','1','0','0'],
+        ['0','0','0','0','0'],
+        ['0','0','0','0','0'],
+    ]
+ 
+    KERNAL.Kernal_str=[
+        ['1','1','1','1','1'],
+        ['1','1','1','1','1'],
+        ['1','1','1','1','1'],
+        ['1','1','1','1','1'],
+        ['1','1','1','1','1'],
+    ]
+ 
+        const stringTable = SS_nDMatrix.map(row => row.map(cell => cell.toString()));
+        setSS_nDTable(stringTable);
+ 
+/*
+     convert all number in SS_nDMatrix to string.
+     */
+ 
+ss_ThisKernal.Kernal_str
+ 
+        Kernal_str:[
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+        ],
+ 
+        Kernal_str:[
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+        ],
+ 
+        Kernal_str:[
+            ['0','0','0','0','0'],
+            ['0','0','0','0','0'],
+            ['0','0','1','0','0'],
+            ['0','0','0','0','0'],
+            ['0','0','0','0','0'],
+        ],
+ 
+    Kernal_str:string[][],
+ 
+SS_InputMatrix
+ 
+    let let_Index=SS_ThisKernal.Index
+ 
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=false
+ 
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=true
+ 
+        ss_IsActivate[0]=true
+ 
+        let ss_IsActivate=[...SS_IsActivate]
+ 
+        let ss_IsActivate=[...SS_IsActivate]
+ 
+        ss_IsActivate[0]=true
+ 
+Convolution
+ 
+numbe
+ 
+setSS_IsActivate,
+ 
+setSS_nDMatrix,
+ 
+setSS_nDTable 
+ 
+setSS_nDTable :(S:string[][])=>void
+ 
+setSS_nDMatrix:(S:number[][])=>void
+ 
+setSS_IsActivate:(S:boolean[])=>void
+ 
+SS_Affine       :number[][][]
+setSS_Affine    :(S:number[][][])=>void
+SS_AffineSTR    :string[][][]
+setSS_AffineSTR :(S:string[][][])=>void
+SS_AffineRGB    :string[][]
+setSS_AffineRGB :(S:string[][])=>void
+SS_AffineBOOL:boolean[][]
+setSS_AffineBOOL:(S:boolean[][])=>void
+ 
+SS_Affine ,  
+setSS_Affine,
+SS_AffineSTR    ,
+setSS_AffineSTR ,
+SS_AffineRGB,
+setSS_AffineRGB,
+SS_AffineBOOL,
+setSS_AffineBOOL,
+ 
+SS_IsActivate:boolean[];
+setSS_IsActivate:(S:boolean[])=>void
+SS_Affine       :number[][][]
+setSS_Affine    :(S:number[][][])=>void
+SS_AffineSTR    :string[][][]
+setSS_AffineSTR :(S:string[][][])=>void
+SS_AffineRGB    :string[][]
+setSS_AffineRGB :(S:string[][])=>void
+SS_AffineBOOL:boolean[][]
+setSS_AffineBOOL:(S:boolean[][])=>void
+ 
+SS_IsActivate,
+setSS_IsActivate,
+SS_Affine ,  
+setSS_Affine,
+SS_AffineSTR    ,
+setSS_AffineSTR ,
+SS_AffineRGB,
+setSS_AffineRGB,
+SS_AffineBOOL,
+setSS_AffineBOOL,
+ 
+  SS_IsActivate:boolean[];
+  setSS_IsActivate:(S:boolean[])=>void
+SS_Affine       :number[][][]
+setSS_Affine    :(S:number[][][])=>void
+SS_AffineSTR    :string[][][]
+setSS_AffineSTR :(S:string[][][])=>void
+SS_AffineRGB    :string[][]
+setSS_AffineRGB :(S:string[][])=>void
+SS_AffineBOOL:boolean[][]
+setSS_AffineBOOL:(S:boolean[][])=>void
+SS_nDMatrix   :number[][]
+setSS_nDMatrix:(S:number[][])=>void
+SS_nDTable    :string[][]
+setSS_nDTable :(S:string[][])=>void
+ 
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
+SS_Affine={SS_Affine}
+setSS_Affine={setSS_Affine}
+SS_AffineSTR={SS_AffineSTR}
+setSS_AffineSTR={setSS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
+setSS_AffineRGB={setSS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
+setSS_AffineBOOL={setSS_AffineBOOL}
+SS_Kernals={SS_Kernals}
+ 
+SS_nDMatrix   ={SS_nDMatrix   }
+setSS_nDMatrix={setSS_nDMatrix}
+SS_nDTable    ={SS_nDTable    }
+setSS_nDTable ={setSS_nDTable }
+ 
+SS_nDTable    :string[][]
+ 
+SS_nDMatrix      ={SS_nDMatrix      }
+SS_nDTable       ={SS_nDTable       }
+ 
+        {Key:1,Name:'Convolution',Kernal:[
+            [0,0,0,0,0,],
+            [0,0,0,0,0,],
+            [0,0,0,0,0,],
+            [0,0,0,0,0,],
+            [0,0,0,0,0,],
+        ]},
+        {Key:2,Name:'Convolution',Kernal:[
+            [0,0,0,0,0,],
+            [0,0,0,0,0,],
+            [0,0,0,0,0,],
+            [0,0,0,0,0,],
+            [0,0,0,0,0,],
+        ]},
+ 
+    const [SS_nDMatrix,setSS_nDMatrix]=useState<number[][]>(
+       [[0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,1,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0]]
+    )
+    const [SS_nDTable,setSS_nDTable]=useState<string[][]>(
+       [['0','0','0','0','0'],
+        ['0','0','0','0','0'],
+        ['0','0','1','0','0'],
+        ['0','0','0','0','0'],
+        ['0','0','0','0','0']]
+    )
+ 
+    Order:number,
+ 
+/*
+type TS_Kernal={
+    Key:number,
+    Name:string,
+    Kernal:number[][],
+    Kernal_str:string[][],
+    Order:number,
+    Iterations:number,
+    IsActivate:boolean
+}
+
+export default TS_Kernal
+*/
+ 
+    /*
+Type 'TS_Kernal[]' is missing the following properties from type 'TS_Kernal': Key, Name, Kernal, Kernal_str, and 3 more
+ 
+     */
+ 
+Previous
+ 
+    var b = list[y];
+list[y] = list[x];
+list[x] = b;
+ 
+    THISKERNAL:TS_Kernal,
+ 
+    PREVIOUSORDER
+ 
+if(ORDER>0 && ORDER<4){
+    KERNAL.Order=ORDER
+    }
+    else if (ORDER<=0){
+        ORDER=1
+    }
+ 
+    ISACTIVE:boolean
+ 
+    // Delete the column with selected key
+    for(let i:number=0;i<BOXES.length;i++){
+        if(BOXES[i].Type[0]==='Crop'){
+            BOXES[i].Type[0]='Frame'
+        }
+        if(BOXES[i].Key===THISBOX.Key){
+            THISBOX.Type[0]='Crop'
+        }
+    }
+    return BOXES
+ 
+    // Renamed Column
+ 
+    // All BOXES
+    BOXES:TS_Box[]
+ 
+const let_Width='100%'
+ 
+</>
+ 
+
+</div>
+ 
+</>
+ 
+<div style={{height:`calc(100vh - 40px - ${(143+20)}px )`,width:let_Width,backgroundColor:'lightblue'}}>
+ 
+{/*
+<div style={{backgroundColor:'#33AAFF',height:'10px',marginTop:'-5px',width:'100%'}}></div>
+<U_Affine
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
+SS_Affine={SS_Affine}
+setSS_Affine={setSS_Affine}
+SS_AffineSTR={SS_AffineSTR}
+setSS_AffineSTR={setSS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
+setSS_AffineRGB={setSS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
+setSS_AffineBOOL={setSS_AffineBOOL}
+/>*/}
+ 
+  let let_TotalSize=5
+  let let_Status='Error'
+  if(SS_IsActivate[0]===true){
+    let_Status='(Active)'
+  }
+  else{
+    let_Status='(Inactive)'
+  }
+  let JSX_Con=[]
+  const let_Width='100%'
+  for(let i=0;i<let_TotalSize;i++){
+    let JSX_Kernals=[]
+    for(let j=0;j<let_TotalSize;j++){
+      JSX_Kernals.push([i,j])
+    }
+    JSX_Con.push(JSX_Kernals)
+  }
+  let JSX_Convolution=JSX_Con.map((i)=>(<tr>{i.map((j)=>(<td><input 
+    onChange={()=>f_OnChange(j[0],j[1])}
+    value={(SS_nDTable[j[0]][j[1]]).toString()} 
+    id={'C04id_Kernal'+(j[0]*10+j[1]).toString()}></input></td>))}</tr>))
+
+//****************************************************************************
+// FUNCTION_00: On Change
+//****************************************************************************
+    function f_OnChange(id0:number,id1:number){
+        let let_input=(document.getElementById('C04id_Kernal'+(id0*10+id1).toString()) as HTMLInputElement).value.toString();
+        let ss_nDTable=[...SS_nDTable]
+        ss_nDTable[id0][id1]=let_input
+        setSS_nDTable(ss_nDTable);
+        (document.getElementById('C04id_Kernal'+(id0*10+id1).toString()) as HTMLInputElement).value = let_input;
+      }
+
+//****************************************************************************
+// FUNCTION_01: Reset
+//****************************************************************************
+      function f_Reset(){
+        setSS_nDMatrix(
+        [[0,0,0,0,0],
+         [0,0,0,0,0],
+         [0,0,1,0,0],
+         [0,0,0,0,0],
+         [0,0,0,0,0]])
+        setSS_nDTable(
+        [['0','0','0','0','0'],
+         ['0','0','0','0','0'],
+         ['0','0','1','0','0'],
+         ['0','0','0','0','0'],
+         ['0','0','0','0','0']])
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=true
+        setSS_IsActivate(ss_IsActivate)
+      }
+
+      function f_OnePunchMan(){
+        setSS_nDMatrix(
+        [[1,1,1,1,1],
+         [1,1,1,1,1],
+         [1,1,1,1,1],
+         [1,1,1,1,1],
+         [1,1,1,1,1]])
+        setSS_nDTable(
+        [['1','1','1','1','1'],
+         ['1','1','1','1','1'],
+         ['1','1','1','1','1'],
+         ['1','1','1','1','1'],
+         ['1','1','1','1','1']])
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=true
+        setSS_IsActivate(ss_IsActivate)
+      }
+
+//****************************************************************************
+// FUNCTION_01: Update Matrix
+//****************************************************************************
+        function f_Update(){
+          let ss_nDMatrix=[...SS_nDMatrix]
+          let ss_nDTable=[... SS_nDTable]
+          for(let i=0;i<let_TotalSize;i++){
+          for(let j=0;j<let_TotalSize;j++){
+            if(isNaN(parseFloat(SS_nDTable[i][j]))===false){
+              //alert(SS_nDTable[i])
+              ss_nDMatrix[i][j]=parseFloat(ss_nDTable[i][j])
+            }
+            else{
+              ss_nDMatrix[i][j]=0
+            }}
+          }
+          setSS_nDMatrix(ss_nDMatrix)
+
+        for(let i=0;i<let_TotalSize;i++){
+          for(let j=0;j<let_TotalSize;j++){
+            //if(isNaN(parseFloat(ss_nDTable[i][j]))){
+            //  ss_nDTable[i][j]='1'//let_2DMatrix[i].toString()
+            //}
+            if(ss_nDTable[i][j]!==ss_nDMatrix[i][j].toString()){
+              ss_nDTable[i][j]=ss_nDMatrix[i][j].toString()
+            }
+          }
+        }
+        setSS_nDTable(ss_nDTable)
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=true
+        setSS_IsActivate(ss_IsActivate)
+        }
+
+//****************************************************************************
+// FUNCTION_02: Activate or Deactivate SS_nDMatrix
+//****************************************************************************
+
+      function f_SetDeActivate(){
+        let ss_IsActivate=[...SS_IsActivate]
+        ss_IsActivate[0]=false
+        setSS_IsActivate(ss_IsActivate)
+      }
+ 
+<div style={{height:`calc(100vh - 40px - ${(143+20)}px )`,width:let_Width,backgroundColor:'lightblue'}}>
+
+</div>
+ 
+  <div style={{display:'flex',marginTop:'10px'}}>
+    <h1 className='C05id_Zoom' style={{marginTop:'10px',marginLeft:'10px'}}>Convolution {let_Status}</h1>
+  </div>
+  
+<div className='C05id_Convolution' style={{marginLeft:'10px'}}>
+<div style={{marginTop:'20px'}}></div>
+{JSX_Convolution}
+    <button style={{backgroundColor:SS_IsActivate[0]? 'lightgreen':'white'}} onClick={f_Update}>Activate</button>
+    <button style={{backgroundColor:SS_IsActivate[0]? 'white':'lightgreen'}} onClick={f_SetDeActivate}>Deactivate</button>
+    <button onClick={f_Reset}>Reset</button>
+    <button onClick={f_OnePunchMan}>Matrix 1</button>
+</div>
+<hr/>
+
+{/*
+<div style={{backgroundColor:'#33AAFF',height:'10px',marginTop:'-5px',width:'100%'}}></div>
+<U_Affine
+SS_IsActivate={SS_IsActivate}
+setSS_IsActivate={setSS_IsActivate}
+SS_Affine={SS_Affine}
+setSS_Affine={setSS_Affine}
+SS_AffineSTR={SS_AffineSTR}
+setSS_AffineSTR={setSS_AffineSTR}
+SS_AffineRGB={SS_AffineRGB}
+setSS_AffineRGB={setSS_AffineRGB}
+SS_AffineBOOL={SS_AffineBOOL}
+setSS_AffineBOOL={setSS_AffineBOOL}
+/>*/}
+ 
+ iterations = 1
+ 
+    # X
+ 
+        false   //
+ 
+<div style={{backgroundColor:'#33AAFF',height:'10px',marginTop:'-5px',width:'100%'}}></div>
+ 
+setSS_UseEffect,
+ 
+setSS_UseEffect:(S:boolean)=>void
+ 
+      setSS_UseEffect(true)
+ 
+      setSS_UseEffect(true)
+ 
+    setSS_UseEffect={setSS_Use}
+ 
+    if(SS_IsRGB===true){
+      let_State='Color'
+      let_Color[0]='white'
+      let_Color[1]='lightgreen'
+    }
+    else{
+      let_State='Gray'
+      let_Color[0]='lightgreen'
+      let_Color[1]='white'
+    }
+ 
+      setSS_IsRGB(true)
+ 
+      setSS_IsRGB(false)
+ 
+SS_IsRGB,
+ 
+setSS_IsRGB
+ 
+setSS_IsRGB:(S:boolean)=>void
+ 
+SS_IsRGB:boolean
+ 
+SS_IsRGB,
+setSS_UseEffect,
+setSS_IsRGB
+ 
+SS_IsRGB:boolean
+setSS_UseEffect:(S:boolean)=>void
+setSS_IsRGB:(S:boolean)=>void
+ 
+def get_grayscale(image):
+    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+ 
+
+              setSS_ImageDimensions([img.width,img.height])
+ 
+              // Once the image has loaded, you can retrieve its dimensions
+ 
+              // How can I get width and height of this image?
+ 
+              //alert(JSON.stringify(data));
+              // Change Image
+ 
+      loadImageDimensions()
+ 
+      const loadImageDimensions = () => {
+      if (SS_ImageFile) {
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+          const img = new Image();
+
+          img.onload = () => {
+            setSS_ImageDimensions([img.width, img.height]);
+          };
+
+          img.src = e.target?.result as string;
+        };
+
+        reader.readAsDataURL(SS_ImageFile);
+      }
+    };
+ 
+              imageURL.onload = () => {
+                setSS_ImageDimensions([imageURL.width, imageURL.height]);
+              };
+ 
+      const loadImageDimensions = () => {
+      if (SS_ImageFile) {
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+          const img = new Image();
+
+          img.onload = () => {
+            setSS_ImageDimensions([img.width, img.height]);
+          };
+
+          img.src = e.target?.result as string;
+        };
+
+        reader.readAsDataURL(SS_ImageFile);
+      }
+    };
+ 
+loadImageDimensions();
+ 
+loadImageDimensions();
+ 
+ style={{fontSize:'14px',marginTop:'-20px',marginBottom:'5px'}} 
+ 
+<h1 style={{fontSize:'14px',}} >Image Name: {SS_Image}</h1>
+ 
+? SS_Image.slice(0, 10):''
+ 
+{ width: number; height: number }
+ 
+height: 
+ 
+{ width: 
+ 
+ image
+ 
+<h1 id='C02id_DivHeader' style={{marginTop:'-30px',marginBottom:'-10px'}} >Image Size:</h1>
+ 
+<h1 id='C02id_DivHeader' >Image Name:</h1>
+ 
+<div id='C02id_DivButton'>
+<button onClick={()=>alert('f_CreateRow ')}>Ok</button>
+<button onClick={()=>alert('f_ResetInput')}id='C02id_B2133' >Reset Input</button>
+</div>
+ 
+                print('Position X',xy[0])
+                print('Width',xy[0]+int(xy[2]))
+                print('Position Y',xy[1])
+                print('Height',xy[1]+int(xy[3]))
+ 
+int(xy[1]):int(xy[1])+int(xy[3])
+ 
+                (int(xy[0]),int(xy[1])), 
+                (int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])), 
+ 
+{box.Key},{box.Type}
+ 
+(document.getElementById('C05id_AddBoxType'+box.Key.toString()) as HTMLInputElement).value.toString()
+ 
+            function f_Crop(){
+                let ss_Boxes=[...SS_Boxes]
+                let let_UpdateBoxes=U04_SetTypeCrop(R04_SelectBox(box.Key,ss_Boxes),ss_Boxes)
+                
+            }
+ 
+        if(BOXES[i].Type[0]==='Crop')
+ 
+            break
+ 
+    TYPE:string,
+ 
+ginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+ 
+<input type="submit" id={'C05id_AddBoxNumber'+box.Key.toString()+'_i'} style={{height:'20px',mar
+ 
+<button style={{height:'25px'}} onClick={()=>alert('f_UpdateNumber(box.Key,index)')}>Ok</button>
+ 
+k
+ 
+x',marginLeft:'auto',marginRight:'10px'}}></input>
+ 
+<input id={'C05id_AddBoxNumber'+box.Key.toString()+'_i'} style={{height:'20px',marginTop:'0px',width:'100p
+ 
+{name}: {box.XYWH[index]}
+ 
++index.toString()
+ 
+lineWidth=1
+ 
+                lineWidth=1
+                
+ 
+#int(xy[4])
+ 
+        alert(let_Input)
+ 
+key:number
+ 
+        setSS_ThisBox(R04_SelectBox(key,ss_Boxes))
+ 
+        let ss_Boxes=[...SS_Boxes]
+ 
+value.toString()
+ 
+        let let_Input=(document.getElementById('C05id_AddBoxColor'+box.Key.toString())as HTMLInputElement).
+ 
+        let let_Input:string=(document.getElementById('C05id_AddBoxType'+key.toString()) as HTMLInputElement).value.toStri
+ 
+    function f_UpdateType(key:number){
+        let ss_Boxes=[...SS_Boxes]
+        setSS_ThisBox(R04_SelectBox(key,ss_Boxes))
+        let let_Input:string=(document.getElementById('C05id_AddBoxType'+key.toString()) as HTMLInputElement).value.toString();
+        setSS_ThisBoxType(let_Input)
+    }
+ 
+key:number
+ 
+    function f_Delete(key:number){
+        let ss_Boxes=[...SS_Boxes]
+        let let_UpdateBoxes=D04_Delete(R04_SelectBox(key,ss_Boxes),ss_Boxes)
+        setSS_ThisBox(let_DefaultBox)
+        setSS_Boxes(let_UpdateBoxes)
+    }
+ 
+(box.Key)
+ 
+key:number
+ 
+    function f_OpenDeleteBox(key:number){
+        setSS_ThisBoxMode(1)
+        let ss_Boxes=[...SS_Boxes]
+        setSS_ThisBox(R04_SelectBox(key,ss_Boxes))
+    }
+ 
+            setSS_ThisBoxColor(let_Input)
+ 
+id:number
+ 
+            setSS_ThisBox(R04_SelectBox(box.Key,ss_Boxes))
+ 
+Point1 
+ 
+                'Point2 X',
+ 
+                'Point2 Y',
+ 
+                print('Normal Distribution Album')
+                print(XYWH)
+                print(type(XYWH))
+ 
+        for i in SS_Boxes_XYWH:
+            print(i)
+ 
+                print('There is God!')
+ 
+end_point
+ 
+start_point
+ 
+    Color
+ 
+                'Point2 Y',
+ 
+                'Point1 Y',
+ 
+                'Point2 X',
+ 
+                'Point1 X',
+ 
+                'Point1 X',
+ 
+                'Point1 Y',
+ 
+
+        #for i in SS_Boxes:
+        #    SS_Boxes_Number.append(i[1])
+        #    SS_Boxes_Type.append(i[2])
+        #    SS_Boxes_IsShow.append(i[3])
+        #for i in SS_Boxes_Number:
+        #    print(i)
+ 
+
+        '''
+        [
+            [86, True, '#000000'],
+            [148, True, '#e1e1e1'],
+            [284, True, '#5b5b5b']
+        ]
+        '''
+ 
+        
+        print('WillWood')
+        print(SS_Boxes_str)
+ 
+for item in SS_Boxes_data]
+ 
+],item['XYWH'], item['Type'], item['IsShow']] 
+ 
+
+        #SS_Boxes_list=SS_Boxes_str.split(',')
+        #print(SS_Boxes_list)
+        
+        #for i in SS_Boxes_list:
+        #    print(json.loads(i))
+        #SS_Boxes_DictList=[]
+        #for i in SS_Boxes_list:
+        #    SS_Boxes_DictList.append(json.loads(i))
+        #for i in SS_Boxes_DictList:
+        #    print(i)
+
+        #for i in SS_Boxes_data:
+        #    print(i)
+        #SS_Boxes = [[item['Key'
+ 
+        SS_Boxes_ls = SS_Boxes_str.split(',')[0].split(' ')
+        SS_Boxes_list=[(item) for item in SS_Boxes_ls]
+        #for i in SS_Boxes_ls:
+        #    pass
+ 
+json.loads
+ 
+type
+ 
+.split(',')[0]
+ 
         # NameError: name 'SS_B' is not defined
         # I never write variable name 'SS_B'
  

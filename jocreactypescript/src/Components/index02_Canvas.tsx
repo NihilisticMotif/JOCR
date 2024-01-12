@@ -9,6 +9,7 @@ import C06_CommandLine from './C06_CommandLine/index';
 import C04_ImageEditor from './C04_ImageEditor/index';
 import TS_Row from './T01_Row/An_Index';
 import TS_Threshold from './T03_Threshold/An_Index';
+import TS_Kernal from './T05_Kernal/An_Index';
 import { U03_Sort } from './T03_Threshold/U03_Sort';
 // CSS
 import './index02_Canvas.css'
@@ -20,8 +21,7 @@ interface IN_02_Canvas{
   SS_AffOrigin:string[]
 SS_IsActivate:boolean[]
 SS_IsShow:boolean
-SS_nDMatrix   :number[][]
-SS_nDTable    :string[][]
+SS_Kernals:TS_Kernal[]
 SS_Affine       :number[][][]
 SS_AffineSTR    :string[][][]
 SS_AffineRGB    :string[][]
@@ -43,8 +43,7 @@ setSS_AffineBOOL:(S:boolean[][])=>void
 setSS_AffineRGB :(S:string[][])=>void
 setSS_AffineSTR :(S:string[][][])=>void
 setSS_Affine    :(S:number[][][])=>void
-setSS_nDTable :(S:string[][])=>void
-setSS_nDMatrix:(S:number[][])=>void
+setSS_Kernals:(S:TS_Kernal[])=>void
 setSS_IsActivate:(S:boolean[])=>void
 setSS_Zoom      :(S:number)=>void
 setSS_WidthImage:(S:number)=>void
@@ -70,10 +69,8 @@ SS_IsActivate     ,
 SS_IsShow         ,
 setSS_IsShow      ,
 setSS_IsActivate  ,
-SS_nDMatrix       ,  
-setSS_nDMatrix    ,
-SS_nDTable        ,
-setSS_nDTable     ,
+SS_Kernals,
+setSS_Kernals,
 SS_Affine         ,  
 setSS_Affine      ,
 SS_AffineSTR      ,
@@ -105,8 +102,7 @@ setSS_Thresholds  ,
   SS_AffOrigin:string[]
 SS_IsActivate:boolean[]
 SS_IsShow:boolean
-SS_nDMatrix   :number[][]
-SS_nDTable    :string[][]
+SS_Kernals:TS_Kernal[]
 SS_Affine       :number[][][]
 SS_AffineSTR    :string[][][]
 SS_AffineRGB    :string[][]
@@ -128,8 +124,7 @@ setSS_AffineBOOL:(S:boolean[][])=>void
 setSS_AffineRGB :(S:string[][])=>void
 setSS_AffineSTR :(S:string[][][])=>void
 setSS_Affine    :(S:number[][][])=>void
-setSS_nDTable :(S:string[][])=>void
-setSS_nDMatrix:(S:number[][])=>void
+setSS_Kernals:(S:TS_Kernal[])=>void
 setSS_IsActivate:(S:boolean[])=>void
 setSS_Zoom      :(S:number)=>void
 setSS_WidthImage:(S:number)=>void
@@ -143,6 +138,7 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
 //****************************************************************************
 // HOOK
 //****************************************************************************
+  const [SS_ImageDimensions, setSS_ImageDimensions] = useState<number[] | null>(null);
   const let_fetchImage = async () => {
     // https://stackoverflow.com/questions/72023176/how-to-send-post-request-from-react-to-flask-without-submit-button
     // https://stackoverflow.com/questions/73678855/fetch-and-display-image-from-api-react
@@ -150,8 +146,6 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
           let ss_Thresholds=[...SS_Thresholds]
           let let_UpdateThresholds=U03_Sort(ss_Thresholds)
           setSS_Thresholds(let_UpdateThresholds)
-          //alert(SS_AffineRGB)
-          //alert(SS_Affine)
           const formData = new FormData();
           formData.append('file', SS_ImageFile);
           formData.append('SS_Aff',SS_Aff.toString())
@@ -161,11 +155,11 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
           formData.append('SS_Affine',SS_Affine.toString())
           formData.append('SS_AffineRGB',SS_AffineRGB.toString())
           formData.append('SS_AffineBOOL',SS_AffineBOOL.toString())
-          formData.append('SS_nDMatrix',SS_nDMatrix.toString())
+          formData.append('SS_Kernals',JSON.stringify(SS_Kernals).toString())
           formData.append('SS_Thresholds',JSON.stringify(SS_Thresholds).toString())
           formData.append('SS_IsShow',SS_IsShow.toString())
-          formData.append('SS_Boxes',SS_Boxes.toString())
-          alert(JSON.stringify(SS_Boxes))
+          formData.append('SS_Boxes',JSON.stringify(SS_Boxes).toString())
+          //alert(JSON.stringify(SS_Boxes))
           // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
           //let let_ImageJson = JSON.stringify(Object.fromEntries(formData));
           fetch('/def_OpenCV', {
@@ -180,10 +174,14 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
             //alert(JSON.stringify(response))
           })
           .then((data) => {
-              //alert(JSON.stringify(data));
-              // Change Image
               const imageURL = URL.createObjectURL(data);
               setSS_Image(imageURL);
+              // By ChatGPT
+              const img = new Image();
+              img.onload = () => {
+              setSS_ImageDimensions([img.width, img.height]);
+              };
+              img.src = imageURL;
           })
           setSS_UseEffect(false)
        }
@@ -216,7 +214,7 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
     SS_IsActivate,
     SS_AffineBOOL,
     SS_AffOrigin,
-    SS_nDMatrix,
+    SS_Kernals,
     SS_Affine,
     SS_Aff,
     SS_Boxes
@@ -341,10 +339,8 @@ setSS_AffOrigin={setSS_AffOrigin}
 setSS_IsShow={setSS_IsShow}
 SS_IsActivate={SS_IsActivate}
 setSS_IsActivate={setSS_IsActivate}
-SS_nDMatrix   ={SS_nDMatrix   }
-setSS_nDMatrix={setSS_nDMatrix}
-SS_nDTable    ={SS_nDTable    }
-setSS_nDTable ={setSS_nDTable }
+SS_Kernals={SS_Kernals}
+setSS_Kernals={setSS_Kernals}
 SS_Affine={SS_Affine}
 setSS_Affine={setSS_Affine}
 SS_AffineSTR={SS_AffineSTR}
@@ -362,6 +358,8 @@ setSS_UseEffect={setSS_UseEffect}
 SS_OpenPanel={SS_OpenPanel}
 SS_Thresholds={SS_Thresholds}
 setSS_Thresholds={setSS_Thresholds}
+SS_ImageDimensions={SS_ImageDimensions}
+SS_Image={SS_Image}
 />
   </div>
     

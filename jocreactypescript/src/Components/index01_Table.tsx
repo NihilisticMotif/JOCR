@@ -11,6 +11,7 @@ import TS_Row from './T01_Row/An_Index';
 import TS_Column from './T02_Column/An_Index'
 import TS_Threshold from './T03_Threshold/An_Index';
 import TS_Box from './T04_Box/An_Index';
+import TS_Kernal from './T05_Kernal/An_Index';
 // CSS
 import './index01_Table.css';
 
@@ -65,6 +66,8 @@ const Components=()=>{
     const [SS_WidthImage, setSS_WidthImage] = useState<number>(0);
     const [SS_IsRGB     ,setSS_IsRGB]=useState<boolean>(true)
     const [SS_ImageFile,setSS_ImageFile]=useState<null|File>(null)
+    // How can I check if the file is the image and 
+    // if so, how can I get the width and height of this file
     const [SS_UseEffect,setSS_UseEffect]=useState<boolean>(true)
 
     // shape = (2,3,2)
@@ -128,25 +131,100 @@ const Components=()=>{
     ])
 
     // C05_Convolution/U_Convolution.tsx
-    const [SS_nDMatrix,setSS_nDMatrix]=useState<number[][]>(
-       [[0,0,0,0,0],
-        [0,0,0,0,0],
-        [0,0,1,0,0],
-        [0,0,0,0,0],
-        [0,0,0,0,0]]
-    )
-    const [SS_nDTable,setSS_nDTable]=useState<string[][]>(
-       [['0','0','0','0','0'],
-        ['0','0','0','0','0'],
-        ['0','0','1','0','0'],
-        ['0','0','0','0','0'],
-        ['0','0','0','0','0']]
-    )
+    const [SS_Kernals,setSS_Kernals]=useState<TS_Kernal[]>([
+        {Key:0,Name:'Convolution',
+        Kernal:[
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,1,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+        ],
+        Kernal_str:[
+            ['0','0','0','0','0'],
+            ['0','0','0','0','0'],
+            ['0','0','1','0','0'],
+            ['0','0','0','0','0'],
+            ['0','0','0','0','0'],
+        ],
+        Iterations:1,
+        IsActivate:false},
+        {Key:1,Name:'Erosion',
+        Kernal:[
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+        ],
+        Kernal_str:[
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+        ],
+        Iterations:1,
+        IsActivate:false},
+        {Key:2,Name:'Dilation',
+        Kernal:[
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+        ],
+        Kernal_str:[
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+        ],
+        Iterations:1,
+        IsActivate:false},
+        {Key:3,Name:'Convolution',
+        Kernal:[
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,1,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+        ],
+        Kernal_str:[
+            ['0','0','0','0','0'],
+            ['0','0','0','0','0'],
+            ['0','0','1','0','0'],
+            ['0','0','0','0','0'],
+            ['0','0','0','0','0'],
+        ],
+        Iterations:1,
+        IsActivate:false},
+        {Key:4,Name:'Open',
+        Kernal:[
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+            [1,1,1,1,1],
+        ],
+        Kernal_str:[
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+            ['1','1','1','1','1'],
+        ],
+        Iterations:1,
+        IsActivate:false},
+    ])
 
     const [SS_IsActivate,setSS_IsActivate]=useState<boolean[]>([
         false,  // C05_Convolution/SS_nDMatrix
         false,  // C05_Convolution/SS_Thresholds
         false,  // C05_Convolution/SS_Affine
+        false,  // C05_Convolution/Erosion
+        false,  // C05_Convolution/Dilation
     ])
     const [SS_IsShow,setSS_IsShow]=useState<boolean>(false)
 
@@ -163,11 +241,11 @@ const Components=()=>{
 +--------------+--------+-----------+--------+--------+--------+--------+--------+
 */
     const [SS_Boxes,setSS_Boxes]=useState<TS_Box[]>([
-            {Key:0,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:false},
-            {Key:1,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:true},
-            {Key:2,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:true},
-            {Key:3,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:true},
-            {Key:4,XYWH:[0,1,2,3,4],Type:['Rectangle','#000000'],IsShow:true},
+            {Key:0,XYWH:[0,0,500,500,4],Type:['Rectangle','#000000'],IsShow:false},
+            {Key:1,XYWH:[0,0,500,500,4],Type:['Rectangle','#000000'],IsShow:true},
+            {Key:2,XYWH:[0,0,500,500,4],Type:['Rectangle','#000000'],IsShow:false},
+            {Key:3,XYWH:[0,0,500,500,4],Type:['Rectangle','#000000'],IsShow:false},
+            {Key:4,XYWH:[0,0,500,500,4],Type:['Rectangle','#000000'],IsShow:false},
         ])
 //****************************************************************************
 // JSX: C02_Iput
@@ -240,8 +318,7 @@ SS_Boxes         ={SS_Boxes         }
 SS_AffOrigin     ={SS_AffOrigin     }
 SS_IsActivate    ={SS_IsActivate    }
 SS_IsShow        ={SS_IsShow        }
-SS_nDMatrix      ={SS_nDMatrix      }
-SS_nDTable       ={SS_nDTable       }
+SS_Kernals       ={SS_Kernals}
 SS_Affine        ={SS_Affine        }
 SS_AffineSTR     ={SS_AffineSTR     }
 SS_AffineRGB     ={SS_AffineRGB     }
@@ -259,8 +336,7 @@ setSS_Boxes      ={setSS_Boxes      }
 setSS_AffOrigin  ={setSS_AffOrigin  }
 setSS_IsActivate ={setSS_IsActivate }
 setSS_IsShow     ={setSS_IsShow     }
-setSS_nDMatrix   ={setSS_nDMatrix   }
-setSS_nDTable    ={setSS_nDTable    }
+setSS_Kernals={setSS_Kernals}
 setSS_Affine     ={setSS_Affine     }
 setSS_AffineSTR  ={setSS_AffineSTR  }
 setSS_AffineRGB  ={setSS_AffineRGB  }

@@ -224,16 +224,16 @@ setSS_AffineBOOL:(S:boolean[][])=>void;
 // OUTPUT
 //****************************************************************************
 return(
-<div style={{width:let_Width,backgroundColor:'#33AAFF'}}>
+<div style={{width:let_Width,backgroundColor:'#33AAFF',marginBottom:'auto',height:'calc(100vh - 210px)'}}>
   <div style={{display:'flex',marginTop:'0px'}}>
     <h1 
     // https://youtu.be/Ad9e5eoHm9U?si=WsJg_lv_-2O3DBMa
     className='C05id_Zoom'>Affine transformation</h1>
   </div>
-  <h1 className='C05id_Zoom' style={{fontSize:'14px'}}>{let_Status}</h1>
-<div className='C05id_Convolution' style={{marginLeft:'10px'}}>
-<div style={{marginTop:'20px'}}></div>
-<hr style={{width:'95%',marginTop:'-10px'}}/>
+  <h1 className='C05id_Zoom' style={{fontSize:'14px',marginTop:'0px'}}>{let_Status}</h1>
+<div className='C05id_Convolution' style={{marginLeft:'10px',marginTop:'0px'}}>
+<div style={{marginTop:'0px'}}></div>
+<hr style={{width:'95%',marginTop:'0px'}}/>
 <h1 style={{fontSize:'16px',marginTop:'0px'}}>Selected Point</h1>
 {JSX_Header}
 {JSX_SelectedPoint}
