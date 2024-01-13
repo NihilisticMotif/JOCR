@@ -5,7 +5,6 @@ import React, { ChangeEvent, useState , useEffect, useRef , useLayoutEffect} fro
 //import R_FilterColumn from './Coms/R_FilterColumn';
 
 // Type
-import C06_CommandLine from './C06_CommandLine/index';
 import C04_ImageEditor from './C04_ImageEditor/index';
 import TS_Row from './T01_Row/An_Index';
 import TS_Threshold from './T03_Threshold/An_Index';
@@ -16,6 +15,9 @@ import './index02_Canvas.css'
 import TS_Box from './T04_Box/An_Index';
 
 interface IN_02_Canvas{
+  OCR_OutputFile:string[]
+  OCR_Languages:string[][]
+  SS_OpenOCR:string
   SS_Aff:number[]
   SS_Boxes:TS_Box[]
   SS_AffOrigin:string[]
@@ -34,6 +36,9 @@ SS_ImageFile :File|null
 SS_UseEffect :boolean
 SS_OpenPanel:0|1|2;
 SS_Thresholds:TS_Threshold[];
+setOCR_OutputFile:(S:string[])=>void
+setOCR_Languages:(S:string[][])=>void
+setSS_OpenOCR:(S:string)=>void
 setSS_Aff:(S:number[])=>void
 setSS_Boxes:(S:TS_Box[])=>void
 setSS_AffOrigin:(S:string[])=>void
@@ -59,6 +64,12 @@ export const Index02_Canvas: React.FC<IN_02_Canvas> = (
 // INPUT
 //****************************************************************************
 {
+  OCR_OutputFile,
+  setOCR_OutputFile,
+  SS_OpenOCR,
+  setSS_OpenOCR,
+  OCR_Languages,
+  setOCR_Languages,
   SS_Aff          ,
   setSS_Aff       ,
   SS_Boxes,
@@ -97,6 +108,9 @@ SS_Thresholds     ,
 setSS_Thresholds  ,
 }
 :{
+  OCR_OutputFile:string[]
+  OCR_Languages:string[][]
+  SS_OpenOCR:string
   SS_Aff:number[]
   SS_Boxes:TS_Box[]
   SS_AffOrigin:string[]
@@ -115,6 +129,9 @@ SS_ImageFile :File|null
 SS_UseEffect :boolean
 SS_OpenPanel:0|1|2;
 SS_Thresholds:TS_Threshold[];
+setOCR_OutputFile:(S:string[])=>void
+setOCR_Languages:(S:string[][])=>void
+setSS_OpenOCR:(S:string)=>void
 setSS_Aff:(S:number[])=>void
 setSS_Boxes:(S:TS_Box[])=>void
 setSS_AffOrigin:(S:string[])=>void
@@ -236,8 +253,9 @@ else{
     let_MarginTop='0px'
   }
 
-  let let_undo='<='
-  let let_cando='=>'
+  // let let_undo='<='
+  // let let_cando='=>'
+
 //****************************************************************************
 // Function 00: Import Image
 //****************************************************************************
@@ -283,8 +301,9 @@ else{
     <div id='I02id_DivHeader' style={{paddingTop:'3px',paddingBottom:'3px'}}>
         {JSX_OpenC01}
         
-        <td><button className='I02id_Header'>{let_undo}</button></td>
+        {/*<td><button className='I02id_Header'>{let_undo}</button></td>
         <td><button className='I02id_Header'>{let_cando}</button></td>
+        */}
         <td><button className='I02id_Header' style={{whiteSpace:'nowrap'}}>Export Image</button></td>
         <td>
         <input type="file" accept="image/*" className='I02id_Header' onChange={f_ImageChange} />
@@ -292,7 +311,6 @@ else{
         {//<td><button className='I02id_Header' >Export Image</button></td>
         }
     </div>
-<C06_CommandLine/>
     
 <div id='I02id_Body' 
 style={{width:(SS_WidthImage).toString()+'px'}}
@@ -301,14 +319,14 @@ style={{width:(SS_WidthImage).toString()+'px'}}
   <div className='I02id_Image' 
     style={{
       width:`calc(100% - ${let_RightToolW}px)`,
-      height:`calc(100vh - ${143+20}px)`,
+      height:`calc(100vh - ${60}px)`,
       overflowX:'hidden',
       overflowY:'hidden',
     }}
   >
   <div style={{
       marginTop:`calc( ${(1/SS_Zoom)}*100vh - ${(1/SS_Zoom)*(143+20)}px - ${(1/SS_Zoom)} * 100vh + ${(1/SS_Zoom)*(143+40)}px -10 )`,
-      height:`calc(100vh - ${143+20}px)`,
+      height:`calc(100vh - ${60}px)`,
       backgroundColor:'greenyellow',
       overflowY:'scroll',
       overflowX:'scroll'
@@ -326,9 +344,29 @@ style={{width:(SS_WidthImage).toString()+'px'}}
   }
   </div>
   </div>
-
-
+{/*
+<div
+style={{display:'block'}}
+>
+<div
+style={{backgroundColor:'red',height:'30px',width:'100%',display:'flex'}}
+>
+{
+  //<h1 style={{fontSize:'14px'}}>Edit Mode</h1>
+  }
+<button>Image Editor</button>
+<button>OCR Command</button>
+</div>
+<div
+style={{display:'flex'}}
+>*/}
 <C04_ImageEditor
+OCR_OutputFile={OCR_OutputFile}
+setOCR_OutputFile={setOCR_OutputFile}
+OCR_Languages={OCR_Languages}
+setOCR_Languages={setOCR_Languages}
+SS_OpenOCR={SS_OpenOCR}
+setSS_OpenOCR={setSS_OpenOCR}
 SS_Boxes={SS_Boxes}
 setSS_Boxes={setSS_Boxes}
 SS_IsShow={SS_IsShow}
@@ -361,8 +399,8 @@ setSS_Thresholds={setSS_Thresholds}
 SS_ImageDimensions={SS_ImageDimensions}
 SS_Image={SS_Image}
 />
+</div>
   </div>
-    
-    </div>
+
   );
 };

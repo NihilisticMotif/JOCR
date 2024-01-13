@@ -3,11 +3,12 @@ import { useState , useEffect} from 'react';
 import './index.css'
 
 import C05_Convolution from '../C05_Convolution/index';
+import C06_OCREditor from '../C06_OCREditor/index';
 import U_Zoom from './Coms/U_Zoom';
 import U_IsRGB from './Coms/U_IsRGB';
 import U_UpdateImage from './Coms/U_UpdateImage';
 import U_Aff from './Coms/U_Aff'
-
+import M_OCRorImage from './Coms/M_OCRorImage'
 import TS_Threshold from '../T03_Threshold/An_Index';
 import TS_Box from '../T04_Box/An_Index';
 import TS_Kernal from '../T05_Kernal/An_Index';
@@ -22,6 +23,12 @@ const C04_ImageEditor = (
 // INPUT
 //****************************************************************************
 {
+  OCR_OutputFile,
+  setOCR_OutputFile,
+  OCR_Languages,
+  setOCR_Languages,
+  SS_OpenOCR,
+  setSS_OpenOCR,
   SS_ImageDimensions,
   SS_Image,
   SS_Aff,
@@ -54,6 +61,12 @@ setSS_Thresholds,
 SS_IsShow
 }
 :{
+  OCR_OutputFile:string[]
+  setOCR_OutputFile:(S:string[])=>void
+  OCR_Languages:string[][]
+  setOCR_Languages:(S:string[][])=>void
+  SS_OpenOCR:string,
+  setSS_OpenOCR:(S:string)=>void
   SS_ImageDimensions:number[]|null
   SS_Image:string|null
   SS_IsShow:boolean
@@ -96,7 +109,8 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
   // 4 ...
 
   let JSX_ImageProcessingDIV=<></>
-  if(SS_OpenPanel===1){
+  if(SS_OpenPanel===1 //&& SS_OpenOCR==='Image'
+  ){
     JSX_ImageProcessingDIV=<div style={{display:'grid'}}>
       <div style={{display:'flex',height:'40px',overflowX: 'clip'}}>
         <button onClick={()=>{setSS_ImageProcessing(0)}}>Threshold</button>
@@ -129,41 +143,27 @@ SS_Kernals={SS_Kernals}
 setSS_Kernals={setSS_Kernals}
     />
   </div>
-  }else{
-    JSX_ImageProcessingDIV=<></>
   }
+  //if(SS_OpenPanel===1 && SS_OpenOCR==='OCR'){
+  //  //
+  //}
 
-//****************************************************************************
-// OUTPUT
-//****************************************************************************
-return(
-  <>
-  <div className='C04id_Toolbar'
-    style={{
-      width:`${200}px`,
-      height:`calc(100vh - ${143+20}px)`,
-      }}>
-    
+  {//****************************************************************************
+    // Image Editor
+    //****************************************************************************
+  }
+  let JSX_Body=<></>
+  if(SS_OpenOCR==='Image'){
+    JSX_Body=<>
     <div style={{display:'flex',height:'100px'}}>
-      
       <U_Zoom
       SS_Zoom={SS_Zoom}
       setSS_Zoom={setSS_Zoom}/>
-    {//****************************************************************************
-    // RGB or Gray
-    //****************************************************************************
-    }
     <U_IsRGB
     SS_IsRGB={SS_IsRGB}
     setSS_UseEffect={setSS_UseEffect}
     setSS_IsRGB={setSS_IsRGB}/>
-
     </div>
-
-    {//****************************************************************************
-    // Edit Image
-    //****************************************************************************
-    }
     <hr/>
     <U_UpdateImage
     setSS_IsShow={setSS_IsShow}
@@ -183,25 +183,38 @@ return(
     setSS_UseEffect={setSS_UseEffect}
     />
     <hr/>
-
-{/*    <U1_EditImage/>
-
-    //****************************************************************************
-    // Edit Image Setting
-    //****************************************************************************
+    </>
   }
-  <U1_ShapeTextSetting
-  SS_IsShapeSetting={SS_IsShapeSetting}
-  setSS_IsShapeSetting={setSS_IsShapeSetting}
-/>*/}
-  
-  {/*
-  <hr style={{marginTop:'20px'}}/>
-  <U1_2DMatrix
-  SS_3DMatrix ={SS_3DMatrix   }  
-setSS_3DMatrix={setSS_3DMatrix}
-SS_3DTable    ={SS_3DTable    }
-setSS_3DTable ={setSS_3DTable }/>*/}
+  else{
+    JSX_Body=<C06_OCREditor
+    OCR_OutputFile={OCR_OutputFile}
+    setOCR_OutputFile={setOCR_OutputFile}
+    OCR_Languages={OCR_Languages}
+    setOCR_Languages={setOCR_Languages}
+    />
+  }
+
+//****************************************************************************
+// OUTPUT
+//****************************************************************************
+return(
+  <>
+  <div className='C04id_Toolbar'
+    style={{
+      width:`${200}px`,
+      height:`calc(100vh - ${60}px)`,
+      }}>
+    {//****************************************************************************
+    // Tesseract OCR or Image Editor
+    //****************************************************************************
+    }
+    <M_OCRorImage
+    setSS_UseEffect={setSS_UseEffect}
+    SS_OpenOCR={SS_OpenOCR}
+    setSS_OpenOCR={setSS_OpenOCR}
+    />
+    <hr/>
+    {JSX_Body}
   </div>
   {//****************************************************************************
     // Convolution or Threshold

@@ -321,7 +321,7 @@ return(
 onMouseUp={()=>{f_Deactivate()}}
 onMouseLeave={()=>{f_Deactivate()}}
 id='C05id_ThresholdBody'
- style={{height:`calc(100vh - 40px - ${(143+20)}px )`,width:let_Width,backgroundColor:'lightblue',marginTop:'0px'}}>
+ style={{height:`calc( 100% + 100px )`,marginTop:'-100px',width:let_Width,backgroundColor:'lightblue'}}>
   <h1 className='C05id_Zoom' style={{marginTop:'10px',fontSize:'14px'}}>Gray Threshold {let_Status}</h1>
   <div style={{display:'flex',marginTop:'10px'}}>
    <button style={{marginTop:'10px',marginLeft:'10px',backgroundColor:SS_IsActivate[1]? 'lightgreen':'white'}} onClick={f_SetActivate}>Activate</button>

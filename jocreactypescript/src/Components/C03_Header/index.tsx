@@ -24,7 +24,7 @@ const C03_Header = (
     SS_Row,
     SS_Columns,
     SS_C02,
-    setSS_C02,
+    //setSS_C02,
     SS_OpenPanel,
     setSS_OpenPanel,
 }:{
@@ -33,7 +33,7 @@ const C03_Header = (
     SS_Row:TS_Row[],
     SS_Columns:TS_Column[],
     SS_C02:boolean,
-    setSS_C02:(S:boolean)=>void,
+    //setSS_C02:(S:boolean)=>void,
     SS_OpenPanel:0|1|2,
     setSS_OpenPanel:(S:0|1|2)=>void,
 }
@@ -61,13 +61,13 @@ const C03_Header = (
 // FUNCTION_00: Open / Close C02_Input
 //****************************************************************************
     function f_Open(){
-        setSS_C02(true)
+        //setSS_C02(true)
         //if(SS_IsNarrow===false){
         //    setSS_C02(true)
         //}
     }
     function f_Close(){
-        setSS_C02(false)
+        //setSS_C02(false)
     }
 
 //****************************************************************************

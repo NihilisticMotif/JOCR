@@ -49,6 +49,7 @@ const C02_Input = (
 }
 ) => {
     const C02_MarginLeft='10px'
+const let_HeaderHeight=100
 
     // useEffect(()=>{
     //     
@@ -195,7 +196,7 @@ const C02_Input = (
 return(
 <div id='C02id_Div'>
 <div id='C02id_Header'>
-<h1 id='C02id_DivHeader'>Create New Column</h1>
+<h1 id='C02id_DivHeader' >Create New Column</h1>
 <div className='C02id_CreateColumnDiv'>
 <div style={{display:'inline-flex'}}>
 <input id='C02id_CreateColumnInput' style={{height:'20px',marginLeft:'15px'}}>
@@ -207,7 +208,9 @@ Add New Column</button>
 
 </div>
 <h1 id='C02id_DivHeader' >Create New Row</h1>
-<table style={{height:'calc(100vh - 255px)'}}>
+<table style={{
+    height:`calc(100vh - 255px - ${let_HeaderHeight}px )`
+}}>
 {JSX_Input}
 </table>
 

@@ -242,7 +242,8 @@ setSS_Boxes:(S:TS_Box[])=>void
         {
         return (<div className='C02id_CreateRowButton' style={{width:'275px',marginTop:'5px',marginBottom:'-20px'}}>
 <h1>{name}: {box.XYWH[index]}</h1>
-<input id={'C05id_AddBox'+'XYWH'+box.Key.toString()+'_'+index.toString()} style={{height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
+<input id={'C05id_AddBox'+'XYWH'+box.Key.toString()+'_'+index.toString()} style={{
+    height:'20px',marginTop:'0px',width:'100px',marginLeft:'auto',marginRight:'10px'}}></input>
 <button style={{height:'25px'}} onClick={()=>f_Update('XYWH',index)}>Ok</button>
 </div>)}
 )
@@ -301,7 +302,7 @@ value={box.Type[0]} id={'C05id_AddBox'+'Type'+box.Key.toString()}>
 // OUTPUT
 //****************************************************************************
 return(
-<div id='C02id_Div' style={{marginTop:'auto',width:let_Width,height:'calc(100vh - 40px - 100px - 40px - 2px)'}}>
+<div id='C02id_Div' style={{marginTop:'auto',width:let_Width,height:'calc(100vh - 100px)'}}>
 <div id='C02id_Header' style={{height:'75px'}}>
 <h1 id='C02id_DivHeader'>Create New Object</h1>
 <div className='C02id_CreateColumnDiv'>
@@ -309,7 +310,7 @@ return(
 {
     //<input id='C02id_CreateColumnInput' style={{height:'20px',marginLeft:'15px'}}></input>
 }
-<select style={{fontSize:'15px',marginLeft:'10px',marginTop:'-20px',marginBottom:'20px'}}
+<select style={{fontSize:'15px',marginLeft:'10px',marginTop:'-20px',marginBottom:'20px',width:let_Width}}
 id='C05id_CreatingNewBox'
 >
   <option value="Rectangle">Rectangle</option>
@@ -318,7 +319,7 @@ id='C05id_CreatingNewBox'
   <option value="LineX">Horizontal Line</option>
   <option value="LineY">Vertical Line</option>
 </select>
-<button onClick={()=>f_CreateBox()} style={{marginLeft:'5px',marginTop:'-20px',marginBottom:'20px'}}>
+<button onClick={()=>f_CreateBox()} style={{marginLeft:'5px',marginTop:'-20px',marginBottom:'20px',width:let_Width}}>
 Add New Object</button>
 </div>
 </div>
@@ -327,7 +328,7 @@ Add New Object</button>
 <h1>
     Image Size: [{SS_ImageDimensions? SS_ImageDimensions[0]:''},{SS_ImageDimensions? SS_ImageDimensions[1]:''}]
     </h1>
-<table style={{height:`calc(100vh - 255px - ${80}px )`
+<table style={{height:`calc(100vh - 255px - ${40-20}px )`,width:let_Width
 }}>
 {JSX_Input}
 </table>

@@ -1,0 +1,61 @@
+.C06id_LanguageList{
+    overflow-y: auto;
+    background-color: rgb(23, 200, 210);
+    height:150px;
+    padding-left:10px;
+    margin-top:5px
+}
+
+.C06id_LanguageList hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.C06id_LanguageDIV{
+    background-color:rgb(23,
+        200,
+        210);
+    font-size:15px;
+    width:100%;
+    height:240px;
+}
+.C06id_LanguageList h1{
+    font-size: 15px;
+    margin-top:-10px;
+}
+
+.C06id_LanguageList tr{
+    margin-top: -10px;
+}
+
+.C06id_LanguageList hr{
+    margin-top:-2px;
+}
+
+.C06id_LanguageList tr{
+    width:100%;
+}
+
+#C06id_AddLanguage{
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-size:15px;
+}
+
+.C06id_CloseLanguageButton{
+    margin-left:auto
+}
+
+.C06id_languageHeader{
+    margin-top:10px;
+    background-color: rgb(59, 120, 242);
+    height:80px
+}
+.C06id_languageHeader{
+    padding-left:10px
+}

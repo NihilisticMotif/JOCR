@@ -224,7 +224,7 @@ setSS_AffineBOOL:(S:boolean[][])=>void;
 // OUTPUT
 //****************************************************************************
 return(
-<div style={{width:let_Width,backgroundColor:'#33AAFF',marginBottom:'auto',height:'calc(100vh - 210px)'}}>
+<div style={{width:let_Width,backgroundColor:'#33AAFF',marginBottom:'auto',height:'calc(100vh - 100px)'}}>
   <div style={{display:'flex',marginTop:'0px'}}>
     <h1 
     // https://youtu.be/Ad9e5eoHm9U?si=WsJg_lv_-2O3DBMa

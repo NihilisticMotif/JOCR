@@ -7,7 +7,7 @@
 
 .C04id_Toolbar {
     width: var(--C04_RightToolW);
-    background-color: blueviolet;
+    background-color: rgb(175, 110, 235);
     display: inline-block;
 }
 

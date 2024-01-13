@@ -6,6 +6,7 @@ import C01_Table from "./C01_Table";
 import C02_Input from "./C02_Input";
 import C03_Header from './C03_Header';
 import {Index02_Canvas} from './index02_Canvas';
+import C07_TableSetting from './C07_TableSetting'
 // Type
 import TS_Row from './T01_Row/An_Index';
 import TS_Column from './T02_Column/An_Index'
@@ -22,15 +23,13 @@ const Components=()=>{
 //****************************************************************************
     const [SS_EditColumn,setSS_EditColumn]=useState<0|1>(0)
     const [SS_C02,setSS_C02]=useState<boolean>(true)
+    //const SS_C02=true
     const [SS_OpenPanel,setSS_OpenPanel]=useState<0|1|2>(2)
     const [SS_IsNarrow,setSS_IsNarrow]=useState<boolean>(false)
     // 0 = Open only C01_Table
     // 1 = Open only C04_Canvas
     // 2 = Open C01_Table and C04_Canvas
 
-    //useEffect(() => {
-    //    alert(SS_IsNarrow)
-    //},[SS_IsNarrow])
     let let_C02Width=275
 //****************************************************************************
 // DEFAULT INPUT
@@ -53,6 +52,12 @@ const Components=()=>{
         {Key:4 ,Next:5  , Array:['Gorillaz','Demon Days',"Feel Good Inc.",'Hip Hop','04']},
         {Key:5 ,Next:6  , Array:['Mother Mother','O My Heart',"Hayloft",'Indie Rock','05']},
         ])
+    const [SS_Text,setSS_Text]=useState<string[]>(['',''])
+    const [SS_TextDimension,setSS_TextDimension]=useState<number>(0)
+    // 0 = 1 Row
+    // 1 = Multiple Rows
+    // 2 = Table
+    // 3 = Full Table
     
     // C04
     const [SS_Image     , setSS_Image] = useState<string | null>(null);  
@@ -228,6 +233,31 @@ const Components=()=>{
     ])
     const [SS_IsShow,setSS_IsShow]=useState<boolean>(false)
 
+    const [SS_OpenOCR,setSS_OpenOCR]=useState<string>('Image')
+    // 'Image','OCR'
+
+    const [OCR_Languages,setOCR_Languages]=useState<string[][]>([
+        ['tha','Thai'],
+        ['eng','English'],
+  ['afr', 'Afrikaans'],
+  ['amh', 'Amharic'],
+  ['ara', 'Arabic'],
+  ['asm', 'Assamese'],
+  ['aze', 'Azerbaijani'],
+  ['aze_cyrl', 'Azerbaijani (Cyrillic)'],
+  ['bel', 'Belarusian'],
+  ['ben', 'Bengali'],
+  ['bod', 'Tibetan'],
+  ['bos', 'Bosnian'],
+  ['bre', 'Breton'],
+  ['bul', 'Bulgarian'],
+  ['cat', 'Catalan']
+    ])
+    const [OCR_Mode,setOCR_Mode]=useState<number>(0)
+    const [OCR_OutputFile,setOCR_OutputFile]=useState<string[]>(['OutputFile','txt'])
+    const [OCR_DPI,setOCR_DPI]=useState<number>(2400)
+    const [OCR_IsFirstRowAsColumn,setOCR_IsFirstRowAsColumn]=useState<boolean>(false)
+    const let_HeaderHeight=100
 /*
 
 +--------------+--------+-----------+--------+--------+--------+--------+--------+
@@ -247,6 +277,14 @@ const Components=()=>{
             {Key:3,XYWH:[0,0,500,500,4],Type:['Rectangle','#000000'],IsShow:false},
             {Key:4,XYWH:[0,0,500,500,4],Type:['Rectangle','#000000'],IsShow:false},
         ])
+    useEffect(()=>{
+        if(SS_TextDimension!==3){
+            setSS_C02(false)
+        }
+        if(SS_TextDimension===3){
+            setSS_C02(true)
+        }
+    },[SS_TextDimension])
 //****************************************************************************
 // JSX: C02_Iput
 //****************************************************************************
@@ -260,7 +298,7 @@ const Components=()=>{
     else if(SS_OpenPanel===2){
         let_C01Width='50%'
     }
-    if(SS_C02==true && (SS_OpenPanel===0 || SS_OpenPanel===2)){
+    if(SS_C02&&(SS_OpenPanel===0 || SS_OpenPanel===2)){
         JSX_C02=<C02_Input
             SS_Row={SS_Row}
             setSS_Row={setSS_Row}
@@ -292,12 +330,15 @@ const Components=()=>{
         SS_C02={SS_C02}
         setSS_OpenPanel={setSS_OpenPanel}
         setSS_C02={setSS_C02}
+        SS_TextDimension={SS_TextDimension}
+        SS_Text={SS_Text}
+        setSS_Text={setSS_Text}
         />
         JSX_C03=<C03_Header
         SS_Row={SS_Row}
         SS_Columns={SS_Columns}
         SS_C02={SS_C02}
-        setSS_C02={setSS_C02}
+        //setSS_C02={setSS_C02}
         SS_OpenPanel={SS_OpenPanel}
         setSS_OpenPanel={setSS_OpenPanel}
         />
@@ -313,6 +354,12 @@ const Components=()=>{
     let JSX_C04=<></>
     if(SS_OpenPanel===1 || SS_OpenPanel===2){
         JSX_C04=<Index02_Canvas
+SS_OpenOCR      ={SS_OpenOCR}
+setSS_OpenOCR={setSS_OpenOCR}
+OCR_Languages={OCR_Languages}
+setOCR_Languages={setOCR_Languages}
+OCR_OutputFile={OCR_OutputFile}
+setOCR_OutputFile={setOCR_OutputFile}
 SS_Aff           ={SS_Aff           }
 SS_Boxes         ={SS_Boxes         }
 SS_AffOrigin     ={SS_AffOrigin     }
@@ -404,7 +451,20 @@ JSX_C04
 // Body Left = CSV Table
 //****************************************************************************
 }
-
+<div
+style={{
+    height:`${let_HeaderHeight}px`,
+    width:'100%',
+    backgroundColor:'red'}}
+>
+    <C07_TableSetting
+    width={let_C01Width}
+    OCR_OutputFile={OCR_OutputFile}
+    setOCR_OutputFile={setOCR_OutputFile}
+    SS_TextDimension={SS_TextDimension}
+    setSS_TextDimension={setSS_TextDimension}
+    />
+</div>
 <div id='I01id_HBodyLeft' 
 style={SS_IsNarrow===true ? {width:let_C01MinWidth} : {width:let_Width}}
 //style={{width:let_Width}}

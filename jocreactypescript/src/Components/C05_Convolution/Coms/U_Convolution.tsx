@@ -33,7 +33,7 @@ setSS_Kernals:(S:TS_Kernal[])=>void
 //****************************************************************************
 return(
 <div style={{
-  height:`calc(100vh - 40px - ${(143+20)}px )`,
+  height:`calc(100vh - ${(100)}px )`,
   width:let_Width,
   backgroundColor:'lightblue',
   overflowY: 'scroll'}}>
