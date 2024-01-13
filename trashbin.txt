@@ -1,3 +1,9 @@
+/jocreactypescript/node_modules
+ 
+/Users/imac/Desktop/SoloOpenSourceProject/JOCR
+ 
+/Users/imac/Desktop/SoloOpenSourceProject/JOCR
+ 
           //alert(SS_AffineRGB)
           //alert(SS_Affine)
  
