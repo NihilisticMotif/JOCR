@@ -1,3 +1,5 @@
+/Users/imac/Desktop/SoloOpenSourceProject/JOCR
+ 
 //Users/imac/Desktop/SoloOpenSourceProject/JOCR
  
 /jocreactypescript/node_modules
