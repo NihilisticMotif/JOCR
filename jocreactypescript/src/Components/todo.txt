@@ -1,0 +1,9 @@
+
+
+Function
+1. split 
+2. Merge 
+3. OCR 
+4. C01_Table width:100%
+5. C07_TableSetting (CSS)
+6. Export Image

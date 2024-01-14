@@ -5,31 +5,26 @@ const R_TextDimensions = (
 // INPUT
 //****************************************************************************
 {
-SS_TextDimension,
-setSS_TextDimension
+SS_IsCharacterArray,
+setSS_IsCharacterArray
 }
 :{
-SS_TextDimension:number;
-setSS_TextDimension:(S:number)=>void;
+SS_IsCharacterArray:boolean
+setSS_IsCharacterArray:(S:boolean)=>void
 })=>{
 
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
-    let let_Color=[
-        'white',
-        'white',
-        'white',
-        'white'
-    ]
-    let_Color[SS_TextDimension]='lightgreen'
+
     const let_WidthTr='50px'
     return (
         <div className='C06id_R_TextDim'>
-<button onClick={()=>setSS_TextDimension(0)} style={{backgroundColor:let_Color[0]}}>Row</button>
-<button onClick={()=>setSS_TextDimension(1)} style={{backgroundColor:let_Color[1]}}>Text</button>
-<button onClick={()=>setSS_TextDimension(2)} style={{backgroundColor:let_Color[2]}}>Table</button>
-<button onClick={()=>setSS_TextDimension(3)} style={{backgroundColor:let_Color[3]}}>Full Table</button>
+<h1 style={{fontSize:'14px',marginTop:'0px',marginBottom:'0px'}}>Output Type</h1>
+<button onClick={()=>setSS_IsCharacterArray(false)} 
+style={{backgroundColor: SS_IsCharacterArray?'white':'lightgreen'}}>String</button>
+<button onClick={()=>setSS_IsCharacterArray(true)}  
+style={{backgroundColor: SS_IsCharacterArray?'lightgreen':'white'}}>String Array</button>
         </div>
     )}
 

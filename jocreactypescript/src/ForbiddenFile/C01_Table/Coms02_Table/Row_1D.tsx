@@ -19,8 +19,8 @@ const C_Row = (
     // HOOK: setState()
     SS_Row,         // Used for f_Rename, f_Delete, f_UnSelect | List of All Column that IsVisible !== undefined
     setSS_Row,      // Used for f_Rename, f_Delete, f_UnSelect | Update SS_Column
-    SS_SelectRow,
-    setSS_SelectRow
+    SS_SelectRowMode,
+    setSS_SelectRowMode
 }:{
     // TYPE
     // PROPERTY
@@ -28,8 +28,8 @@ const C_Row = (
     // HOOK: setState()
     SS_Row:string,
     setSS_Row:(S:string)=>void,
-    SS_SelectRow:string
-    setSS_SelectRow:(S:string)=>void
+    SS_SelectRowMode:string
+    setSS_SelectRowMode:(S:string)=>void
 }) => 
 {
 
@@ -38,7 +38,7 @@ const C_Row = (
 //****************************************************************************
     const [SS_UpdateRow,setSS_UpdateRow]=useState<string>(SS_Row)
 
-    //useEffect(()=>{setSS_SelectRow('Edit')},[])
+    //useEffect(()=>{setSS_SelectRowMode('Edit')},[])
 
     //const [SS_Display,setSS_Display]=useState<0|1|2|3>((typeof THISROW.Display ==='undefined') ? 0 : THISROW.Display)
     // Set Mode of this component for Rename and/or Delete itself
@@ -52,23 +52,23 @@ const C_Row = (
 // FUNCTION_01: Back
 //****************************************************************************
     function f_Cancel():void{
-        setSS_SelectRow('None')
+        setSS_SelectRowMode('None')
     }
 //****************************************************************************
 // FUNCTION_01: Rename Column
 //****************************************************************************
     function f_OpenRename():void{
-        setSS_SelectRow('Edit')
+        setSS_SelectRowMode('Edit')
     }
 //****************************************************************************
 // FUNCTION_01: Delete Column
 //****************************************************************************
     function f_OpenDelete():void{
-        setSS_SelectRow('Delete')
+        setSS_SelectRowMode('Delete')
     }
     function f_Delete():void{
         setSS_Row('')
-        setSS_SelectRow('None')
+        setSS_SelectRowMode('None')
     }
 //****************************************************************************
 // FUNCTION_03: Update
@@ -85,7 +85,7 @@ const C_Row = (
     // Actually Update Data
     function f_Update():void{
         setSS_Row(SS_UpdateRow)
-        setSS_SelectRow('None')
+        setSS_SelectRowMode('None')
     }
 //****************************************************************************
 // JSX_00: JSX_Row_td
@@ -107,7 +107,7 @@ const C_Row = (
     // Default Column JSX
     JSX_Row=<></>
 
-        if(SS_SelectRow==='Edit'){
+        if(SS_SelectRowMode==='Edit'){
     JSX_Row=<>
 <tr className='C01id_HeightLightRow C01id_Left'>
     <td>Original</td>
@@ -126,7 +126,7 @@ const C_Row = (
 </tr>
     </>
         }
-        else if(SS_SelectRow==='Delete'){
+        else if(SS_SelectRowMode==='Delete'){
     JSX_Row=
 <>
 <tr className='C01id_HeightLightRow C01id_Left'>

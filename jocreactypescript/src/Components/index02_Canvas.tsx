@@ -6,7 +6,6 @@ import React, { ChangeEvent, useState , useEffect, useRef , useLayoutEffect} fro
 
 // Type
 import C04_ImageEditor from './C04_ImageEditor/index';
-import TS_Row from './T01_Row/An_Index';
 import TS_Threshold from './T03_Threshold/An_Index';
 import TS_Kernal from './T05_Kernal/An_Index';
 import { U03_Sort } from './T03_Threshold/U03_Sort';
@@ -15,9 +14,9 @@ import './index02_Canvas.css'
 import TS_Box from './T04_Box/An_Index';
 
 interface IN_02_Canvas{
+  OCR_IsOpen:boolean
   OCR_OutputFile:string[]
   OCR_Languages:string[][]
-  SS_OpenOCR:string
   SS_Aff:number[]
   SS_Boxes:TS_Box[]
   SS_AffOrigin:string[]
@@ -36,9 +35,9 @@ SS_ImageFile :File|null
 SS_UseEffect :boolean
 SS_OpenPanel:0|1|2;
 SS_Thresholds:TS_Threshold[];
+setOCR_IsOpen:(S:boolean)=>void
 setOCR_OutputFile:(S:string[])=>void
 setOCR_Languages:(S:string[][])=>void
-setSS_OpenOCR:(S:string)=>void
 setSS_Aff:(S:number[])=>void
 setSS_Boxes:(S:TS_Box[])=>void
 setSS_AffOrigin:(S:string[])=>void
@@ -64,10 +63,10 @@ export const Index02_Canvas: React.FC<IN_02_Canvas> = (
 // INPUT
 //****************************************************************************
 {
+  OCR_IsOpen,
+  setOCR_IsOpen,
   OCR_OutputFile,
   setOCR_OutputFile,
-  SS_OpenOCR,
-  setSS_OpenOCR,
   OCR_Languages,
   setOCR_Languages,
   SS_Aff          ,
@@ -106,50 +105,6 @@ SS_OpenPanel      ,
 setSS_OpenPanel   ,
 SS_Thresholds     ,
 setSS_Thresholds  ,
-}
-:{
-  OCR_OutputFile:string[]
-  OCR_Languages:string[][]
-  SS_OpenOCR:string
-  SS_Aff:number[]
-  SS_Boxes:TS_Box[]
-  SS_AffOrigin:string[]
-SS_IsActivate:boolean[]
-SS_IsShow:boolean
-SS_Kernals:TS_Kernal[]
-SS_Affine       :number[][][]
-SS_AffineSTR    :string[][][]
-SS_AffineRGB    :string[][]
-SS_AffineBOOL:boolean[][]
-SS_Image:string | null
-SS_Zoom      :number
-SS_WidthImage:number
-SS_IsRGB     :boolean
-SS_ImageFile :File|null
-SS_UseEffect :boolean
-SS_OpenPanel:0|1|2;
-SS_Thresholds:TS_Threshold[];
-setOCR_OutputFile:(S:string[])=>void
-setOCR_Languages:(S:string[][])=>void
-setSS_OpenOCR:(S:string)=>void
-setSS_Aff:(S:number[])=>void
-setSS_Boxes:(S:TS_Box[])=>void
-setSS_AffOrigin:(S:string[])=>void
-setSS_Image:(S:string | null)=>void
-setSS_IsShow:(S:boolean)=>void
-setSS_AffineBOOL:(S:boolean[][])=>void
-setSS_AffineRGB :(S:string[][])=>void
-setSS_AffineSTR :(S:string[][][])=>void
-setSS_Affine    :(S:number[][][])=>void
-setSS_Kernals:(S:TS_Kernal[])=>void
-setSS_IsActivate:(S:boolean[])=>void
-setSS_Zoom      :(S:number)=>void
-setSS_WidthImage:(S:number)=>void
-setSS_IsRGB     :(S:boolean)=>void
-setSS_ImageFile :(S:File|null)=>void
-setSS_UseEffect :(S:boolean)=>void
-setSS_OpenPanel:(S:0|1|2)=>void;
-setSS_Thresholds:(S:TS_Threshold[])=>void
 }) => {
   
 //****************************************************************************
@@ -361,12 +316,12 @@ style={{backgroundColor:'red',height:'30px',width:'100%',display:'flex'}}
 style={{display:'flex'}}
 >*/}
 <C04_ImageEditor
+OCR_IsOpen={OCR_IsOpen}
+setOCR_IsOpen={setOCR_IsOpen}
 OCR_OutputFile={OCR_OutputFile}
 setOCR_OutputFile={setOCR_OutputFile}
 OCR_Languages={OCR_Languages}
 setOCR_Languages={setOCR_Languages}
-SS_OpenOCR={SS_OpenOCR}
-setSS_OpenOCR={setSS_OpenOCR}
 SS_Boxes={SS_Boxes}
 setSS_Boxes={setSS_Boxes}
 SS_IsShow={SS_IsShow}

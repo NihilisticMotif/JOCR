@@ -27,8 +27,8 @@ const C04_ImageEditor = (
   setOCR_OutputFile,
   OCR_Languages,
   setOCR_Languages,
-  SS_OpenOCR,
-  setSS_OpenOCR,
+  OCR_IsOpen,
+  setOCR_IsOpen,
   SS_ImageDimensions,
   SS_Image,
   SS_Aff,
@@ -65,8 +65,8 @@ SS_IsShow
   setOCR_OutputFile:(S:string[])=>void
   OCR_Languages:string[][]
   setOCR_Languages:(S:string[][])=>void
-  SS_OpenOCR:string,
-  setSS_OpenOCR:(S:string)=>void
+  OCR_IsOpen:boolean,
+  setOCR_IsOpen:(S:boolean)=>void
   SS_ImageDimensions:number[]|null
   SS_Image:string|null
   SS_IsShow:boolean
@@ -109,7 +109,7 @@ setSS_Thresholds:(S:TS_Threshold[])=>void
   // 4 ...
 
   let JSX_ImageProcessingDIV=<></>
-  if(SS_OpenPanel===1 //&& SS_OpenOCR==='Image'
+  if(SS_OpenPanel===1 
   ){
     JSX_ImageProcessingDIV=<div style={{display:'grid'}}>
       <div style={{display:'flex',height:'40px',overflowX: 'clip'}}>
@@ -144,7 +144,7 @@ setSS_Kernals={setSS_Kernals}
     />
   </div>
   }
-  //if(SS_OpenPanel===1 && SS_OpenOCR==='OCR'){
+  //if(SS_OpenPanel===1 && OCR_IsOpen==='OCR'){
   //  //
   //}
 
@@ -153,7 +153,7 @@ setSS_Kernals={setSS_Kernals}
     //****************************************************************************
   }
   let JSX_Body=<></>
-  if(SS_OpenOCR==='Image'){
+  if(OCR_IsOpen===false){
     JSX_Body=<>
     <div style={{display:'flex',height:'100px'}}>
       <U_Zoom
@@ -210,8 +210,8 @@ return(
     }
     <M_OCRorImage
     setSS_UseEffect={setSS_UseEffect}
-    SS_OpenOCR={SS_OpenOCR}
-    setSS_OpenOCR={setSS_OpenOCR}
+    OCR_IsOpen={OCR_IsOpen}
+    setOCR_IsOpen={setOCR_IsOpen}
     />
     <hr/>
     {JSX_Body}

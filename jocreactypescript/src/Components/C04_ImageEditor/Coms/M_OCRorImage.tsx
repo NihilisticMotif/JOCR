@@ -4,29 +4,29 @@ const M_OCRorImage = (
 //****************************************************************************
 {
 setSS_UseEffect,
-SS_OpenOCR,
-setSS_OpenOCR
+OCR_IsOpen,
+setOCR_IsOpen
 }
 :{
 setSS_UseEffect:(S:boolean)=>void
-SS_OpenOCR:string
-setSS_OpenOCR:(S:string)=>void
+OCR_IsOpen:boolean
+setOCR_IsOpen:(S:boolean)=>void
 })=>{
 
     
     function f_setOCR(){
       setSS_UseEffect(true)
-      setSS_OpenOCR('OCR')
+      setOCR_IsOpen(true)
     }
     function f_setImage(){
       setSS_UseEffect(true)
-    setSS_OpenOCR('Image')
+    setOCR_IsOpen(false)
     }
     return (
         <>
     <div style={{display:'flex',marginLeft:'10px',marginBottom:'0px'}}>
-    <button onClick={f_setImage} style={{ backgroundColor: SS_OpenOCR === 'Image' ? 'lightgreen' : 'white' }} className='C04id_Button'>Image Editor</button>
-    <button onClick={f_setOCR}  style={{ backgroundColor: SS_OpenOCR === 'OCR' ? 'lightgreen' : 'white' }} className='C04id_Button'>Tesseract OCR</button>
+    <button onClick={f_setImage} style={{ backgroundColor: OCR_IsOpen === false ? 'lightgreen' : 'white' }} className='C04id_Button'>Image Editor</button>
+    <button onClick={f_setOCR}  style={{ backgroundColor: OCR_IsOpen === true ? 'lightgreen' : 'white' }} className='C04id_Button'>Tesseract OCR</button>
     </div>
     </>
     )}

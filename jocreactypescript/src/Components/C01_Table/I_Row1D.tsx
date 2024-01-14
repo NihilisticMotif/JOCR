@@ -1,23 +1,28 @@
-import './box.css'
-const M00_Row = (
+import './I_Row1D.css'
+const I_Row1D = (
 //****************************************************************************
 // INPUT
 //****************************************************************************
 {
-SS_LongString
+TheMainCharacter,
+setTheMainCharacter,
+OCR_OutputFile
 }
 :{
-SS_LongString:string
+TheMainCharacter:string|string[]
+setTheMainCharacter:(S:string|string[])=>void
+OCR_OutputFile:string[]
 })=>{
 const let_HeaderHeight=100
-//****************************************************************************
-// FUNCTION_00: Zoom setting
-//****************************************************************************
 
+//****************************************************************************
+// OUTPUT
+//****************************************************************************
     return (
 <div className='C01id_Box' style={{height:`calc(100vh - ${0}px - ${105+let_HeaderHeight-30-15}px)`}}>
-{SS_LongString}
+<th>{OCR_OutputFile}</th>
+{TheMainCharacter}
 </div>
     )}
 
-export default M00_Row
+export default I_Row1D
