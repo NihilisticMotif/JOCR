@@ -8,7 +8,7 @@
 }
 
 .C01id_EditRowButton input{
-    width: 100vh;
+    width: 100%;
 }
 
 .C01id_EditRowButton {
@@ -24,7 +24,6 @@
     https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
     */
     border-collapse: collapse;
-    table-layout: fixed;
     overflow-y: scroll;
 }
 
@@ -35,12 +34,13 @@
 thead,
 tbody {
     display: block;
+    background-color: rgb(17, 185, 194);
 }
 
 #C01id_InnerTable {
     width: 100%;
     overflow-x: scroll;
-    background-color: antiquewhite;
+    background-color: rgb(160, 222, 202);
 }
 
 tbody {

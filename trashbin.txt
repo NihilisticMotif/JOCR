@@ -1,3 +1,890 @@
+//-------------------------+--------------+----------+
+// CSS                     | File Name    | General  |
+//-------------------------+--------------+----------+
+//import './index00.css'; // | index.jsx    | General  |
+//import './index01.css'; // | index.jsx    | Specific |
+//-------------------------+--------------+----------+
+ 
+// Components
+import C_ColumnButton from './Coms02_Table/C_ColumnButton';
+import C_Row from './Coms00_Row/C_Row'
+// Type
+import TS_Row from '../T01_Row/An_Index';
+import TS_Column from '../T02_Column/An_Index';
+
+ 
+    width:100%
+ 
+    display: block;
+ 
+    border-collapse: collapse;
+ 
+    table-layout: fixed;
+ 
+,tableLayout: 'fixed'
+ 
+    // C01id_Table does not fill all the empty space.
+ 
+'1000px'
+ 
+    // width:'100%' does not fill all the empty space 
+    // I want to make this DOM element fill all the empty space
+ 
+// Data
+ 
+    backgroundColor:'#FF333FF'
+ 
+,backgroundColor:'#FF333FF'
+ 
+`)
+
+(`
+ 
+={SS_Text}
+ 
+        <div style={{display:'inline-block',marginLeft:'10px',margin:'auto'}}>
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>{let_State}</h1>
+    <button onClick={f_Gray} style={{backgroundColor:let_Color[0]}} className='C04id_Button'>Gray</button>
+    <button onClick={f_RGB}  style={{backgroundColor:let_Color[1]}} className='C04id_Button'>RGB</button>
+    </div>
+ 
+  let let_Color=['white','white']
+ 
+
+    let let_State='Color'
+    if(SS_IsRGB===true){
+      let_State='Color'
+      let_Color[0]='white'
+      let_Color[1]='lightgreen'
+    }
+    else{
+      let_State='Gray'
+      let_Color[0]='lightgreen'
+      let_Color[1]='white'
+    }
+ 
+    function f_Gray(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(false)
+    }
+
+    function f_RGB(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(true)
+    }
+ 
+SS_IsRGB:boolean
+setSS_UseEffect:(S:boolean)=>void
+setSS_IsRGB:(S:boolean)=>void
+ 
+SS_IsRGB,
+setSS_UseEffect,
+setSS_IsRGB
+ 
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td>Edited</td>
+    {JSX_EditRow}
+    <td><div className='C01id_EditRowButton'><button onClick={f_Update}>Ok</button></div></td>
+</tr>
+ 
+                <button onClick={f_SmallUpdate} style={{marginLeft:'20px',width:'40px'}}>Ok</button>
+                <button onClick={f_ResetUpdate} style={{width:'55px'}}>Reset</button>
+                <button onClick={f_ResetUpdate} style={{width:'55px'}}>Cancel</button>
+ 
+    const [SS_UpdateRow,setSS_UpdateRow]=useState<string>(SS_Row)
+ 
+    //useEffect(()=>{setSS_SelectRow('Edit')},[])
+
+    //const [SS_Display,setSS_Display]=useState<0|1|2|3>((typeof THISROW.Display ==='undefined') ? 0 : THISROW.Display)
+    // Set Mode of this component for Rename and/or Delete itself
+    //      0|  // Default JSX Column | f_Cancel       => let_DefaultDisplay(0) => Open Default JSX Column
+    //      1|  // Rename JSX Column  | f_OpenRename   => let_DefaultDisplay(1) => Open Rename JSX Column 
+    //      2|  // Delete JSX Column  | f_OpenDelete   => let_DefaultDisplay(2) => Open Delete JSX Column 
+    //useEffect(()=>{
+    //    setSS_UpdateRow(THISROW)
+    //},[SS_Row])
+ 
+//****************************************************************************
+// FUNCTION_01: Delete Column
+//****************************************************************************
+
+ 
+    function f_OpenDelete():void{
+        setSS_SelectRow('Delete')
+    }
+    function f_Delete():void{
+        setSS_Row('')
+        setSS_SelectRow('None')
+    }
+ 
+<button onClick={f_OpenDelete}>X</button>
+ 
+    <button onClick={f_OpenDelete}>X</button></div><
+ 
+        <button onClick={f_OpenDelete}>X</button></div></td>
+ 
+        else if(SS_SelectRow==='Delete'){
+    JSX_Row=
+<>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td></td>
+    <td><div style={{width:'1000px'}}>{JSX_EditRow}</div></td>
+    <td className='C01id_Right'></td>
+</tr>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    {// https://stackoverflow.com/questions/38302507/react-colspan-not-working
+    }
+    <td></td>
+    <td >Do you sure you want to delete this data?</td>
+    <td><div className='C01id_EditRowButton' style={{marginLeft:'auto'}}><button onClick={f_Delete}>Ok</button></div><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
+</tr>
+</>
+        }
+ 
+<tr style={{width:'100%'}}>
+    <td className='C01id_Left'>{INDEX}</td>
+    <td><div style={{width:'1000px'}}>{THISROW}</div></td>
+    <td className='C01id_RightRow'>
+        <div className='C01id_EditRowButton'><button onClick={f_EditRow}>Edit</button>
+        <button onClick={f_OpenDelete}>X</button></div></td>
+</tr>
+ 
+<tr style={{width:'100%'}}>
+    <td className='C01id_Left'>{INDEX}</td>
+    <td><div style={{width:'1000px'}}>{THISROW}</div></td>
+    <td className='C01id_RightRow'>
+        <div className='C01id_EditRowButton'><button onClick={f_EditRow}>Edit</button>
+        <button onClick={f_OpenDelete}>X</button></div></td>
+</tr>
+ 
+    //const [SS_Display,setSS_Display]=useState<0|1|2|3>((typeof THISROW.Display ==='undefined') ? 0 : THISROW.Display)
+    // Set Mode of this component for Rename and/or Delete itself
+    //      0|  // Default JSX Column | f_Cancel       => let_DefaultDisplay(0) => Open Default JSX Column
+    //      1|  // Rename JSX Column  | f_OpenRename   => let_DefaultDisplay(1) => Open Rename JSX Column 
+    //      2|  // Delete JSX Column  | f_OpenDelete   => let_DefaultDisplay(2) => Open Delete JSX Column 
+    //useEffect(()=>{
+    //    setSS_UpdateRow(THISROW)
+    //},[SS_Row])
+ 
+    // JSX = representing in JSX
+    // Default Column JSX
+ 
+//****************************************************************************
+// Function 00: Automately close C02 when the width is too narrow.
+//****************************************************************************
+const let_HeaderHeight=100
+let let_HeaderWidth=0
+const [SS_SelectRow,setSS_SelectRow]=useState<string>('None')
+//****************************************************************************
+// JSX_00: Filter SS_Column.Name by IsVisible=true
+//****************************************************************************
+
+    const JSX_TH_Rows=<>
+<C_Row
+SS_Row={SS_Text}
+setSS_Row={setSS_Text}
+SS_SelectRow={SS_SelectRow}
+setSS_SelectRow={setSS_SelectRow}
+/>
+</>
+ 
+        alert('Editt')
+ 
+.toUpperCase()
+ 
+.toUpperCase()
+ 
+alert(SS_Row)
+ 
+        alert('RainSound')
+ 
+    let let_SelectRowMode=SS_SelectRow
+ 
+    useEffect(()=>{alert(SS_Row)},[])
+ 
+    useEffect(()=>{
+        let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
+        let_HeaderWidth=let_C01Width
+    },[])
+ 
+    useEffect(()=>{
+        let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
+        let_HeaderWidth=let_C01Width
+    },[])
+ 
+        alert(SS_UpdateRow)
+ 
+        let ss_UpdateRow=SS_UpdateRow
+ 
+        let ss_Rows=SS_Row
+        ss_Rows=ss_UpdateRow
+ 
+const let_Rows:string[] = SS_Text
+ 
+            INDEX={index}
+            THISROW={Row}
+ 
+{THISROW}
+ 
+{INDEX}
+ 
+<tr style={{width:'100%'}}>
+    <td className='C01id_Left'></td>
+    <td><div style={{width:'1000px'}}>{SS_Row}</div></td>
+    <td className='C01id_RightRow'>
+        <div className='C01id_EditRowButton'><button onClick={f_OpenRename}>Edit</button>
+        <button onClick={f_OpenDelete}>X</button></div></td>
+</tr>
+ 
+    let let_SelectRowIndex=SS_SelectRow.split(',')[0]
+ 
+.split(',')[1]
+ 
+    if(let_SelectRowIndex===INDEX.toString()){
+        if(let_SelectRowMode==='None'){
+    JSX_Row=
+<tr style={{width:'100%'}}>
+    <td className='C01id_Left'>{INDEX}</td>
+    <td><div style={{width:'1000px'}}>{THISROW}</div></td>
+    <td className='C01id_RightRow'>
+        <div className='C01id_EditRowButton'><button onClick={f_OpenRename}>Edit</button>
+        <button onClick={f_OpenDelete}>X</button></div></td>
+</tr>
+        }
+ 
+{INDEX}
+ 
+INDEX.toString()+
+ 
+[INDEX]
+ 
+[...
+ 
+ss_Row
+ 
+        let ss_Row=SS_Row]
+        ss_Row.splice(INDEX,1)
+ 
+[...
+ 
++INDEX.toString()
+ 
+INDEX.toString()+',
+ 
+INDEX.toString()+',
+ 
+INDEX.toString()+',
+ 
+INDEX.toString()+',
+ 
+    INDEX,
+    THISROW,
+ 
+    INDEX:number,
+    THISROW:string,
+ 
+    // Rename Row JSX
+    /*else if (THISROW.Display===1){
+        JSX_Row=
+<>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td>Original</td>
+    {JSX_Row_TD}
+    <td></td>
+</tr>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td>Edited</td>
+    {JSX_EditRow}
+    <td><div className='C01id_EditRowButton'><button onClick={f_Update}>Ok</button></div></td>
+</tr>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td></td>
+    {JSX_EditRowInput}
+    <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
+</tr>
+</>
+    // Delete Column JSX
+    }else if (THISROW.Display===2){
+        JSX_Row=
+<>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td>{INDEX}</td>
+    {JSX_Row_TD}
+    <td className='C01id_Right'></td>
+</tr>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    {// https://stackoverflow.com/questions/38302507/react-colspan-not-working
+    }
+    <td colSpan={THISROW.Array.length}>Do you sure you want to delete this row?</td>
+    <td><div className='C01id_EditRowButton' style={{marginLeft:'auto'}}><button onClick={f_Delete}>Ok</button></div></td>
+    <td><div className='C01id_EditRowButton'><button onClick={f_Cancel}>Cancel</button></div></td>
+</tr>
+</>
+    // Starting Linked List
+    }else if (THISROW.Display===4){
+        JSX_Row=<></>
+    }*/
+ 
+let let_UpdateRows=
+ 
+//D01_Delete(THISROW,ss_Row)
+ 
+        //let let_UpdateRow = U01_EditRow(THISROW,ss_Rows,ss_UpdateRow)
+        //alert(JSON.stringify(let_UpdateRow))
+        //setSS_Row(let_UpdateRow)
+ 
+ss_Rows[]
+ 
+INDEX:number
+ 
+        let ss_UpdateRow=SS_UpdateRow
+ 
+NAME:string,INDEX:number
+ 
+    <td></td>
+ 
+<div className='C01id_EditRowButton' style={{marginLeft:'auto'}}><button onClick={f_Delete}>Ok</button></div>
+ 
+colSpan={THISROW.Array.length}
+ 
+()=>
+ 
+alert('
+ 
+')
+ 
+marginLeft:'700px',
+ 
+className=''
+ 
+C01id_EditRowButton
+ 
+{JSX_EditRow}
+ 
+<tr style={{width:'100%'}}>
+    <td className='C01id_Left'>{INDEX}</td>
+    <td><div style={{width:'1000px'}}>{THISROW}</div></td>
+    <td className='C01id_RightRow'>
+        <div className='C01id_EditRowButton'><button onClick={f_OpenRename}>Edit</button>
+        <button onClick={()=>alert('f_OpenDelete')}>X</button></div></td>
+</tr>
+ 
+parseInt
+ 
+</button>
+ 
+<button onClick={()=>alert('f_Insert')}>Insert
+ 
+<button onClick={f_Insert}>Insert</button>
+ 
+            if(i<ROWS.length-1){
+                let_NextKey=ROWS[i+1].Key
+            
+            ROWS.splice(i, 1,{
+                Key: ROWS[i].Key,
+                Next: let_NewKey,
+                Array: ROWS[i].Array, 
+                Display:0
+            });
+            let_NewRow={
+                Key:let_NewKey,
+                Next:let_NextKey,
+                Array:let_Array,
+                Display:0
+            }
+        }else{
+            let_NextKey = Math.random()
+            while(ROWS.map(ROW=>ROW.Key).includes(let_NextKey)===true&&let_NextKey!==let_NewKey){
+                let_NextKey = Math.random()
+            }
+
+            let_NewRow={
+                Key: let_NewKey,     
+                Next: let_NextKey,   
+                Array: let_Array,       
+                }
+        }
+        }
+ 
+Math.random()
+    while(ROWS.map(ROW=>ROW.Key).includes(let_NextKey)===true){
+        let_NextKey = Math.random()
+    }
+ 
+    alert(JSON.stringify([let_NewRow,...ROWS]))
+ 
+                // Next does not update.
+ 
+        // Renamed Column
+ 
+        // All Columns
+ 
+
+    //alert(ROWS.length)
+ 
+                //alert(446933)
+ 
+            // ROWS[i-1].Next does not update
+ 
+            ROWS.splice(i+1, 1,{
+                Key: ROWS[i+1].Key,
+                Next: ROWS[i+1].Next,
+                Array: ROWS[i+1].Array, 
+                Display:0
+            });
+ 
+            ROWS.splice(i+1, 1,{
+                Key: ROWS[i+1].Key,
+                Next: ROWS[i+1].Next,
+                Array: ROWS[i+1].Array, 
+                Display:0
+            });
+ 
+            ROWS[i-1].Next=let_NewKey
+ 
+[{"Key":0.7083043278585954,"Next":0.4379561337432065,"Array":["-","-","-","-","-"],"Display":0},{"Key":0,"Next":1,"Array":["y","y","y","y"],"Display":4},{"Key":1,"Next":2,"Array":["Tally Hall","Marvin's Marvelous Mechanical Museum","The Ruler of Everything","Indie Rock","01"]},{"Key":2,"Next":3,"Array":["RadioHead","In Rainbows","Weird Fishes/Arpeggi","Alternative Rock","02"]},{"Key":0.7083043278585954,"Next":0.4379561337432065,"Array":["-","-","-","-","-"],"Display":0},{"Key":3,"Next":4,"Array":["Weezer","Blue Album","Buddy Holly","Pop Punk","03"]},{"Key":4,"Next":5,"Array":["Gorillaz","Demon Days","Feel Good Inc.","Hip Hop","04"]},{"Key":5,"Ne
+ 
+Array":["Mother Mother","O My Heart","Hayloft","Indie Rock","05"]}]
+ 
+let 
+ 
+:TS_Row=
+ 
+    /*
+    for(let i:number=0;i<ROWS.length;i+=1){
+        
+            if(ROWS[i].Key===THISROW.Key){
+                
+                
+            if(i!==1){
+            ROWS.splice(i-1, 1,{
+                Key: ROWS[i-1].Key,
+                Next: let_NewKey,
+                Array: ROWS[i-1].Array, 
+                Display:0
+            });
+            }else{
+            ROWS[0].Next=let_NewKey
+            }
+            if(i!==ROWS.length-1){
+                //alert(JSON.stringify(ROWS[i+1]))
+                let_NextKey=ROWS[i+1].Key
+            }
+            }
+                ROWS.splice(i, 0,{
+                Key: let_NewKey,
+                Next: let_NextKey,
+                Array: let_Array, 
+                Display:0
+            });
+            break
+        }*/
+ 
+            alert(JSON.stringify(ROWS[i-1]))
+            alert(JSON.stringify(ROWS[i]))
+ 
+                alert(JSON.stringify(ROWS[i+1]))
+ 
+let let_NewRow
+ 
+:TS_
+ 
+    
+    return ROWS
+}
+ 
+alert(i)
+ 
+alert(i)
+ 
+                //alert(JSON.stringify(ROWS[i-1]))
+                //alert(JSON.stringify(ROWS[i]))
+ 
+    alert(JSON.stringify(ROWS))
+ 
+    alert(JSON.stringify(ROWS))
+ 
+alert(JSON.stringify(ROWS[i+1]))
+ 
+    let let_DefaultRow:TS_Row={Key:0 ,Next:1  , Array:['y','y','y','y'],Display:4}
+ 
+    let let_DefaultRow:TS_Row={Key:0 ,Next:1  , Array:['y','y','y','y'],Display:4}
+ 
+    //alert(JSON.stringify(ROWS))
+ 
+    alert(JSON.stringify(ROWS))
+    //alert(JSON.stringify(ROWS))
+ 
+/*
+type TS_Row={
+    Key:number,         // DEFAULT: Math.random()
+                        // Unique Key
+    Next:number,        // Key's of the next TS_Row
+                        // If not exist, then Next = this Key
+    Array:string[],     // Contains data.
+    Display?:0|1|2|3|4, // Display State
+}
+
+export default TS_Row
+*/
+ 
+            //...
+            return ROWS
+        }
+ 
+// Properties of Each Column
+ 
+// Type Script Column
+ 
+        // 0 = Default State
+        // 1 = Rename
+        // 2 = Delete
+        // 3 = ?
+        // 4 = Start of Linked List
+ 
+[let_DefaultRow,...
+ 
+    let RROW=ROWS.slice(1)
+ 
+    // All row
+ 
+    // Expect all row, except the first row.
+    // Get only first row
+    // I get the same result
+ 
+        '01_Test',
+        '02_Test',
+        '03_Test',
+        '04_Test',
+        '05_Test',
+ 
+            //ROWS.splice.apply(i,0,[...let_NewRow]);
+ 
+            //ROWS.splice(i+1, 1,{
+            //    Key: ROWS[i+1].Key,
+            //    Next: let_NewKey,
+            //    Array: ROWS[i+1].Array, 
+            //    Display:0
+            //});
+ 
+            if(i!==ROWS.length-1){
+            //
+            }
+ 
+    let let_NewKeys:number[]=[]
+    for(let i=0;i<3;i++){
+ 
+let_NewKeys.push(let_NewKey)
+}
+ 
+    let let_NewRow:TS_Row=
+ 
+{
+                Key: let_NewKeys[1],
+                Next: THISROW.Next,
+                Array: let_Array, 
+                Display:0
+    }
+ 
+            /*
+a1 = [1,2,3,4,5];
+a2 = [21,22];
+
+a1.splice.apply(a1, [2, 0].concat(a2));
+
+console.log(a1); // [1, 2, 21, 22, 3, 4, 5];
+In ES2015+, you could use the spread operator instead to make this a bit nicer
+
+a1.splice(2, 0, ...a2);
+            */
+ 
+        // New Column Name
+        NEWARRAY:string[]
+ 
+0].
+ 
+.apply
+ 
+            let a1 = [1,2,3,4,5];
+let a2 = [21,22];
+
+a1.splice.apply(a1, [2, 0].concat(a2));
+ 
+...
+ 
+                // Insert Row
+                ROWS.splice(i, 1,{
+                Key: THISROW.Key,
+                Next: THISROW.Next,
+                Array: NEWARRAY, 
+                Display:0
+            });
+ 
+                ROWS.splice(i, 1,{
+                Key: THISROW.Key,
+                Next: THISROW.Next,
+                Array: NEWARRAY, 
+                Display:0
+            });
+ 
+
+
+export default {}
+ 
+const [SS_SelectRow,setSS_SelectRow]=useState<number>(0)
+ 
+'1000px'
+ 
+let let_HeaderWidth=0
+ 
+    useEffect(()=>{
+        let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
+        let_HeaderWidth=let_C01Width
+    },[])
+ 
+calc(
+ 
+1000px
+ 
+wordWrap: 'break-word',
+ 
+wordWrap: 'break-word'
+ 
+wordWrap: 'break-word'
+ 
++20
+ 
+let_HeaderHeight
+ 
+<thead  style={{width:'100%'}}>
+<tr>
+    <th className='C01id_Left'>Index</th>
+    <th><div style={{wordWrap: 'break-word',width:'100vh'}}>{Header}</div></th>
+    <th className='C01id_RightRow'><div className='C01id_EditRowButton'>
+        Edit</div></th>
+</tr>
+</thead>
+ 
+C01id_InnerTable
+ 
+</table>
+ 
+<table id='C01id_Table' style={{width:'100%'}}>
+ 
+</div>
+ 
+<div id='C01id_DivTable'  >
+ 
+</tbody>
+ 
+
+<tbody id='C02id_Height' style={{
+    height:`calc(100vh - ${55}px - ${105+20+let_HeaderHeight}px)`,
+    }}>
+ 
+</thead>
+ 
+<thead  style={{width:'100%'}}>
+ 
+</div>
+ 
+<div id='C01id_InnerTable'>
+ 
+<div id='C01id_DivTable'  >
+<div id='C01id_InnerTable'>
+ 
+</table>
+ 
+<table id='C01id_Table' style={{width:'100%'}}>
+ 
+</div>
+ 
+<div id='C01id_DivTable'  >
+ 
+<div id='C01id_InnerTable'>
+ 
+</div>
+ 
+    width:'100%'
+ 
+id='C01id_TH'
+ 
+style={{overflowY:'hidden'}}
+ 
+overflowY:'auto'
+ 
+overflow:'none'
+ 
+id='C02id_Height'
+ 
+id='C01id_TH'
+ 
+{
+// Button under each column.
+// 1. rename column
+// 2. delete column
+// 3. sort data
+// 4. change data type
+}
+ 
+ onClick={f_OpenDelete}
+ 
+onClick={f_OpenRename}
+ 
+style={{width:'100%'}}
+ 
+            setlet_Width={setlet_Width}
+ 
+SS_Text','222
+ 
+wordWrap: 'break-word'
+ 
+    const JSX_Row_TD=
+ 
+<td><div style={{wordWrap: 'break-word',width:'240px'}}>{THISROW}</div></td>
+ 
+    const JSX_ColumnsName=<th>{Header}</th>
+ 
+//-------------------------+--------------+----------+
+// CSS                     | File Name    | General  |
+//-------------------------+--------------+----------+
+import './index00.css'; // | index.jsx    | General  |
+import './index01.css'; // | index.jsx    | Specific |
+//-------------------------+--------------+----------+
+ 
+    const ss_Columns=['Index',Header]
+ 
+        )
+    })
+ 
+ss_Columns.map((Column)=>{
+        return (
+            
+ 
+    if (THISROW.Display===0||typeof THISROW.Display==='undefined'){
+ 
+        )
+    })
+ 
+let_ThisRow.map((Row,index)=>{
+        return(
+ 
+    let ss_UpdateRow=[...SS_UpdateRow]
+ 
+        )
+    })
+ 
+ss_UpdateRow.map((Row)=>{
+        return(
+            
+ 
+    let let_ThisRow=THISROW
+ 
+[...
+ 
+[...
+ 
+// Type
+import {U01_EditRow} from '../../T01_Row/U01_EditRow'
+import {D01_Delete} from '../../T01_Row/D01_Delete'
+import {U01_UpdateDisplay} from '../../T01_Row/U01_UpdateDisplay'
+ 
+.Array
+ 
+.Array
+ 
+<R_Header
+/>
+ 
+.Name
+ 
+...SS_Columns
+ 
+    const ss_Columns=[...SS_Columns]
+ 
+import string from '../../T01_Row/An_Index';
+ 
+    // By ChatGPT
+ 
+OCR_OutputFile
+ 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+ 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+ 
+    const Ref_C01 = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const let_CurrentC01 = Ref_C01.current;
+        if (let_CurrentC01) {
+        // Close C02_Input when the width of C01_Table is less than 175
+        const let_ObsResize = new ResizeObserver(() => {
+            let let_C01Width=(document.getElementById('C01id_H')as HTMLElement)!.offsetWidth
+            if(let_C01Width<175){
+                setSS_C02(false)
+            }
+        });
+        let_ObsResize.observe(let_CurrentC01);
+        return () => {
+            let_ObsResize.disconnect();
+        };
+    }
+    }, []);
+ 
+setSS_EditColumn={setSS_EditColumn}
+SS_C02={SS_C02}
+setSS_C02={setSS_C02}
+ 
+SS_C02,
+setSS_C02,
+ 
+SS_C02:boolean,
+setSS_C02:(S:boolean)=>void,
+ 
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+ 
+        "In mathematics, the logarithm is the inverse function to exponentiation. That means that the logarithm",
+        "of a number x to the base b is the exponent to which b must be raised to produce x. For example,",
+        "since 1000 = 103, the logarithm base 10 of 1000 is 3, or log_10(1000) = 3. The logarithm of x to",
+        "",
+ 
+            <C_Row
+            INDEX={index}
+            THISROW={Row}
+            SS_Row={SS_Row}
+            setSS_Row={setSS_Row}
+            />
+ 
+<C_ColumnButton
+SS_Row={SS_Row}
+setSS_Row={setSS_Row}
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_EditColumn={SS_EditColumn}
+setSS_EditColumn={setSS_EditColumn}
+/>
+ 
+ * Transpose
+ * 
+ 
+,
+ 
+const [SS_Text,setSS_Text]=useState<string[]>(['',''])
+ 
     // By ChatGPT
     
     const Ref_C01 = useRef<HTMLDivElement | null>(null);

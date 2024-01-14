@@ -1,0 +1,11 @@
+Do not use the this list of file because it is too complicate to use.
+
+Forbidden Type
+1. TS_Row
+2. TS_Column
+
+Forbidden Folder
+1. T01_Row
+2. T02_Column
+3. C02_Input
+4. (partial) C01_Table

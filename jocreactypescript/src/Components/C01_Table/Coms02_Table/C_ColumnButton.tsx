@@ -53,7 +53,11 @@ const C_ColumnButton = (
         // https://www.w3schools.com/jsref/jsref_sort.asp
         // https://stackoverflow.com/questions/39583327/javascript-sort-array-of-arrays-by-second-element-in-each-inner-array
         let ss_Rows=[...SS_Row]
-        ss_Rows.sort((a,b) => a.Array[index].toUpperCase().localeCompare(b.Array[index].toUpperCase()));
+        ss_Rows.sort((a,b) => a.Array[index]?.localeCompare(b.Array[index]));
+        /*
+        Cannot read properties of undefined (reading 'localeCompare')
+TypeError: Cannot read properties of undefined (reading 'localeCompare')
+        */
         if(SS_IsD){
             setSS_Row(ss_Rows)
             setSS_IsD(false)

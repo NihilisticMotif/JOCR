@@ -7,7 +7,7 @@ import TS_Row from '../../T01_Row/An_Index';
 import {U01_EditRow} from '../../T01_Row/U01_EditRow'
 import {D01_Delete} from '../../T01_Row/D01_Delete'
 import {U01_UpdateDisplay} from '../../T01_Row/U01_UpdateDisplay'
-
+//import { C01_Insert } from '../../T01_Row/C01_Insert';
 // CSS
 //import './C_Row.css'
 
@@ -26,6 +26,8 @@ const C_Row = (
     // HOOK: setState()
     SS_Row,         // Used for f_Rename, f_Delete, f_UnSelect | List of All Column that IsVisible !== undefined
     setSS_Row,      // Used for f_Rename, f_Delete, f_UnSelect | Update SS_Column
+    SS_SelectRow,
+    setSS_SelectRow
 }:{
     // TYPE
     // PROPERTY
@@ -35,13 +37,14 @@ const C_Row = (
     // HOOK: setState()
     SS_Row:TS_Row[],
     setSS_Row:(S:TS_Row[])=>void,
+    SS_SelectRow:number 
+    setSS_SelectRow:(S:number)=>void
 }) => 
 {
 
 //****************************************************************************
 // HOOK
 //****************************************************************************
-
     const [SS_UpdateRow,setSS_UpdateRow]=useState<string[]>(THISROW.Array)
     //const [SS_Display,setSS_Display]=useState<0|1|2|3>((typeof THISROW.Display ==='undefined') ? 0 : THISROW.Display)
     // Set Mode of this component for Rename and/or Delete itself
@@ -83,6 +86,12 @@ const C_Row = (
         let let_UpdateRows=D01_Delete(THISROW,ss_Row)
         setSS_Row(let_UpdateRows)
     }
+
+    /*function f_Insert(){
+        let ss_Row=[...SS_Row]
+        //let let_UpdateRows=C01_Insert(THISROW,ss_Row)
+        setSS_Row(let_UpdateRows)
+    }*/
 
 //****************************************************************************
 // FUNCTION_03: Update

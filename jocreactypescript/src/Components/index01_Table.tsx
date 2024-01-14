@@ -52,7 +52,120 @@ const Components=()=>{
         {Key:4 ,Next:5  , Array:['Gorillaz','Demon Days',"Feel Good Inc.",'Hip Hop','04']},
         {Key:5 ,Next:6  , Array:['Mother Mother','O My Heart',"Hayloft",'Indie Rock','05']},
         ])
-    const [SS_Text,setSS_Text]=useState<string[]>(['',''])
+    const [SS_LongString,setSS_LongString]=useState<string>(`
+****************************************************************************************************************
+
+Song: That's Enough, Let's Get You Home.
+Artist: Will Wood
+Lyrics:
+My dream girl, those eyes, that nose
+My private inside joke, sign the cast on my funny bone
+Floral sheets on long-given-up ghosts
+Haunt my bedroom at night and say "Let's get you home"
+They say "Grow up, be a man, 'cause until then
+You're nothing but a short-haired girl"
+But come and Braille-palm-read and hold my hand
+See my reason and "Goodbye cruel world"
+And oh my God, what's wrong with me?
+And the wife of Walter Keane, whose name right now's escaping me
+That's right, Margaret
+Dream girl, come, and sweep me off my knees
+I'd rather stay asleep than never see you wake up next to me
+Neon lights like heat lamps in the cold
+To incubate the shadows you can't stitch back to your soles
+And you seemed fine just a few days ago
+But CO2 and fish tanks do enough to get you home
+Well now you swear in your prayers telling time
+"Promise I'll never have fun again
+If you'd stop flying, " but then you start crying "Never mind, you win"
+And far too late came far too soon
+And the love you never made became the things you'd never do
+Oh, sweet Mary
+Dream girl, come, but keep your hands off me
+Go on back to bed my love, I mean,
+That's where dreams are supposed to be
+So come on, William, grow up, be a man
+'Cause until then they're gonna treat you
+Like you're just a little girl
+But come and Braille-palm-read, hold my hands and you'll see that
+It's me who cries mercy while your fingers curl
+And, oh, are you at all like me?
+Do you know what I mean?
+Or am I too close to see?
+Someone, anyone?
+Of the two things we do on our knees
+Watch me fold my hands just to crack my knuckles
+Well, here is the church, here is the steeple
+Open the doors, see all the people
+Alright, that's enough, let's get you home
+
+****************************************************************************************************************
+
+Song: That's Enough, Let's Get You Home.
+Artist: Will Wood
+Lyrics:
+One time, I tried to sing
+About... I don't know, but it was nothing fucking new
+Yet another platitude
+"Blah, blah, blah, blah, blah, blah, bla-blah blah"
+Is all they heard
+Oh, you thought they were listening?
+Now, don't be absurd
+All the rain comes down the same
+But not a drop can stake its claim
+Down they pour, with millions more, to the floor with no name
+I'm sure you really sang your Heart out
+Or I'm sure that's how it seemed
+But you and I both know so well, now
+That looks can be deceiving
+'Cos "blah, blah, blah, blah, blah, blah, bla-blah blah"
+Is so overdone
+For a man cloaked in daylight, you sure hate the sun
+When the tears stream down one day
+Obfuscated by the rain
+Can you truly say, with a straight face
+That you tried your best?
+Mr Mind?
+Yeah?
+What do you see from behind those dead, leaden eyes?
+A Soul so deep, and dark, and eternally cold
+And an oath, formed from us both
+That it would stay whole
+But I think, if I left it to you
+You'd fall under its weight and kill it too
+But I won't let you ruin what we could still be
+We have so much left to sing
+Such a plain and simple thing
+Yet your silence lines this pit in which we have lain
+All the rage, despair and shame
+That's been caged, ensnared and flamed
+Form this atom bomb of songs refused to be played
+So if you insist on crying
+While our host is slowly dying
+Then I'll cut you loose and spare this noose the dead weight
+Silent, explosive's this vile scent's corrosives
+The wiles and the woes that these sibilants and plosives
+Defer to inside from the earrings he hides
+He's so confident his throes won't be found once he's died
+But these silent explosives caused violent narcosis
+This trident he forged is both weapon and motive
+This world will forget you
+Neglect, then regret to
+Enweave the same story the backdrop is set to
+The vastness of time, the unrhymable rhymes
+I have heard this before but I'll never again
+One time, you tried to sing
+About storm and a spring
+But they know how it
+
+****************************************************************************************************************
+
+    `)
+    const [SS_Text,setSS_Text]=useState<string[]>([
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
+        "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+        "in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
+        "deserunt mollit anim id est laborum"])
     const [SS_TextDimension,setSS_TextDimension]=useState<number>(0)
     // 0 = 1 Row
     // 1 = Multiple Rows
@@ -333,6 +446,9 @@ const Components=()=>{
         SS_TextDimension={SS_TextDimension}
         SS_Text={SS_Text}
         setSS_Text={setSS_Text}
+        SS_LongString={SS_LongString}
+        setSS_LongString={setSS_LongString}
+        Header={OCR_OutputFile[0]}
         />
         JSX_C03=<C03_Header
         SS_Row={SS_Row}
