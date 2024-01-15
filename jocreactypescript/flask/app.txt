@@ -1,0 +1,6 @@
+                let_Img = Kernalss(
+                    let_Img,
+                    SS_Kernals_Name,
+                    SS_Kernals_Matrix,
+                    SS_Kernals_IsActive,
+                    SS_Kernals_Iterations)

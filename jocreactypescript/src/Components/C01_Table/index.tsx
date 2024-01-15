@@ -21,11 +21,13 @@ const C01_Table = (
 {
 TheMainCharacter,
 setTheMainCharacter,
-OCR_OutputFile
+OCR_OutputFile,
+width
 }:{
 TheMainCharacter:string[]|string
 setTheMainCharacter:(S:string[]|string)=>void
 OCR_OutputFile:string[]
+width:string
 }
 
 ) => {
@@ -42,6 +44,7 @@ OCR_OutputFile={OCR_OutputFile}
 TheMainCharacter={TheMainCharacter}
 setTheMainCharacter={setTheMainCharacter}
 OCR_OutputFile={OCR_OutputFile}
+width={width}
 />  
     }
 

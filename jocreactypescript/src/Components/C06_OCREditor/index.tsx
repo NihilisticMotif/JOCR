@@ -2,6 +2,8 @@
 import { useState } from "react"
 import U_Language from "./Coms/U_Language"
 import C_ExportFile from "./Coms/C_ExportFile"
+import U_ImageBox from "./Coms/U_ImageBox"
+import U_RunOCR from "./Coms/U_RunOCR"
 const C06_OCREditor = (
 //****************************************************************************
 // INPUT
@@ -10,13 +12,29 @@ const C06_OCREditor = (
     OCR_OutputFile,
     setOCR_OutputFile,
     OCR_Languages,
-    setOCR_Languages
+    setOCR_Languages,
+    OCR_BoxColor,
+    setOCR_BoxColor,
+    OCR_IsViewBox,
+    setOCR_IsViewBox,
+    OCR_BoxLineWidth,
+    setOCR_BoxLineWidth,
+    OCR_IsOCR,
+    setOCR_IsOCR
 }
 :{
     OCR_OutputFile:string[]
     setOCR_OutputFile:(S:string[])=>void
     OCR_Languages:string[][]
     setOCR_Languages:(S:string[][])=>void
+    OCR_BoxColor:string 
+    setOCR_BoxColor:(S:string)=>void
+    OCR_IsViewBox:boolean 
+    setOCR_IsViewBox:(S:boolean)=>void
+    OCR_BoxLineWidth:number 
+    setOCR_BoxLineWidth:(S:number)=>void
+    OCR_IsOCR:boolean 
+    setOCR_IsOCR:(S:boolean)=>void
 })=>{
 
 /****************************************************************************
@@ -107,99 +125,27 @@ const C06_OCREditor = (
 <div className='C04id_Scalar' style={{display:'inline-block',marginLeft:'10px',margin:'auto'}}>
 <h1>OCR Options</h1>
 <hr/>
+<U_RunOCR
+OCR_IsOCR={OCR_IsOCR}
+setOCR_IsOCR={setOCR_IsOCR}
+/>
+<hr/>
 <U_Language
 OCR_Languages={OCR_Languages}
 setOCR_Languages={setOCR_Languages}/>
 <hr/>
+<U_ImageBox
+OCR_BoxColor={OCR_BoxColor}
+setOCR_BoxColor={setOCR_BoxColor}
+OCR_IsViewBox={OCR_IsViewBox}
+setOCR_IsViewBox={setOCR_IsViewBox}
+OCR_BoxLineWidth={OCR_BoxLineWidth}
+setOCR_BoxLineWidth={setOCR_BoxLineWidth}
+//SS_Boxes={SS_Boxes}
+//setSS_Boxes={setSS_Boxes}
+/>
+<hr/>
 
-{
-/****************************************************************************
-// Scale = SS_Aff[0] = SS_Aff[1]
-//****************************************************************************
-}
-<hr style={{marginTop:'5px',marginBottom:'3px'}} />
-
-
-{
-//****************************************************************************
-// Scale Y = SS_Aff[1]
-//****************************************************************************
-}
-<hr style={{marginTop:'5px',marginBottom:'3px'}} />
-<tr>
-    <td style={{width:let_WidthTr}} >Scale Y</td>
-    <td>Aff[1]</td>
-</tr>
-<tr>
-    <td><input  style={{marginTop:'3px'}} id='C04id_Aff1'></input></td>
-    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(1,1)')}>Ok</button></td>
-    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(1,1) ')}>Reset</button></td>
-</tr>
-{
-//****************************************************************************
-// Rotation = SS_Aff[4]
-//****************************************************************************
-}
-<hr style={{marginTop:'5px',marginBottom:'3px'}} />
-<tr>
-    <td style={{width:let_WidthTr}} >Rotation</td>
-    <td>Aff[4]</td>
-</tr>
-<tr>
-    <td><input  style={{marginTop:'3px'}} id='C04id_Aff4'></input></td>
-    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(4,0)')}>Ok</button></td>
-    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(4,0) ')}>Reset</button></td>
-</tr>
-{
-//****************************************************************************
-// Show Origin
-//****************************************************************************
-}
-<hr style={{marginTop:'5px',marginBottom:'3px'}} />
-<tr>
-    <td style={{width:let_WidthTr}} >Show Origin</td>
-    <td><input type='color' id='C04id_AffShowColorr'></input></td>
-</tr>
-<tr>
-<select id="C04id_AffShoww">
-  <option value="NoOrigin">No Origin</option>
-  <option value="CenterOrigin">Center Origin</option>
-  <option value="TopLeftOrigin">Top Left Origin</option>
-</select>
-<td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateOrigin')}>Ok</button></td>
-</tr>
-{
-//****************************************************************************
-// Pos X = SS_Aff[2]
-//****************************************************************************
-}
-<hr style={{marginTop:'5px',marginBottom:'3px'}} />
-<tr>
-    <td style={{width:let_WidthTr}} >Pos X</td>
-    <td>Aff[2]</td>
-</tr>
-<tr>
-    <td><input  style={{marginTop:'3px'}} id='C04id_Aff2'></input></td>
-    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(2,0)')}>Ok</button></td>
-    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(2,0) ')}>Reset</button></td>
-</tr>
-{
-//****************************************************************************
-// Pos Y = SS_Aff[3]
-//****************************************************************************
-}
-<hr style={{marginTop:'5px',marginBottom:'3px'}} />
-<tr>
-    <td style={{width:let_WidthTr}} >Pos Y</td>
-    <td>Aff[3]</td>
-</tr>
-<tr>
-    <td><input  style={{marginTop:'3px'}} id='C04id_Aff3'></input></td>
-    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(3,0)')}>Ok</button></td>
-    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(3,0) ')}>Reset</button></td>
-</tr>
-<hr style={{marginTop:'5px',marginBottom:'3px'}} />
-*/}
     </div>
     </>
     )}

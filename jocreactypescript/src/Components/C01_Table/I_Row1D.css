@@ -1,7 +1,5 @@
 .C01id_Box{
     background-color:skyblue;
-    overflow-x: auto;
-    overflow-y:auto;
     white-space: pre-line;
     width:100%;
     text-align:left;

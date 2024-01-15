@@ -1,3 +1,1376 @@
+   
+
+        
+/*
+No error, but the image is not show, again.
+*/
+        //setSS_Image(imageURL);
+        //img.src = image;
+ 
+          // this line make SS_ImageDimensions becomes [,]
+          // There is no error, but the image is not show.
+ 
+                'Status' : 'Success', 
+ 
+      alert(JSON.stringify(data))
+ 
+.image
+ 
+    message: string; // Adjust the type accordingly
+ 
+      /* ';' expected. */
+ 
+        img.onerror = (error) => {
+            console.error('Error loading image:', error);
+        };
+        } catch (error) {
+            console.error('Error decoding image:', error);
+        }
+ 
+//img.src = URL.createObjectURL(data.ImageBytes);
+ 
+//img.src = URL.createObjectURL(data.ImageBytes);
+ 
+   reader.onload = function () {
+     //me.modelvalue = reader.result;
+     console.log(reader.result);
+   };
+   reader.onerror = function (error) {
+     console.log('Error: ', error);
+   };
+ 
+   const img = new Image();
+  img.onload = () => {
+  setSS_ImageDimensions([img.width, img.height]);
+  };
+  img.src = imageURL;
+ 
+function getBase64(event) {
+   let me = this;
+ 
+    const img = new Image();
+//img.src = URL.createObjectURL(data.ImageBytes);
+// https://stackoverflow.com/questions/43965034/reactjs-how-to-render-images-from-a-json-blob
+let binaryData = []; 
+binaryData.push(data.ImageBytes); 
+const blob=new Blob(binaryData, {type: 'image/png'})
+img.src = URL.createObjectURL(blob)
+        img.onload = () => {
+          setSS_Image(img.src)
+            setSS_ImageDimensions([img.width, img.height]);
+        };
+ 
+    const img = new Image();
+//img.src = URL.createObjectURL(data.ImageBytes);
+// https://stackoverflow.com/questions/43965034/reactjs-how-to-render-images-from-a-json-blob
+let binaryData = []; 
+binaryData.push(data.ImageBytes); 
+const blob=new Blob(binaryData, {type: 'image/png'})
+img.src = URL.createObjectURL(blob)
+        img.onload = () => {
+          setSS_Image(img.src)
+            setSS_ImageDimensions([img.width, img.height]);
+        };
+ 
+
+        // Event handler for image onerror
+    //img.onerror = (error) => {
+    //    console.error('Error loading image:', error);
+    //};
+    } catch (error) {
+        console.error('Error decoding image:', error);
+    }
+ 
+    try {
+ 
+as string
+ 
+        img.onload = () => {
+          setSS_Image(img.src)
+            setSS_ImageDimensions([img.width, img.height]);
+        };
+ 
+/*
+Failed to execute 'createObjectURL' on 'URL': Overload resolution failed.
+TypeError: Failed to execute 'createObjectURL' on 'URL': Overload resolution failed.
+    at http://localhost:3000/main.88f5b741a2d8f695aa41.hot-update.js:139:38
+*/
+ 
+const img = new Image();
+ 
+
+  // let let_undo='<='
+  // let let_cando='=>'
+ 
+  function f_ExportImage(){}
+ 
+URL
+ 
+URL
+ 
+/*
+Failed to execute 'createObjectURL' on 'URL': Overload resolution failed.
+TypeError: Failed to execute 'createObjectURL' on 'URL': Overload resolution failed.
+    at http://localhost:3000/main.88f5b741a2d8f695aa41.hot-update.js:139:38
+*/
+ 
+        const mediaStream = new MediaStream();
+ 
+        data.ImageBytes= mediaStream;
+ 
+      let  binaryData = [];
+binaryData.push(data);
+ 
+              // By ChatGPT
+ 
+return response 
+ 
+            //return response.json();
+ 
+            //alert(JSON.stringify(response))
+ 
+            let_Bytes = cv2.imencode('.png', let_Img)[1].tobytes()
+ 
+          .then((response) => response.json() as Promise<ServerResponse>
+          ).then((data) => {
+            const imageURL = URL.createObjectURL(new Blob([data.imageBlob]));
+            // Property 'imageBlob' does not exist on type 'Blob'.
+            setSS_Image(imageURL);
+            const img = new Image();
+            img.onload = () => {
+                setSS_ImageDimensions([img.width, img.height]);
+            };
+            img.src = imageURL;
+            if(OCR_IsOCR===true){
+              setTheMainCharacter(data.tesseractOutput);
+            }
+            // Property 'tesseractOutput' does not exist on type 'Blob'.
+          });
+ 
+
+interface ServerResponse {
+    imageBlob: Blob;
+    tesseractOutput: string|string[]; // Adjust the type accordingly
+}
+ 
+.then((data) => {
+        const imageArrayBuffer = Uint8Array.from(atob(data.imageBlob), c => c.charCodeAt(0));
+        /* 
+        No overload matches this call.
+  Overload 1 of 2, '(data: string): string', gave the following error.
+    Argument of type 'Blob' is not assignable to parameter of type 'string'.
+  Overload 2 of 2, '(data: string): string', gave the following error.
+    Argument of type 'Blob' is not assignable to parameter of type 'string'.
+        */
+        const imageBlob = new Blob([imageArrayBuffer], { type: 'image/png' });
+
+        const imageURL = URL.createObjectURL(imageBlob);
+        setSS_Image(imageURL);
+        const img = new Image();
+        img.onload = () => {
+            setSS_ImageDimensions([img.width, img.height]);
+        };
+        img.src = imageURL;
+
+        if (OCR_IsOCR === true) {
+            setTheMainCharacter(data.tesseractOutput);
+        }
+    });
+ 
+            '''
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type bytes is not JSON serializable
+
+
+            '''
+ 
+          // frontend.tsx
+          //...
+ 
+/*
+          .then((data) => {
+              const imageURL = URL.createObjectURL(data);
+              setSS_Image(imageURL);
+              const img = new Image();
+              img.onload = () => {
+              setSS_ImageDimensions([img.width, img.height]);
+              };
+              img.src = imageURL;
+              setTheMainCharacter('Tesseract Output')
+              // How can I get TEsseract output from
+              // Flask/app.py ?
+              // Show me the frontend.tsx
+              // and app.py
+              //...
+          })*/
+ 
+        ''
+ 
+'OCR_IsOCR'
+ 
+OCR_BoxColor:string 
+setOCR_BoxColor:(S:string)=>void
+ 
+OCR_BoxLineWidth:number 
+setOCR_BoxLineWidth:(S:number)=>void
+ 
+OCR_BoxColor,
+setOCR_BoxColor,
+ 
+OCR_BoxLineWidth,
+setOCR_BoxLineWidth
+ 
+    const [SS_OnChange,setSS_OnChange]=useState<string>(OCR_BoxLineWidth.toString())
+
+    function f_UpdateOCR_BoxColor(){
+    let let_Input:string=(document.getElementById('C06id_UpdateOCR_BoxColor') as HTMLInputElement).value.toString();
+    setOCR_BoxColor(let_Input)
+    }
+
+    function f_UpdateBoxLineWidth(){
+    let let_Input:string=(document.getElementById('C06id_OCRBoxLineWidth') as HTMLInputElement).value.toString();
+    if(isNaN(parseInt(let_Input))===false){
+        setOCR_BoxLineWidth(parseInt(let_Input))
+        setSS_OnChange(let_Input)
+    }
+    else{
+        setOCR_BoxLineWidth(2)
+        setSS_OnChange('2')
+    }
+    }
+
+    function f_OnChange(){
+    let let_Input:string=(document.getElementById('C06id_OCRBoxLineWidth') as HTMLInputElement).value.toString();
+    setSS_OnChange(let_Input)
+    }
+ 
+<div style={{display:'flex',marginLeft:'10px',marginTop:'5px',height:'25px'}}>
+<input 
+placeholder="Line Width"
+value={SS_OnChange}
+onChange={f_OnChange}
+style={{marginLeft:'0px',width:'50%',fontSize:'16px'}} id='C06id_OCRBoxLineWidth'></input>
+<button onClick={f_UpdateBoxLineWidth}>Ok</button>
+<input 
+type='color'
+value={OCR_BoxColor}
+onChange={f_UpdateOCR_BoxColor}
+id='C06id_UpdateOCR_BoxColor'
+style={{width:'20%'}}
+></input>
+</div>
+ 
+ # Convert BytesIO to bytes
+ 
+            # app.py
+ 
+
+            # Create a JSON response
+ 
+            # app.py
+            tesseract_output = pytesseract.image_to_string(OCR_Img,OCR_Langs)
+ 
+            response_data = {
+        'imageBlob': let_Bytes.read(),
+        'tesseractOutput': tesseract_output,
+    }
+ 
+            '''
+    image_file = request.files.get('file')
+    image = Image.open(io.BytesIO(image_file.read()))
+
+    # Apply Tesseract OCR
+    tesseract_output = process_image(image, ocr_langs)
+
+    # Return response as JSON
+    response_data = {
+        'imageBlob': image_file.read(),
+        'tesseractOutput': tesseract_output,
+    }
+            '''
+ 
+            '''
+    image_file = request.files.get('file')
+    image = Image.open(io.BytesIO(image_file.read()))
+
+    # Apply Tesseract OCR
+    tesseract_output = process_image(image, ocr_langs)
+
+    # Return response as JSON
+    response_data = {
+        'imageBlob': image_file.read(),
+        'tesseractOutput': tesseract_output,
+    }
+            '''
+ 
+from flask import Flask, request, jsonify
+ 
+                if not SS_IsRGB:
+ 
+                if SS_IsRGB:
+                    let_Img=DrawBoxAroundTextGray(let_Img,OCR_BoxColor,OCR_BoxLineWidth)
+ 
+                if SS_IsRGB:
+ 
+                if not SS_IsRGB:
+ 
+            if SS_IsShow==True:
+                let_Img=AffineScale(let_Img,SS_Aff_ScaleX,SS_Aff_ScaleY)
+                let_Img=AffineMoveOrigin(let_Img,SS_Aff_PositionX,SS_Aff_PositionY)
+                let_Img=AffineRotation(let_Img,SS_Aff_Rotation)
+                let_Img=DrawingBoxes(let_Img,SS_Boxes_XYWH,SS_Boxes_Type,SS_Boxes_Color,SS_Boxes_IsShow)
+            let_Img=DrawPointOrigin(
+                let_Img,
+                SS_AffOrigin_Mode,
+                hex_to_rgb_3Dvector(SS_AffOrigin_Color),
+                SS_Aff_PositionX,
+                SS_Aff_PositionY
+                )
+            let_Img = DrawPoints(let_Img,SS_Affine[0],SS_AffineRGB[0],SS_AffineBOOL[0])
+            if Is_Affine==True:
+                let_Img=AffineTransformations(let_Img,SS_Affine)
+            let_Img = DrawPoints(let_Img,SS_Affine[1],SS_AffineRGB[1],SS_AffineBOOL[1])
+ 
+ge}>Download 
+ 
+t imClick={f_Save
+ 
+age (SS_Image)
+              // when they click this button?
+              // <button on
+ 
+              Main
+ 
+setTheMainCha
+ 
+            print('SS_IsRGB',SS_IsRGB)
+ 
+not 
+ 
+Gray
+ 
+            if SS_IsShow==True:
+                let_Img=AffineScale(let_Img,SS_Aff_ScaleX,SS_Aff_ScaleY)
+                let_Img=AffineMoveOrigin(let_Img,SS_Aff_PositionX,SS_Aff_PositionY)
+                let_Img=AffineRotation(let_Img,SS_Aff_Rotation)
+                let_Img=DrawingBoxes(let_Img,SS_Boxes_XYWH,SS_Boxes_Type,SS_Boxes_Color,SS_Boxes_IsShow)
+            let_Img=DrawPointOrigin(
+                let_Img,
+                SS_AffOrigin_Mode,
+                hex_to_rgb_3Dvector(SS_AffOrigin_Color),
+                SS_Aff_PositionX,
+                SS_Aff_PositionY
+                )
+            let_Img = DrawPoints(let_Img,SS_Affine[0],SS_AffineRGB[0],SS_AffineBOOL[0])
+            if Is_Affine==True:
+                let_Img=AffineTransformations(let_Img,SS_Affine)
+            let_Img = DrawPoints(let_Img,SS_Affine[1],SS_AffineRGB[1],SS_AffineBOOL[1])
+ 
+,height:'30px'
+ 
+<div style={{display:'flex'}}>
+<input 
+type='color'
+value={OCR_BoxColor}
+onChange={f_UpdateOCR_BoxColor}
+id='C06id_UpdateOCR_BoxColor'
+style={{width:'20%',height:'30px'}}
+></input>
+</div>
+ 
+<select id="C06id_Update_image_to_box" 
+style={{marginTop:'0px', width: '70%' ,height:'30px',marginLeft:'10px',
+fontSize:'16px'
+}}
+      value={OCR_image_to_box}
+      onChange={f_UpdateOCR_image_to_box}
+      >
+          <option value='image_to_data'>image_to_data</option>
+          <option value='image_to_boxes'>image_to_boxes</option>
+</select>
+ 
+    function f_UpdateOCR_image_to_box(){
+    let let_Input:string=(document.getElementById("C06id_Update_image_to_box") as HTMLInputElement).value.toString();
+    setOCR_image_to_box(let_Input)
+    }
+ 
+OCR_image_to_box,
+setOCR_image_to_box,
+ 
+OCR_image_to_box:string 
+setOCR_image_to_box:(S:string)=>void
+ 
+    OCR_image_to_box,
+    setOCR_image_to_box,
+ 
+    OCR_image_to_box:string 
+    setOCR_image_to_box:(S:string)=>void
+ 
+OCR_image_to_box={OCR_image_to_box}
+setOCR_image_to_box={setOCR_image_to_box}
+ 
+  OCR_image_to_box,
+  setOCR_image_to_box,
+ 
+  OCR_image_to_box:string;
+  setOCR_image_to_box:(S:string)=>void
+ 
+    OCR_image_to_box={OCR_image_to_box}
+    setOCR_image_to_box={setOCR_image_to_box}
+ 
+          formData.append('OCR_image_to_box',OCR_image_to_box)
+ 
+OCR_image_to_box,
+setOCR_image_to_box,
+ 
+setOCR_image_to_box:(S:string)=>void
+ 
+  OCR_image_to_box:string;
+ 
+OCR_image_to_box={OCR_image_to_box}
+setOCR_image_to_box={setOCR_image_to_box}
+ 
+    OCR_image_to_box
+ 
+OCR_image_to_box={OCR_image_to_box}
+setOCR_image_to_box={setOCR_image_to_box}
+ 
+const [OCR_image_to_box,setOCR_image_to_box]=useState<string>('image_to_box')
+ 
+ ={ }
+ 
+'lightgreen'
+ 
+OCR_IsViewBox?setOCR_IsViewBox(false)
+ 
+<button style={{fontSize:'14px',width:'45%',marginLeft:'5px'}}>Add Box</button>
+ 
+            if SS_IsShow==True:
+                let_Img=AffineScale(let_Img,SS_Aff_ScaleX,SS_Aff_ScaleY)
+                let_Img=AffineMoveOrigin(let_Img,SS_Aff_PositionX,SS_Aff_PositionY)
+                let_Img=AffineRotation(let_Img,SS_Aff_Rotation)
+                let_Img=DrawingBoxes(let_Img,SS_Boxes_XYWH,SS_Boxes_Type,SS_Boxes_Color,SS_Boxes_IsShow)
+            let_Img=DrawPointOrigin(
+                let_Img,
+                SS_AffOrigin_Mode,
+                hex_to_rgb_3Dvector(SS_AffOrigin_Color),
+                SS_Aff_PositionX,
+                SS_Aff_PositionY
+                )
+            let_Img = DrawPoints(let_Img,SS_Affine[0],SS_AffineRGB[0],SS_AffineBOOL[0])
+            if Is_Affine==True:
+                let_Img=AffineTransformations(let_Img,SS_Affine)
+            let_Img = DrawPoints(let_Img,SS_Affine[1],SS_AffineRGB[1],SS_AffineBOOL[1])
+ 
+            if SS_IsShow==True:
+                let_Img=AffineScale(let_Img,SS_Aff_ScaleX,SS_Aff_ScaleY)
+                let_Img=AffineMoveOrigin(let_Img,SS_Aff_PositionX,SS_Aff_PositionY)
+                let_Img=AffineRotation(let_Img,SS_Aff_Rotation)
+                let_Img=DrawingBoxes(let_Img,SS_Boxes_XYWH,SS_Boxes_Type,SS_Boxes_Color,SS_Boxes_IsShow)
+            let_Img=DrawPointOrigin(
+                let_Img,
+                SS_AffOrigin_Mode,
+                hex_to_rgb_3Dvector(SS_AffOrigin_Color),
+                SS_Aff_PositionX,
+                SS_Aff_PositionY
+                )
+            let_Img = DrawPoints(let_Img,SS_Affine[0],SS_AffineRGB[0],SS_AffineBOOL[0])
+            if Is_Affine==True:
+                let_Img=AffineTransformations(let_Img,SS_Affine)
+            let_Img = DrawPoints(let_Img,SS_Affine[1],SS_AffineRGB[1],SS_AffineBOOL[1])
+ 
+    # https://stackoverflow.com/questions/63752141/drawing-a-colored-rectangle-in-a-grayscale-video-using-opencv-python
+    img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+ 
+    # I want the Tesseract and Open CV draw the box around the text
+    # with color, after I use cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+ 
+            #(0,0,0), 
+ 
+BoxColor
+ 
+    #plt.figure(figsize=(16,12))
+    #plt.imshow(rgb_img)
+    #plt.title('SAMPLE INVOICE WITH CHARACTER LEVEL BOXES')
+    #plt.show()
+ 
+            print(type(i[-1]))
+ 
+#****************************************************************************
+# Get Image Processing Input from POST Request
+#****************************************************************************
+ 
+
+@app.route('/HelloWorld')#,methods = ['POST', 'GET'])
+def HelloWorld():
+    # https://www.geeksforgeeks.org/how-to-connect-reactjs-with-flask-api/
+    return {'messenger':33}
+
+@app.route('/Square',methods = ['POST', 'GET'])
+def HelloSomeone():
+    if request.method == 'POST':
+        Let_JSON  = request.get_json()
+        let_IsRGB = Let_JSON.get('IsRGB')
+        if let_IsRGB=='false':
+            return {'messenger':'Bordom'}
+        else:
+            return {'messenger':'Addiction'}
+ 
+id='C06id_OCR_BoxLineWidth'
+ 
+OCR_BoxLineWidth
+ 
+        File Name: 
+ 
+<h1 style={{fontSize:'14px'}}>Line: {4}</h1>
+ 
+Line 
+ 
+Line 
+ 
+    image = cv2.imread(img)
+ 
+canny,get_grayscale,erode,dilate,opening,
+ 
+{OCR_IsViewBox? 'Deactivate':'Activate'}
+ 
+<button>Add Box</button>
+ 
+<button
+style={{width:'30%',height:'30px'}}
+>Activate</button>
+<button
+style={{width:'30%',height:'30px'}}
+>Deactivate</button>
+<button
+style={{width:'30%',height:'30px'}}
+>Add Box</button>
+ 
+,marginLeft:'5px'
+ 
+,marginLeft:'5px'
+ 
+,marginLeft:'5px'
+ 
+</div>
+ 
+<input 
+type='color'
+value={OCR_BoxColor}
+onChange={f_UpdateOCR_BoxColor}
+id='C06id_UpdateOCR_BoxColor'
+style={{width:'45%'}}
+></input>
+ 
+{
+/****************************************************************************
+// Scale = SS_Aff[0] = SS_Aff[1]
+//****************************************************************************
+}
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+
+
+{
+//****************************************************************************
+// Scale Y = SS_Aff[1]
+//****************************************************************************
+}
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+<tr>
+    <td style={{width:let_WidthTr}} >Scale Y</td>
+    <td>Aff[1]</td>
+</tr>
+<tr>
+    <td><input  style={{marginTop:'3px'}} id='C04id_Aff1'></input></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(1,1)')}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(1,1) ')}>Reset</button></td>
+</tr>
+{
+//****************************************************************************
+// Rotation = SS_Aff[4]
+//****************************************************************************
+}
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+<tr>
+    <td style={{width:let_WidthTr}} >Rotation</td>
+    <td>Aff[4]</td>
+</tr>
+<tr>
+    <td><input  style={{marginTop:'3px'}} id='C04id_Aff4'></input></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(4,0)')}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(4,0) ')}>Reset</button></td>
+</tr>
+{
+//****************************************************************************
+// Show Origin
+//****************************************************************************
+}
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+<tr>
+    <td style={{width:let_WidthTr}} >Show Origin</td>
+    <td><input type='color' id='C04id_AffShowColorr'></input></td>
+</tr>
+<tr>
+<select id="C04id_AffShoww">
+  <option value="NoOrigin">No Origin</option>
+  <option value="CenterOrigin">Center Origin</option>
+  <option value="TopLeftOrigin">Top Left Origin</option>
+</select>
+<td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateOrigin')}>Ok</button></td>
+</tr>
+{
+//****************************************************************************
+// Pos X = SS_Aff[2]
+//****************************************************************************
+}
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+<tr>
+    <td style={{width:let_WidthTr}} >Pos X</td>
+    <td>Aff[2]</td>
+</tr>
+<tr>
+    <td><input  style={{marginTop:'3px'}} id='C04id_Aff2'></input></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(2,0)')}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(2,0) ')}>Reset</button></td>
+</tr>
+{
+//****************************************************************************
+// Pos Y = SS_Aff[3]
+//****************************************************************************
+}
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+<tr>
+    <td style={{width:let_WidthTr}} >Pos Y</td>
+    <td>Aff[3]</td>
+</tr>
+<tr>
+    <td><input  style={{marginTop:'3px'}} id='C04id_Aff3'></input></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_UpdateAff(3,0)')}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>alert('f_ResetAff(3,0) ')}>Reset</button></td>
+</tr>
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+*/}
+ 
+<select id="C06id_Update_image_to_box" 
+style={{marginTop:'0px', width: '100px' ,height:'30px'}}
+      value={OCR_image_to_box}
+      onChange={f_UpdateOCR_image_to_box}
+      >
+          <option value='image_to_data'>image_to_data</option>
+          <option value='image_to_boxes'>image_to_boxes</option>
+</select>
+ 
+</>
+ 
+const [OCR_IsBoxColorActivate,setOCR_IsBoxColorActivate]=useState<boolean>(false)
+ 
+<button style={{backgroundColor:OCR_IsBoxColorActivate?'lightgreen':'white'}}>Activate</button>
+<button style={{backgroundColor:OCR_IsBoxColorActivate?'white':'lightgreen'}}>Deactivate</button>
+ 
+OCR_IsBoxColorActivate:boolean
+setOCR_IsBoxColorActivate:(S:boolean)=>void
+ 
+OCR_IsBoxColorActivate,
+setOCR_IsBoxColorActivate,
+ 
+OCR_IsBoxColorActivate,
+setOCR_IsBoxColorActivate,
+ 
+'''
+value="Rectangle">
+value="Frame">Fram
+value="Line">Line<
+value="LineX">Hori
+value="LineY">Vert
+'''  
+ 
+        #try:
+        #    img[img>=Maxx[-1]]=255
+        #    return img
+        #except:
+        #    return img
+ 
+            if SS_IsShow==True:
+                let_Img=AffineScale(let_Img,SS_Aff_ScaleX,SS_Aff_ScaleY)
+                let_Img=AffineMoveOrigin(let_Img,SS_Aff_PositionX,SS_Aff_PositionY)
+                let_Img=AffineRotation(let_Img,SS_Aff_Rotation)
+                let_Img=DrawingBoxes(let_Img,SS_Boxes_XYWH,SS_Boxes_Type,SS_Boxes_Color,SS_Boxes_IsShow)
+ 
+        <td>
+<input 
+    onChange={()=>f_OnChange(j[0],j[1])}
+    value={(SS_nDTable[j[0]][j[1]]).toString()} 
+    id={'C04id_Kernal'+ss_ThisKernal.Key+'_'+(j[0]*10+j[1]).toString()}></input>
+        </td>
+ 
+ && typeof JSX_Con[0][0]==='number'
+ 
+  TS_K
+ 
+<></>
+ 
+100, 200
+ 
+'ddede'
+ 
+'box.Type[0]'
+ 
+Crop</option>
+ 
+
+  <option value="Crop" style={{display:'none'}}>
+ 
+  <option value="LineY">Vertical Line</option>
+ 
+'C05id_AddBox'+'Type'+box.Key.toString()
+ 
+            // Add New Column in List of All THRESHOLDS
+ 
+COLUMN
+ 
+COLUMN
+ 
+lassName='C04id_Button'>RGB</button>
+ 
+
+    <button onClick={f_Gray} style={{backgroundColor:let_Color[0]}} className='C04id_Button'>Gray</button>
+    <button onClick={f_RGB}  style={{backgroundColor:let_Color[1]}} c
+ 
+    let ocr_OutputFile=[...OCR_OutputFile]
+    ocr_OutputFile[1]=let_Input
+ 
+          {/*<option value='pdf'>.pdf</option>
+          <option value='alto'>.alto</option>
+          <option value='hocr'>.hocr</option>
+    <option value='json'>.json</option>*/}
+ 
+    </div>
+ 
+        <div style={{display:'inline-block',marginLeft:'10px',margin:'auto'}}>
+ 
+    <h1 className='C04id_Zoom' style={{marginTop:'10px'}}>{let_State}</h1>
+ 
+    function f_Gray(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(false)
+    }
+
+    function f_RGB(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(true)
+    }
+    let let_State='Color'
+    if(SS_IsRGB===true){
+      let_State='Color'
+      let_Color[0]='white'
+      let_Color[1]='lightgreen'
+    }
+    else{
+      let_State='Gray'
+      let_Color[0]='lightgreen'
+      let_Color[1]='white'
+    }
+ 
+7. First Row as Column 
+ 
+import { useState } from "react"
+ 
+//****************************************************************************
+// INPUT
+//****************************************************************************
+ 
+//****************************************************************************
+// OUTPUT
+//****************************************************************************
+ 
+; // You can specify the filename here
+ 
+05id_AddBox'+'Type'+box.Key.toString()
+ 
+  <option value="LineX">Horizontal Line</option>
+  <option value="LineY">Vertical Line</option>
+  <option value="Crop" style={{display:'none'}}>Crop</option>
+ 
+downloaded_image
+ 
+.split(',');
+ 
+onClick={()=>setOpenSaveImage(true)}
+ 
+
+//****************************************************************************
+// JSX_01: Download Image
+//****************************************************************************
+
+ 
+File Name: 
+ 
+    let JSX_ImageDownloadingButton=<></>
+    if(OpenSaveImage===false){
+      JSX_ImageDownloadingButton= 
+        
+ 
+<td><button className='I02id_Header' onClick={()=>setOpenSaveImage(true)} style={{whiteSpace:'nowrap'}}>Export Image</button></td>
+ 
+    }else{
+      JSX_ImageDownloadingButton= 
+        <td>
+          File Name: <input></input>
+          <button>Download</button>
+          <button>
+        </td>
+    }
+ 
+t Image</button></td>
+ 
+<td><button className='I02id_Header' onClick={f_ExportImage} style={{whiteSpace:'nowrap'}}>Expor
+ 
+f_ExportImage
+ 
+        <td>Image File Name <input></input></td>
+ 
+<button></button>
+ 
+              // By ChatGPT
+ 
+          //alert(JSON.stringify(SS_Boxes))
+ 
+          //let let_ImageJson = JSON.stringify(Object.fromEntries(formData));
+ 
+              //body:formData,
+ 
+
+
+ 
+// JSON.stringify({IsRGB:SS_IsRGB.toString(),file:let_ImageJson}),
+              //headers: { "content-type": "application/json" }
+ 
+            //return response.json();
+ 
+            //alert(JSON.stringify(response))
+ 
+,marginRight:'auto'
+ 
+width==='50%'? '100%':
+ 
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+ 
+- scrollbarWidth
+ 
++30
+ 
++30
+ 
+width:width==='50%'? '200%':'100%',
+ 
+    overflow-x: scroll;
+ 
+    border-collapse: collapse;
+ 
+overflow-y: scroll;
+ 
+windowWidth = window.innerWidth;
+ 
+        if(width!=='50%'){
+ 
+        }
+        
+        else{
+        const windowWidth = window.innerWidth;
+        const leftThWidth = document.querySelector('.C01id_Left')?.clientWidth || 0;
+        const rightRowThWidth = document.querySelector('.C01id_RightRow')?.clientWidth || 0;
+ 
+        setinputWidth(dynamicWidth)
+        dynamicWidthDivRef.current.style.width = dynamicWidth + 'px';
+      }
+ 
+overflow-y: scroll;
+ 
+        style={{wiud}}
+ 
+else{
+        
+      }
+ 
+const dynamicWidthDivRef = useRef<HTMLDivElement>(null);
+ 
+const dynamicWidthDivRef = Ref_C04.current;
+ 
+        const leftThWidth = document.querySelector('.C01id_Left')?.clientWidth || 0;
+        const rightRowThWidth = document.querySelector('.C01id_RightRow')?.clientWidth || 0;
+ 
+const let_CurrentWidthC04 = Ref_C04.current;
+let let_WidthC04=(document.getElementById('I02id_Canvas')as HTMLElement)
+if (let_CurrentWidthC04) {
+const let_ObsImageWidth = new ResizeObserver(() => { 
+  setSS_WidthImage(let_WidthC04!.offsetWidth-1)
+})
+let_ObsImageWidth.observe(let_CurrentWidthC04);
+return () => {
+    let_ObsImageWidth.disconnect();
+};
+}
+ 
+
+  useEffect(()=>{
+    
+  }
+  ,[SS_OpenPanel])
+ 
+        {//<td><button className='I02id_Header' >Export Image</button></td>
+        }
+ 
+        {/*<td><button className='I02id_Header'>{let_undo}</button></td>
+        <td><button className='I02id_Header'>{let_cando}</button></td>
+        */}
+ 
+width={width}
+ 
+width:string
+ 
+width
+ 
+'C01id_Edit'+INDEX.toString()
+ 
+useEffect(()=>{
+
+}
+,[TheMainCharacter])
+ 
+){
+        
+    }
+ 
+    /*
+// marginLeft of the text = 0px
+
+I'm that first-person they talk about in all the books
+I'm that perspective you cannot doubt, see how I look
+Control the narrative reliably, baby, it's all about me
+And I wrote the book about throwing the book
+At those who don't do it by it
+So now I'm holding myself hostage
+Stockholm lust just looks like justice
+And enough lefts don't make the right but two wrongs do
+Oh man, Sun Tzu would love this
+...
+
+// I want to set marginLeft of the text = 10px
+
+  I'm that first-person they talk about in all the books
+  I'm that perspective you cannot doubt, see how I look
+  Control the narrative reliably, baby, it's all about me
+  And I wrote the book about throwing the book
+  At those who don't do it by it
+  So now I'm holding myself hostage
+  Stockholm lust just looks like justice
+  And enough lefts don't make the right but two wrongs do
+  Oh man, Sun Tzu would love this
+...
+    */
+ 
+// marginLeft of the text = 0px
+ 
+,
+ 
+    height:'auto'
+ 
+height:
+ 
+-30-15+25
+ 
+overflowY:'auto'
+ 
+    overflow-x: auto;
+    overflow-y:auto;
+ 
+I'm that first-person they talk about in all the books
+I'm that perspective you cannot doubt, see how I look
+Control the narrative reliably, baby, it's all about me
+And I wrote the book about throwing the book
+At those who don't do it by it
+...
+ 
+I'm the gap between a tragedy and comedy
+ 
+// The Text is very long.
+// I want the height of textarea fit with the amount of any input text.
+ 
+    height:'100%',
+ 
+    overflowY:SS_IsEdit?'hidden':'auto'
+ 
+height:`calc(100vh - ${0}px - ${105+let_HeaderHeight-30-15}px)`
+ 
+height:
+ 
+    /*useEffect(()=>{
+    if(typeof TheMainCharacter!=='string'&&SS_Index){
+    const let_Rows:string[] = [...TheMainCharacter]
+    // update JSX_Rows every time when
+    JSX_Rows = let_Rows.map((value: string, index: number, array: string[]) =>{
+        return (
+            <>
+            <Row_2D
+            INDEX={index}
+            TheMainCharacter={TheMainCharacter}
+            setTheMainCharacter={setTheMainCharacter}
+            SS_EditRow={SS_EditRow}
+            setSS_EditRow={setSS_EditRow}
+            inputwidth={inputWidth}
+            />
+            </>)
+    })}
+    else{
+        JSX_Rows=<h1>There is error with TheMainCharacter</h1>
+    }
+    },[TheMainCharacter,SS_EditRow])*/
+ 
+height
+ 
+height:string
+ 
+width={width}
+ 
+</>
+ 
+{TheMainCharacter}
+ 
+<div style={{marginLeft:'10px'}}>
+{TheMainCharacter}
+</div>
+ 
+</div>
+ 
+<th >{OCR_OutputFile}</th>
+ 
+<hr/>
+ 
+    height:'100%',
+ 
+style={{marginBottom:'10px'}}
+ 
+    marginBottom:'10px',
+ 
+<th style={{marginBottom:'10px'}}>{OCR_OutputFile}</th>
+ 
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+ 
+,margin: 'auto'
+ 
+marginBottom:'10px'
+ 
+,marginTop:'50px'
+ 
+<button className='C07id_SmallH1' onClick={f_S
+ 
+</div>
+ 
+className='C07id_SmallH1'
+ 
+
+.C07id_SmallH1 button,
+.C07id_SmallH1 input{
+    width:40px;
+    height:20px
+}
+ 
+</div>
+ 
+setSS_IsCharacterArray
+ 
+setSS_IsCharacterArray:(S:boolean)=>void
+ 
+{//<R_UtilityTable/>
+}
+ 
+SS_IsCharacterArray={SS_IsCharacterArray}
+setSS_IsCharacterArray={setSS_IsCharacterArray} 
+ 
+SS_IsCharacterArray:boolean
+setSS_IsCharacterArray:(S:boolean)=>void
+ 
+SS_IsCharacterArray,
+setSS_IsCharacterArray,
+ 
+SS_IsCharacterArray:boolean
+setSS_IsCharacterArray:(S:boolean)=>void
+ 
+SS_IsCharacterArray,
+setSS_IsCharacterArray,
+ 
+[...
+ 
+'C01id_Edit'+INDEX.toString()
+ 
+<h1 style={{fontSize:'14px',marginTop:'0px',marginBottom:'0px'}}>Output Type</h1>
+<button //onClick={()=>setSS_IsCharacterArray(false)} 
+style={{backgroundColor: SS_IsCharacterArray?'white':'lightgreen'}}>String</button>
+<button //onClick={()=>setSS_IsCharacterArray(true)}  
+style={{backgroundColor: SS_IsCharacterArray?'lightgreen':'white'}}>String Array</button>
+ 
+New Line
+ 
++INDEX.toString()
+ 
++INDEX.toString()
+ 
+let THISROW=TheMainCharacter[INDEX]
+ 
+    INDEX:number,
+ 
+    INDEX,
+ 
+<tr style={{width:'100%'}}>
+    <td className='C01id_Left'>{INDEX}</td>
+    <td><div style={{width:'100%'}}>{THISROW}</div></td>
+    <td className='C01id_RightRow'>
+        <div className='C01id_EditRowButton'>
+            <button style={{width:'45px'}} onClick={()=>setSS_EditRow([INDEX,'Edit'])}>Edit</button>
+            <button style={{width:'calc( 100% -45px - 45px)'}} onClick={()=>setSS_EditRow([INDEX,'Insert'])}>Insert</button>
+            <button style={{width:'45px'}} onClick={()=>setSS_EditRow([INDEX,'Delete'])}>X</button>
+        </div>  
+    </td>
+</tr>
+ 
+        }}
+ 
+    if(SS_EditRow[0]===INDEX){
+        if(SS_EditRow[1]==='Insert'){
+ 
+        setSS_EditRow([INDEX,'None'])
+ 
+    SS_EditRow,
+    setSS_EditRow,
+ 
+    SS_EditRow:[number,'None'|'Edit'|'Delete'|'Insert']
+    setSS_EditRow:(S:[number,'None'|'Edit'|'Delete'|'Insert'])=>void
+ 
+/button> 
+ 
+            <button style={{width:'50%'}} onClick={()=>setSS_EditRow([INDEX,'None'])}>Cancel<
+ 
+        ss_Rows.splice(INDEX,0,let_Input)
+ 
+    // Actually Update Data
+    function f_Update():void{
+        let let_Input:string=(document.getElementById('C01id_Edit'+INDEX.toString()) as HTMLInputElement).value.toString();
+        let ss_Rows=[...TheMainCharacter]
+        ss_Rows[INDEX]=let_Input
+        setTheMainCharacter(ss_Rows)
+        setSS_EditRow([INDEX,'None'])
+    }
+ 
+if(SS_EditRow[1]==='Edit'){
+            JSX_Row=<>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td>Original</td>
+    <td><div style={{width:'100%'}}>{THISROW}</div></td>
+    <div className='C01id_EditRowButton'><button onClick={f_Update}>Ok</button></div>
+</tr>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td>Edited</td>
+    <td><div style={{display:'flex'}}>
+            <input id={'C01id_Edit'+INDEX.toString()} style={{fontSize:'16px',width:`${inputwidth}px`}}></input>
+        </div>
+    </td>
+    <td><div className='C01id_EditRowButton'>
+            <button onClick={()=>setSS_EditRow([INDEX,'None'])}>Cancel</button>
+        </div>
+    </td>
+</tr>
+</>
+        }
+ 
+    JSX_Row=JSX_DefaultRow
+ 
+        if(SS_EditRow[1]==='None'){
+            JSX_Row=JSX_DefaultRow
+        }
+ 
+    let JSX_DefaultRow=<tr style={{width:'100%'}}>
+    <td className='C01id_Left'>{INDEX}</td>
+    <td><div style={{width:'100%'}}>{THISROW}</div></td>
+    <td className='C01id_RightRow'>
+        <div className='C01id_EditRowButton'>
+            <button style={{width:'45px'}} onClick={()=>setSS_EditRow([INDEX,'Edit'])}>Edit</button>
+            <button style={{width:'calc( 100% -45px - 45px)'}} onClick={()=>setSS_EditRow([INDEX,'Insert'])}>Insert</button>
+            <button style={{width:'45px'}} onClick={
+                ()=>setSS_EditRow([INDEX,'Delete'])
+                }>X</button>
+            </div>  
+    </td></tr>
+ 
+if(SS_EditRow[1]==='Delete'){
+        JSX_Row=<>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td>{INDEX}</td>
+    <td>{THISROW}</td>
+    <td>
+        <div className='C01id_EditRowButton' style={{marginLeft:'auto'}}>
+        <button onClick={f_Delete}>Ok</button>
+        </div>
+    </td>
+</tr>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td></td>
+    <td >Do you sure you want to delete this row?</td>
+    <td>
+        <div className='C01id_EditRowButton'>
+        <button onClick={()=>{setSS_EditRow([INDEX,'None'])}}>Cancel</button>
+        </div>
+    </td>
+</tr>
+</>
+        }
+ 
+const [SS_OnClick,setSS_OnClick]=useState<string>(THISROW)
+ 
+const [SS_OnClick,setSS_OnClick]=useState<string>(THISROW)
+ 
+
+    function f_Delete():void{
+        let ss_TheMainCharacter=[...TheMainCharacter]
+        ss_TheMainCharacter.splice(INDEX,1)
+        setTheMainCharacter(ss_TheMainCharacter)
+        setSS_EditRow([INDEX,'None'])
+    }
+ 
+alert(
+ 
+SS_EditRow[0])//
+ 
+alert(INDEX)//
+ 
+},[])
+ 
+&&SS_Index
+ 
+ = 
+ 
+},[TheMainCharacter])
+ 
+=<></>
+ 
+
+    // Calculate dynamic width on initial render
+ 
+
+    // Recalculate dynamic width on window resize
+ 
+
+    // Cleanup event listener on component unmount
+ 
+        </div> 
+ 
+        <div className='C01id_EditRowButton'>
+ 
+utton>
+ 
+            <button style={{width:'calc( 100% -45px - 45px)'}} onClick={()=>setSS_EditRow([INDEX,'Insert'])}>Insert</b
+ 
+style={{marginTop:'10px'}}
+ 
+Control the narrative reliably, baby, it's all about me
+And I wrote the book about throwing the book
+At those who don't do it by it
+So now I'm holding myself hostage
+Stockholm lust just looks like justice
+ 
+            </div>
+        <div className='C01id_EditRowButton'>
+ 
+        </div>  
+ 
+        <div style={{display:'flex'}}>
+ 
+            </div>
+        <div className='C01id_EditRowButton'>
+ 
+        </div>  
+ 
+        <div >
+ 
+style={{display:'flex'}}
+ 
+inline-
+ 
+style={{display:'inline-flex'}}
+ 
+style={{display:'inline-flex'}}
+ 
+            
+ 
+</div>
+ 
+</div>
+ 
+ className='C01id_Right'
+ 
+<div className='C01id_EditRowButton' style={{marginLeft:'auto'}}>
+        <button onClick={f_Delete}>Ok</button>
+        </div>
+ 
+    <td><div style={{width:'100%'}}>{SS_OnClick}</div></td>
+    <td>
+        <div className='C01id_EditRowButton'><button onClick={f_Update}>Ok</button></div>
+    </td>
+</tr>
+<tr className='C01id_HeightLightRow C01id_Left'>
+    <td></td>
+ 
+            <button onClick={f_OnChange} style={{width:'40px'}}>Ok</button>
+            <button onClick={f_ResetUpdate} style={{width:'55px'}}>Reset</button>
+ 
+-40-55
+ 
+marginLeft:'0px'
+ 
+            
+ 
+<div style={{marginLeft:'70px'}} className='C06id_VerticalLine'></div>
+<div style={{marginLeft:'70px'}} className='C06id_VerticalLine'></div>
+<div style={{marginLeft:'70px'}} className='C06id_VerticalLine'></div>
+<div style={{marginLeft:'70px'}} className='C06id_VerticalLine'></div>
+<div style={{marginLeft:'70px'}} className='C06id_VerticalLine'></div>
+<div style={{marginLeft:'70px'}} className='C06id_VerticalLine'></div>
+<div style={{marginLeft:'70px'}} className='C06id_VerticalLine'></div>
+<div style={{marginLeft:'70px'}} className='C06id_VerticalLine'></div>
+ 
+    width:50%;
+ 
+const let_HeaerWidth='100%'
+ 
+width={width}
+ 
+</div>
+ 
+<div>
+ 
+style={{width:'100%'}}
+ 
+style={{width:'100px'}}
+ 
+</div>
+ 
+<div id='C01id_InnerTable' style={{overflowX:'hidden',width:'100%'}}>
+ 
  * SS_TextDimension = 0
  
  * SS_TextDimension = 1

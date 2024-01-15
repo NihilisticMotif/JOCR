@@ -11,6 +11,8 @@ import { CSVLink } from "react-csv";
 import C_ExportFile from './Coms/C_ExportFile';
 import R_TextDimensions from './Coms/R_TextDimensions';
 import R_UtilityTable from './Coms/R_UtilityTable';
+import U_Split from './Coms/U_Split';
+import U_Join from './Coms/U_Join';
 // CSS
 import './index.css'
 
@@ -33,7 +35,17 @@ TheMainCharacter:string|string[]
 setTheMainCharacter:(S:string|string[])=>void
 }
 ) => {
-const [SS_IsCharacterArray,setSS_IsCharacterArray]=useState<boolean>(Array.isArray(TheMainCharacter))
+    let JSX_JoinSplit=<></>
+if(Array.isArray(TheMainCharacter)){
+    JSX_JoinSplit=<U_Join
+    TheMainCharacter={TheMainCharacter}
+    setTheMainCharacter={setTheMainCharacter}/>
+}else{
+    JSX_JoinSplit=<U_Split
+    TheMainCharacter={TheMainCharacter}
+    setTheMainCharacter={setTheMainCharacter}/>
+}
+
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
@@ -41,16 +53,19 @@ return(
 <div className='C07id_Div' style={{width:width}}>
 <C_ExportFile
 OCR_OutputFile={OCR_OutputFile}
-setOCR_OutputFile={setOCR_OutputFile}/>
+setOCR_OutputFile={setOCR_OutputFile}
+TheMainCharacter={TheMainCharacter}/>
 <div className='C06id_VerticalLine'></div>
 <div className='C06id_DisplayBlock'>
 <R_TextDimensions
-SS_IsCharacterArray={SS_IsCharacterArray}
-setSS_IsCharacterArray={setSS_IsCharacterArray} />
+IsArray={Array.isArray(TheMainCharacter)}/>
 </div>
 <div className='C06id_VerticalLine'></div>
-{//<R_UtilityTable/>
-}
+<div className='C06id_DisplayBlock' style={{width:'40px'}}>
+{JSX_JoinSplit}
+</div>
+<div className='C06id_VerticalLine' style={{marginLeft:`${40+3}px`}}></div>
+
 </div>
     )
 }

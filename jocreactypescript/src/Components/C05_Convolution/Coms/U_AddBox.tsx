@@ -28,6 +28,12 @@ import { U04_UpdateType } from '../../T04_Box/U04_UpdateType';
 import { U04_SetTypeCrop } from '../../T04_Box/U04_SetTypeCrop';
 // CSS
 //import './U_AddBox.css'  // General
+import './index00.css'
+import './index01.css'
+import './index02_Header.css'
+import './index03_Table.css'
+import './index04_Minor.css'
+import './index05_Hightlight.css'
 
 const U_AddBox = (
 //****************************************************************************

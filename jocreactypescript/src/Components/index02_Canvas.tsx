@@ -13,10 +13,19 @@ import { U03_Sort } from './T03_Threshold/U03_Sort';
 import './index02_Canvas.css'
 import TS_Box from './T04_Box/An_Index';
 
+interface ServerResponse {
+    text:string|string[]
+    image: Blob;
+}
+
 interface IN_02_Canvas{
+  TheMainCharacter:string|string[]
+  OCR_IsViewBox:boolean 
+  OCR_BoxColor:string
   OCR_IsOpen:boolean
   OCR_OutputFile:string[]
   OCR_Languages:string[][]
+  OCR_IsOCR:boolean
   SS_Aff:number[]
   SS_Boxes:TS_Box[]
   SS_AffOrigin:string[]
@@ -35,9 +44,14 @@ SS_ImageFile :File|null
 SS_UseEffect :boolean
 SS_OpenPanel:0|1|2;
 SS_Thresholds:TS_Threshold[];
+OCR_BoxLineWidth:number
+setTheMainCharacter:(S:string|string[])=>void
+setOCR_IsViewBox:(S:boolean)=>void
+setOCR_BoxColor:(S:string)=>void
 setOCR_IsOpen:(S:boolean)=>void
 setOCR_OutputFile:(S:string[])=>void
 setOCR_Languages:(S:string[][])=>void
+setOCR_IsOCR:(S:boolean)=>void
 setSS_Aff:(S:number[])=>void
 setSS_Boxes:(S:TS_Box[])=>void
 setSS_AffOrigin:(S:string[])=>void
@@ -56,6 +70,7 @@ setSS_ImageFile :(S:File|null)=>void
 setSS_UseEffect :(S:boolean)=>void
 setSS_OpenPanel:(S:0|1|2)=>void;
 setSS_Thresholds:(S:TS_Threshold[])=>void
+setOCR_BoxLineWidth:(S:number)=>void
 }
 
 export const Index02_Canvas: React.FC<IN_02_Canvas> = (
@@ -69,6 +84,8 @@ export const Index02_Canvas: React.FC<IN_02_Canvas> = (
   setOCR_OutputFile,
   OCR_Languages,
   setOCR_Languages,
+  OCR_IsOCR,
+  setOCR_IsOCR,
   SS_Aff          ,
   setSS_Aff       ,
   SS_Boxes,
@@ -105,12 +122,27 @@ SS_OpenPanel      ,
 setSS_OpenPanel   ,
 SS_Thresholds     ,
 setSS_Thresholds  ,
+OCR_BoxColor,
+setOCR_BoxColor,
+OCR_IsViewBox,
+setOCR_IsViewBox,
+OCR_BoxLineWidth,
+setOCR_BoxLineWidth,
+TheMainCharacter,
+setTheMainCharacter
 }) => {
   
 //****************************************************************************
 // HOOK
 //****************************************************************************
+  const [OCR_Langs,setOCR_Langs]=useState<string>(
+    OCR_Languages.map((i)=>{
+      return i[0]
+    }).join('+')
+  )
   const [SS_ImageDimensions, setSS_ImageDimensions] = useState<number[] | null>(null);
+  const [SS_ImageFileName,setSS_ImageFileName]=useState<string>('')
+  const [SS_ImageFileFormat,setSS_ImageFileFormat]=useState<string>('png')
   const let_fetchImage = async () => {
     // https://stackoverflow.com/questions/72023176/how-to-send-post-request-from-react-to-flask-without-submit-button
     // https://stackoverflow.com/questions/73678855/fetch-and-display-image-from-api-react
@@ -118,6 +150,11 @@ setSS_Thresholds  ,
           let ss_Thresholds=[...SS_Thresholds]
           let let_UpdateThresholds=U03_Sort(ss_Thresholds)
           setSS_Thresholds(let_UpdateThresholds)
+          setOCR_Langs((
+            OCR_Languages.map((i)=>{
+              return i[0]
+            }).join('+')
+          ))
           const formData = new FormData();
           formData.append('file', SS_ImageFile);
           formData.append('SS_Aff',SS_Aff.toString())
@@ -131,36 +168,37 @@ setSS_Thresholds  ,
           formData.append('SS_Thresholds',JSON.stringify(SS_Thresholds).toString())
           formData.append('SS_IsShow',SS_IsShow.toString())
           formData.append('SS_Boxes',JSON.stringify(SS_Boxes).toString())
-          //alert(JSON.stringify(SS_Boxes))
+          formData.append('OCR_BoxColor',OCR_BoxColor)
+          formData.append('OCR_IsViewBox',OCR_IsViewBox.toString())
+          formData.append('OCR_BoxLineWidth',OCR_BoxLineWidth.toString())
+          formData.append('OCR_Langs',OCR_Langs.toString())
+          formData.append('OCR_IsOCR',OCR_IsOCR.toString())
           // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
-          //let let_ImageJson = JSON.stringify(Object.fromEntries(formData));
           fetch('/def_OpenCV', {
               method: 'POST',
-              //body:formData,
-              body: formData// JSON.stringify({IsRGB:SS_IsRGB.toString(),file:let_ImageJson}),
-              //headers: { "content-type": "application/json" }
+              body: formData
           })
-          .then((response) => {
-            //return response.json();
-            return response.blob();
-            //alert(JSON.stringify(response))
-          })
+          .then((response) => response.json() as Promise<ServerResponse>)
+    //img.src = URL.createObjectURL(data.ImageBytes);
           .then((data) => {
-              const imageURL = URL.createObjectURL(data);
-              setSS_Image(imageURL);
-              // By ChatGPT
-              const img = new Image();
-              img.onload = () => {
-              setSS_ImageDimensions([img.width, img.height]);
-              };
-              img.src = imageURL;
-          })
-          setSS_UseEffect(false)
-       }
-  };
+      // I get "iVBORw0KG..."
+    const img = new Image();
+// https://stackoverflow.com/questions/43965034/reactjs-how-to-render-images-from-a-json-blob
+let binaryData = []; 
+binaryData.push(data.image); 
+const blob=new Blob(binaryData, {type: 'image/png'})
+img.src = URL.createObjectURL(blob)
+        img.onload = () => {
+          setSS_Image(img.src)
+          setSS_ImageDimensions([img.width, img.height]);
+        };
+        if (OCR_IsOCR === true) {
+            setTheMainCharacter(data.text);}});
+          setSS_UseEffect(false)}};
 
   const Ref_C04 = useRef<HTMLDivElement | null>(null);
   let let_RightToolW=100
+
   useEffect(() => {
       setSS_UseEffect(true)
       let_fetchImage()
@@ -189,8 +227,32 @@ setSS_Thresholds  ,
     SS_Kernals,
     SS_Affine,
     SS_Aff,
-    SS_Boxes
+    SS_Boxes,
+    OCR_BoxColor,
+    OCR_IsViewBox,
   ]);
+  useEffect(()=>{
+    const calculateDynamicWidth = () => {
+      if (Ref_C04.current) {
+      if(SS_OpenPanel==2){
+        const windowWidth = window.innerWidth;
+        const dynamicWidth = windowWidth/2
+        setSS_WidthImage(dynamicWidth)
+        Ref_C04.current.style.width = dynamicWidth + 'px';}
+      else{        
+        const windowWidth = window.innerWidth;
+        const dynamicWidth = windowWidth
+        setSS_WidthImage(dynamicWidth)
+        Ref_C04.current.style.width = dynamicWidth + 'px';}
+      }
+    };
+    calculateDynamicWidth();
+    window.addEventListener('resize', calculateDynamicWidth);
+    return () => {
+      window.removeEventListener('resize', calculateDynamicWidth);
+    };
+  }
+  ,[SS_OpenPanel])
 
 
   if(SS_OpenPanel==1){
@@ -207,9 +269,6 @@ else{
   else{
     let_MarginTop='0px'
   }
-
-  // let let_undo='<='
-  // let let_cando='=>'
 
 //****************************************************************************
 // Function 00: Import Image
@@ -240,13 +299,36 @@ else{
 //****************************************************************************
 // JSX_00: Open C01_Table or Close C04_Canvas
 //****************************************************************************
-    let JSX_OpenC01=<td><button className='I02id_Header' onClick={f_OpenC01}>+</button></td>
+    let JSX_OpenC01=<td><button className='I02id_Header' onClick={f_OpenC01}>Open Text Editor</button></td>
     if(SS_OpenPanel===2){
         JSX_OpenC01=<td><button className='I02id_Header' onClick={f_CloseC04}>X</button></td>
     }
     else if(SS_OpenPanel===0){
         JSX_OpenC01=<td><button className='I02id_Header' onClick={f_OpenC01}>+</button></td>
     }
+//****************************************************************************
+// FUNCTION_03: Update Export Image File Name
+//****************************************************************************
+function f_ImageFileName(){
+    let let_Input:string=(document.getElementById("I02id_SaveImageFileName") as HTMLInputElement).value.toString()
+    setSS_ImageFileName(let_Input)
+}
+
+function f_ImageFileFormat(){
+    let let_Input:string=(document.getElementById("I02id_SaveImageFileFormat") as HTMLInputElement).value.toString()
+    setSS_ImageFileFormat(let_Input)
+}
+
+  const f_SaveImage = () => {
+    if (SS_Image && SS_ImageFileName!=='') {
+      const link = document.createElement('a');
+      link.href = SS_Image;
+      link.download = SS_ImageFileName+'.'+SS_ImageFileFormat
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
@@ -255,16 +337,20 @@ else{
       
     <div id='I02id_DivHeader' style={{paddingTop:'3px',paddingBottom:'3px'}}>
         {JSX_OpenC01}
-        
-        {/*<td><button className='I02id_Header'>{let_undo}</button></td>
-        <td><button className='I02id_Header'>{let_cando}</button></td>
-        */}
-        <td><button className='I02id_Header' style={{whiteSpace:'nowrap'}}>Export Image</button></td>
+        <td><input id='I02id_SaveImageFileName' value={SS_ImageFileName} onChange={f_ImageFileName} placeholder='Image File Name' style={{width:'125px',fontSize:'16px'}}></input></td>
+        <td>
+<select onChange={f_ImageFileFormat}
+style={{fontSize:'15px',height:'25px'}} 
+value={SS_ImageFileFormat} id={'I02id_SaveImageFileFormat'}>
+  <option value="png" >png</option>
+  <option value="jpeg">jpeg</option>
+  <option value="pdf" >pdf</option>
+</select>
+        </td>
+        <td><button className='I02id_Header' style={{whiteSpace:'nowrap'}} onClick={f_SaveImage}>Export Image</button></td>
         <td>
         <input type="file" accept="image/*" className='I02id_Header' onChange={f_ImageChange} />
         </td>
-        {//<td><button className='I02id_Header' >Export Image</button></td>
-        }
     </div>
     
 <div id='I02id_Body' 
@@ -316,12 +402,20 @@ style={{backgroundColor:'red',height:'30px',width:'100%',display:'flex'}}
 style={{display:'flex'}}
 >*/}
 <C04_ImageEditor
+OCR_BoxColor={OCR_BoxColor}
+setOCR_BoxColor={setOCR_BoxColor}
+OCR_BoxLineWidth={OCR_BoxLineWidth}
+setOCR_BoxLineWidth={setOCR_BoxLineWidth}
+OCR_IsViewBox={OCR_IsViewBox}
+setOCR_IsViewBox={setOCR_IsViewBox}
 OCR_IsOpen={OCR_IsOpen}
 setOCR_IsOpen={setOCR_IsOpen}
 OCR_OutputFile={OCR_OutputFile}
 setOCR_OutputFile={setOCR_OutputFile}
 OCR_Languages={OCR_Languages}
 setOCR_Languages={setOCR_Languages}
+OCR_IsOCR={OCR_IsOCR}
+setOCR_IsOCR={setOCR_IsOCR}
 SS_Boxes={SS_Boxes}
 setSS_Boxes={setSS_Boxes}
 SS_IsShow={SS_IsShow}

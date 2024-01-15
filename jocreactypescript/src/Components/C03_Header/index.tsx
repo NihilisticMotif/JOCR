@@ -73,7 +73,7 @@ const C03_Header = (
         JSX_OpenC04=<td><button className='C03id_Header' onClick={f_CloseC01}>X</button></td>
     }
     else if(SS_OpenPanel===0){
-        JSX_OpenC04=<td><button className='C03id_Header' onClick={f_OpenC04}>+</button></td>
+        JSX_OpenC04=<td><button className='C03id_Header' onClick={f_OpenC04}>Open Image Editor</button></td>
     }
 
 //****************************************************************************

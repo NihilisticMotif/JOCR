@@ -23,6 +23,12 @@ const C04_ImageEditor = (
 // INPUT
 //****************************************************************************
 {
+  OCR_BoxColor,
+  setOCR_BoxColor,
+  OCR_BoxLineWidth,
+  setOCR_BoxLineWidth,
+  OCR_IsViewBox,
+  setOCR_IsViewBox,
   OCR_OutputFile,
   setOCR_OutputFile,
   OCR_Languages,
@@ -58,9 +64,17 @@ setSS_UseEffect,
 SS_OpenPanel,
 SS_Thresholds,
 setSS_Thresholds,
-SS_IsShow
+SS_IsShow,
+OCR_IsOCR,
+setOCR_IsOCR
 }
 :{
+  OCR_BoxColor:string 
+  setOCR_BoxColor:(S:string)=>void
+  OCR_BoxLineWidth:number;
+  setOCR_BoxLineWidth:(S:number)=>void
+  OCR_IsViewBox:boolean 
+  setOCR_IsViewBox:(S:boolean)=>void
   OCR_OutputFile:string[]
   setOCR_OutputFile:(S:string[])=>void
   OCR_Languages:string[][]
@@ -98,6 +112,8 @@ SS_OpenPanel:0|1|2
 TotalWidth:number
 SS_Thresholds:TS_Threshold[]
 setSS_Thresholds:(S:TS_Threshold[])=>void
+OCR_IsOCR:boolean 
+setOCR_IsOCR:(S:boolean)=>void
 })=>{
 
   const [SS_IsShapeSetting,setSS_IsShapeSetting]=useState<boolean>(true)
@@ -191,6 +207,14 @@ setSS_Kernals={setSS_Kernals}
     setOCR_OutputFile={setOCR_OutputFile}
     OCR_Languages={OCR_Languages}
     setOCR_Languages={setOCR_Languages}
+    OCR_BoxColor={OCR_BoxColor}
+    setOCR_BoxColor={setOCR_BoxColor}
+    OCR_IsViewBox={OCR_IsViewBox}
+    setOCR_IsViewBox={setOCR_IsViewBox}
+    OCR_BoxLineWidth={OCR_BoxLineWidth}
+    setOCR_BoxLineWidth={setOCR_BoxLineWidth}
+    OCR_IsOCR={OCR_IsOCR}
+    setOCR_IsOCR={setOCR_IsOCR}
     />
   }
 

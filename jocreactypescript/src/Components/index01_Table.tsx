@@ -227,6 +227,7 @@ const [SS_Boxes,setSS_Boxes]=useState<TS_Box[]>([
 // USESTATE HOOK JOCR SETTING
 //****************************************************************************
 const [OCR_IsOpen,setOCR_IsOpen]=useState<boolean>(false)
+const [OCR_IsOCR,setOCR_IsOCR]=useState<boolean>(false)
 const [OCR_Languages,setOCR_Languages]=useState<string[][]>([
         ['tha','Thai'],
         ['eng','English'],
@@ -248,13 +249,14 @@ const [OCR_Mode,setOCR_Mode]=useState<number>(0)
 const [OCR_OutputFile,setOCR_OutputFile]=useState<string[]>(['OutputFile','txt'])
 const [OCR_DPI,setOCR_DPI]=useState<number>(2400)
 const [OCR_IsFirstRowAsColumn,setOCR_IsFirstRowAsColumn]=useState<boolean>(false)
-
-
+const [OCR_BoxColor,setOCR_BoxColor]=useState<string>('#000000')
+const [OCR_IsViewBox,setOCR_IsViewBox]=useState<boolean>(false)
+const [OCR_BoxLineWidth,setOCR_BoxLineWidth]=useState<number>(2)
 //****************************************************************************
 // OUTPUT (TEXT)
 //****************************************************************************
 const [TheMainCharacter,setTheMainCharacter]=useState<string|string[]>(
-        [`
+        `
 I'm that first-person they talk about in all the books
 I'm that perspective you cannot doubt, see how I look
 Control the narrative reliably, baby, it's all about me
@@ -262,8 +264,50 @@ And I wrote the book about throwing the book
 At those who don't do it by it
 So now I'm holding myself hostage
 Stockholm lust just looks like justice
-...
-        `]
+And enough lefts don't make the right but two wrongs do
+Oh man, Sun Tzu would love this
+Beating my dead high horse off the high road to low ground
+'Cause if you shake your fist at snakes in grass
+It looks like punching down
+So, God forbid I'm seen just as an average human being
+I mean, imagine if protagonists just died in the first scene
+I'm the gap between a tragedy and comedy
+Don't come at me
+I'm the main character, and you have to like me
+I loot plot armor from NPCs
+Well, they are to me
+Trite, tropes, traits, traumas, trinkets, and treats, it's all XP
+Look in the sky, it's a bird, it's a plane, no, it's superego
+The underdog you cheer for
+Villains are everywhere, that's how I know that I'm the hero
+So tie me to the train tracks, laugh, and snidely twist your mustache
+Snidely Whiplash, Boris Badenov, ignoring me's bad enough
+Where do you get off? Da, das vedanya, darling
+Daleks in high collars monologue
+And I outsmart them with a ray-gun and a tweet
+So, God forbid I'm seen just as an average human being
+I mean, imagine if protagonists just died in the first scene
+I'm the gap between a tragedy and comedy
+Don't come at me
+I'm the main character, and you have to like me
+Judge me by what my cover shows, author becomes beyond reproach
+You don't know the prose or if the spine is still intact
+Oh, like Alice fell to Wonderland, come astroturf my Overton
+And embolden my demand to live by alternative facts
+Her majesty says, "The Royal We demand a standard of loyalty
+An agreement to be reverent, lick the emperor's new boots"
+The court fool got the guillotine
+The witches the stake, you the dopamine
+And Siemens made the Zyklon B, but we all still get the flu
+We all do what we need to to get through
+(It's nothing new)
+But I ain't done a fucking thing to you
+So, God forbid I'm seen just as an average human being
+I mean, imagine if antagonists lacked any evil scheme
+I'm the gap between a tragedy and comedy
+Don't come at me
+I'm the main character, and you have to like me
+        `
     )
 //****************************************************************************
 // OUTPUT (IMAGE)
@@ -296,11 +340,13 @@ const let_HeaderHeight=100
 //****************************************************************************
     let JSX_C01=<></>
     let JSX_C03=<></>
+    let JSX_C07=<></>
     if(SS_OpenPanel===0 || SS_OpenPanel===2){
         JSX_C01=<C01_Table 
         TheMainCharacter={TheMainCharacter}
         setTheMainCharacter={setTheMainCharacter}
         OCR_OutputFile={OCR_OutputFile}
+        width={let_C01Width}
         />
         JSX_C03=<C03_Header
         //TheMainCharacter={TheMainCharacter}
@@ -308,10 +354,18 @@ const let_HeaderHeight=100
         SS_OpenPanel={SS_OpenPanel}
         setSS_OpenPanel={setSS_OpenPanel}
         />
+        JSX_C07=<C07_TableSetting
+width={let_C01Width}
+OCR_OutputFile={OCR_OutputFile}
+setOCR_OutputFile={setOCR_OutputFile}
+TheMainCharacter={TheMainCharacter}
+setTheMainCharacter={setTheMainCharacter}
+/>
     }
     else{
         JSX_C01=<></>
         JSX_C03=<></>
+        JSX_C07=<></>
     }
 
 //****************************************************************************
@@ -320,10 +374,20 @@ const let_HeaderHeight=100
     let JSX_C04=<></>
     if(SS_OpenPanel===1 || SS_OpenPanel===2){
         JSX_C04=<Index02_Canvas
+TheMainCharacter={TheMainCharacter}
+setTheMainCharacter={setTheMainCharacter}
+OCR_BoxColor={OCR_BoxColor}
+setOCR_BoxColor={setOCR_BoxColor}
+OCR_BoxLineWidth={OCR_BoxLineWidth}
+setOCR_BoxLineWidth={setOCR_BoxLineWidth}
+OCR_IsViewBox={OCR_IsViewBox}
+setOCR_IsViewBox={setOCR_IsViewBox}
 OCR_IsOpen={OCR_IsOpen}
 setOCR_IsOpen={setOCR_IsOpen}
 OCR_Languages={OCR_Languages}
 setOCR_Languages={setOCR_Languages}
+OCR_IsOCR={OCR_IsOCR}
+setOCR_IsOCR={setOCR_IsOCR}
 OCR_OutputFile={OCR_OutputFile}
 setOCR_OutputFile={setOCR_OutputFile}
 SS_Aff           ={SS_Aff           }
@@ -423,13 +487,7 @@ style={{
     width:'100%',
     backgroundColor:'red'}}
 >
-    <C07_TableSetting
-    width={let_C01Width}
-    OCR_OutputFile={OCR_OutputFile}
-    setOCR_OutputFile={setOCR_OutputFile}
-    TheMainCharacter={TheMainCharacter}
-    setTheMainCharacter={setTheMainCharacter}
-    />
+    {JSX_C07}
 </div>
 <div id='I01id_HBodyLeft' 
 style={{width:let_C01Width}}

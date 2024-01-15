@@ -47,6 +47,7 @@ Index:number
         setSS_Kernals(SS_UpdateKernals)
     },
     [SS_nDMatrix,SS_nDTable,SS_IsActivate,let_Index,SS_Iterations])
+
     let let_Name=SS_ThisKernal.Name
     let let_TotalSize=5
   let let_Status='Error'
@@ -56,7 +57,7 @@ Index:number
   else{
     let_Status='(Inactive)'
   }
-  let JSX_Con=[]
+  let JSX_Con:number[][][]=[]
 
   for(let i=0;i<let_TotalSize;i++){
     let JSX_Kernals=[]
@@ -65,10 +66,44 @@ Index:number
     }
     JSX_Con.push(JSX_Kernals)
   }
+
   let JSX_Convolution=JSX_Con.map((i)=>(<tr>{i.map((j)=>(<td><input 
     onChange={()=>f_OnChange(j[0],j[1])}
     value={(SS_nDTable[j[0]][j[1]]).toString()} 
     id={'C04id_Kernal'+ss_ThisKernal.Key+'_'+(j[0]*10+j[1]).toString()}></input></td>))}</tr>))
+
+    if(SS_ThisKernal.Name==='Canny'){
+      JSX_Convolution=[<tr>
+        <td>
+<input 
+    onChange={()=>f_OnChange(JSX_Con[0][0][0],JSX_Con[0][0][1])}
+    value={(SS_nDTable[JSX_Con[0][0][0]][JSX_Con[0][0][1]]).toString()} 
+    id={'C04id_Kernal'+ss_ThisKernal.Key+'_'+(JSX_Con[0][0][0]*10+JSX_Con[0][0][1]).toString()}></input>
+      </td>
+
+<td>
+<input 
+    onChange={()=>f_OnChange(JSX_Con[0][1][0],JSX_Con[0][1][1])}
+    value={(SS_nDTable[JSX_Con[0][1][0]][JSX_Con[0][1][1]]).toString()} 
+    id={'C04id_Kernal'+ss_ThisKernal.Key+'_'+(JSX_Con[0][1][0]*10+JSX_Con[0][1][1]).toString()}></input>
+      </td>
+      
+      </tr>]
+    }
+//  if(SS_ThisKernal.Name==='Canny'){
+//    JSX_Convolution=[<tr>
+//<td><input 
+//    onChange={()=>f_OnChange(j[0],j[1])}
+//    value={(SS_nDTable[j[0]][j[1]]).toString()} 
+//    id={'C04id_Kernal'+ss_ThisKernal.Key+'_'+(j[0]*10+j[1]).toString()}></input>
+//</td>
+//<td><input 
+//    onChange={()=>f_OnChange(j[0],j[1])}
+//    value={(SS_nDTable[j[0]][j[1]]).toString()} 
+//    id={'C04id_Kernal'+ss_ThisKernal.Key+'_'+(j[0]*10+j[1]).toString()}></input>
+//</td>
+//</tr>]
+//  }
 
 //****************************************************************************
 // FUNCTION_00: On Change
@@ -163,6 +198,13 @@ Index:number
             setSS_Iterations(ss_ThisKernal.Iterations)
         }
       }
+
+      function f_UpdateMode(){
+        let let_input=(document.getElementById('C05id_KernalName'+SS_ThisKernal.Key.toString()) as HTMLInputElement).value.toString();
+        let ss_Kernals=[...SS_Kernals]
+        ss_Kernals[Index].Name=let_input
+        setSS_Kernals(ss_Kernals)
+      }
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
@@ -180,6 +222,21 @@ return(
 <input style={{width:'70px',marginLeft:'10px'}} id={'C05id_KernalIteration'+ss_ThisKernal.Key.toString()}></input>
 <button onClick={f_UpdateIterations}>Ok</button>
 </div>
+
+<div style={{display:'flex'}}>
+<h1>Mode</h1>
+<select onChange={f_UpdateMode}
+style={{marginLeft:'10px',marginTop:'5px',fontSize:'15px',height:'25px'}} 
+value={SS_ThisKernal.Name} id={'C05id_KernalName'+SS_ThisKernal.Key.toString()}>
+  <option value="Convolution">Convolution</option>
+  <option value="Erosion">Erosion</option>
+  <option value="Dilation">Dilation</option>
+  <option value="Open">Open</option>
+  <option value="Canny">Canny</option>
+</select>
+</div>
+
+
 <div style={{display:'flex',marginTop:'5px'}}>
     <button style={{width:'75px',backgroundColor:SS_IsActivate? 'lightgreen':'white'}} onClick={f_Update}>Activate</button>
     <button style={{width:'75px',backgroundColor:SS_IsActivate? 'white':'lightgreen'}} onClick={f_SetDeActivate}>Deactivate</button>

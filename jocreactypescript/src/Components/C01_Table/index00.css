@@ -24,7 +24,7 @@
     https: //stackoverflow.com/questions/5671098/how-can-i-force-all-rows-in-a-table-to-have-the-same-height
     */
     border-collapse: collapse;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .C01id_Right button {
@@ -35,6 +35,7 @@ thead,
 tbody {
     display: block;
     background-color: rgb(17, 185, 194);
+    width:100%
 }
 
 #C01id_InnerTable {

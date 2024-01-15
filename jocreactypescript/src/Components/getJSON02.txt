@@ -1,0 +1,10 @@
+   let file = data.ImageBytes
+   let reader = new FileReader();
+   reader.readAsDataURL(file);
+   reader.onload = function () {
+     //me.modelvalue = reader.result;
+     console.log(reader.result);
+   };
+   reader.onerror = function (error) {
+     console.log('Error: ', error);
+   };

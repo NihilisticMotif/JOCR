@@ -30,6 +30,24 @@ def dilate(image,kernel,iterations):
 def opening(image,kernel):
     return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
 
+def Kernalss(let_Img,Name,Matrix,IsAct,S):
+    for n,M,bool,s in zip(Name,Matrix,IsAct,S):
+        if bool ==True:
+            if n=='Convolution':
+                let_Img=cv2.filter2D(let_Img,-1,M)
+            elif n=='Erosion':
+                let_Img=cv2.erode(let_Img,M,s)
+            elif n=='Dilation':
+                let_Img=cv2.dilate(let_Img,M,s)
+            elif n=='Open':
+                let_Img=cv2.morphologyEx(let_Img, cv2.MORPH_OPEN, M)
+            elif n=='Canny':
+                let_Img=cv2.Canny(let_Img, M[0][0],M[0][1])
+            else:
+                continue
+        else:
+            continue
+    return let_Img
 #White
 def WhiteBackGround(img,Minn,Maxx,Gray,Bool):
     if Minn!=[]:
@@ -38,11 +56,6 @@ def WhiteBackGround(img,Minn,Maxx,Gray,Bool):
             if bool:
                 img[mark]=gray
         return img
-        #try:
-        #    img[img>=Maxx[-1]]=255
-        #    return img
-        #except:
-        #    return img
     else:
         return img
 
@@ -211,18 +224,10 @@ def DrawingBoxes(Img,XYWH,Type,Color,IsShow):
                     int(xy[0]):int(xy[0])+int(xy[2])
                     ]
     return Img
-'''
-value="Rectangle">
-value="Frame">Fram
-value="Line">Line<
-value="LineX">Hori
-value="LineY">Vert
-'''    
+  
 ########################################################################################
 #   Display the Image
 ########################################################################################
-
-
 
 '''
 path='/Users/imac/Desktop/SoloOpenSourceProject/JOCR/TestImage/Expenses_Macro/IMG_7553.jpeg'
