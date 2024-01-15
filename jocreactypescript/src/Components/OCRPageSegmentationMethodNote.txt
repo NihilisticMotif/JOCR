@@ -1,0 +1,21 @@
+
+
+PSM 0
+ * Name: Orientation and Script 
+ * Output: Orientation & Script
+
+PSM 1
+ * Name: Automatic Page Segmentation with OSD
+ * Note: in all my experiments, I could not find a situation where --psm 1 obtained a result that the other PSMs could not.
+
+PSM 2
+ * Automatic Page Segmentation, But No OSD, or OCR
+ * Note: It is unclear if or when Tesseract will implement this mode, but for the time being, you can safely ignore it.
+
+PSM 3
+ * Fully Automatic Page Segmentation, But No OSD 
+ * Note: Default Mode, does not indicate Orientation and Script 
+ * Output: Text
+
+Reference
+1. https://pyimagesearch.com/2021/11/15/tesseract-page-segmentation-modes-psms-explained-how-to-improve-your-ocr-accuracy/

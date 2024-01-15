@@ -20,6 +20,13 @@ setTheMainCharacter:(S:string[]|string)=>void
             setTheMainCharacter(let_Update)
         }
     }
+    function f_SplitNewLine(){
+        if(typeof TheMainCharacter==='string'){
+            let ss_TheMainCharacter=TheMainCharacter
+            let let_Update=ss_TheMainCharacter.split('\n')
+            setTheMainCharacter(let_Update)
+        }
+    }
 //****************************************************************************
 // OUTPUT
 //****************************************************************************
@@ -31,6 +38,7 @@ setTheMainCharacter:(S:string[]|string)=>void
 <input  className='C07id_SmallH1' id='C07id_SplitButton'></input>
 <div className='C07id_SmallH1'>
     <button onClick={f_Split}>Ok</button>
+    <button onClick={f_SplitNewLine}>Split '\n'</button>
 </div>
         </div>
     )}

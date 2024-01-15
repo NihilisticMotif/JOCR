@@ -1,9 +1,6 @@
 
-
-Function
-1. split 
-2. Merge 
-3. OCR 
-4. C01_Table width:100%
-5. C07_TableSetting (CSS)
-6. Export Image
+1. Text template matching
+2. Page segmentation modes
+3. Detect only digits
+4. Whitelisting characters & Blacklisting characters
+5. Split & Merge New Line

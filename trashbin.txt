@@ -1,3 +1,15 @@
+Default Mode
+ 
+Orientation
+ 
+n') as HTMLInputElement).value.toString();
+ 
+            let let_Input:string=(document.getElementById('C07id_JoinButto
+ 
+litButton') as HTMLInputElement).value.toString();
+ 
+            let let_Input:string=(document.getElementById('C07id_Sp
+ 
    
 
         
