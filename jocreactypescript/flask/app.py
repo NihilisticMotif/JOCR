@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 import cv2
 from kernel import Kernalss,DrawingBoxes,AffineMoveOrigin,AffineRotation,AffineScale,DrawPointOrigin,DrawPoints,AffineTransformations, WhiteBackGround
-from PyTesseract import Image2String,DrawBoxAroundTextGray,DrawBoxAroundText
+from PyTesseract import PSM0,Image2String,DrawBoxAroundTextGray,DrawBoxAroundText
 import base64
 import pickle
 import matplotlib.colors as mcolors
@@ -200,16 +200,27 @@ def def_OpenCV():
         OCR_IsOCR=False 
         if 'rue' in OCR_IsOCR_str:
             OCR_IsOCR=True
+        
+        OCR_PSM0_str=request.form.get('OCR_PSM0')
+        OCR_PSM0=OCR_PSM0_str.split(',')
+        if 'rue' in OCR_PSM0[-1]:
+            OCR_PSM0[-1]=True
+        
+        OCR_PSM=request.form.get('OCR_PSM')
+        OCR_DPI=request.form.get('OCR_DPI')
 
 #****************************************************************************
 # Modify Image
 #****************************************************************************
         # SS_ImageFile
         let_File=request.files['file']
+        let_dim=['-1','-1']
         if let_File!=None:
             let_Img = cv2.imdecode(np.frombuffer(let_File.read(), np.uint8), cv2.IMREAD_COLOR)
+            height, width, _ = let_Img.shape
+            let_Img = cv2.cvtColor(let_Img, cv2.COLOR_BGR2RGB)
             if not SS_IsRGB:
-                let_Img = cv2.cvtColor(let_Img, cv2.COLOR_BGR2GRAY)
+                let_Img = cv2.cvtColor(let_Img, cv2.COLOR_RGB2GRAY)
                 let_Img = Kernalss(
                     let_Img,
                     SS_Kernals_Name,
@@ -218,9 +229,8 @@ def def_OpenCV():
                     SS_Kernals_Iterations)
                 if Is_Thresholds==True:
                     let_Img = WhiteBackGround(let_Img,list_Minn,list_Maxx,list_Gray,list_Bool)
-                    OCR_Img=let_Img
                 # https://stackoverflow.com/questions/63752141/drawing-a-colored-rectangle-in-a-grayscale-video-using-opencv-python
-                let_Img = cv2.cvtColor(let_Img, cv2.COLOR_GRAY2BGR)
+                let_Img = cv2.cvtColor(let_Img, cv2.COLOR_GRAY2RGB)
             
             if OCR_IsViewBox==True:
                 let_Img=DrawBoxAroundText(let_Img,OCR_BoxColor,OCR_BoxLineWidth)
@@ -230,6 +240,9 @@ def def_OpenCV():
                 let_Img=AffineMoveOrigin(let_Img,SS_Aff_PositionX,SS_Aff_PositionY)
                 let_Img=AffineRotation(let_Img,SS_Aff_Rotation)
                 let_Img=DrawingBoxes(let_Img,SS_Boxes_XYWH,SS_Boxes_Type,SS_Boxes_Color,SS_Boxes_IsShow)
+            rows, cols, ch = let_Img.shape
+            let_dim=[str(rows), str(cols)]
+
             let_Img=DrawPointOrigin(
                 let_Img,
                 SS_AffOrigin_Mode,
@@ -247,9 +260,22 @@ def def_OpenCV():
 # Compute Image to Text Output
 #****************************************************************************
             if OCR_IsOCR==True:
-                tesseract_output = Image2String(OCR_Img,OCR_Langs)
+                tesseract_output = Image2String(
+                    let_Img,OCR_Langs,OCR_PSM)
             else:
                 tesseract_output=''
+            if OCR_PSM0[5]:
+                try:
+                    OCR_PSM00=PSM0(let_Img)
+                    OCR_PSM00=OCR_PSM00.split(':')
+                    OCR_PSM00 = [word for part in OCR_PSM00 for word in part.split('\n') if word]
+                    OCR_PSM0[2]=str(OCR_PSM00[3])
+                    OCR_PSM0[3]=str(OCR_PSM00[5])
+                    OCR_PSM0[4]=str(OCR_PSM00[7])
+                    OCR_PSM0[0]=str(OCR_PSM00[9])
+                    OCR_PSM0[1]=str(OCR_PSM00[11])
+                except:
+                    pass
 #****************************************************************************
 # Get Output Data
 #****************************************************************************
@@ -270,39 +296,14 @@ def def_OpenCV():
             encoded_img = encodebytes(byte_arr.getvalue()).decode('ascii')
             response =  { 
                 'text': tesseract_output , 
-                'image': encoded_img}
+                'image': encoded_img,
+                'psm0':OCR_PSM0,
+                'dim':let_dim
+            }
             return jsonify(response) 
         else:
             return jsonify({'error': 'No file uploaded'})
-'''
-// frontend.tsx
-//...
-formData.append('OCR_Langs',OCR_Langs.toString())
-          formData.append('OCR_IsOCR',OCR_IsOCR.toString())
-          // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
-          fetch('/def_OpenCV', {
-              method: 'POST',
-              body: formData
-          })
-          .then((response) => response.json() as Promise<ServerResponse>
-          ).then((data) => {
-            const imageURL = URL.createObjectURL(new Blob([data.imageBlob]));
-            // Property 'imageBlob' does not exist on type 'Blob'.
-            setSS_Image(imageURL);
-            const img = new Image();
-            img.onload = () => {
-                setSS_ImageDimensions([img.width, img.height]);
-            };
-            img.src = imageURL;
-            if(OCR_IsOCR===true){
-              setTheMainCharacter(data.tesseractOutput);
-            }
-            // Property 'tesseractOutput' does not exist on type 'Blob'.
-          });
-//...
 
-// There is
-'''
 #****************************************************************************
 # Running app
 #****************************************************************************

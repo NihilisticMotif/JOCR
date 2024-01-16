@@ -4,6 +4,10 @@ import U_Language from "./Coms/U_Language"
 import C_ExportFile from "./Coms/C_ExportFile"
 import U_ImageBox from "./Coms/U_ImageBox"
 import U_RunOCR from "./Coms/U_RunOCR"
+import R_SuggestScript from "./Coms/R_Analysis"
+import R_Analysis from "./Coms/R_Analysis"
+import U_PSM from "./Coms/U_PSM"
+import U_DPI from "./Coms/U_DPI"
 const C06_OCREditor = (
 //****************************************************************************
 // INPUT
@@ -20,9 +24,17 @@ const C06_OCREditor = (
     OCR_BoxLineWidth,
     setOCR_BoxLineWidth,
     OCR_IsOCR,
-    setOCR_IsOCR
+    setOCR_IsOCR,
+    OCR_PSM0,
+    setOCR_PSM0,
+    OCR_PSM,
+    setOCR_PSM,
+    OCR_DPI,
+    setOCR_DPI
 }
 :{
+    OCR_DPI:number 
+    setOCR_DPI:(S:number)=>void 
     OCR_OutputFile:string[]
     setOCR_OutputFile:(S:string[])=>void
     OCR_Languages:string[][]
@@ -35,6 +47,10 @@ const C06_OCREditor = (
     setOCR_BoxLineWidth:(S:number)=>void
     OCR_IsOCR:boolean 
     setOCR_IsOCR:(S:boolean)=>void
+    OCR_PSM0:string[]
+    setOCR_PSM0:(S:string[])=>void
+    OCR_PSM:number 
+    setOCR_PSM:(S:number)=>void
 })=>{
 
 /****************************************************************************
@@ -123,12 +139,24 @@ const C06_OCREditor = (
     return (
         <>
 <div className='C04id_Scalar' style={{display:'inline-block',marginLeft:'10px',margin:'auto'}}>
-<h1>OCR Options</h1>
+<h1 style={{marginTop:'-5px',marginBottom:'-5px'}}>Tesseract OCR</h1>
 <hr/>
 <U_RunOCR
 OCR_IsOCR={OCR_IsOCR}
 setOCR_IsOCR={setOCR_IsOCR}
 />
+{/*<U_PSM
+OCR_PSM={OCR_PSM}
+setOCR_PSM={setOCR_PSM}
+/>*/}
+<U_DPI
+OCR_DPI={OCR_DPI}
+setOCR_DPI={setOCR_DPI}
+/>
+<hr/>
+<R_Analysis
+OCR_PSM0={OCR_PSM0}
+setOCR_PSM0={setOCR_PSM0}/>
 <hr/>
 <U_Language
 OCR_Languages={OCR_Languages}

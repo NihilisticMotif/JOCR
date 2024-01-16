@@ -231,20 +231,8 @@ const [OCR_IsOCR,setOCR_IsOCR]=useState<boolean>(false)
 const [OCR_Languages,setOCR_Languages]=useState<string[][]>([
         ['tha','Thai'],
         ['eng','English'],
-        ['afr', 'Afrikaans'],
-        ['amh', 'Amharic'],
-        ['ara', 'Arabic'],
-        ['asm', 'Assamese'],
-        ['aze', 'Azerbaijani'],
-        ['aze_cyrl', 'Azerbaijani (Cyrillic)'],
-        ['bel', 'Belarusian'],
-        ['ben', 'Bengali'],
-        ['bod', 'Tibetan'],
-        ['bos', 'Bosnian'],
-        ['bre', 'Breton'],
-        ['bul', 'Bulgarian'],
-        ['cat', 'Catalan']
           ])
+const [OCR_PSM,setOCR_PSM]=useState<number>(3)
 const [OCR_Mode,setOCR_Mode]=useState<number>(0)
 const [OCR_OutputFile,setOCR_OutputFile]=useState<string[]>(['OutputFile','txt'])
 const [OCR_DPI,setOCR_DPI]=useState<number>(2400)
@@ -252,6 +240,7 @@ const [OCR_IsFirstRowAsColumn,setOCR_IsFirstRowAsColumn]=useState<boolean>(false
 const [OCR_BoxColor,setOCR_BoxColor]=useState<string>('#000000')
 const [OCR_IsViewBox,setOCR_IsViewBox]=useState<boolean>(false)
 const [OCR_BoxLineWidth,setOCR_BoxLineWidth]=useState<number>(2)
+const [OCR_PSM0,setOCR_PSM0]=useState<string[]>(['None','0','0','0','0','false'])
 //****************************************************************************
 // OUTPUT (TEXT)
 //****************************************************************************
@@ -374,6 +363,12 @@ setTheMainCharacter={setTheMainCharacter}
     let JSX_C04=<></>
     if(SS_OpenPanel===1 || SS_OpenPanel===2){
         JSX_C04=<Index02_Canvas
+        OCR_DPI={OCR_DPI}
+        setOCR_DPI={setOCR_DPI}
+        OCR_PSM={OCR_PSM}
+        setOCR_PSM={setOCR_PSM}
+        OCR_PSM0={OCR_PSM0}
+        setOCR_PSM0={setOCR_PSM0}
 TheMainCharacter={TheMainCharacter}
 setTheMainCharacter={setTheMainCharacter}
 OCR_BoxColor={OCR_BoxColor}

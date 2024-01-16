@@ -73,6 +73,7 @@ def AffineScale(Img,ScaleX,ScaleY):
     rows, cols, ch = Img.shape
     M=np.array([[ScaleX,0,0],
                 [0,ScaleY,0]])
+                
     Img=cv2.warpAffine(Img,M,(cols,rows))
     return Img
 
@@ -105,7 +106,7 @@ def DrawPoints(Img,Vector,Color,Bool):
                 img=Img,
                 center=(int(v[0]),int(v[1])),
                 radius=22,
-                color=(int(c[2]),int(c[1]),int(c[0])),
+                color=(int(c[0]),int(c[1]),int(c[1])),
                 thickness=-1)
             
             Img=cv2.circle(
@@ -117,7 +118,7 @@ def DrawPoints(Img,Vector,Color,Bool):
     return Img
 
 def DrawPointOrigin(Img,Mode,RGB,PositionX,PositionY):
-    RGB=(int(255*RGB[2]),int(255*RGB[1]),int(255*RGB[0]))
+    RGB=(int(255*RGB[0]),int(255*RGB[1]),int(255*RGB[2]))
     if Mode=='NoOrigin':
         return Img
     if Mode=='CenterOrigin':
@@ -158,7 +159,7 @@ def DrawingBoxes(Img,XYWH,Type,Color,IsShow):
         B=int(255*c[2])
         G=int(255*c[1])
         R=int(255*c[0])
-        RGB=(B,G,R)
+        RGB=(R,G,B)
         lineWidth=1
         if i==True:
             if t=='Rectangle':
@@ -218,11 +219,24 @@ def DrawingBoxes(Img,XYWH,Type,Color,IsShow):
                     RGB, 
                     lineWidth
                     ) 
-            if t=='Crop':
+            if t=='Crop' and int(xy[1])>0:                 
                 Img=Img[
                     int(xy[1]):int(xy[1])+int(xy[3]),
                     int(xy[0]):int(xy[0])+int(xy[2])
                     ]
+                '''rows, cols, ch = Img.shape
+                pts0 = np.float32([
+                    [int(xy[0]),int(xy[1])],
+                    [int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])],
+                    [int(xy[0]),int(xy[1])+int(xy[3])]
+                ])
+                pts1 = np.float32([
+                    [0,0],
+                    [rows,cols],
+                    [0,cols]
+                ])
+                M = cv2.getAffineTransform(pts0,pts1)
+                Img = cv2.warpAffine(Img, M, (cols, rows))'''
     return Img
   
 ########################################################################################

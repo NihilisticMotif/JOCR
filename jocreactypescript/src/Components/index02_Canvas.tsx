@@ -16,9 +16,13 @@ import TS_Box from './T04_Box/An_Index';
 interface ServerResponse {
     text:string|string[]
     image: Blob;
+    psm0:string[]
+    dim:string[]
 }
 
 interface IN_02_Canvas{
+  OCR_PSM0:string[]
+  OCR_PSM:number
   TheMainCharacter:string|string[]
   OCR_IsViewBox:boolean 
   OCR_BoxColor:string
@@ -45,6 +49,9 @@ SS_UseEffect :boolean
 SS_OpenPanel:0|1|2;
 SS_Thresholds:TS_Threshold[];
 OCR_BoxLineWidth:number
+OCR_DPI:number
+setOCR_PSM0:(S:string[])=>void
+setOCR_PSM:(S:number)=>void
 setTheMainCharacter:(S:string|string[])=>void
 setOCR_IsViewBox:(S:boolean)=>void
 setOCR_BoxColor:(S:string)=>void
@@ -71,6 +78,7 @@ setSS_UseEffect :(S:boolean)=>void
 setSS_OpenPanel:(S:0|1|2)=>void;
 setSS_Thresholds:(S:TS_Threshold[])=>void
 setOCR_BoxLineWidth:(S:number)=>void
+setOCR_DPI:(S:number)=>void
 }
 
 export const Index02_Canvas: React.FC<IN_02_Canvas> = (
@@ -78,6 +86,12 @@ export const Index02_Canvas: React.FC<IN_02_Canvas> = (
 // INPUT
 //****************************************************************************
 {
+  OCR_DPI,
+  setOCR_DPI,
+  OCR_PSM,
+  setOCR_PSM,
+  OCR_PSM0,
+  setOCR_PSM0,
   OCR_IsOpen,
   setOCR_IsOpen,
   OCR_OutputFile,
@@ -131,7 +145,7 @@ setOCR_BoxLineWidth,
 TheMainCharacter,
 setTheMainCharacter
 }) => {
-  
+  const Base64Image='data:image/png;base64,'
 //****************************************************************************
 // HOOK
 //****************************************************************************
@@ -173,33 +187,45 @@ setTheMainCharacter
           formData.append('OCR_BoxLineWidth',OCR_BoxLineWidth.toString())
           formData.append('OCR_Langs',OCR_Langs.toString())
           formData.append('OCR_IsOCR',OCR_IsOCR.toString())
+          formData.append('OCR_PSM0',OCR_PSM0.toString())
+          formData.append('OCR_PSM',OCR_PSM.toString())
+          formData.append('OCR_DPI',OCR_DPI.toString())
           // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
           fetch('/def_OpenCV', {
               method: 'POST',
               body: formData
           })
           .then((response) => response.json() as Promise<ServerResponse>)
-    //img.src = URL.createObjectURL(data.ImageBytes);
           .then((data) => {
-      // I get "iVBORw0KG..."
     const img = new Image();
 // https://stackoverflow.com/questions/43965034/reactjs-how-to-render-images-from-a-json-blob
 let binaryData = []; 
 binaryData.push(data.image); 
 const blob=new Blob(binaryData, {type: 'image/png'})
 img.src = URL.createObjectURL(blob)
-        img.onload = () => {
-          setSS_Image(img.src)
-          setSS_ImageDimensions([img.width, img.height]);
-        };
-        if (OCR_IsOCR === true) {
-            setTheMainCharacter(data.text);}});
-          setSS_UseEffect(false)}};
+img.onload = () => {
+  setSS_Image(img.src)
+};
+if(data.image){
+setSS_Image(data.image.toString())
+setSS_ImageDimensions([parseInt(data.dim[0]),parseInt(data.dim[1])])
+}
+if (OCR_IsOCR === true) {
+    setTheMainCharacter(data.text);
+}
+if(OCR_PSM0[-1]==='true'){
+  setOCR_PSM0(data.psm0)
+}
+});
+  setSS_UseEffect(false)
+}
+};
 
   const Ref_C04 = useRef<HTMLDivElement | null>(null);
   let let_RightToolW=100
 
   useEffect(() => {
+    console.log('image:', Base64Image);
       setSS_UseEffect(true)
       let_fetchImage()
       const let_CurrentWidthC04 = Ref_C04.current;
@@ -230,6 +256,8 @@ img.src = URL.createObjectURL(blob)
     SS_Boxes,
     OCR_BoxColor,
     OCR_IsViewBox,
+    OCR_PSM0,
+    OCR_PSM
   ]);
   useEffect(()=>{
     const calculateDynamicWidth = () => {
@@ -322,7 +350,7 @@ function f_ImageFileFormat(){
   const f_SaveImage = () => {
     if (SS_Image && SS_ImageFileName!=='') {
       const link = document.createElement('a');
-      link.href = SS_Image;
+      link.href = Base64Image+SS_Image;
       link.download = SS_ImageFileName+'.'+SS_ImageFileFormat
       document.body.appendChild(link);
       link.click();
@@ -374,8 +402,9 @@ style={{width:(SS_WidthImage).toString()+'px'}}
     }}>
       
   {
-    SS_Image && <img 
-    src={SS_Image} 
+    SS_Image && 
+    <img 
+    src={Base64Image+SS_Image} 
     id="I02id_Midjourney"
     alt="Uploaded" 
     style={{
@@ -402,6 +431,12 @@ style={{backgroundColor:'red',height:'30px',width:'100%',display:'flex'}}
 style={{display:'flex'}}
 >*/}
 <C04_ImageEditor
+OCR_DPI={OCR_DPI}
+setOCR_DPI={setOCR_DPI}
+OCR_PSM={OCR_PSM}
+setOCR_PSM={setOCR_PSM}
+setOCR_PSM0={setOCR_PSM0}
+OCR_PSM0={OCR_PSM0}
 OCR_BoxColor={OCR_BoxColor}
 setOCR_BoxColor={setOCR_BoxColor}
 OCR_BoxLineWidth={OCR_BoxLineWidth}

@@ -1,6 +1,6 @@
 
 1. Text template matching
-2. Page segmentation modes
+x2. Page segmentation modes
 3. Detect only digits
 4. Whitelisting characters & Blacklisting characters
-5. Split & Merge New Line
+x5. Split & Merge New Line

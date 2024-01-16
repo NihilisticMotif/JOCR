@@ -23,6 +23,7 @@ const C04_ImageEditor = (
 // INPUT
 //****************************************************************************
 {
+  OCR_PSM0,
   OCR_BoxColor,
   setOCR_BoxColor,
   OCR_BoxLineWidth,
@@ -66,9 +67,18 @@ SS_Thresholds,
 setSS_Thresholds,
 SS_IsShow,
 OCR_IsOCR,
-setOCR_IsOCR
+setOCR_IsOCR,
+setOCR_PSM0,
+OCR_PSM,
+setOCR_PSM,
+OCR_DPI,
+setOCR_DPI
 }
 :{
+  OCR_DPI:number;
+  setOCR_DPI:(S:number)=>void
+  OCR_PSM0:string[]  
+  setOCR_PSM0:(S:string[])=>void
   OCR_BoxColor:string 
   setOCR_BoxColor:(S:string)=>void
   OCR_BoxLineWidth:number;
@@ -114,6 +124,8 @@ SS_Thresholds:TS_Threshold[]
 setSS_Thresholds:(S:TS_Threshold[])=>void
 OCR_IsOCR:boolean 
 setOCR_IsOCR:(S:boolean)=>void
+OCR_PSM:number 
+setOCR_PSM:(S:number)=>void
 })=>{
 
   const [SS_IsShapeSetting,setSS_IsShapeSetting]=useState<boolean>(true)
@@ -197,12 +209,15 @@ setSS_Kernals={setSS_Kernals}
     SS_IsActivate={SS_IsActivate}
     setSS_IsActivate={setSS_IsActivate}
     setSS_UseEffect={setSS_UseEffect}
+    DefaultOrientation={parseInt(OCR_PSM0[3])}
     />
     <hr/>
     </>
   }
   else{
     JSX_Body=<C06_OCREditor
+    OCR_PSM={OCR_PSM}
+    setOCR_PSM={setOCR_PSM}
     OCR_OutputFile={OCR_OutputFile}
     setOCR_OutputFile={setOCR_OutputFile}
     OCR_Languages={OCR_Languages}
@@ -215,6 +230,10 @@ setSS_Kernals={setSS_Kernals}
     setOCR_BoxLineWidth={setOCR_BoxLineWidth}
     OCR_IsOCR={OCR_IsOCR}
     setOCR_IsOCR={setOCR_IsOCR}
+    OCR_PSM0={OCR_PSM0}
+    setOCR_PSM0={setOCR_PSM0}
+    OCR_DPI={OCR_DPI}
+    setOCR_DPI={setOCR_DPI}
     />
   }
 

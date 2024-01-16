@@ -11,6 +11,7 @@ const U_Aff = (
 setSS_UseEffect,
 SS_IsActivate,
 setSS_IsActivate,
+DefaultOrientation
 }
 :{
     SS_Aff:number[]
@@ -20,6 +21,7 @@ setSS_IsActivate,
 setSS_UseEffect:(S:boolean)=>void
 SS_IsActivate:boolean[]
 setSS_IsActivate:(S:boolean[])=>void,
+DefaultOrientation:number
 })=>{
     const [SS_AffSTR,setSS_AffSTR]=useState<string[]>([
         SS_Aff[0].toString(),   // Scale X
@@ -31,6 +33,15 @@ setSS_IsActivate:(S:boolean[])=>void,
 //****************************************************************************
 // FUNCTION 00: UPDATE INPUT
 //****************************************************************************
+
+    function f_SuggestRotation(){
+        let ss_Aff=[...SS_Aff]
+        let ss_AffSTR=[...SS_AffSTR]
+        ss_Aff[4]=DefaultOrientation
+        ss_AffSTR[4]=DefaultOrientation.toString()
+        setSS_Aff(ss_Aff)
+        setSS_AffSTR(ss_AffSTR)
+    }
 
     function f_UpdateAff(id:number,defaultt:0|1){
         let let_Input:string=(
@@ -167,6 +178,7 @@ setSS_IsActivate:(S:boolean[])=>void,
 <tr>
     <td style={{width:let_WidthTr}} >Rotation</td>
     <td>{SS_AffSTR[4]}</td>
+    <td><button style={{marginTop:'3px',width:'55px',paddingLeft:'0px'}} onClick={f_SuggestRotation}>Suggest</button></td>
 </tr>
 <tr>
     <td><input  style={{marginTop:'3px'}} id='C04id_Aff4'></input></td>

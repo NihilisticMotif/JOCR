@@ -1,3 +1,602 @@
+    print('Tesseract is Working')
+    print(lang)
+    print(psm)
+    
+ 
+
+            #Image Width: 1334
+            #Image Height: 1588
+            # Is this the DPI?
+
+            # How can I print the dpi of this variable?
+ 
+
+            print('Image Width:', width)
+            print('Image Height:', height)
+ 
+            print(str(OCR_PSM0))
+ 
+                    #print(OCR_PSM00)
+ 
+                #Img=Img[
+                #    int(xy[1]):int(xy[1])+int(xy[3]),
+                #    int(xy[0]):int(xy[0])+int(xy[2])
+                #    ]
+                lineWidth=int(xy[4])
+                Img = cv2.rectangle(
+                    Img, 
+                    (int(xy[0]),int(xy[1])), 
+                    (int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])), 
+                    RGB, 
+                    lineWidth
+                    )
+ 
+
+                '''
+Page number: 0
+Orientation in degrees: 0
+Rotate: 0
+Orientation confidence: 0.87
+Script: Arabic
+Script confidence: 2.50
+                '''
+ 
+let_
+ 
+.reshape(3,2)
+ 
+.reshape(3,2)
+ 
+                
+                #rows, cols, ch = Img.shape
+                #M=np.array([[1,0,PositionX],
+                #            [0,1,PositionY]])
+                #Img=cv2.warpAffine(Img,M,(cols,rows))
+                                # After cropping the image.
+                # I want to set the dpi size of the image.
+ 
+new_cols
+ 
+if(data.dim!==['-1','-1']){
+  setSS_ImageDimensions([parseInt(data.dim[0]),parseInt(data.dim[1])])
+}
+ 
+let_dim=['-1','-1']
+ 
+  setSS_ImageDimensions([img.width, img.height]);
+  // SS_ImageDimensions is not update as expected
+  // It become [,] instead of [1300,1500]
+ 
+,OCR_DPI
+ 
+                       #dpi=dpp
+ 
+,dpp
+ 
+          alert(TheMainCharacter)
+ 
+setSS_ImageDimensions([img.width, img.height]);
+ 
+                       dpi=dpp
+ 
+
+    // You can do other things here if needed
+ 
+    function f_Reset(){}
+ 
+<button style={{marginTop:'5px',width:'50px',height:'25px'}}>Reset</button>
+ 
+</>
+ 
+<h1 style={{fontSize:'14px',marginLeft:'5px'}}>
+DPI
+</h1>
+ 
+    alert(let_Input)
+ 
+onChange={f_OnChange}
+ 
+,textAlign:'left'
+ 
+
+
+<div style={{display:'flex',marginLeft:'10px',marginTop:'5px'}}>
+
+    </div>
+ 
+<h1 style={{fontSize:'14px'}}>
+ 
+</h1>
+ 
+</h1>
+ 
+</h1>
+ 
+ Setting
+ 
+    </div>
+ 
+<option value={3}>Text (PSM-3)</option>
+<option value={4}>A Table (PSM-4)</option>
+<option value={5}>A Rotated Table (PSM-5)</option>
+<option value={6}>A Simple Page with Text (PSM-6)</option>
+<option value={7}>A Single Text Line (PSM-7)</option>
+<option value={8}>A Single Word (PSM-8)</option>
+<option value={10}>A Single Charecter (PSM-10)</option>
+<option value={11}>Sparse Text (PSM-11)</option>
+<option value={13}>Last Options (PSM-13)</option>
+</select>
+ 
+                       #config="--psm 13"
+ 
+_str
+ 
+'OCR_PSM'
+ 
+'OCR_PSM'
+ 
+Data 
+ 
+Data 
+ 
+,marginLeft:'-4px'
+ 
+<string[][]>([
+    ['3','Default'],
+])
+ 
+Delect Image as 
+ 
+Image with 
+ 
+U_PSM
+ 
+
+<button 
+onClick={()=>setOCR_IsOCR(true)}
+style={{
+    fontSize:'14px',
+    width:'45%',
+    backgroundColor:OCR_IsOCR?'lightgreen':'white'
+    }}
+>Activate</button>
+<button 
+onClick={()=>setOCR_IsOCR(false)}
+style={{
+    fontSize:'14px',
+    width:'45%',
+    backgroundColor:OCR_IsOCR?'white':'lightgreen'
+    }}
+>Deactivate</button>
+ 
+Run OCR ({OCR_IsOCR?'Active':'Inactive'})
+ 
+OCR_IsOCR,
+setOCR_IsOCR,
+//SS_Boxes,
+//setSS_Boxes
+ 
+OCR_IsOCR:boolean 
+setOCR_IsOCR:(S:boolean)=>void
+//SS_Boxes:TS_Box[]
+//setSS_Boxes:(S:TS_Box[])=>void
+ 
+<select style={{fontSize:'15px',height:'25px',width:'90%'}} >
+<option value={0}>Default Mode</option>
+<option value={0}>Delect Image a Data Table</option>
+<option value={0}>Delect Image as Book Page</option>
+<option value={0}>Delect Image as a Single Text Line</option>
+<option value={0}>Delect Image as a Single Word</option>
+<option value={0}>Delect Image as a Single Charecter</option>
+<option value={0}>Delect Image as a Single Charecter</option>
+</select>
+ 
+<div></div>
+ 
+paddingLeft:'10px',paddingRight:'10px',
+ 
+ftside of div.
+ 
+// I want the select tag inside div go to the le
+ 
+</div>
+ 
+<div style={{textAlign: 'left'}}>
+ 
+</div>
+ 
+textAlign: 'left'
+ 
+  //let let_Array=data.psm0.split(',')
+  //let let_UpdateArray=[...let_Array,OCR_PSM0[-1]]
+  let let_UpdateArray:string[] = JSON.parse(data.psm0).map((item:string)=> item.trim());
+/* Parameter 'item' implicitly has an 'any' type. */
+ 
+data.psm0.split(',')
+ 
+<h1 style={{fontSize:'14px',marginLeft:'10px',marginTop:'0px'}}>
+Note
+</h1>
+ 
+<h1 style={{fontSize:'13px', textAlign: 'left',marginLeft:'10px',marginTop:'-4px'}}>
+(higher Accuracy is better)
+</h1>
+<hr style={{width:'90%'}}></hr>
+ 
+<h1 style={{fontSize:'13px', textAlign: 'left',marginLeft:'10px',marginTop:'-4px'}}>
+(higher Accuracy is better)
+</h1>
+ 
+<h1 style={{fontSize:'14px',marginLeft:'10px',marginTop:'0px'}}>
+Note
+</h1>
+ 
+higher Accuracy is better
+ 
+higher Accuracy is better
+ 
+<h1 style={{fontSize:'14px',marginLeft:'10px',marginTop:'0px'}}>
+Note: higher Accuracy is better
+</h1>
+ 
+higher is better
+ 
+print(OCR_PSM00)
+ 
+                print(OCR_PSM00)
+ 
+true 
+ 
+.toString()
+ 
+    // This works
+ 
+  let ocr_PSM0:string[]=[...OCR_PSM0]
+  
+ 
+  let let_original='true'
+ 
+ocr_PSM0=data.psm0[0]
+ 
+SM
+ 
+[0],
+                'script':OCR_PSM0[1]
+ 
+[0]
+                OCR_PSM0[1]=OCR_PSM00[1]
+ 
+        
+ 
+        osd
+        ]
+ 
+Script 
+ 
+Rotation 
+ 
+, textAlign: 'left'
+ 
+, textAlign: 'left'
+ 
+ (required)
+ 
+Image 
+ 
+OCR_PSM0[-2]
+ 
+  ocr_PSM0[0]=parseFloat(data.rotation)
+  ocr_PSM0[1]=data.script 
+ 
+,boolean
+ 
+<[number,string,boolean]>([0,'None',false])
+ 
+Recommented 
+ 
+            else:
+                OCR_PSM0[0]=OCR_PSM00[0]
+                OCR_PSM0[1]=OCR_PSM00[1]
+ 
+                    OCR_Img=let_Img
+ 
+            OCR_Img=let_Img
+ 
+def PSM0(img):
+    osd = pytesseract.image_to_osd(img)
+    angle = re.search('(?<=Rotate: )\d+', osd).group(0)
+    script = re.search('(?<=Script: )\d+', osd).group(0)
+    return [angle, script]
+
+ 
+        OCR_PSM0[0]=int(OCR_PSM0[0])
+ 
+        OCR_PSM[0]=1
+ 
+if(OCR_PSM0[2]===true){
+  let ocr_PSM0:[number,string,boolean]=[...OCR_PSM0]
+  ocr_PSM0[0]=parseFloat(data.rotation)
+}
+ 
+    //img.src = URL.createObjectURL(data.ImageBytes);
+ 
+      // I get "iVBORw0KG..."
+      //console.log(data)
+ 
+PSM0_
+ 
+PSM0_
+ 
+function f_Deactivate(){
+    let ocr_PSM0:[number,string,boolean]=[...OCR_PSM0]
+    ocr_PSM0[2]=f
+    setOCR_PSM0(ocr_PSM0)
+    // This works
+}
+ 
+    /**
+     * 
+     * Type 'string | number | boolean' is not assignable to type 'string'.
+  Type 'number' is not assignable to type 'string'.
+     */
+ 
+// How can I copy and modify list_PMS0 before using setOCR_PSM0 ?
+ 
+setOCR_PSM0={set}
+ 
+<U_Language
+OCR_Languages={OCR_Languages}
+setOCR_Languages={setOCR_Languages}/>
+<hr/>
+ 
+OCR_BoxColor
+ 
+OCR_BoxColor:
+ 
+onClick={()=>setOCR_IsViewBox(false)}
+ 
+onClick={()=>setOCR_IsViewBox(true)}
+ 
+setOCR_BoxColor={setOCR_BoxColor}
+OCR_IsViewBox={OCR_IsViewBox}
+setOCR_IsViewBox={setOCR_IsViewBox}
+OCR_BoxLineWidth={OCR_BoxLineWidth}
+setOCR_BoxLineWidth={setOCR_BoxLineWidth}
+ 
+OCR_IsViewBox,
+setOCR_IsViewBox,
+ 
+OCR_BoxColor:string 
+setOCR_BoxColor:(S:string)=>void
+OCR_IsViewBox:boolean 
+setOCR_IsViewBox:(S:boolean)=>void
+ 
+OCR_BoxColor,
+setOCR_BoxColor,
+ 
+
+//SS_Boxes,
+//setSS_Boxes
+ 
+OCR_BoxLineWidth,
+setOCR_BoxLineWidth
+ 
+OCR_BoxLineWidth:number 
+setOCR_BoxLineWidth:(S:number)=>void
+//SS_Boxes:TS_Box[]
+//setSS_Boxes:(S:TS_Box[])=>void
+ 
+    const [SS_OnChange,setSS_OnChange]=useState<string>(OCR_BoxLineWidth.toString())
+
+    function f_UpdateOCR_BoxColor(){
+    let let_Input:string=(document.getElementById('C06id_UpdateOCR_BoxColor') as HTMLInputElement).value.toString();
+    setOCR_BoxColor(let_Input)
+    }
+
+    function f_UpdateBoxLineWidth(){
+    let let_Input:string=(document.getElementById('C06id_OCRBoxLineWidth') as HTMLInputElement).value.toString();
+    if(isNaN(parseInt(let_Input))===false){
+        setOCR_BoxLineWidth(parseInt(let_Input))
+        setSS_OnChange(let_Input)
+    }
+    else{
+        setOCR_BoxLineWidth(2)
+        setSS_OnChange('2')
+    }
+    }
+
+    function f_OnChange(){
+    let let_Input:string=(document.getElementById('C06id_OCRBoxLineWidth') as HTMLInputElement).value.toString();
+    setSS_OnChange(let_Input)
+    }
+ 
+        alert('Is Ginger Sweet')
+ 
+()=>
+ 
+        f_UpdateAff
+ 
+setOCR_PSM0={setOCR_PSM0}
+ 
+  setOCR_PSM0,
+ 
+  setOCR_PSM0:(S:[number,string])=>void
+ 
+setOCR_IsOCR
+ 
+  setOCR_PSM0:(S:[number,string])=>void
+ 
+// I want text to be in the leftside.
+ 
+ 
+ 
+/td></tr>
+ 
+<tr>
+    <td><input  style={{marginTop:'3px'}} id='C04id_Aff4'></input></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>f_UpdateAff(4,0)}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>f_ResetAff(4,0)}>Reset</button></td>
+</tr>
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+ 
+ Rotation
+ 
+<hr style={{marginTop:'5px',marginBottom:'3px'}} />
+ 
+<tr>
+    <td><input  style={{marginTop:'3px'}} id='C04id_Aff4'></input></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>f_UpdateAff(4,0)}>Ok</button></td>
+    <td><button style={{marginTop:'3px'}} onClick={()=>f_ResetAff(4,0)}>Reset</button></td>
+</tr>
+ 
+<h1 style={{marginTop:'2px',marginBottom:'2px',fontSize:'15px'}}>Suggest: {'Thai'}</h1>
+ 
+<h1 style={{fontSize:'14px'}}>
+Text:
+</h1>
+<h1 style={{fontSize:'14px'}}>
+Analysing OCR
+</h1>
+ 
+</div>
+ 
+<div style={{display:'block'}}>
+ 
+</div>
+ 
+,alignContent:'left'
+ 
+OCR Analysis 
+ 
+        <>
+ 
+    </>
+ 
+<h1 style={{fontSize:'14px'}}>
+Draw the Box around the Text ({OCR_IsViewBox?'Active':'Inactive'})
+</h1>
+
+ 
+<div style={{display:'flex',marginLeft:'10px',marginTop:'5px',height:'25px'}}>
+<input 
+placeholder="Line Width"
+value={SS_OnChange}
+onChange={f_OnChange}
+style={{marginLeft:'0px',width:'50%',fontSize:'16px'}} id='C06id_OCRBoxLineWidth'></input>
+<button onClick={f_UpdateBoxLineWidth}>Ok</button>
+<input 
+type='color'
+value={OCR_BoxColor}
+onChange={f_UpdateOCR_BoxColor}
+id='C06id_UpdateOCR_BoxColor'
+style={{width:'20%'}}
+></input>
+</div>
+ 
+
+<div style={{display:'flex',marginLeft:'10px',marginTop:'5px',height:'25px'}}>
+<input 
+placeholder="Line Width"
+value={SS_OnChange}
+onChange={f_OnChange}
+style={{marginLeft:'0px',width:'50%',fontSize:'16px'}} id='C06id_OCRBoxLineWidth'></input>
+<button onClick={f_UpdateBoxLineWidth}>Ok</button>
+<input 
+type='color'
+value={OCR_BoxColor}
+onChange={f_UpdateOCR_BoxColor}
+id='C06id_UpdateOCR_BoxColor'
+style={{width:'20%'}}
+></input>
+</div>
+
+<div style={{display:'flex',marginLeft:'10px',marginTop:'5px'}}>
+
+ 
+<hr/>
+ 
+<button>Run</button>
+ 
+</div>
+ 
+      <div style={{display:'inline-lex'}}>
+ 
+</div>
+ 
+    <td><h1 style={{marginTop:'2px',marginBottom:'2px',fontSize:'15px'}}>Languages</h1></td>
+ 
+</div>
+ 
+<div>
+<td><h1 style={{
+  marginTop:'2px',
+  marginBottom:'2px',
+  fontSize:'15px'}}>Languages</h1></td>
+</div>
+ 
+</div>
+ 
+    <div className='C06id_languageHeader'>
+<tr>
+ 
+</tr>
+</div>
+ 
+import { image } from './img';
+ 
+        ['afr', 'Afrikaans'],
+        ['amh', 'Amharic'],
+        ['ara', 'Arabic'],
+        ['asm', 'Assamese'],
+        ['aze', 'Azerbaijani'],
+        ['aze_cyrl', 'Azerbaijani (Cyrillic)'],
+        ['bel', 'Belarusian'],
+        ['ben', 'Bengali'],
+        ['bod', 'Tibetan'],
+        ['bos', 'Bosnian'],
+        ['bre', 'Breton'],
+        ['bul', 'Bulgarian'],
+        ['cat', 'Catalan']
+ 
+'''
+// frontend.tsx
+//...
+formData.append('OCR_Langs',OCR_Langs.toString())
+          formData.append('OCR_IsOCR',OCR_IsOCR.toString())
+          // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
+          fetch('/def_OpenCV', {
+              method: 'POST',
+              body: formData
+          })
+          .then((response) => response.json() as Promise<ServerResponse>
+          ).then((data) => {
+            const imageURL = URL.createObjectURL(new Blob([data.imageBlob]));
+            // Property 'imageBlob' does not exist on type 'Blob'.
+            setSS_Image(imageURL);
+            const img = new Image();
+            img.onload = () => {
+                setSS_ImageDimensions([img.width, img.height]);
+            };
+            img.src = imageURL;
+            if(OCR_IsOCR===true){
+              setTheMainCharacter(data.tesseractOutput);
+            }
+            // Property 'tesseractOutput' does not exist on type 'Blob'.
+          });
+//...
+
+// There is
+'''
+ 
+alert(SS_Image)
+ 
+    // I copy the 64 bit image file from the console.log
+    // and create new file name image.tsx which contains only
+    // a single image string.
+    // The img tag show nothings.
+ 
++image
+ 
 Default Mode
  
 Orientation

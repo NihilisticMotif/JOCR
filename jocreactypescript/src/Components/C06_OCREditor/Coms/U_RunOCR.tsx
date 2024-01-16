@@ -27,9 +27,7 @@ setOCR_IsOCR:(S:boolean)=>void
 <h1 style={{fontSize:'14px'}}>
 Run OCR ({OCR_IsOCR?'Active':'Inactive'})
 </h1>
-
 <div style={{display:'flex',marginLeft:'10px',marginTop:'5px'}}>
-
 <button 
 onClick={()=>setOCR_IsOCR(true)}
 style={{
