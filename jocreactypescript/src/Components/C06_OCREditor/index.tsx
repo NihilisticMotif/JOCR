@@ -145,14 +145,14 @@ const C06_OCREditor = (
 OCR_IsOCR={OCR_IsOCR}
 setOCR_IsOCR={setOCR_IsOCR}
 />
-{/*<U_PSM
+<U_PSM
 OCR_PSM={OCR_PSM}
 setOCR_PSM={setOCR_PSM}
-/>*/}
-<U_DPI
+/>
+{/*<U_DPI
 OCR_DPI={OCR_DPI}
 setOCR_DPI={setOCR_DPI}
-/>
+    />*/}
 <hr/>
 <R_Analysis
 OCR_PSM0={OCR_PSM0}
