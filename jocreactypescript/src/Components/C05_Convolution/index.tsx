@@ -29,7 +29,7 @@ SS_AffineBOOL,
 setSS_AffineBOOL,
 SS_Kernals,
 setSS_Kernals,
-SS_ImageDimensions
+SS_ImageDimensions,
 }
 :{
   SS_ImageDimensions:number[]|null

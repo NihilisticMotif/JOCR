@@ -188,6 +188,40 @@ function isEmptyOrWhitespace(inputStr: string): boolean {
   // 4 ...
 
   let JSX_ImageProcessingDIV=<></>
+  let JSX_OCR_WhiteList=<div style={{marginTop:'0px',height:'300px',backgroundColor:'#AA3344'}}>
+  <div style={{display:'flex',marginTop:'0px',height:'40px'}}>
+    <h1 
+    // https://youtu.be/Ad9e5eoHm9U?si=WsJg_lv_-2O3DBMa
+    className='C05id_Zoom'>Target Charecter</h1>
+  </div>
+  <hr style={{width:'90%'}}/>
+<OCR_WhiteList
+OCR_WhiteList={OCR_WhiteListYes}
+setOCR_WhiteList={setOCR_WhiteListYes}
+id='C06id_OCR_WhiteListOCR_WhiteListOCR_WhiteListYesYesYesYesJojojojojojojOJo'
+Header="White List Charecter"
+Comment='All Charecter'
+    />
+<OCR_WhiteList
+OCR_WhiteList={OCR_WhiteListNo}
+setOCR_WhiteList={setOCR_WhiteListNo}
+id='C06id_nonONOnonONONONonONONONONOnONoNOexcuseMeSirtheremustbesomeonebababa'
+Header="Black List Charecter"
+Comment='None'
+    />
+    <hr style={{width:'90%'}}/>
+  <div style={{display:'flex',marginTop:'10px'}}>
+    <h1 
+    // https://youtu.be/Ad9e5eoHm9U?si=WsJg_lv_-2O3DBMa
+    className='C05id_Zoom'>Delect</h1>
+  </div>
+<div style={{display:'flex',margin:'0px',marginTop:'10px'}}>
+<button onClick={f_OnLyNumber} style={{width:'70px',marginLeft:'20px'}}>Only Number</button>
+<button onClick={f_OnLyText} style={{width:'70px',marginLeft:'10px'}}>Only Text</button>
+<button onClick={f_Reset} style={{width:'70px',marginLeft:'10px'}}>Reset</button>
+</div>
+    <hr style={{width:'90%'}}/>
+</div>
   if(SS_OpenPanel===1 
   ){
     JSX_ImageProcessingDIV=<div style={{display:'grid'}}>
@@ -197,6 +231,9 @@ function isEmptyOrWhitespace(inputStr: string): boolean {
         <button onClick={()=>{setSS_ImageProcessing(2)}}>Create Box</button>
         <button onClick={()=>{setSS_ImageProcessing(3)}}>Utility</button>
       </div>
+      {
+        SS_ImageProcessing===3?JSX_OCR_WhiteList:<></>
+      }
       <C05_Convolution
       SS_ImageDimensions={SS_ImageDimensions}
       SS_Image={SS_Image}

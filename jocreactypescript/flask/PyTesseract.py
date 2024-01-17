@@ -25,10 +25,6 @@ def DrawBoxAroundTextGray(img,RGB,LineWidth):
     # https://github.com/NanoNets/ocr-with-tesseract/blob/master/tesseract-tutorial.ipynb
     BoxColor=int(255/3*(RGB[2]+RGB[1]+RGB[0]))#(int(255*RGB[2]),int(255*RGB[1]),int(255*RGB[0]))
     h, w = img.shape
-    '''
-        h, w, c = img.shape
-ValueError: not enough values to unpack (expected 3, got 2)
-    '''
     boxes = pytesseract.image_to_boxes(img) 
     for b in boxes.splitlines():
         b = b.split(' ')
@@ -40,19 +36,47 @@ ValueError: not enough values to unpack (expected 3, got 2)
     #rgb_img = cv2.merge([r,g,b])
     return img
 
+
 def PSM0(img):
     osd = pytesseract.image_to_osd(img)
-    # UnboundLocalError: cannot access local variable 'OCR_Img' where it is not associated with a value
-    #angle = re.search('(?<=Rotate: )\d+', osd).group(0)
-    #script = re.search('(?<=Script: )\d+', osd).group(0)
     return osd
 
-def Image2String(img,lang,psm):
+
+def NoTextExcept(input_str, letter_to_keep):
+    TextList=[]
+    for i in letter_to_keep:
+        TextList.append(i.lower())
+    result = ''
+    for char in input_str:
+        if char.isalpha() and char.lower() not in TextList:
+            continue
+        result += char
+    return result
+
+def Image2String(img,
+                 lang,
+                 psm,
+                 WhiteList,
+                 BlackList,
+                 ):
+    # https://youtu.be/v0HL-sAevaQ?si=mkM8vNGItpIrB6nJ
+    WhiteLS = ''
+    if WhiteList.strip() != '':
+        WhiteLS = '-c tessedit_char_whitelist=' + WhiteList.strip()
+
+    BlackLS = ''
+    if BlackList.strip() != '':
+        BlackLS = '-c tessedit_char_blacklist=' + BlackList.strip()
+    
+    TargetList='-c tessedit_char_blacklist=0123456789' #WhiteLS+' '+BlackLS
     txt=ts.image_to_string(img, lang=lang, 
-                       config='--oem 3 --psm '+psm+' -c min_characters_to_try=5',
+                           # +' -c min_characters_to_try=5'
+                       config=' --psm '+psm+'--oem 3 ',#+TargetList,
                        )
-    '''
-TypeError: image_to_string() got an unexpected keyword argument 'dpi'
-# How can I set dpi?
-    '''
+    print('Tesseract is Working in the 4D World')
+    print(txt)
     return txt
+'''
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, "read_params_file: Can't open = read_params_file: Can't open 0123456789 read_params_file: Can't open -c read_params_file: Can't open tessedit_char_blacklist read_params_file: Can't open = read_params_file: Can't open 3 read_params_file: Can't open --psm read_params_file: Can't open = read_params_file: Can't open 0123456789 read_params_file: Can't open -c read_params_file: Can't open tessedit_char_blacklist read_params_file: Can't open = read_params_file: Can't open 3 read_params_file: Can't open --psm Missing = in configvar assignment")
+'''

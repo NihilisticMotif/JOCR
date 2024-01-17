@@ -1,13 +1,10 @@
 
-import { useState } from "react"
 import U_Language from "./Coms/U_Language"
-import C_ExportFile from "./Coms/C_ExportFile"
 import U_ImageBox from "./Coms/U_ImageBox"
 import U_RunOCR from "./Coms/U_RunOCR"
-import R_SuggestScript from "./Coms/R_Analysis"
 import R_Analysis from "./Coms/R_Analysis"
 import U_PSM from "./Coms/U_PSM"
-import U_DPI from "./Coms/U_DPI"
+
 const C06_OCREditor = (
 //****************************************************************************
 // INPUT
@@ -30,7 +27,9 @@ const C06_OCREditor = (
     OCR_PSM,
     setOCR_PSM,
     OCR_DPI,
-    setOCR_DPI
+    setOCR_DPI,
+    OCR_WhiteListNumber,
+    setOCR_WhiteListNumber
 }
 :{
     OCR_DPI:number 
@@ -51,6 +50,8 @@ const C06_OCREditor = (
     setOCR_PSM0:(S:string[])=>void
     OCR_PSM:number 
     setOCR_PSM:(S:number)=>void
+    OCR_WhiteListNumber:number 
+    setOCR_WhiteListNumber:(S:number)=>void
 })=>{
 
 /****************************************************************************

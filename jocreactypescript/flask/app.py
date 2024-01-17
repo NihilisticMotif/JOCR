@@ -186,6 +186,10 @@ def def_OpenCV():
         OCR_BoxColor_STR = request.form.get('OCR_BoxColor')
         OCR_IsViewBox_STR = request.form.get('OCR_IsViewBox')
         OCR_BoxLineWidth_STR = request.form.get('OCR_BoxLineWidth')
+
+        OCR_WhiteListYes = request.form.get('OCR_WhiteListYes')
+        OCR_WhiteListNo = request.form.get('OCR_WhiteListNo')
+
         OCR_BoxLineWidth=int(OCR_BoxLineWidth_STR)
         OCR_IsViewBox=False
         if 'rue' in OCR_IsViewBox_STR:
@@ -255,13 +259,17 @@ def def_OpenCV():
                 let_Img=AffineTransformations(let_Img,SS_Affine)
                 let_Img=Image.fromarray(let_Img)
             let_Img = DrawPoints(let_Img,SS_Affine[1],SS_AffineRGB[1],SS_AffineBOOL[1])
-            
+
 #****************************************************************************
 # Compute Image to Text Output
 #****************************************************************************
             if OCR_IsOCR==True:
                 tesseract_output = Image2String(
-                    let_Img,OCR_Langs,OCR_PSM)
+                    let_Img,
+                    OCR_Langs,
+                    OCR_WhiteListYes,
+                    OCR_WhiteListNo,
+                    OCR_PSM)
             else:
                 tesseract_output=''
             if OCR_PSM0[5]:

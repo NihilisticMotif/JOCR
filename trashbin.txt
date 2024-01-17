@@ -1,3 +1,413 @@
++int(xy[3])
+ 
+RGB
+ 
+                # Instead of crop the RGB image
+                # I want to make the background outside this
+                # square become the color that the input specify.
+                '''rows, cols, ch = Img.shape
+                pts0 = np.float32([
+                    [int(xy[0]),int(xy[1])],
+                    [int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])],
+                    [int(xy[0]),int(xy[1])+int(xy[3])]
+                ])
+                pts1 = np.float32([
+                    [0,0],
+                    [rows,cols],
+                    [0,cols]
+                ])
+                M = cv2.getAffineTransform(pts0,pts1)
+                Img = cv2.warpAffine(Img, M, (cols, rows))'''
+ 
+ - 300px
+ 
+      {
+        SS_ImageProcessing===3?JSX_OCR_WhiteList:<></>
+      }
+ 
+  let JSX_OCR_WhiteList=<div style={{marginTop:'0px',height:'300px',backgroundColor:'#AA3344'}}>
+  <div style={{display:'flex',marginTop:'0px',height:'40px'}}>
+    <h1 
+    // https://youtu.be/Ad9e5eoHm9U?si=WsJg_lv_-2O3DBMa
+    className='C05id_Zoom'>Target Charecter</h1>
+  </div>
+  <hr style={{width:'90%'}}/>
+<OCR_WhiteList
+OCR_WhiteList={OCR_WhiteListYes}
+setOCR_WhiteList={setOCR_WhiteListYes}
+id='C06id_OCR_WhiteListOCR_WhiteListOCR_WhiteListYesYesYesYesJojojojojojojOJo'
+Header="White List Charecter"
+Comment='All Charecter'
+    />
+<OCR_WhiteList
+OCR_WhiteList={OCR_WhiteListNo}
+setOCR_WhiteList={setOCR_WhiteListNo}
+id='C06id_nonONOnonONONONonONONONONOnONoNOexcuseMeSirtheremustbesomeonebababa'
+Header="Black List Charecter"
+Comment='None'
+    />
+    <hr style={{width:'90%'}}/>
+  <div style={{display:'flex',marginTop:'10px'}}>
+    <h1 
+    // https://youtu.be/Ad9e5eoHm9U?si=WsJg_lv_-2O3DBMa
+    className='C05id_Zoom'>Delect</h1>
+  </div>
+<div style={{display:'flex',margin:'0px',marginTop:'10px'}}>
+<button onClick={f_OnLyNumber} style={{width:'70px',marginLeft:'20px'}}>Only Number</button>
+<button onClick={f_OnLyText} style={{width:'70px',marginLeft:'10px'}}>Only Text</button>
+<button onClick={f_Reset} style={{width:'70px',marginLeft:'10px'}}>Reset</button>
+</div>
+    <hr style={{width:'90%'}}/>
+</div>
+ 
+' --psm '+psm
+ 
+'''
+ytesseract.pytesseract.TesseractError: (1, "read_params_file: Can't open = read_params_file: Can't open 0123456789 read_params_file: Can't open -c read_params_file: Can't open tessedit_char_blacklist read_params_file: Can't open = read_params_file: Can't open 3 read_params_file: Can't open --psm read_params_file: Can't open = read_params_file: Can't open 0123456789 read_params_file: Can't open -c read_params_file: Can't open tessedit_char_blacklist read_params_file: Can't open = read_params_file: Can't open 3 read_params_file: Can't open --psm Missing = in configvar assignment")
+'''
+ 
++TargetList
+ 
+                 BlackList,
+ 
++' '+BlackLS
+ 
+    
+    BlackLS=''
+    if BlackLS.strip() == '':
+        BlackLS=''
+    else:
+        BlackLS='-c tessedit_char_blacklist = '+BlackList.strip()
+ 
+TargetList
+ 
+                '''rows, cols, ch = Img.shape
+                pts0 = np.float32([
+                    [int(xy[0]),int(xy[1])],
+                    [int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])],
+                    [int(xy[0]),int(xy[1])+int(xy[3])]
+                ])
+                pts1 = np.float32([
+                    [0,0],
+                    [rows,cols],
+                    [0,cols]
+                ])
+                M = cv2.getAffineTransform(pts0,pts1)
+                Img = cv2.warpAffine(Img, M, (cols, rows))'''
+ 
++' -c min_characters_to_try=5'
+ 
+TargetList
+ 
+'-c tessedit_char_whitelist='+WhiteList.strip()
+ 
+// https://github.com/NanoNets/ocr-with-tesseract/blob/master/tesseract-tutorial.ipynb
+ 
+    '''
+        h, w, c = img.shape
+ValueError: not enough values to unpack (expected 3, got 2)
+    '''
+ 
+    # UnboundLocalError: cannot access local variable 'OCR_Img' where it is not associated with a value
+    #angle = re.search('(?<=Rotate: )\d+', osd).group(0)
+    #script = re.search('(?<=Script: )\d+', osd).group(0)
+ 
+'''
+ 
+'''
+ 
+0123456789
+ 
+OCR_WhiteList
+ 
+OCR_WhiteList
+ 
++'0123456789'
+ 
+    let let_WhiteListYes:string=OCR_WhiteListYes
+    let let_UpdateWhiteListYes:string=''
+    for(let i=0;i<let_WhiteListYes.length;i++){
+      if(true){
+        let_UpdateWhiteListYes+=let_WhiteListYes[i]
+      }
+    }
+ 
+  </div>
+ 
+    <div style={SS_ImageProcessing===3?{marginTop:'0px'}:{}}>
+ 
+style={{marginTop:'80px',position: 'relative',backgroundColor:'#FAA11A',width:'100%',height:'280px'}}
+ 
+ style={{display:'flex',marginTop:'10px',height:'40px'}}
+ 
+ -100px
+ 
+ +10px
+ 
+</div>
+ 
+</div>
+ 
+,overflowX: 'clip'
+ 
+</div>
+ 
+</div>
+ 
+,marginTop:'-90px'
+ 
+ - 280px
+ 
+,marginTop:'auto'
+ 
+marginTop:'auto',
+ 
+marginBottom:'auto'
+ 
+marginTop:'auto'
+ 
+,marginBottom:'auto'
+ 
+width:'230px'
+ 
+aut
+ 
+    <hr style={{width:'90%'}}/>
+  <div style={{display:'flex',marginTop:'10px'}}>
+    <h1 
+    // https://youtu.be/Ad9e5eoHm9U?si=WsJg_lv_-2O3DBMa
+    className='C05id_Zoom'>Delect</h1>
+  </div>
+<div style={{display:'flex',margin:'0px'}}>
+<button style={{width:'70px'}}>Only Number</button>
+<button style={{width:'70px'}}>Only Text</button>
+<button style={{width:'70px'}}>Text and Number</button>
+</div>
+ 
+OCR_WhiteNOnononONONo
+ 
+Character Lis
+ 
+Delect 
+ 
+,marginLeft:'10px'
+ 
+import { useState } from "react"
+ 
+import C_ExportFile from "./Coms/C_ExportFile"
+ 
+import U_DPI from "./Coms/U_DPI"
+ 
+import U_WhiteListCharecter from "./Coms/U_WhiteListCharecter"
+ 
+import R_SuggestScript from "./Coms/R_Analysis"
+ 
+<U_WhiteListCharecter
+OCR_PSM={OCR_WhiteListNumber}
+setOCR_PSM={setOCR_WhiteListNumber}
+/>
+ 
+        OCR_WhiteListNumber = request.form.get('OCR_WhiteListNumber')
+ 
+
+
+ 
+                    OCR_WhiteListNumber,
+ 
+                 NumberList
+ 
+    CommandWhiteList=''
+ 
+    if NumberList=='0':
+        BlackLS=BlackLS+'0123456789'
+    if NumberList=='1':
+    if NumberList=='2':
+        pass
+ 
+
+def NoNumberExcept(input_str, digit_to_keep):
+    result = ''
+    for char in input_str:
+        if char.isdigit() and int(char) not in digit_to_keep:
+            continue
+        result += char
+    return result
+
+def NumberList(input_str):
+    LS=''
+    for i in input_str:
+        if i.isdigit():
+            LS+=i
+    return LS
+ 
+        CommandWhiteList=WhiteLS+' '+BlackList
+ 
+        CommandWhiteList=WhiteLS+' '
+ 
+    OnluNumber='outputbase digits'
+ 
+.strip()
+ 
+.strip()
+ 
+outputbase digits
+ 
+Number
+ 
+    '''
+TypeError: image_to_string() got an unexpected keyword argument 'dpi'
+# How can I set dpi?
+    '''
+ 
+# Delect Only Text
+custom_config = r'-c tessedit_char_blacklist=0123456789 --psm '+psm
+pytesseract.image_to_string(img, config=custom_config)
+ 
+TheMain
+ 
+OCR_WhiteList
+ 
+margin:"auto",
+ 
+      <div style={SS_ImageProcessing===3:{height:'calc(100vh - 100px)'}:''}></div>
+ 
+height:'calc(100vh - 100px)'
+ 
+backgroundColor:'#3366FF'
+ 
+Number
+ 
+ Image as 
+ 
+<U_PSM
+OCR_PSM={OCR_PSM}
+setOCR_PSM={setOCR_PSM}
+/>
+ 
+jocreactypescript/src/Components/
+ 
+/Users/imac/Desktop/SoloOpenSourceProject/JOCR/
+ 
+<option value={5}>Text and Number</option>
+ 
+<option value={6}>A Simple Page with Text (PSM-6)</option>
+<option value={7}>A Single Text Line (PSM-7)</option>
+<option value={8}>A Single Word (PSM-8)</option>
+<option value={10}>A Single Charecter (PSM-10)</option>
+<option value={11}>Sparse Text (PSM-11)</option>
+<option value={13}>Last Options (PSM-13)</option>
+ 
+margin:"auto",
+ 
+,textAlign:'center'
+ 
+<hr style={{width:'90%'}}/>
+ 
+<hr/>
+ 
+<h1 style={{marginTop:'2px',marginBottom:'2px',fontSize:'15px'}}>
+  Languages</h1>
+ 
+<button></button>
+ 
+</div>
+ 
+Default=
+ 
+{/*<U_WhiteList
+OCR_WhiteList={OCR_WhiteListYes}
+setOCR_WhiteList={setOCR_WhiteListYes}
+id='C06id_OCR_WhiteListOCR_WhiteListOCR_WhiteListYesYesYes'
+Header="List of the Select Charecter"
+Comment='Default=All Charecter'
+    />*/}
+ 
+import U_WhiteList from "./Coms/U_WhiteList"
+ 
+  OCR_WhiteListYes={OCR_WhiteListYes}
+  OCR_WhiteListNo={OCR_WhiteListNo}
+  setOCR_WhiteListYes={setOCR_WhiteListYes}
+  setOCR_WhiteListNo={setOCR_WhiteListNo}
+  OCR_WhiteListNumber={OCR_WhiteListNumber}
+  setOCR_WhiteListNumber={setOCR_WhiteListNumber}
+ 
+OCR_WhiteListNumber:number 
+setOCR_WhiteListNumber:(S:number)=>void
+OCR_WhiteListYes:string 
+OCR_WhiteListNo:string 
+setOCR_WhiteListYes:(S:string)=>void 
+setOCR_WhiteListNo:(S:string)=>void
+ 
+OCR_WhiteListNumber,
+setOCR_WhiteListNumber,
+OCR_WhiteListYes,
+OCR_WhiteListNo,
+setOCR_WhiteListYes,
+setOCR_WhiteListNo
+ 
+OCR_WhiteListYes={OCR_WhiteListYes}
+OCR_WhiteListNo={OCR_WhiteListNo}
+OCR_WhiteListNumber={OCR_WhiteListNumber}
+setOCR_WhiteListYes=    {setOCR_WhiteListYes}
+setOCR_WhiteListNo=     {setOCR_WhiteListNo}
+setOCR_WhiteListNumber= {setOCR_WhiteListNumber}
+ 
+    OCR_WhiteListYes={OCR_WhiteListYes}
+    OCR_WhiteListNo={OCR_WhiteListNo}
+    setOCR_WhiteListYes={setOCR_WhiteListYes}
+    setOCR_WhiteListNo={setOCR_WhiteListNo}
+ 
+    OCR_WhiteListYes={OCR_WhiteListYes}
+    OCR_WhiteListNo={OCR_WhiteListNo}
+    setOCR_WhiteListYes={setOCR_WhiteListYes}
+    setOCR_WhiteListNo={setOCR_WhiteListNo}
+ 
+    OCR_WhiteListYes,
+    OCR_WhiteListNo,
+    setOCR_WhiteListYes,
+    setOCR_WhiteListNo
+ 
+    OCR_WhiteListYes:string 
+    OCR_WhiteListNo:string 
+    setOCR_WhiteListYes:(S:string)=>void 
+    setOCR_WhiteListNo:(S:string)=>void
+ 
+    OCR_WhiteListYes,
+    OCR_WhiteListNo,
+    setOCR_WhiteListYes,
+    setOCR_WhiteListNo
+ 
+    OCR_WhiteListYes:string 
+    OCR_WhiteListNo:string 
+    setOCR_WhiteListYes:(S:string)=>void 
+    setOCR_WhiteListNo:(S:string)=>void
+ 
+const [OCR_WhiteList,set]
+ 
+<div style={{display:'flex',marginLeft:'10px',marginTop:'5px'}}>
+
+    </div>
+ 
+</h1>
+ 
+<h1 style={{fontSize:'14px'}}>
+ 
+        <></>
+ 
+<option value={3}>Text (PSM-3)</option>
+<option value={4}>A Table (PSM-4)</option>
+<option value={5}>A Rotated Table (PSM-5)</option>
+<option value={6}>A Simple Page with Text (PSM-6)</option>
+<option value={7}>A Single Text Line (PSM-7)</option>
+<option value={8}>A Single Word (PSM-8)</option>
+<option value={10}>A Single Charecter (PSM-10)</option>
+<option value={11}>Sparse Text (PSM-11)</option>
+<option value={13}>Last Options (PSM-13)</option>
+ 
+parseInt(
+ 
+//Users/imac/Desktop/SoloOpenSourceProject/JOCR
+ 
     print('Tesseract is Working')
     print(lang)
     print(psm)

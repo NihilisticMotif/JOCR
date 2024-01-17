@@ -1,6 +1,34 @@
-                let_Img = Kernalss(
-                    let_Img,
-                    SS_Kernals_Name,
-                    SS_Kernals_Matrix,
-                    SS_Kernals_IsActive,
-                    SS_Kernals_Iterations)
+#****************************************************************************
+# OCR_WhiteListNumber
+#****************************************************************************
+
+<option value={0}>Only Text</option>
+<option value={1}>Only Number</option>
+<option value={2}>Text and Number</option>
+
+# Delect Only Text
+custom_config = r'-c tessedit_char_blacklist=0123456789 --psm '+psm
+pytesseract.image_to_string(img, config=custom_config)
+
+# Detect Only Number 
+custom_config = r'--oem 3 --psm 6 outputbase digits'
+print(pytesseract.image_to_string(img, config=custom_config))
+
+# Delect Text and Number
+#
+
+#****************************************************************************
+# OCR_WhiteList
+#****************************************************************************
+
+# Yes 
+custom_config = r'-c tessedit_char_whitelist=abcdefghijklmnopqrstuvwxyz --psm 6'
+print(pytesseract.image_to_string(img, config=custom_config))
+
+# No 
+custom_config = r'-c tessedit_char_blacklist=0123456789 --psm 6'
+pytesseract.image_to_string(img, config=custom_config)
+
+
+
+/[\w\d]+/ 

@@ -220,23 +220,54 @@ def DrawingBoxes(Img,XYWH,Type,Color,IsShow):
                     lineWidth
                     ) 
             if t=='Crop' and int(xy[1])>0:                 
-                Img=Img[
-                    int(xy[1]):int(xy[1])+int(xy[3]),
-                    int(xy[0]):int(xy[0])+int(xy[2])
-                    ]
-                '''rows, cols, ch = Img.shape
-                pts0 = np.float32([
-                    [int(xy[0]),int(xy[1])],
-                    [int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])],
-                    [int(xy[0]),int(xy[1])+int(xy[3])]
-                ])
-                pts1 = np.float32([
-                    [0,0],
-                    [rows,cols],
-                    [0,cols]
-                ])
-                M = cv2.getAffineTransform(pts0,pts1)
-                Img = cv2.warpAffine(Img, M, (cols, rows))'''
+                #Img=Img[
+                #    int(xy[1]):int(xy[1])+int(xy[3]),
+                #    int(xy[0]):int(xy[0])+int(xy[2])
+                #    ]
+                if int(xy[4])>0:
+                    lineWidth=int(xy[4])
+
+                # Reserve Image
+                Img = cv2.rectangle(
+                    Img, 
+                    (int(xy[0]),int(xy[1])), 
+                    (int(xy[0])+int(xy[2]),int(xy[1])+int(xy[3])), 
+                    RGB, 
+                    lineWidth
+                    ) 
+                
+                # 1
+                Img = cv2.rectangle(
+                    Img, 
+                    (0,0), 
+                    (int(xy[0]),height), 
+                    RGB, 
+                    -1
+                    ) 
+                # 2
+                Img = cv2.rectangle(
+                    Img, 
+                    (int(xy[0]),0), 
+                    (int(xy[0])+int(xy[2]),int(xy[1])), 
+                    RGB, 
+                    -1
+                    ) 
+                # 3
+                Img = cv2.rectangle(
+                    Img, 
+                    (int(xy[0]),int(xy[1])+int(xy[3])), 
+                    (int(xy[0])+int(xy[2]),height), 
+                    RGB, 
+                    -1
+                    ) 
+                # 4
+                Img = cv2.rectangle(
+                    Img, 
+                    (int(xy[0])+int(xy[2]),0), 
+                    (width,height), 
+                    RGB, 
+                    -1
+                    ) 
     return Img
   
 ########################################################################################

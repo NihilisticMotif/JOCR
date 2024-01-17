@@ -241,6 +241,14 @@ const [OCR_BoxColor,setOCR_BoxColor]=useState<string>('#000000')
 const [OCR_IsViewBox,setOCR_IsViewBox]=useState<boolean>(false)
 const [OCR_BoxLineWidth,setOCR_BoxLineWidth]=useState<number>(2)
 const [OCR_PSM0,setOCR_PSM0]=useState<string[]>(['None','0','0','0','0','false'])
+const [OCR_WhiteListYes,setOCR_WhiteListYes]=useState<string>('')
+const [OCR_WhiteListNo,setOCR_WhiteListNo]=useState<string>('')
+const [OCR_WhiteListNumber,setOCR_WhiteListNumber]=useState<number>(2)
+/*
+0 == Text 
+1 == Number 
+2 == Text and Number
+*/
 //****************************************************************************
 // OUTPUT (TEXT)
 //****************************************************************************
@@ -363,6 +371,12 @@ setTheMainCharacter={setTheMainCharacter}
     let JSX_C04=<></>
     if(SS_OpenPanel===1 || SS_OpenPanel===2){
         JSX_C04=<Index02_Canvas
+        OCR_WhiteListNumber={OCR_WhiteListNumber}
+        setOCR_WhiteListNumber={setOCR_WhiteListNumber}
+        OCR_WhiteListYes={OCR_WhiteListYes}
+        setOCR_WhiteListYes={setOCR_WhiteListYes}
+        OCR_WhiteListNo={OCR_WhiteListNo}
+        setOCR_WhiteListNo={setOCR_WhiteListNo}
         OCR_DPI={OCR_DPI}
         setOCR_DPI={setOCR_DPI}
         OCR_PSM={OCR_PSM}

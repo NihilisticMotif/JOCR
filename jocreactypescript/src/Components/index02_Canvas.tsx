@@ -21,6 +21,10 @@ interface ServerResponse {
 }
 
 interface IN_02_Canvas{
+  OCR_WhiteListYes:string 
+  setOCR_WhiteListYes:(S:string)=>void 
+  OCR_WhiteListNo:string 
+  setOCR_WhiteListNo:(S:string)=>void
   OCR_PSM0:string[]
   OCR_PSM:number
   TheMainCharacter:string|string[]
@@ -50,6 +54,7 @@ SS_OpenPanel:0|1|2;
 SS_Thresholds:TS_Threshold[];
 OCR_BoxLineWidth:number
 OCR_DPI:number
+OCR_WhiteListNumber:number
 setOCR_PSM0:(S:string[])=>void
 setOCR_PSM:(S:number)=>void
 setTheMainCharacter:(S:string|string[])=>void
@@ -79,6 +84,7 @@ setSS_OpenPanel:(S:0|1|2)=>void;
 setSS_Thresholds:(S:TS_Threshold[])=>void
 setOCR_BoxLineWidth:(S:number)=>void
 setOCR_DPI:(S:number)=>void
+setOCR_WhiteListNumber:(S:number)=>void
 }
 
 export const Index02_Canvas: React.FC<IN_02_Canvas> = (
@@ -86,6 +92,8 @@ export const Index02_Canvas: React.FC<IN_02_Canvas> = (
 // INPUT
 //****************************************************************************
 {
+  OCR_WhiteListNumber, 
+  setOCR_WhiteListNumber,
   OCR_DPI,
   setOCR_DPI,
   OCR_PSM,
@@ -142,8 +150,12 @@ OCR_IsViewBox,
 setOCR_IsViewBox,
 OCR_BoxLineWidth,
 setOCR_BoxLineWidth,
+OCR_WhiteListYes,
+OCR_WhiteListNo,
+setOCR_WhiteListYes, 
+setOCR_WhiteListNo,
 TheMainCharacter,
-setTheMainCharacter
+setTheMainCharacter,
 }) => {
   const Base64Image='data:image/png;base64,'
 //****************************************************************************
@@ -190,6 +202,9 @@ setTheMainCharacter
           formData.append('OCR_PSM0',OCR_PSM0.toString())
           formData.append('OCR_PSM',OCR_PSM.toString())
           formData.append('OCR_DPI',OCR_DPI.toString())
+          formData.append('OCR_WhiteListYes',OCR_WhiteListYes.toString())
+          formData.append('OCR_WhiteListNo',OCR_WhiteListNo.toString())
+          formData.append('OCR_WhiteListNumber',OCR_WhiteListNumber.toString())
           // https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
           fetch('/def_OpenCV', {
               method: 'POST',
@@ -431,6 +446,12 @@ style={{backgroundColor:'red',height:'30px',width:'100%',display:'flex'}}
 style={{display:'flex'}}
 >*/}
 <C04_ImageEditor
+OCR_WhiteListNumber={OCR_WhiteListNumber}
+setOCR_WhiteListNumber={setOCR_WhiteListNumber}
+OCR_WhiteListYes={OCR_WhiteListYes} 
+OCR_WhiteListNo={OCR_WhiteListNo}
+setOCR_WhiteListYes={setOCR_WhiteListYes}
+setOCR_WhiteListNo={setOCR_WhiteListNo}
 OCR_DPI={OCR_DPI}
 setOCR_DPI={setOCR_DPI}
 OCR_PSM={OCR_PSM}
