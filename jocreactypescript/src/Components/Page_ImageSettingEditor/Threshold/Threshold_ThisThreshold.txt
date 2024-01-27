@@ -1,0 +1,13 @@
+import TS_Threshold from "./An_Index"
+
+export function Threshold_ThisThreshold(
+        THRESHOLDS:TS_Threshold[],
+    ):TS_Threshold{
+    for(let i:number=0;i<THRESHOLDS.length;i++){
+        if(THRESHOLDS[i].IsClick===true){
+            return THRESHOLDS[i]
+        }
+    }
+    let let_EmptyYhreshold:TS_Threshold={Key:0,PositionY:0,IsDefault:false,Gray:0,IsClick:false}
+    return let_EmptyYhreshold
+}

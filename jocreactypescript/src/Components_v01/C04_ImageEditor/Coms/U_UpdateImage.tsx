@@ -10,8 +10,7 @@ const U_UpdateImage = (
 setSS_UseEffect,
 setSS_IsRGB,
 SS_IsRGB
-}
-:{
+}:{
   setSS_IsShow:(S:boolean)=>void
 setSS_UseEffect:(S:boolean)=>void
 setSS_IsRGB:(S:boolean)=>void

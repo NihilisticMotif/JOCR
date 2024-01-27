@@ -1,0 +1,27 @@
+import TS_Kernal from "./An_Index"
+
+export function Kernal_Create(
+        // SS_Columns
+        THRESHOLDS:TS_Kernal[],
+        ):TS_Kernal[]{
+            // https://stackoverflow.com/questions/43846531/check-if-dictionary-object-in-array-contains-certain-value-in-javascript
+
+            // Generate New Key
+            let let_NewKey:number = Math.random()
+            while(THRESHOLDS.map(LET=>LET.Key).includes(let_NewKey)===true){
+                let_NewKey = Math.random()
+            }
+            while(let_NewKey===0){
+                let_NewKey = Math.random()
+            }
+            
+            // https://stackoverflow.com/questions/31048953/what-are-these-three-dots-in-react-doing
+            //const let_NEW:TS_Kernal={
+            //    Key:let_NewKey,
+            //    PositionY:10+5,
+            //    ScalePosition:255,
+            //    IsDefault:false,
+            //    Gray:'#000000'
+            //    }
+            return THRESHOLDS// [...THRESHOLDS,let_NEW]
+}

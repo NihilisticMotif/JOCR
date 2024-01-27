@@ -1,0 +1,37 @@
+Folder Name
+
+File Name
+* index.tsx 
+* page_multiinputs.tsx
+* page_singleinput.tsx
+* page_output.tsx (text area)
+* page_imgsettingmodify.tsx (ignore)
+* page_imgsettingsave.tsx (ignore)
+* ui_button.tsx
+* ui_activate.tsx
+* ui_options.tsx
+* ui_resettinginput.tsx
+* ui_factory.tsx (language, kernal, box)
+* ui_multitabs.tsx
+
+Folder Name
+* img_kernal
+* img_threshold
+* img_box
+* img_json
+* function (input)
+- ocr (Language, PSM, etc)
+- img (Color or Gray, rotation, open setting)
+- import (import and export)
+- read_img (see original image, zoom)
+* imagefilefunction
+- close window
+- ???
+* utility ?
+- zoom.tsx 
+- ocr_language.tsx
+
+Tree
+1. index.tsx
+2. page_…tsx
+3. ui + function

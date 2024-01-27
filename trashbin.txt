@@ -1,3 +1,332 @@
+let_Context.
+ 
+<UI_Button 
+    Name={"Language"}
+    Function={()=>alert('01')}
+/>,
+ 
+InputName={null}
+ 
+import uL
+ 
+_FORMATTED
+ 
+import { uLANGUAGE } from '../utility/uLANGUAGE';
+ 
+export 
+ 
+export 
+ 
+ion()}>{Name}</button>
+ 
+    <button onClick={()=>Funct
+ 
+[<></>,
+ 
+[<></>,<></>]
+ 
+.map(i=>{return<>{i}</>})
+ 
+import UI_Title from '../UI_Title';
+ 
+        //JSX_Options=<UI_SmallGroup
+        //JSX={UI_Options({
+        //    Name:'',
+        //    Options:let_Options,
+        //    SS_Option:SS_Options,
+        //    setSS_Options:setSS_Options,
+        //})}/>
+ 
+import UI_SmallGroup from '../UI_SmallGroup';
+ 
+    <h1 >{Name} ({let_Status})</h1>,
+ 
+    </>
+ 
+        <>
+ 
+    </>
+ 
+        <>
+ 
+
+/**
+// Why VSCode shows this? I think that the output of this function will never be
+// undefined, because both JSX_Name and JSX_Options always have valid input and
+// there is no code that make both variable becomes undefined at all.
+const UI_Options: ({ Name, Options, SS_Option, setSS_Options }: {
+    Name: string;
+    Options: string[];
+    SS_Option: string;
+    setSS_Options: (S: string) => void;
+}) => ({
+    JSX_Name: JSX.Element;
+    JSX_Options?: undefined;
+} | {
+    JSX_Options: JSX.Element;
+    JSX_Name?: undefined;
+})[]
+ */
+ 
+    <>
+ 
+    </>
+ 
+    </>
+ 
+        <>
+ 
+    // by ChatGPT
+ 
+    // Removes non-alphabetic characters
+    // let message = "I'm 23 year old. I love Rock Japanese songs!"
+    // OnlyAlphabet(message) == "Im23yearoldIloveRockJapanesesongs"
+ 
+        //JSX={[<></>,<h1>Hello</h1>]}
+        //<UI_Options
+        //Name={null}
+        //Options={Options}
+        //SS_Option={SS_Options}
+        //setSS_Options={setSS_Options}
+        ///>
+ 
+/>
+ 
+    //...
+ 
+        // ',' expected.
+ 
+ * 
+ 
+    }else{
+        JSX_Name=<></>
+    }
+ 
+    let JSX_Name=<></>
+    if(Name!==''){
+ 
+    
+    let JSX_Name=<></>
+    if(Name!==''){
+        JSX_Name=<h1>{Name}</h1>
+    }else{
+        JSX_Name=<></>
+    }
+ 
+        [{JSX_Name},
+ 
+null
+ 
+|null|void
+ 
+null
+ 
+null
+ 
+/*
+Type 'ReactElement<any, any>' is missing the following properties from type 'JsxElement': kind, openingElement, children, closingElement, and 25 more.
+*/
+ 
+        /**
+(alias) const UI_SmallGroup: ({ JSX }: {
+    JSX: JsxElement[];
+}) => JSX.Element
+import UI_SmallGroup
+         */
+ 
+         * 
+ 
+</>
+ 
+        JSX={UI_Options(
+            Name=null,
+            Options=Options,
+            SS_Options=SS_Options,
+            setSS_Options=setSS_Options
+        )}/>
+ 
+        <>
+ 
+    </>
+ 
+    </>
+ 
+        <>
+ 
+    </>
+ 
+        <>
+ 
+        [],
+        []
+ 
+    <button onClick={()=>Function()}>{Name}</button>
+ 
+Name:string
+Function:(S:void)=>void
+ 
+Name,
+Function
+ 
+SS_ReadValue
+ 
+|number
+ 
+setSS_Default
+ 
+<select id={'UI_FactoryId_'+uID(Name)+let_ID}>
+            {Options.map(i=><option value={uID(i)}>{i}</option>)}
+            </select>
+ 
+<h1>{Name}</h1>
+ 
+<button onClick={()=>Function()}>{Name}</button>
+ 
+|null|void
+ 
+    let let_Titles:string[]=[
+        'Tab1',
+        'Tab2',
+        'Tab3',
+    ]
+ 
+    function f_Create(){}
+    function f_Delete(){}
+ 
+key={index}
+ 
+.title
+ 
+        <div>
+            {
+            //...
+            }
+        </div>
+ 
+    function f_OnlyAlphabet(input: string): string {
+        // by ChatGPT
+        return input.replace(/[^a-zA-Z]/g, ''); 
+        // Removes non-alphabetic characters
+        // let message = "I'm 23 year old. I love Rock Japanese songs!"
+        // OnlyAlphabet(message) == "Im23yearoldIloveRockJapanesesongs"
+    }
+ 
+ default
+ 
+UFunc = Utility Function 
+UJSX = Utility JSX
+ 
+return 
+ 
+    <button onClick={()=>Function()}>{Name}</button>
+ 
+Name,
+Function
+ 
+Name:string
+Function:(S:void)=>void
+ 
+<button onClick={()=>Function()}>{Name}</button>
+ 
+Function
+ 
+Function:(S:void)=>void
+ 
+<></>
+ 
+Normal
+ 
+Normal
+ 
+Normal
+ 
+Id,
+ 
+Id:string
+ 
+</select>
+ 
+id
+ 
+typeof 
+ 
+==='string'
+ 
+Type:string
+ 
+Type,
+ 
+f_
+ 
+f_
+ 
+        <>
+    <h1 >{Name} ({let_Status})</h1>
+    <button onClick={()=>setIsActivate(true)}>Activate</button>
+    <button onClick={()=>setIsActivate(false)}>Deactivate</button>
+    </>
+ 
+    let let_Status='IsActivate is not working.'
+    if(IsActivate){
+        let_Status='Activate';
+    }else{
+        let_Status='Deactivate'
+    }
+ 
+(S:any)=>any
+ 
+    <h1 >{Name} ({let_Status})</h1>
+    <button onClick={()=>setIsActivate(true)}>Activate</button>
+    <button onClick={()=>setIsActivate(false)}>Deactivate</button>
+ 
+    let let_Status='IsActivate is not working.'
+    if(IsActivate){
+        let_Status='Activate';
+    }else{
+        let_Status='Deactivate'
+    }
+ 
+01_Table
+ 
+//****************************************************************************
+// INPUT
+//****************************************************************************
+ 
+{let_State}
+ 
+className='C04id_Zoom' style={{marginTop:'10px'}}
+ 
+    </div>
+ 
+        <div style={{display:'inline-block',marginLeft:'10px',margin:'auto'}}>
+ 
+setSS_IsRGB:(S:boolean)=>void
+ 
+  let let_Color=['white','white']
+//****************************************************************************
+// FUNCTION_00: Zoom setting
+//****************************************************************************
+    function f_Gray(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(false)
+    }
+
+    function f_RGB(){
+      setSS_UseEffect(true)
+      setSS_IsRGB(true)
+    }
+    let let_State='Color'
+    if(SS_IsRGB===true){
+      let_State='Color'
+      let_Color[0]='white'
+      let_Color[1]='lightgreen'
+    }
+    else{
+      let_State='Gray'
+      let_Color[0]='lightgreen'
+      let_Color[1]='white'
+    }
+ 
 +int(xy[3])
  
 RGB
