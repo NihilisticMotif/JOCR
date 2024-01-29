@@ -134,4 +134,4 @@ for(let i=0;i<uLANG.length;i++){
     formattedLanguages.push(uLANG[i][0]+'__'+uLANG[i][1])
 }
 
-export const uLANGUAGE: string[] = formattedLanguages;
+export const LANGUAGE: string[] = formattedLanguages;

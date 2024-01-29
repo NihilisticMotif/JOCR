@@ -8,14 +8,14 @@ const UI_ResettingInput = (
 Name,
 setSS_Value,
 SS_Value,
-SS_DefaultValue
+SS_DefaultValue,
 }
 :{
 Name:string
 setSS_Value:(S:string|number)=>void
 SS_Value:string|number
-SS_DefaultValue:string|number
-}):ReactNode[]=>{
+SS_DefaultValue:string|number|null
+}):ReactNode=>{
 
     const [SS_ReadValue,setSS_ReadValue]=useState<string>(SS_Value.toString())
     let let_ID=uID(Math.random().toString())
@@ -38,17 +38,21 @@ SS_DefaultValue:string|number
     }
 
     function f_Reset(){
+        if(SS_DefaultValue!==null){
         setSS_ReadValue(SS_DefaultValue.toString())
         setSS_Value(SS_DefaultValue)
+        }
     }
-    return ([
-        UI_Title({Name:Name}),
+    return (
+        <div>
+        {UI_Title({Name:Name})}
         <input id={'UI_ResettingInput'+uID(Name)+let_ID}
         value={SS_ReadValue}
         onChange={f_OnChange}
-        ></input>,
-    <button onClick={f_Ok}>Ok</button>,
-    <button onClick={f_Reset}>Reset</button>
-    ])}
+        ></input>
+    <button onClick={f_Ok}>Ok</button>
+    {SS_DefaultValue?<button onClick={f_Reset}>Reset</button>:<></>}
+    </div>)
+}
 
 export default UI_ResettingInput

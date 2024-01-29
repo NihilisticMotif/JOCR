@@ -1,6 +1,5 @@
 import './index.css';
 import React, { FC, ReactNode } from 'react';
-import UI_SmallGroup from '../UI_SmallGroup';
 
 const UI_MultiTabs = (
 {
@@ -17,7 +16,9 @@ Input_Titles:string[]
     </div>
     )
     return (
-    <UI_SmallGroup JSX={JSX_Tabs}/>
+        <div>
+    {JSX_Tabs}
+    </div>
     )}
 
 export default UI_MultiTabs

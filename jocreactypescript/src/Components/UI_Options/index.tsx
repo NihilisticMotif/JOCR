@@ -2,7 +2,6 @@ import './index.css';
 import {uID} from '../utility/uID'
 import React, { FC, ReactNode } from 'react';
 import UI_Title from '../UI_Title';
-import UI_SmallGroup from '../UI_SmallGroup';
 
 const UI_Options = (
 {
@@ -35,7 +34,10 @@ setSS_Options:(S:string)=>void
         JSX_Name=UI_Title({Name:Name})
     }
     return (
-        <UI_SmallGroup JSX={[JSX_Name?JSX_Name:<></>,JSX_Options?JSX_Options:<></>]}/>
+        <div>
+        {JSX_Name}
+        {JSX_Options}
+        </div>
     )}
 
 export default UI_Options

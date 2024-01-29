@@ -1,61 +1,106 @@
 import './index.css';
 import { useState,useEffect,useContext,createContext } from 'react';
 import React, { FC, ReactNode } from 'react';
+import TS_Page from './TS_Page/An_Index';
 
-// This Link is about useContext
-// https://dev.to/madv/usecontext-with-typescript-23ln
+// Contect_File
+import { contect_Header } from './Contect_File/contect_Header';
+import { contect_Image  } from './Contect_File/contect_Image';
+import { contect_Text   } from './Contect_File/contect_Text';
 
-/**
-ToDoNow
-1. Page_...
-2. Func... 
-3. npm start and solve all error 
-4. index.css
- */
+// Contect_Img
+import { contect_Img    } from './Contect_Img/contect_Img';
+// import { contect_JSONImg} from './Contect_Img/contect_JSONImg';
+// import { contect_Kernal  } from './Contect_Img/contect_Kernal';
+
+// Contect_OCR
+import { contect_OCR    } from './Contect_OCR/contect_OCR';
+// import { contect_OCRAI  } from './Contect_OCR/contect_OCRAI';
+
+// Contect_UI
+import { contect_Page   } from './Contect_UI/contect_Page';
+import Page_Header from './Page_Header';
+// import { contect_ImageToolBar   } from './Contect_UI/contect_ImageToolBar';
+
+//************************************************************************************
+// TYPE
+//************************************************************************************
+
+
+export type GlobalUseState = {
+
+}
 
 const let_Context = createContext(null)
+
+
+//************************************************************************************
+// INPUT
+//************************************************************************************
 
 const Component = (
 {
 }
 :{
 })=>{
-    const[Img_Color,setImg_Color]=useState<string>('Color')
-    // Color
-    // Black and White
-    // Reverse
-    const[Img_Rotate,setImg_Rotate]=useState<number>(0)
-    // const[Image_,setImage_]=useState<null>() // for Page_ImageSettingEditor and Page_ImageSettingJSONFile
-    const[ShowImg_Zoom,setShowImg_Zoom]=useState<number>(1)
-    // const[ShowImg_Original,setShowImg_Original]=useState<string>('Edit')
-    // Edited Image
-    // Original Image
-    // Black and White Original Image
-    // Reverse
-    const[Ocr_Language,setOcr_Language]=useState<string[][]>([
-        ['tha','Thai'],
-        ['eng','English'],
-          ])
-    const[Ocr_,setOcr_]=useState<null>()
-    // const[OcrAi_,setOcrAi_]=useState<null>() // for additional Tesseract Settting
-    const[Files_AllImages,setFiles_AllImages]=useState<null>()
-    const[Files_ThisImages,setFiles_ThisImages]=useState<null>()
-    const[Files_AllTxTs,setFiles_AllTxTs]=useState<string[]>([
-        '',
-        ''
-    ])
-    const[Files_ThisTxTs,FilesThisTxTs]=useState<[number,string]>([0,''])
-    const[UI_OpenImageTool,setUI_OpenImageTool]=useState<boolean>(false)
+    //************************************************************************************
+    // USESTATE
+    //************************************************************************************
+    // All Input Image Files
+    const[SSFiles_AllOriginalImagesFiles    ,setSSFiles_AllOriginalImagesFiles  ]=useState<File[]|null>(null)
+    const[SSFiles_AllEditedImagesFiles      ,setSSFiles_AllEditedImagesFiles    ]=useState<File[]|null>(null)
+    const[SSFiles_AllImagesNames            ,setSSFiles_AllImagesNames          ]=useState<string[]|null>(null)
+    // This Input Image File
+    const[SSFiles_ThisOriginalImagesFiles   ,setSSFiles_ThisOriginalImagesFiles ]=useState<File[]|null>(null)
+    const[SSFiles_ThisEditedImagesFiles     ,setSSFiles_ThisEditedImagesFiles   ]=useState<File[]|null>(null)
+    const[SSFiles_ThisImagesNames           ,setSSFiles_ThisImagesNames         ]=useState<string[]|null>(null)
+    // All Output Text Files
+
+    //************************************************************************************
+    // USEEFFECT
+    //************************************************************************************
+
     useEffect(()=>{
         //...
     },[])
 
-    return (
-    <let_Context.Provider
-    value={[Img_Color,setImg_Color]}
-    >
+    //************************************************************************************
+    // VARIABLE
+    //************************************************************************************
 
-    </let_Context.Provider>
+
+    //************************************************************************************
+    // FUNCTION
+    //************************************************************************************
+
+
+    //************************************************************************************
+    // OUTPUT
+    //************************************************************************************
+    return (
+<div>
+    <div>
+        <Page_Header>
+        </Page_Header>
+    </div>
+    <div>
+        <div>
+            <Page_SingleInput>
+            </Page_SingleInput>
+            <Page_SingleOutput>
+            </Page_SingleOutput>
+        </div> 
+        <div></div>   
+        <Page_ImageSettingEditor>
+        </Page_ImageSettingEditor>
+    </div>
+</div>
     )}
 
 export default Component
+
+//************************************************************************************
+// REFERENCE
+//************************************************************************************
+// This Link is about useContext
+// https://dev.to/madv/usecontext-with-typescript-23ln

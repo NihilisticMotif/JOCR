@@ -1,3 +1,799 @@
+</div>
+ 
+    <let_Context.Provider
+    value={[Img_Color,setImg_Color]}
+    >
+
+    </let_Context.Provider>
+ 
+import { contect_Img    } from './Contect_Img/contect_Img';
+ 
+import { contect_Img    } from './Contect_Img/contect_Img';
+import { contect_OCR    } from './Contect_OCR/contect_OCR';
+ 
+,contect_Image,contect_Text 
+ 
+import TS_Page from '../TS_Page/An_Index';
+ 
+SSUI_IsOpenImageToolbar:false,
+setSSUI_IsOpenImageToolbar:()=>{},
+SSUI_IsOpenImageJSONfolder:false,
+setSSUI_IsOpenImageJSONfolder:()=>{},
+ 
+SSUI_IsOpenImageToolbar:boolean 
+setSSUI_IsOpenImageToolbar:(S:boolean)=>void
+SSUI_IsOpenImageJSONfolder:boolean
+setSSUI_IsOpenImageJSONfolder:(S:boolean)=>void
+ 
+SSUI_AllPages:null,
+setSSUI_AllPages:()=>{},
+SSUI_ThisPage:null,
+setSSUI_ThisPage:()=>{},
+ 
+SSUI_AllPages:TS_Page[]|null 
+setSSUI_AllPages:(S:TS_Page[]|null)=>void 
+SSUI_ThisPage:TS_Page|null 
+setSSUI_ThisPage:(S:TS_Page|null )=>void
+ 
+// Do people code this
+ 
+// 2. SSShowOCR = Display Tesseract OCR Original Output
+SSShowOCR_:boolean
+setSSShowOCR_:(S:boolean)=>void
+ 
+// 2. SSShowOCR = Display Tesseract OCR Original Output
+SSShowOCR_:false,
+setSSShowOCR_:()=>{},
+ 
+// 2. SSShowOCR = Display Tesseract OCR Original Output
+SSShowOCR_:false,
+setSSShowOCR_:()=>{},
+// 3. SSOCRAI = Edit Additional Tesseract OCR Command
+SSOCRAI_:null,
+setSSOCRAI_:()=>{},
+// 4. SSJSONOCR = Tesseract OCR Setting JSON files
+SSJSONOCR_:null,
+setSSJSONOCR_:()=>{}
+ 
+// 2. SSShowOCR = Display Tesseract OCR Original Output
+SSShowOCR_:boolean
+setSSShowOCR_:(S:boolean)=>void
+// 3. SSOCRAI = Edit Additional Tesseract OCR Command
+SSOCRAI_:null
+setSSOCRAI_:(S:null)=>void
+// 4. SSJSONOCR = Tesseract OCR Setting JSON files
+SSJSONOCR_:null 
+setSSJSONOCR_:(S:null)=>void
+ 
+import { LANGUAGE } from "./const/LANGUAGE"
+import { PSM } from "./const/PSM"
+ 
+// 1. SSOCR = Tesseract OCR Command
+SSOCR_Operate:boolean
+setSSOCR_Operate:(S:boolean)=>void
+// https://stackoverflow.com/questions/54070785/how-to-convert-array-of-strings-to-typescript-types
+SSOCR_Languages:typeof LANGUAGE[number][]|null
+setSSOCR_Languages:(S:typeof LANGUAGE[number][]|null)=>void
+const_LANGUAGE:string[]
+SSOCR_PSM:typeof PSM[number] 
+setSSOCR_PSM:(S:typeof PSM[number])=>void
+const_PSM:string[]
+ 
+// 1. SSOCR = Tesseract OCR Command
+SSOCR_Operate:false,
+setSSOCR_Operate:()=>{},
+SSOCR_Languages:null,
+setSSOCR_Languages:()=>{},
+const_LANGUAGE:LANGUAGE,
+SSOCR_PSM:'Text (Default Option, PSM-3)',
+setSSOCR_PSM:()=>{},
+const_PSM:PSM,
+ 
+// 4. SSJSONImg = Image Setting JSON files 
+SSJSONImg_ThisFile:null,
+setSSJSONImg_ThisFile:()=>{},
+SSJSONImg_Files:null,
+setSSJSONImg_Files:()=>{}
+ 
+// 1. SSImg = Editing Image
+SSImg_Color: "Color", // set a default value
+setSSImg_Color: () => {},
+SSImg_Rotate:0,
+setSSImg_Rotate:()=>{},
+// 2. SSShowImg = Display Image
+SSShowImg_Zoom:1,
+setSSShowImg_Zoom:()=>{},
+SSShowImg_OriginalImage:"Original",
+setSSShowImg_OriginalImage:()=>{},
+SSShowImg_Dimension:[0,0],
+setSSShowImg_Dimension:()=>{},
+ 
+// 4. SSJSONImg = Image Setting JSON files 
+SSJSONImg_ThisFile:TS_ImageJSON|null
+setSSJSONImg_ThisFile:(S:TS_ImageJSON|null)=>void 
+SSJSONImg_Files:TS_ImageJSON[]|null 
+setSSJSONImg_Files:(S:TS_ImageJSON[]|null)=>void
+ 
+// 1. ssImg = Editing Image
+SSImg_Color: "Color"|"Gray"|"ReverseGray"
+setSSImg_Color:(S:"Color"|"Gray"|"ReverseGray") => void
+SSImg_Rotate:number
+setSSImg_Rotate:(S:number)=>void
+// 2. SSShowImg = Display Image
+SSShowImg_Zoom:number
+setSSShowImg_Zoom:(S:number)=>void
+SSShowImg_OriginalImage:"Original"|"Edited"|"Original_Gray"|"Original_Reverse_Gray"
+setSSShowImg_OriginalImage:(S:"Original"|"Edited"|"Original_Gray"|"Original_Reverse_Gray")=>void
+SSShowImg_Dimension:[number,number]
+setSSShowImg_Dimension:(S:[number,number])=>void
+ 
+import TS_Box from "../TS_Box/An_Index"
+import TS_Kernal from "../TS_Kernal/An_Index"
+import TS_Threshold from "../TS_Threshold/An_Index"
+ 
+import TS_Box from "../TS_Box/An_Index"
+import TS_Kernal from "../TS_Kernal/An_Index"
+import TS_Threshold from "../TS_Threshold/An_Index"
+import TS_ImageJSON from "../TS_ImageJSON/An_Index"
+ 
+// 3. SSImage = Edit Additional Image (Kernal, Convolution and Threshold)
+SSImage_ThisKernal:number|null
+setSSImage_ThisKernal:(S:number|null)=>void
+SSImage_Kernals:TS_Kernal[]|null
+setSSImage_Kernals:(S:TS_Kernal[]|null)=>void
+SSImage_ThisThreshold:number|null
+setSSImage_ThisThreshold:(S:number|null)=>void
+SSImage_Thresholds:TS_Threshold[]|null
+setSSImage_Thresholds:(S:TS_Threshold[]|null)=>void
+SSImage_ThisBox:number|null
+setSSImage_ThisBox:(S:number|null)=>void
+SSImage_Boxes:TS_Box[]|null
+setSSImage_Boxes:(S:TS_Box[]|null)=>void
+// 4. SSJSONImg = Image Setting JSON files 
+SSJSONImg_ThisFile:TS_ImageJSON|null
+setSSJSONImg_ThisFile:(S:TS_ImageJSON|null)=>void 
+SSJSONImg_Files:TS_ImageJSON[]|null 
+setSSJSONImg_Files:(S:TS_ImageJSON[]|null)=>void
+ 
+// 3. SSImage = Edit Additional Image (Kernal, Convolution and Threshold)
+SSImage_ThisKernal:null,
+setSSImage_ThisKernal:()=>{},
+SSImage_Kernals:null, 
+setSSImage_Kernals:()=>{},
+SSImage_ThisThreshold:null,
+setSSImage_ThisThreshold:()=>{},
+SSImage_Thresholds:null, 
+setSSImage_Thresholds:()=>{},
+SSImage_ThisBox:null,
+setSSImage_ThisBox:()=>{},
+SSImage_Boxes:null,
+setSSImage_Boxes:()=>{},
+// 4. SSJSONImg = Image Setting JSON files 
+SSJSONImg_ThisFile:null,
+setSSJSONImg_ThisFile:()=>{},
+SSJSONImg_Files:null,
+setSSJSONImg_Files:()=>{}
+ 
+// 1. ssImg = Editing Image
+SSImg_Color: "Color"|"Gray"|"ReverseGray"
+setSSImg_Color:(S:"Color"|"Gray"|"ReverseGray") => void
+SSImg_Rotate:number
+setSSImg_Rotate:(S:number)=>void
+// 2. SSShowImg = Display Image
+SSShowImg_Zoom:number
+setSSShowImg_Zoom:(S:number)=>void
+SSShowImg_OriginalImage:"Original"|"Edited"|"Original_Gray"|"Original_Reverse_Gray"
+setSSShowImg_OriginalImage:(S:"Original"|"Edited"|"Original_Gray"|"Original_Reverse_Gray")=>void
+SSShowImg_Dimension:[number,number]
+setSSShowImg_Dimension:(S:[number,number])=>void
+// 3. SSImage = Edit Additional Image (Kernal, Convolution and Threshold)
+SSImage_ThisKernal:number|null
+setSSImage_ThisKernal:(S:number|null)=>void
+SSImage_Kernals:TS_Kernal[]|null
+setSSImage_Kernals:(S:TS_Kernal[]|null)=>void
+SSImage_ThisThreshold:number|null
+setSSImage_ThisThreshold:(S:number|null)=>void
+SSImage_Thresholds:TS_Threshold[]|null
+setSSImage_Thresholds:(S:TS_Threshold[]|null)=>void
+SSImage_ThisBox:number|null
+setSSImage_ThisBox:(S:number|null)=>void
+SSImage_Boxes:TS_Box[]|null
+setSSImage_Boxes:(S:TS_Box[]|null)=>void
+ 
+// 1. SSImg = Editing Image
+SSImg_Color: "Color", // set a default value
+setSSImg_Color: () => {},
+SSImg_Rotate:0,
+setSSImg_Rotate:()=>{},
+// 2. SSShowImg = Display Image
+SSShowImg_Zoom:1,
+setSSShowImg_Zoom:()=>{},
+SSShowImg_OriginalImage:"Original",
+setSSShowImg_OriginalImage:()=>{},
+SSShowImg_Dimension:[0,0],
+setSSShowImg_Dimension:()=>{},
+// 3. SSImage = Edit Additional Image (Kernal, Convolution and Threshold)
+SSImage_ThisKernal:null,
+setSSImage_ThisKernal:()=>{},
+SSImage_Kernals:null, 
+setSSImage_Kernals:()=>{},
+SSImage_ThisThreshold:null,
+setSSImage_ThisThreshold:()=>{},
+SSImage_Thresholds:null, 
+setSSImage_Thresholds:()=>{},
+SSImage_ThisBox:null,
+setSSImage_ThisBox:()=>{},
+SSImage_Boxes:null,
+setSSImage_Boxes:()=>{},
+ 
+
+// This Input Image File
+SSFiles_ThisOriginalImagesFiles:File|null,
+setSSFiles_ThisOriginalImagesFiles:(S:File|null)=>void,
+SSFiles_ThisEditedImagesFiles:File|null,
+setSSFiles_ThisEditedImagesFiles:(S:File|null)=>void,
+SSFiles_ThisImagesNames:string|null
+setSSFiles_ThisImagesNames:(S:string|null)=>void
+ 
+// This Text File
+SSFiles_ThisTextFiles:string|null,
+setSSFiles_ThisTextFiles:(S:string|null)=>void,
+SSFiles_ThisTextNames:string|null,
+setSSFiles_ThisTextNames:(S:string|null)=>void,
+ 
+// This Input Image File
+SSFiles_ThisOriginalImagesFiles: null,
+setSSFiles_ThisOriginalImagesFiles: () => {},
+SSFiles_ThisEditedImagesFiles: null,
+setSSFiles_ThisEditedImagesFiles: () => {},
+SSFiles_ThisImagesNames: null,
+setSSFiles_ThisImagesNames: () => {},
+ 
+// This Text File
+SSFiles_ThisTextFiles: null,
+setSSFiles_ThisTextFiles: () => {},
+SSFiles_ThisTextNames: null,
+setSSFiles_ThisTextNames: () => {}
+ 
+// All Output Text Files
+SSFiles_AllTextFiles: null,
+setSSFiles_AllTextFiles: () => {},
+SSFiles_AllTextNames: null,
+setSSFiles_AllTextNames: () => {},
+// This Text File
+SSFiles_ThisTextFiles: null,
+setSSFiles_ThisTextFiles: () => {},
+SSFiles_ThisTextNames: null,
+setSSFiles_ThisTextNames: () => {}
+ 
+// All Input Image Files
+SSFiles_AllOriginalImagesFiles:File[]|null,
+setSSFiles_AllOriginalImagesFiles:(S:File[]|null)=>void,
+SSFiles_AllEditedImagesFiles:File[]|null,
+setSSFiles_AllEditedImagesFiles:(S:File[]|null)=>void,
+SSFiles_AllImagesNames:string[]|null
+setSSFiles_AllImagesNames:(S:string[]|null)=>void
+ 
+
+// All Output Text Files
+SSFiles_AllTextFiles:string[]|null,
+setSSFiles_AllTextFiles:(S:string[]|null)=>void,
+SSFiles_AllTextNames:string[]|null,
+setSSFiles_AllTextNames:(S:string[]|null)=>void,
+// This Text File
+SSFiles_ThisTextFiles:string|null,
+setSSFiles_ThisTextFiles:(S:string|null)=>void,
+SSFiles_ThisTextNames:string|null,
+setSSFiles_ThisTextNames:(S:string|null)=>void,
+ 
+// All Input Image Files
+SSFiles_AllOriginalImagesFiles: null,
+setSSFiles_AllOriginalImagesFiles: () => {},
+SSFiles_AllEditedImagesFiles: null,
+setSSFiles_AllEditedImagesFiles: () => {},
+SSFiles_AllImagesNames: null,
+setSSFiles_AllImagesNames: () => {},
+ 
+// All Output Text Files
+SSFiles_AllTextFiles: null,
+setSSFiles_AllTextFiles: () => {},
+SSFiles_AllTextNames: null,
+setSSFiles_AllTextNames: () => {},
+// This Text File
+SSFiles_ThisTextFiles: null,
+setSSFiles_ThisTextFiles: () => {},
+SSFiles_ThisTextNames: null,
+setSSFiles_ThisTextNames: () => {}
+ 
+// All Input Image Files
+SSFiles_AllOriginalImagesFiles:File[]|null,
+setSSFiles_AllOriginalImagesFiles:(S:File[]|null)=>void,
+SSFiles_AllEditedImagesFiles:File[]|null,
+setSSFiles_AllEditedImagesFiles:(S:File[]|null)=>void,
+SSFiles_AllImagesNames:string[]|null
+setSSFiles_AllImagesNames:(S:string[]|null)=>void
+
+// This Input Image File
+SSFiles_ThisOriginalImagesFiles:File|null,
+setSSFiles_ThisOriginalImagesFiles:(S:File|null)=>void,
+SSFiles_ThisEditedImagesFiles:File|null,
+setSSFiles_ThisEditedImagesFiles:(S:File|null)=>void,
+SSFiles_ThisImagesNames:string|null
+setSSFiles_ThisImagesNames:(S:string|null)=>void
+
+// All Output Text Files
+SSFiles_AllTextFiles:string[]|null,
+setSSFiles_AllTextFiles:(S:string[]|null)=>void,
+SSFiles_AllTextNames:string[]|null,
+setSSFiles_AllTextNames:(S:string[]|null)=>void,
+ 
+// All Input Image Files
+SSFiles_AllOriginalImagesFiles: null,
+setSSFiles_AllOriginalImagesFiles: () => {},
+SSFiles_AllEditedImagesFiles: null,
+setSSFiles_AllEditedImagesFiles: () => {},
+SSFiles_AllImagesNames: null,
+setSSFiles_AllImagesNames: () => {},
+// This Input Image File
+SSFiles_ThisOriginalImagesFiles: null,
+setSSFiles_ThisOriginalImagesFiles: () => {},
+SSFiles_ThisEditedImagesFiles: null,
+setSSFiles_ThisEditedImagesFiles: () => {},
+SSFiles_ThisImagesNames: null,
+setSSFiles_ThisImagesNames: () => {},
+// All Output Text Files
+SSFiles_AllTextFiles: null,
+setSSFiles_AllTextFiles: () => {},
+SSFiles_AllTextNames: null,
+setSSFiles_AllTextNames: () => {},
+ 
+
+// or This
+
+// file1.tsx
+export type TS_SS_f1 = {
+SSUI_AllPages:TS_Page[]|null 
+setSSUI_AllPages:(S:TS_Page[]|null)=>void 
+}
+export const SS_f1 = createContext<TS_SS_f1>({
+SSUI_AllPages:null,
+setSSUI_AllPages:()=>{},
+})
+export const useGlobalContext = () => useContext(SS_f1)
+
+// file2.tsx
+
+export type TS_f2 = {
+SSUI_AllPages:TS_Page[]|null 
+setSSUI_AllPages:(S:TS_Page[]|null)=>void 
+}
+export const SS_f2 = createContext<TS_f2>({
+SSUI_AllPages:null,
+setSSUI_AllPages:()=>{},
+})
+export const useGlobalContext = () => useContext(SS_f2)
+
+//...
+// Which options is better? Why?
+ 
+SSUI_ThisPage:null,
+setSSUI_ThisPage:()=>{},
+SSUI_IsOpenImageToolbar:false,
+setSSUI_IsOpenImageToolbar:()=>{},
+SSUI_IsOpenImageJSONfolder:false,
+setSSUI_IsOpenImageJSONfolder:()=>{},
+ 
+import { SS_File } from '../SS_File';
+import { SS_UI } from '../SS_UI';
+import { SS_Img } from '../SS_Img';
+import { SS_OCR } from '../SS_OCR';
+ 
+/*
+Function
+// 1. Import Image Folder
+// 2. Export TxT Folder
+// 3. Open Image Main Setting
+// 4. Operate OCR
+// 5. Language
+// 6. Color/(Default Gray)
+// 7. Rotation (Default = 0)
+*/
+ 
+function f_alert()
+ 
+{
+// 1. File: Import Image Folders
+// 2. File: Export Text Folder
+// 3. File: Name Export ImageFolder
+// 4. File: Export Edited Image Folder
+// 5. File: Name Export Image Folder
+// 6. Img_: Rotation
+// 7. Img_: Color
+// 8. OCR_: Language
+// 9. OCR_: PSM
+//10. OCR_: Operate OCR
+//11. Img_: JSON Image Setting (Last)
+//12. Img_: JSON OCR Setting (Last)
+ 
+IsReset
+ 
+IsReset:boolean|null
+ 
+
+<UI_Button 
+    Name={"Operate OCR"}
+    Function={()=>alert('01')}
+/>,
+<UI_Factory
+    Name={'Language'}
+    Create={()=>alert('01')}
+    Options={LANGUAGE}
+    InputName={null}/>
+ 
+
+<UI_Button 
+    Name={"Operate OCR"}
+    Function={()=>alert('01')}
+/>,
+<UI_Factory
+    Name={'Language'}
+    Create={()=>alert('01')}
+    Options={LANGUAGE}
+    InputName={null}/>
+]}/>,
+{//<UI_Options
+//    Name={'Set Color'}
+//    Options={['Color','Gray','ReverseGray']}
+///>
+}
+ 
+//2.3 File: Name Export Folder
+ 
+ // 
+ 
+    //-----------------------------------------------------------------------------------------------
+    // 2. TESSERACT OCR
+    //-----------------------------------------------------------------------------------------------
+ 
+   
+    // 2.1 ssOcr = Tesseract OCR Command
+    const[ssOcr_OperateOCR,setssOcr_OperateOCR]=useState<boolean>(false)
+    const[ssOcr_Language,setssOcr_Language]=useState<string[][]>([
+        ['tha','Thai'],
+        ['eng','English'],
+          ])
+
+    // 2.2 ssShowOcr = Display Tesseract OCR Original Output
+    const[ssShowOcr_,setssShowOcr_]=useState<null>(null)
+
+    // 2.3 ssOcrAI = Edit Additional Tesseract OCR Command
+    const[OcrAi_,setOcrAi_]=useState<null>() // for additional Tesseract Settting
+    
+    // 2.4 ssJSONOcr = Tesseract OCR Setting JSON files
+    const[ssJSONOcr_,setssJSONOcr_]=useState<null>(null)
+    
+    //-----------------------------------------------------------------------------------------------
+    // 3. Utility
+    //-----------------------------------------------------------------------------------------------
+    
+    // 3.1 ssFiles = Input/Output File/Folders 
+    // Input Files
+    const[SSFiles_AllOriginalImagesFiles,setssFiles_AllOriginalImagesFiles]=useState<File[]|null>()
+    const[SSFiles_AllImagesFiles,setssFiles_AllImagesFiles]=useState<File[]|null>()
+    const[SSFiles_AllImagesNames,setssFiles_AllImagesNames]=useState<string[]|null>()
+    const[SSFiles_ThisOriginalImageFile,setssFiles_ThisOriginalImageFile]=useState<number|null>(null)
+    const[SSFiles_ThisImageFile,setssFiles_ThisImageFile]=useState<number|null>(null)
+    // Output Files
+    const[ssFiles_AllTextFiles,setssFiles_AllTextFiles]=useState<string[]|null>(null)
+    const[ssFiles_AllTextNames,setssFiles_AllTextNames]=useState<string[]|null>(null)
+    const[ssFiles_ThisText,setssFiles_ThisText]=useState<number|null>(null)
+    
+    // 3.2 ssUI = UI Setting
+    const[SSUI_AllPages,setSSUI_AllPages]=useState<TS_Page[]|null>(null)
+    const[SSUI_ThisPage,setSSUI_ThisPage]=useState<TS_Page|null>(null)
+    const[SSUI_OpenImageToolbar,setSSUI_OpenImageToolbar]=useState<boolean>(false)
+    const[SSUI_OpenImageJSONfolder,setSSUI_OpenImageJSONfolder]=useState<boolean>(false)
+    
+ 
+import { uLANGUAGE } from '../SS_OCR/const/LANGUAGE';
+ 
+
+// convert this
+SSFiles_AllOriginalImagesFiles:File[]|null,
+setSSFiles_AllOriginalImagesFiles:(S:File[]|null)=>void,
+SSFiles_AllEditedImagesFiles:File[]|null,
+setSSFiles_AllEditedImagesFiles:(S:File[]|null)=>void,
+SSFiles_AllImagesNames:string[]|null
+setSSFiles_AllImagesNames:(S:string[]|null)=>void
+SSFiles_ThisOriginalImagesFiles:File|null,
+setSSFiles_ThisOriginalImagesFiles:(S:File|null)=>void,
+SSFiles_ThisEditedImagesFiles:File|null,
+setSSFiles_ThisEditedImagesFiles:(S:File|null)=>void,
+SSFiles_ThisImagesNames:string|null
+setSSFiles_ThisImagesNames:(S:string|null)=>void
+SSFiles_AllTextFiles:string[]|null,
+setSSFiles_AllTextFiles:(S:string[]|null)=>void,
+SSFiles_AllTextNames:string[]|null,
+setSSFiles_AllTextNames:(S:string[]|null)=>void,
+SSFiles_ThisTextFiles:string|null,
+setSSFiles_ThisTextFiles:(S:string|null)=>void,
+SSFiles_ThisTextNames:string|null,
+setSSFiles_ThisTextNames:(S:string|null)=>void,
+
+// to this
+SSFiles_AllOriginalImagesFiles:null,
+setSSFiles_AllOriginalImagesFiles:()=>{},
+SSFiles_AllEditedImagesFiles:null,
+setSSFiles_AllEditedImagesFiles:()=>{}
+//...
+SSFiles_ThisTextNames:null,
+setSSFiles_ThisTextNames:()=>{},
+ 
+null
+ 
+
+// All Input Image Files
+ 
+
+// This Input Image File
+ 
+
+// All Output Text Files
+ 
+
+// This Text File
+ 
+
+// All Output Text Files
+ 
+SSFiles_:null,
+setSSFiles_:()=>{},
+SSFiles_:null,
+setSSFiles_:()=>{},
+SSFiles_:null,
+setSSFiles_:()=>{},
+// Output File
+SSFiles_:null,
+setSSFiles_:()=>{},
+SSFiles_:null,
+setSSFiles_:()=>{},
+SSFiles_:null,
+setSSFiles_:()=>{},
+SSFiles_:null,
+setSSFiles_:()=>{},
+ 
+|null
+ 
+|null
+ 
+// convert this text 
+`
+<option value={3}>Text (PSM-3)</option>
+<option value={4}>A Table (PSM-4)</option>
+<option value={5}>A Rotated Table (PSM-5)</option>
+<option value={6}>A Simple Page with Text (PSM-6)</option>
+<option value={7}>A Single Text Line (PSM-7)</option>
+<option value={8}>A Single Word (PSM-8)</option>
+<option value={10}>A Single Charecter (PSM-10)</option>
+<option value={11}>Sparse Text (PSM-11)</option>
+<option value={13}>Last Options (PSM-13)</option>`
+ 
+'Last_Options_(PSM-13)'
+ 
+
+
+// code uNumber in Typescript
+ 
+let strr='Text_(PSM-3)'
+let str2 = 'Sparse Text (PSM-11)'
+uNumber(strr) == 3
+uNumber(str2) == 11
+ 
+Original
+ 
+Original
+ 
+Origina
+ 
+
+
+
+
+
+
+ 
+// Input Files
+// Output File
+ 
+// Input Files
+// Output File
+ 
+null,
+:()=>{},
+ 
+copy: 'Hello World', // set a default value
+setCopy: () => {},
+ 
+(S:null)=>void
+ 
+(S:null)=>void
+ 
+//...
+ 
+
+
+const arr = uLANGUAGE as const
+ 
+.map((i)=>{return i})
+ 
+copy: 'Hello World', // set a default value
+setCopy: () => {},
+ 
+copy: string
+setCopy:(c: string) => void
+ 
+lobalConten
+ 
+    //-----------------------------------------------------------------------------------------------
+    // 1. IMAGE
+    //-----------------------------------------------------------------------------------------------
+
+    // 1.1 ssImg = Editing Image
+    const [ssImg_Color,setssImg_Color]=useState<string>('Color')
+    // Color
+    // Black and White
+    // Reverse
+    const[ssImg_Rotate,setssImg_Rotate]=useState<number>(0)
+    // 0 - 360
+
+    // 1.2 ssShowImg = Display Image
+    const[ssShowImg_Zoom,setssShowImg_Zoom]=useState<number>(1)
+    const[ShowImg_Original,setShowImg_Original]=useState<null>(null)
+    // Edited Image
+    // Original Image
+    // Black and White Original Image
+    // Reverse
+
+    // 1.3 ssImage = Edit Additional Image (Kernal, Convolution and Threshold)
+    const[ssImage_Kernal,setssImage_Kernal]=useState<null>(null)
+    const[ssImage_Threshold,setssImage_Threshold]=useState<null>(null)
+    const[ssImage_Box,setssImage_Box]=useState<null>(null)
+
+    // 1.4 ssJSONImg = Image Setting JSON files 
+    const[ssJSONImg_SelectFile,setssJSONImg_SelectFile]=useState<null>(null)
+    const[ssJSONImg_Files,setssJSONImg_Files]=useState<null>(null)
+
+ 
+        <>
+ 
+    </>
+ 
+null
+ 
+_Image
+ 
+_Image
+ 
+// 
+ 
+// Color
+// Black and White
+// Reverse
+ 
+G
+ 
+  // Color
+  // Black and White
+  // Reverse
+ 
+    2. Tesseract OCR
+    2.1 ssOcr = Tesseract OCR Command
+    2.2 ssShowOcr = Display Tesseract OCR Original Output
+    2.3 ssOcrAI = Edit Additional Tesseract OCR Command
+    2.4 ssJSONOcr = Tesseract OCR Setting JSON files
+    3. Utility
+    3.1 ssFiles = Input/Output File/Folders 
+    3.2 ssUI = UI Setting
+    4. Spell Checker NLP AI
+ 
+// This Link is about useContext
+// https://dev.to/madv/usecontext-with-typescript-23ln
+ 
+    /*
+    useState Family Name
+    1. image
+    1.1 ssImg = Editing Image
+    1.2 ssShowImg = Display Image
+    1.3 ssImage = Edit Additional Image (Kernal, Convolution and Threshold)
+    1.4 ssJSONImg = Image Setting JSON files 
+    2. Tesseract OCR
+    2.1 ssOcr = Tesseract OCR Command
+    2.2 ssShowOcr = Display Tesseract OCR Original Output
+    2.3 ssOcrAI = Edit Additional Tesseract OCR Command
+    2.4 ssJSONOcr = Tesseract OCR Setting JSON files
+    3. Utility
+    3.1 ssFiles = Input/Output File/Folders 
+    3.2 ssUI = UI Setting
+    4. Spell Checker NLP AI
+    */
+ 
+const[UI_OpenImageTool,setUI_OpenImageTool]=useState<boolean>(false)
+ 
+    const[Files_ThisTxTs,FilesThisTxTs]=useState<[number,string]>([0,''])
+ 
+        '',
+        ''
+    ]
+ 
+    const[ssOcr_TextOutput,setssOcr_TextOutput]=useState<string[]>([''])
+ 
+    const [ssImg_ImageName     , setssImg_ImageName] = useState<string[] | null>(null);
+    const [ssImg_ImageFile,setssImg_ImageFile]=useState<File[]|null>(null)  
+ 
+
+    // ssJSONImg = Image Setting JSON files 
+ 
+
+    // ssImage = Edit Additional Image (Kernal, Convolution and Threshold)
+ 
+
+    // ssShowImg = Display Image
+ 
+ssShowOcr = Display Tesseract OCR Original Output
+ 
+ssShowImg = Display Image
+ 
+    const[]
+ 
+    // const[sImage_,setsImage_]=useState<null>() // for Page_ImageSettingEditor and Page_ImageSettingJSONFile
+ 
+/**
+ToDoNow
+1. Page_...
+2. Func... 
+3. npm start and solve all error 
+4. index.css
+ */
+ 
+Edit 
+ 
+Edit 
+ 
+    ]
+ 
+</div>
+ 
+    <UI_SmallGroup JSX={[
+ 
+import UI_SmallGroup from '../UI_SmallGroup';
+ 
+    <UI_SmallGroup JSX={[UI_Title({Name:Name}),
+    JSX_Options,
+    JSX_Input,
+    <button onClick={()=>Create}>Add</button>]}/>
+ 
+import UI_SmallGroup from '../UI_SmallGroup';
+ 
+</div>
+ 
+        <></>
+ 
+</div>
+ 
+        <>
+ 
+        </>
+ 
+<JSX=
+ 
+UI_SmallGroup 
+ 
+import UI_SmallGroup from '../UI_SmallGroup';
+ 
+        <UI_SmallGroup JSX={[JSX_Name?JSX_Name:<></>,JSX_Options?JSX_Options:<></>]}/>
+ 
+import UI_SmallGroup from '../UI_SmallGroup';
+ 
 let_Context.
  
 <UI_Button 

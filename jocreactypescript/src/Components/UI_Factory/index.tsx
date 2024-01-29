@@ -4,7 +4,6 @@ import { useState } from 'react';
 import UI_Options from '../UI_Options';
 import UI_Title from '../UI_Title';
 import React, { FC, ReactNode } from 'react';
-import UI_SmallGroup from '../UI_SmallGroup';
 
 const UI_Factory = (
 {
@@ -44,10 +43,13 @@ InputName:string|null|void
         JSX_Input=<></>
     }
     return (
-    <UI_SmallGroup JSX={[UI_Title({Name:Name}),
-    JSX_Options,
-    JSX_Input,
-    <button onClick={()=>Create}>Add</button>]}/>
+
+    <div>
+        {UI_Title({Name:Name})}
+        {JSX_Options}
+        {JSX_Input}
+        <button onClick={()=>Create}>Add</button>
+    </div>
     )}
 
 
