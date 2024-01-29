@@ -1,37 +1,18 @@
-import './index.css';
 import { useState,useEffect,useContext,createContext } from 'react';
 import React, { FC, ReactNode } from 'react';
+
 import TS_Page from './TS_Page/An_Index';
 
-// Contect_File
-import { contect_Header } from './Contect_File/contect_Header';
-import { contect_Image  } from './Contect_File/contect_Image';
-import { contect_Text   } from './Contect_File/contect_Text';
-
-// Contect_Img
-import { contect_Img    } from './Contect_Img/contect_Img';
-// import { contect_JSONImg} from './Contect_Img/contect_JSONImg';
-// import { contect_Kernal  } from './Contect_Img/contect_Kernal';
-
-// Contect_OCR
-import { contect_OCR    } from './Contect_OCR/contect_OCR';
-// import { contect_OCRAI  } from './Contect_OCR/contect_OCRAI';
-
-// Contect_UI
-import { contect_Page   } from './Contect_UI/contect_Page';
+import { context_Header } from './Page_Header/context';
 import Page_Header from './Page_Header';
-// import { contect_ImageToolBar   } from './Contect_UI/contect_ImageToolBar';
 
-//************************************************************************************
-// TYPE
-//************************************************************************************
+import { context_Body } from './Page_Body/context';
+import Page_Body from './Page_Body';
 
+import './index.css';
+import { uLANGUAGE } from "./utility/uLANGUAGE"
+import { uPSM } from "./utility/uPSM"
 
-export type GlobalUseState = {
-
-}
-
-const let_Context = createContext(null)
 
 
 //************************************************************************************
@@ -43,57 +24,166 @@ const Component = (
 }
 :{
 })=>{
-    //************************************************************************************
-    // USESTATE
-    //************************************************************************************
-    // All Input Image Files
-    const[SSFiles_AllOriginalImagesFiles    ,setSSFiles_AllOriginalImagesFiles  ]=useState<File[]|null>(null)
-    const[SSFiles_AllEditedImagesFiles      ,setSSFiles_AllEditedImagesFiles    ]=useState<File[]|null>(null)
-    const[SSFiles_AllImagesNames            ,setSSFiles_AllImagesNames          ]=useState<string[]|null>(null)
-    // This Input Image File
-    const[SSFiles_ThisOriginalImagesFiles   ,setSSFiles_ThisOriginalImagesFiles ]=useState<File[]|null>(null)
-    const[SSFiles_ThisEditedImagesFiles     ,setSSFiles_ThisEditedImagesFiles   ]=useState<File[]|null>(null)
-    const[SSFiles_ThisImagesNames           ,setSSFiles_ThisImagesNames         ]=useState<string[]|null>(null)
-    // All Output Text Files
+//************************************************************************************
+// USESTATE
+//************************************************************************************
+//-----------------------------------------------------------------------
+// Test Set State
+//-----------------------------------------------------------------------
+// const[SS_Text,setSS_Text]=useState<string>('')
+//-----------------------------------------------------------------------
+// File
+//-----------------------------------------------------------------------
+/**
+// Create shorter variable name like ChatGPT did.
+const [allFiles, setAllFiles] = useState({
+  originalImages: null,
+  editedImages: null,
+  allImagesNames: null,
+  thisOriginalImages: null,
+  thisEditedImages: null,
+  thisImagesNames: null,
+  allTextFiles: null,
+  allTextNames: null,
+  thisTextFile: null,
+  thisTextName: null,
+});
+ */
+// All Input Image Files
+const[SSFiles_AllOriginalImagesFiles    ,setSSFiles_AllOriginalImagesFiles  ]=useState<File[]|null>(null)
+const[SSFiles_AllEditedImagesFiles      ,setSSFiles_AllEditedImagesFiles    ]=useState<File[]|null>(null)
+const[SSFiles_AllImagesNames            ,setSSFiles_AllImagesNames          ]=useState<string[]|null>(null)
+// This Input Image File
+const[SSFiles_ThisOriginalImagesFiles   ,setSSFiles_ThisOriginalImagesFiles ]=useState<File[]|null>(null)
+const[SSFiles_ThisEditedImagesFiles     ,setSSFiles_ThisEditedImagesFiles   ]=useState<File[]|null>(null)
+const[SSFiles_ThisImagesNames           ,setSSFiles_ThisImagesNames         ]=useState<string[]|null>(null)
+// All Output Image Files
+const[SSFiles_AllTextFiles              ,setSSFiles_AllTextFiles]=useState<string[]|null>(null)
+const[SSFiles_AllTextNames              ,setSSFiles_AllTextNames]=useState<string[]|null>(null)
+// This Output Image File
+const[SSFiles_ThisTextFiles             ,setSSFiles_ThisTextFiles]=useState<string|null>(null)
+const[SSFiles_ThisTextName              ,setSSFiles_ThisTextName]=useState<string|null>(null)
+//-----------------------------------------------------------------------
+// Img
+//-----------------------------------------------------------------------
+// 1. SSImg = Editing Image
+const[SSImg_Operate     ,setSSImg_Operate]=useState<'This'|'All'|'None'>('None')
+const[SSImg_Color       ,setSSImg_Color]=useState<"Color"|"Gray"|"ReverseGray">("Gray")
+const[SSImg_Rotate      ,setSSImg_Rotate]=useState<number>(0)
+// 2. SSShowImg = Display Image
+const[SSShowImg_Zoom,setSSShowImg_Zoom]=useState<number>(1)
+const[SSShowImg_OriginalImage,setSSShowImg_OriginalImage]=useState<"Original"|"Edited"|"Original_Gray"|"Original_Reverse">("Edited")
+const[SSShowImg_Dimension,setSSShowImg_Dimension]=useState<[number,number]>([0,0])
+//-----------------------------------------------------------------------
+// OCR
+//-----------------------------------------------------------------------
+const[SSOCR_Operate     ,setSSOCR_Operate]=useState<'This'|'All'|'None'>('None')
+const[SSOCR_Languages   ,setSSOCR_Languages]=useState<typeof uLANGUAGE[number][]|null>(null)
+const[SSOCR_PSM,setSSOCR_PSM]=useState<typeof uPSM[number]>('Text (Default Option, PSM-3)')
+//-----------------------------------------------------------------------
+// UI
+//-----------------------------------------------------------------------
+const[SSUI_AllPages,setSSUI_AllPages]=useState<TS_Page[]|null>(null)
+const[SSUI_ThisPage,setSSUI_ThisPage]=useState<TS_Page|null>(null)
 
-    //************************************************************************************
-    // USEEFFECT
-    //************************************************************************************
-
-    useEffect(()=>{
-        //...
-    },[])
-
-    //************************************************************************************
-    // VARIABLE
-    //************************************************************************************
-
-
-    //************************************************************************************
-    // FUNCTION
-    //************************************************************************************
-
-
-    //************************************************************************************
-    // OUTPUT
-    //************************************************************************************
+//************************************************************************************
+// USEEFFECT
+//************************************************************************************
+useEffect(()=>{
+    //...
+},[])
+//************************************************************************************
+// VARIABLE
+//************************************************************************************
+const const_LANGUAGE=uLANGUAGE
+const const_PSM = uPSM
+//************************************************************************************
+// FUNCTION
+//************************************************************************************
+//************************************************************************************
+// OUTPUT
+//************************************************************************************
     return (
 <div>
-    <div>
-        <Page_Header>
-        </Page_Header>
-    </div>
-    <div>
-        <div>
-            <Page_SingleInput>
-            </Page_SingleInput>
-            <Page_SingleOutput>
-            </Page_SingleOutput>
-        </div> 
-        <div></div>   
-        <Page_ImageSettingEditor>
-        </Page_ImageSettingEditor>
-    </div>
+    <context_Header.Provider 
+    value={{
+        SSFiles_AllOriginalImagesFiles,
+        setSSFiles_AllOriginalImagesFiles,
+        SSFiles_AllEditedImagesFiles,
+        setSSFiles_AllEditedImagesFiles,
+        SSFiles_AllImagesNames,
+        setSSFiles_AllImagesNames,
+        SSFiles_AllTextFiles,
+        setSSFiles_AllTextFiles,
+        SSFiles_AllTextNames,
+        setSSFiles_AllTextNames,
+        SSImg_Operate,
+        setSSImg_Operate,
+        SSImg_Color,
+        setSSImg_Color,
+        SSImg_Rotate,
+        setSSImg_Rotate,
+        SSShowImg_Dimension,
+        setSSShowImg_Dimension,
+        SSShowImg_OriginalImage,
+        setSSShowImg_OriginalImage,
+        SSShowImg_Zoom,
+        setSSShowImg_Zoom,
+        SSOCR_Operate,
+        setSSOCR_Operate,
+        SSOCR_Languages,
+        setSSOCR_Languages,
+        const_LANGUAGE,
+        SSOCR_PSM,
+        setSSOCR_PSM,
+        const_PSM,
+        SSUI_AllPages,
+        setSSUI_AllPages,
+        SSUI_ThisPage,
+        setSSUI_ThisPage
+    }}>
+        <Page_Header/>
+    </context_Header.Provider>
+    <context_Body.Provider 
+    value={{
+        SSFiles_AllOriginalImagesFiles,
+        setSSFiles_AllOriginalImagesFiles,
+        SSFiles_AllEditedImagesFiles,
+        setSSFiles_AllEditedImagesFiles,
+        SSFiles_AllImagesNames,
+        setSSFiles_AllImagesNames,
+        SSFiles_AllTextFiles,
+        setSSFiles_AllTextFiles,
+        SSFiles_AllTextNames,
+        setSSFiles_AllTextNames,
+        SSImg_Operate,
+        setSSImg_Operate,
+        SSImg_Color,
+        setSSImg_Color,
+        SSImg_Rotate,
+        setSSImg_Rotate,
+        SSShowImg_Dimension,
+        setSSShowImg_Dimension,
+        SSShowImg_OriginalImage,
+        setSSShowImg_OriginalImage,
+        SSShowImg_Zoom,
+        setSSShowImg_Zoom,
+        SSOCR_Operate,
+        setSSOCR_Operate,
+        SSOCR_Languages,
+        setSSOCR_Languages,
+        const_LANGUAGE,
+        SSOCR_PSM,
+        setSSOCR_PSM,
+        const_PSM,
+        SSUI_AllPages,
+        setSSUI_AllPages,
+        SSUI_ThisPage,
+        setSSUI_ThisPage
+    }}
+    >
+        <Page_Body/>
+    </context_Body.Provider>
 </div>
     )}
 

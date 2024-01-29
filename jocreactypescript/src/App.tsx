@@ -1,4 +1,4 @@
-import Components from './Components_v01/index01_Table';
+import Components from './Components/index';
 
 import './App.css';
 

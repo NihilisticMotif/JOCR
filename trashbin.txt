@@ -1,3 +1,301 @@
+<button onClick={()=>setSS_Text('Hello')}>Hello</button>
+<button onClick={()=>setSS_Text('World')}>World</button>
+<button onClick={()=>setSS_Text('Dio')}>Dio</button>
+ 
+_Gray
+ 
+_Gray
+ 
+    <h1>{SS_Text}</h1>
+ 
+    <button onClick={()=>Function()}>{Name}</button>
+ 
+Name:string
+Function:(S:void)=>void
+ 
+Name,
+Function
+ 
+import './index.css';
+ 
+import Page_Header from './Page_Header';
+ 
+//-----------------------------------------------------------------------
+// Test Set State
+//-----------------------------------------------------------------------
+const[SS_Text,setSS_Text]=useState<string>('')
+ 
+_Gray
+ 
+_Gray
+ 
+
+
+ 
+const[SSFiles_AllOriginalTextFiles    ,setSSFiles_AllOriginalImagesFiles  ]=useState<File[]|null>(null)
+const[SSFiles_AllEditedTextFiles      ,setSSFiles_AllEditedImagesFiles    ]=useState<File[]|null>(null)
+const[SSFiles_AllTextNames            ,setSSFiles_AllImagesNames          ]=useState<string[]|null>(null)
+ 
+const[SSFiles_ThisOriginalImagesFiles   ,setSSFiles_ThisOriginalImagesFiles ]=useState<File[]|null>(null)
+const[SSFiles_ThisEditedImagesFiles     ,setSSFiles_ThisEditedImagesFiles   ]=useState<File[]|null>(null)
+const[SSFiles_ThisImagesNames           ,setSSFiles_ThisImagesNames         ]=useState<string[]|null>(null)
+ 
+// 2. SSShowOCR = Display Tesseract OCR Original Output
+// SSShowOCR_:boolean,
+// setSSShowOCR_:(S:boolean)=>void,
+// 3. SSJSONOCR
+ 
+// 3. JSONImg
+// SSJSONImg_ThisFile:null,
+// setSSJSONImg_ThisFile:()=>{},
+// SSJSONImg_AllFiles:null,
+// setSSJSONImg_AllFiles:()=>{},
+ 
+// 3. JSONImg
+// SSJSONImg_ThisFile:TS_ImageJSON|null
+// setSSJSONImg_ThisFile:(S:TS_ImageJSON|null)=>void 
+// SSJSONImg_AllFiles:TS_ImageJSON[]|null 
+// setSSJSONImg_AllFiles:(S:TS_ImageJSON[]|null)=>void
+ 
+// 2. SSShowOCR = Display Tesseract OCR Original Output
+// SSShowOCR_:boolean
+// setSSShowOCR_:(S:boolean)=>void
+ 
+// 2. SSShowOCR = Display Tesseract OCR Original Output
+// SSShowOCR_:boolean,
+// setSSShowOCR_:(S:boolean)=>void,
+// 3. SSJSONOCR
+ 
+// 3. JSONImg
+// SSJSONImg_ThisFile:null,
+// setSSJSONImg_ThisFile:()=>{},
+// SSJSONImg_AllFiles:null,
+// setSSJSONImg_AllFiles:()=>{},
+ 
+// 3. JSONImg
+// SSJSONImg_ThisFile:TS_ImageJSON|null
+// setSSJSONImg_ThisFile:(S:TS_ImageJSON|null)=>void 
+// SSJSONImg_AllFiles:TS_ImageJSON[]|null 
+// setSSJSONImg_AllFiles:(S:TS_ImageJSON[]|null)=>void
+ 
+// 2. SSShowOCR = Display Tesseract OCR Original Output
+// SSShowOCR_:boolean
+// setSSShowOCR_:(S:boolean)=>void
+ 
+// 2. SSShowOCR = Display Tesseract OCR Original Output
+// SSShowOCR_:boolean
+// setSSShowOCR_:(S:boolean)=>void
+ 
+// 2. Open Image Toolbar
+// SSUI_IsOpenImageToolbar:false,
+// setSSUI_IsOpenImageToolbar:()=>{},
+// SSUI_IsOpenImageJSONfolder:false,
+// setSSUI_IsOpenImageJSONfolder:()=>{},
+ 
+-----------------------------
+ 
+//------------------------------------------
+ 
+false
+ 
+Image
+ 
+Image
+ 
+boolean
+ 
+void
+ 
+(S:typeof uPSM[number])=>void
+ 
+string[]
+ 
+(S:typeof uLANGUAGE[number][]|null)=>void
+ 
+(S:boolean)=>void
+ 
+/*
+ 
+*/
+ 
+*/
+ 
+/*
+ 
+TS_ImageJSON[]|
+ 
+SSImg_Operate:false,
+setSSImg_Operate:()=>{},
+ 
+//-----------------------------------------------------------------------
+// UI
+ 
+/*
+ 
+*/
+
+export type TS_context_Header = {
+// All Input Image Files
+SS_Text:string,
+setSS_Text:(S:string)=>void
+}
+export const context_Header = createContext<TS_context_Header>({
+SS_Text:'',
+setSS_Text:()=>{}
+})
+export const useGlobalContext = () => useContext(context_Header)
+ 
+:ReactNode
+ 
+01_Table
+ 
+_v01
+ 
+const[setSS_Text]=useGlobalContext()
+ 
+        <div>
+<UI_DisplayFlex 
+// 1. File: Import Image Folders
+JSX={[
+<UI_Button 
+    Name={"Import Image Folder"}
+    Function={()=>alert('01')}
+/>,
+// 2. File: Export Text Folder
+<UI_Button 
+    Name={"Export TxT Files"}
+    Function={()=>alert('01')}
+/>,
+// 3. File: Name Export Text Folder
+<UI_ResettingInput
+Name={"Export txt folder name"}
+SS_Value={"uSETFAKE"}
+setSS_Value={()=>{uSETFAKE("")}}
+SS_DefaultValue={null}
+/>,
+// 4. File: Export Edited Image Folder
+<UI_Button 
+    Name={"Export Edited Image Folder"}
+    Function={()=>alert('01')}
+/>,
+// 5. File: Name Export Image Folder
+<UI_ResettingInput
+Name={"Name Export Image Folder"}
+SS_Value={"uSETFAKE"}
+setSS_Value={()=>{uSETFAKE("")}}
+SS_DefaultValue={null}
+/>,
+// 6. Img_: Rotation
+<UI_ResettingInput
+Name={"Rotation"}
+SS_Value={"uSETFAKE"}
+setSS_Value={()=>{uSETFAKE("")}}
+SS_DefaultValue={null}
+/>,
+// 7. Img_: Color
+// 8. OCR_: Language
+// 9. OCR_: PSM
+//10. OCR_: Operate OCR
+//11. Img_: JSON Image Setting (Last)
+//12. Img_: JSON OCR Setting (Last)
+]}/>,
+{//<UI_Options
+//    Name={'Set Color'}
+//    Options={['Color','Gray','ReverseGray']}
+///>
+}
+    </div>
+ 
+    const
+ 
+// import { contect_ImageToolBar   } from './Contect_UI/contect_ImageToolBar';
+ 
+//************************************************************************************
+// TYPE
+//************************************************************************************
+
+
+
+ 
+
+const let_Context = createContext(null)
+ 
+
+
+export type GlobalUseState = {
+
+}
+ 
+// u = utility
+ 
+tect_OCR/contect_OCR';
+ 
+// SS = Set State
+import { SS_File } from '../Contect_File';
+import { SS_UI } from '../Contect_UI/contect_Page';
+import { SS_Img } from '../Contect_Img/contect_Img';
+import { SS_OCR } from '../Con
+ 
+Name:string
+Function:(S:void)=>void
+ 
+Name,
+Function
+ 
+<div>
+    <div>
+        <Page_Header>
+        </Page_Header>
+    </div>
+    <div>
+        <div>
+            <Page_SingleInput>
+            </Page_SingleInput>
+            <Page_SingleOutput>
+            </Page_SingleOutput>
+        </div> 
+        <div>
+            <Page_ImageSettingEditor>
+            </Page_ImageSettingEditor>
+        </div>
+    </div>
+</div>
+ 
+// Contect_File
+import { contect_Header } from './Contect_File/contect_Header';
+import { contect_Image  } from './Contect_File/contect_Image';
+import { contect_Text   } from './Contect_File/contect_Text';
+
+// Contect_Img
+import { contect_Img    } from './Contect_Img/contect_Img';
+// import { contect_JSONImg} from './Contect_Img/contect_JSONImg';
+// import { contect_Kernal  } from './Contect_Img/contect_Kernal';
+
+// Contect_OCR
+import { contect_OCR    } from './Contect_OCR/contect_OCR';
+// import { contect_OCRAI  } from './Contect_OCR/contect_OCRAI';
+
+// Contect_UI
+import { contect_Page   } from './Contect_UI/contect_Page';
+ 
+// All Input Image Files
+SSFiles_AllOriginalImagesFiles: null,
+setSSFiles_AllOriginalImagesFiles: () => {},
+SSFiles_AllEditedImagesFiles: null,
+setSSFiles_AllEditedImagesFiles: () => {},
+SSFiles_AllImagesNames: null,
+setSSFiles_AllImagesNames: () => {},
+// All Output Text Files
+SSFiles_AllTextFiles: null,
+setSSFiles_AllTextFiles: () => {},
+SSFiles_AllTextNames: null,
+setSSFiles_AllTextNames: () => {},
+ 
+import { createContext, useContext } from "react"
+// https://dev.to/madv/usecontext-with-typescript-23ln
+ 
+</div>   
+ 
 </div>
  
     <let_Context.Provider

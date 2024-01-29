@@ -1,0 +1,18 @@
+<div>
+    <div>
+        <Page_Header>
+        </Page_Header>
+    </div>
+    <div>
+        <div>
+            <Page_SingleInput>
+            </Page_SingleInput>
+            <Page_SingleOutput>
+            </Page_SingleOutput>
+        </div> 
+        <div>
+            <Page_ImageSettingEditor>
+            </Page_ImageSettingEditor>
+        </div>
+    </div>
+</div>
