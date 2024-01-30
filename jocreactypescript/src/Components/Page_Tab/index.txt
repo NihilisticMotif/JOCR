@@ -68,10 +68,20 @@ function f_CreateNewFile(){
         })
     }
 }
+//...
 
 function f_OpenDeleteWarning(ThisFile:number){
-    f_SelectFile(ThisFile)
-    setSS_DeleteWarning(true)
+    if(SS_File.AllFiles){
+        setSS_File({
+            AllFiles:SS_File.AllFiles,
+            SelectThisFile:{
+                index:ThisFile,
+                mode:'DeleteWarning'
+            },
+            ImageFolderName:SS_File.ImageFolderName,
+            TextFolderName:SS_File.TextFolderName
+        })
+    }
 }
 
 function f_DeleteThisFile(ThisFile:number){
@@ -101,6 +111,20 @@ function f_SelectFile(ThisFile:number){
             AllFiles:SS_File.AllFiles,
             SelectThisFile:{
                 index:ThisFile,
+                mode:'Default'//SS_File.SelectThisFile.mode
+            },
+            ImageFolderName:SS_File.ImageFolderName,
+            TextFolderName:SS_File.TextFolderName
+        })
+    }
+}
+
+function f_Cancel(){
+    if(SS_File){
+        setSS_File({
+            AllFiles:SS_File.AllFiles,
+            SelectThisFile:{
+                index:SS_File.SelectThisFile.index,
                 mode:'Default'
             },
             ImageFolderName:SS_File.ImageFolderName,
@@ -123,7 +147,6 @@ if(SS_File.AllFiles){
         else{
             let_ImageTitle='Untitled No.'+i.Key.toString()
         }
-        
         return (
         <div onClick={()=>f_SelectFile(i.Key)} style={{backgroundColor:SS_File.SelectThisFile.index===i.Key?'red':'#DDDDDD'}} >
             <UI_Title Name={"Image: "+let_ImageTitle}/>

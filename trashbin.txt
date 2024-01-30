@@ -1,3 +1,102 @@
+hisFile:1
+ 
+et_Update.length
+ 
+function f_Cancel(){
+    if(SS_File){
+        setSS_File({
+            AllFiles:SS_File.AllFiles,
+            SelectThisFile:{
+                index:SS_File.SelectThisFile.index,
+                mode:'Default'
+            },
+            ImageFolderName:SS_File.ImageFolderName,
+            TextFolderName:SS_File.TextFolderName
+        })
+    }
+}
+ 
+        let JSX_Title=<></>
+        if(i.Key===SS_File.SelectThisFile.index 
+            && SS_File.SelectThisFile.mode==='DeleteWarning'){
+            console.log("DeleteWarning")
+            JSX_Title=<UI_DeleteWarning
+            Name={let_ImageTitle}
+            Delete={()=>{f_DeleteThisFile(i.Key)}}
+            Cancel={()=>f_Cancel()}
+            />
+        }
+        else{
+            console.log("SS_File")
+            JSX_Title=<>
+            <UI_Title Name={"Image: "+let_ImageTitle}/>
+            <UI_Button Name={'x'} Function={()=>{f_OpenDeleteWarning(i.Key)}}/>
+            </>
+        }
+ 
+        //alert(JSON.stringify(SS_File.SelectThisFile))
+ 
+/*
+// UI_DeleteWarning/index.tsx
+// This file is not works as expected.
+import './index.css';
+import React, { FC, ReactNode } from 'react';
+
+const UI_DeleteWarning = (
+{
+Name,
+Delete,
+Cancel
+}
+:{
+Name:string
+Delete:(S:void)=>void
+Cancel:(S:void)=>void
+})=>{
+    return (
+    <div>
+    <h1>Do you want to delete {Name}?</h1>
+    <button onClick={()=>{Delete()}}>Yes</button>
+    <button onClick={()=>{Cancel()}}>No</button>
+    </div>
+    )}
+
+export default UI_DeleteWarning
+*/
+ 
+'DeleteWarning'//
+ 
+alert("
+ 
+.AllFiles[ThisFile]
+ 
+    alert(ThisFile)
+ 
+        
+ 
+<UI_Title Name={"Image: "+let_ImageTitle}/>
+            <UI_Button Name={'x'} Function={()=>{f_DeleteThisFile(i.Key)}}/>
+ 
+useEffect(()={},[])
+ 
+f_OpenDeleteWarning(i.Key)
+ 
+null
+ 
+null
+ 
+|null
+ 
+Select
+ 
+const[SS_ThisEditImg,setSS_ThisEditImg]=useState<TS_SS_EditImg[]|null>(null)
+ 
+{
+    Operate:'None',
+    Color:"Gray",
+    Rotate:0
+}
+ 
             alert()
  
 :void 

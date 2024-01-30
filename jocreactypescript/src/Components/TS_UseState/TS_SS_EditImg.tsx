@@ -1,5 +1,5 @@
 export type TS_SS_EditImg={
-    Operate:'This'|'All'|'None',
+    Operate:boolean,
     Color:"Color"|"Gray"|"ReverseGray",
     Rotate:number
 }

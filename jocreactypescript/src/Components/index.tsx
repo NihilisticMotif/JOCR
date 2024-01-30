@@ -33,7 +33,7 @@ const Component = (
 // USESTATE
 //************************************************************************************
 const[SS_EditImg,setSS_EditImg]=useState<TS_SS_EditImg>({
-    Operate:'None',
+    Operate:false,
     Color:"Gray",
     Rotate:0
 })
@@ -43,15 +43,22 @@ const[SS_ShowImg,setSS_ShowImg]=useState<TS_SS_ShowImg>({
     Dimension:[0,0]
 })
 const[SS_OCR,setSS_OCR]=useState<TS_SS_OCR>({
-SSOCR_Operate:   'None',
+SSOCR_Operate:   false,
 SSOCR_Languages: null,
 const_LANGUAGE:  uLANGUAGE,
 SSOCR_PSM:       uPSM[0] ,
 const_PSM:       uPSM
 })
+const[SS_ThisEditImg,setSS_ThisEditImg]=useState<TS_SS_EditImg[]|null>(null)
+const[SS_ThisShowImg,setSS_ThisShowImg]=useState<TS_SS_ShowImg[]|null>(null)
+const[SS_ThisOCR,setSS_ThisOCR]=useState<TS_SS_OCR[]|null>(null)
+
 const[SS_File,setSS_File]=useState<TS_SS_File>({
     AllFiles:null,
-    ThisFile:null,
+    SelectThisFile:{
+        index:0,
+        mode:'Default'
+    },
     ImageFolderName:null,
     TextFolderName:null
 })
@@ -85,6 +92,12 @@ SS_ShowImg,
 setSS_ShowImg, 
 SS_EditImg,    
 setSS_EditImg,   
+SS_ThisOCR,
+setSS_ThisOCR,
+SS_ThisShowImg,
+setSS_ThisShowImg,
+SS_ThisEditImg,
+setSS_ThisEditImg
 }}
 >
 <Page_Tab/>

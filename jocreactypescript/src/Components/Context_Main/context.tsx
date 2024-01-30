@@ -19,17 +19,26 @@ export type TS_Context_Main={
     setSS_ShowImg: (S:TS_SS_ShowImg)=>void,
     SS_EditImg:     TS_SS_EditImg,
     setSS_EditImg: (S:TS_SS_EditImg)=>void,
+    SS_ThisOCR:         TS_SS_OCR[]|null,
+    setSS_ThisOCR:     (S:TS_SS_OCR[]|null)=>void,
+    SS_ThisShowImg:     TS_SS_ShowImg[]|null,
+    setSS_ThisShowImg: (S:TS_SS_ShowImg[]|null)=>void,
+    SS_ThisEditImg:     TS_SS_EditImg[]|null,
+    setSS_ThisEditImg: (S:TS_SS_EditImg[]|null)=>void,
 }
 export const Context_Main=createContext<TS_Context_Main>({
     SS_File:          {
         AllFiles:null,
-        ThisFile:null,
+        SelectThisFile:{
+            index:0,
+            mode:'Default'
+        },
         ImageFolderName:null,
         TextFolderName:null,
     },
     setSS_File:()=>{},
     SS_OCR:{
-        SSOCR_Operate:   'None',
+        SSOCR_Operate:   false,
         SSOCR_Languages: null,
         const_LANGUAGE:  uLANGUAGE,
         SSOCR_PSM:       uPSM[0] ,
@@ -43,9 +52,15 @@ export const Context_Main=createContext<TS_Context_Main>({
     },
     setSS_ShowImg:()=>{},
     SS_EditImg:{
-        Operate:'None',
+        Operate:false,
         Color:"Gray",
         Rotate:0
     },
     setSS_EditImg:()=>{},
+    SS_ThisOCR:null,
+    setSS_ThisOCR:()=>{},
+    SS_ThisShowImg:null,
+    setSS_ThisShowImg:()=>{},
+    SS_ThisEditImg:null,
+    setSS_ThisEditImg:()=>{}
 })
