@@ -9,7 +9,7 @@ Function
 :{
 Name:string
 Function:(S:void)=>void
-}):ReactNode=>{
+})=>{
     return (
     <button onClick={()=>Function()}>{Name}</button>
     )}

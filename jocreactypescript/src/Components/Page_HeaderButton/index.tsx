@@ -1,14 +1,15 @@
 import './index.css';
 import React, { FC, ReactNode } from 'react';
 
-const UI_Title = (
+const Page_HeaderButton = (
 {
-Name,
+
 }
 :{
-Name:string
+
 })=>{
-    return (<h1>{Name}</h1>
+    return (
+<></>
     )}
 
-export default UI_Title
+export default Page_HeaderButton

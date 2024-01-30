@@ -1,0 +1,134 @@
+import './index.css';
+import UI_DisplayFlex from '../UI_DisplayFlex';
+import UI_Button from '../UI_Button';
+import UI_Options from '../UI_Options';
+import UI_Factory from '../UI_Factory';
+import UI_Activate from '../UI_Activate';
+import UI_ResettingInput from '../UI_ResettingInput';
+import UI_Title from '../UI_Title';
+import React, { FC, ReactNode } from 'react';
+import { useContext } from 'react';
+import { Context_Main } from '../Context_Main/context';
+import { File_Create } from '../TS_File/File_Create';
+import { File_Delete } from '../TS_File/File_Delete';
+import TS_File from '../TS_File/An_Index';
+import { useState } from 'react';
+import UI_DeleteWarning from '../UI_DeleteWarning';
+// File
+// 1. Import Image          [Import]
+// 2. Export Image Folder   [Export [... ][Ok]]
+// 3. Export Text  Folder   [Export [... ][Ok]]
+// 4. SS_EditImg            [Operate] [Option: Color] [Rotate [...] [Ok] [Reset]]
+// 5. SS_File               [Page1] [Page2] [+]
+
+const Page_Tab = (
+{
+}
+:{
+})=>{
+const[SS_DeleteWarning,setSS_DeleteWarning]=useState<boolean>(false)
+// const{setSS_Text}=useGlobalContext()
+const{SS_ShowImg}=useContext(Context_Main)
+const{SS_EditImg}=useContext(Context_Main)
+const{SS_OCR}=useContext(Context_Main)
+const{SS_File}=useContext(Context_Main)
+const{setSS_File}=useContext(Context_Main)
+
+function f_CreateNewFile(){
+    if(SS_File.AllFiles){
+        let cSS_File=SS_File.AllFiles
+        cSS_File=[...cSS_File]
+        let let_Update=File_Create(cSS_File)
+        setSS_File({
+            AllFiles:let_Update,
+            ThisFile:let_Update.length,
+            ImageFolderName:SS_File.ImageFolderName,
+            TextFolderName:SS_File.TextFolderName
+        })
+    }
+    else{
+        setSS_File({
+            AllFiles:[{
+                Key: 0,
+                ImageName: null,
+                OriginalImageFile: null,
+                ImageFile: null,
+                TextFiles:null,
+                TextName:null
+            }],
+            ThisFile:1,
+            ImageFolderName:SS_File.ImageFolderName,
+            TextFolderName:SS_File.TextFolderName
+        })
+    }
+}
+
+function f_OpenDeleteWarning(ThisFile:number){
+    f_SelectFile(ThisFile)
+    setSS_DeleteWarning(true)
+}
+
+function f_DeleteThisFile(ThisFile:number){
+    if(SS_File.AllFiles){
+        let cSS_File=SS_File.AllFiles
+        cSS_File=[...cSS_File]
+        let let_Update=File_Delete(ThisFile,cSS_File)
+        let let_UpdateIndex=ThisFile
+        if(ThisFile===let_Update.length){
+            let_UpdateIndex=let_UpdateIndex-1
+        }
+        setSS_File({
+            AllFiles:let_Update,
+            ThisFile:let_UpdateIndex,
+            ImageFolderName:SS_File.ImageFolderName,
+            TextFolderName:SS_File.TextFolderName
+        })
+    }
+}
+
+function f_SelectFile(ThisFile:number){
+    if(SS_File.AllFiles){
+        setSS_File({
+            AllFiles:SS_File.AllFiles,
+            ThisFile:ThisFile,
+            ImageFolderName:SS_File.ImageFolderName,
+            TextFolderName:SS_File.TextFolderName
+        })
+    }
+}
+
+let JSX_Pages=[<UI_Button Name={'+'} Function={f_CreateNewFile}/>]
+if(SS_File.AllFiles){
+    JSX_Pages=SS_File.AllFiles.map(
+        (i)=>{
+        let let_ImageTitle:string=''
+        if(i.ImageName){
+            let_ImageTitle=i.ImageName
+        }
+        else if(SS_File.ImageFolderName){
+            let_ImageTitle=SS_File.ImageFolderName+i.Key.toString()
+        }
+        else{
+            let_ImageTitle='Untitled No.'+i.Key.toString()
+        }
+        
+        return (
+        <div onClick={()=>f_SelectFile(i.Key)} style={{backgroundColor:SS_File.ThisFile===i.Key?'red':'#DDDDDD'}} >
+            <UI_Title Name={"Image: "+let_ImageTitle}/>
+            <UI_Button Name={'x'} Function={()=>{f_DeleteThisFile(i.Key)}}/>
+        </div>)
+    })
+    JSX_Pages.push(<UI_Button Name={'+'} Function={f_CreateNewFile}/>)
+}
+    return (
+<div>
+<UI_DisplayFlex
+JSX={JSX_Pages}
+/>
+</div>
+    )}
+
+export default Page_Tab
+// [Import Image, Name, Export Image, Name, Export Text]
+// [Operate Image, Color or Gray, ]
+// [Page1, Page2, +]

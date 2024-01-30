@@ -8,7 +8,7 @@ JSX
 }
 :{
 JSX:ReactNode[]
-}):ReactNode=>{
+})=>{
 
     return (
         <div className='ClassNameUI_DisplayFlex'>

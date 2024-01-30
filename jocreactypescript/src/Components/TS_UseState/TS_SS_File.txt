@@ -1,0 +1,11 @@
+export type TS_SS_File={
+    OriginalImages:     (File|null)[]|null,
+    EditedImages:       (File|null)[]|null,
+    ImageFolderName:    string|null,
+    ImagesName:         (string|null)[]|null,
+    ThisImage:          number,
+    Texts:              (string|null)[]|null,
+    TextFolderName:     string|null,
+    TextsName:          (string|null)[]|null,
+    ThisText:           number
+}

@@ -1,3 +1,552 @@
+            alert()
+ 
+:void 
+ 
+TS_SS_File
+ 
+alert(i.Key)
+            //
+ 
+            setSS_DeleteWarning(false)
+ 
+setSS_DeleteWarning(false)
+ 
+// 
+ 
+        
+ 
+            
+ 
+        
+ 
+            
+ 
+()=>{}
+ 
+        function f_Delete(){
+            f_DeleteThisFile(i.Key)
+        }
+ 
+// 
+ 
+()=>{
+ 
+Imag
+ 
+<>
+            <UI_Title Name={"Image: "+let_ImageTitle}/>
+            <UI_Button Name={'x'} Function={()=>{f_OpenDeleteWarning(i.Key)}}/>
+        </>
+ 
+            <UI_Title Name={"Image: "+let_ImageTitle}/>
+            <UI_Button Name={'x'} Function={()=>{f_OpenDeleteWarning(i.Key)}}/>
+ 
+const[SS_ShowDeleteThisFile,setSS]
+ 
+    UI_Display?:null|"Delete"
+ 
+</div>
+ 
+Function
+ 
+        // let let_TextTitle:string=''
+        // if(i.TextName){
+        //     let_TextTitle=i.TextName
+        // }
+        // else if(SS_File.TextFolderName){
+        //     let_TextTitle=SS_File.TextFolderName+i.Key.toString()
+        // }
+        // else{
+        //     let_TextTitle='Untitled No.'+i.Key.toString()
+        // }
+ 
+    // alert(JSON.stringify(SS_File))
+
+    // if(SS_File.AllFiles){
+    // for(let i=0;i<SS_File.AllFiles.length;i++){
+    //     if(ThisFile===SS_File.AllFiles[i].Key){
+    //         alert(ThisFile)
+    //     }
+    // }}
+ 
+            let let_B:boolean=false
+ 
+                alert(FILES[i].Key)
+ 
+            alert(FILES[THISFILE].Key)
+ 
+    // alert(JSON.stringify(SS_File))
+
+    // if(SS_File.AllFiles){
+    // for(let i=0;i<SS_File.AllFiles.length;i++){
+    //     if(ThisFile===SS_File.AllFiles[i].Key){
+    //         alert(ThisFile)
+    //     }
+    // }}
+ 
+            // alert(THISFILE)
+            // alert(JSON.stringify(FILES))
+ 
+                    alert(THISFILE)
+ 
+            let let_B:boolean=false
+ 
+    alert(ThisFile)
+ 
+    // alert(JSON.stringify(SS_File))
+ 
+:ReactNode
+ 
+:ReactNode
+ 
+:ReactNode
+ 
+            <UI_Title Name={""}/>
+ 
+i.TextName?"Image: "+i.ImageName:'Image: Untitled No.'+i.Key.toString()
+ 
+i.ImageName?"Image: "+i.ImageName:'Image: Untitled No.'+i.Key.toString()
+ 
+Image: 
+ 
+        let let_TextTitle:string=''
+ 
+    <button onClick={()=>Function()}>{Name}</button>
+ 
+:ReactNode
+ 
+Name:string
+Function:(S:void)=>void
+ 
+Name,
+Function
+ 
+
+{
+// Edit Image
+}
+{
+// Show Image
+}
+{
+// UI
+}
+ 
+        let let_ImageTitle=''
+        let let_TextTitle=''
+ 
+        if(i.ImageName){
+            let_ImageTitle=i.ImageName
+        }
+ 
+            <UI_Button Name={'Edit '}/>
+ 
+import { TS_SS_File } from "../TS_UseState/TS_SS_File";
+ 
+SS_File,       
+setSS_File,  
+ 
+const[SS_File,setSS_File]=useState<TS_SS_File>({
+    OriginalImages:     null,
+    EditedImages:       null,
+    ImageFolderName:    null,
+    ImagesName:         null,
+    ThisImage:          0,
+    Texts:              null,
+    TextFolderName:     null,
+    TextsName:          null,
+    ThisText:           0,
+})
+ 
+import { TS_SS_File } from './TS_UseState/TS_SS_File';
+ 
+string|
+ 
+const{SS_File}=useContext(Context_Main)
+ 
+    SS_File:        TS_SS_File
+    setSS_File:    (S:TS_SS_File)=>void
+ 
+    SS_File:{
+    OriginalImages:     null,
+    EditedImages:       null,
+    ImageFolderName:    null,
+    ImagesName:         null,
+    ThisImage:          0,
+    Texts:              null,
+    TextFolderName:     null,
+    TextsName:          null,
+    ThisText:           0,
+    },
+    setSS_File:()=>{}
+ 
+f_CreateNewPage
+ 
+        let let_NewIndex:number=0
+        if(ThisPage==0){
+            let_NewIndex=1
+        }
+        else{}
+ 
+        let ss_UI=SS_UI.AllPages
+ 
+|null
+ 
+|null
+ 
+                
+ 
+            Act:
+                "Create"|
+                "Delete"|
+                "RenameText"|
+                "RenameImage"|
+                "EditText"|
+                "EditImage"|
+                "Select"
+ 
+File | 
+ 
+string | 
+ 
+ss_UI
+ 
+let 
+ 
+    let ssS_UI=SS_UI.AllPages]
+    let ss_UI=[...ssS_UI]
+ 
+S_UI.AllPage
+ 
+        let let_NewElement={
+            
+        }
+        let let_Update=[...ss_UI]
+ 
+TextName=NAME
+ 
+                    PAGES[i].
+ 
+.splice(i,1);
+                    let_B=true
+ 
+                if(let_B){
+                    PAGES[i].Key=PAGES[i].Key-1
+                }
+ 
+dictionary-object-in-array-contains-certain-value-in-javascript
+ 
+            // https://stackoverflow.com/questions/43846531/check-if-
+ 
+what-are-these-three-dots-in-react-doing
+ 
+            // https://stackoverflow.com/questions/31048953/
+ 
+se-three-dots-in-react-doing
+ 
+            // https://stackoverflow.com/questions/43846531/check-if-dictionary-object-in-array-contains-certain-value-in-javascript
+
+            // https://stackoverflow.com/questions/31048953/what-are-the
+ 
+,let_NEWELEMENT]
+ 
+[...
+ 
+            const let_NEWELEMENT:TS_Page={
+                Key:PAGES.length+1,
+                ImageName:null,
+                OriginalImageFile:null,
+                ImageFile:null,
+                TextFiles:null,
+                TextName:null
+                }
+ 
+        // SS_Columns
+ 
+
+            
+            // Add New Column in List of All PAGE
+ 
+
+            // Generate New Key
+            let let_NewKey:number = Math.random()
+            while(PAGE.map(LET=>LET.Key).includes(let_NewKey)===true){
+                let_NewKey = Math.random()
+            }
+            while(let_NewKey===0){
+                let_NewKey = Math.random()
+            }
+ 
+        // copy the array before using the setState
+    }
+ 
+    /**
+    SS_UI:          {
+        AllPages:null,
+        ThisPage:null
+    },
+     */
+    if(SS_UI.AllPages){
+ 
+let ss_UI=[]
+ 
+<></>
+ 
+..]
+ 
+{JSX_Pages}
+ 
+{
+ 
+{
+// File
+// 1. Import Image          [Import]
+// 2. Export Image Folder   [Export [... ][Ok]]
+// 3. Export Text  Folder   [Export [... ][Ok]]
+// 4. SS_EditImg            [Operate] [Option: Color] [Rotate [...] [Ok] [Reset]]
+// 5. SS_UI                 [Page1] [Page2] [+]
+}
+ 
+SS_File:TS_SS_UI
+setSS_File:(S:TS_SS_UI)=>void
+ 
+SS_File,
+setSS_File,
+ 
+SS_ThisPage:number,
+SS_Page:TS_Page[]
+setSS_ThisPage:(S:number)=>void
+setSS_Page:(S:TS_Page[])=>void
+ 
+SS_ThisPage,
+SS_Page,
+setSS_ThisPage,
+setSS_Page
+ 
+const sree=[null,"Stte",null,"IhateThis"]
+ 
+const stringnullarray= [null,"CheChe","Ena",null,"Star"]
+// 
+ 
+Text Folder
+ 
+import { uSETFAKE } from '../utility/uSETFAKE';
+import { useGlobalContext } from '/context';
+ 
+import { uSETFAKE } from '../utility/uSETFAKE';
+import { useGlobalContext } from '/context';
+import React, { FC, ReactNode } from 'react';
+ 
+/*
+return (
+<div>
+    <context_Header.Provider 
+    value={{
+
+    }}>
+        <Page_Header/>
+    </context_Header.Provider>
+    <context_Body.Provider 
+    value={{
+
+    }}
+    >
+        <Page_Body/>
+    </context_Body.Provider>
+</div>
+    )
+*/
+ 
+import { context_Header } from './Page_Header/context';
+ 
+import { context_Body } from './Page_Body/context';
+ 
+         TS_SS_OCR
+ 
+    
+ 
+       
+ 
+     
+ 
+TS_SS_ShowImg
+ 
+TS_SS_EditImg
+ 
+TS_SS_File
+ 
+TS_SS_UI
+ 
+S:TS_SS_File
+ 
+S:TS_SS_EditImg
+ 
+S:TS_SS_ShowImg
+ 
+S:TS_SS_OCR
+ 
+S:TS_SS_UI
+ 
+tImg
+ 
+wImg
+ 
+        SSFiles_AllOriginalImagesFiles,
+        setSSFiles_AllOriginalImagesFiles,
+        SSFiles_AllEditedImagesFiles,
+        setSSFiles_AllEditedImagesFiles,
+        SSFiles_AllImagesNames,
+        setSSFiles_AllImagesNames,
+        SSFiles_AllTextFiles,
+        setSSFiles_AllTextFiles,
+        SSFiles_AllTextNames,
+        setSSFiles_AllTextNames,
+        SSImg_Operate,
+        setSSImg_Operate,
+        SSImg_Color,
+        setSSImg_Color,
+        SSImg_Rotate,
+        setSSImg_Rotate,
+        SSShowImg_Dimension,
+        setSSShowImg_Dimension,
+        SSShowImg_OriginalImage,
+        setSSShowImg_OriginalImage,
+        SSShowImg_Zoom,
+        setSSShowImg_Zoom,
+        SSOCR_Operate,
+        setSSOCR_Operate,
+        SSOCR_Languages,
+        setSSOCR_Languages,
+        const_LANGUAGE,
+        SSOCR_PSM,
+        setSSOCR_PSM,
+        const_PSM,
+        SSUI_AllPages,
+        setSSUI_AllPages,
+        SSUI_ThisPage,
+        setSSUI_ThisPage
+ 
+        SSFiles_AllOriginalImagesFiles,
+        setSSFiles_AllOriginalImagesFiles,
+        SSFiles_AllEditedImagesFiles,
+        setSSFiles_AllEditedImagesFiles,
+        SSFiles_AllImagesNames,
+        setSSFiles_AllImagesNames,
+        SSFiles_AllTextFiles,
+        setSSFiles_AllTextFiles,
+        SSFiles_AllTextNames,
+        setSSFiles_AllTextNames,
+        SSImg_Operate,
+        setSSImg_Operate,
+        SSImg_Color,
+        setSSImg_Color,
+        SSImg_Rotate,
+        setSSImg_Rotate,
+        SSShowImg_Dimension,
+        setSSShowImg_Dimension,
+        SSShowImg_OriginalImage,
+        setSSShowImg_OriginalImage,
+        SSShowImg_Zoom,
+        setSSShowImg_Zoom,
+        SSOCR_Operate,
+        setSSOCR_Operate,
+        SSOCR_Languages,
+        setSSOCR_Languages,
+        const_LANGUAGE,
+        SSOCR_PSM,
+        setSSOCR_PSM,
+        const_PSM,
+        SSUI_AllPages,
+        setSSUI_AllPages,
+        SSUI_ThisPage,
+        setSSUI_ThisPage
+ 
+typeof 
+ 
+'This'|'All'|
+ 
+SSOCR_Operate:'None',
+setSSOCR_Operate:(S:'This'|'All'|'None')=>void
+SSOCR_Languages:typeof uLANGUAGE[number][]|null
+setSSOCR_Languages:(S:typeof uLANGUAGE[number][]|null)=>void
+const_LANGUAGE:string[]
+SSOCR_PSM:typeof uPSM[number] 
+setSSOCR_PSM:(S:typeof uPSM[number])=>void
+const_PSM:string[]
+ 
+setSSOCR_PSM:(S:typeof uPSM[number])=>void
+ 
+setSSOCR_Languages:(S:typeof uLANGUAGE[number][]|null)=>void
+ 
+setSSOCR_Operate:(S:'This'|'All'|'None')=>void
+ 
+'This'|'All'|
+ 
+-to-typescript-types
+ 
+nvert-array-of-strings
+ 
+stions/54070785/how-to-co
+ 
+// https://stackoverflow.com/que
+ 
+// 1. SSOCR = Tesseract OCR Command
+ 
+//-----------------------------------------------------------------------
+// UI
+//-----------------------------------------------------------------------
+const[SSUI_AllPages,setSSUI_AllPages]=useState<TS_Page[]|null>(null)
+const[SSUI_ThisPage,setSSUI_ThisPage]=useState<TS_Page|null>(null)
+ 
+|"Gray"|"Reverse"
+ 
+"Original"|
+ 
+|"ReverseGray"
+ 
+"Color"|
+ 
+'This'|'All'|
+ 
+//-----------------------------------------------------------------------
+// Test Set State
+//-----------------------------------------------------------------------
+// const[SS_Text,setSS_Text]=useState<string>('')
+//-----------------------------------------------------------------------
+// File
+//-----------------------------------------------------------------------
+/**
+// Create shorter variable name like ChatGPT did.
+const [allFiles, setAllFiles] = useState({
+  originalImages: null,
+  editedImages: null,
+  allImagesNames: null,
+  thisOriginalImages: null,
+  thisEditedImages: null,
+  thisImagesNames: null,
+  allTextFiles: null,
+  allTextNames: null,
+  thisTextFile: null,
+  thisTextName: null,
+});
+ */
+ 
+Original_
+ 
+Original_
+ 
+Original
+ 
+Original
+ 
+    EditedTexts:       null,
+ 
+    ThisEditedText:    null,
+ 
+Edited
+ 
+File
+ 
 <button onClick={()=>setSS_Text('Hello')}>Hello</button>
 <button onClick={()=>setSS_Text('World')}>World</button>
 <button onClick={()=>setSS_Text('Dio')}>Dio</button>
