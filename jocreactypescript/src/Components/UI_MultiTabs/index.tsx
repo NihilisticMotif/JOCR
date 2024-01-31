@@ -7,7 +7,7 @@ Input_Titles
 }
 :{
 Input_Titles:string[]
-}):ReactNode=>{
+})=>{
     function f_Select(){}
     function f_Delete(){}
     let JSX_Tabs=Input_Titles.map((i,index)=><div key={index} onClick={f_Select}>

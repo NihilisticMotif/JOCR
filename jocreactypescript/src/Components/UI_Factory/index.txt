@@ -17,7 +17,7 @@ Name:string
 Create:(S:void)=>any
 Options:string[]|null|void
 InputName:string|null|void
-}):ReactNode=>{
+})=>{
     let let_Options=Options?Options:['','']
     const [SS_Options,setSS_Options]=useState<string>(
         Options?Options[0]:'')

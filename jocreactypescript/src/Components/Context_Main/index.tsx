@@ -4,11 +4,11 @@ import { uLANGUAGE } from "../utility/uLANGUAGE"
 import { uPSM } from "../utility/uPSM"
 import TS_File from '../TS_File/An_Index';
 
-import { TS_SS_OCR } from "../TS_UseState/TS_SS_OCR";
-import { TS_SS_ShowImg } from "../TS_UseState/TS_SS_ShowImg";
-import { TS_SS_EditImg } from "../TS_UseState/TS_SS_EditImg";
+import { TS_SS_OCR } from "../TS_SS_OCR/An_Index";
+import { TS_SS_ShowImg } from "../TS_SS_ShowImg/An_Index";
+import { TS_SS_EditImg } from "../TS_SS_EditImg/An_Index";
 // import { TS_SS_ImageProcessing } from "../TS_UseState/TS_SS_ImageProcessing";
-import { TS_SS_File } from "../TS_UseState/TS_SS_File";
+import { TS_SS_File } from "../TS_SS_File/An_Index";
 
 export type TS_Context_Main={
     SS_File:          TS_SS_File,
@@ -21,8 +21,6 @@ export type TS_Context_Main={
     setSS_EditImg: (S:TS_SS_EditImg)=>void,
     SS_ThisOCR:         TS_SS_OCR[]|null,
     setSS_ThisOCR:     (S:TS_SS_OCR[]|null)=>void,
-    SS_ThisShowImg:     TS_SS_ShowImg[]|null,
-    setSS_ThisShowImg: (S:TS_SS_ShowImg[]|null)=>void,
     SS_ThisEditImg:     TS_SS_EditImg[]|null,
     setSS_ThisEditImg: (S:TS_SS_EditImg[]|null)=>void,
 }
@@ -33,22 +31,23 @@ export const Context_Main=createContext<TS_Context_Main>({
             index:0,
             mode:'Default'
         },
-        ImageFolderName:null,
-        TextFolderName:null,
+        ImageFolderName:'',
+        TextFolderName:'',
+        ApplyAllSetting:{
+            OCR:false,
+            Img:false
+        }
     },
     setSS_File:()=>{},
     SS_OCR:{
-        SSOCR_Operate:   false,
-        SSOCR_Languages: null,
-        const_LANGUAGE:  uLANGUAGE,
-        SSOCR_PSM:       uPSM[0] ,
-        const_PSM:       uPSM
+        Operate:   false,
+        Languages: null,
+        PSM:       uPSM[0] ,
     },
     setSS_OCR:     ()=>{},
     SS_ShowImg:{
-        Zoom:0,
-        OriginalImage:"Edited",
-        Dimension:[0,0]
+        Zoom:1,
+        OriginalImage:"EditedImage",
     },
     setSS_ShowImg:()=>{},
     SS_EditImg:{
@@ -59,8 +58,6 @@ export const Context_Main=createContext<TS_Context_Main>({
     setSS_EditImg:()=>{},
     SS_ThisOCR:null,
     setSS_ThisOCR:()=>{},
-    SS_ThisShowImg:null,
-    setSS_ThisShowImg:()=>{},
     SS_ThisEditImg:null,
     setSS_ThisEditImg:()=>{}
 })

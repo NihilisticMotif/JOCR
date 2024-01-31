@@ -13,10 +13,12 @@ Delete:(S:void)=>void
 Cancel:(S:void)=>void
 })=>{
     return (
-    <div>
+    <div className="UIIDDeleteWarning_Body">
     <h1>Do you want to delete {Name}?</h1>
+    <div className="UIIDDeleteWarning_Button">
     <button onClick={()=>{Delete()}}>Yes</button>
     <button onClick={()=>{Cancel()}}>No</button>
+    </div>
     </div>
     )}
 

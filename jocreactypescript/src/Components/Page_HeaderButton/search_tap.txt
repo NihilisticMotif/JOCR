@@ -1,0 +1,36 @@
+const [SS_ThisFile, setSS_ThisFile] = useState<string>(():string => {
+  if (eSS_File.AllFiles) {
+    const selectedFile = eSS_File.AllFiles[eSS_File.SelectThisFile.index].ImageName;
+    if (selectedFile) {
+      return selectedFile;
+    } else if (eSS_File.ImageFolderName) {
+      return eSS_File.ImageFolderName + eSS_File.SelectThisFile.index.toString();
+    }
+  }
+  return 'Untitled No.' + eSS_File.SelectThisFile.index.toString();
+});
+const[SS_AllFileName,setSS_AllFileName]=useState<string[]>(
+eSS_File.AllFiles?
+eSS_File.AllFiles.map((i)=>{
+    if(i.ImageName){
+        return i.ImageName
+    }
+    else{
+        if(eSS_File.ImageFolderName){
+            return eSS_File.ImageFolderName+i.Key.toString()
+        }
+        else{
+            return 'Untitled No.'+i.Key.toString()
+        }
+    }
+})
+:['']
+)
+
+<UI_SearchOption
+Name='Select File'
+List={SS_AllFileName}
+SS_Option={SS_ThisFile}
+setSS_Option={setSS_ThisFile}
+IsSearch={true}
+/>

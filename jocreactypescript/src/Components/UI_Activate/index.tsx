@@ -11,7 +11,7 @@ setIsActivate
 Name:string
 IsActivate:boolean
 setIsActivate:(S:boolean)=>void
-}):ReactNode=>{
+})=>{
     let let_Status='IsActivate is not working.'
     if(IsActivate){
         let_Status='Activate';

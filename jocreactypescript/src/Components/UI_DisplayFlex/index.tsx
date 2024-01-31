@@ -4,14 +4,16 @@ import React, { FC, ReactNode } from 'react';
 
 const UI_DisplayFlex = (
 {
-JSX
+JSX,
+Color
 }
 :{
 JSX:ReactNode[]
+Color:string
 })=>{
 
     return (
-        <div className='ClassNameUI_DisplayFlex'>
+        <div className='UIIDDisplayFlex_Body' style={{backgroundColor:Color}}>
             {
             // https://react.dev/learn/rendering-lists
             JSX.map(i=><>{i}</>)

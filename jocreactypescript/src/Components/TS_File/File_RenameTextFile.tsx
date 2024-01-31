@@ -8,7 +8,7 @@ export function File_RenameTextFile(
             let let_B:boolean=false
             for(let i=0;i<FILES.length;i++){
                 if(THISFILE.Key===FILES[i].Key){
-                    FILES[i].TextName=NAME
+                    FILES[i].Text.Name=NAME
                 }
             }
             return FILES

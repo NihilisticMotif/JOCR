@@ -8,7 +8,7 @@ export function File_RenameImageFile(
             let let_B:boolean=false
             for(let i=0;i<FILES.length;i++){
                 if(THISFILE.Key===FILES[i].Key){
-                    FILES[i].ImageName=NAME
+                    FILES[i].Img.Name=NAME
                 }
             }
             return FILES

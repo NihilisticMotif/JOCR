@@ -3,55 +3,80 @@ import {uID} from '../utility/uID'
 import { useState } from 'react';
 import React, { FC, ReactNode } from 'react';
 import UI_Title from '../UI_Title';
-const UI_ResettingInput = (
+import { Dispatch, SetStateAction } from 'react';
+
+// By ChatGPT
+type UI_ResettingInputProps<T> = {
+  Name: string;
+  setSS_Value: (value: T) => void;
+  SS_Value: T;
+  SS_DefaultValue: T | null;
+};
+
+const UI_ResettingInput = <T,>(
 {
 Name,
 setSS_Value,
 SS_Value,
 SS_DefaultValue,
 }
-:{
-Name:string
-setSS_Value:(S:string|number)=>void
-SS_Value:string|number
-SS_DefaultValue:string|number|null
-}):ReactNode=>{
+:UI_ResettingInputProps<T>)=>{
 
-    const [SS_ReadValue,setSS_ReadValue]=useState<string>(SS_Value.toString())
-    let let_ID=uID(Math.random().toString())
-
-    function f_OnChange(){
-        let let_input=(document.getElementById('UI_ResettingInput'+uID(Name)+let_ID) as HTMLInputElement).value.toString()
-        setSS_ReadValue(let_input)
+const [SS_ReadValue,setSS_ReadValue]=useState<string>(()=>{
+    if(typeof SS_Value==='string'){
+        return SS_Value
     }
+    else if(typeof SS_Value==='number'){
+        return SS_Value.toString()
+    }
+    else{
+        return ''
+    }
+}
+)
 
-    function f_Ok(){
-        if(typeof SS_Value==='string'){
-            setSS_Value(SS_ReadValue)
+const ID='UI_ResettingInput'+uID(Name)+uID(Math.random().toString())
+
+function f_OnChange(){
+    let let_input=(document.getElementById(ID) as HTMLInputElement).value.toString()
+    setSS_ReadValue(let_input)
+}
+
+function f_Ok(){
+    if(SS_Value!==null || SS_Value!==undefined){
+    if(typeof SS_Value==='string'){
+        setSS_Value(SS_ReadValue as T)
+    }else{
+        if(typeof SS_Value==='number' && isNaN(parseFloat(SS_ReadValue))===false){
+            setSS_Value(parseFloat(SS_ReadValue) as T)
         }else{
-            if(isNaN(parseFloat(SS_ReadValue))===false){
-                setSS_Value(parseFloat(SS_ReadValue))
-            }else{
-                f_Reset()
-            }
+            f_Reset()
         }
     }
+    }
+}
+//...
 
-    function f_Reset(){
-        if(SS_DefaultValue!==null){
-        setSS_ReadValue(SS_DefaultValue.toString())
-        setSS_Value(SS_DefaultValue)
-        }
+function f_Reset(){
+    if(typeof SS_DefaultValue===typeof SS_Value && SS_DefaultValue!==null &&SS_DefaultValue!==undefined){
+    setSS_ReadValue(SS_DefaultValue.toString())
+    setSS_Value(SS_DefaultValue)
     }
+}
+
+let JSX_ResetButton=<></>
+if(typeof SS_DefaultValue===typeof SS_Value){
+    JSX_ResetButton=<button onClick={f_Reset}>Reset</button>
+}
     return (
-        <div>
+    <div>
         {UI_Title({Name:Name})}
-        <input id={'UI_ResettingInput'+uID(Name)+let_ID}
+        <input id={ID}
         value={SS_ReadValue}
         onChange={f_OnChange}
         ></input>
     <button onClick={f_Ok}>Ok</button>
-    {SS_DefaultValue?<button onClick={f_Reset}>Reset</button>:<></>}
+    {JSX_ResetButton}
     </div>)
 }
 

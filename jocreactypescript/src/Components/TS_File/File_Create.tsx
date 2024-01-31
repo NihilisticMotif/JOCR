@@ -5,11 +5,20 @@ export function File_Create(
         ):TS_File[]{
             const let_NEWELEMENT:TS_File={
                 Key:FILES.length,
-                ImageName:null,
-                OriginalImageFile:null,
-                ImageFile:null,
-                TextFiles:null,
-                TextName:null
+                Img:{
+                    Name:null,
+                    EditedFile:null,
+                    OriginFile:null
+                },
+                Text:{
+                    Name:null,
+                    File:null
+                },
+                OpenSS:false,
+                SS_OCR:null,
+                SS_ReadOCR:null,
+                SS_EditImg:null,
+                SS_ShowImg:null
                 }
             return [...FILES,let_NEWELEMENT]
 }

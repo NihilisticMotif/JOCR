@@ -1,3 +1,603 @@
+!==undefined && SS_Title!==null
+ 
+SS_Title[ThisFile.Key]
+ 
+//console.log(ThisFile)
+ 
+''
+        if(ThisFile.Img.Name){
+            let_ImageTitle=ThisFile.Img.Name
+        }
+        else if(SS_File.ImageFolderName){
+            let_ImageTitle=SS_File.ImageFolderName+ThisFile.Key.toString()
+        }
+        else{
+            let_ImageTitle='Untitled No.'+ThisFile.Key.toString()
+        }
+ 
+/*
+Argument of type '() => (string | null)[] | null' is not assignable to parameter of type 'string[] | (() => string[] | null) | null'.
+  Type '() => (string | null)[] | null' is not assignable to type '() => string[] | null'.
+    Type '(string | null)[] | null' is not assignable to type 'string[] | null'.
+      Type '(string | null)[]' is not assignable to type 'string[]'.
+        Type 'string | null' is not assignable to type 'string'.
+          Type 'null' is not assignable to type 'string'.ts(2345)
+*/
+ 
+ as string[]
+ 
+else{
+    return ''
+}
+ 
+    if()
+ 
+const const_LANGUAGE=uLANGUAGE
+const const_PSM = uPSM
+ 
+TextFiles
+ 
+import { TS_SS_File } from "../TS_SS_File/An_Index"
+ 
+                SS_File:null,
+ 
+    SS_File:TS_SS_File|null,
+ 
+    TextFiles:string|null,
+    TextName:string|null,
+ 
+    ImageName:string|null,
+    OriginalImageFile:File|null,
+    ImageFile:File|null,
+ 
+// Rotation
+ 
+ && SS_DefaultValue
+ 
+function f_Fake(){
+    alert('This is Fake Function')
+}
+ 
+    Dimension:[0,0]
+ 
+        Dimension:[0,0]
+ 
+    Dimension:[number,number]
+ 
+import { TS_SS_File } from '../TS_SS_File/An_Index';
+import { TS_SS_OCR } from '../TS_SS_OCR/An_Index';
+import { TS_SS_EditImg } from '../TS_SS_EditImg/An_Index';
+ 
+    console.log(SS_Value)
+ 
+    alert(SS_Value)
+ 
+alert('SS_ReadValue')
+ 
+    if(SS_Value){
+ 
+'UI_ResettingInput'+uID(Name)+let_
+ 
+'UI_ResettingInput'+uID(Name)+let_
+ 
+let_
+ 
+ Name:
+ 
+    ApplyChange_EditImage:boolean
+ 
+_OCR
+ 
+    //setSS_Languages(let_Update)
+ 
+{index} 
+ 
++'('+SS_Languages+')'
+ 
+let let_Update=
+ 
+[index]
+ 
+Select
+ 
+.splice(index,1)
+ 
+    let let_Update=[SS_SelectLanguage]
+ 
+    console.log(cSS_Language.slice(index,1))
+ 
+,SS_SearchTerm
+ 
+SS_Option,
+ 
+    if(let_FilterList.length===1){
+ 
+const[eSS_Option,seteSS_Option]=useState<typeof List[number]>(SS_Option)
+ 
+    placeholder={eSS_Option}
+ 
+    if(let_FilterList.length===1){
+ 
+    if(let_FilterList.length===1){
+        setSS_Option(let_FilterList[0])
+    }
+ 
+SS_SearchTerm
+ 
+setSS_Option(eSS_Option)
+ 
+<h1>{SS_SelectLanguage}</h1>
+ 
+    // console.log(cSS_Language[index])
+ 
+    console.log(cSS_Language[index])
+ 
+<tr>
+</tr>
+ 
+,...cSS_Language
+ 
+?let_Update:SS_Languages
+ 
+    TS_SS_OCR
+ 
+setSS_SelectLanguage
+ 
+import UI_Options from '../UI_Options';
+import UI_Factory from '../UI_Factory';
+ 
+import UI_Options from '../UI_Options';
+import UI_Factory from '../UI_Factory';
+ 
+<UI_Options
+Name="Detect Image as "
+Options={uPSM}
+SS_Option={SS_PSM}
+setSS_Options={setSS_PSM}
+/>,
+ 
+</div>
+ 
+:ReactNode
+ 
+:ReactNode
+ 
+:ReactNode
+ 
+:ReactNode
+ 
+:ReactNode
+ 
+<UI_Factory
+Name='Language'
+
+/>
+ 
+SSOCR_
+ 
+Operate
+ 
+<></>
+ 
+// Operate
+// Option: Color
+// Rotation
+ 
+    SS_File,
+    SS_EditImg,
+ 
+const[eSS_OCR,seteSS_OCR]=useState<TS_SS_OCR>(SS_OCR)
+ 
+    setSS_OCR(eSS_OCR)
+ 
+    eSS_OCR,
+ 
+const[eSS_EditImg,seteSS_EditImg]=useState<TS_SS_EditImg>(SS_EditImg)
+ 
+const[eSS_File,seteSS_File]=useState<TS_SS_File>(SS_File)
+ 
+eSS_EditImg
+ 
+ | null
+ 
+// Import Folder
+// ImageFolderName: string | null
+// TextFolderName: string  | null
+// Count File: number
+ 
+er(eSS_File,SS_TextFolderName,false)
+ 
+    //let UpdateImgName = SSFile_NameFolder(eSS_File,SS_ImgFolderName,true)
+    //let UpdateTextName = SSFile_NameFold
+ 
+    if(SS_ImgFolderName!==''){}
+ 
+null
+ 
+null
+ 
+SS_File.ImageFolderName?
+ 
+SS_File.ImageFolderName?
+ 
+/*
+// I want to make UI_ResettingInput able to use
+// variable in string, number and/or string|number.
+const UI_ResettingInput = (
+{
+Name,
+setSS_Value,
+SS_Value,
+SS_DefaultValue,
+}
+:{
+Name:string
+setSS_Value:(S:string|number)=>void
+SS_Value:string|number
+SS_DefaultValue:string|number|null
+ */
+ 
+/*
+Type 'Dispatch<SetStateAction<string>>' is not assignable to type '(S: string | number) => void'.
+  Types of parameters 'value' and 'S' are incompatible.
+    Type 'string | number' is not assignable to type 'SetStateAction<string>'.
+      Type 'number' is not assignable to type 'SetStateAction<string>'.ts(2322)
+index.tsx(15, 1): The expected type comes from property 'setSS_Value' which is declared here on type 'IntrinsicAttributes & { Name: string; setSS_Value: (S: string | number) => void; SS_Value: string | number; SS_DefaultValue: string | number | null; }'
+      */
+ 
+/**
+Argument of type 'string' is not assignable to parameter of type 'T'.
+  'T' could be instantiated with an arbitrary type which could be unrelated to 'string'.
+ */
+ 
+/*
+Argument of type 'number' is not assignable to parameter of type 'T'.
+  'T' could be instantiated with an arbitrary type which could be unrelated to 'number'.ts(2345)
+*/
+ 
+//...
+ 
+!==null
+ 
+let let_Type = T    // let_Type specify the type of SS_Val
+ 
+if(<T,>==='string'){}
+ 
+typeof SS_Value==='number'?SS_Value.toString():''
+ 
+//...
+
+//...
+ 
+geFolderName:'')
+ 
+]=useState<string>(SS_File.ImageFolderName?SS_File.Ima
+ 
+const[SS_ImgFolderName,setSS_ImgFolderName
+ 
+const MyComponent = <T,>({ data }: MyComponentProps<T>) => {}
+ 
+:ReactNode=>
+ 
+<T>
+ 
+{
+Name:string
+setSS_Value:(S:string|number)=>void
+SS_Value:string|number
+SS_DefaultValue:string|number|null
+}
+ 
+:{
+Name:string
+setSS_Value:(S:string|number)=>void
+SS_Value:string|number
+SS_DefaultValue:string|number|null
+}
+ 
+const UI_ResettingInput: React.FC<UI_ResettingInputProps<string | number>> = ({
+  Name,
+  setSS_Value,
+  SS_Value,
+  SS_DefaultValue
+}) => {
+ 
+Type={string}
+ 
+// Select File (based on image name)
+ 
+const [SS_ThisFile, setSS_ThisFile] = useState<string>(():string => {
+  if (eSS_File.AllFiles) {
+    const selectedFile = eSS_File.AllFiles[eSS_File.SelectThisFile.index].ImageName;
+    if (selectedFile) {
+      return selectedFile;
+    } else if (eSS_File.ImageFolderName) {
+      return eSS_File.ImageFolderName + eSS_File.SelectThisFile.index.toString();
+    }
+  }
+  return 'Untitled No.' + eSS_File.SelectThisFile.index.toString();
+});
+const[SS_AllFileName,setSS_AllFileName]=useState<string[]>(
+eSS_File.AllFiles?
+eSS_File.AllFiles.map((i)=>{
+    if(i.ImageName){
+        return i.ImageName
+    }
+    else{
+        if(eSS_File.ImageFolderName){
+            return eSS_File.ImageFolderName+i.Key.toString()
+        }
+        else{
+            return 'Untitled No.'+i.Key.toString()
+        }
+    }
+})
+:['']
+)
+ 
+<UI_SearchOption
+Name='Select File'
+List={SS_AllFileName}
+SS_Option={SS_ThisFile}
+setSS_Option={setSS_ThisFile}
+IsSearch={true}
+/>
+ 
+Empty
+ 
+    eSS_File.AllFiles[eSS_File.SelectThisFile.index]?
+        eSS_File.AllFiles[eSS_File.SelectThisFile.index]
+        :eSS_File.ImageFolderName?
+            eSS_File.ImageFolderName+eSS_File.SelectThisFile.toString()
+            :'undefined No.'+eSS_File.SelectThisFile.toString()
+    :'Empty'
+ 
+ // This should be a string
+ 
+
+  // If none of the above conditions match, provide a default value
+ 
+    :''
+ 
+    :''
+ 
+    if()
+ 
+        return ''
+ 
+'Empty'
+ 
+Im
+ 
+<div>
+ 
+</div>
+ 
+<input
+    onChange={(e) => setSS_SearchTerm(e.target.value)}
+    >
+    </input>
+ 
+strin
+ 
+const[SS_SearchTerm,setSS_SearchTerm]=useState<string>('')
+const[eSS_Option,seteSS_Option]=useState<string>(SS_Option)
+ 
+<button onClick={()=>Function()}>{Name}</button>
+ 
+erDat
+ 
+InputID,
+ 
+InputID:string
+ 
+[]|null
+ 
+SSOCR_Languages: typeof uLANGUAGE[number][]|null
+ 
+SSOCR_PSM:       typeof uPSM[number] 
+ 
+const_PSM:       uPSM
+ 
+const_LANGUAGE:  uLANGUAGE,
+ 
+        const_PSM:       uPSM
+ 
+        const_LANGUAGE:  uLANGUAGE,
+ 
+SSOCR_Languages: typeof uLANGUAGE[number][]|null
+ 
+SSOCR_PSM:       typeof uPSM[number] 
+ 
+// ImageFolderName: string | null
+// TextFolderName: string  | null
+// Count File: number
+ 
+ | null;
+ 
+     
+ 
+    SS_ThisShowImg:null,
+    setSS_ThisShowImg:()=>{},
+ 
+    SS_ThisShowImg:     TS_SS_ShowImg[]|null,
+    setSS_ThisShowImg: (S:TS_SS_ShowImg[]|null)=>void,
+ 
+    setSS_ThisOCR:     (S:TS_SS_OCR[]|null)=>void,
+    SS_ThisShowImg:     TS_SS_ShowImg[]|null,
+ 
+SS_ThisShowImg,
+setSS_ThisShowImg,
+ 
+const[SS_ThisShowImg,setSS_ThisShowImg]=useState<TS_SS_ShowImg[]|null>(null)
+ 
+_ShowImg';
+ 
+import { TS_SS_ShowImg } from '../TS_UseState/TS_SS
+ 
+    eSS_ShowImg,
+ 
+    setSS_ShowImg(eSS_ShowImg)
+ 
+S_SS_ShowImg>(SS_ShowImg)
+ 
+const[eSS_ShowImg,seteSS_ShowImg]=useState<T
+ 
+const{SS_ShowImg}=useContext(Context_Main)
+const{setSS_ShowImg}=useContext(Context_Main)
+ 
+
+
+useEffect(()=>{
+    setSS_ShowImg(eSS_ShowImg)
+},[eSS_ShowImg])
+
+ 
+
+useEffect(()=>{
+    setSS_EditImg(eSS_EditImg)
+},[eSS_EditImg])
+ 
+import { useContext } from 'react';
+ 
+const{SS_ShowImg}=useContext(Context_Main)
+const{SS_EditImg}=useContext(Context_Main)
+const{SS_OCR}=useContext(Context_Main)
+ 
+const[SS_DeleteWarning,setSS_DeleteWarning]=useState<boolean>(false)
+// const{setSS_Text}=useGlobalContext()
+ 
+const ID_DIV="fdjceofijvepgevrvcoirfv0rp"
+const ID_BUTTON="fdfwerxeimrnerxiroirfv0rp"
+ 
+    display:grid;
+ 
+</div>
+ 
+ClassNameUI
+ 
+ClassName
+ 
+ClassName
+ 
+ style={{backgroundColor:"#FFFFFF"}}
+ 
+        <div id={ID_DIV+Self.Key.toString()} style={{backgroundColor:JSX_Color}} >
+            {JSX_Header}
+        </div>
+ 
+</>
+ 
+<>
+ 
+let JSX_Color='Page_Tab Error'
+ 
+</div>
+ 
+            </div>
+ 
+            <div id={ID_BUTTON+Self.Key.toString()}>
+ 
+            JSX_Header=<>
+            <UI_Title Name={"Image: "+let_ImageTitle}/>
+            <div id={ID_BUTTON+Self.Key.toString()}>
+            <UI_Button Name={'x'} Function={()=>{f_SelectFile(Self.Key,"DeleteWarning")}}/>
+            </div>
+            </>
+ 
+            JSX_Header=<>
+            <UI_Title Name={"Image: "+let_ImageTitle}/>
+            <div id={ID_BUTTON+Self.Key.toString()}>
+            <UI_Button Name={'x'} Function={()=>{f_SelectFile(Self.Key,"DeleteWarning")}}/>
+            </div>
+ 
+            JSX_Header=<>
+            <UI_Title Name={"Image: "+let_ImageTitle}/>
+            <UI_Button Name={'x'} Function={()=>{f_SelectFile(Self.Key,"DeleteWarning")}}/>
+            </>
+ 
+onClick={()=>f_ClickFile(Self.Key)}
+ 
+    let body = document.getElementById(ID_DIV+ThisFile.toString);
+    let except = document.getElementById(ID_BUTTON+ThisFile.toString());   
+ 
+    
+    if(body){
+        alert('Body')
+    //body!.addEventListener("click", function () {
+    //    alert("wrapper");
+    //}, false);
+    //if(except){
+    //except!.addEventListener("click", function (ev) {
+    //    alert("except");
+    //    ev.stopPropagation(); //this is important! If removed, you'll get both alerts
+    //}, false);
+    //}
+    }
+ 
+    let body = document.getElementById(ID_DIV+ThisFile.toString);
+    let except = document.getElementById(ID_BUTTON+ThisFile.toString());    
+    // https://stackoverflow.com/questions/33657212/javascript-click-anywhere-in-body-except-the-one-element-inside-it
+    
+    if(body){
+        alert('Body')
+    //body!.addEventListener("click", function () {
+    //    alert("wrapper");
+    //}, false);
+    //if(except){
+    //except!.addEventListener("click", function (ev) {
+    //    alert("except");
+    //    ev.stopPropagation(); //this is important! If removed, you'll get both alerts
+    //}, false);
+    //}
+    }
+ 
+###################################")
+ 
+    console.log("#################################################
+ 
+.id
+ 
+id
+ 
+</div>
+ 
+function f_OpenDeleteWarning(ThisFile:number){
+    let let_Update=SSFile_SelectThisFile(eSS_File,ThisFile,'DeleteWarning')
+    seteSS_File(let_Update)
+}
+ 
+<UI_Title Name={"Image: "+let_ImageTitle}/>
+            <UI_Button Name={'x'} Function={()=>{f_OpenDeleteWarning(i.Key)}}/>
+ 
+SS_File.SelectThisFile.index===i.Key?'red':
+ 
+    let cSS_File = eSS_File
+ 
+ && eSS_File.AllFiles
+ 
+    }
+ 
+    if(eSS_File){
+ 
+.AllFiles
+ 
+[...
+ 
+.AllFiles]
+ 
+const[SS_DeleteWarning,setSS_DeleteWarning]=useState<boolean>(false)
+ 
+    // console.log(FILES[THISFILE])
+ 
+        console.log(let_Update)
+ 
+        //console.log(cSS_File)
+ 
+const[SS_cFile,setSS_cFile]=useState<TS_SS_File>()
+ 
+JSON.stringify(
+ 
 hisFile:1
  
 et_Update.length
