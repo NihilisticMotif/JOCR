@@ -1,10 +1,10 @@
 import TS_File from "./An_Index"
 
-export function File_Create(
-        FILES:TS_File[],
-        ):TS_File[]{
+export function File_CreateDefault(
+        KEY:number,
+        ):TS_File{
             const let_NEWELEMENT:TS_File={
-                Key:FILES.length,
+                Key:KEY,
                 Img:{
                     Name:null,
                     EditedFile:null,
@@ -20,5 +20,5 @@ export function File_Create(
                 SS_ReadOCR:null,
                 SS_EditImg:null,
                 }
-            return [...FILES,let_NEWELEMENT]
+            return let_NEWELEMENT
 }

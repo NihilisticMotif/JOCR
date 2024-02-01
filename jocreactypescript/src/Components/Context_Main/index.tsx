@@ -31,18 +31,16 @@ export const Context_Main=createContext<TS_Context_Main>({
             index:0,
             mode:'Default'
         },
-        ImageFolderName:'',
-        TextFolderName:'',
-        ApplyAllSetting:{
-            OCR:false,
-            Img:false
+        FolderName:{
+            Img:'',
+            Text:''
         }
     },
     setSS_File:()=>{},
     SS_OCR:{
         Operate:   false,
         Languages: null,
-        PSM:       uPSM[0] ,
+        PSM:       uPSM[0],
     },
     setSS_OCR:     ()=>{},
     SS_ShowImg:{

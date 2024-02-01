@@ -9,9 +9,7 @@ export function SSFile_SelectThisFile(SS_File:TS_SS_File,ThisFile:number,mode:ty
                 index:ThisFile,
                 mode:mode
             },
-            ImageFolderName:SS_File.ImageFolderName,
-            TextFolderName:SS_File.TextFolderName,
-            ApplyAllSetting:SS_File.ApplyAllSetting
+            FolderName:SS_File.FolderName
         }
     }
     else{

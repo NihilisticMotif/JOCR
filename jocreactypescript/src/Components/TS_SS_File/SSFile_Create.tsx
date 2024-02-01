@@ -14,9 +14,7 @@ export function SSFile_Create(
                 index:let_Update.length-1,
                 mode:'Default'
             },
-            ImageFolderName:SS_File.ImageFolderName,
-            TextFolderName:SS_File.TextFolderName,
-            ApplyAllSetting:SS_File.ApplyAllSetting
+            FolderName:SS_File.FolderName
         }
     }
     else{
@@ -26,7 +24,8 @@ export function SSFile_Create(
                 Img:{
                     Name:null,
                     EditedFile:null,
-                    OriginFile:null
+                    OriginFile:null,
+                    Shape:[0,0]
                 },
                 Text:{
                     Name:null,
@@ -36,15 +35,12 @@ export function SSFile_Create(
                 SS_OCR:null,
                 SS_ReadOCR:null,
                 SS_EditImg:null,
-                SS_ShowImg:null
                 }],
             SelectThisFile:{
                 index:0,
                 mode:'Default'
             },
-            ImageFolderName:SS_File.ImageFolderName,
-            TextFolderName:SS_File.TextFolderName,
-            ApplyAllSetting:SS_File.ApplyAllSetting
+            FolderName:SS_File.FolderName
         }
     }
     return let_Output

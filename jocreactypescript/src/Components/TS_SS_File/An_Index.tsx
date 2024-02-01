@@ -6,10 +6,8 @@ export type TS_SS_File={
         index:number,
         mode:typeof const_mode[number]
     },
-    ImageFolderName:string,
-    TextFolderName:string,
-    ApplyAllSetting:{
-        OCR:boolean,
-        Img:boolean
+    FolderName:{
+        Img:string,
+        Text:string
     }
 }

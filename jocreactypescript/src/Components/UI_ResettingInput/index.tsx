@@ -55,7 +55,6 @@ function f_Ok(){
     }
     }
 }
-//...
 
 function f_Reset(){
     if(typeof SS_DefaultValue===typeof SS_Value && SS_DefaultValue!==null &&SS_DefaultValue!==undefined){

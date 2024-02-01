@@ -13,7 +13,7 @@ import { const_color } from '../TS_SS_EditImg/const_color';
 import { uPSM } from '../utility/uPSM';
 import { uLANGUAGE } from '../utility/uLANGUAGE';
 import { const_ShowColor } from '../TS_SS_ShowImg/const_showcolor';
-const Page_HeaderButton = (
+const Page_Header = (
 {
 }
 :{
@@ -31,21 +31,19 @@ const{SS_OCR}=useContext(Context_Main)
 const{setSS_OCR}=useContext(Context_Main)
 
 // SS_File
-const[SS_ImgFolderName,setSS_ImgFolderName]=useState<string>(SS_File.ImageFolderName)
-const[SS_TextFolderName,setSS_TextFolderName]=useState<string>(SS_File.TextFolderName)
+const[SS_ImgFolderName,setSS_ImgFolderName]=useState<string>(SS_File.FolderName.Img)
+const[SS_TextFolderName,setSS_TextFolderName]=useState<string>(SS_File.FolderName.Text)
 
 // SS_EditImg
-const[SS_GlobalImg,setSS_GlobalImg]=useState<boolean>(SS_File.ApplyAllSetting.Img)
 const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
 const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
 const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
 
 // SS_ShowImg
-const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
-const[SS_OriginImg,setSS_OriginImg]=useState<typeof const_ShowColor[number]>('EditedImage')
+// const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+// const[SS_OriginImg,setSS_OriginImg]=useState<typeof const_ShowColor[number]>('EditedImage')
 
 // SS_OCR
-const[SS_GlobalOCR,setSS_GlobalOCR]=useState<boolean>(SS_File.ApplyAllSetting.OCR)
 const[SS_OCRActivate,setSS_OCRActivate]=useState<boolean>(SS_OCR.Operate)
 const[SS_PSM,setSS_PSM]=useState<typeof uPSM[number]>(SS_OCR.PSM)
 const[SS_Languages,setSS_Languages]=useState<typeof uLANGUAGE[number][]|null>(SS_OCR.Languages)
@@ -57,11 +55,9 @@ useEffect(()=>{
         index:SS_File.SelectThisFile.index,
         mode:SS_File.SelectThisFile.mode
     },
-    ImageFolderName:SS_ImgFolderName,
-    TextFolderName:SS_TextFolderName,
-    ApplyAllSetting:{
-        OCR:SS_GlobalOCR,
-        Img:SS_GlobalImg
+    FolderName:{
+        Img:SS_ImgFolderName,
+        Text:SS_TextFolderName,
     }
     })
     setSS_EditImg({
@@ -69,10 +65,10 @@ useEffect(()=>{
         Color:SS_ColorMode,
         Rotate:SS_Rotate
     })
-    setSS_ShowImg({
-        OriginalImage:SS_OriginImg,
-        Zoom:SS_Zoom
-    })
+    // setSS_ShowImg({
+    //     OriginalImage:SS_OriginImg,
+    //     Zoom:SS_Zoom
+    // })
     setSS_OCR({
         Operate:SS_OCRActivate,
         PSM:SS_PSM,
@@ -86,15 +82,13 @@ useEffect(()=>{
     SS_EditImgActivate,
     SS_ColorMode,
     SS_Rotate,
-    SS_GlobalImg,
     // ShowImg
-    SS_OriginImg,
-    SS_Zoom,
+    // SS_OriginImg,
+    // SS_Zoom,
     // OCR
     SS_OCRActivate,
     SS_PSM,
     SS_Languages,
-    SS_GlobalOCR
 ])
 
 //***************************************************************************************************************************************
@@ -160,40 +154,40 @@ setSS_Value={setSS_Rotate}
 SS_Value={SS_Rotate}
 SS_DefaultValue={0}
 />,
-<div>
-<UI_Title
-Name={'Zoom: '+SS_Zoom.toString()}
-/>
-<UI_Button
-Name='+'
-Function={()=>{
-if(SS_Zoom<10){
-    let ss_Zoom=SS_Zoom 
-    let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
-    setSS_Zoom(let_Zoom)
-}}}
-/>
-<UI_Button
-Name='-'
-Function={()=>{
-if(SS_Zoom>0.1){
-    let ss_Zoom=SS_Zoom 
-    let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
-    setSS_Zoom(let_Zoom)
-}}}
-/>
-</div>
+// <div>
+// <UI_Title
+// Name={'Zoom: '+SS_Zoom.toString()}
+// />
+// <UI_Button
+// Name='+'
+// Function={()=>{
+// if(SS_Zoom<10){
+//     let ss_Zoom=SS_Zoom 
+//     let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+//     setSS_Zoom(let_Zoom)
+// }}}
+// />
+// <UI_Button
+// Name='-'
+// Function={()=>{
+// if(SS_Zoom>0.1){
+//     let ss_Zoom=SS_Zoom 
+//     let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+//     setSS_Zoom(let_Zoom)
+// }}}
+// />
+// </div>
 ,
-<UI_SearchOption
-Name="Show"
-List={const_ShowColor}
-SS_Option={SS_OriginImg}
-setSS_Option={setSS_OriginImg}
-IsSearch={false}
-/>,
+// <UI_SearchOption
+// Name="Show"
+// List={const_ShowColor}
+// SS_Option={SS_OriginImg}
+// setSS_Option={setSS_OriginImg}
+// IsSearch={false}
+// />,
 <UI_Button
 Name="Apply All Image Setting"
-Function={()=>{setSS_GlobalImg(true)}}
+Function={()=>{setSS_EditImgActivate(true)}}
 />
 ]}
 Color='#FFFFFF'
@@ -252,7 +246,7 @@ Function={()=>{
 </div>,
 <UI_Button
 Name="Apply All OCR Setting"
-Function={()=>{setSS_GlobalOCR(true)}}
+Function={()=>{setSS_OCRActivate(true)}}
 />
 ]}
 Color='#FFFFFF'
@@ -274,4 +268,4 @@ Color='#FFFFFF'
 </>
     )}
 
-export default Page_HeaderButton
+export default Page_Header

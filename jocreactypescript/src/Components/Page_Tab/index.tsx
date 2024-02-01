@@ -38,28 +38,48 @@ const{setSS_File}=useContext(Context_Main)
 // e = useEffect
 // c = copy
 const[eSS_File,seteSS_File]=useState<TS_SS_File>(SS_File)
-const [SS_Title, setSS_Title] = useState<string[] | null>(() => {
-if (SS_File.AllFiles) {
-  return SS_File.AllFiles.map((i,index) => {
-    if(SS_File.AllFiles![index].Img.Name!==null && SS_File.AllFiles![index].Img.Name!==undefined){
-        return SS_File.AllFiles![index].Img.Name
-    }
-    else if(SS_File.ImageFolderName){
-        return SS_File.ImageFolderName+i.Key.toString()
-    }
-    else{
-        return 'Untitled No.'+i.Key.toString()
-    }
-}) as string[]
-}
-else {
-  return null; // Set to null if AllFiles is falsy
-}
-});
 
 useEffect(()=>{
-    setSS_File(eSS_File)
+    seteSS_File({
+        AllFiles:eSS_File.AllFiles,
+        SelectThisFile:eSS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+    setSS_File({
+        AllFiles:eSS_File.AllFiles,
+        SelectThisFile:eSS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+    setSS_Title(()=>{
+    if (eSS_File.AllFiles) {
+        return eSS_File.AllFiles.map((i, index) => {
+            if (eSS_File.AllFiles![index].Img.Name !== null && eSS_File.AllFiles![index].Img.Name !== undefined) {
+                return eSS_File.AllFiles![index].Img.Name!;
+            } else if (eSS_File.FolderName.Img!=='') {
+                return eSS_File.FolderName.Img+i.Key.toString();
+            } else {
+                return 'UntitledImg' + i.Key.toString();
+            }
+        });
+    }
+    return [''];
+    })
 },[eSS_File])
+
+const[SS_Title,setSS_Title]=useState<string[]>(()=>{
+    if (SS_File.AllFiles) {
+        return SS_File.AllFiles.map((i, index) => {
+            if (SS_File.AllFiles![index].Img.Name !== null && SS_File.AllFiles![index].Img.Name !== undefined) {
+                return SS_File.AllFiles![index].Img.Name!;
+            } else if (SS_File.FolderName.Img!=='') {
+                return SS_File.FolderName.Img + i.Key.toString();
+            } else {
+                return 'UntitledImg' + i.Key.toString();
+            }
+        });
+    }
+    return [''];
+})
 
 //***************************************************************************************************************************************
 // FUNCTION
@@ -80,38 +100,21 @@ function f_SelectFile(ThisFile:number,mode:typeof const_mode[number]){
     seteSS_File(let_Update)
 }
 
-// function f_ClickFile(ThisFile:number){ 
-//     // https://stackoverflow.com/questions/33657212/javascript-click-anywhere-in-body-except-the-one-element-inside-it
-//     // let let_Update=SSFile_SelectThisFile(eSS_File,ThisFile,"Default")
-//     // seteSS_File(let_Update)
-// }
-
 //***************************************************************************************************************************************
 // JSX
 //***************************************************************************************************************************************
 
 let JSX_Pages=[<UI_Button Name={'+'} Function={f_CreateNewFile}/>]
-if(SS_File.AllFiles && SS_Title!==undefined&&SS_Title!==null){
-    // FixThis
-    console.log('Working')
-    //console.log("####################################################################################")
+if(SS_File.AllFiles){
     JSX_Pages=SS_File.AllFiles.map(
         (ThisFile)=>{
-        //console.log(ThisFile)
-        console.log(SS_Title[ThisFile.Key])
-        let let_ImageTitle:string=SS_Title[ThisFile.Key]
-        /*
-        if(ThisFile.Img.Name){
-            let_ImageTitle=ThisFile.Img.Name
-        }
-        else if(SS_File.ImageFolderName){
-            let_ImageTitle=SS_File.ImageFolderName+ThisFile.Key.toString()
+        let let_ImageTitle:string='NotWorking'
+        if(SS_Title[ThisFile.Key]){
+            let_ImageTitle=SS_Title[ThisFile.Key]
         }
         else{
-            let_ImageTitle='Untitled No.'+ThisFile.Key.toString()
+            let_ImageTitle="Invalid SS_Title[ThisFile.Key]"
         }
-        */
-
         let JSX_Header=[
             <div onClick={()=>{f_SelectFile(ThisFile.Key,"Default")}}>
             <UI_Title Name={"Image: "+let_ImageTitle}/>
@@ -144,10 +147,6 @@ if(SS_File.AllFiles && SS_Title!==undefined&&SS_Title!==null){
     JSX_Pages.push(<UI_Button Name={'+'} Function={f_CreateNewFile}/>)
 }
 
-//***************************************************************************************************************************************
-// OUTPUT
-//***************************************************************************************************************************************
-
     return (
 <div>
 <UI_DisplayFlex
@@ -158,6 +157,3 @@ Color={'#AAAAAA'}
     )}
 
 export default Page_Tab
-// [Import Image, Name, Export Image, Name, Export Text]
-// [Operate Image, Color or Gray, ]
-// [Page1, Page2, +]

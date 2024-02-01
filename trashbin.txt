@@ -1,3 +1,1124 @@
+2. Page_Image
+ 
+Read
+ 
+    
+ 
+    
+ 
+    SS_OpenSS ,
+ 
+[...FILES,
+ 
+    &&ThisFile.Img.Name
+ 
+    &&ThisFile.Text.File!==null 
+    &&ThisFile.Text.File!==undefined
+ 
+setSS_File({
+    AllFiles:SS_File.AllFiles,
+    SelectThisFile:SS_File.SelectThisFile,
+    FolderName:{
+        Img:SS_File.FolderName.Img,
+        Text:SS_FileName
+    }
+})
+ 
+//...
+ 
+SS_File.FolderName
+ 
+SS_File.FolderName.Img+SS_File.SelectThisFile.index.toString()
+ 
+ No.
+ 
+ + ' No' 
+ 
+/** Argument of type 'string | null' is not assignable to parameter of type 'string | (() => string)'.
+  Type 'null' is not assignable to type 'string | (() => string)' */
+ 
+    <button onClick={()=>Function()}>{Name}</button>
+ 
+Name,
+Function
+ 
+Name:string
+Function:(S:void)=>void
+ 
+<>
+{JSX_OpenOverWrite}
+{JSX_OverWrite}
+</>
+ 
+//***************************************************************************************************************************************
+// HOOK
+//***************************************************************************************************************************************
+const{SS_File}=useContext(Context_Main)
+const{setSS_File}=useContext(Context_Main)
+const SelectKey=SS_File.SelectThisFile.index
+// const ThisFile=SS_File.AllFiles[SelectKey]
+const[eSS_FolderName,seteSS_FolderName]=useState<{
+    Img:string,
+    Text:string
+}>({
+    Img:SS_File.FolderName.Img,
+    Text:SS_File.FolderName.Text
+})
+
+const[eSS_Img,seteSS_Img]=useState<{
+    Name:string,
+    EditFile:File|null,
+    OriginFile:File|null
+}>({
+    Name:SS_File.AllFiles?
+        SS_File.AllFiles[SelectKey].Img.Name?
+            (SS_File.AllFiles[SelectKey].Img.Name)!
+            :('Untitled No.'+SelectKey.toString())
+        :'SS_File['+SelectKey.toString()+'].Img.Name does not exists.',
+    EditFile:null,
+    OriginFile:null
+})
+
+const[eSS_Text,seteSS_Text]=useState<{
+    Name:string,
+    File:string
+}>({
+    Name:SS_File.AllFiles?
+        SS_File.AllFiles[SelectKey].Text.Name!
+        :'SS_File['+SelectKey.toString()+'].Text.Name does not exists.',
+    File:SS_File.AllFiles?
+        SS_File.AllFiles[SelectKey].Text.File!
+        :'SS_File['+SelectKey.toString()+'].Text.File does not exists.'
+})
+
+const[eSS_OpenSS,seteSS_OpenSS]=useState<boolean>(SS_File.AllFiles?
+    SS_File.AllFiles[SelectKey].OpenSS
+    :false
+)
+
+const[eSS_OCR,seteSS_OCR]=useState<TS_SS_OCR|null>(SS_File.AllFiles?
+    SS_File.AllFiles[SelectKey].SS_OCR
+    :null
+)
+
+const[eSS_ReadOCR,seteSS_ReadOCR]=useState<TS_SS_ReadOCR|null>(SS_File.AllFiles?
+    SS_File.AllFiles[SelectKey].SS_ReadOCR
+    :null 
+)
+
+const[eSS_ImgShape ,seteSS_ImgShape]=useState<[number,number]>([0,0])
+const[eSS_EditImg,seteSS_EditImg]=useState<TS_SS_EditImg|null>(SS_File.AllFiles?
+    SS_File.AllFiles[SelectKey].SS_EditImg
+    :null
+)
+
+useEffect(()=>{
+    if(eSS_OpenSS===true){
+        seteSS_EditImg(Default_SS_EditImg)
+        seteSS_OCR(Default_SS_OCR)
+        seteSS_ReadOCR(Default_SS_ReadOCR)
+    }
+    else{
+        seteSS_EditImg(null)
+        seteSS_OCR(null)
+        seteSS_ReadOCR(null)
+    }
+},[eSS_OpenSS])
+
+useEffect(()=>{
+    if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:eSS_Img.Name,
+            EditedFile:eSS_Img.EditFile,
+            OriginFile:eSS_Img.OriginFile,
+            Shape:eSS_ImgShape
+        },
+        Text:{
+            Name:eSS_Text.Name,
+            File:eSS_Text.File
+        },
+        OpenSS:eSS_OpenSS,
+        SS_OCR:eSS_OCR,
+        SS_ReadOCR:eSS_ReadOCR,
+        SS_EditImg:eSS_EditImg
+    })
+    setSS_File({
+        AllFiles:SS_File.AllFiles,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:{
+            Img:eSS_FolderName.Img,
+            Text:eSS_FolderName.Text
+        }
+    })}
+},[
+    eSS_EditImg,
+    eSS_FolderName,
+    eSS_Img,
+    eSS_ImgShape,
+    eSS_OCR,
+    eSS_OpenSS,
+    eSS_ReadOCR,
+    eSS_Text
+])
+
+ 
+
+
+//***************************************************************************************************************************************
+// EDIT THE FILE
+//***************************************************************************************************************************************
+let JSX_OpenOverWrite=<UI_Activate
+Name='Open OCR Setting'
+IsActivate={eSS_OpenSS}
+setIsActivate={seteSS_OpenSS}
+/>
+let JSX_OverWrite=<></>
+if(eSS_OpenSS===true
+&&  eSS_EditImg
+&&  eSS_OCR
+&&  eSS_ReadOCR
+){
+JSX_OverWrite=<Page_OverWrite
+/>
+
+}
+ 
+const[s,sets]=useState<TS_SS_File|null>(null)
+ 
+SS_EditImg={eSS_EditImg}
+setSS_EditImg={seteSS_EditImg}
+SS_OCR    ={eSS_OCR}
+setSS_OCR    ={seteSS_OCR}
+SS_ReadOCR={eSS_ReadOCR}
+setSS_ReadOCR={seteSS_ReadOCR}
+ 
+const[ss,setss]=useState<null|TS_File>(null)
+ 
+******************************************************************************************
+ 
+//***************************************************************************************************************************************
+
+//*********************************************
+ 
+//***************************************************************************************************************************************
+// FUNCTION
+//***************************************************************************************************************************************
+
+
+//***************************************************************************************************************************************
+// JSX
+//***************************************************************************************************************************************
+
+
+ 
+    return (
+ 
+// OUTPUT
+ 
+// Joe Holley JoeStar
+ 
+    return (
+ 
+    )
+ 
+else{
+    return(<></>)
+}
+ 
+let let_ThisFile=SS_File.AllFiles[SelectKey]
+ 
+TS_SS_File
+ 
+
+
+
+ 
+){
+
+if(
+ 
+else{
+    return(<></>)
+}
+ 
+else{
+    return(<></>)
+}
+ 
+const [SS_EditImg,setSS_EditImg ] = useState(SS_File.AllFiles[SelectKey].SS_EditImg)
+const [SS_OCR    ,setSS_OCR     ] = useState(SS_File.AllFiles[SelectKey].SS_OCR)
+const [SS_ReadOCR,setSS_ReadOCR ] = useState(SS_File.AllFiles[SelectKey].SS_ReadOCR)
+const [SS_OpenSS ,setSS_OpenSS  ] = useState(SS_File.AllFiles[SelectKey].OpenSS)
+ 
+useEffect(()=>{
+    //
+},[
+    SS_EditImg,
+    SS_OCR    ,
+    SS_ReadOCR,
+    SS_OpenSS ,
+])
+ 
+const SS_EditImg = SS_File.AllFiles[SelectKey].SS_EditImg
+ 
+SelectKey
+ 
+SelectKey:number
+ 
+SS_EditImg,
+setSS_EditImg,
+SS_OCR,
+setSS_OCR,
+SS_ReadOCR,
+setSS_ReadOCR,
+ 
+SS_EditImg:TS_SS_EditImg
+setSS_EditImg:(S:TS_SS_EditImg)=>void
+SS_OCR:TS_SS_OCR
+setSS_OCR:(S:TS_SS_OCR)=>void 
+SS_ReadOCR:TS_SS_ReadOCR
+setSS_ReadOCR:(S:TS_SS_ReadOCR)=>void
+ 
+ name="w3review"
+ 
+ows="4" cols="50"
+ 
+id+
+ 
+id
+ 
+id:string
+ 
+import { TS_SS_EditImg } from "../../TS_SS_EditImg/An_Index"
+import { TS_SS_OCR } from "../../TS_SS_OCR/An_Index"
+ 
+import TS_SS
+ 
+<UI_Title
+Name='Analyze Image'/>
+ 
+</div>
+ 
+<></>
+ 
+<UI_DisplayFlex
+ 
+]}
+Color='#FFFFFF'
+/>
+ 
+JSX={[
+ 
+        ImageFolderName:eSS_FolderName.Img,
+        TextFolderName:eSS_FolderName.Text,
+ 
+
+    }
+    ImageFolderName:SS_ImgFolderName,
+    TextFolderName:
+ 
+Text
+ 
+Image
+ 
+import Page_Body from './Page_Body';
+ 
+<Page_Body/>
+ 
+function f_Fake(){
+    alert('This is Fake Function')
+}
+ 
+
+            ApplyAllSetting:SS_File.ApplyAllSetting
+ 
+            ApplyAllSetting:SS_File.ApplyAllSetting
+ 
+        ApplyAllSetting:SS_File.ApplyAllSetting
+ 
+        ApplyAllSetting:SS_File.ApplyAllSetting
+ 
+        ApplyAllSetting:SS_File.ApplyAllSetting
+ 
+{JSX_File}
+ 
+<UI_Button
+Name="Apply All OCR Setting"
+Function={()=>{setSS_LocalOCR(true)}}
+/>
+ 
+,
+<UI_Button
+Name="Apply All Image Setting"
+Function={()=>{setSS_LocalImg(true)}}
+/>
+ 
+    SS_LocalOCR,
+ 
+    SS_LocalImg,
+ 
+const[SS_LocalOCR,setSS_LocalOCR]=useState<boolean>(SS_File.ApplyAllSetting.OCR)
+ 
+const[SS_LocalImg,setSS_LocalImg]=useState<boolean>(SS_File.ApplyAllSetting.Img)
+ 
+    SS_GlobalOCR
+ 
+    SS_GlobalImg,
+ 
+    ApplyAllSetting:{
+        OCR:SS_GlobalOCR,
+        Img:SS_GlobalImg
+    }
+ 
+    ApplyAllSetting:{
+        OCR:false,
+        Img:false
+    }
+ 
+const[SS_GlobalOCR,setSS_GlobalOCR]=useState<boolean>(SS_File.ApplyAllSetting.OCR)
+ 
+const[SS_GlobalImg,setSS_GlobalImg]=useState<boolean>(SS_File.ApplyAllSetting.Img)
+ 
+        ApplyAllSetting:{
+            OCR:false,
+            Img:false
+        }
+ 
+    ApplyAllSetting:{
+        OCR:boolean,
+        Img:boolean
+    }
+ 
+            ApplyAllSetting:SS_File.ApplyAllSetting
+ 
+            ApplyAllSetting:SS_File.ApplyAllSetting
+ 
+const[SS_LocalOCR,setSS_LocalOCR]=useState<boolean>(SS_File.ApplyAllSetting.OCR)
+ 
+const[SS_LocalImg,setSS_LocalImg]=useState<boolean>(SS_File.ApplyAllSetting.Img)
+ 
+<UI_SearchOption
+Name="Show"
+List={const_ShowColor}
+SS_Option={SS_OriginImg}
+setSS_Option={setSS_OriginImg}
+IsSearch={false}
+/>,
+ 
+<UI_SearchOption
+Name="Show"
+List={const_ShowColor}
+SS_Option={SS_OriginImg}
+setSS_Option={setSS_OriginImg}
+IsSearch={false}
+/>,
+ 
+<UI_SearchOption
+Name="Show"
+List={const_ShowColor}
+SS_Option={SS_OriginImg}
+setSS_Option={setSS_OriginImg}
+IsSearch={false}
+/>,
+ 
+<div>
+<UI_Title
+Name={'Zoom: '+SS_Zoom.toString()}
+/>
+<UI_Button
+Name='+'
+Function={()=>{
+if(SS_Zoom<10){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+<UI_Button
+Name='-'
+Function={()=>{
+if(SS_Zoom>0.1){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+</div>
+ 
+let JSX_File=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Import Img File"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Img File:'+SS_ImgFileName}
+setSS_Value={setSS_ImgFileName}
+SS_Value={SS_ImgFileName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Img File"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Text File:'+SS_TextFileName}
+setSS_Value={setSS_TextFileName}
+SS_Value={SS_TextFileName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Text File"
+Function={()=>{f_Fake()}}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+    // ShowImg
+    SS_OriginImg,
+    SS_Zoom,
+ 
+    // File
+    SS_ImgFileName,
+    SS_TextFileName,
+ 
+    setSS_ShowImg({
+        OriginalImage:SS_OriginImg,
+        Zoom:SS_Zoom
+    })
+ 
+    setSS_File({
+    AllFiles:SS_File.AllFiles,
+    SelectThisFile:{
+        index:SS_File.SelectThisFile.index,
+        mode:SS_File.SelectThisFile.mode
+    },
+    ImageFolderName:SS_ImgFileName,
+    TextFolderName:SS_TextFileName,
+    ApplyAllSetting:{
+        OCR:SS_LocalOCR,
+        Img:SS_LocalImg
+    }
+    })
+ 
+const{SS_File}=useContext(Context_Main)
+const{setSS_File}=useContext(Context_Main)
+const{SS_ShowImg}=useContext(Context_Main)
+const{setSS_ShowImg}=useContext(Context_Main)
+ 
+
+// SS_File
+const[SS_ImgFileName,setSS_ImgFileName]=useState<string>(SS_File.ImageFolderName)
+const[SS_TextFileName,setSS_TextFileName]=useState<string>(SS_File.TextFolderName)
+ 
+
+// SS_ShowImg
+const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+const[SS_OriginImg,setSS_OriginImg]=useState<typeof const_ShowColor[number]>('EditedImage')
+ 
+SS_FileName,
+setSS_FileName
+ 
+<UI_Title
+Name={'Number of all page: '+(SS_File.AllFiles?SS_File.AllFiles.length.toString():'0')}
+/>
+ 
+// Show Original Image
+ 
+// Zoom
+ 
+import TS_Column from '../../../../../../../useless/JOCR2/T02_Column/An_Index';
+ 
+
+const{SS_ShowImg}=useContext(Context_Main)
+const{setSS_ShowImg}=useContext(Context_Main)
+ 
+const{SS_OCR}=useContext(Context_Main)
+const{setSS_OCR}=useContext(Context_Main)
+ 
+const{SS_EditImg}=useContext(Context_Main)
+const{setSS_EditImg}=useContext(Context_Main)
+ 
+const[SS_GlobalImg,setSS_GlobalImg]=useState<boolean>(SS_File.ApplyAllSetting.Img)
+ 
+let JSX_File=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Import Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Image Folder:'+SS_ImgFolderName}
+setSS_Value={setSS_ImgFolderName}
+SS_Value={SS_ImgFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Img Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Text Folder:'+SS_TextFolderName}
+setSS_Value={setSS_TextFolderName}
+SS_Value={SS_TextFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Text Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_Title
+Name={'Number of all page: '+(SS_File.AllFiles?SS_File.AllFiles.length.toString():'0')}
+/>
+]}
+Color='#FFFFFF'
+/>
+
+let JSX_EditImg=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={0}
+/>,
+<div>
+<UI_Title
+Name={'Zoom: '+SS_Zoom.toString()}
+/>
+<UI_Button
+Name='+'
+Function={()=>{
+if(SS_Zoom<10){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+<UI_Button
+Name='-'
+Function={()=>{
+if(SS_Zoom>0.1){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+</div>
+,
+<UI_SearchOption
+Name="Show"
+List={const_ShowColor}
+SS_Option={SS_OriginImg}
+setSS_Option={setSS_OriginImg}
+IsSearch={false}
+/>,
+<UI_Button
+Name="Apply All Image Setting"
+Function={()=>{setSS_GlobalImg(true)}}
+/>
+]}
+Color='#FFFFFF'
+/>
+
+let JSX_OCR =<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Operate OCR"
+Function={()=>{setSS_OCRActivate(true)}}
+/>,
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language '}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Operate OCR"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    console.log(SS_SelectLanguage)
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_OCR.Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>,
+<UI_Button
+Name="Apply All OCR Setting"
+Function={()=>{setSS_GlobalOCR(true)}}
+/>
+]}
+Color='#FFFFFF'
+
+/>
+ 
+const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
+const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
+const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
+ 
+ng,
+    EditFile:File|null,
+    OriginFile:File|null
+}>(
+ 
+&&  eSS_Text
+ 
+&&  eSS_OpenSS,
+ 
+&&  eSS_ImgShape,
+ 
+&&  eSS_Img,
+ 
+&&  eSS_FolderName,
+ 
+            let let_New=Default_File
+            let_New.Key
+ 
+            let_NEWELEMENT:TS_File={
+                Key:FILES.length,
+                Img:{
+                    Name:null,
+                    EditedFile:null,
+                    OriginFile:null,
+                    Shape:[0,0]
+                },
+                Text:{
+                    Name:null,
+                    File:null
+                },
+                OpenSS:false,
+                SS_OCR:null,
+                SS_ReadOCR:null,
+                SS_EditImg:null,
+                }
+ 
+const 
+ 
+const const_ExistentialError = 'ExistentialError'
+ 
+    
+ 
+    :
+ 
+const_ExistentialError
+ 
+|typeof const_ExistentialError
+ 
+    
+ 
+/*
+Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'
+*/
+ 
+                SS_ShowImg:null
+ 
+                SS_ShowImg:null
+ 
+    SS_ShowImg:TS_SS_ShowImg|null
+ 
+const[eSS_TextName,seteSS_TextName]=useState<string>('')
+ 
+<{Name:string|null,EditFile}
+ 
+const[eSS_OriginImg,seteSS_OriginImg]=useState<File|null>()
+const[eSS_EditImg,seteSS_EditImg]=useState<File|null>()
+const[eSS_ImgName,seteSS_ImNameg]=useState<string>()
+ 
+rigin
+ 
+{JSX_File}
+{JSX_EditImg}
+{JSX_OCR}
+ 
+**************************************************
+ 
+************************************************************
+ 
+
+//*************************
+ 
+const{SS_File}=useContext(Context_Main)
+const{setSS_File}=useContext(Context_Main)
+const{SS_EditImg}=useContext(Context_Main)
+const{setSS_EditImg}=useContext(Context_Main)
+const{SS_ShowImg}=useContext(Context_Main)
+const{setSS_ShowImg}=useContext(Context_Main)
+const{SS_OCR}=useContext(Context_Main)
+const{setSS_OCR}=useContext(Context_Main)
+
+// SS_File
+const[SS_ImgFolderName,setSS_ImgFolderName]=useState<string>(SS_File.ImageFolderName)
+const[SS_TextFolderName,setSS_TextFolderName]=useState<string>(SS_File.TextFolderName)
+
+// SS_EditImg
+const[SS_GlobalImg,setSS_GlobalImg]=useState<boolean>(SS_File.ApplyAllSetting.Img)
+const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
+const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
+const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
+
+// SS_ShowImg
+const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+const[SS_OriginImg,setSS_OriginImg]=useState<typeof const_ShowColor[number]>('EditedImage')
+
+// SS_OCR
+const[SS_GlobalOCR,setSS_GlobalOCR]=useState<boolean>(SS_File.ApplyAllSetting.OCR)
+const[SS_OCRActivate,setSS_OCRActivate]=useState<boolean>(SS_OCR.Operate)
+const[SS_PSM,setSS_PSM]=useState<typeof uPSM[number]>(SS_OCR.PSM)
+const[SS_Languages,setSS_Languages]=useState<typeof uLANGUAGE[number][]|null>(SS_OCR.Languages)
+const[SS_SelectLanguage,setSS_SelectLanguage]=useState<typeof uLANGUAGE[number]|''>(uLANGUAGE[0])
+useEffect(()=>{
+    setSS_File({
+    AllFiles:SS_File.AllFiles,
+    SelectThisFile:{
+        index:SS_File.SelectThisFile.index,
+        mode:SS_File.SelectThisFile.mode
+    },
+    ImageFolderName:SS_ImgFolderName,
+    TextFolderName:SS_TextFolderName,
+    ApplyAllSetting:{
+        OCR:SS_GlobalOCR,
+        Img:SS_GlobalImg
+    }
+    })
+    setSS_EditImg({
+        Operate:SS_EditImgActivate,
+        Color:SS_ColorMode,
+        Rotate:SS_Rotate
+    })
+    setSS_ShowImg({
+        OriginalImage:SS_OriginImg,
+        Zoom:SS_Zoom
+    })
+    setSS_OCR({
+        Operate:SS_OCRActivate,
+        PSM:SS_PSM,
+        Languages:SS_Languages
+    })
+},[
+    // File
+    SS_ImgFolderName,
+    SS_TextFolderName,
+    // EditImg
+    SS_EditImgActivate,
+    SS_ColorMode,
+    SS_Rotate,
+    SS_GlobalImg,
+    // ShowImg
+    SS_OriginImg,
+    SS_Zoom,
+    // OCR
+    SS_OCRActivate,
+    SS_PSM,
+    SS_Languages,
+    SS_GlobalOCR
+])
+
+//***************************************************************************************************************************************
+// FUNCTION
+//***************************************************************************************************************************************
+function f_Fake(){
+    alert('This is Fake Function')
+}
+
+//***************************************************************************************************************************************
+// JSX
+//***************************************************************************************************************************************
+
+let JSX_File=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Import Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Image Folder:'+SS_ImgFolderName}
+setSS_Value={setSS_ImgFolderName}
+SS_Value={SS_ImgFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Img Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Text Folder:'+SS_TextFolderName}
+setSS_Value={setSS_TextFolderName}
+SS_Value={SS_TextFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Text Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_Title
+Name={'Number of all page: '+(SS_File.AllFiles?SS_File.AllFiles.length.toString():'0')}
+/>
+]}
+Color='#FFFFFF'
+/>
+
+let JSX_EditImg=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={0}
+/>,
+<div>
+<UI_Title
+Name={'Zoom: '+SS_Zoom.toString()}
+/>
+<UI_Button
+Name='+'
+Function={()=>{
+if(SS_Zoom<10){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+<UI_Button
+Name='-'
+Function={()=>{
+if(SS_Zoom>0.1){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+</div>
+,
+<UI_SearchOption
+Name="Show"
+List={const_ShowColor}
+SS_Option={SS_OriginImg}
+setSS_Option={setSS_OriginImg}
+IsSearch={false}
+/>,
+<UI_Button
+Name="Apply All Image Setting"
+Function={()=>{setSS_GlobalImg(true)}}
+/>
+]}
+Color='#FFFFFF'
+/>
+
+let JSX_OCR =<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Operate OCR"
+Function={()=>{setSS_OCRActivate(true)}}
+/>,
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language '}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Operate OCR"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    console.log(SS_SelectLanguage)
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_OCR.Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>,
+<UI_Button
+Name="Apply All OCR Setting"
+Function={()=>{setSS_GlobalOCR(true)}}
+/>
+]}
+Color='#FFFFFF'
+
+/>
+// Operate
+// Language
+// Option: PSM
+
+//***************************************************************************************************************************************
+// OUTPUT
+ 
+        //console.log(ThisFile)
+        //console.log(SS_Title[ThisFile.Key])
+ 
+/SS_Title[ThisFile.Key]
+ 
+    //console.log("####################################################################################")
+ 
+// [Import Image, Name, Export Image, Name, Export Text]
+// [Operate Image, Color or Gray, ]
+// [Page1, Page2, +]
+ 
+
+//***************************************************************************************************************************************
+// OUTPUT
+//***************************************************************************************************************************************
+
+ 
+        /*
+        if(ThisFile.Img.Name){
+            let_ImageTitle=ThisFile.Img.Name
+        }
+        else if(SS_File.ImageFolderName){
+            let_ImageTitle=SS_File.ImageFolderName+ThisFile.Key.toString()
+        }
+        else{
+            let_ImageTitle='Untitled No.'+ThisFile.Key.toString()
+        }
+        */
+ 
+// function f_ClickFile(ThisFile:number){ 
+//     // https://stackoverflow.com/questions/33657212/javascript-click-anywhere-in-body-except-the-one-element-inside-it
+//     // let let_Update=SSFile_SelectThisFile(eSS_File,ThisFile,"Default")
+//     // seteSS_File(let_Update)
+// }
+ 
+/*
+Argument of type '() => void' is not assignable to parameter of type 'string[] | (() => string[])'.
+  Type '() => void' is not assignable to type '() => string[]'.
+    Type 'void' is not assignable to type 'string[]'.
+ */
+ 
+eSS_File
+ 
+    seteSS_File({
+        AllFiles:eSS_File.AllFiles,
+        SelectThisFile:eSS_S
+    })
+ 
+        console.log()
+ 
+
+        console.log('SS_File.AllFiles exists')
+ 
+            console.log('SS_Title exist')
+ 
+
+s is undefined or falsy
+ 
+    // Return a default value in case SS_File.AllFile
+ 
+})
+ 
+let let_Title=['']
+let_Title=SS_File.AllFiles!.map((i,index) => {
+    if(SS_File.AllFiles![index].Img.Name!==null && SS_File.AllFiles![index].Img.Name!==undefined){
+        return SS_File.AllFiles![index].Img.Name
+    }
+    else if(SS_File.ImageFolderName){
+        return SS_File.ImageFolderName+i.Key.toString()
+    }
+    else{
+        return 'Untitled No.'+i.Key.toString()
+    }
+}
+ 
+
+});
+ 
+else {
+  return null; // Set to null if AllFiles is falsy
+}
+ 
+) as string[]
+}
+ 
+, setSS_Title] = useState<string[] | null>(() => 
+ 
+    console.log('Working')
+ 
+ && SS_Title!==undefined&&SS_Title!==null
+ 
+    // FixThis
+ 
 !==undefined && SS_Title!==null
  
 SS_Title[ThisFile.Key]

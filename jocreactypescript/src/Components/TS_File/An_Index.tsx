@@ -7,7 +7,8 @@ type TS_File={
     Img:{
         Name:string|null,
         EditedFile:File|null,
-        OriginFile:File|null
+        OriginFile:File|null,
+        Shape:[number,number]
     }
     Text:{
         Name:string|null,
@@ -17,7 +18,6 @@ type TS_File={
     SS_OCR:TS_SS_OCR|null,
     SS_ReadOCR:TS_SS_ReadOCR|null,
     SS_EditImg:TS_SS_EditImg|null,
-    SS_ShowImg:TS_SS_ShowImg|null
 }
 
 export default TS_File

@@ -1,0 +1,16 @@
+Page_Image.tsx
+1. Import Image
+2. Export Image
+3. Image File
+4. Show Original Image
+5. Operate OCR 
+
+Connect 
+1. Page_Image 
+2. Page_Text 
+3. Page_OverWrite 
+to Page_Body 
+and connect Page_Body to index.tsx 
+
+Check if 
+* The TS_File is valid? 

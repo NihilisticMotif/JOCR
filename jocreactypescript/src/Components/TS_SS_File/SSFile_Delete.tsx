@@ -18,9 +18,7 @@ export function SSFile_Delete(SS_File:TS_SS_File,ThisFile:number):TS_SS_File{
                 index:let_UpdateIndex,
                 mode:'Default'
             },
-            ImageFolderName:SS_File.ImageFolderName,
-            TextFolderName:SS_File.TextFolderName,
-            ApplyAllSetting:SS_File.ApplyAllSetting
+            FolderName:SS_File.FolderName
         }
     }
     else{

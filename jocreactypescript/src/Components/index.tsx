@@ -11,8 +11,7 @@ import { TS_SS_OCR } from './TS_SS_OCR/An_Index';
 import { Context_Main } from './Context_Main';
 
 import Page_Tab from './Page_Tab';
-import Page_HeaderButton from './Page_HeaderButton';
-import Page_Body from './Page_Body';
+import Page_Header from './Page_Header';
 
 import './index.css';
 import { uLANGUAGE } from "./utility/uLANGUAGE"
@@ -55,11 +54,9 @@ const[SS_File,setSS_File]=useState<TS_SS_File>({
         index:0,
         mode:'Default'
     },
-    ImageFolderName:'',
-    TextFolderName:'',
-    ApplyAllSetting:{
-        OCR:false,
-        Img:false
+    FolderName:{
+        Img:'',
+        Text:''
     }
 })
 //************************************************************************************
@@ -97,9 +94,8 @@ SS_ThisEditImg,
 setSS_ThisEditImg
 }}
 >
-<Page_HeaderButton/>
+<Page_Header/>
 <Page_Tab/>
-<Page_Body/>
 </Context_Main.Provider>
 </div>
 )
