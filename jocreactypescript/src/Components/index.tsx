@@ -10,15 +10,15 @@ import { TS_SS_OCR } from './TS_SS_OCR/An_Index';
 
 import { Context_Main } from './Context_Main';
 
-import Page_Tab from './Page_Tab';
-import Page_Header from './Page_Header';
-
 import './index.css';
 import { uLANGUAGE } from "./utility/uLANGUAGE"
 import { uPSM } from "./utility/uPSM"
 
-
-
+import Page_Head        from './Page_Head';
+import Page_Img         from './Page_Img';
+import Page_OverWrite   from './Page_OverWrite';
+import Page_Image       from './Page_Image';
+import Page_Text        from './Page_Text';    
 //************************************************************************************
 // INPUT
 //************************************************************************************
@@ -75,7 +75,7 @@ useEffect(()=>{
 //************************************************************************************
 // OUTPUT
 //************************************************************************************
-
+//...
 return(
 <div>
 <Context_Main.Provider
@@ -94,8 +94,11 @@ SS_ThisEditImg,
 setSS_ThisEditImg
 }}
 >
-<Page_Header/>
-<Page_Tab/>
+<Page_Head       />
+<Page_Img        />
+<Page_OverWrite  />
+<Page_Image      />
+<Page_Text       />
 </Context_Main.Provider>
 </div>
 )

@@ -1,0 +1,20 @@
+const[SS_Img,setSS_Img]=useState<File|null>(()=>{
+if(SS_ShowImg.OriginalImage===const_ShowColor[0]){
+return SS_OriginImg
+}
+// EditedImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[1]){
+return SS_EditedImg
+}
+// GrayImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[2]){
+return SS_OriginImg
+}
+// ReverseImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[3]){
+return SS_OriginImg
+}
+else{
+    return SS_EditedImg
+}
+})

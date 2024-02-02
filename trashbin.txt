@@ -1,3 +1,3287 @@
+Page_Image.tsx
+1. Import Image
+2. Export Image
+3. Image File
+4. Show Original Image
+5. Operate OCR 
+
+ 
+const SelectKey=SS_File.SelectThisFile.index
+const This_File=SS_File.AllFiles![SelectKey]
+ 
+const SelectKey=SS_File.SelectThisFile.index
+const This_File=SS_File.AllFiles![SelectKey]
+ 
+<P_Text_File/>
+<P_Text_Message/>
+ 
+let This_File=This_File
+ 
+const SelectKey=SS_File.SelectThisFile.index
+ 
+const SelectKey=SS_File.SelectThisFile.index
+ 
+
+let This_File=This_File
+ 
+const SelectKey=SS_File.SelectThisFile.index
+ 
+const This_File=This_File
+ 
+const This_File=This_File
+ 
+const SelectKey=SS_File.SelectThisFile.index
+ 
+<UI_DisplayFlex
+JSX={[<P_OverWrite_Open     />,
+<P_OverWrite_EditedImg/>,
+<P_OverWrite_OCR      />,
+<P_OverWrite_ReadOCR  />,]}
+Color='#FFFFFF'
+/>
+ 
+    &&true
+ 
+    &&true
+ 
+const SelectKey=SS_File.SelectThisFile.index
+ 
+<UI_DisplayFlex 
+JSX={[<P_Img_File 
+This_File={SS_File.AllFiles[SS_File.SelectThisFile.index]}
+SelectKey={SS_File.SelectThisFile.index}
+/>,
+<P_Img_ShowImg
+This_File={SS_File.AllFiles[SS_File.SelectThisFile.index]}
+SelectKey={SS_File.SelectThisFile.index}
+/>,]}
+Color="#FFFFFF"
+/>
+ 
+
+/**
+<UI_DisplayFlex 
+JSX={[<P_Img_File />,
+<P_Img_ShowImg/>,]}
+Color="#FFFFFF"
+/>
+ */
+ 
+age
+ 
+const SelectKey=SS_File.SelectThisFile.index
+let This_File=SS_File.AllFiles![SelectKey]
+ 
+<UI_DisplayFlex 
+JSX={[<P_Img_File />,
+<P_Img_ShowImg/>,]}
+Color="#FFFFFF"
+/>
+ 
+const SelectKey=SS_File.SelectThisFile.index
+let This_File=SS_File.AllFiles![SelectKey]
+ 
+const SelectKey=SS_File.SelectThisFile.index
+const This_File=SS_File.AllFiles![SelectKey]
+ 
+import UI_Title from '../UI_Title';
+import UI_SearchOption from '../UI_SearchOption';
+ 
+import { const_ShowColor } from '../TS_SS_ShowImg/const_showcolor';
+ 
+import { uImg64 } from '../utility/uImg64';
+import { TS_SS_ShowImg } from '../TS_SS_ShowImg/An_Index';
+import Page_OverWrite from '../Page_OverWrite';
+ 
+const SelectKey=SS_File.SelectThisFile.index
+let This_File=SS_File.AllFiles![SelectKey]
+ 
+import Page_Tab from './P_Head_Tabs';
+import Page_Header from './P_Head_File';
+ 
+import Page_Img from './Page_Img';
+import Page_Text from './P_Text_File';
+ 
+<Page_Header/>
+<Page_Tab/>
+<Page_Img />
+<Page_Text/>
+ 
+import P_OverWrite_EditedImg from '../P_OverWrite_EditedImg';
+import P_OverWrite_OCR       from '../P_OverWrite_OCR';   
+import P_OverWrite_Open     from '../P_OverWrite_Open'; 
+import P_OverWrite_ReadOCR   from '../P_OverWrite_ReadOCR';
+import UI_DisplayFlex from '../UI_DisplayFlex';
+ 
+<UI_DisplayFlex
+JSX={[<P_OverWrite_Open     />,
+<P_OverWrite_EditedImg/>,
+<P_OverWrite_OCR      />,
+<P_OverWrite_ReadOCR  />,]}
+Color='#FFFFFF'
+/>
+ 
+<P_OverWrite_Open     />
+ 
+import P_I
+ 
+<P_Head_EditedImg />
+<P_Head_File      />
+<P_Head_OCR       />
+ 
+import P_
+ 
+age
+ 
+
+let JSX_Body=<></>
+if(
+    SS_File.AllFiles!==null
+    &&SS_File.AllFiles!==undefined
+    &&This_File
+    &&This_File!==null
+    &&This_File!==undefined
+    ){
+
+let SS_DefaultValue=''
+if(SS_File.FolderName.Text){
+    SS_DefaultValue=SS_File.FolderName.Text+SelectKey.toString()
+}
+else{
+    SS_DefaultValue='UntitledText'+SelectKey.toString()
+}
+ 
+JSX_Body=<>
+
+<UI_TextArea
+SS_Message={SS_Message}
+setSS_Message={setSS_Message}
+/>
+</>
+ 
+<UI_ResettingInput<string>
+Name='Text File Name'
+SS_Value={SS_FileName}
+setSS_Value={setSS_FileName}
+SS_DefaultValue={SS_DefaultValue}
+/>
+<UI_Button
+Name='Export Text File'
+Function={()=>{alert('Export Text File')}}
+/>
+ 
+SS_FileName,
+ 
+const[SS_FileName,setSS_FileName]=useState<string>(()=>{
+if(This_File.Text.Name){
+    return This_File.Text.Name!
+}
+else{
+    if(SS_File.FolderName.Text){
+        return SS_File.FolderName.Text+SelectKey.toString()
+    }else{
+        return 'UntitledText'+SelectKey.toString()
+    }
+}})
+ 
+
+let JSX_Body=<></>
+
+ 
+if(
+    SS_File.AllFiles!==null
+    &&SS_File.AllFiles!==undefined
+    &&This_File
+    &&This_File!==null
+    &&This_File!==undefined
+    ){
+
+
+}
+ 
+
+let SS_DefaultValue=''
+if(SS_File.FolderName.Text){
+    SS_DefaultValue=SS_File.FolderName.Text+SelectKey.toString()
+}
+else{
+    SS_DefaultValue='UntitledText'+SelectKey.toString()
+}
+ 
+//...
+ 
+SS_DefaultValue={
+ 
+()=>{
+
+}
+ 
+
+else{
+    return 'UntitledText'+SelectKey.toString() as string
+}
+ 
+if(SS_File.FolderName.Text){
+    return SS_File.FolderName.Text+SelectKey.toString() as string
+}
+ 
+// Type '() => string' is not assignable to type 'string'
+ 
+SS_DefaultValue
+ 
+<>
+<UI_ResettingInput<string>
+Name='Text File Name'
+SS_Value={SS_FileName}
+setSS_Value={setSS_FileName}
+SS_DefaultValue={SS_DefaultValue}
+/>
+<UI_Button
+Name='Export Text File'
+Function={()=>{alert('Export Text File')}}
+/>
+</>
+ 
+<UI_TextArea
+SS_Message={SS_Message}
+setSS_Message={setSS_Message}
+/>
+ 
+,SS_Message
+ 
+const[SS_Message,setSS_Message]=useState<string>(SS_File.AllFiles![SelectKey].Text.File)
+ 
+// Display SS_EditedImg or SS_OriginImg
+const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+ 
+SS_EditImg
+ 
+const [SS_EditImg,setSS_EditImg ] = useState<TS_SS_EditImg>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_EditImg){
+return SS_File.AllFiles![SelectKey].SS_EditImg!
+}
+else{
+    return Default_SS_EditImg
+}
+})
+ 
+
+JSX_OverWriteTool=<>
+{JSX_EditImg}
+{JSX_OCR}
+{JSX_ReadOCR}
+</>
+ 
+
+
+
+let JSX_ReadOCR=<div>
+<UI_Title
+Name='Analyze Image'/>
+<UI_Button
+Name='Operate'
+Function={()=>{seteSS_ReadOCR(true)}}
+/>
+<UI_Title Name="Script"/>
+<UI_Title Name={"Script:"+SS_ReadOCR.Script}/>
+<UI_Title Name={'Script Accuracy:'+SS_ReadOCR.SAccurate?.toString()}/>
+<UI_Title Name='Rotation'/>
+<UI_Title Name={'Rotate:'+SS_ReadOCR.Rotation?.toString()}/>
+<UI_Title Name={'Detected:'+SS_ReadOCR.Detected?.toString()}/>
+<UI_Title Name={'Adjustment:'+SS_ReadOCR.Adjustment?.toString()}/>
+<UI_Title Name={'Rotate Accuracy:'+SS_ReadOCR.RAccurate?.toString()}/>
+<UI_Title Name="Higher accuracy is better."/>
+</div>
+
+ 
+
+let JSX_OCR =<UI_DisplayFlex
+JSX={[
+// <UI_Button
+// Name="Operate OCR"
+// Function={()=>{setSS_OCRActivate(true)}}
+// />,
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language'}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Add Language"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_OCR.Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>
+]}
+Color='#FFFFFF'
+/>
+ 
+let JSX_EditImg=
+ 
+<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={Default_SS_Rotate}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+const[eSS_ReadOCR,seteSS_ReadOCR]=useState<boolean>(SS_ReadOCR.Operate)
+ 
+// SS_EditImg
+
+
+// SS_OCR
+const[SS_OCRActivate,setSS_OCRActivate]=useState<boolean>(SS_OCR.Operate)
+const[SS_PSM,setSS_PSM]=useState<typeof uPSM[number]>(SS_OCR.PSM)
+const[SS_Languages,setSS_Languages]=useState<typeof uLANGUAGE[number][]|null>(SS_OCR.Languages)
+const[SS_SelectLanguage,setSS_SelectLanguage]=useState<typeof uLANGUAGE[number]|''>(uLANGUAGE[0])
+ 
+useEffect(()=>{
+    setSS_EditImg({
+        Operate:SS_EditImgActivate,
+        Color:SS_ColorMode,
+        Rotate:SS_Rotate
+    })
+    setSS_OCR({
+        Operate:SS_OCRActivate,
+        PSM:SS_PSM,
+        Languages:SS_Languages
+    })
+    setSS_ReadOCR({
+        Operate:   eSS_ReadOCR,
+        Script:    SS_ReadOCR.Script,
+        SAccurate: SS_ReadOCR.SAccurate,
+        Rotation:  SS_ReadOCR.Rotation,
+        Detected:  SS_ReadOCR.Detected,
+        Adjustment:SS_ReadOCR.Adjustment,
+        RAccurate: SS_ReadOCR.RAccurate
+    })
+},[
+    // EditImg
+    SS_EditImgActivate,
+    SS_ColorMode,
+    SS_Rotate,
+    // OCR
+    SS_OCRActivate,
+    SS_PSM,
+    SS_Languages,
+    // ReadOCR
+    eSS_ReadOCR
+])
+ 
+
+if(
+    SS_File.AllFiles!==null 
+    && SS_File.AllFiles!== undefined 
+    && SS_File.AllFiles[SelectKey]!==null 
+    && SS_File.AllFiles[SelectKey]!==undefined
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==null
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==undefined
+    && SS_File.AllFiles[SelectKey].SS_OCR !==null
+    && SS_File.AllFiles[SelectKey].SS_OCR !==undefined
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==null
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==undefined
+    && SS_OpenSS){
+
+ 
+et JSX_OpenOverWrite=<UI_Activate
+Name='Open OCR Setting'
+IsActivate={SS_OpenSS}
+setIsActivate={setSS_OpenSS}
+/>
+let JSX_OverWriteTool=<></>
+ 
+const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
+const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
+const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
+ 
+
+useEffect(()=>{
+if(SS_File.AllFiles && SS_OpenSS===true){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:SS_OpenSS,
+        SS_OCR:    SS_OCR,
+        SS_ReadOCR:SS_ReadOCR,
+        SS_EditImg:SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+else if(SS_File.AllFiles && SS_OpenSS===false){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:SS_OpenSS,
+        SS_OCR:null,
+        SS_ReadOCR:null,
+        SS_EditImg:null
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_OpenSS])
+
+ 
+    SS_OCR    ,
+    SS_ReadOCR,
+ 
+const [SS_OpenSS ,setSS_OpenSS  ] = useState<boolean>(SS_File.AllFiles![SelectKey].OpenSS)
+ 
+const [SS_OCR,setSS_OCR ] = useState<TS_SS_OCR>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_OCR){
+return SS_File.AllFiles![SelectKey].SS_OCR!
+}
+else{
+    return Default_SS_OCR
+}
+})
+const [SS_ReadOCR,setSS_ReadOCR ] = useState<TS_SS_ReadOCR>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_ReadOCR){
+return SS_File.AllFiles![SelectKey].SS_ReadOCR!
+}
+else{
+    return Default_SS_ReadOCR
+}
+})
+ 
+let JSX_OCR =
+ 
+<UI_DisplayFlex
+JSX={[
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language'}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Add Language"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>
+]}
+Color='#FFFFFF'
+/>
+ 
+// <UI_Button
+// Name="Operate OCR"
+// Function={()=>{setSS_OCRActivate(true)}}
+// />,
+ 
+
+JSX_OverWriteTool=<>
+{JSX_EditImg}
+{JSX_OCR}
+{JSX_ReadOCR}
+</>
+ 
+let JSX_ReadOCR=<div>
+<UI_Title
+Name='Analyze Image'/>
+<UI_Button
+Name='Operate'
+Function={()=>{seteSS_ReadOCR(true)}}
+/>
+<UI_Title Name="Script"/>
+<UI_Title Name={"Script:"+SS_ReadOCR.Script}/>
+<UI_Title Name={'Script Accuracy:'+SS_ReadOCR.SAccurate?.toString()}/>
+<UI_Title Name='Rotation'/>
+<UI_Title Name={'Rotate:'+SS_ReadOCR.Rotation?.toString()}/>
+<UI_Title Name={'Detected:'+SS_ReadOCR.Detected?.toString()}/>
+<UI_Title Name={'Adjustment:'+SS_ReadOCR.Adjustment?.toString()}/>
+<UI_Title Name={'Rotate Accuracy:'+SS_ReadOCR.RAccurate?.toString()}/>
+<UI_Title Name="Higher accuracy is better."/>
+</div>
+ 
+let JSX_ReadOCR=<div>
+<UI_Title
+Name='Analyze Image'/>
+<UI_Button
+Name='Operate'
+Function={()=>{seteSS_ReadOCR(true)}}
+/>
+<UI_Title Name="Script"/>
+<UI_Title Name={"Script:"+SS_ReadOCR.Script}/>
+<UI_Title Name={'Script Accuracy:'+SS_ReadOCR.SAccurate?.toString()}/>
+<UI_Title Name='Rotation'/>
+<UI_Title Name={'Rotate:'+SS_ReadOCR.Rotation?.toString()}/>
+<UI_Title Name={'Detected:'+SS_ReadOCR.Detected?.toString()}/>
+<UI_Title Name={'Adjustment:'+SS_ReadOCR.Adjustment?.toString()}/>
+<UI_Title Name={'Rotate Accuracy:'+SS_ReadOCR.RAccurate?.toString()}/>
+<UI_Title Name="Higher accuracy is better."/>
+</div>
+ 
+let JSX_EditImg=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_OCRActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={Default_SS_Rotate}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+etSS_EditImgActivate
+ 
+let JSX_OverWriteTool=<></>
+ 
+let Default_SS_Rotate=0
+if(SS_ReadOCR.Adjustment){
+    Default_SS_Rotate=SS_ReadOCR.Adjustment
+}
+ 
+
+// SS_OCR
+ 
+useEffect(()=>{
+
+    setSS_OCR({
+        Operate:SS_OCRActivate,
+        PSM:SS_PSM,
+        Languages:SS_Languages
+    })
+
+},[
+    // OCR
+    SS_OCRActivate,
+    SS_PSM,
+    SS_Languages,
+    // ReadOCR
+    eSS_ReadOCR
+])
+
+ 
+let JSX_OpenOverWrite=<UI_Activate
+Name='Open OCR Setting'
+IsActivate={SS_OpenSS}
+setIsActivate={setSS_OpenSS}
+/>
+ 
+/** Argument of type '() => string | string[] | null' is not assignable to parameter of type 'string[] | (() => string[] | null) | null'.
+  Type '() => string | string[] | null' is not assignable to type '() => string[] | null'.
+    Type 'string | string[] | null' is not assignable to type 'string[] | null'.
+      Type 'string' is not assignable to type 'string[]'. */
+ 
+/**Argument of type '() => boolean | undefined' is not assignable to parameter of type 'boolean | (() => boolean)'.
+  Type '() => boolean | undefined' is not assignable to type '() => boolean'.
+    Type 'boolean | undefined' is not assignable to type 'boolean'.
+      Type 'undefined' is not assignable to type 'boolean'. */
+ 
+SS_OCR
+ 
+const[eSS_ReadOCR,seteSS_ReadOCR]=useState<boolean>(SS_ReadOCR.Operate)
+ 
+const[SS_OCRActivate,setSS_OCRActivate]=useState<boolean>(SS_OCR.Operate)
+const[SS_PSM,setSS_PSM]=useState<typeof uPSM[number]>(SS_OCR.PSM)
+const[SS_Languages,setSS_Languages]=useState<typeof uLANGUAGE[number][]|null>(SS_OCR.Languages)
+const[SS_SelectLanguage,setSS_SelectLanguage]=useState<typeof uLANGUAGE[number]|''>(uLANGUAGE[0])
+const[eSS_ReadOCR,seteSS_ReadOCR]=useState<boolean>(SS_ReadOCR.Operate)
+ 
+    // EditImg
+    SS_EditImgActivate,
+    SS_ColorMode,
+    SS_Rotate,
+ 
+    setSS_ReadOCR({
+        Operate:   eSS_ReadOCR,
+        Script:    SS_ReadOCR.Script,
+        SAccurate: SS_ReadOCR.SAccurate,
+        Rotation:  SS_ReadOCR.Rotation,
+        Detected:  SS_ReadOCR.Detected,
+        Adjustment:SS_ReadOCR.Adjustment,
+        RAccurate: SS_ReadOCR.RAccurate
+    })
+ 
+    setSS_EditImg({
+        Operate:SS_EditImgActivate,
+        Color:SS_ColorMode,
+        Rotate:SS_Rotate
+    })
+ 
+
+// SS_EditImg
+const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
+const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
+const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
+
+ 
+if(
+    SS_File.AllFiles!==null 
+    && SS_File.AllFiles!== undefined 
+    && SS_File.AllFiles[SelectKey]!==null 
+    && SS_File.AllFiles[SelectKey]!==undefined
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==null
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==undefined
+    && SS_File.AllFiles[SelectKey].SS_OCR !==null
+    && SS_File.AllFiles[SelectKey].SS_OCR !==undefined
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==null
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==undefined
+    && SS_OpenSS){
+ 
+useEffect(()=>{
+if(SS_File.AllFiles && SS_OpenSS===true){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:SS_OpenSS,
+        SS_OCR:    SS_OCR,
+        SS_ReadOCR:SS_ReadOCR,
+        SS_EditImg:SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+else if(SS_File.AllFiles && SS_OpenSS===false){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:SS_OpenSS,
+        SS_OCR:null,
+        SS_ReadOCR:null,
+        SS_EditImg:null
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_OpenSS])
+ 
+    SS_ReadOCR,
+ 
+    SS_EditImg,
+ 
+const [SS_EditImg,setSS_EditImg ] = useState<TS_SS_EditImg>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_EditImg){
+return SS_File.AllFiles![SelectKey].SS_EditImg!
+}
+else{
+    return Default_SS_EditImg
+}
+})
+ 
+
+
+const [SS_OpenSS ,setSS_OpenSS  ] = useState<boolean>(SS_File.AllFiles![SelectKey].OpenSS)
+
+ 
+const [SS_ReadOCR,setSS_ReadOCR ] = useState<TS_SS_ReadOCR>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_ReadOCR){
+return SS_File.AllFiles![SelectKey].SS_ReadOCR!
+}
+else{
+    return Default_SS_ReadOCR
+}
+})
+ 
+let JSX_ReadOCR=
+ 
+<div>
+<UI_Title
+Name='Analyze Image'/>
+<UI_Button
+Name='Operate'
+Function={()=>{setSS_RunPSM0(true)}}
+/>
+<UI_Title Name="Script"/>
+<UI_Title Name={"Script:"+This_File.SS_ReadOCR?.Script!.toString()}/>
+<UI_Title Name={'Script Accuracy:'+This_File.SS_ReadOCR?.SAccurate?.toString()}/>
+<UI_Title Name='Rotation'/>
+<UI_Title Name={'Rotate:'+This_File.SS_ReadOCR?.Rotation?.toString()}/>
+<UI_Title Name={'Detected:'+This_File.SS_ReadOCR?.Detected?.toString()}/>
+<UI_Title Name={'Adjustment:'+This_File.SS_ReadOCR?.Adjustment?.toString()}/>
+<UI_Title Name={'Rotate Accuracy:'+This_File.SS_ReadOCR?.RAccurate?.toString()}/>
+<UI_Title Name="Higher accuracy is better."/>
+</div>
+ 
+const SS_OpenSS=SS_File.AllFiles![SelectKey].OpenSS
+ 
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+ 
+cript
+ 
+SS_ReadOCR
+ 
+const [SS_ReadOCR,setSS_ReadOCR ] = useState<TS_SS_ReadOCR>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_ReadOCR){
+return SS_File.AllFiles![SelectKey].SS_ReadOCR!
+}
+else{
+    return Default_SS_ReadOCR
+}
+})
+ 
+useEffect(())
+ 
+SS_ReadOCR
+ 
+// typescript
+// Type '() => TS_SS_ReadOCR' is not assignable to type 'TS_SS_ReadOCR'.ts(2322)
+ 
+()=>
+ 
+
+useEffect(()=>{
+    set
+},[])
+
+ 
+true
+ 
+const[SS_Operate]
+ 
+seteSS_ReadOCR(true)
+ 
+
+JSX_OverWriteTool=<>
+{JSX_EditImg}
+{JSX_OCR}
+{JSX_ReadOCR}
+</>
+ 
+let JSX_OCR =<UI_DisplayFlex
+JSX={[
+// <UI_Button
+// Name="Operate OCR"
+// Function={()=>{setSS_OCRActivate(true)}}
+// />,
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language'}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Add Language"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_OCR.Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>
+]}
+Color='#FFFFFF'
+/>
+ 
+et JSX_EditImg=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={Default_SS_Rotate}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+
+// SS_EditImg
+const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
+const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
+const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
+
+const[eSS_ReadOCR,seteSS_ReadOCR]=useState<boolean>(SS_ReadOCR.Operate)
+ 
+
+LANGUAGE[0])
+ 
+
+const[SS_SelectLanguage,setSS_SelectLanguage]=useState<typeof uLANGUAGE[number]|''>(u
+ 
+
+CR.Languages)
+ 
+const[SS_Languages,setSS_Languages]=useState<typeof uLANGUAGE[number][]|null>(SS_O
+ 
+// SS_OCR
+const[SS_OCRActivate,setSS_OCRActivate]=useState<boolean>(SS_OCR.Operate)
+const[SS_PSM,setSS_PSM]=useState<typeof uPSM[number]>(SS_OCR.PSM)
+ 
+useEffect(()=>{
+    setSS_ReadOCR({
+        Operate:   eSS_ReadOCR,
+        Script:    SS_ReadOCR.Script,
+        SAccurate: SS_ReadOCR.SAccurate,
+        Rotation:  SS_ReadOCR.Rotation,
+        Detected:  SS_ReadOCR.Detected,
+        Adjustment:SS_ReadOCR.Adjustment,
+        RAccurate: SS_ReadOCR.RAccurate
+    })
+},[
+    eSS_ReadOCR
+])
+
+ 
+
+if(
+    SS_File.AllFiles!==null 
+    && SS_File.AllFiles!== undefined 
+    && SS_File.AllFiles[SelectKey]!==null 
+    && SS_File.AllFiles[SelectKey]!==undefined
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==null
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==undefined
+    && SS_File.AllFiles[SelectKey].SS_OCR !==null
+    && SS_File.AllFiles[SelectKey].SS_OCR !==undefined
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==null
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==undefined
+    && SS_OpenSS){
+
+ 
+et JSX_OpenOverWrite=<UI_Activate
+Name='Open OCR Setting'
+IsActivate={SS_OpenSS}
+setIsActivate={setSS_OpenSS}
+/>
+let JSX_OverWriteTool=<></>
+ 
+useEffect(()=>{
+if(SS_File.AllFiles && SS_OpenSS===true){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:SS_OpenSS,
+        SS_OCR:    SS_OCR,
+        SS_ReadOCR:SS_ReadOCR,
+        SS_EditImg:SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+else if(SS_File.AllFiles && SS_OpenSS===false){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:SS_OpenSS,
+        SS_OCR:null,
+        SS_ReadOCR:null,
+        SS_EditImg:null
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_OpenSS])
+ 
+    SS_EditImg,
+    SS_OCR    ,
+ 
+const [SS_OCR,setSS_OCR ] = useState<TS_SS_OCR>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_OCR){
+return SS_File.AllFiles![SelectKey].SS_OCR!
+}
+else{
+    return Default_SS_OCR
+}
+})
+ 
+const [SS_EditImg,setSS_EditImg ] = useState<TS_SS_EditImg>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_EditImg){
+return SS_File.AllFiles![SelectKey].SS_EditImg!
+}
+else{
+    return Default_SS_EditImg
+}
+})
+ 
+    setSS_EditImg({
+        Operate:SS_EditImgActivate,
+        Color:SS_ColorMode,
+        Rotate:SS_Rotate
+    })
+    setSS_OCR({
+        Operate:SS_OCRActivate,
+        PSM:SS_PSM,
+        Languages:SS_Languages
+    })
+ 
+    // EditImg
+    SS_EditImgActivate,
+    SS_ColorMode,
+    SS_Rotate,
+    // OCR
+    SS_OCRActivate,
+    SS_PSM,
+    SS_Languages,
+    // ReadOCR
+ 
+import './index.css';
+import React, { FC, ReactNode } from 'react';
+import { Context_Main } from '../Context_Main';
+import { useState,useEffect,useContext } from 'react';
+
+import UI_SearchOption from '../UI_SearchOption';
+import UI_DisplayFlex from '../UI_DisplayFlex';
+import UI_Button from '../UI_Button';
+import UI_ResettingInput from '../UI_ResettingInput';
+import UI_Title from '../UI_Title';
+import UI_Activate from '../UI_Activate';
+import { const_color } from '../TS_SS_EditImg/const_color';
+import { uPSM } from '../utility/uPSM';
+import { uLANGUAGE } from '../utility/uLANGUAGE';
+
+import { Default_SS_EditImg } from '../TS_SS_EditImg/default';
+import { Default_SS_OCR } from '../TS_SS_OCR/default';
+import { Default_SS_ReadOCR } from '../TS_SS_ReadOCR/default';
+
+import { TS_SS_OCR } from '../TS_SS_OCR/An_Index';
+import { TS_SS_EditImg } from '../TS_SS_EditImg/An_Index';
+import { TS_SS_ReadOCR } from '../TS_SS_ReadOCR/An_Index';
+
+const Page_OverWrite = (
+{
+}
+:{
+})=>{
+//***************************************************************************************************************************************
+// HOOK
+//***************************************************************************************************************************************
+const{SS_File}=useContext(Context_Main)
+const{setSS_File}=useContext(Context_Main)
+const SelectKey=SS_File.SelectThisFile.index
+const [SS_EditImg,setSS_EditImg ] = useState<TS_SS_EditImg>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_EditImg){
+return SS_File.AllFiles![SelectKey].SS_EditImg!
+}
+else{
+    return Default_SS_EditImg
+}
+})
+const [SS_OCR,setSS_OCR ] = useState<TS_SS_OCR>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_OCR){
+return SS_File.AllFiles![SelectKey].SS_OCR!
+}
+else{
+    return Default_SS_OCR
+}
+})
+const [SS_ReadOCR,setSS_ReadOCR ] = useState<TS_SS_ReadOCR>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_ReadOCR){
+return SS_File.AllFiles![SelectKey].SS_ReadOCR!
+}
+else{
+    return Default_SS_ReadOCR
+}
+})
+
+const [SS_OpenSS ,setSS_OpenSS  ] = useState<boolean>(SS_File.AllFiles![SelectKey].OpenSS)
+
+let This_File=SS_File.AllFiles![SelectKey]
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:SS_OCR,
+        SS_ReadOCR:SS_ReadOCR,
+        SS_EditImg:SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[
+    SS_EditImg,
+    SS_OCR    ,
+    SS_ReadOCR,
+])
+
+useEffect(()=>{
+if(SS_File.AllFiles && SS_OpenSS===true){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:SS_OpenSS,
+        SS_OCR:    SS_OCR,
+        SS_ReadOCR:SS_ReadOCR,
+        SS_EditImg:SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+else if(SS_File.AllFiles && SS_OpenSS===false){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:SS_OpenSS,
+        SS_OCR:null,
+        SS_ReadOCR:null,
+        SS_EditImg:null
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_OpenSS])
+
+let JSX_OpenOverWrite=<UI_Activate
+Name='Open OCR Setting'
+IsActivate={SS_OpenSS}
+setIsActivate={setSS_OpenSS}
+/>
+let JSX_OverWriteTool=<></>
+if(
+    SS_File.AllFiles!==null 
+    && SS_File.AllFiles!== undefined 
+    && SS_File.AllFiles[SelectKey]!==null 
+    && SS_File.AllFiles[SelectKey]!==undefined
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==null
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==undefined
+    && SS_File.AllFiles[SelectKey].SS_OCR !==null
+    && SS_File.AllFiles[SelectKey].SS_OCR !==undefined
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==null
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==undefined
+    && SS_OpenSS){
+
+// SS_EditImg
+const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
+const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
+const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
+
+// SS_OCR
+const[SS_OCRActivate,setSS_OCRActivate]=useState<boolean>(SS_OCR.Operate)
+const[SS_PSM,setSS_PSM]=useState<typeof uPSM[number]>(SS_OCR.PSM)
+const[SS_Languages,setSS_Languages]=useState<typeof uLANGUAGE[number][]|null>(SS_OCR.Languages)
+const[SS_SelectLanguage,setSS_SelectLanguage]=useState<typeof uLANGUAGE[number]|''>(uLANGUAGE[0])
+const[eSS_ReadOCR,seteSS_ReadOCR]=useState<boolean>(SS_ReadOCR.Operate)
+
+useEffect(()=>{
+    setSS_EditImg({
+        Operate:SS_EditImgActivate,
+        Color:SS_ColorMode,
+        Rotate:SS_Rotate
+    })
+    setSS_OCR({
+        Operate:SS_OCRActivate,
+        PSM:SS_PSM,
+        Languages:SS_Languages
+    })
+    setSS_ReadOCR({
+        Operate:   eSS_ReadOCR,
+        Script:    SS_ReadOCR.Script,
+        SAccurate: SS_ReadOCR.SAccurate,
+        Rotation:  SS_ReadOCR.Rotation,
+        Detected:  SS_ReadOCR.Detected,
+        Adjustment:SS_ReadOCR.Adjustment,
+        RAccurate: SS_ReadOCR.RAccurate
+    })
+},[
+    // EditImg
+    SS_EditImgActivate,
+    SS_ColorMode,
+    SS_Rotate,
+    // OCR
+    SS_OCRActivate,
+    SS_PSM,
+    SS_Languages,
+    // ReadOCR
+    eSS_ReadOCR
+])
+
+let Default_SS_Rotate=0
+if(SS_ReadOCR.Adjustment){
+    Default_SS_Rotate=SS_ReadOCR.Adjustment
+}
+
+let JSX_EditImg=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={Default_SS_Rotate}
+/>
+]}
+Color='#FFFFFF'
+/>
+
+let JSX_OCR =<UI_DisplayFlex
+JSX={[
+// <UI_Button
+// Name="Operate OCR"
+// Function={()=>{setSS_OCRActivate(true)}}
+// />,
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language'}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Add Language"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_OCR.Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>
+]}
+Color='#FFFFFF'
+/>
+let JSX_ReadOCR=<div>
+<UI_Title
+Name='Analyze Image'/>
+<UI_Button
+Name='Operate'
+Function={()=>{seteSS_ReadOCR(true)}}
+/>
+<UI_Title Name="Script"/>
+<UI_Title Name={"Script:"+SS_ReadOCR.Script}/>
+<UI_Title Name={'Script Accuracy:'+SS_ReadOCR.SAccurate?.toString()}/>
+<UI_Title Name='Rotation'/>
+<UI_Title Name={'Rotate:'+SS_ReadOCR.Rotation?.toString()}/>
+<UI_Title Name={'Detected:'+SS_ReadOCR.Detected?.toString()}/>
+<UI_Title Name={'Adjustment:'+SS_ReadOCR.Adjustment?.toString()}/>
+<UI_Title Name={'Rotate Accuracy:'+SS_ReadOCR.RAccurate?.toString()}/>
+<UI_Title Name="Higher accuracy is better."/>
+</div>
+
+JSX_OverWriteTool=<>
+{JSX_EditImg}
+{JSX_OCR}
+{JSX_ReadOCR}
+</>
+}
+return(<UI_DisplayFlex
+JSX={[
+    JSX_OpenOverWrite,
+    JSX_OverWriteTool
+]}
+Color="#FFFFFF"
+/>)
+}
+
+export default Page_OverWrite
+ 
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:SS_OCR,
+        SS_ReadOCR:SS_ReadOCR,
+        SS_EditImg:SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[
+    SS_EditImg,
+    SS_OCR    ,
+    SS_ReadOCR,
+])
+ 
+
+let JSX_OpenOverWrite=<UI_Activate
+Name='Open OCR Setting'
+IsActivate={SS_OpenSS}
+setIsActivate={setSS_OpenSS}
+/>
+ 
+let JSX_OverWriteTool=<></>
+if(
+    SS_File.AllFiles!==null 
+    && SS_File.AllFiles!== undefined 
+    && SS_File.AllFiles[SelectKey]!==null 
+    && SS_File.AllFiles[SelectKey]!==undefined
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==null
+    && SS_File.AllFiles[SelectKey].SS_EditImg!==undefined
+    && SS_File.AllFiles[SelectKey].SS_OCR !==null
+    && SS_File.AllFiles[SelectKey].SS_OCR !==undefined
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==null
+    && SS_File.AllFiles[SelectKey].SS_ReadOCR !==undefined
+    && SS_OpenSS){
+
+
+let Default_SS_Rotate=0
+if(SS_ReadOCR.Adjustment){
+    Default_SS_Rotate=SS_ReadOCR.Adjustment
+}
+
+}
+ 
+
+// SS_EditImg
+const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
+const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
+const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
+
+// SS_OCR
+const[SS_OCRActivate,setSS_OCRActivate]=useState<boolean>(SS_OCR.Operate)
+const[SS_PSM,setSS_PSM]=useState<typeof uPSM[number]>(SS_OCR.PSM)
+const[SS_Languages,setSS_Languages]=useState<typeof uLANGUAGE[number][]|null>(SS_OCR.Languages)
+const[SS_SelectLanguage,setSS_SelectLanguage]=useState<typeof uLANGUAGE[number]|''>(uLANGUAGE[0])
+const[eSS_ReadOCR,seteSS_ReadOCR]=useState<boolean>(SS_ReadOCR.Operate)
+
+ 
+
+JSX_OverWriteTool=<>
+{JSX_EditImg}
+{JSX_OCR}
+{JSX_ReadOCR}
+</>
+ 
+
+useEffect(()=>{
+    setSS_EditImg({
+        Operate:SS_EditImgActivate,
+        Color:SS_ColorMode,
+        Rotate:SS_Rotate
+    })
+    setSS_OCR({
+        Operate:SS_OCRActivate,
+        PSM:SS_PSM,
+        Languages:SS_Languages
+    })
+    setSS_ReadOCR({
+        Operate:   eSS_ReadOCR,
+        Script:    SS_ReadOCR.Script,
+        SAccurate: SS_ReadOCR.SAccurate,
+        Rotation:  SS_ReadOCR.Rotation,
+        Detected:  SS_ReadOCR.Detected,
+        Adjustment:SS_ReadOCR.Adjustment,
+        RAccurate: SS_ReadOCR.RAccurate
+    })
+},[
+    // EditImg
+    SS_EditImgActivate,
+    SS_ColorMode,
+    SS_Rotate,
+    // OCR
+    SS_OCRActivate,
+    SS_PSM,
+    SS_Languages,
+    // ReadOCR
+    eSS_ReadOCR
+])
+ 
+
+='#FFFFFF'
+/>
+
+ 
+<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={Default_SS_Rotate}
+/>
+]}
+Color
+ 
+et JSX_OCR =<UI_DisplayFlex
+JSX={[
+// <UI_Button
+// Name="Operate OCR"
+// Function={()=>{setSS_OCRActivate(true)}}
+// />,
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language'}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Add Language"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_OCR.Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>
+]}
+Color='#FFFFFF'
+/>
+let JSX_ReadOCR=<div>
+<UI_Title
+Name='Analyze Image'/>
+<UI_Button
+Name='Operate'
+Function={()=>{seteSS_ReadOCR(true)}}
+/>
+<UI_Title Name="Script"/>
+<UI_Title Name={"Script:"+SS_ReadOCR.Script}/>
+<UI_Title Name={'Script Accuracy:'+SS_ReadOCR.SAccurate?.toString()}/>
+<UI_Title Name='Rotation'/>
+<UI_Title Name={'Rotate:'+SS_ReadOCR.Rotation?.toString()}/>
+<UI_Title Name={'Detected:'+SS_ReadOCR.Detected?.toString()}/>
+<UI_Title Name={'Adjustment:'+SS_ReadOCR.Adjustment?.toString()}/>
+<UI_Title Name={'Rotate Accuracy:'+SS_ReadOCR.RAccurate?.toString()}/>
+<UI_Title Name="Higher accuracy is better."/>
+</div>
+ 
+let JSX_EditImg=
+ 
+let This_File=SS_File.AllFiles![SelectKey]
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:SS_OCR,
+        SS_ReadOCR:SS_ReadOCR,
+        SS_EditImg:SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[
+    SS_EditImg,
+    SS_OCR    ,
+    SS_ReadOCR,
+])
+ 
+const SelectKey=SS_File.SelectThisFile.index
+
+ 
+
+})
+ 
+const [SS_EditImg,setSS_EditImg ] = useState<TS_SS_EditImg>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_EditImg){
+return SS_File.AllFiles![SelectKey].SS_EditImg!
+}
+else{
+    return Default_SS_EditImg
+}
+ 
+onst [SS_OCR,setSS_OCR ] = useState<TS_SS_OCR>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_OCR){
+return SS_File.AllFiles![SelectKey].SS_OCR!
+}
+else{
+    return Default_SS_OCR
+}
+})
+const [SS_ReadOCR,setSS_ReadOCR ] = useState<TS_SS_ReadOCR>(()=>{
+if(SS_File.AllFiles![SelectKey].SS_ReadOCR){
+return SS_File.AllFiles![SelectKey].SS_ReadOCR!
+}
+else{
+    return Default_SS_ReadOCR
+}
+})
+
+ 
+const{setSS_File}=useContext(Context_Main)
+ 
+let This_File=SS_File.AllFiles![SelectKey]
+ 
+
+const SS_EditedImg = This_File.Img.EditedFile
+const SS_OriginImg = This_File.Img.OriginFile
+ 
+
+const SS_EditedImg = This_File.Img.EditedFile
+const SS_OriginImg = This_File.Img.OriginFile
+ 
+let JSX_ShowImg=<></>
+let JSX_Header=<></>
+let JSX_Img=<></>
+ 
+if(
+    SS_File.AllFiles!==null
+    &&SS_File.AllFiles!==undefined
+    &&This_File
+    &&This_File!==null
+    &&This_File!==undefined
+    ){
+ 
+const[SS_FileName,setSS_FileName]=useState<string>(()=>{
+if(This_File.Img.Name){
+    return This_File.Img.Name!
+}
+else{
+    if(SS_File.FolderName.Img){
+        return SS_File.FolderName.Img+SelectKey.toString()
+    }else{
+        return 'UntitledImg'+SelectKey.toString()
+    }
+}})
+ 
+
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:SS_FileName,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:This_File.SS_OCR,
+        SS_ReadOCR:This_File.SS_ReadOCR,
+        SS_EditImg:This_File.SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_FileName])
+ 
+
+let SS_DefaultValue=''
+if(SS_File.FolderName.Img){
+    SS_DefaultValue=SS_File.FolderName.Img+SelectKey.toString()
+}
+else{
+    SS_DefaultValue='UntitledImg'+SelectKey.toString()
+}
+
+
+ 
+JSX_ShowImg=<UI_DisplayFlex
+JSX={[
+<div>
+<UI_Title
+Name={'Zoom: '+SS_Zoom.toString()}
+/>
+<UI_Button
+Name='+'
+Function={()=>{
+if(SS_Zoom<10){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+<UI_Button
+Name='-'
+Function={()=>{
+if(SS_Zoom>0.1){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+</div>,
+<UI_SearchOption
+Name="Show"
+List={const_ShowColor}
+SS_Option={SS_ShowOriginImg}
+setSS_Option={setSS_ShowOriginImg}
+IsSearch={false}
+/>,
+]}
+Color='#FFFFFF'
+/>
+
+ 
+
+JSX_Header=<UI_DisplayFlex
+JSX={[
+<UI_ResettingInput<string>
+Name='Img File Name'
+SS_Value={SS_FileName}
+setSS_Value={setSS_FileName}
+SS_DefaultValue={SS_DefaultValue}
+/>,
+<UI_Button
+Name="Export Image File"
+Function={()=>{alert('Export Image File')}}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+
+JSX_Img=
+
+}
+ 
+<div>
+{
+    SS_Img && 
+    <img 
+    src={uImg64+SS_Img} 
+    id="I02id_Midjourney"
+    alt="Uploaded" 
+    style={{
+      height:`calc( ${SS_Zoom} * 100%)`
+  }}
+  />
+}
+</div>
+ 
+
+if(
+    SS_File.AllFiles!==null
+    &&SS_File.AllFiles!==undefined
+    &&This_File
+    &&This_File!==null
+    &&This_File!==undefined
+    ){
+
+
+}
+ 
+const[SS_ShowOriginImg,setSS_ShowOriginImg]=useState<typeof const_ShowColor[number]>(SS_ShowImg.OriginalImage)
+const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+
+useEffect(()=>{
+    setSS_ShowImg({
+        Zoom:SS_Zoom,
+        OriginalImage:SS_ShowOriginImg
+    })
+},[SS_Zoom,SS_ShowOriginImg])
+
+ 
+JSX_ShowImg=
+ 
+<UI_DisplayFlex
+JSX={[
+<div>
+<UI_Title
+Name={'Zoom: '+SS_Zoom.toString()}
+/>
+<UI_Button
+Name='+'
+Function={()=>{
+if(SS_Zoom<10){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+<UI_Button
+Name='-'
+Function={()=>{
+if(SS_Zoom>0.1){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+</div>,
+<UI_SearchOption
+Name="Show"
+List={const_ShowColor}
+SS_Option={SS_ShowOriginImg}
+setSS_Option={setSS_ShowOriginImg}
+IsSearch={false}
+/>,
+]}
+Color='#FFFFFF'
+/>
+ 
+let SS_DefaultValue=''
+if(SS_File.FolderName.Img){
+    SS_DefaultValue=SS_File.FolderName.Img+SelectKey.toString()
+}
+else{
+    SS_DefaultValue='UntitledImg'+SelectKey.toString()
+}
+ 
+let JSX_Header=<></>
+let JSX_Img=<></>
+ 
+}
+</div>
+ 
+(
+<div>
+
+{
+ 
+{JSX_Img}
+ 
+
+<Page_OverWrite/>
+ 
+{JSX_Header}
+ 
+JSX_Header=<UI_DisplayFlex
+JSX={[
+<UI_ResettingInput<string>
+Name='Img File Name'
+SS_Value={SS_FileName}
+setSS_Value={setSS_FileName}
+SS_DefaultValue={SS_DefaultValue}
+/>,
+<UI_Button
+Name="Export Image File"
+Function={()=>{alert('Export Image File')}}
+/>
+]}
+Color='#FFFFFF'
+/>
+
+JSX_Img=<div>
+{
+    SS_Img && 
+    <img 
+    src={uImg64+SS_Img} 
+    id="I02id_Midjourney"
+    alt="Uploaded" 
+    style={{
+      height:`calc( ${SS_Zoom} * 100%)`
+  }}
+  />
+}
+</div>
+ 
+if(SS_ShowOriginImg===const_ShowColor[0]){
+setSS_Img(SS_OriginImg)
+}
+// EditedImage
+if(SS_ShowOriginImg===const_ShowColor[1]){
+setSS_Img(SS_EditedImg)
+}
+// GrayImage
+if(SS_ShowOriginImg===const_ShowColor[2]){
+setSS_Img(SS_OriginImg)
+}
+// ReverseImage
+if(SS_ShowOriginImg===const_ShowColor[3]){
+setSS_Img(SS_OriginImg)
+}
+ 
+
+const[SS_EditedImg,setSS_EditedImg]=useState<File|null>(This_File.Img.EditedFile)
+const[SS_OriginImg,setSS_OriginImg]=useState<File|null>(This_File.Img.OriginFile)
+ 
+// Display SS_EditedImg or SS_OriginImg
+ 
+const[SS_Img,setSS_Img]=useState<File|null>(()=>{
+if(SS_ShowImg.OriginalImage===const_ShowColor[0]){
+return SS_OriginImg
+}
+// EditedImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[1]){
+return SS_EditedImg
+}
+// GrayImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[2]){
+return SS_OriginImg
+}
+// ReverseImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[3]){
+return SS_OriginImg
+}
+else{
+    return SS_EditedImg
+}
+})
+ 
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:SS_FileName,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:This_File.SS_OCR,
+        SS_ReadOCR:This_File.SS_ReadOCR,
+        SS_EditImg:This_File.SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_FileName])
+ 
+const[SS_FileName,setSS_FileName]=useState<string>(()=>{
+if(This_File.Img.Name){
+    return This_File.Img.Name!
+}
+else{
+    if(SS_File.FolderName.Img){
+        return SS_File.FolderName.Img+SelectKey.toString()
+    }else{
+        return 'UntitledImg'+SelectKey.toString()
+    }
+}})
+ 
+
+const[SS_EditedImg,setSS_EditedImg]=useState<File|null>(This_File.Img.EditedFile)
+const[SS_OriginImg,setSS_OriginImg]=useState<File|null>(This_File.Img.OriginFile)
+ 
+let JSX_Header=<></>
+ 
+JSX_Header=<></>
+ 
+</div>
+)
+ 
+<div>
+ 
+<UI_DisplayFlex
+JSX={[
+<UI_ResettingInput<string>
+Name='Img File Name'
+SS_Value={SS_FileName}
+setSS_Value={setSS_FileName}
+SS_DefaultValue={SS_DefaultValue}
+/>,
+<UI_Button
+Name="Export Image File"
+Function={()=>{alert('Export Image File')}}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+if(
+    SS_File.AllFiles!==null
+    &&SS_File.AllFiles!==undefined
+    &&This_File
+    &&This_File!==null
+    &&This_File!==undefined
+    ){
+ 
+if(
+    SS_File.AllFiles!==null
+    &&SS_File.AllFiles!==undefined
+    &&This_File
+    &&This_File!==null
+    &&This_File!==undefined
+    ){
+ 
+Name,
+Function
+ 
+Name:string
+Function:(S:void)=>void
+ 
+let JSX_Img=<></>
+ 
+{JSX_Img}
+ 
+
+JSX_Img=<div>
+{
+    SS_Img && 
+    <img 
+    src={uImg64+SS_Img} 
+    id="I02id_Midjourney"
+    alt="Uploaded" 
+    style={{
+      height:`calc( ${SS_Zoom} * 100%)`
+  }}
+  />
+}
+</div>
+
+ 
+const[SS_FileName,setSS_FileName]=useState<string>(()=>{
+if(This_File.Img.Name){
+    return This_File.Img.Name!
+}
+else{
+    if(SS_File.FolderName.Img){
+        return SS_File.FolderName.Img+SelectKey.toString()
+    }else{
+        return 'UntitledImg'+SelectKey.toString()
+    }
+}})
+ 
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:SS_FileName,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:This_File.SS_OCR,
+        SS_ReadOCR:This_File.SS_ReadOCR,
+        SS_EditImg:This_File.SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_FileName])
+ 
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:SS_FileName,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:This_File.SS_OCR,
+        SS_ReadOCR:This_File.SS_ReadOCR,
+        SS_EditImg:This_File.SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_FileName])
+ 
+const{SS_ShowImg}=useContext(Context_Main)
+const{setSS_ShowImg}=useContext(Context_Main)
+ 
+
+// Display SS_EditedImg or SS_OriginImg
+const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+ 
+useEffect(()=>{
+    setSS_ShowImg({
+        Zoom:SS_Zoom,
+        OriginalImage:SS_ShowOriginImg
+    })
+if(SS_ShowOriginImg===const_ShowColor[0]){
+setSS_Img(SS_OriginImg)
+}
+// EditedImage
+if(SS_ShowOriginImg===const_ShowColor[1]){
+setSS_Img(SS_EditedImg)
+}
+// GrayImage
+if(SS_ShowOriginImg===const_ShowColor[2]){
+setSS_Img(SS_OriginImg)
+}
+// ReverseImage
+if(SS_ShowOriginImg===const_ShowColor[3]){
+setSS_Img(SS_OriginImg)
+}
+},[SS_Zoom,SS_ShowOriginImg])
+ 
+
+const[SS_EditedImg,setSS_EditedImg]=useState<File|null>(This_File.Img.EditedFile)
+const[SS_OriginImg,setSS_OriginImg]=useState<File|null>(This_File.Img.OriginFile)
+const[SS_ShowOriginImg,setSS_ShowOriginImg]=useState<typeof const_ShowColor[number]>(SS_ShowImg.OriginalImage)
+const[SS_Img,setSS_Img]=useState<File|null>(()=>{
+if(SS_ShowImg.OriginalImage===const_ShowColor[0]){
+return SS_OriginImg
+}
+// EditedImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[1]){
+return SS_EditedImg
+}
+// GrayImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[2]){
+return SS_OriginImg
+}
+// ReverseImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[3]){
+return SS_OriginImg
+}
+else{
+    return SS_EditedImg
+}
+})
+ 
+//***************************************************************************************************************************************
+// HOOK
+//***************************************************************************************************************************************
+
+ 
+
+// SS_OCR
+ 
+
+
+// Operate
+// Language
+// Option: PSM
+
+//***************************************************************************************************************************************
+// OUTPUT
+//***************************************************************************************************************************************
+
+ 
+let JSX_OCR =
+ 
+<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Operate OCR"
+Function={()=>{setSS_OCRActivate(true)}}
+/>,
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language '}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Operate OCR"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    console.log(SS_SelectLanguage)
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_OCR.Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>,
+<UI_Button
+Name="Apply All OCR Setting"
+Function={()=>{setSS_OCRActivate(true)}}
+/>
+]}
+Color='#FFFFFF'
+
+/>
+ 
+
+let JSX_EditImg=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={0}
+/>,
+<UI_Button
+Name="Apply All Image Setting"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+let JSX_File=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Import Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Image Folder:'+SS_ImgFolderName}
+setSS_Value={setSS_ImgFolderName}
+SS_Value={SS_ImgFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Img Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Text Folder:'+SS_TextFolderName}
+setSS_Value={setSS_TextFolderName}
+SS_Value={SS_TextFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Text Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_Title
+Name={'Number of all page: '+(SS_File.AllFiles?SS_File.AllFiles.length.toString():'0')}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+//***************************************************************************************************************************************
+// FUNCTION
+//***************************************************************************************************************************************
+function f_Fake(){
+    alert('This is Fake Function')
+}
+
+//***************************************************************************************************************************************
+// JSX
+//***************************************************************************************************************************************
+
+ 
+    // File
+    SS_ImgFolderName,
+    SS_TextFolderName,
+    // EditImg
+    SS_EditImgActivate,
+    SS_ColorMode,
+    SS_Rotate,
+    // ShowImg
+    // SS_OriginImg,
+    // SS_Zoom,
+    // OCR
+ 
+    setSS_File({
+    AllFiles:SS_File.AllFiles,
+    SelectThisFile:{
+        index:SS_File.SelectThisFile.index,
+        mode:SS_File.SelectThisFile.mode
+    },
+    FolderName:{
+        Img:SS_ImgFolderName,
+        Text:SS_TextFolderName,
+    }
+    })
+    setSS_EditImg({
+        Operate:SS_EditImgActivate,
+        Color:SS_ColorMode,
+        Rotate:SS_Rotate
+    })
+    // setSS_ShowImg({
+    //     OriginalImage:SS_OriginImg,
+    //     Zoom:SS_Zoom
+    // })
+ 
+const{SS_File}=useContext(Context_Main)
+const{setSS_File}=useContext(Context_Main)
+const{SS_EditImg}=useContext(Context_Main)
+const{setSS_EditImg}=useContext(Context_Main)
+const{SS_ShowImg}=useContext(Context_Main)
+const{setSS_ShowImg}=useContext(Context_Main)
+ 
+
+// SS_File
+const[SS_ImgFolderName,setSS_ImgFolderName]=useState<string>(SS_File.FolderName.Img)
+const[SS_TextFolderName,setSS_TextFolderName]=useState<string>(SS_File.FolderName.Text)
+
+// SS_EditImg
+const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
+const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
+const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
+
+// SS_ShowImg
+// const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+// const[SS_OriginImg,setSS_OriginImg]=useState<typeof const_ShowColor[number]>('EditedImage')
+
+ 
+//***************************************************************************************************************************************
+// HOOK
+//***************************************************************************************************************************************
+ 
+
+
+// SS_File
+ 
+
+//***************************************************************************************************************************************
+// FUNCTION
+//***************************************************************************************************************************************
+ 
+
+//***************************************************************************************************************************************
+// JSX
+//***************************************************************************************************************************************
+
+//***************************************************************************************************************************************
+// OUTPUT
+//***************************************************************************************************************************************
+
+ 
+
+
+
+
+// SS_EditImg
+ 
+//***************************************************************************************************************************************
+// FUNCTION
+//***************************************************************************************************************************************
+function f_Fake(){
+    alert('This is Fake Function')
+}
+
+//***************************************************************************************************************************************
+// JSX
+//***************************************************************************************************************************************
+
+//***************************************************************************************************************************************
+// OUTPUT
+//***************************************************************************************************************************************
+
+ 
+
+
+let JSX_EditImg=
+ 
+<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={0}
+/>,
+<UI_Button
+Name="Apply All Image Setting"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+{JSX_OCR}
+ 
+{JSX_File}
+ 
+et JSX_OCR =<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Operate OCR"
+Function={()=>{setSS_OCRActivate(true)}}
+/>,
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language '}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Operate OCR"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    console.log(SS_SelectLanguage)
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_OCR.Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>,
+<UI_Button
+Name="Apply All OCR Setting"
+Function={()=>{setSS_OCRActivate(true)}}
+/>
+]}
+Color='#FFFFFF'
+
+/>
+// Operate
+// Language
+// Option: PSM
+ 
+let JSX_File=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Import Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Image Folder:'+SS_ImgFolderName}
+setSS_Value={setSS_ImgFolderName}
+SS_Value={SS_ImgFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Img Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Text Folder:'+SS_TextFolderName}
+setSS_Value={setSS_TextFolderName}
+SS_Value={SS_TextFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Text Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_Title
+Name={'Number of all page: '+(SS_File.AllFiles?SS_File.AllFiles.length.toString():'0')}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+    // ShowImg
+    // SS_OriginImg,
+    // SS_Zoom,
+    // OCR
+    SS_OCRActivate,
+    SS_PSM,
+    SS_Languages,
+ 
+    // File
+    SS_ImgFolderName,
+    SS_TextFolderName,
+ 
+    // setSS_ShowImg({
+    //     OriginalImage:SS_OriginImg,
+    //     Zoom:SS_Zoom
+    // })
+    setSS_OCR({
+        Operate:SS_OCRActivate,
+        PSM:SS_PSM,
+        Languages:SS_Languages
+    })
+ 
+    setSS_File({
+    AllFiles:SS_File.AllFiles,
+    SelectThisFile:{
+        index:SS_File.SelectThisFile.index,
+        mode:SS_File.SelectThisFile.mode
+    },
+    FolderName:{
+        Img:SS_ImgFolderName,
+        Text:SS_TextFolderName,
+    }
+    })
+ 
+const{SS_File}=useContext(Context_Main)
+const{setSS_File}=useContext(Context_Main)
+ 
+const{SS_ShowImg}=useContext(Context_Main)
+const{setSS_ShowImg}=useContext(Context_Main)
+const{SS_OCR}=useContext(Context_Main)
+const{setSS_OCR}=useContext(Context_Main)
+ 
+// SS_ShowImg
+// const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+// const[SS_OriginImg,setSS_OriginImg]=useState<typeof const_ShowColor[number]>('EditedImage')
+
+// SS_OCR
+const[SS_OCRActivate,setSS_OCRActivate]=useState<boolean>(SS_OCR.Operate)
+const[SS_PSM,setSS_PSM]=useState<typeof uPSM[number]>(SS_OCR.PSM)
+const[SS_Languages,setSS_Languages]=useState<typeof uLANGUAGE[number][]|null>(SS_OCR.Languages)
+const[SS_SelectLanguage,setSS_SelectLanguage]=useState<typeof uLANGUAGE[number]|''>(uLANGUAGE[0])
+ 
+// SS_File
+const[SS_ImgFolderName,setSS_ImgFolderName]=useState<string>(SS_File.FolderName.Img)
+const[SS_TextFolderName,setSS_TextFolderName]=useState<string>(SS_File.FolderName.Text)
+ 
+const{SS_EditImg}=useContext(Context_Main)
+const{setSS_EditImg}=useContext(Context_Main)
+const{SS_OCR}=useContext(Context_Main)
+const{setSS_OCR}=useContext(Context_Main)
+ 
+
+let JSX_File
+
+
+
+
+ 
+<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Import Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Image Folder:'+SS_ImgFolderName}
+setSS_Value={setSS_ImgFolderName}
+SS_Value={SS_ImgFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Img Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_ResettingInput<string>
+Name={'Text Folder:'+SS_TextFolderName}
+setSS_Value={setSS_TextFolderName}
+SS_Value={SS_TextFolderName}
+SS_DefaultValue={null}
+/>,
+<UI_Button
+Name="Export Text Folder"
+Function={()=>{f_Fake()}}
+/>,
+<UI_Title
+Name={'Number of all page: '+(SS_File.AllFiles?SS_File.AllFiles.length.toString():'0')}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+{JSX_EditImg}
+{JSX_OCR}
+ 
+let JSX_OCR =<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Operate OCR"
+Function={()=>{setSS_OCRActivate(true)}}
+/>,
+<UI_SearchOption
+Name="Detect Image as "
+List={uPSM}
+SS_Option={SS_PSM}
+setSS_Option={setSS_PSM}
+IsSearch={false}
+/>,
+<div>
+<UI_SearchOption
+Name={'Language '}
+List={uLANGUAGE}
+SS_Option={SS_SelectLanguage}
+setSS_Option={setSS_SelectLanguage}
+IsSearch={true}
+/>
+<UI_Button
+Name="Operate OCR"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    let let_Update=[SS_SelectLanguage,...cSS_Language]
+    setSS_Languages(let_Update)
+    }
+    else{
+    console.log(SS_SelectLanguage)
+    setSS_Languages([SS_SelectLanguage])
+    }
+}}
+/>
+{SS_OCR.Languages?.map((i,index)=>
+<div>
+<h1>{i}</h1>
+<UI_Button
+Name="x"
+Function={()=>{
+    if(SS_Languages){
+    let cSS_Language=[...SS_Languages]
+    cSS_Language.splice(index,1)
+    setSS_Languages(cSS_Language)
+    }
+}}
+/>
+</div>
+)}
+</div>,
+<UI_Button
+Name="Apply All OCR Setting"
+Function={()=>{setSS_OCRActivate(true)}}
+/>
+]}
+Color='#FFFFFF'
+
+/>
+// Operate
+// Language
+// Option: PSM
+ 
+let JSX_EditImg=<UI_DisplayFlex
+JSX={[
+<UI_Button
+Name="Edit Image"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>,
+<UI_SearchOption
+Name='Color Mode'
+List={const_color}
+SS_Option={SS_ColorMode}
+setSS_Option={setSS_ColorMode}
+IsSearch={false}
+/>,
+<UI_ResettingInput
+Name={'Rotation: '+SS_Rotate.toString()}
+setSS_Value={setSS_Rotate}
+SS_Value={SS_Rotate}
+SS_DefaultValue={0}
+/>,
+<UI_Button
+Name="Apply All Image Setting"
+Function={()=>{setSS_EditImgActivate(true)}}
+/>
+]}
+Color='#FFFFFF'
+/>
+ 
+    // File
+ 
+    // EditImg
+    SS_EditImgActivate,
+    SS_ColorMode,
+    SS_Rotate,
+    // ShowImg
+    // SS_OriginImg,
+    // SS_Zoom,
+    // OCR
+    SS_OCRActivate,
+    SS_PSM,
+    SS_Languages,
+ 
+    // setSS_ShowImg({
+    //     OriginalImage:SS_OriginImg,
+    //     Zoom:SS_Zoom
+    // })
+    setSS_OCR({
+        Operate:SS_OCRActivate,
+        PSM:SS_PSM,
+        Languages:SS_Languages
+    })
+ 
+    setSS_EditImg({
+        Operate:SS_EditImgActivate,
+        Color:SS_ColorMode,
+        Rotate:SS_Rotate
+    })
+ 
+
+// SS_EditImg
+const[SS_EditImgActivate,setSS_EditImgActivate]=useState<boolean>(SS_EditImg.Operate)
+const[SS_ColorMode,setSS_ColorMode]=useState<typeof const_color[number]>(SS_EditImg.Color)
+const[SS_Rotate,setSS_Rotate]=useState<number>(SS_EditImg.Rotate)
+
+// SS_ShowImg
+// const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+// const[SS_OriginImg,setSS_OriginImg]=useState<typeof const_ShowColor[number]>('EditedImage')
+
+// SS_OCR
+const[SS_OCRActivate,setSS_OCRActivate]=useState<boolean>(SS_OCR.Operate)
+const[SS_PSM,setSS_PSM]=useState<typeof uPSM[number]>(SS_OCR.PSM)
+const[SS_Languages,setSS_Languages]=useState<typeof uLANGUAGE[number][]|null>(SS_OCR.Languages)
+const[SS_SelectLanguage,setSS_SelectLanguage]=useState<typeof uLANGUAGE[number]|''>(uLANGUAGE[0])
+ 
+const{SS_ShowImg}=useContext(Context_Main)
+const{setSS_ShowImg}=useContext(Context_Main)
+ 
+// <div>
+// <UI_Title
+// Name={'Zoom: '+SS_Zoom.toString()}
+// />
+// <UI_Button
+// Name='+'
+// Function={()=>{
+// if(SS_Zoom<10){
+//     let ss_Zoom=SS_Zoom 
+//     let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+//     setSS_Zoom(let_Zoom)
+// }}}
+// />
+// <UI_Button
+// Name='-'
+// Function={()=>{
+// if(SS_Zoom>0.1){
+//     let ss_Zoom=SS_Zoom 
+//     let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+//     setSS_Zoom(let_Zoom)
+// }}}
+// />
+// </div>
+,
+// <UI_SearchOption
+// Name="Show"
+// List={const_ShowColor}
+// SS_Option={SS_OriginImg}
+// setSS_Option={setSS_OriginImg}
+// IsSearch={false}
+// />,
+ 
+// <div>
+// <UI_Title
+// Name={'Zoom: '+SS_Zoom.toString()}
+// />
+// <UI_Button
+// Name='+'
+// Function={()=>{
+// if(SS_Zoom<10){
+//     let ss_Zoom=SS_Zoom 
+//     let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+//     setSS_Zoom(let_Zoom)
+// }}}
+// />
+// <UI_Button
+// Name='-'
+// Function={()=>{
+// if(SS_Zoom>0.1){
+//     let ss_Zoom=SS_Zoom 
+//     let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+//     setSS_Zoom(let_Zoom)
+// }}}
+// />
+// </div>
+,
+// <UI_SearchOption
+// Name="Show"
+// List={const_ShowColor}
+// SS_Option={SS_OriginImg}
+// setSS_Option={setSS_OriginImg}
+// IsSearch={false}
+// />,
+ 
+let  =<></>
+ 
+{ }
+ 
+=<UI_DisplayFlex
+JSX={[
+<div>
+<UI_Title
+Name={'Zoom: '+SS_Zoom.toString()}
+/>
+<UI_Button
+Name='+'
+Function={()=>{
+if(SS_Zoom<10){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+<UI_Button
+Name='-'
+Function={()=>{
+if(SS_Zoom>0.1){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+</div>,
+<UI_SearchOption
+Name="Show"
+List={const_ShowColor}
+SS_Option={SS_ShowOriginImg}
+setSS_Option={setSS_ShowOriginImg}
+IsSearch={false}
+/>,
+]}
+Color='#FFFFFF'
+/>
+ 
+<Page_OverWrite/>
+ 
+|null
+ 
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:SS_FileName,
+            File:SS_Message
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:This_File.SS_OCR,
+        SS_ReadOCR:This_File.SS_ReadOCR,
+        SS_EditImg:This_File.SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_FileName,SS_Message])
+
+ 
+const[SS_Message,setSS_Message]=useState<string>(SS_File.AllFiles[SelectKey].Text.File!)
+const[SS_FileName,setSS_FileName]=useState<string>(()=>{
+if(This_File.Text.Name){
+    return This_File.Text.Name!
+}
+else{
+    if(SS_File.FolderName.Text){
+        return SS_File.FolderName.Text+SelectKey.toString()
+    }else{
+        return 'UntitledText'+SelectKey.toString()
+    }
+}})
+ 
+const[SS_Message,setSS_Message]=useState<string>(SS_File.AllFiles[SelectKey].Text.File!)
+const[SS_FileName,setSS_FileName]=useState<string>(()=>{
+if(This_File.Text.Name){
+    return This_File.Text.Name!
+}
+else{
+    if(SS_File.FolderName.Text){
+        return SS_File.FolderName.Text+SelectKey.toString()
+    }else{
+        return 'UntitledText'+SelectKey.toString()
+    }
+}})
+
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:This_File.Img.Name,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:SS_FileName,
+            File:SS_Message
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:This_File.SS_OCR,
+        SS_ReadOCR:This_File.SS_ReadOCR,
+        SS_EditImg:This_File.SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_FileName,SS_Message])
+
+ 
+let eSS_EditImg=Default_SS_EditImg
+if(SS_File.AllFiles![SelectKey].SS_EditImg){
+eSS_EditImg=SS_File.AllFiles![SelectKey].SS_EditImg!
+}
+ 
+eSS_EditImg
+ 
+let let_Img:null|File=SS_EditedImg
+// OriginalImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[0]){
+return SS_OriginImg
+}
+// EditedImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[1]){
+return SS_EditedImg
+}
+// GrayImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[2]){
+return SS_OriginImg
+}
+// ReverseImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[3]){
+return SS_OriginImg
+}
+ 
+let_Img
+ 
+:ReactNode
+ 
+/**
+'Page_Text' cannot be used as a JSX component.
+  Its type '({}: {}) => { JSX_Body: React.ReactElement<any, string | React.JSXElementConstructor<any>>; }' is not a valid JSX element type.
+    Type '({}: {}) => { JSX_Body: React.ReactElement<any, string | React.JSXElementConstructor<any>>; }' is not assignable to type '(props: any, deprecatedLegacyContext?: any) => ReactNode'.
+      Type '{ JSX_Body: React.ReactElement<any, string | React.JSXElementConstructor<any>>; }' is not assignable to type 'ReactNode'.
+ */
+ 
+let_Img=
+ 
+const[s,sets]=useState<null|TS_SS_ShowImg>()
+ 
+SS_ShowOriginImg,
+ 
+
+</>
+ 
+<></>
+ 
+let JSX_Canvas=<></>
+ 
+
+JSX_Canvas=<></>
+ 
+{JSX_Canvas}
+ 
+let 
+ 
+</div>
+ 
+import UI_TextArea from '../UI_TextArea';
+ 
+// 
+ 
+let let_DisplayImg:typeof const_ShowColor[number]=SS_ShowImg.OriginalImage
+
+// OriginalImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[0]){
+let_DisplayImg=const_ShowColor[0]
+}
+// EditedImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[1]){
+let_DisplayImg=const_ShowColor[1]
+}
+// GrayImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[2]){
+let_DisplayImg=const_ShowColor[2]
+}
+// ReverseImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[3]){
+let_DisplayImg=const_ShowColor[3]
+}
+
+ 
+import { const_color } from '../TS_SS_EditImg/const_color';
+ 
+if(This_File.SS_EditImg){
+// Color
+if(This_File.SS_EditImg.Color===const_color[0]){
+let_DisplayImg=const_color[0]
+}
+// Gray
+if(This_File.SS_EditImg.Color===const_color[1]){
+let_DisplayImg=const_color[1]
+}
+// ReverseGray
+if(This_File.SS_EditImg.Color===const_color[2]){
+let_DisplayImg=const_color[2]
+}
+}
+else{
+ 
+,SS_Message
+ 
+<UI_TextArea
+SS_Message={SS_Message}
+setSS_Message={setSS_Message}
+/>
+ 
+,SS_ShowOriginImg
+ 
+const[SS_DisplayImg,setSS_DisplayImg]=useState<File|null>(let_DisplayImg)
+ 
+const[SS_EditedImg,setSS_EditedImg]=useState<File|null>(SS_File.AllFiles[SelectKey].Img.EditedFile)
+ 
+const[SS_EditedImg,setSS_EditedImg]=useState<File|null>(SS_File.AllFiles[SelectKey].Img.EditedFile)
+let let_DisplayImg:File|null=null
+if(This_File.SS_EditImg){
+// Color
+if(This_File.SS_EditImg.Color===const_color[0]){
+}
+// Gray
+if(This_File.SS_EditImg.Color===const_color[1]){
+}
+// ReverseGray
+if(This_File.SS_EditImg.Color===const_color[2]){
+}
+}
+else{
+if(SS_ShowImg.OriginalImage===const_color[0]){}
+if(SS_ShowImg.OriginalImage===const_color[1]){}
+else{}
+}
+const[SS_DisplayImg,setSS_DisplayImg]=useState<File|null>(let_DisplayImg)
+ 
+ if()
+ 
+This_File.SS_EditImg&&
+ 
+This_File.SS_EditImg&&
+ 
+'Gray
+ 
+    console.log(SS_SelectLanguage)
+ 
+const [SS_OCR    ,setSS_OCR     ] = useState<TS_SS_OCR>(eSS_OCR)
+ 
+const [SS_EditImg,setSS_EditImg ] = useState<TS_SS_EditImg>(eSS_EditImg)
+ 
+let eSS_ReadOCR=Default_SS_ReadOCR
+if(SS_File.AllFiles![SelectKey].SS_ReadOCR){
+eSS_ReadOCR=SS_File.AllFiles![SelectKey].SS_ReadOCR!
+}
+ 
+SS_File.AllFiles![SelectKey].SS_EditImg?SS_File.AllFiles![SelectKey].SS_EditImg:Default_SS_EditImg
+ 
+setSS_EditImg((eSS_EditImg!==null)?eSS_EditImg:Default_SS_EditImg)
+setSS_OCR((eSS_OCR!==null)?eSS_OCR:Default_SS_OCR)
+setSS_ReadOCR((eSS_ReadOCR!==null)?eSS_ReadOCR:Default_SS_ReadOCR)
+ 
+SS_EditImg
+ 
+    const eSS_OCR    =SS_OCR
+    const eSS_EditImg=SS_EditImg
+    const eSS_ReadOCR=SS_ReadOCR
+ 
+setSS_EditImg(null)
+setSS_OCR(null)
+setSS_ReadOCR(null)
+ 
+
+import { SSFile_NameFolder } from '../TS_SS_File/SSFile_NameFolder';
+ 
+import { const_ShowColor } from '../TS_SS_ShowImg/const_showcolor';
+
+import { TS_SS_OCR } from '../TS_SS_OCR/An_Index';
+import { TS_SS_File } from '../TS_SS_File/An_Index';
+import TS_File from '../TS_File/An_Index';
+import { TS_SS_EditImg } from '../TS_SS_EditImg/An_Index';
+import { TS_SS_ShowImg } from '../TS_SS_ShowImg/An_Index';
+import { TS_SS_ReadOCR } from '../TS_SS_ReadOCR/An_Index';
+ 
+    // &&This_File.Text.File
+    // &&This_File.Text.File!==null 
+    // &&This_File.Text.File!==undefined
+ 
+null
+ 
+null
+ 
+null
+ 
 2. Page_Image
  
 Read

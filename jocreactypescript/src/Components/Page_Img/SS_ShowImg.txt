@@ -1,0 +1,18 @@
+let let_DisplayImg:typeof const_ShowColor[number]=SS_ShowImg.OriginalImage
+
+// OriginalImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[0]){
+let_DisplayImg=const_ShowColor[0]
+}
+// EditedImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[1]){
+let_DisplayImg=const_ShowColor[1]
+}
+// GrayImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[2]){
+let_DisplayImg=const_ShowColor[2]
+}
+// ReverseImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[3]){
+let_DisplayImg=const_ShowColor[3]
+}

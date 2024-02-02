@@ -22,7 +22,7 @@ import { const_mode } from '../TS_SS_File/const_mode';
 // 4. SS_EditImg            [Operate] [Option: Color] [Rotate [...] [Ok] [Reset]]
 // 5. SS_File               [Page1] [Page2] [+]
 
-const Page_Tab = (
+const P_Head_Tabs = (
 {
 }
 :{
@@ -121,7 +121,7 @@ if(SS_File.AllFiles){
             </div>,
             <UI_Button Name={'x'} Function={()=>{f_SelectFile(ThisFile.Key,"DeleteWarning")}}/>
         ]
-        let JSX_Color='Page_Tab Error'
+        let JSX_Color='P_Head_Tabs Error'
         if(SS_File.SelectThisFile.index===ThisFile.Key && SS_File.SelectThisFile.mode==='Default'){
             JSX_Color='red'
         }
@@ -156,4 +156,4 @@ Color={'#AAAAAA'}
 </div>
     )}
 
-export default Page_Tab
+export default P_Head_Tabs

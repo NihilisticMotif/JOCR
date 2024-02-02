@@ -13,7 +13,7 @@ export function File_CreateDefault(
                 },
                 Text:{
                     Name:null,
-                    File:null
+                    File:''
                 },
                 OpenSS:false,
                 SS_OCR:null,

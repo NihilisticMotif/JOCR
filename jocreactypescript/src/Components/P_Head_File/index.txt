@@ -154,37 +154,6 @@ setSS_Value={setSS_Rotate}
 SS_Value={SS_Rotate}
 SS_DefaultValue={0}
 />,
-// <div>
-// <UI_Title
-// Name={'Zoom: '+SS_Zoom.toString()}
-// />
-// <UI_Button
-// Name='+'
-// Function={()=>{
-// if(SS_Zoom<10){
-//     let ss_Zoom=SS_Zoom 
-//     let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
-//     setSS_Zoom(let_Zoom)
-// }}}
-// />
-// <UI_Button
-// Name='-'
-// Function={()=>{
-// if(SS_Zoom>0.1){
-//     let ss_Zoom=SS_Zoom 
-//     let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
-//     setSS_Zoom(let_Zoom)
-// }}}
-// />
-// </div>
-,
-// <UI_SearchOption
-// Name="Show"
-// List={const_ShowColor}
-// SS_Option={SS_OriginImg}
-// setSS_Option={setSS_OriginImg}
-// IsSearch={false}
-// />,
 <UI_Button
 Name="Apply All Image Setting"
 Function={()=>{setSS_EditImgActivate(true)}}

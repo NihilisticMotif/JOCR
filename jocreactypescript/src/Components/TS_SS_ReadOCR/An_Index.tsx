@@ -1,3 +1,4 @@
+// Fix this
 export type TS_SS_ReadOCR={
     Operate:boolean,
     // Script

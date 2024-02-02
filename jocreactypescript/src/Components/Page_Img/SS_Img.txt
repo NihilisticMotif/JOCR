@@ -1,0 +1,19 @@
+const[SS_EditedImg,setSS_EditedImg]=useState<File|null>(SS_File.AllFiles[SelectKey].Img.EditedFile)
+let let_DisplayImg:File|null=null
+if(This_File.SS_EditImg){
+// Color
+if(This_File.SS_EditImg.Color===const_color[0]){
+}
+// Gray
+if(This_File.SS_EditImg.Color===const_color[1]){
+}
+// ReverseGray
+if(This_File.SS_EditImg.Color===const_color[2]){
+}
+}
+else{
+if(SS_ShowImg.OriginalImage===const_color[0]){}
+if(SS_ShowImg.OriginalImage===const_color[1]){}
+else{}
+}
+const[SS_DisplayImg,setSS_DisplayImg]=useState<File|null>(let_DisplayImg)

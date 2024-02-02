@@ -1,7 +1,7 @@
 import './index.css';
 import React, { FC, ReactNode } from 'react';
 
-const UI_Button = (
+const UI_Img = (
 {
 Name,
 Function
@@ -14,4 +14,4 @@ Function:(S:void)=>void
     <button onClick={()=>Function()}>{Name}</button>
     )}
 
-export default UI_Button
+export default UI_Img

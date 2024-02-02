@@ -1,0 +1,1 @@
+export const uImg64='data:image/png;base64,'

@@ -1,0 +1,208 @@
+import './index.css';
+import React, { FC, ReactNode } from 'react';
+
+import UI_ResettingInput from '../UI_ResettingInput';
+import UI_Button from '../UI_Button';
+import UI_Title from '../UI_Title';
+import UI_SearchOption from '../UI_SearchOption';
+import { Context_Main } from '../Context_Main';
+import { useState,useEffect,useContext } from 'react';
+import { const_ShowColor } from '../TS_SS_ShowImg/const_showcolor';
+import UI_DisplayFlex from '../UI_DisplayFlex';
+import { uImg64 } from '../utility/uImg64';
+import { TS_SS_ShowImg } from '../TS_SS_ShowImg/An_Index';
+import Page_OverWrite from '../Page_OverWrite';
+const Page_Img = (
+{
+}
+:{
+})=>{
+const{SS_File}=useContext(Context_Main)
+const{setSS_File}=useContext(Context_Main)
+const{SS_ShowImg}=useContext(Context_Main)
+const{setSS_ShowImg}=useContext(Context_Main)
+const SelectKey=SS_File.SelectThisFile.index
+let This_File=SS_File.AllFiles![SelectKey]
+let JSX_ShowImg=<></>
+let JSX_Header=<></>
+let JSX_Img=<></>
+if(
+    SS_File.AllFiles!==null
+    &&SS_File.AllFiles!==undefined
+    &&This_File
+    &&This_File!==null
+    &&This_File!==undefined
+    ){
+
+const[SS_EditedImg,setSS_EditedImg]=useState<File|null>(This_File.Img.EditedFile)
+const[SS_OriginImg,setSS_OriginImg]=useState<File|null>(This_File.Img.OriginFile)
+const[SS_ShowOriginImg,setSS_ShowOriginImg]=useState<typeof const_ShowColor[number]>(SS_ShowImg.OriginalImage)
+const[SS_Img,setSS_Img]=useState<File|null>(()=>{
+if(SS_ShowImg.OriginalImage===const_ShowColor[0]){
+return SS_OriginImg
+}
+// EditedImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[1]){
+return SS_EditedImg
+}
+// GrayImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[2]){
+return SS_OriginImg
+}
+// ReverseImage
+if(SS_ShowImg.OriginalImage===const_ShowColor[3]){
+return SS_OriginImg
+}
+else{
+    return SS_EditedImg
+}
+})
+// Display SS_EditedImg or SS_OriginImg
+const[SS_Zoom,setSS_Zoom]=useState<number>(SS_ShowImg.Zoom)
+const[SS_FileName,setSS_FileName]=useState<string>(()=>{
+if(This_File.Img.Name){
+    return This_File.Img.Name!
+}
+else{
+    if(SS_File.FolderName.Img){
+        return SS_File.FolderName.Img+SelectKey.toString()
+    }else{
+        return 'UntitledImg'+SelectKey.toString()
+    }
+}})
+
+useEffect(()=>{
+    setSS_ShowImg({
+        Zoom:SS_Zoom,
+        OriginalImage:SS_ShowOriginImg
+    })
+if(SS_ShowOriginImg===const_ShowColor[0]){
+setSS_Img(SS_OriginImg)
+}
+// EditedImage
+if(SS_ShowOriginImg===const_ShowColor[1]){
+setSS_Img(SS_EditedImg)
+}
+// GrayImage
+if(SS_ShowOriginImg===const_ShowColor[2]){
+setSS_Img(SS_OriginImg)
+}
+// ReverseImage
+if(SS_ShowOriginImg===const_ShowColor[3]){
+setSS_Img(SS_OriginImg)
+}
+},[SS_Zoom,SS_ShowOriginImg])
+
+useEffect(()=>{
+if(SS_File.AllFiles){
+    let let_Update=[...SS_File.AllFiles]
+    let_Update.splice(SelectKey,1,{
+        Key:SelectKey,
+        Img:{
+            Name:SS_FileName,
+            EditedFile:This_File.Img.EditedFile,
+            OriginFile:This_File.Img.OriginFile,
+            Shape:This_File.Img.Shape
+        },
+        Text:{
+            Name:This_File.Text.Name,
+            File:This_File.Text.File
+        },
+        OpenSS:This_File.OpenSS,
+        SS_OCR:This_File.SS_OCR,
+        SS_ReadOCR:This_File.SS_ReadOCR,
+        SS_EditImg:This_File.SS_EditImg
+    })
+    setSS_File({
+        AllFiles:let_Update,
+        SelectThisFile:SS_File.SelectThisFile,
+        FolderName:SS_File.FolderName
+    })
+}
+},[SS_FileName])
+
+let SS_DefaultValue=''
+if(SS_File.FolderName.Img){
+    SS_DefaultValue=SS_File.FolderName.Img+SelectKey.toString()
+}
+else{
+    SS_DefaultValue='UntitledImg'+SelectKey.toString()
+}
+
+JSX_ShowImg=<UI_DisplayFlex
+JSX={[
+<div>
+<UI_Title
+Name={'Zoom: '+SS_Zoom.toString()}
+/>
+<UI_Button
+Name='+'
+Function={()=>{
+if(SS_Zoom<10){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom+0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+<UI_Button
+Name='-'
+Function={()=>{
+if(SS_Zoom>0.1){
+    let ss_Zoom=SS_Zoom 
+    let let_Zoom = parseFloat((ss_Zoom-0.1).toFixed(1));
+    setSS_Zoom(let_Zoom)
+}}}
+/>
+</div>,
+<UI_SearchOption
+Name="Show"
+List={const_ShowColor}
+SS_Option={SS_ShowOriginImg}
+setSS_Option={setSS_ShowOriginImg}
+IsSearch={false}
+/>,
+]}
+Color='#FFFFFF'
+/>
+
+JSX_Header=<UI_DisplayFlex
+JSX={[
+<UI_ResettingInput<string>
+Name='Img File Name'
+SS_Value={SS_FileName}
+setSS_Value={setSS_FileName}
+SS_DefaultValue={SS_DefaultValue}
+/>,
+<UI_Button
+Name="Export Image File"
+Function={()=>{alert('Export Image File')}}
+/>
+]}
+Color='#FFFFFF'
+/>
+
+JSX_Img=<div>
+{
+    SS_Img && 
+    <img 
+    src={uImg64+SS_Img} 
+    id="I02id_Midjourney"
+    alt="Uploaded" 
+    style={{
+      height:`calc( ${SS_Zoom} * 100%)`
+  }}
+  />
+}
+</div>
+
+}
+return (
+<div>
+{JSX_Header}
+<Page_OverWrite/>
+{JSX_ShowImg}
+{JSX_Img}
+</div>
+)}
+
+export default Page_Img

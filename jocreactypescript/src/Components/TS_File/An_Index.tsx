@@ -12,7 +12,7 @@ type TS_File={
     }
     Text:{
         Name:string|null,
-        File:string|null
+        File:string
     }
     OpenSS:boolean,
     SS_OCR:TS_SS_OCR|null,

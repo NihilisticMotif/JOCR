@@ -1,1 +1,6 @@
-export const const_ShowColor=["OriginalImage","EditedImage","GrayImage","ReverseImage"]
+export const const_ShowColor=[
+    "OriginalImage",
+    "EditedImage",
+    "GrayImage",
+    "ReverseImage"
+]
